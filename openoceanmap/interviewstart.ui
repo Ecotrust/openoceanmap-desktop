@@ -1,0 +1,100 @@
+<ui version="4.0" >
+ <author>Aaron Racicot</author>
+ <class>InterviewStart</class>
+ <widget class="QDialog" name="InterviewStart" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>549</width>
+    <height>230</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Interview</string>
+  </property>
+  <widget class="QLabel" name="label_2" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Person Conducting Interview</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_1" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Person Being Interviewed</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_1" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>230</x>
+     <y>20</y>
+     <width>281</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_2" >
+   <property name="geometry" >
+    <rect>
+     <x>230</x>
+     <y>60</y>
+     <width>281</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbnCancel" >
+   <property name="geometry" >
+    <rect>
+     <x>280</x>
+     <y>170</y>
+     <width>83</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbnStartShapes" >
+   <property name="geometry" >
+    <rect>
+     <x>370</x>
+     <y>170</y>
+     <width>151</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Start Making Shapes</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

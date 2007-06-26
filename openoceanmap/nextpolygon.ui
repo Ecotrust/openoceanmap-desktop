@@ -1,0 +1,74 @@
+<ui version="4.0" >
+ <author>Aaron Racicot</author>
+ <class>NextPolygon</class>
+ <widget class="QDialog" name="NextPolygon" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>549</width>
+    <height>147</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Next Polygon</string>
+  </property>
+  <widget class="QLabel" name="label_1" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Weighting (Pennies)</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_1" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>230</x>
+     <y>20</y>
+     <width>281</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbnFinished" >
+   <property name="geometry" >
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>83</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Finished</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbnMoreShapes" >
+   <property name="geometry" >
+    <rect>
+     <x>370</x>
+     <y>70</y>
+     <width>151</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>More Shapes...</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,154 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>931</width>
+    <height>639</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <widget class="QFrame" name="frameMap" >
+    <property name="geometry" >
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>911</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="frameShape" >
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow" >
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>931</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuInterview" >
+    <property name="title" >
+     <string>Interview</string>
+    </property>
+    <addaction name="actionStart_Interview" />
+   </widget>
+   <widget class="QMenu" name="menuMap" >
+    <property name="title" >
+     <string>Map</string>
+    </property>
+    <addaction name="mpActionAddRasterLayer" />
+    <addaction name="mpActionAddVectorLayer" />
+    <addaction name="separator" />
+    <addaction name="mpActionZoomIn" />
+    <addaction name="mpActionZoomOut" />
+    <addaction name="mpActionPan" />
+    <addaction name="actionRegion_Tool" />
+   </widget>
+   <widget class="QMenu" name="menuUtilities" >
+    <property name="title" >
+     <string>Utilities</string>
+    </property>
+    <addaction name="actionPython_Console" />
+   </widget>
+   <addaction name="menuMap" />
+   <addaction name="menuInterview" />
+   <addaction name="menuUtilities" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="mpActionZoomOut" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mActionZoomOut.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="mpActionPan" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mActionPan.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Pan</string>
+   </property>
+  </action>
+  <action name="mpActionAddRasterLayer" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mActionAddRasterLayer.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Add Raster Layer</string>
+   </property>
+  </action>
+  <action name="actionStart_Interview" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mActionStartEditing.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Start Interview</string>
+   </property>
+   <property name="iconText" >
+    <string>Start Interview</string>
+   </property>
+   <property name="toolTip" >
+    <string>Start Interview</string>
+   </property>
+  </action>
+  <action name="actionRegion_Tool" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mActionMeasureArea.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Region Tool</string>
+   </property>
+  </action>
+  <action name="actionPolygon_Tool" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mActionCapturePolygon.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Polygon Tool</string>
+   </property>
+  </action>
+  <action name="mpActionZoomIn" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mActionZoomIn.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="mpActionAddVectorLayer" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mActionAddLayer.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Add Vector Layer</string>
+   </property>
+  </action>
+  <action name="actionPython_Console" >
+   <property name="icon" >
+    <iconset resource="resources.qrc" >:/images/mIconProperties.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Python Console</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc" />
+ </resources>
+ <connections/>
+</ui>
