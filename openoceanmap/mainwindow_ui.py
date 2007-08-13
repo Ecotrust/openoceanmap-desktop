@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Wed Jun 13 23:16:20 2007
+# Created: Mon Aug  6 15:48:04 2007
 #      by: PyQt4 UI code generator 4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -17,8 +17,15 @@ class Ui_MainWindow(object):
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
-        self.frameMap = QtGui.QFrame(self.centralwidget)
-        self.frameMap.setGeometry(QtCore.QRect(9,9,911,541))
+        self.splitter = QtGui.QSplitter(self.centralwidget)
+        self.splitter.setGeometry(QtCore.QRect(10,10,901,561))
+        self.splitter.setOrientation(QtCore.Qt.Horizontal)
+        self.splitter.setObjectName("splitter")
+
+        self.treeView = QtGui.QTreeView(self.splitter)
+        self.treeView.setObjectName("treeView")
+
+        self.frameMap = QtGui.QFrame(self.splitter)
         self.frameMap.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frameMap.setFrameShadow(QtGui.QFrame.Raised)
         self.frameMap.setObjectName("frameMap")
