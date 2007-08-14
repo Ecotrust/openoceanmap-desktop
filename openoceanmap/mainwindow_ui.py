@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Mon Aug  6 15:48:04 2007
+# Created: Mon Aug 13 15:53:35 2007
 #      by: PyQt4 UI code generator 4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,27 +12,56 @@ from PyQt4 import QtCore, QtGui
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(QtCore.QSize(QtCore.QRect(0,0,931,639).size()).expandedTo(MainWindow.minimumSizeHint()))
+        MainWindow.resize(QtCore.QSize(QtCore.QRect(0,0,856,627).size()).expandedTo(MainWindow.minimumSizeHint()))
 
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
+        self.gridlayout = QtGui.QGridLayout(self.centralwidget)
+        self.gridlayout.setMargin(9)
+        self.gridlayout.setSpacing(6)
+        self.gridlayout.setObjectName("gridlayout")
+
         self.splitter = QtGui.QSplitter(self.centralwidget)
-        self.splitter.setGeometry(QtCore.QRect(10,10,901,561))
         self.splitter.setOrientation(QtCore.Qt.Horizontal)
         self.splitter.setObjectName("splitter")
 
-        self.treeView = QtGui.QTreeView(self.splitter)
-        self.treeView.setObjectName("treeView")
+        self.toolBox = QtGui.QToolBox(self.splitter)
+        self.toolBox.setEnabled(True)
+
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Policy(1),QtGui.QSizePolicy.Policy(5))
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.toolBox.sizePolicy().hasHeightForWidth())
+        self.toolBox.setSizePolicy(sizePolicy)
+        self.toolBox.setBaseSize(QtCore.QSize(0,0))
+        self.toolBox.setObjectName("toolBox")
+
+        self.legend_page = QtGui.QWidget()
+        self.legend_page.setGeometry(QtCore.QRect(0,0,160,510))
+        self.legend_page.setObjectName("legend_page")
+        self.toolBox.addItem(self.legend_page,"")
+
+        self.debug_page = QtGui.QWidget()
+        self.debug_page.setGeometry(QtCore.QRect(0,0,101,269))
+        self.debug_page.setObjectName("debug_page")
+        self.toolBox.addItem(self.debug_page,"")
 
         self.frameMap = QtGui.QFrame(self.splitter)
+
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Policy(4),QtGui.QSizePolicy.Policy(5))
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frameMap.sizePolicy().hasHeightForWidth())
+        self.frameMap.setSizePolicy(sizePolicy)
         self.frameMap.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frameMap.setFrameShadow(QtGui.QFrame.Raised)
         self.frameMap.setObjectName("frameMap")
+        self.gridlayout.addWidget(self.splitter,0,0,1,1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0,0,931,24))
+        self.menubar.setGeometry(QtCore.QRect(0,0,856,24))
         self.menubar.setObjectName("menubar")
 
         self.menuInterview = QtGui.QMenu(self.menubar)
@@ -98,10 +127,13 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuUtilities.menuAction())
 
         self.retranslateUi(MainWindow)
+        self.toolBox.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.legend_page), QtGui.QApplication.translate("MainWindow", "Legend", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.debug_page), QtGui.QApplication.translate("MainWindow", "Debug", None, QtGui.QApplication.UnicodeUTF8))
         self.menuInterview.setTitle(QtGui.QApplication.translate("MainWindow", "Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMap.setTitle(QtGui.QApplication.translate("MainWindow", "Map", None, QtGui.QApplication.UnicodeUTF8))
         self.menuUtilities.setTitle(QtGui.QApplication.translate("MainWindow", "Utilities", None, QtGui.QApplication.UnicodeUTF8))

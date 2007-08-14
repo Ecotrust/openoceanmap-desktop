@@ -77,6 +77,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.layout = QVBoxLayout(self.frameMap)
     self.layout.addWidget(self.canvas)
 
+    # We need to initialize the window sizes
+    self.splitter.setSizes([100,600])
+
     # Setup the Python interpreter
     #self.pythonInterp.setFocus(Qt.OtherFocusReason)
     #self.connect(self.pythonInterp, SIGNAL("returnPressed()"),

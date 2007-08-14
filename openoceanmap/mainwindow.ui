@@ -5,43 +5,100 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>931</width>
-    <height>639</height>
+    <width>856</width>
+    <height>627</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget" >
-   <widget class="QSplitter" name="splitter" >
-    <property name="geometry" >
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>901</width>
-      <height>561</height>
-     </rect>
+   <layout class="QGridLayout" >
+    <property name="margin" >
+     <number>9</number>
     </property>
-    <property name="orientation" >
-     <enum>Qt::Horizontal</enum>
+    <property name="spacing" >
+     <number>6</number>
     </property>
-    <widget class="QTreeView" name="treeView" />
-    <widget class="QFrame" name="frameMap" >
-     <property name="frameShape" >
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow" >
-      <enum>QFrame::Raised</enum>
-     </property>
-    </widget>
-   </widget>
+    <item row="0" column="0" >
+     <widget class="QSplitter" name="splitter" >
+      <property name="orientation" >
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QToolBox" name="toolBox" >
+       <property name="enabled" >
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>5</hsizetype>
+         <vsizetype>5</vsizetype>
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="baseSize" >
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="currentIndex" >
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="legend_page" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>160</width>
+          <height>510</height>
+         </rect>
+        </property>
+        <attribute name="label" >
+         <string>Legend</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="debug_page" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>101</width>
+          <height>269</height>
+         </rect>
+        </property>
+        <attribute name="label" >
+         <string>Debug</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frameMap" >
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>5</hsizetype>
+         <vsizetype>5</vsizetype>
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape" >
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow" >
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar" >
    <property name="geometry" >
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>931</width>
+     <width>856</width>
      <height>24</height>
     </rect>
    </property>
