@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Mon Aug 13 15:53:35 2007
+# Created: Tue Aug 14 16:15:49 2007
 #      by: PyQt4 UI code generator 4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtGui.QToolBox(self.splitter)
         self.toolBox.setEnabled(True)
 
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Policy(1),QtGui.QSizePolicy.Policy(5))
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Policy(5),QtGui.QSizePolicy.Policy(5))
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.toolBox.sizePolicy().hasHeightForWidth())
@@ -38,18 +38,27 @@ class Ui_MainWindow(object):
         self.toolBox.setObjectName("toolBox")
 
         self.legend_page = QtGui.QWidget()
-        self.legend_page.setGeometry(QtCore.QRect(0,0,160,510))
+        self.legend_page.setGeometry(QtCore.QRect(0,0,301,510))
         self.legend_page.setObjectName("legend_page")
+
+        self.gridlayout1 = QtGui.QGridLayout(self.legend_page)
+        self.gridlayout1.setMargin(9)
+        self.gridlayout1.setSpacing(6)
+        self.gridlayout1.setObjectName("gridlayout1")
+
+        self.listWidget = QtGui.QListWidget(self.legend_page)
+        self.listWidget.setObjectName("listWidget")
+        self.gridlayout1.addWidget(self.listWidget,0,0,1,1)
         self.toolBox.addItem(self.legend_page,"")
 
         self.debug_page = QtGui.QWidget()
-        self.debug_page.setGeometry(QtCore.QRect(0,0,101,269))
+        self.debug_page.setGeometry(QtCore.QRect(0,0,96,26))
         self.debug_page.setObjectName("debug_page")
         self.toolBox.addItem(self.debug_page,"")
 
         self.frameMap = QtGui.QFrame(self.splitter)
 
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Policy(4),QtGui.QSizePolicy.Policy(5))
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Policy(5),QtGui.QSizePolicy.Policy(5))
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frameMap.sizePolicy().hasHeightForWidth())

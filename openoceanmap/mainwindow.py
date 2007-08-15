@@ -80,6 +80,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # We need to initialize the window sizes
     self.splitter.setSizes([100,600])
 
+    # Set up the legend string list
+    #self.model = QStringListModel()
+    #self.stringList =  QStringList()
+    #self.model.setStringList(self.stringList)
+    #self.listView.setModel(self.model)
+    #self.listWidget.addColumn("Layers")
+
     # Setup the Python interpreter
     #self.pythonInterp.setFocus(Qt.OtherFocusReason)
     #self.connect(self.pythonInterp, SIGNAL("returnPressed()"),
@@ -279,7 +286,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     cl = QgsMapCanvasLayer(layer)
     self.layers.insert(0,cl)
     self.canvas.setLayerSet(self.layers)
-  
+
+    #Add item to legend
+    #self.stringList.append(info.completeBaseName())
+    #self.model.insertRows(self.stringList.count()-1, self.stringList.count())
+    item_new = QListWidgetItem( info.completeBaseName(), self.listWidget)
+    pm = QPixmap(10,10)
+    pm.fill(layer.renderer().symbols()[0].fillColor())
+    icon = QIcon(pm)
+    item_new.setIcon(icon)
 
   # Signal handeler for add layer button
   def addRasterLayer(self):
