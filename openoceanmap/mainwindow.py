@@ -63,7 +63,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.enableAntiAliasing(True)
     self.canvas.useQImageToRender(False)
     self.canvas.show()
-    self.canvas.parentWin = self;
+    self.canvas.parentWin = self
     # A place to store polygons we capture
     self.capturedPolygons = []
     self.capturedPolygonsPennies = []
@@ -111,22 +111,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                  self.startPythonConsole)
 
     # create a little toolbar for map tools
-    self.toolbar = self.addToolBar("File");
-    self.toolbar.addAction(self.mpActionAddVectorLayer);
-    self.toolbar.addAction(self.mpActionAddRasterLayer);
-    self.toolbar.addAction(self.mpActionZoomIn);
-    self.toolbar.addAction(self.mpActionZoomOut);
-    self.toolbar.addAction(self.mpActionPan);
-    self.toolbar.addAction(self.actionRegion_Tool);
+    self.toolbar = self.addToolBar("File")
+    self.toolbar.addAction(self.mpActionAddVectorLayer)
+    self.toolbar.addAction(self.mpActionAddRasterLayer)
+    self.toolbar.addAction(self.mpActionZoomIn)
+    self.toolbar.addAction(self.mpActionZoomOut)
+    self.toolbar.addAction(self.mpActionPan)
+    self.toolbar.addAction(self.actionRegion_Tool)
 
     # create a little toolbar for interview tools
-    self.toolbar2 = self.addToolBar("File2");
-    self.toolbar2.addAction(self.actionStart_Interview);
-    #self.toolbar2.addAction(self.actionPolygon_Tool);
+    self.toolbar2 = self.addToolBar("File2")
+    self.toolbar2.addAction(self.actionStart_Interview)
+    #self.toolbar2.addAction(self.actionPolygon_Tool)
 
     # create a little toolbar for utilities
-    self.toolbar3 = self.addToolBar("File3");
-    self.toolbar3.addAction(self.actionPython_Console);
+    self.toolbar3 = self.addToolBar("File3")
+    self.toolbar3.addAction(self.actionPython_Console)
 
     # create the map tools
     self.toolPan = QgsMapToolPan(self.canvas)
@@ -277,7 +277,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         #self.canvas.parentWin.outputWin.append(capture_string)
         self.statusbar.showMessage(capture_string)
         return
-    QgsMapLayerRegistry.instance().addMapLayer(layer);
+    QgsMapLayerRegistry.instance().addMapLayer(layer)
 
     # set extent to the extent of our layer
     self.canvas.setExtent(layer.extent())
@@ -319,7 +319,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.statusbar.showMessage(capture_string)
         return
     # add layer to the registry
-    QgsMapLayerRegistry.instance().addMapLayer(layer);
+    QgsMapLayerRegistry.instance().addMapLayer(layer)
 
     # set extent to the extent of our layer
     self.canvas.setExtent(layer.extent())
