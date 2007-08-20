@@ -110,6 +110,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.connect(self.actionPython_Console, SIGNAL("triggered()"),
                  self.startPythonConsole)
 
+    # This one is to capture the mouse move for coordinate display
+    QObject.connect(self.canvas, SIGNAL("xyCoordinates(QgsPoint&)"),
+                    self.updateCoordsDisplay)
+    
     # create a little toolbar for map tools
     self.toolbar = self.addToolBar("File")
     self.toolbar.addAction(self.mpActionAddVectorLayer)
@@ -136,7 +140,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.toolZoomOut = QgsMapToolZoom(self.canvas, True) # true = out
     self.toolZoomOut.setAction(self.mpActionZoomOut)
 
-
+  # Signal handeler for updating coord display
+  def updateCoordsDisplay(self, p):
+    capture_string = QString(str(p.x()) + "," +
+                             str(p.y()))
+    self.statusbar.showMessage(capture_string)
+    
+  
   # Signal handeler for capturing rectangle
   def updateBoundsFromRegion(self):
     mc = self.canvas      
@@ -291,7 +301,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     #self.stringList.append(info.completeBaseName())
     #self.model.insertRows(self.stringList.count()-1, self.stringList.count())
     item_new = QListWidgetItem( info.completeBaseName(), self.listWidget)
-    pm = QPixmap(10,10)
+    pm = QPixmap(20,20)
     pm.fill(layer.renderer().symbols()[0].fillColor())
     icon = QIcon(pm)
     item_new.setIcon(icon)
@@ -328,6 +338,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     cl = QgsMapCanvasLayer(layer)
     self.layers.insert(0,cl)
     self.canvas.setLayerSet(self.layers)
+
+    #Add item to legend
+    item_new = QListWidgetItem( info.completeBaseName(), self.listWidget)
+    pm = QPixmap(20,20)
+    layer.drawThumbnail(pm)
+    icon = QIcon(pm)
+    item_new.setIcon(icon)
   
 
   # Geo-transform helper function
