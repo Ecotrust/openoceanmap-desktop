@@ -113,6 +113,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # This one is to capture the mouse move for coordinate display
     QObject.connect(self.canvas, SIGNAL("xyCoordinates(QgsPoint&)"),
                     self.updateCoordsDisplay)
+
+    self.latlon = QLabel("0.0 , 0.0")
+    self.latlon.setFixedWidth(200)
+    self.latlon.setAlignment(Qt.AlignHCenter)
+    self.latlon.setFrameStyle(QFrame.StyledPanel)
+    self.statusbar.addPermanentWidget(self.latlon)
+
     
     # create a little toolbar for map tools
     self.toolbar = self.addToolBar("File")
@@ -142,9 +149,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
   # Signal handeler for updating coord display
   def updateCoordsDisplay(self, p):
-    capture_string = QString(str(p.x()) + "," +
+    capture_string = QString(str(p.x()) + " , " +
                              str(p.y()))
-    self.statusbar.showMessage(capture_string)
+    #self.statusbar.showMessage(capture_string)
+    self.latlon.setText(capture_string)
     
   
   # Signal handeler for capturing rectangle
