@@ -43,16 +43,16 @@ import sys
 
 class InterviewStartGui(QDialog, Ui_InterviewStart):
     def __init__(self, parent, fl):
-        QDialog.__init__(self, parent, fl)
+        QDialog.__init__(self, parent.parent, fl)
         self.setupUi(self)
         self.parent = parent
 
     def on_pbnStartShapes_released(self):
-        self.parent.interviewInfo.append(self.line_1.text())
-        self.parent.interviewInfo.append(self.line_2.text())
+        self.parent.parent.interviewInfo.append(self.line_1.text())
+        self.parent.parent.interviewInfo.append(self.line_2.text())
         self.close()
         mc = self.parent.canvas      
-        self.p = polygonTool(mc)
+        self.p = PolygonTool(mc)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)

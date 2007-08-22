@@ -35,7 +35,7 @@ from qgis.core import *
 from qgis.gui import *
 
 # Region tool class - Used to capture rectangular region from user
-class regionTool(QgsMapTool):
+class RegionTool(QgsMapTool):
     def __init__(self, canvas):
         QgsMapTool.__init__(self,canvas)
         self.dragging=False

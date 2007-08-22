@@ -36,7 +36,7 @@ from qgis.gui import *
 
 
 # Polygon tool class - Used to capture polygon region from user
-class polygonTool(QgsMapTool):
+class PolygonTool(QgsMapTool):
     def __init__(self, canvas):
         QgsMapTool.__init__(self,canvas)
         self.dragging=False
