@@ -38,6 +38,7 @@ from regiontool import *
 from polygontool import *
 from interviewstart import *
 from legend import *
+from mapcoords import *
 # Python Shell
 from pythoninterp import *
 # UI specific includes
@@ -79,25 +80,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # Legend for displaying layers
     self.legend = Legend(self)
     
+    # New Map Coords display in status bar
+    self.mapcoords = MapCoords(self)
+    
     # lay our widgets out in the main window
     self.layout = QVBoxLayout(self.frameMap)
     self.layout.addWidget(self.canvas)
 
     # We need to initialize the window sizes
     self.splitter.setSizes([100,600])
-
-    # Set up the legend string list
-    #self.model = QStringListModel()
-    #self.stringList =  QStringList()
-    #self.model.setStringList(self.stringList)
-    #self.listView.setModel(self.model)
-    #self.listWidget.addColumn("Layers")
-
-    # Setup the Python interpreter
-    #self.pythonInterp.setFocus(Qt.OtherFocusReason)
-    #self.connect(self.pythonInterp, SIGNAL("returnPressed()"),
-    #             self.pythonInterpParse)
-    #self.sh = Shell(locals(),self.canvas)
 
     # create the actions behaviours
     self.connect(self.mpActionAddVectorLayer, SIGNAL("triggered()"),
@@ -116,17 +107,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.connect(self.actionPython_Console, SIGNAL("triggered()"),
                  self.startPythonConsole)
 
-    # This one is to capture the mouse move for coordinate display
-    QObject.connect(self.canvas, SIGNAL("xyCoordinates(QgsPoint&)"),
-                    self.updateCoordsDisplay)
-
-    self.latlon = QLabel("0.0 , 0.0")
-    self.latlon.setFixedWidth(200)
-    self.latlon.setAlignment(Qt.AlignHCenter)
-    self.latlon.setFrameStyle(QFrame.StyledPanel)
-    self.statusbar.addPermanentWidget(self.latlon)
-
-    
     # create a little toolbar for map tools
     self.toolbar = self.addToolBar("File")
     self.toolbar.addAction(self.mpActionAddVectorLayer)
@@ -153,14 +133,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.toolZoomOut = QgsMapToolZoom(self.canvas, True) # true = out
     self.toolZoomOut.setAction(self.mpActionZoomOut)
 
-  # Signal handeler for updating coord display
-  def updateCoordsDisplay(self, p):
-    capture_string = QString(str(p.x()) + " , " +
-                             str(p.y()))
-    #self.statusbar.showMessage(capture_string)
-    self.latlon.setText(capture_string)
-    
-  
   # Signal handeler for capturing rectangle
   def updateBoundsFromRegion(self):
     mc = self.canvas      
