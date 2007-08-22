@@ -37,6 +37,7 @@ from qgis.gui import *
 from regiontool import *
 from polygontool import *
 from interviewstart import *
+from legend import *
 # Python Shell
 from pythoninterp import *
 # UI specific includes
@@ -64,14 +65,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.useQImageToRender(False)
     self.canvas.show()
     self.canvas.parentWin = self
+
     # A place to store polygons we capture
     self.capturedPolygons = []
     self.capturedPolygonsPennies = []
     self.capturedPolygonsRub = []
+
     # Interview info to write in shapefile
     self.interviewInfo = []
     
     self.layers = []
+
+    # Legend for displaying layers
+    self.legend = Legend(self)
     
     # lay our widgets out in the main window
     self.layout = QVBoxLayout(self.frameMap)
@@ -306,13 +312,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setLayerSet(self.layers)
 
     #Add item to legend
-    #self.stringList.append(info.completeBaseName())
-    #self.model.insertRows(self.stringList.count()-1, self.stringList.count())
-    item_new = QListWidgetItem( info.completeBaseName(), self.listWidget)
-    pm = QPixmap(20,20)
-    pm.fill(layer.renderer().symbols()[0].fillColor())
-    icon = QIcon(pm)
-    item_new.setIcon(icon)
+    self.legend.addVectorLegendItem(info.completeBaseName(), layer)
 
   # Signal handeler for add layer button
   def addRasterLayer(self):
@@ -348,11 +348,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setLayerSet(self.layers)
 
     #Add item to legend
-    item_new = QListWidgetItem( info.completeBaseName(), self.listWidget)
-    pm = QPixmap(20,20)
-    layer.drawThumbnail(pm)
-    icon = QIcon(pm)
-    item_new.setIcon(icon)
+    self.legend.addRasterLegendItem(info.completeBaseName(), layer)
   
 
   # Geo-transform helper function
