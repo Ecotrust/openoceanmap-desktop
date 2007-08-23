@@ -38,7 +38,7 @@ import sys,string
 
 from regiontool import *
 from polygontool import *
-from interviewstart import *
+from Interview.interviewstart import *
 # Python Shell
 from pythoninterp import *
 
