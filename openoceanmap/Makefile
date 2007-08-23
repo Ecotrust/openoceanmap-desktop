@@ -28,9 +28,10 @@
 
 
 all: resources_rc.py mainwindow_ui.py \
-	nextpolygon_ui.py pythoninterp_ui.py
+	nextpolygon_ui.py
 	cd Main; $(MAKE)
 	cd Tools; $(MAKE)
+	cd Util; $(MAKE)
 	cd Interview; $(MAKE)
 
 clean:
@@ -47,8 +48,8 @@ mainwindow_ui.py: mainwindow.ui
 nextpolygon_ui.py: nextpolygon.ui
 	pyuic4 -o nextpolygon_ui.py nextpolygon.ui
 
-pythoninterp_ui.py: pythoninterp.ui
-	pyuic4 -o pythoninterp_ui.py pythoninterp.ui
+#pythoninterp_ui.py: pythoninterp.ui
+#	pyuic4 -o pythoninterp_ui.py pythoninterp.ui
 
 resources_rc.py: resources.qrc
 	pyrcc4 -o resources_rc.py resources.qrc

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'pythoninterp.ui'
 #
-# Created: Wed Jun 13 22:17:09 2007
+# Created: Wed Aug 22 22:45:53 2007
 #      by: PyQt4 UI code generator 4.2
 #
 # WARNING! All changes made in this file will be lost!
