@@ -36,3 +36,7 @@ all:
 clean:
 	rm -f *.pyc
 	rm -f *~
+	cd Main; $(MAKE) clean
+	cd Tools; $(MAKE) clean
+	cd Util; $(MAKE) clean
+	cd Interview; $(MAKE) clean
