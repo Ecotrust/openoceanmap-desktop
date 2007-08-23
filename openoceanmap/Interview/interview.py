@@ -112,6 +112,10 @@ class Interview(object):
             capture_string = QString("ERROR reading file")
             self.statusbar.showMessage(capture_string)
             return
+
+          layer.label().setLabelField(QgsLabel.Text, 2)
+          layer.setLabelOn(True)
+          
           QgsMapLayerRegistry.instance().addMapLayer(layer)
           
           # set the map canvas layer set
