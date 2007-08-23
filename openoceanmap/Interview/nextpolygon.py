@@ -42,21 +42,21 @@ import sys
 
 class NextPolygonGui(QDialog, Ui_NextPolygon):
     def __init__(self, parent, fl):
-        QDialog.__init__(self, parent.parent, fl)
+        QDialog.__init__(self, parent.mainwindow, fl)
         self.setupUi(self)
         self.parent = parent
 
     def on_pbnMoreShapes_released(self):
-        self.parent.parent.capturedPolygonsPennies.append(self.line_1.text())
+        self.parent.capturedPolygonsPennies.append(self.line_1.text())
         self.close()
         mc = self.parent.canvas      
-        self.p = PolygonTool(mc)
+        self.p = PolygonTool(mc,self.parent)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
             
     def on_pbnFinished_released(self):
-        self.parent.parent.capturedPolygonsPennies.append(self.line_1.text())
+        self.parent.capturedPolygonsPennies.append(self.line_1.text())
         self.close()
         self.parent.interviewEnd()
 

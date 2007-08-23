@@ -37,16 +37,14 @@ from qgis.gui import *
 
 # Polygon tool class - Used to capture polygon region from user
 class PolygonTool(QgsMapTool):
-    def __init__(self, canvas):
+    def __init__(self, canvas, parent):
         QgsMapTool.__init__(self,canvas)
-        self.dragging=False
-        #self.selectRect = QRect()
-        #self.rubberBand = QgsRubberBand(canvas,True)
-        self.rubberBand = 0
+        self.parent = parent
         self.canvas=canvas
+
+        self.dragging=False
+        self.rubberBand = 0
         self.polygonList = []
-        #self.ll = None
-        #self.ur = None
         self.lastPoint = None
         self.down=False
         self.started=False
@@ -73,7 +71,6 @@ class PolygonTool(QgsMapTool):
     def canvasPressEvent(self,event):
         self.down=True
         capture_string = QString("Starting Polygon - Down event")
-        #self.canvas.parentWin.outputWin.append(capture_string)
 
     def canvasMoveEvent(self,event):
         if self.started==True:
@@ -82,36 +79,23 @@ class PolygonTool(QgsMapTool):
             pt = transform.toMapCoordinates(event.pos().x(),
                                             event.pos().y())
             self.rubberBand.movePoint(QgsPoint(pt.x(),pt.y()))
-        #if not event.buttons() == Qt.LeftButton:
-        #    return
-        #if not self.dragging:
-        #    self.dragging=True
-        #    self.rubberBand = QRubberBand(QRubberBand.Rectangle,self.canvas)
-        #self.selectRect.setBottomRight(event.pos())
-        #self.rubberBand.setGeometry(self.selectRect.normalized())
-        #self.rubberBand.show()
 
     def canvasReleaseEvent(self,event):
         if self.down==True:
             if self.started==False:
                 self.rubberBand = QgsRubberBand(self.canvas,True)
-                self.canvas.parentWin.capturedPolygonsRub.append(self.rubberBand)
+                self.parent.capturedPolygonsRub.append(self.rubberBand)
                 self.rubberBand.show()
-                #self.currentPolygon = []
                 self.currentPolygon = 'POLYGON(('
-                #self.currentPolygon = 'LINESTRING('
             self.started=True
-            #print "Polygon point added"
             capture_string = QString("Polygon point added")
-            #self.canvas.parentWin.outputWin.append(capture_string)
             
             transform = self.canvas.getCoordinateTransform()
             pt = transform.toMapCoordinates(event.pos().x(),
                                             event.pos().y())
             self.rubberBand.addPoint(QgsPoint(pt.x(),pt.y()))
-            #self.canvas.parentWin.currentPolygon2.append(QgsPoint(pt.x(),pt.y()))
+
             if self.currentPolygon == 'POLYGON((':
-            #if self.currentPolygon == 'LINESTRING(':
                 self.originalPoint = '%f %f' % (pt.x(), pt.y())
             self.currentPolygon = self.currentPolygon + '%f %f' % (pt.x(), pt.y()) + ',' 
             if event.button() == Qt.RightButton:
@@ -119,8 +103,7 @@ class PolygonTool(QgsMapTool):
                 self.started=False
                 self.currentPolygon = self.currentPolygon + self.originalPoint
                 self.currentPolygon = self.currentPolygon + '))'
-                #self.currentPolygon.append(self.currentPolygon)
-                self.canvas.parentWin.capturedPolygons.append(self.currentPolygon)
+                self.parent.capturedPolygons.append(self.currentPolygon)
                 self.o.emit(SIGNAL("finished()"))
             
     def activate(self):
@@ -129,12 +112,10 @@ class PolygonTool(QgsMapTool):
         self.canvas.setCursor(self.cursor)
         capture_string = QString("Draw polygon on canvas " +
                                  "by digitizing points...")
-        #self.canvas.parentWin.outputWin.append(capture_string)
 
     def deactivate(self):
         #print "End Polygon Tool Selection"
         capture_string = QString("End Polygon Tool Selection")
-        #self.canvas.parentWin.outputWin.append(capture_string)
 
     def isZoomTool(self):
         return False

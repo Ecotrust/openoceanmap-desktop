@@ -38,7 +38,8 @@ import sys,string
 
 from regiontool import *
 from polygontool import *
-from Interview.interviewstart import *
+#from Interview.interviewstart import *
+from Interview.interview import *
 # Python Shell
 from Util.pythoninterp import *
 
@@ -52,6 +53,7 @@ class MapTools(object):
     self.statusbar = parent.statusbar
     self.legend = parent.legend
     self.layers = parent.layers
+
     # create the actions behaviours
     QObject.connect(parent.mpActionAddVectorLayer, SIGNAL("triggered()"),
                  self.addVectorLayer)
@@ -93,6 +95,7 @@ class MapTools(object):
     self.toolZoomIn.setAction(parent.mpActionZoomIn)
     self.toolZoomOut = QgsMapToolZoom(self.canvas, True) # true = out
     self.toolZoomOut.setAction(parent.mpActionZoomOut)
+
 
   # Signal handeler for capturing rectangle
   def updateBoundsFromRegion(self):
@@ -138,66 +141,9 @@ class MapTools(object):
   # Start interview dialog
   def interviewStart(self):
       capture_string = QString("Starting Interview Dialog...")
-      #self.outputWin.append(capture_string)
       self.statusbar.showMessage(capture_string)
-      # Reset previous polygons
-      del self.parent.capturedPolygonsRub[:]
-      del self.parent.capturedPolygons[:]
-      del self.parent.capturedPolygonsPennies[:]
-      del self.parent.interviewInfo[:]
-      flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-      wnd = InterviewStartGui(self,flags)
-      wnd.show()
+      interview = Interview(self)
 
-  # End interview dialog
-  def interviewEnd(self):
-      if len(self.parent.capturedPolygons) == 0:
-          capture_string = QString("No Shapes to write...")
-          #self.outputWin.append(capture_string)
-          self.statusbar.showMessage(capture_string)
-      else:
-          capture_string = QString("Writing shapefile...")
-          #self.outputWin.append(capture_string)
-          self.statusbar.showMessage(capture_string)
-          qd=QFileDialog()
-          filter_str = QString("*.shp")
-          f=qd.getSaveFileName(self.parent,QString(),QString(),filter_str)
-          write_string = QString(f)
-          # define fields for feature attributes
-          fields = { 0 : QgsField("interviewer_name", QVariant.String),
-                     1 : QgsField("participant_name", QVariant.String),
-                     2 : QgsField("pennies", QVariant.Int) }
-          
-          # create an instance of vector file writer,
-          # it will create the shapefile. Arguments:
-          # 1. path to new shapefile (will fail if exists already)
-          # 2. encoding of the attributes
-          # 3. field map
-          # 4. geometry type - from WKBTYPE enum
-          # 5. layer's spatial reference (instance of QgsSpatialRefSys)
-          writer = QgsVectorFileWriter(write_string, "UTF-8", fields,
-                                       QGis.WKBPolygon, None)
-          
-          if writer.hasError() != QgsVectorFileWriter.NoError:
-              print "Error when creating shapefile: ", writer.hasError()
-              
-          # add some features
-          for capPolyInd, capPoly in enumerate(self.parent.capturedPolygons):
-              fet = QgsFeature()
-              ret_val = fet.setGeometry(QgsGeometry.fromWkt(capPoly))
-              fet.addAttribute(0, QVariant(self.parent.interviewInfo[0]))
-              fet.addAttribute(1, QVariant(self.parent.interviewInfo[1]))
-              fet.addAttribute(2, QVariant(self.parent.capturedPolygonsPennies[capPolyInd]))
-              writer.addFeature(fet)
-          del writer
-          capture_string = QString("Wrote Shapefile..." + write_string)
-          #self.outputWin.append(capture_string)
-          self.statusbar.showMessage(capture_string)
-
-          # add some features
-          for capPolyRub in self.parent.capturedPolygonsRub:
-            capPolyRub.reset()
-          self.canvas.setMapTool(self.toolZoomIn)
 
   # Signal handeler for zoom in button
   def zoomIn(self):
@@ -287,16 +233,3 @@ class MapTools(object):
   # Geo-transform helper function
   def transform(self, x, y):
     return QgsPoint(self.canvas.getCoordinateTransform().toMapCoordinates(x,y))
-
-  #def pythonInterpParse(self):
-  #  capture_string = str(self.pythonInterp.text())
-  #  #self.canvas.parentWin.outputWin.append(">>>" + capture_string)
-  #  #self.sh.push(capture_string)
-  #  capture_string = QString("--------")
-  #  #self.canvas.parentWin.outputWin.append(capture_string)
-  #  self.pythonInterp.clear()
-
-    
-
-
-  

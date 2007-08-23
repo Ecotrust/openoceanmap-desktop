@@ -66,13 +66,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # We need to initialize the window sizes
     self.splitter.setSizes([100,600])
 
-    # A place to store polygons we capture
-    self.capturedPolygons = []
-    self.capturedPolygonsPennies = []
-    self.capturedPolygonsRub = []
+    ## A place to store polygons we capture
+    #self.capturedPolygons = []
+    #self.capturedPolygonsPennies = []
+    #self.capturedPolygonsRub = []
+    #
+    ## Interview info to write in shapefile
+    #self.interviewInfo = []
 
-    # Interview info to write in shapefile
-    self.interviewInfo = []
     self.layers = []
 
     # Legend for displaying layers
