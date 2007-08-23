@@ -104,6 +104,24 @@ class Interview(object):
           capture_string = QString("Wrote Shapefile..." + write_string)
           self.parent.statusbar.showMessage(capture_string)
 
+          # Now add the new layer back... but with styling...
+          info = QFileInfo(QString(f))
+          layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
+          
+          if not layer.isValid():
+            capture_string = QString("ERROR reading file")
+            self.statusbar.showMessage(capture_string)
+            return
+          QgsMapLayerRegistry.instance().addMapLayer(layer)
+          
+          # set the map canvas layer set
+          cl = QgsMapCanvasLayer(layer)
+          self.mainwindow.layers.insert(0,cl)
+          self.canvas.setLayerSet(self.mainwindow.layers)
+          
+          #Add item to legend
+          self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), layer)
+          
           # add some features
           for capPolyRub in self.capturedPolygonsRub:
             capPolyRub.reset()
