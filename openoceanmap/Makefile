@@ -27,30 +27,12 @@
 #---------------------------------------------------------------------
 
 
-all: resources_rc.py mainwindow_ui.py \
-	nextpolygon_ui.py
+all:
 	cd Main; $(MAKE)
 	cd Tools; $(MAKE)
 	cd Util; $(MAKE)
 	cd Interview; $(MAKE)
 
 clean:
-	rm -f mainwindow_ui.py resources_rc.py interviewstart_ui.py
 	rm -f *.pyc
-
-
-mainwindow_ui.py: mainwindow.ui
-	pyuic4 -o mainwindow_ui.py mainwindow.ui
-
-#interviewstart_ui.py: interviewstart.ui
-#	pyuic4 -o interviewstart_ui.py interviewstart.ui
-#
-nextpolygon_ui.py: nextpolygon.ui
-	pyuic4 -o nextpolygon_ui.py nextpolygon.ui
-
-#pythoninterp_ui.py: pythoninterp.ui
-#	pyuic4 -o pythoninterp_ui.py pythoninterp.ui
-
-resources_rc.py: resources.qrc
-	pyrcc4 -o resources_rc.py resources.qrc
-
+	rm -f *~

@@ -36,7 +36,7 @@ from PyQt4.QtGui import *
 from qgis.core import *
 from qgis.gui import *
 # Custom Tools
-from mainwindow import *
+from Main.mainwindow import *
 # General system includes
 import sys
 

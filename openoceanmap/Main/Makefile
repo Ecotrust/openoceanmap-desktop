@@ -27,14 +27,16 @@
 #---------------------------------------------------------------------
 
 
-all:
+all: resources_rc.py mainwindow_ui.py
 
 clean:
-	rm -f interviewstart_ui.py
+	rm -f mainwindow_ui.py resources_rc.py
 	rm -f *.pyc
+	rm -f *~
 
+mainwindow_ui.py: mainwindow.ui
+	pyuic4 -o mainwindow_ui.py mainwindow.ui
 
-interviewstart_ui.py: interviewstart.ui
-	pyuic4 -o interviewstart_ui.py interviewstart.ui
-
+resources_rc.py: resources.qrc
+	pyrcc4 -o resources_rc.py resources.qrc
 

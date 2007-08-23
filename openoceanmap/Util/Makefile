@@ -32,6 +32,7 @@ all: pythoninterp_ui.py
 clean:
 	rm -f  pythoninterp_ui.py
 	rm -f *.pyc
+	rm -f *~
 
 pythoninterp_ui.py: pythoninterp.ui
 	pyuic4 -o pythoninterp_ui.py pythoninterp.ui
