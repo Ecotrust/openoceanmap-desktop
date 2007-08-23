@@ -34,7 +34,7 @@ from PyQt4.QtGui import *
 from qgis.core import *
 from qgis.gui import *
 # Custom Tools
-from polygontool import *
+from Tools.polygontool import *
 from nextpolygon import *
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart

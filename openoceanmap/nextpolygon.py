@@ -34,7 +34,7 @@ from PyQt4.QtGui import *
 from qgis.core import *
 from qgis.gui import *
 # Custom Tools
-from polygontool import *
+from Tools.polygontool import *
 # UI specific includes
 from nextpolygon_ui import Ui_NextPolygon
 # General system includes

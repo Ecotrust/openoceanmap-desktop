@@ -30,11 +30,4 @@
 all:
 
 clean:
-	rm -f interviewstart_ui.py
 	rm -f *.pyc
-
-
-interviewstart_ui.py: interviewstart.ui
-	pyuic4 -o interviewstart_ui.py interviewstart.ui
-
-

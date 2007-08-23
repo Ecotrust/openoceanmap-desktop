@@ -34,9 +34,9 @@ from PyQt4.QtGui import *
 from qgis.core import *
 from qgis.gui import *
 # Custom Tools
-from legend import *
-from mapcoords import *
-from maptools import *
+from Tools.maptools import *
+from Tools.legend import *
+from Tools.mapcoords import *
 # UI specific includes
 from mainwindow_ui import Ui_MainWindow
 # General system includes
