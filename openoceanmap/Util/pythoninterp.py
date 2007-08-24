@@ -37,7 +37,6 @@ from pythoninterp_ui import Ui_PythonWin
 # General system includes
 import sys
 from code import *
-from rlcompleter import *
 
 
 
