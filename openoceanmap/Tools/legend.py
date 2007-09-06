@@ -37,7 +37,6 @@ from qgis.gui import *
 import sys,string
 
 
-  
 # Main window used for houseing the canvas, toolbars, and dialogs
 class Legend(object):
   def __init__(self, parent):

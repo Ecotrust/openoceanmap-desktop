@@ -85,3 +85,124 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # New Map Coords display in status bar
     self.mapcoords = MapCoords(self)
 
+    #self.loadDataLayers()
+
+  def loadDataLayers(self):
+    # Set units to meters
+    self.canvas.setMapUnits(QGis.units(0))
+    self.canvas.updateScale()
+    rasterList = [["Data/noaa_7_albs34.tif",1500000,4000000],
+                  ["Data/noaa_8_albs34.tif",500000,1500000],
+                  ["Data/noaa_9_albs34.tif",250000,500000],
+                  ["Data/noaa_10_albs34.tif",125000,250000],
+                  ["Data/noaa_11_albs34.tif",85000,125000],
+                  ["Data/noaa_12_albs34.tif",0,85000]]
+    self.rasterBaseLayer = OOMLayer(self)
+    for rasterSet in rasterList:
+      raster = rasterSet[0]
+      minScale = rasterSet[1]
+      maxScale = rasterSet[2]
+      
+      info = QFileInfo(QString(raster))
+      
+      # create layer
+      layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
+
+      # Set the scales
+      layer.setScaleBasedVisibility(True)
+      layer.setMinScale(minScale)
+      layer.setMaxScale(maxScale)
+      
+      if not layer.isValid():
+        capture_string = QString("ERROR reading file")
+        #self.canvas.parentWin.outputWin.append(capture_string)
+        self.statusbar.showMessage(capture_string)
+        return
+      # add layer to the registry
+      QgsMapLayerRegistry.instance().addMapLayer(layer)
+      
+      # set extent to the extent of our layer
+      self.canvas.setExtent(layer.extent())
+      
+      # set the map canvas layer set
+      cl = QgsMapCanvasLayer(layer)
+      self.layers.insert(0,cl)
+      self.canvas.setLayerSet(self.layers)
+      self.rasterBaseLayer.addLayerItem(layer,cl)
+      
+    #Add one base raster item to legend
+    self.legend.addRasterLegendItem("NOAA ENC", self.rasterBaseLayer.getLayerItem(0)[0])
+
+    vectorList = [["Data/NccKayakAccessPt.shp",0,125000]]
+    #vectorList = ["Data/Ca_Counties_Simp.shp",
+                  #"Data/NccDepthLineFa.shp",
+                  #"Data/NccKayakAccessPt.shp"]
+    for vectorSet in vectorList:
+      vector = vectorSet[0]
+      minScale = vectorSet[1]
+      maxScale = vectorSet[2]
+      
+      info = QFileInfo(QString(vector))
+      # create layer
+      layer = QgsVectorLayer(info.filePath(), info.completeBaseName(), "ogr")
+      if not layer.isValid():
+        capture_string = QString("ERROR reading file")
+        #self.canvas.parentWin.outputWin.append(capture_string)
+        self.statusbar.showMessage(capture_string)
+        return
+      
+      # Set the scales
+      layer.setScaleBasedVisibility(True)
+      layer.setMinScale(minScale)
+      layer.setMaxScale(maxScale)
+
+      layer.label().setLabelField(QgsLabel.Text, 1)
+      layer.setLabelOn(True)
+      label = layer.label()
+      labelAt = label.layerAttributes()
+      labelAt.setBold(True)
+      labelAt.setBufferEnabled(True)
+      labelAt.setOffset(0,-50,QgsLabelAttributes.Units(0))
+      # add layer to the registry
+      QgsMapLayerRegistry.instance().addMapLayer(layer)
+      
+      # set extent to the extent of our layer
+      #self.canvas.setExtent(layer.extent())
+      
+      # set the map canvas layer set
+      cl = QgsMapCanvasLayer(layer)
+      self.layers.insert(0,cl)
+      self.canvas.setLayerSet(self.layers)
+      self.rasterBaseLayer.addLayerItem(layer,cl)
+      #Add item to legend
+      self.legend.addVectorLegendItem(info.completeBaseName(), layer)
+      
+
+
+class OOMLayer(object):
+  def __init__(self, parent):
+    # Get parent
+    self.parent = parent
+    self.layers = []
+    
+  # Add a data layer to this OOMLayer
+  def addLayerItem(self, layer,cl):
+    self.layers.insert(0,[layer,cl])
+
+  # get layer
+  def getLayerItem(self, index):
+    return self.layers[index]
+
+  def turnLayersOff(self):
+    # Here we can turn off the whole set of layers
+    for layer in self.layers:
+      # set the layer visibility to off
+      layer[1].setVisible(False)
+  
+  def turnLayersOn(self):
+    # Here we can turn off the whole set of layers
+    for layer in self.layers:
+      # set the layer visibility to on
+      layer[1].setVisible(True)
+  
+    
