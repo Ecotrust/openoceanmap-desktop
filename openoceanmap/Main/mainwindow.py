@@ -65,7 +65,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.layout = QVBoxLayout(self.frameMap)
     self.layout.addWidget(self.canvas)
     # We need to initialize the window sizes
-    self.splitter.setSizes([100,600])
+    self.splitter.setSizes([175,800])
 
     ## A place to store polygons we capture
     #self.capturedPolygons = []
@@ -86,13 +86,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # New Map Coords display in status bar
     self.mapcoords = MapCoords(self)
 
-    self.loadDataLayers()
+    self.loadBaseDataLayers()
 
-  def loadDataLayers(self):
+  def loadBaseDataLayers(self):
+
     # Set units to meters
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
-    rasterList = [["Data/noaa_7_albs34.tif",1500000,4000000],
+    # set extent to the extent of our layer
+    self.canvas.setExtent(QgsRect(-340000,-70000,
+                                  -191000,52500))
+    
+    rasterList = [["Data/noaa_7_albs34.tif",1500000,5000000],
                   ["Data/noaa_8_albs34.tif",500000,1500000],
                   ["Data/noaa_9_albs34.tif",250000,500000],
                   ["Data/noaa_10_albs34.tif",125000,250000],
@@ -126,7 +131,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       QgsMapLayerRegistry.instance().addMapLayer(layer)
       
       # set extent to the extent of our layer
-      self.canvas.setExtent(layer.extent())
+      #self.canvas.setExtent(layer.extent())
       
       # set the map canvas layer set
       cl = QgsMapCanvasLayer(layer)
@@ -138,10 +143,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem("NOAA ENC",
                                     self.rasterBaseLayer.getCls())
 
-    vectorList = [["Data/NccKayakAccessPt.shp",0,125000]]
-    #vectorList = ["Data/Ca_Counties_Simp.shp",
-                  #"Data/NccDepthLineFa.shp",
-                  #"Data/NccKayakAccessPt.shp"]
+    vectorList = [["Data/Kayak_Points.shp",0,125000],
+                  ["Data/Access_Points.shp",0,200000]]
     for vectorSet in vectorList:
       vector = vectorSet[0]
       minScale = vectorSet[1]
@@ -161,18 +164,27 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       layer.setMinScale(minScale)
       layer.setMaxScale(maxScale)
 
-      layer.label().setLabelField(QgsLabel.Text, 1)
-      layer.setLabelOn(True)
-      label = layer.label()
-      labelAt = label.layerAttributes()
-      labelAt.setBold(True)
-      labelAt.setBufferEnabled(True)
-      labelAt.setOffset(0,-50,QgsLabelAttributes.Units(0))
+      if vector == "Data/Access_Points.shp":
+        layer.label().setLabelField(QgsLabel.Text, 25)
+        layer.renderer().symbols()[0].setPointSize(10)
+        layer.setLabelOn(True)
+        label = layer.label()
+        labelAt = label.layerAttributes()
+        labelAt.setBold(True)
+        labelAt.setBufferEnabled(True)
+        labelAt.setOffset(0,-10,1)
+      elif vector == "Data/Kayak_Points.shp":
+        layer.label().setLabelField(QgsLabel.Text, 1)
+        layer.renderer().symbols()[0].setPointSize(10)
+        layer.setLabelOn(True)
+        label = layer.label()
+        labelAt = label.layerAttributes()
+        labelAt.setBold(True)
+        labelAt.setBufferEnabled(True)
+        labelAt.setOffset(0,-10,1)
+      
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
-      
-      # set extent to the extent of our layer
-      #self.canvas.setExtent(layer.extent())
       
       # set the map canvas layer set
       cl = QgsMapCanvasLayer(layer)
@@ -181,7 +193,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       #Add item to legend
       self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
       
-
 
 class OOMLayer(object):
   def __init__(self, parent):
