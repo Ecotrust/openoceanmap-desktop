@@ -37,31 +37,88 @@ from qgis.gui import *
 import sys,string
 
 
+
+# Legend Check Box
+class LegendCheckBox(QCheckBox):
+  def __init__(self, parent, name, layer, canvasLayer):
+    QCheckBox.__init__(self, name)
+    self.parent = parent
+    self.name = name
+    self.layer = layer
+    self.layerIndex = self.parent.parent.layers.index(canvasLayer)
+    self.scaleBasedVisibility = layer.scaleBasedVisibility()
+    self.cl = canvasLayer
+    self.setCheckState(Qt.Checked)
+    QObject.connect(self, SIGNAL("refresh()"),
+                    self.parent.parent.canvas, SLOT("layerStateChange()"))
+
+  # Update Layer status
+  def updateLayerStatus(self, state):
+    layer = self.layer
+    cl = self.cl
+    if state == Qt.Unchecked:
+      cl.setVisible(False)
+      capture_string = QString("Setting layer visibility for layer " +
+                               cl.layer().name() + " " + str(cl.visible()))
+      self.parent.parent.statusbar.showMessage(capture_string)
+      #self.emit(SIGNAL("refresh()"))
+      self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
+    else:
+      cl.setVisible(True)
+      capture_string = QString("Setting layer visibility for layer " +
+                               cl.layer().name() + " " + str(cl.visible()))
+      self.parent.parent.statusbar.showMessage(capture_string)
+      #self.emit(SIGNAL("refresh()"))
+      self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
+
+
+
 # Main window used for houseing the canvas, toolbars, and dialogs
 class Legend(object):
   def __init__(self, parent):
     # Get List Widget
-    self.listWidget = parent.listWidget
+    #self.listWidget = parent.listWidget
+    self.parent = parent
+    # Get List Widget
+    self.groupBox = parent.groupBox
+    self.groupBoxLayout = QVBoxLayout()
+    self.groupBoxLayout.setAlignment(Qt.AlignTop)
+    self.groupBox.setLayout(self.groupBoxLayout)
 
   # Add Item To Legend
-  def addRasterLegendItem(self, name, layer):
-    item_new = QListWidgetItem( name, self.listWidget)
+  def addRasterLegendItem(self, name, layer, cl):
+    #item_new = QCheckBox( name )
+    #item_new.setCheckState(Qt.Checked)
+    #item_new.layer = layer
+    #item_new.cl = cl
+    item_new = LegendCheckBox(self, name, layer, cl)
+    QObject.connect(item_new, SIGNAL("stateChanged(int)"),
+                 item_new.updateLayerStatus)
     pm = QPixmap(20,20)
     layer.drawThumbnail(pm)
     icon = QIcon(pm)
     item_new.setIcon(icon)
+    self.groupBoxLayout.addWidget(item_new)
 
   # Add Item To Legend
-  def addVectorLegendItem(self, name, layer):
-    item_new = QListWidgetItem(name, self.listWidget)
+  def addVectorLegendItem(self, name, layer, cl):
+    #item_new = QListWidgetItem(name, self.listWidget)
+    #item_new = QCheckBox( name )
+    #item_new.setCheckState(Qt.Checked)
+    #item_new.layer = layer
+    #item_new.cl = cl
+    item_new = LegendCheckBox(self, name, layer, cl)
+    QObject.connect(item_new, SIGNAL("stateChanged(int)"),
+                 item_new.updateLayerStatus)    
     pm = QPixmap(20,20)
     pm.fill(layer.renderer().symbols()[0].fillColor())
     icon = QIcon(pm)
     item_new.setIcon(icon)
+    self.groupBoxLayout.addWidget(item_new)
 
   # Remove Item To Legend
   def removeLegendItem(self, name):
-    item_remove = self.listWidget.findItems(name, Qt.MatchExactly)
     #Remove the item
-
+    1+1
   
+

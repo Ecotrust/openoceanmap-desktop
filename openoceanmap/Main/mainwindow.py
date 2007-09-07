@@ -131,7 +131,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.rasterBaseLayer.addLayerItem(layer,cl)
       
     #Add one base raster item to legend
-    self.legend.addRasterLegendItem("NOAA ENC", self.rasterBaseLayer.getLayerItem(0)[0])
+    self.legend.addRasterLegendItem("NOAA ENC", self.rasterBaseLayer.getLayerItem(0)[0],
+                                    self.rasterBaseLayer.getLayerItem(0)[1])
 
     vectorList = [["Data/NccKayakAccessPt.shp",0,125000]]
     #vectorList = ["Data/Ca_Counties_Simp.shp",
@@ -175,7 +176,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.canvas.setLayerSet(self.layers)
       self.rasterBaseLayer.addLayerItem(layer,cl)
       #Add item to legend
-      self.legend.addVectorLegendItem(info.completeBaseName(), layer)
+      self.legend.addVectorLegendItem(info.completeBaseName(), layer, cl)
       
 
 

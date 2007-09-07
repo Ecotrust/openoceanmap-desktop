@@ -191,7 +191,7 @@ class MapTools(object):
     self.canvas.setLayerSet(self.layers)
 
     #Add item to legend
-    self.legend.addVectorLegendItem(info.completeBaseName(), layer)
+    self.legend.addVectorLegendItem(info.completeBaseName(), layer, cl)
 
   # Signal handeler for add layer button
   def addRasterLayer(self):
@@ -227,7 +227,7 @@ class MapTools(object):
     self.canvas.setLayerSet(self.layers)
 
     #Add item to legend
-    self.legend.addRasterLegendItem(info.completeBaseName(), layer)
+    self.legend.addRasterLegendItem(info.completeBaseName(), layer, cl)
   
 
   # Geo-transform helper function
