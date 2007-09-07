@@ -59,7 +59,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.useQImageToRender(False)
     self.canvas.show()
     self.canvas.parentWin = self
-
+    self.srs = None
+    
     # lay our widgets out in the main window
     self.layout = QVBoxLayout(self.frameMap)
     self.layout.addWidget(self.canvas)
@@ -108,6 +109,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
+      if self.srs == None:
+        self.srs = layer.srs()
+      
       # Set the scales
       layer.setScaleBasedVisibility(True)
       layer.setMinScale(minScale)

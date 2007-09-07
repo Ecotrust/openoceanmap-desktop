@@ -87,7 +87,7 @@ class Interview(object):
           # 4. geometry type - from WKBTYPE enum
           # 5. layer's spatial reference (instance of QgsSpatialRefSys)
           writer = QgsVectorFileWriter(write_string, "UTF-8", fields,
-                                       QGis.WKBPolygon, None)
+                                       QGis.WKBPolygon, self.mainwindow.srs)
           
           if writer.hasError() != QgsVectorFileWriter.NoError:
               print "Error when creating shapefile: ", writer.hasError()
