@@ -40,37 +40,32 @@ import sys,string
 
 # Legend Check Box
 class LegendCheckBox(QCheckBox):
-  def __init__(self, parent, name, layer, canvasLayer):
+  def __init__(self, parent, name, canvasLayers):
     QCheckBox.__init__(self, name)
     self.parent = parent
     self.name = name
-    self.layer = layer
-    self.layerIndex = self.parent.parent.layers.index(canvasLayer)
-    self.scaleBasedVisibility = layer.scaleBasedVisibility()
-    self.cl = canvasLayer
+    self.cls = canvasLayers
     self.setCheckState(Qt.Checked)
     QObject.connect(self, SIGNAL("refresh()"),
                     self.parent.parent.canvas, SLOT("layerStateChange()"))
 
   # Update Layer status
   def updateLayerStatus(self, state):
-    layer = self.layer
-    cl = self.cl
-    if state == Qt.Unchecked:
-      cl.setVisible(False)
+    cls = self.cls
+    for cl in cls:
+      if state == Qt.Unchecked:
+        cl.setVisible(False)
+        #self.emit(SIGNAL("refresh()"))
+        self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
+      else:
+        cl.setVisible(True)
+        #self.emit(SIGNAL("refresh()"))
+        self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
+      # Debug
       capture_string = QString("Setting layer visibility for layer " +
                                cl.layer().name() + " " + str(cl.visible()))
       self.parent.parent.statusbar.showMessage(capture_string)
-      #self.emit(SIGNAL("refresh()"))
-      self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
-    else:
-      cl.setVisible(True)
-      capture_string = QString("Setting layer visibility for layer " +
-                               cl.layer().name() + " " + str(cl.visible()))
-      self.parent.parent.statusbar.showMessage(capture_string)
-      #self.emit(SIGNAL("refresh()"))
-      self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
-
+  
 
 
 # Main window used for houseing the canvas, toolbars, and dialogs
@@ -86,32 +81,23 @@ class Legend(object):
     self.groupBox.setLayout(self.groupBoxLayout)
 
   # Add Item To Legend
-  def addRasterLegendItem(self, name, layer, cl):
-    #item_new = QCheckBox( name )
-    #item_new.setCheckState(Qt.Checked)
-    #item_new.layer = layer
-    #item_new.cl = cl
-    item_new = LegendCheckBox(self, name, layer, cl)
+  def addRasterLegendItem(self, name, cls):
+    item_new = LegendCheckBox(self, name, cls)
     QObject.connect(item_new, SIGNAL("stateChanged(int)"),
                  item_new.updateLayerStatus)
     pm = QPixmap(20,20)
-    layer.drawThumbnail(pm)
+    cls[0].layer().drawThumbnail(pm)
     icon = QIcon(pm)
     item_new.setIcon(icon)
     self.groupBoxLayout.addWidget(item_new)
 
   # Add Item To Legend
-  def addVectorLegendItem(self, name, layer, cl):
-    #item_new = QListWidgetItem(name, self.listWidget)
-    #item_new = QCheckBox( name )
-    #item_new.setCheckState(Qt.Checked)
-    #item_new.layer = layer
-    #item_new.cl = cl
-    item_new = LegendCheckBox(self, name, layer, cl)
+  def addVectorLegendItem(self, name, cls):
+    item_new = LegendCheckBox(self, name, cls)
     QObject.connect(item_new, SIGNAL("stateChanged(int)"),
                  item_new.updateLayerStatus)    
     pm = QPixmap(20,20)
-    pm.fill(layer.renderer().symbols()[0].fillColor())
+    pm.fill(cls[0].layer().renderer().symbols()[0].fillColor())
     icon = QIcon(pm)
     item_new.setIcon(icon)
     self.groupBoxLayout.addWidget(item_new)

@@ -124,7 +124,7 @@ class Interview(object):
           self.canvas.setLayerSet(self.mainwindow.layers)
           
           #Add item to legend
-          self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), layer)
+          self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
           
           # add some features
           for capPolyRub in self.capturedPolygonsRub:

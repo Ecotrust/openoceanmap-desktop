@@ -85,7 +85,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # New Map Coords display in status bar
     self.mapcoords = MapCoords(self)
 
-    #self.loadDataLayers()
+    self.loadDataLayers()
 
   def loadDataLayers(self):
     # Set units to meters
@@ -131,8 +131,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.rasterBaseLayer.addLayerItem(layer,cl)
       
     #Add one base raster item to legend
-    self.legend.addRasterLegendItem("NOAA ENC", self.rasterBaseLayer.getLayerItem(0)[0],
-                                    self.rasterBaseLayer.getLayerItem(0)[1])
+    self.legend.addRasterLegendItem("NOAA ENC",
+                                    self.rasterBaseLayer.getCls())
 
     vectorList = [["Data/NccKayakAccessPt.shp",0,125000]]
     #vectorList = ["Data/Ca_Counties_Simp.shp",
@@ -174,9 +174,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       cl = QgsMapCanvasLayer(layer)
       self.layers.insert(0,cl)
       self.canvas.setLayerSet(self.layers)
-      self.rasterBaseLayer.addLayerItem(layer,cl)
       #Add item to legend
-      self.legend.addVectorLegendItem(info.completeBaseName(), layer, cl)
+      self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
       
 
 
@@ -193,6 +192,13 @@ class OOMLayer(object):
   # get layer
   def getLayerItem(self, index):
     return self.layers[index]
+
+  # get cls
+  def getCls(self):
+    cls = []
+    for layer in self.layers:
+      cls.append(layer[1])
+    return cls
 
   def turnLayersOff(self):
     # Here we can turn off the whole set of layers
