@@ -6,625 +6,1027 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>765</width>
-    <height>459</height>
+    <width>864</width>
+    <height>625</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Interview</string>
   </property>
-  <widget class="QLineEdit" name="line_3" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>90</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_4" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>130</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_5" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>170</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_6" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>210</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_7" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>250</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_8" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>290</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_9" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>330</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_9" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>330</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>State Vessel ID :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_8" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>290</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Federal Vessel ID :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>200</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Percent of Income
-From Fishing :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>170</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Years of Experience :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>130</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Age :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>90</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Interviewer Name #2 :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Interviewer Name #1 :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_1" >
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Name :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>240</y>
-     <width>111</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Percent of Income
-From This Fishery :</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pbnCancel" >
-   <property name="geometry" >
-    <rect>
-     <x>510</x>
-     <y>420</y>
-     <width>83</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Cancel</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pbnStartShapes" >
-   <property name="geometry" >
-    <rect>
-     <x>600</x>
-     <y>420</y>
-     <width>151</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Start Making Shapes</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_10" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>370</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_11" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>410</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_10" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>370</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Fisherman License ID :</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line_split" >
-   <property name="geometry" >
-    <rect>
-     <x>360</x>
-     <y>10</y>
-     <width>16</width>
-     <height>421</height>
-    </rect>
-   </property>
-   <property name="orientation" >
-    <enum>Qt::Vertical</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_14" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>520</x>
-     <y>100</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Habitat Type</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_3" >
-   <property name="geometry" >
-    <rect>
-     <x>450</x>
-     <y>120</y>
-     <width>221</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text" >
-     <string>Habitat 1</string>
-    </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="3" column="0" colspan="2" >
+    <widget class="QWidget" native="1" name="button_box" >
+     <layout class="QHBoxLayout" >
+      <property name="margin" >
+       <number>2</number>
+      </property>
+      <property name="spacing" >
+       <number>2</number>
+      </property>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnCancel" >
+        <property name="text" >
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnStartShapes" >
+        <property name="text" >
+         <string>Start Making Shapes</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
-   <item>
-    <property name="text" >
-     <string>Habitat 2</string>
-    </property>
+   <item row="2" column="0" colspan="2" >
+    <widget class="QGroupBox" name="interviewer" >
+     <property name="title" >
+      <string>Interviewer</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QWidget" native="1" name="date" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="date_text" >
+           <property name="text" >
+            <string>Date of interview (mm/dd/yyyy) :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="date_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>441</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="widget" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QGroupBox" name="interviewer_1" >
+           <property name="title" >
+            <string>Interviewer #1</string>
+           </property>
+           <layout class="QVBoxLayout" >
+            <property name="margin" >
+             <number>4</number>
+            </property>
+            <property name="spacing" >
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QWidget" native="1" name="interviewer1_first_name" >
+              <layout class="QHBoxLayout" >
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="interviewer1_first_name_text" >
+                 <property name="text" >
+                  <string>First Name :</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="interviewer1_first_name_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="interviewer1_last_name" >
+              <layout class="QHBoxLayout" >
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="interviewer1_last_name_text" >
+                 <property name="text" >
+                  <string>Last Name :</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="interviewer1_last_name_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="interviewer_2" >
+           <property name="title" >
+            <string>Interviewer #2</string>
+           </property>
+           <layout class="QVBoxLayout" >
+            <property name="margin" >
+             <number>4</number>
+            </property>
+            <property name="spacing" >
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QWidget" native="1" name="interviewer2_first_name" >
+              <layout class="QHBoxLayout" >
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="interviewer2_first_name_text" >
+                 <property name="text" >
+                  <string>First Name :</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="interviewer2_first_name_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="interviewer2_last_name" >
+              <layout class="QHBoxLayout" >
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="interviewer2_last_name_text" >
+                 <property name="text" >
+                  <string>Last Name :</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="interviewer2_last_name_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
-   <item>
-    <property name="text" >
-     <string>Habitat 3</string>
-    </property>
+   <item rowspan="2" row="0" column="0" >
+    <widget class="QGroupBox" name="interviewee" >
+     <property name="title" >
+      <string>Interviewee</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QWidget" native="1" name="interviewee_first_name" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="interviewee_first_name_text" >
+           <property name="text" >
+            <string>First Name :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="interviewee_first_name_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="interviewee_last_name" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="interviewee_last_name_text" >
+           <property name="text" >
+            <string>Last Name :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="interviewee_last_name_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="age" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="age_text" >
+           <property name="text" >
+            <string>Age :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="age_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="gender" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="gender_text" >
+           <property name="text" >
+            <string>Gender :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="gender_comboBox" >
+           <item>
+            <property name="text" >
+             <string>Male</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Female</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="years" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="years_text" >
+           <property name="text" >
+            <string>Years of experience :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="years_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="years_op" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="years_op_text" >
+           <property name="text" >
+            <string>Years operating a boat :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="years_op_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="years_own" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="years_own_text" >
+           <property name="text" >
+            <string>Years of ownership :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="years_own_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="license" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="license_text" >
+           <property name="text" >
+            <string>License number :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="license_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="city" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="city_text" >
+           <property name="text" >
+            <string>City of residence :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="city_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="user_group" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="user_group_text" >
+           <property name="text" >
+            <string>Rec. fishing user group :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="user_group_comboBox" >
+           <item>
+            <property name="text" >
+             <string>Operator of Com. Pass. Fishing Vessels</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Private boat rec. anglers</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Kayak-based anglers</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Pier and shore anglers</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
-  </widget>
-  <widget class="QLabel" name="label_15" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>440</x>
-     <y>170</y>
-     <width>245</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>License or Permits Held Pertainding to this Fishery</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_4" >
-   <property name="geometry" >
-    <rect>
-     <x>450</x>
-     <y>190</y>
-     <width>221</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text" >
-     <string>License 1</string>
-    </property>
+   <item row="0" column="1" >
+    <widget class="QGroupBox" name="vessel_info" >
+     <property name="title" >
+      <string>Vessel Information</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QWidget" native="1" name="ves_license" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="ves_license_text" >
+           <property name="text" >
+            <string>Vessel license :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ves_license_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="years_own_3" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="years_own_text_4" >
+           <property name="text" >
+            <string>Years of ownership :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="years_own_line_4" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="vessel_length" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="vessel_length_text" >
+           <property name="text" >
+            <string>Vessel length :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="vessel_length_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="home_port" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="home_port_text" >
+           <property name="text" >
+            <string>Home Port :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="home_port_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
-   <item>
-    <property name="text" >
-     <string>License 2</string>
-    </property>
+   <item row="1" column="1" >
+    <widget class="QGroupBox" name="trip_info" >
+     <property name="title" >
+      <string>Trip Information</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QWidget" native="1" name="region" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="region_text" >
+           <property name="text" >
+            <string>Region :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="region_comboBox" >
+           <property name="sizeAdjustPolicy" >
+            <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+           </property>
+           <item>
+            <property name="text" >
+             <string>San Francisco County and south, including Pillar Point</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>San Francisco Bay access points to Point Reyes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Point Reyes north to Alder Creek, including Bodega Bay</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="ind_per_trip" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="ind_per_trip_text" >
+           <property name="text" >
+            <string>Individuals per trip :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ind_per_trip_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="days_per_year" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="days_per_year_text" >
+           <property name="text" >
+            <string>Average days fishing per year :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="days_per_year_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="travel_time" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="travel_time_text" >
+           <property name="text" >
+            <string>Travel time from home to fishing location :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="travel_time_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="travel_distance" >
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>4</number>
+         </property>
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="travel_distance_text" >
+           <property name="text" >
+            <string>Travel distance from home to fishing location :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="travel_distance_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
-   <item>
-    <property name="text" >
-     <string>License 3</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QComboBox" name="comboBox_1" >
-   <property name="geometry" >
-    <rect>
-     <x>471</x>
-     <y>10</y>
-     <width>271</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text" >
-     <string>Port 1</string>
-    </property>
-   </item>
-   <item>
-    <property name="text" >
-     <string>Port 2</string>
-    </property>
-   </item>
-   <item>
-    <property name="text" >
-     <string>Port 3</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QComboBox" name="comboBox_2" >
-   <property name="geometry" >
-    <rect>
-     <x>470</x>
-     <y>50</y>
-     <width>271</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text" >
-     <string>Fishery 1</string>
-    </property>
-   </item>
-   <item>
-    <property name="text" >
-     <string>Fishery 2</string>
-    </property>
-   </item>
-   <item>
-    <property name="text" >
-     <string>Fishery 3</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QLabel" name="label_12" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>400</x>
-     <y>10</y>
-     <width>61</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Home Port :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_13" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>400</x>
-     <y>50</y>
-     <width>61</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Fishery :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_11" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>410</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Place of Residence :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_17" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>410</x>
-     <y>320</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Overall Importance :</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_13" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>520</x>
-     <y>320</y>
-     <width>221</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_12" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>520</x>
-     <y>270</y>
-     <width>221</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_16" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>410</x>
-     <y>270</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Interviewer Mood :</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_1" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>10</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_2" >
-   <property name="geometry" >
-    <rect>
-     <x>130</x>
-     <y>50</y>
-     <width>231</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
+  </layout>
  </widget>
  <resources/>
  <connections/>

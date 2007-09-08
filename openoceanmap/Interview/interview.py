@@ -56,6 +56,7 @@ class Interview(object):
 
     # Interview info to write in shapefile
     self.interviewInfo = []
+    self.interviewInfo2 = {}
     
     # Reset previous polygons
     flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -75,9 +76,20 @@ class Interview(object):
           f=qd.getSaveFileName(self.mainwindow,QString(),QString(),filter_str)
           write_string = QString(f)
           # define fields for feature attributes
-          fields = { 0 : QgsField("interviewer_name", QVariant.String),
-                     1 : QgsField("participant_name", QVariant.String),
-                     2 : QgsField("pennies", QVariant.Int) }
+          fields = {}
+          keySort = self.interviewInfo2.keys()
+          keySort.sort()
+          i = 0
+          for key in keySort:
+            fields[i] = QgsField(key, QVariant.String)
+            i += 1
+          fields[i] = QgsField("fishery", QVariant.String)
+          i += 1
+          fields[i] = QgsField("pennies", QVariant.Int)
+          
+          #fields = { 0 : QgsField("interviewer_name", QVariant.String),
+          #           1 : QgsField("participant_name", QVariant.String),
+          #           2 : QgsField("pennies", QVariant.Int) }
           
           # create an instance of vector file writer,
           # it will create the shapefile. Arguments:
@@ -96,9 +108,19 @@ class Interview(object):
           for capPolyInd, capPoly in enumerate(self.capturedPolygons):
               fet = QgsFeature()
               ret_val = fet.setGeometry(QgsGeometry.fromWkt(capPoly))
-              fet.addAttribute(0, QVariant(self.interviewInfo[0]))
-              fet.addAttribute(1, QVariant(self.interviewInfo[1]))
-              fet.addAttribute(2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              keySort = self.interviewInfo2.keys()
+              keySort.sort()
+              i = 0
+              for key in keySort:
+                fet.addAttribute(i, QVariant(self.interviewInfo2[key]))
+                i += 1
+              fet.addAttribute(i, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              i += 1
+              fet.addAttribute(i, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              
+              #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
+              #fet.addAttribute(1, QVariant(self.interviewInfo[1]))
+              #fet.addAttribute(2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -113,7 +135,7 @@ class Interview(object):
             self.statusbar.showMessage(capture_string)
             return
 
-          layer.label().setLabelField(QgsLabel.Text, 2)
+          layer.label().setLabelField(QgsLabel.Text, 25)
           layer.setLabelOn(True)
           
           QgsMapLayerRegistry.instance().addMapLayer(layer)

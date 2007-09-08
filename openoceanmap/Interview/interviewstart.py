@@ -48,8 +48,37 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.parent = parent
 
     def on_pbnStartShapes_released(self):
-        self.parent.interviewInfo.append(self.line_1.text())
-        self.parent.interviewInfo.append(self.line_2.text())
+        interviewInfo2 = self.parent.interviewInfo2
+        interviewInfo2["fname"] = self.interviewee_first_name_line.text()
+        interviewInfo2["lname"] = self.interviewee_last_name_line.text()
+        interviewInfo2["age"] = self.age_line.text()
+        interviewInfo2["gender"] = self.gender_comboBox.currentText()
+        interviewInfo2["years"] = self.years_line.text()
+        interviewInfo2["years_op"] = self.years_op_line.text()
+        interviewInfo2["years_own"] = self.years_own_line.text()
+        interviewInfo2["license"] = self.license_line.text()
+        interviewInfo2["city"] = self.city_line.text()
+        interviewInfo2["user_group"] = self.user_group_comboBox.currentText()
+        
+        interviewInfo2["int1_fname"] = self.interviewer1_first_name_line.text()
+        interviewInfo2["int1_lname"] = self.interviewer1_last_name_line.text()
+        interviewInfo2["int2_fname"] = self.interviewer2_first_name_line.text()
+        interviewInfo2["int2_lname"] = self.interviewer2_last_name_line.text()
+        interviewInfo2["date"] = self.date_line.text()
+
+        interviewInfo2["v_license"] = self.ves_license_line.text()
+        interviewInfo2["v_yearown"] = self.years_own_line.text()
+        interviewInfo2["v_len"] = self.vessel_length_line.text()
+        interviewInfo2["v_homep"] = self.home_port_line.text()
+        
+        interviewInfo2["t_region"] = self.region_comboBox.currentText()
+        interviewInfo2["t_ind_trip"] = self.ind_per_trip_line.text()
+        interviewInfo2["t_day_year"] = self.days_per_year_line.text()
+        interviewInfo2["t_tr_time"] = self.travel_time_line.text()
+        interviewInfo2["t_tr_dist"] = self.travel_distance_line.text()
+
+        #self.parent.interviewInfo.append(self.line_1.text())
+        #self.parent.interviewInfo.append(self.line_2.text())
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)

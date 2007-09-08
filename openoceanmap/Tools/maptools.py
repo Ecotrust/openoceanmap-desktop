@@ -142,7 +142,7 @@ class MapTools(object):
   def interviewStart(self):
       capture_string = QString("Starting Interview Dialog...")
       self.statusbar.showMessage(capture_string)
-      interview = Interview(self)
+      self.interview = Interview(self)
 
 
   # Signal handeler for zoom in button
