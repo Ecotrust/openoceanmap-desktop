@@ -40,18 +40,19 @@ from Tools.mapcoords import *
 # UI specific includes
 from mainwindow_ui import Ui_MainWindow
 # General system includes
-import sys,string
+import sys,string,time
 
   
 # Main window used for houseing the canvas, toolbars, and dialogs
 class MainWindow(QMainWindow, Ui_MainWindow):
 
-  def __init__(self):
+  def __init__(self,splash):
     QMainWindow.__init__(self)
 
     # required by Qt4 to initialize the UI
     self.setupUi(self)
-
+    self.splash = splash
+    
     # create map canvas
     self.canvas = QgsMapCanvas(self)
     self.canvas.setCanvasColor(QColor(255,255,255))
@@ -87,6 +88,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.mapcoords = MapCoords(self)
 
     self.loadBaseDataLayers()
+
+    time.sleep(2)
+    self.splash.hide()
 
   def loadBaseDataLayers(self):
 

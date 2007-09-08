@@ -723,7 +723,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" native="1" name="years_own_3" >
+       <widget class="QWidget" native="1" name="years_own" >
         <layout class="QHBoxLayout" >
          <property name="margin" >
           <number>4</number>
@@ -732,14 +732,14 @@
           <number>4</number>
          </property>
          <item>
-          <widget class="QLabel" name="years_own_text_4" >
+          <widget class="QLabel" name="years_own_text" >
            <property name="text" >
             <string>Years of ownership :</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="years_own_line_4" >
+          <widget class="QLineEdit" name="years_own_line" >
            <property name="enabled" >
             <bool>true</bool>
            </property>

@@ -46,13 +46,18 @@ qgis_prefix = "/usr/local"
 
 # Main entry to program.  Set up the main app and create a new window.
 def main(argv):
-
+  
   # create Qt application
   app = QApplication(argv,True)
   #app = QgsApplication(argv,True)
   
   # Set the app style
   app.setStyle(QString("plastique"))
+  
+  mySplashPix = QPixmap(QString("Data/OCEAN.png"))
+  mySplashPixScaled = mySplashPix.scaled(500,300,Qt.KeepAspectRatio)
+  mySplash = QSplashScreen(mySplashPixScaled)
+  mySplash.show()
   
   # initialize qgis libraries
   QgsApplication.setPrefixPath(qgis_prefix, True)
@@ -61,7 +66,7 @@ def main(argv):
   #app.initQgis()
 
   # create main window
-  wnd = MainWindow()
+  wnd = MainWindow(mySplash)
   wnd.show()
 
   # Create signal for app finish
