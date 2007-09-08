@@ -27,10 +27,10 @@
 #---------------------------------------------------------------------
 
 
-all: interviewstart_ui.py nextpolygon_ui.py
+all: interviewstart_ui.py nextpolygon_ui.py selectfishery_ui.py
 
 clean:
-	rm -f interviewstart_ui.py nextpolygon_ui.py
+	rm -f interviewstart_ui.py nextpolygon_ui.py selectfishery_ui.py
 	rm -f *.pyc
 	rm -f *~
 
@@ -39,4 +39,7 @@ interviewstart_ui.py: interviewstart.ui
 
 nextpolygon_ui.py: nextpolygon.ui
 	pyuic4 -o nextpolygon_ui.py nextpolygon.ui
+
+selectfishery_ui.py: selectfishery.ui
+	pyuic4 -o selectfishery_ui.py selectfishery.ui
 

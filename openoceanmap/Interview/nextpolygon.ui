@@ -6,68 +6,76 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>549</width>
-    <height>147</height>
+    <width>400</width>
+    <height>125</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Next Polygon</string>
   </property>
-  <widget class="QLabel" name="label_1" >
-   <property name="geometry" >
-    <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>191</width>
-     <height>21</height>
-    </rect>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>9</number>
    </property>
-   <property name="text" >
-    <string>Weighting (Pennies)</string>
+   <property name="spacing" >
+    <number>6</number>
    </property>
-  </widget>
-  <widget class="QLineEdit" name="line_1" >
-   <property name="enabled" >
-    <bool>true</bool>
-   </property>
-   <property name="geometry" >
-    <rect>
-     <x>230</x>
-     <y>20</y>
-     <width>281</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pbnFinished" >
-   <property name="geometry" >
-    <rect>
-     <x>280</x>
-     <y>70</y>
-     <width>83</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>Finished</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pbnMoreShapes" >
-   <property name="geometry" >
-    <rect>
-     <x>370</x>
-     <y>70</y>
-     <width>151</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text" >
-    <string>More Shapes...</string>
-   </property>
-  </widget>
+   <item row="0" column="0" >
+    <widget class="QWidget" native="1" name="widget_2" >
+     <layout class="QHBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_1" >
+        <property name="text" >
+         <string>Weighting (Pennies)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="line_1" >
+        <property name="enabled" >
+         <bool>true</bool>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QWidget" native="1" name="widget" >
+     <layout class="QHBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pbnShapeFinished" >
+        <property name="text" >
+         <string>Finished With Fishery</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnMoreShapes" >
+        <property name="text" >
+         <string>More Shapes This Fishery...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

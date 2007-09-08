@@ -35,19 +35,21 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
+#from nextpolygon import *
 # UI specific includes
+from selectfishery_ui import Ui_SelectFishery
 from nextpolygon_ui import Ui_NextPolygon
 # General system includes
 import sys
 
-class NextPolygonGui(QDialog, Ui_NextPolygon):
+class SelectFisheryGui(QDialog, Ui_SelectFishery):
     def __init__(self, parent, fl):
         QDialog.__init__(self, parent.mainwindow, fl)
         self.setupUi(self)
         self.parent = parent
 
-    def on_pbnMoreShapes_released(self):
-        self.parent.capturedPolygonsPennies.append(self.line_1.text())
+    def on_pbnStartShapes_released(self):
+        self.parent.currentFishery = self.fishery_comboBox.currentText()
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
@@ -55,15 +57,40 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
             
-    def on_pbnFinished_released(self):
-        self.parent.capturedPolygonsPennies.append(self.line_1.text())
+    def on_pbnFisheryFinished_released(self):
         self.close()
         self.parent.interviewEnd()
-
+    
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = NextPolygonGui(self.parent,flags)
         wnd.show()
 
+class NextPolygonGui(QDialog, Ui_NextPolygon):
+    def __init__(self, parent, fl):
+        QDialog.__init__(self, parent.mainwindow, fl)
+        self.setupUi(self)
+        self.parent = parent
+    def on_pbnMoreShapes_released(self):
+        self.parent.capturedPolygonsPennies.append(self.line_1.text())
+        self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+        self.close()
+        mc = self.parent.canvas      
+        self.p = PolygonTool(mc,self.parent)
+        QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
+        self.saveTool = mc.mapTool()
+        mc.setMapTool(self.p)
+            
+    def on_pbnShapeFinished_released(self):
+        self.parent.capturedPolygonsPennies.append(self.line_1.text())
+        self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+        self.close()
+        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+        wnd = SelectFisheryGui(self.parent,flags)
+        #wnd = NextPolygonGui(self.parent,flags)
+        wnd.show()
 
-
+    def nextPolygon(self):
+        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+        wnd = NextPolygonGui(self.parent,flags)
+        wnd.show()

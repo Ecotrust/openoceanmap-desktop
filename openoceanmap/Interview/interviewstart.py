@@ -35,7 +35,7 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-from nextpolygon import *
+from selectfishery import *
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
 # General system includes
@@ -47,7 +47,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.setupUi(self)
         self.parent = parent
 
-    def on_pbnStartShapes_released(self):
+    def on_pbnSelectFishery_released(self):
         interviewInfo2 = self.parent.interviewInfo2
         interviewInfo2["fname"] = self.interviewee_first_name_line.text()
         interviewInfo2["lname"] = self.interviewee_last_name_line.text()
@@ -80,19 +80,22 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         #self.parent.interviewInfo.append(self.line_1.text())
         #self.parent.interviewInfo.append(self.line_2.text())
         self.close()
-        mc = self.parent.canvas      
-        self.p = PolygonTool(mc,self.parent)
-        QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
-        self.saveTool = mc.mapTool()
-        mc.setMapTool(self.p)
+        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+        wnd = SelectFisheryGui(self.parent,flags)
+        wnd.show()
+        #mc = self.parent.canvas      
+        #self.p = PolygonTool(mc,self.parent)
+        #QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
+        #self.saveTool = mc.mapTool()
+        #mc.setMapTool(self.p)
             
     def on_pbnCancel_clicked(self):
         self.close()
 
-    def nextPolygon(self):
-        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = NextPolygonGui(self.parent,flags)
-        wnd.show()
+    #def nextPolygon(self):
+    #    flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+    #    wnd = NextPolygonGui(self.parent,flags)
+    #    wnd.show()
 
 
 

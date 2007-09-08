@@ -49,8 +49,10 @@ class Interview(object):
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
+    self.currentFishery = None
     # A place to store polygons we capture
     self.capturedPolygons = []
+    self.capturedPolygonsFishery = []
     self.capturedPolygonsPennies = []
     self.capturedPolygonsRub = []
 
@@ -114,7 +116,7 @@ class Interview(object):
               for key in keySort:
                 fet.addAttribute(i, QVariant(self.interviewInfo2[key]))
                 i += 1
-              fet.addAttribute(i, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              fet.addAttribute(i, QVariant(self.capturedPolygonsFishery[capPolyInd]))
               i += 1
               fet.addAttribute(i, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               

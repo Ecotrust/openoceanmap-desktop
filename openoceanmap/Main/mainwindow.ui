@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>MainWindow</string>
+   <string>OpenOceanMap</string>
   </property>
   <widget class="QWidget" name="centralwidget" >
    <layout class="QGridLayout" >
@@ -51,7 +51,7 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>712</width>
+          <width>353</width>
           <height>583</height>
          </rect>
         </property>
