@@ -58,7 +58,7 @@ class Interview(object):
 
     # Interview info to write in shapefile
     self.interviewInfo = []
-    self.interviewInfo2 = {}
+    self.interviewInfo2 = []
     
     # Reset previous polygons
     flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -79,15 +79,15 @@ class Interview(object):
           write_string = QString(f)
           # define fields for feature attributes
           fields = {}
-          keySort = self.interviewInfo2.keys()
-          keySort.sort()
-          i = 0
-          for key in keySort:
-            fields[i] = QgsField(key, QVariant.String)
-            i += 1
-          fields[i] = QgsField("fishery", QVariant.String)
-          i += 1
-          fields[i] = QgsField("pennies", QVariant.Int)
+          #keySort = self.interviewInfo2.keys()
+          #keySort.sort()
+          #i = 0
+          for index,value in enumerate(self.interviewInfo2):
+            fields[index] = QgsField(value[0], QVariant.String)
+            #i += 1
+          fields[index+1] = QgsField("fishery", QVariant.String)
+          #i += 1
+          fields[index+2] = QgsField("pennies", QVariant.Int)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -110,15 +110,15 @@ class Interview(object):
           for capPolyInd, capPoly in enumerate(self.capturedPolygons):
               fet = QgsFeature()
               ret_val = fet.setGeometry(QgsGeometry.fromWkt(capPoly))
-              keySort = self.interviewInfo2.keys()
-              keySort.sort()
-              i = 0
-              for key in keySort:
-                fet.addAttribute(i, QVariant(self.interviewInfo2[key]))
-                i += 1
-              fet.addAttribute(i, QVariant(self.capturedPolygonsFishery[capPolyInd]))
-              i += 1
-              fet.addAttribute(i, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              #keySort = self.interviewInfo2.keys()
+              #keySort.sort()
+              #i = 0
+              for index,value in enumerate(self.interviewInfo2):
+                fet.addAttribute(index, QVariant(value[1]))
+                #i += 1
+              fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
+              #i += 1
+              fet.addAttribute(index+1, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               
               #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
               #fet.addAttribute(1, QVariant(self.interviewInfo[1]))
