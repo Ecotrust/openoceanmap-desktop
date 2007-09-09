@@ -140,6 +140,9 @@ class Interview(object):
           layer.label().setLabelField(QgsLabel.Text, 24)
           layer.setLabelOn(True)
           
+          # Set the transparency for the layer
+          layer.setTransparency(190)
+          
           QgsMapLayerRegistry.instance().addMapLayer(layer)
           
           # set the map canvas layer set

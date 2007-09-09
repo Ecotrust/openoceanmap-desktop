@@ -185,6 +185,9 @@ class MapTools(object):
     # set extent to the extent of our layer
     self.canvas.setExtent(layer.extent())
 
+    # Set the transparency for the layer
+    layer.setTransparency(190)
+    
     # set the map canvas layer set
     cl = QgsMapCanvasLayer(layer)
     self.layers.insert(0,cl)
