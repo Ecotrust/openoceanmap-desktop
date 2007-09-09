@@ -118,7 +118,7 @@ class Interview(object):
                 #i += 1
               fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
               #i += 1
-              fet.addAttribute(index+1, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               
               #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
               #fet.addAttribute(1, QVariant(self.interviewInfo[1]))
@@ -137,7 +137,7 @@ class Interview(object):
             self.statusbar.showMessage(capture_string)
             return
 
-          layer.label().setLabelField(QgsLabel.Text, 25)
+          layer.label().setLabelField(QgsLabel.Text, 24)
           layer.setLabelOn(True)
           
           QgsMapLayerRegistry.instance().addMapLayer(layer)
