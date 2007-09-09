@@ -59,8 +59,15 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
             
     def on_pbnFisheryFinished_released(self):
         self.close()
-        self.parent.interviewEnd()
-    
+        # APR
+        #self.parent.interviewEnd()
+
+        #APR
+        # add some features
+        for capPolyRub in self.parent.capturedPolygonsRub:
+            capPolyRub.reset()
+        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = NextPolygonGui(self.parent,flags)
@@ -85,10 +92,12 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         self.parent.capturedPolygonsPennies.append(self.line_1.text())
         self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
         self.close()
-        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = SelectFisheryGui(self.parent,flags)
-        #wnd = NextPolygonGui(self.parent,flags)
-        wnd.show()
+        self.parent.interviewEnd()
+        # APR
+        #flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+        #wnd = SelectFisheryGui(self.parent,flags)
+        ##wnd = NextPolygonGui(self.parent,flags)
+        #wnd.show()
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 

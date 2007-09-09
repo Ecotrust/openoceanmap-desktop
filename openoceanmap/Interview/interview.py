@@ -149,9 +149,19 @@ class Interview(object):
           
           #Add item to legend
           self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
-          
-          # add some features
+
+          #APR
+          ## add some features
           for capPolyRub in self.capturedPolygonsRub:
             capPolyRub.reset()
-          self.canvas.setMapTool(self.parent.toolZoomIn)
+          #self.canvas.setMapTool(self.parent.toolZoomIn)
+          self.capturedPolygons = []
+          self.capturedPolygonsFishery = []
+          self.capturedPolygonsPennies = []
+          self.capturedPolygonsRub = []
+          
+          #APR
+          flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+          wnd = SelectFisheryGui(self,flags)
+          wnd.show()
 
