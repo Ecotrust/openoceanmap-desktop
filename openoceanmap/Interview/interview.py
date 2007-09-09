@@ -75,7 +75,11 @@ class Interview(object):
           self.parent.statusbar.showMessage(capture_string)
           qd=QFileDialog()
           filter_str = QString("*.shp")
-          f=qd.getSaveFileName(self.mainwindow,QString(),QString(),filter_str)
+          f2=qd.getSaveFileName(self.mainwindow,QString(),QString(),filter_str)
+          if f2.count(".shp")==0:
+            f = f2 + ".shp"
+          else:
+            f = f2
           write_string = QString(f)
           # define fields for feature attributes
           fields = {}
