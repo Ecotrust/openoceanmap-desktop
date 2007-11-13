@@ -45,9 +45,32 @@ class LegendCheckBox(QCheckBox):
     self.parent = parent
     self.name = name
     self.cls = canvasLayers
+    self.app = qApp
+    self.removeIcon = QIcon()
+    self.removeIcon.addPixmap(self.app.style().standardPixmap(QStyle.SP_FileIcon))        
+    self.act1 = QAction(self.removeIcon, "Remove Layer", self)
+    QObject.connect(self.act1, SIGNAL("triggered()"), self.action1)
     self.setCheckState(Qt.Checked)
     QObject.connect(self, SIGNAL("refresh()"),
                     self.parent.parent.canvas, SLOT("layerStateChange()"))
+
+  def mousePressEvent(self, event):
+    if event.button() == Qt.RightButton:
+      # custom menu for layer
+      #print "right click"
+      self.menu = QMenu(self)
+      self.menu.addAction(self.act1)
+      self.menu.exec_(QCursor.pos())
+    else:
+      QCheckBox.mousePressEvent(self,event)
+    
+  def action1(self):
+    #print "Action1"
+    self.hide()
+    self.parent.removeLegendItem(self)
+    for cl in self.cls:
+      self.parent.parent.layers.remove(cl)
+    self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
 
   # Update Layer status
   def updateLayerStatus(self, state):
@@ -103,8 +126,8 @@ class Legend(object):
     self.groupBoxLayout.addWidget(item_new)
 
   # Remove Item To Legend
-  def removeLegendItem(self, name):
+  def removeLegendItem(self, widget):
     #Remove the item
-    1+1
+    self.groupBoxLayout.removeWidget(widget)
   
 
