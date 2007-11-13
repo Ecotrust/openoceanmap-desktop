@@ -183,7 +183,7 @@ class MapTools(object):
     QgsMapLayerRegistry.instance().addMapLayer(layer)
 
     # set extent to the extent of our layer
-    self.canvas.setExtent(layer.extent())
+    #self.canvas.setExtent(layer.extent())
 
     # Set the transparency for the layer
     layer.setTransparency(190)
@@ -222,7 +222,7 @@ class MapTools(object):
     QgsMapLayerRegistry.instance().addMapLayer(layer)
 
     # set extent to the extent of our layer
-    self.canvas.setExtent(layer.extent())
+    #self.canvas.setExtent(layer.extent())
 
     # set the map canvas layer set
     cl = QgsMapCanvasLayer(layer)
