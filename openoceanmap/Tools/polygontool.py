@@ -82,11 +82,15 @@ class PolygonTool(QgsMapTool):
 
     def canvasReleaseEvent(self,event):
         if self.down==True:
+            if (self.started==False) and (event.button() == Qt.RightButton):
+                # We have a right button but have not started a poly... just return
+                return
             if self.started==False:
                 self.rubberBand = QgsRubberBand(self.canvas,True)
                 self.parent.capturedPolygonsRub.append(self.rubberBand)
                 self.rubberBand.show()
                 self.currentPolygon = 'POLYGON(('
+                self.numberOfPoints = 0
             self.started=True
             capture_string = QString("Polygon point added")
             
@@ -94,11 +98,11 @@ class PolygonTool(QgsMapTool):
             pt = transform.toMapCoordinates(event.pos().x(),
                                             event.pos().y())
             self.rubberBand.addPoint(QgsPoint(pt.x(),pt.y()))
-
+            self.numberOfPoints = self.numberOfPoints + 1
             if self.currentPolygon == 'POLYGON((':
                 self.originalPoint = '%f %f' % (pt.x(), pt.y())
             self.currentPolygon = self.currentPolygon + '%f %f' % (pt.x(), pt.y()) + ',' 
-            if event.button() == Qt.RightButton:
+            if (event.button() == Qt.RightButton) and (self.numberOfPoints > 2):
                 self.down=False
                 self.started=False
                 self.currentPolygon = self.currentPolygon + self.originalPoint
