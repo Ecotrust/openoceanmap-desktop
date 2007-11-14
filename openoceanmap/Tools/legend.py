@@ -48,8 +48,10 @@ class LegendCheckBox(QCheckBox):
     self.app = qApp
     self.removeIcon = QIcon()
     self.removeIcon.addPixmap(self.app.style().standardPixmap(QStyle.SP_FileIcon))        
-    self.act1 = QAction(self.removeIcon, "Remove Layer", self)
+    self.act1 = QAction(self.removeIcon, "Zoom To Layer Extent", self)
     QObject.connect(self.act1, SIGNAL("triggered()"), self.action1)
+    self.act2 = QAction(self.removeIcon, "Remove Layer", self)
+    QObject.connect(self.act2, SIGNAL("triggered()"), self.action2)
     self.setCheckState(Qt.Checked)
     QObject.connect(self, SIGNAL("refresh()"),
                     self.parent.parent.canvas, SLOT("layerStateChange()"))
@@ -60,12 +62,18 @@ class LegendCheckBox(QCheckBox):
       #print "right click"
       self.menu = QMenu(self)
       self.menu.addAction(self.act1)
+      self.menu.addAction(self.act2)
       self.menu.exec_(QCursor.pos())
     else:
       QCheckBox.mousePressEvent(self,event)
     
   def action1(self):
     #print "Action1"
+    self.parent.parent.canvas.setExtent(self.cls[0].layer().extent())
+    self.parent.parent.canvas.refresh()
+
+  def action2(self):
+    #print "Action2"
     self.hide()
     self.parent.removeLegendItem(self)
     for cl in self.cls:
@@ -80,10 +88,12 @@ class LegendCheckBox(QCheckBox):
         cl.setVisible(False)
         #self.emit(SIGNAL("refresh()"))
         self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
+        #self.parent.parent.canvas.refresh()
       else:
         cl.setVisible(True)
         #self.emit(SIGNAL("refresh()"))
         self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
+        #self.parent.parent.canvas.refresh()
       # Debug
       capture_string = QString("Setting layer visibility for layer " +
                                cl.layer().name() + " " + str(cl.visible()))
