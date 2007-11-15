@@ -74,9 +74,12 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         QDialog.__init__(self, parent.mainwindow, fl)
         self.setupUi(self)
         self.parent = parent
+        self.discardLast = False
+        
     def on_pbnMoreShapes_released(self):
-        self.parent.capturedPolygonsPennies.append(self.line_1.text())
-        self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+        if not self.discardLast:
+            self.parent.capturedPolygonsPennies.append(self.line_1.text())
+            self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
@@ -84,9 +87,19 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
             
+    def on_pbnShapeDiscard_released(self):
+        # Dump the last shape...
+        self.parent.capturedPolygons.pop()
+        rub = self.parent.capturedPolygonsRub.pop()
+        rub.reset()
+        # Grey out the button...
+        self.pbnShapeDiscard.setEnabled(False)
+        self.discardLast = True
+            
     def on_pbnShapeFinished_released(self):
-        self.parent.capturedPolygonsPennies.append(self.line_1.text())
-        self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+        if not self.discardLast:
+            self.parent.capturedPolygonsPennies.append(self.line_1.text())
+            self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
         self.close()
         self.parent.interviewEnd()
 

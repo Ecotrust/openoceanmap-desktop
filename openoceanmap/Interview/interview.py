@@ -157,16 +157,16 @@ class Interview(object):
           #Add item to legend
           self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
 
-          ## Reset the rubberbands and then clear out the fishery related objects
-          for capPolyRub in self.capturedPolygonsRub:
-            capPolyRub.reset()
-          self.capturedPolygons = []
-          self.capturedPolygonsFishery = []
-          self.capturedPolygonsPennies = []
-          self.capturedPolygonsRub = []
-          
-          # Fire up the select fishery gui again...
-          flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-          wnd = SelectFisheryGui(self,flags)
-          wnd.show()
+      ## Reset the rubberbands and then clear out the fishery related objects
+      for capPolyRub in self.capturedPolygonsRub:
+        capPolyRub.reset()
+      self.capturedPolygons = []
+      self.capturedPolygonsFishery = []
+      self.capturedPolygonsPennies = []
+      self.capturedPolygonsRub = []
+      
+      # Fire up the select fishery gui again...
+      flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+      wnd = SelectFisheryGui(self,flags)
+      wnd.show()
 
