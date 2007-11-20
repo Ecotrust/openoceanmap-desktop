@@ -62,6 +62,8 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         # add some features
         for capPolyRub in self.parent.capturedPolygonsRub:
             capPolyRub.reset()
+        self.parent.parent.interviewInProgress = False
+        self.parent.parent.interviewSaveTool = None
         self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     def nextPolygon(self):

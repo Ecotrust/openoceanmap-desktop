@@ -95,7 +95,13 @@ class MapTools(object):
     self.toolZoomIn.setAction(parent.mpActionZoomIn)
     self.toolZoomOut = QgsMapToolZoom(self.canvas, True) # true = out
     self.toolZoomOut.setAction(parent.mpActionZoomOut)
-
+    
+    # Default to zoom in tool
+    self.canvas.setMapTool(self.toolZoomIn)
+    
+    # Default to not interviewing and no saved tool for interview
+    self.interviewInProgress = False
+    self.interviewSaveTool = None
 
   # Signal handeler for capturing rectangle
   def updateBoundsFromRegion(self):
@@ -140,21 +146,35 @@ class MapTools(object):
 
   # Start interview dialog
   def interviewStart(self):
+    #print "Interview start..."
+    if self.interviewInProgress == True:
+      # We need to continue
+      self.canvas.setMapTool(self.interviewSaveTool)
+      self.interviewSaveTool = None
+    else:
+      # Start up a new interview
       capture_string = QString("Starting Interview Dialog...")
       self.statusbar.showMessage(capture_string)
+      self.interviewInProgress = True
       self.interview = Interview(self)
 
 
   # Signal handeler for zoom in button
   def zoomIn(self):
+    if self.interviewInProgress and self.interviewSaveTool == None:
+      self.interviewSaveTool = self.canvas.mapTool()
     self.canvas.setMapTool(self.toolZoomIn)
 
   # Signal handeler for zoom out button
   def zoomOut(self):
+    if self.interviewInProgress and self.interviewSaveTool == None:
+      self.interviewSaveTool = self.canvas.mapTool()
     self.canvas.setMapTool(self.toolZoomOut)
 
   # Signal handeler for pan button
   def pan(self):
+    if self.interviewInProgress and self.interviewSaveTool == None:
+      self.interviewSaveTool = self.canvas.mapTool()
     self.canvas.setMapTool(self.toolPan)
 
   # Signal handeler for add layer button
