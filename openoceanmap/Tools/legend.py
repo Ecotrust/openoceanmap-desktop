@@ -40,18 +40,21 @@ import sys,string
 
 # Legend Check Box
 class LegendCheckBox(QCheckBox):
-  def __init__(self, parent, name, canvasLayers):
+  def __init__(self, parent, name, canvasLayers,isVect):
     QCheckBox.__init__(self, name)
     self.parent = parent
     self.name = name
     self.cls = canvasLayers
     self.app = qApp
+    self.isVect = isVect
     self.removeIcon = QIcon()
     self.removeIcon.addPixmap(self.app.style().standardPixmap(QStyle.SP_FileIcon))        
     self.act1 = QAction(self.removeIcon, "Zoom To Layer Extent", self)
     QObject.connect(self.act1, SIGNAL("triggered()"), self.action1)
     self.act2 = QAction(self.removeIcon, "Remove Layer", self)
     QObject.connect(self.act2, SIGNAL("triggered()"), self.action2)
+    self.act3 = QAction(self.removeIcon, "Change Color", self)
+    QObject.connect(self.act3, SIGNAL("triggered()"), self.action3)
     self.setCheckState(Qt.Checked)
     QObject.connect(self, SIGNAL("refresh()"),
                     self.parent.parent.canvas, SLOT("layerStateChange()"))
@@ -63,6 +66,8 @@ class LegendCheckBox(QCheckBox):
       self.menu = QMenu(self)
       self.menu.addAction(self.act1)
       self.menu.addAction(self.act2)
+      if self.isVect == True:
+        self.menu.addAction(self.act3)
       self.menu.exec_(QCursor.pos())
     else:
       QCheckBox.mousePressEvent(self,event)
@@ -79,6 +84,10 @@ class LegendCheckBox(QCheckBox):
     for cl in self.cls:
       self.parent.parent.layers.remove(cl)
     self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
+
+  def action3(self):
+    #print "Action3"
+    self.parent.modifyColorLegendItem(self)
 
   # Update Layer status
   def updateLayerStatus(self, state):
@@ -115,7 +124,7 @@ class Legend(object):
 
   # Add Item To Legend
   def addRasterLegendItem(self, name, cls):
-    item_new = LegendCheckBox(self, name, cls)
+    item_new = LegendCheckBox(self, name, cls, False)
     QObject.connect(item_new, SIGNAL("stateChanged(int)"),
                  item_new.updateLayerStatus)
     pm = QPixmap(20,20)
@@ -126,7 +135,7 @@ class Legend(object):
 
   # Add Item To Legend
   def addVectorLegendItem(self, name, cls):
-    item_new = LegendCheckBox(self, name, cls)
+    item_new = LegendCheckBox(self, name, cls, True)
     QObject.connect(item_new, SIGNAL("stateChanged(int)"),
                  item_new.updateLayerStatus)    
     pm = QPixmap(20,20)
@@ -139,5 +148,15 @@ class Legend(object):
   def removeLegendItem(self, widget):
     #Remove the item
     self.groupBoxLayout.removeWidget(widget)
-  
+
+  def modifyColorLegendItem(self,widget):
+    if widget.isVect == True:
+      color = QColorDialog.getColor(widget.cls[0].layer().renderer().symbols()[0].fillColor());
+      if color.isValid():
+        widget.cls[0].layer().renderer().symbols()[0].setFillColor(color)
+        pm = QPixmap(20,20)
+        pm.fill(widget.cls[0].layer().renderer().symbols()[0].fillColor())
+        icon = QIcon(pm)
+        widget.setIcon(icon)
+        self.parent.canvas.refresh()
 
