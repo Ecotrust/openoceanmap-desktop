@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/" >
+        <file>images/OCEAN_SMALL_INNO.png</file>
         <file>images/mActionAddLayer.png</file>
         <file>images/mActionAddRasterLayer.png</file>
         <file>images/mActionCapturePolygon.png</file>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Tue Nov 13 11:33:20 2007
+# Created: Mon Jan  7 13:49:58 2008
 #      by: PyQt4 UI code generator 4.3.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -13,6 +13,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(QtCore.QSize(QtCore.QRect(0,0,1000,700).size()).expandedTo(MainWindow.minimumSizeHint()))
+        MainWindow.setWindowIcon(QtGui.QIcon(":/images/OCEAN_SMALL_INNO.png"))
 
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -29,7 +30,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtGui.QToolBox(self.splitter)
         self.toolBox.setEnabled(True)
 
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Policy(5),QtGui.QSizePolicy.Policy(5))
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred,QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.toolBox.sizePolicy().hasHeightForWidth())
@@ -38,7 +39,7 @@ class Ui_MainWindow(object):
         self.toolBox.setObjectName("toolBox")
 
         self.legend_page = QtGui.QWidget()
-        self.legend_page.setGeometry(QtCore.QRect(0,0,353,583))
+        self.legend_page.setGeometry(QtCore.QRect(0,0,462,581))
         self.legend_page.setObjectName("legend_page")
 
         self.gridlayout1 = QtGui.QGridLayout(self.legend_page)
@@ -59,7 +60,7 @@ class Ui_MainWindow(object):
 
         self.frameMap = QtGui.QFrame(self.splitter)
 
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Policy(5),QtGui.QSizePolicy.Policy(5))
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred,QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frameMap.sizePolicy().hasHeightForWidth())
@@ -71,7 +72,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0,0,1000,24))
+        self.menubar.setGeometry(QtCore.QRect(0,0,1000,26))
         self.menubar.setObjectName("menubar")
 
         self.menuInterview = QtGui.QMenu(self.menubar)
