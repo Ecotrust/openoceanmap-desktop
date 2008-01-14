@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-
+#!/usr/bin/python
 #---------------------------------------------------------------------
 # 
 # OpenOceanMap - An Open Source GIS tool for performing interviews
@@ -41,7 +40,7 @@ from Main.mainwindow import *
 import sys
 
 # Path to local QGIS install
-qgis_prefix = "."
+qgis_prefix = "/usr/local/qgis_svn"
 
 
 # Main entry to program.  Set up the main app and create a new window.

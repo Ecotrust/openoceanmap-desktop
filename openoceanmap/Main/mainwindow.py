@@ -106,9 +106,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                   ["Data/noaa_9_albs34.tif",450000,750000],
                   ["Data/noaa_10_albs34.tif",125000,450000],
                   # Extra incase we want to get rid of level 12
-                  ["Data/noaa_11_albs34.tif",85000,125000],
-                  ["Data/noaa_12_albs34.tif",0,85000]]
-                  #["Data/noaa_11_albs34.tif",0,125000]]
+                  #["Data/noaa_11_albs34.tif",85000,125000],
+                  #["Data/noaa_12_albs34.tif",0,85000]]
+                  ["Data/noaa_11_albs34.tif",0,125000]]
     self.rasterBaseLayer = OOMLayer(self)
     for rasterSet in rasterList:
       raster = rasterSet[0]
