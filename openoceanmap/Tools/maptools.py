@@ -85,8 +85,8 @@ class MapTools(object):
     self.toolbar2.addAction(parent.actionStart_Interview)
 
     # create a little toolbar for utilities
-    self.toolbar3 = parent.addToolBar("File3")
-    self.toolbar3.addAction(parent.actionPython_Console)
+    #self.toolbar3 = parent.addToolBar("File3")
+    #self.toolbar3.addAction(parent.actionPython_Console)
 
     # create the map tools
     self.toolPan = QgsMapToolPan(self.canvas)
