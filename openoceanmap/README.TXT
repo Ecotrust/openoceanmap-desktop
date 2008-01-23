@@ -5,6 +5,7 @@ to obtain socio-economic data using spatial information.
 
 Copyright (C) 2007  Ecotrust
 Copyright (C) 2007  Aaron Racicot
+Copyright (C) 2007  Tim Welch
 
 --------------------------------------------------------------------
 
