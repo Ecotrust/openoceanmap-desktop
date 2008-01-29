@@ -200,6 +200,12 @@ class MapTools(object):
         #self.canvas.parentWin.outputWin.append(capture_string)
         self.statusbar.showMessage(capture_string)
         return
+
+    if self.parent.srs == None:
+      self.parent.srs = layer.srs()
+      # set extent to the extent of our layer
+      self.parent.canvas.setExtent(layer.extent())
+
     QgsMapLayerRegistry.instance().addMapLayer(layer)
 
     # set extent to the extent of our layer
@@ -238,6 +244,12 @@ class MapTools(object):
         #self.canvas.parentWin.outputWin.append(capture_string)
         self.statusbar.showMessage(capture_string)
         return
+
+    if self.parent.srs == None:
+      self.parent.srs = layer.srs()
+      # set extent to the extent of our layer
+      self.parent.canvas.setExtent(layer.extent())
+
     # add layer to the registry
     QgsMapLayerRegistry.instance().addMapLayer(layer)
 

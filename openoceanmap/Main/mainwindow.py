@@ -87,7 +87,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # New Map Coords display in status bar
     self.mapcoords = MapCoords(self)
 
-    self.loadBaseDataLayers()
+    #Uncomment to run the pre-load of data
+    #self.loadBaseDataLayers()
 
     time.sleep(2)
     self.splash.hide()
