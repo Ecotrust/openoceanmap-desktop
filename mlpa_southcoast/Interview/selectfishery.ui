@@ -1,0 +1,106 @@
+<ui version="4.0" >
+ <author>Aaron Racicot</author>
+ <class>SelectFishery</class>
+ <widget class="QDialog" name="SelectFishery" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>125</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Select Fishery</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QWidget" native="1" name="widget" >
+     <layout class="QHBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="fishery_text" >
+        <property name="text" >
+         <string>Select Fishery :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="fishery_comboBox" >
+        <item>
+         <property name="text" >
+          <string>Chinook Salmon</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Rockfish/Lingcod Complex</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>California Halibut</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Dungeness Crab</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Abalone</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Other</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="widget_2" >
+     <layout class="QHBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pbnFisheryFinished" >
+        <property name="text" >
+         <string>Finished With Interview</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnStartShapes" >
+        <property name="text" >
+         <string>Start Drawing Shapes</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
