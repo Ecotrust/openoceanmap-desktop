@@ -59,15 +59,15 @@ class InnoScript:
         print >> ofi, r"DefaultGroupName=%s" % self.name
         print >> ofi, r"VersionInfoVersion=%s" % self.version
         print >> ofi, r"VersionInfoCompany=Ecotrust"
-        print >> ofi, r"VersionInfoDescription=OpenOceanMap"
+        print >> ofi, r"VersionInfoDescription=OOM SouthCoast Commercial"
         print >> ofi, r"VersionInfoCopyright=Ecotrust"
         print >> ofi, r"AppCopyright=Ecotrust"
-        print >> ofi, r"InfoAfterFile=C:\work\openoceanmap\openoceanmap\README.TXT"
-        print >> ofi, r"LicenseFile=C:\work\openoceanmap\openoceanmap\LICENSE.TXT"
+        print >> ofi, r"InfoAfterFile=U:\dev\mlpa_southcoast\README.TXT"
+        print >> ofi, r"LicenseFile=U:\dev\mlpa_southcoast\LICENSE.TXT"
         print >> ofi, r"WizardImageBackColor=clBlack"
-        print >> ofi, r"WizardImageFile=C:\Documents and Settings\aaronr.BERNIE\My Documents\OCEAN_VERT_INNO.bmp"
-        print >> ofi, r"WizardSmallImageFile=C:\Documents and Settings\aaronr.BERNIE\My Documents\OCEAN_SMALL_INNO.bmp"
-        print >> ofi, r"SetupIconFile=C:\Documents and Settings\aaronr.BERNIE\My Documents\OCEAN_SMALL_INNO.ico"
+        print >> ofi, r"WizardImageFile=U:\dev\mlpa_southcoast\Images\OCEAN_VERT_INNO.bmp"
+        print >> ofi, r"WizardSmallImageFile=U:\dev\mlpa_southcoast\Images\OCEAN_SMALL_INNO.bmp"
+        print >> ofi, r"SetupIconFile=U:\dev\mlpa_southcoast\Images\OCEAN_SMALL_INNO.ico"
         print >> ofi
 
         print >> ofi, r"[Files]"
@@ -79,9 +79,7 @@ class InnoScript:
         #print >> ofi, r'WorkingDir: {app}'                  
         for path in self.windows_exe_files:
             print >> ofi, r'Name: "{group}\%s"; Filename: "{app}\%s"; WorkingDir: {app}' % \
-                  (self.name, path)
-                  
-        #print >> ofi, r'Name: "{group}\Delphos Fisheries Documentation - English"; Filename: "{app}\documentation\fisheries\english\documentation.html"'
+                  (self.name, path)                  
         print >> ofi, 'Name: "{group}\Uninstall %s"; Filename: "{uninstallexe}"' % self.name
 
     def compile(self):
@@ -164,7 +162,7 @@ setup(
     options = options,
     # The lib directory contains everything except the executables and the python dll.
     zipfile = zipfile,
-    windows=[{"script": "openoceanmap.py", "icon_resources": [(1, "OCEAN_SMALL_INNO.ico")]}],
+    windows=[{"script": "openoceanmap.py", "icon_resources": [(1, "Images\OCEAN_SMALL_INNO.ico")]}],
     # use out build_installer class as extended py2exe build command
     cmdclass = {"py2exe": build_installer},
     data_files = data_files

@@ -40,7 +40,7 @@ from Main.mainwindow import *
 import sys
 
 # Path to local QGIS install
-qgis_prefix = "/usr/local/qgis_svn"
+qgis_prefix = "C:\Program Files\Quantum GIS"
 
 
 # Main entry to program.  Set up the main app and create a new window.

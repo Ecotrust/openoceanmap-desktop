@@ -52,7 +52,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # required by Qt4 to initialize the UI
     self.setupUi(self)
     self.splash = splash
-    
+       
     # create map canvas
     self.canvas = QgsMapCanvas(self)
     self.canvas.setCanvasColor(QColor(255,255,255))
@@ -88,7 +88,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.mapcoords = MapCoords(self)
 
     #Uncomment to run the pre-load of data
-    #self.loadBaseDataLayers()
+    self.loadBaseDataLayers()
 
     time.sleep(2)
     self.splash.hide()
@@ -99,17 +99,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
     # set extent to the extent of our layer
-    self.canvas.setExtent(QgsRect(-340000,-70000,
-                                  -191000,52500))
+#    self.canvas.setExtent(QgsRect(-79658,-648073,
+#                                  299310,-350475))
+    self.canvas.setExtent(QgsRect(-74785,-634619,294487,-363979))
     
-    rasterList = [["Data/noaa_7_albs34.tif",1500000,5000000],
-                  ["Data/noaa_8_albs34.tif",750000,1500000],
-                  ["Data/noaa_9_albs34.tif",450000,750000],
-                  ["Data/noaa_10_albs34.tif",125000,450000],
-                  # Extra incase we want to get rid of level 12
-                  #["Data/noaa_11_albs34.tif",85000,125000],
-                  #["Data/noaa_12_albs34.tif",0,85000]]
-                  ["Data/noaa_11_albs34.tif",0,125000]]
+    rasterList = [["Data\mlpa_scsr\Scsr_Zm1_rect.tif",1500000,5000000],
+                  ["Data\mlpa_scsr\Scsr_zm3_rect.tif",10000,1500000]]    
+    
+#    rasterList = [["Data/noaa_7_albs34.tif",1500000,5000000],
+#                  ["Data/noaa_8_albs34.tif",750000,1500000],
+#                  ["Data/noaa_9_albs34.tif",450000,750000],
+#                  ["Data/noaa_10_albs34.tif",125000,450000],
+#                  # Extra incase we want to get rid of level 12
+#                  #["Data/noaa_11_albs34.tif",85000,125000],
+#                  #["Data/noaa_12_albs34.tif",0,85000]]
+#                  ["Data/noaa_11_albs34.tif",0,125000]]
     self.rasterBaseLayer = OOMLayer(self)
     for rasterSet in rasterList:
       raster = rasterSet[0]
@@ -150,8 +154,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem("NOAA ENC",
                                     self.rasterBaseLayer.getCls())
 
-    vectorList = [["Data/Kayak_Points.shp",0,125000],
-                  ["Data/Access_Points.shp",0,200000]]
+#    vectorList = [["Data/Kayak_Points.shp",0,125000],
+#                  ["Data/Access_Points.shp",0,200000]]
+    vectorList = []
     for vectorSet in vectorList:
       vector = vectorSet[0]
       minScale = vectorSet[1]
