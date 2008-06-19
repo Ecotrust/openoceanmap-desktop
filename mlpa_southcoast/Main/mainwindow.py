@@ -103,8 +103,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 #                                  299310,-350475))
     self.canvas.setExtent(QgsRect(-74785,-634619,294487,-363979))
     
-    rasterList = [["Data\mlpa_scsr\Scsr_Zm1_rect.tif",1500000,5000000],
-                  ["Data\mlpa_scsr\Scsr_zm3_rect.tif",10000,1500000]]    
+    rasterList = [["Data\Scsr_Zm1_rect.tif",1500000,5000000],
+                  ["Data\Scsr_zm3_rect.tif",10000,1500000]]    
     
 #    rasterList = [["Data/noaa_7_albs34.tif",1500000,5000000],
 #                  ["Data/noaa_8_albs34.tif",750000,1500000],
