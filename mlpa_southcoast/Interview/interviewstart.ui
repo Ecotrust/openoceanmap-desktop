@@ -268,7 +268,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Age:</string>
+                  <string>City of residence:</string>
                  </property>
                 </widget>
                </item>
@@ -1487,7 +1487,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pbnCancel_2" >
+       <widget class="QPushButton" name="pbnCancel" >
         <property name="font" >
          <font>
           <pointsize>10</pointsize>
@@ -1499,7 +1499,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pbnSelectFishery_2" >
+       <widget class="QPushButton" name="pbnSelectFishery" >
         <property name="font" >
          <font>
           <pointsize>10</pointsize>

@@ -5,6 +5,7 @@
 # 
 # Copyright (C) 2007  Ecotrust
 # Copyright (C) 2007  Aaron Racicot
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -50,62 +51,34 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
     def on_pbnSelectFishery_released(self):
         interviewInfo2 = self.parent.interviewInfo2
         
-        interviewInfo2.append(["date", self.date_line.text()])
-        interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
-        interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
-        interviewInfo2.append(["int2_fname", self.interviewer2_first_name_line.text()])
-        interviewInfo2.append(["int2_lname", self.interviewer2_last_name_line.text()])
         interviewInfo2.append(["fname", self.interviewee_first_name_line.text()])
         interviewInfo2.append(["lname", self.interviewee_last_name_line.text()])
         interviewInfo2.append(["age", self.age_line.text()])
         interviewInfo2.append(["gender", self.gender_comboBox.currentText()])
-        interviewInfo2.append(["years", self.years_line.text()])
-        interviewInfo2.append(["license", self.license_line.text()])
         interviewInfo2.append(["city", self.city_line.text()])
-        interviewInfo2.append(["user_group", self.user_group_comboBox.currentText()])
-        
-        interviewInfo2.append(["v_homep", self.home_port_line.text()])
-        interviewInfo2.append(["v_license", self.ves_license_line.text()])
-        interviewInfo2.append(["v_len", self.vessel_length_line.text()])
-        interviewInfo2.append(["years_op", self.years_op_line.text()])
-        interviewInfo2.append(["v_yearown", self.years_own_line.text()])
-        
-        interviewInfo2.append(["t_region", self.region_comboBox.currentText()])
-        interviewInfo2.append(["t_ind_trip", self.ind_per_trip_line.text()])
-        interviewInfo2.append(["t_day_year", self.days_per_year_line.text()])
-        interviewInfo2.append(["t_tr_time", self.travel_time_line.text()])
-        interviewInfo2.append(["t_tr_dist", self.travel_distance_line.text()])
 
-        #interviewInfo2 = self.parent.interviewInfo2
-        #interviewInfo2["fname"] = self.interviewee_first_name_line.text()
-        #interviewInfo2["lname"] = self.interviewee_last_name_line.text()
-        #interviewInfo2["age"] = self.age_line.text()
-        #interviewInfo2["gender"] = self.gender_comboBox.currentText()
-        #interviewInfo2["years"] = self.years_line.text()
-        #interviewInfo2["years_op"] = self.years_op_line.text()
-        #interviewInfo2["years_own"] = self.years_own_line.text()
-        #interviewInfo2["license"] = self.license_line.text()
-        #interviewInfo2["city"] = self.city_line.text()
-        #interviewInfo2["user_group"] = self.user_group_comboBox.currentText()
-        #
-        #interviewInfo2["int1_fname"] = self.interviewer1_first_name_line.text()
-        #interviewInfo2["int1_lname"] = self.interviewer1_last_name_line.text()
-        #interviewInfo2["int2_fname"] = self.interviewer2_first_name_line.text()
-        #interviewInfo2["int2_lname"] = self.interviewer2_last_name_line.text()
-        #interviewInfo2["date"] = self.date_line.text()
-        #
-        #interviewInfo2["v_license"] = self.ves_license_line.text()
-        #interviewInfo2["v_yearown"] = self.years_own_line.text()
-        #interviewInfo2["v_len"] = self.vessel_length_line.text()
-        #interviewInfo2["v_homep"] = self.home_port_line.text()
-        #
-        #interviewInfo2["t_region"] = self.region_comboBox.currentText()
-        #interviewInfo2["t_ind_trip"] = self.ind_per_trip_line.text()
-        #interviewInfo2["t_day_year"] = self.days_per_year_line.text()
-        #interviewInfo2["t_tr_time"] = self.travel_time_line.text()
-        #interviewInfo2["t_tr_dist"] = self.travel_distance_line.text()
-        #self.parent.interviewInfo.append(self.line_1.text())
-        #self.parent.interviewInfo.append(self.line_2.text())
+        interviewInfo2.append(["date", self.date_line.text()])        
+        interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
+        interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
+        interviewInfo2.append(["mood", self.mood_line.text()])
+
+        interviewInfo2.append(["years", self.years_line.text()])
+        interviewInfo2.append(["perc_incom", self.perc_income_line.text()])
+        interviewInfo2.append(["fsh_lic_id", self.fisherman_license_id_line.text()])
+        interviewInfo2.append(["fed_vsl_id", self.federal_vessel_id_line.text()])
+        interviewInfo2.append(["sta_vsl_id", self.state_vessel_id_line.text()])
+        interviewInfo2.append(["v_len", self.vessel_length_line.text()])
+        interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])
+        interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
+        interviewInfo2.append(["v_homep", self.home_port_line.text()])
+        
+        interviewInfo2.append(["landp_1", self.landing_port_line.text()])                       
+        interviewInfo2.append(["landp_2", self.landing_port_line2.text()])
+        interviewInfo2.append(["landp_3", self.landing_port_line3.text()])
+        interviewInfo2.append(["landp_4", self.landing_port_line4.text()])
+
+        print interviewInfo2
+
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = SelectFisheryGui(self.parent,flags)
