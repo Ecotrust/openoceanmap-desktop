@@ -68,8 +68,13 @@ class Interview(object):
   # End interview dialog
   def interviewEnd(self):
       if len(self.capturedPolygons) == 0:
-          capture_string = QString("No Shapes to write...")
+          # Finished a fishery without writing any shapes...
+          capture_string = QString("No Shapes to write, switching to new fishery...")
           self.parent.statusbar.showMessage(capture_string)
+          # Fire up the select fishery gui again...
+          flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+          wnd = SelectFisheryGui(self,flags)
+          wnd.show()
       else:
           capture_string = QString("Writing shapefile...")
           self.parent.statusbar.showMessage(capture_string)
