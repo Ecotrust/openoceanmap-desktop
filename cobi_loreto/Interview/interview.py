@@ -40,7 +40,7 @@ from interviewstart import *
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
 # General system includes
-import sys
+import sys, os
 
 # Interview object for doing interviews
 class Interview(object):
@@ -76,97 +76,110 @@ class Interview(object):
           qd=QFileDialog()
           filter_str = QString("*.shp")
           f2=qd.getSaveFileName(self.mainwindow,QString(),QString(),filter_str)
+          # Check to see if the shapefile has been saved
           if f2.count(".shp")==0:
-            f = f2 + ".shp"
+            # If the user cancels return to the same GUI...
+            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+            wnd = NextPolygonGui(self,flags)
+            wnd.show()
+          # check to see if the user tried to overwrite an existing shapefile
+          elif os.path.isfile(f2):
+            # Currently we don't suport overwriting, so return to dialog
+            write_string = QString(f2)
+            capture_string = QString("Overwriting existing shapefile is not supported: " + write_string)
+            self.parent.statusbar.showMessage(capture_string)
+            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+            wnd = NextPolygonGui(self,flags)
+            wnd.show() 
           else:
             f = f2
-          write_string = QString(f)
-          # define fields for feature attributes
-          fields = {}
-          #keySort = self.interviewInfo2.keys()
-          #keySort.sort()
-          #i = 0
-          for index,value in enumerate(self.interviewInfo2):
-            fields[index] = QgsField(value[0], QVariant.String)
-            #i += 1
-          fields[index+1] = QgsField("fishery", QVariant.String)
-          #i += 1
-          fields[index+2] = QgsField("pennies", QVariant.Int)
-          
-          #fields = { 0 : QgsField("interviewer_name", QVariant.String),
-          #           1 : QgsField("participant_name", QVariant.String),
-          #           2 : QgsField("pennies", QVariant.Int) }
-          
-          # create an instance of vector file writer,
-          # it will create the shapefile. Arguments:
-          # 1. path to new shapefile (will fail if exists already)
-          # 2. encoding of the attributes
-          # 3. field map
-          # 4. geometry type - from WKBTYPE enum
-          # 5. layer's spatial reference (instance of QgsSpatialRefSys)
-          writer = QgsVectorFileWriter(write_string, "UTF-8", fields,
-                                       QGis.WKBPolygon, self.mainwindow.srs)
-          
-          if writer.hasError() != QgsVectorFileWriter.NoError:
-              print "Error when creating shapefile: ", writer.hasError()
-              
-          # add some features
-          for capPolyInd, capPoly in enumerate(self.capturedPolygons):
-              fet = QgsFeature()
-              ret_val = fet.setGeometry(QgsGeometry.fromWkt(capPoly))
-              #keySort = self.interviewInfo2.keys()
-              #keySort.sort()
-              #i = 0
-              for index,value in enumerate(self.interviewInfo2):
-                fet.addAttribute(index, QVariant(value[1]))
-                #i += 1
-              fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
+            write_string = QString(f)
+            # define fields for feature attributes
+            fields = {}
+            #keySort = self.interviewInfo2.keys()
+            #keySort.sort()
+            #i = 0
+            for index,value in enumerate(self.interviewInfo2):
+              fields[index] = QgsField(value[0], QVariant.String)
               #i += 1
-              fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
-              
-              #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
-              #fet.addAttribute(1, QVariant(self.interviewInfo[1]))
-              #fet.addAttribute(2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
-              writer.addFeature(fet)
-          del writer
-          capture_string = QString("Wrote Shapefile..." + write_string)
-          self.parent.statusbar.showMessage(capture_string)
+            fields[index+1] = QgsField("fishery", QVariant.String)
+            #i += 1
+            fields[index+2] = QgsField("pennies", QVariant.Int)
+            
+            #fields = { 0 : QgsField("interviewer_name", QVariant.String),
+            #           1 : QgsField("participant_name", QVariant.String),
+            #           2 : QgsField("pennies", QVariant.Int) }
+            
+            # create an instance of vector file writer,
+            # it will create the shapefile. Arguments:
+            # 1. path to new shapefile (will fail if exists already)
+            # 2. encoding of the attributes
+            # 3. field map
+            # 4. geometry type - from WKBTYPE enum
+            # 5. layer's spatial reference (instance of QgsSpatialRefSys)
+            writer = QgsVectorFileWriter(write_string, "UTF-8", fields,
+                                         QGis.WKBPolygon, self.mainwindow.srs)
+            
+            if writer.hasError() != QgsVectorFileWriter.NoError:
+                print "Error when creating shapefile: ", writer.hasError()
+                
+            # add some features
+            for capPolyInd, capPoly in enumerate(self.capturedPolygons):
+                fet = QgsFeature()
+                ret_val = fet.setGeometry(QgsGeometry.fromWkt(capPoly))
+                #keySort = self.interviewInfo2.keys()
+                #keySort.sort()
+                #i = 0
+                for index,value in enumerate(self.interviewInfo2):
+                  fet.addAttribute(index, QVariant(value[1]))
+                  #i += 1
+                fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
+                #i += 1
+                fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+                
+                #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
+                #fet.addAttribute(1, QVariant(self.interviewInfo[1]))
+                #fet.addAttribute(2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+                writer.addFeature(fet)
+            del writer
+            capture_string = QString("Wrote Shapefile..." + write_string)
+            self.parent.statusbar.showMessage(capture_string)
+  
+            # Now add the new layer back... but with styling...
+            info = QFileInfo(QString(f))
+            layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
+            
+            if not layer.isValid():
+              capture_string = QString("ERROR reading file")
+              self.statusbar.showMessage(capture_string)
+              return
+  
+            layer.label().setLabelField(QgsLabel.Text, 24)
+            layer.setLabelOn(True)
+            
+            # Set the transparency for the layer
+            layer.setTransparency(190)
+            
+            QgsMapLayerRegistry.instance().addMapLayer(layer)
+            
+            # set the map canvas layer set
+            cl = QgsMapCanvasLayer(layer)
+            self.mainwindow.layers.insert(0,cl)
+            self.canvas.setLayerSet(self.mainwindow.layers)
+            
+            #Add item to legend
+            self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
 
-          # Now add the new layer back... but with styling...
-          info = QFileInfo(QString(f))
-          layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
-          
-          if not layer.isValid():
-            capture_string = QString("ERROR reading file")
-            self.statusbar.showMessage(capture_string)
-            return
-
-          layer.label().setLabelField(QgsLabel.Text, 24)
-          layer.setLabelOn(True)
-          
-          # Set the transparency for the layer
-          layer.setTransparency(190)
-          
-          QgsMapLayerRegistry.instance().addMapLayer(layer)
-          
-          # set the map canvas layer set
-          cl = QgsMapCanvasLayer(layer)
-          self.mainwindow.layers.insert(0,cl)
-          self.canvas.setLayerSet(self.mainwindow.layers)
-          
-          #Add item to legend
-          self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
-
-      ## Reset the rubberbands and then clear out the fishery related objects
-      for capPolyRub in self.capturedPolygonsRub:
-        capPolyRub.reset()
-      self.capturedPolygons = []
-      self.capturedPolygonsFishery = []
-      self.capturedPolygonsPennies = []
-      self.capturedPolygonsRub = []
-      
-      # Fire up the select fishery gui again...
-      flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-      wnd = SelectFisheryGui(self,flags)
-      wnd.show()
+            ## Reset the rubberbands and then clear out the fishery related objects
+            for capPolyRub in self.capturedPolygonsRub:
+              capPolyRub.reset()
+            self.capturedPolygons = []
+            self.capturedPolygonsFishery = []
+            self.capturedPolygonsPennies = []
+            self.capturedPolygonsRub = []
+            
+            # Fire up the select fishery gui again...
+            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+            wnd = SelectFisheryGui(self,flags)
+            wnd.show()
 
