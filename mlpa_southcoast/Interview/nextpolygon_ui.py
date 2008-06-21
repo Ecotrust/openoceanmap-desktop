@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'nextpolygon.ui'
 #
-# Created: Sat Jun 21 20:35:24 2008
+# Created: Sat Jun 21 21:12:32 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -112,7 +112,6 @@ class Ui_NextPolygon(object):
         self.label_1.setText(QtGui.QApplication.translate("NextPolygon", "Pennies:", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo_label.setText(QtGui.QApplication.translate("NextPolygon", "Habitat Type:", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Hard Bottom", None, QtGui.QApplication.UnicodeUTF8))
-        self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "New Item", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Soft/Sandy", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Mixed", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("NextPolygon", "Finished With Fishery", None, QtGui.QApplication.UnicodeUTF8))
