@@ -39,6 +39,9 @@ from Tools.polygontool import *
 # UI specific includes
 from selectfishery_ui import Ui_SelectFishery
 from nextpolygon_ui import Ui_NextPolygon
+
+from Util.common_functions import *
+
 # General system includes
 import sys
 
@@ -51,7 +54,13 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
 
     def on_pbnStartShapes_released(self):
         #Get fishery value
-        self.parent.currentFishery = self.fishery_comboBox.currentText()
+        cur_fishery = self.fishery_comboBox.currentText()
+        if not cur_fishery:
+            QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
+            return 
+        else:
+            self.parent.currentFishery = cur_fishery
+        
 
         #Build permit id string
         permits = []
@@ -127,7 +136,9 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         mc.setMapTool(self.p)
             
     def on_pbnFisheryFinished_released(self):
-        self.close()
+        self.parent.pennies_left = 100;            
+        self.close()        
+        
         # add some features
         for capPolyRub in self.parent.capturedPolygonsRub:
             capPolyRub.reset()
@@ -135,31 +146,51 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.parent.parent.interviewSaveTool = None
         self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
-    def nextPolygon(self):
+    def nextPolygon(self):        
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = NextPolygonGui(self.parent,flags)
+        wnd = NextPolygonGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()
 
 class NextPolygonGui(QDialog, Ui_NextPolygon):
-    def __init__(self, parent, fl):
+    def __init__(self, parent, fl, num_pennies):
         QDialog.__init__(self, parent.mainwindow, fl)
         self.setupUi(self)
         self.parent = parent
         self.discardLast = False
-        
+        self.pl_label.setText("  "+str(num_pennies)+" left")
+        if num_pennies == 0:
+            self.pbnMoreShapes.setDisabled(True)
+
+    #Called when "More Shapes this fishery" button pressed        
     def on_pbnMoreShapes_released(self):
         if not self.discardLast:
-            print self.parent.currentPermits
-            self.parent.capturedPolygonsPennies.append(self.line_1.text())            
+            num_pennies = self.line_1.text()
+            if not num_pennies or num_pennies == '0' or not strIsInt(num_pennies):
+                QMessageBox.warning(self, "Pennies Error", "Missing or invalid penny value")
+                return
+            elif int(num_pennies) > self.parent.pennies_left:
+                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                return            
+            else:
+                self.parent.pennies_left = self.parent.pennies_left - int(num_pennies)
+                self.parent.capturedPolygonsPennies.append(num_pennies)
+                        
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
-            self.parent.capturedPolygonsPermits.append(self.parent.currentPermits)            
+            self.parent.capturedPolygonsPermits.append(self.parent.currentPermits)
+            
         self.close()
-        mc = self.parent.canvas      
-        self.p = PolygonTool(mc,self.parent)
-        QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
-        self.saveTool = mc.mapTool()
-        mc.setMapTool(self.p)
+
+        #Check if this fishery should be done (no pennies left)
+        if self.parent.pennies_left == 0:
+            QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This fishery is now done.")
+            self.parent.interviewEnd()
+        else:
+            mc = self.parent.canvas      
+            self.p = PolygonTool(mc,self.parent)
+            QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
+            self.saveTool = mc.mapTool()
+            mc.setMapTool(self.p)
             
     def on_pbnShapeDiscard_released(self):
         # Dump the last shape...
@@ -170,9 +201,24 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         self.pbnShapeDiscard.setEnabled(False)
         self.discardLast = True
             
+    #"Finished with Fishery" button clicked
     def on_pbnShapeFinished_released(self):
         if not self.discardLast:
-            self.parent.capturedPolygonsPennies.append(self.line_1.text())
+            num_pennies = self.line_1.text()
+            print "got here"
+            print num_pennies
+            if not num_pennies or num_pennies == '0' or not strIsInt(num_pennies):
+                QMessageBox.warning(self, "Pennies Error", "Missing or invalid penny value")
+                return
+            elif int(num_pennies) > self.parent.pennies_left:
+                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                return
+            elif int(num_pennies) < self.parent.pennies_left:
+                QMessageBox.warning(self, "Pennies Error", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes")
+                return
+            else:
+                self.parent.capturedPolygonsPennies.append(num_pennies)
+                        
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsPermits.append(self.parent.currentPermits)
@@ -181,5 +227,5 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = NextPolygonGui(self.parent,flags)
+        wnd = NextPolygonGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()

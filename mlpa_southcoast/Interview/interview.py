@@ -58,6 +58,8 @@ class Interview(QObject):
     self.capturedPolygonsHabitat = []
     self.capturedPolygonsPermits = []
     self.capturedPolygonsRub = []
+    
+    self.pennies_left = 100
 
     # Interview info to write in shapefile
     self.interviewInfo = []
@@ -68,7 +70,7 @@ class Interview(QObject):
     wnd = InterviewStartGui(self,flags)
     wnd.show()
 
-  # End interview dialog
+  # End interview dialog for current fishery, then start a new one
   def interviewEnd(self):
       if len(self.capturedPolygons) == 0:
           capture_string = QString("No Shapes to write...")
@@ -170,6 +172,11 @@ class Interview(QObject):
       
       # Fire up the select fishery gui again...
       flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+      
+      #Reset penny count
+      if self.pennies_left is None:
+        self.pennies_left = 100
+      
       wnd = SelectFisheryGui(self,flags)
       wnd.show()
 

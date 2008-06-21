@@ -101,7 +101,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # set extent to the extent of our layer
 #    self.canvas.setExtent(QgsRect(-79658,-648073,
 #                                  299310,-350475))
-    self.canvas.setExtent(QgsRect(-70240,-363544,293292,-636556))
     #self.canvas.setExtent(QgsRect(-74785,-634619,294487,-363979))
     
     rasterList = [["Data\Scsr_zm1a_rect.tif",800001,5000000],
@@ -109,7 +108,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                   ["Data\Scsr_zm3b_rect.tif",10000,300000]]    
     
     self.rasterBaseLayer = OOMLayer(self)
-    for rasterSet in rasterList:
+    for i in range(len(rasterList)):
+      rasterSet = rasterList[i]
+      
       raster = rasterSet[0]
       minScale = rasterSet[1]
       maxScale = rasterSet[2]
@@ -118,6 +119,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
+
+      if i == 0:
+        self.canvas.setExtent(layer.extent())
 
       if self.srs == None:
         self.srs = layer.srs()
@@ -129,14 +133,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       
       if not layer.isValid():
         capture_string = QString("ERROR reading file")
-        #self.canvas.parentWin.outputWin.append(capture_string)
         self.statusbar.showMessage(capture_string)
         return
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
-      
-      # set extent to the extent of our layer
-      #self.canvas.setExtent(layer.extent())
       
       # set the map canvas layer set
       cl = QgsMapCanvasLayer(layer)

@@ -255,13 +255,6 @@
           </widget>
          </item>
         </layout>
-        <zorder>pbnShapeFinished</zorder>
-        <zorder>pbnShapeDiscard</zorder>
-        <zorder>pbnMoreShapes</zorder>
-        <zorder>habitat_combo_label</zorder>
-        <zorder>horizontalSpacer_2</zorder>
-        <zorder>habitat_combo</zorder>
-        <zorder></zorder>
        </widget>
       </item>
      </layout>
