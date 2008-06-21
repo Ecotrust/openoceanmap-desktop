@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'nextpolygon.ui'
 #
-# Created: Sat Jun 21 21:12:32 2008
+# Created: Sat Jun 21 22:25:25 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -70,7 +70,6 @@ class Ui_NextPolygon(object):
         font.setPointSize(10)
         self.habitat_combo.setFont(font)
         self.habitat_combo.setObjectName("habitat_combo")
-        self.habitat_combo.addItem("")
         self.horizontalLayout.addWidget(self.habitat_combo)
         spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
@@ -111,8 +110,9 @@ class Ui_NextPolygon(object):
         NextPolygon.setWindowTitle(QtGui.QApplication.translate("NextPolygon", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
         self.label_1.setText(QtGui.QApplication.translate("NextPolygon", "Pennies:", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo_label.setText(QtGui.QApplication.translate("NextPolygon", "Habitat Type:", None, QtGui.QApplication.UnicodeUTF8))
+        self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Unknown", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Hard Bottom", None, QtGui.QApplication.UnicodeUTF8))
-        self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Soft/Sandy", None, QtGui.QApplication.UnicodeUTF8))
+        self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Soft Sandy", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Mixed", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("NextPolygon", "Finished With Fishery", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeDiscard.setText(QtGui.QApplication.translate("NextPolygon", "Discard Last Shape", None, QtGui.QApplication.UnicodeUTF8))
