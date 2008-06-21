@@ -43,17 +43,20 @@ from interviewstart_ui import Ui_InterviewStart
 import sys
 
 # Interview object for doing interviews
-class Interview(object):
+class Interview(QObject):
   def __init__(self, parent):
     self.parent = parent
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
     self.currentFishery = None
+    self.currentPermits = None
     # A place to store polygons we capture
     self.capturedPolygons = []
     self.capturedPolygonsFishery = []
     self.capturedPolygonsPennies = []
+    self.capturedPolygonsHabitat = []
+    self.capturedPolygonsPermits = []
     self.capturedPolygonsRub = []
 
     # Interview info to write in shapefile
@@ -70,7 +73,7 @@ class Interview(object):
       if len(self.capturedPolygons) == 0:
           capture_string = QString("No Shapes to write...")
           self.parent.statusbar.showMessage(capture_string)
-      else:
+      else:                              
           capture_string = QString("Writing shapefile...")
           self.parent.statusbar.showMessage(capture_string)
           qd=QFileDialog()
@@ -88,10 +91,11 @@ class Interview(object):
           #i = 0
           for index,value in enumerate(self.interviewInfo2):
             fields[index] = QgsField(value[0], QVariant.String)
-            #i += 1
-          fields[index+1] = QgsField("fishery", QVariant.String)
-          #i += 1
+
+          fields[index+1] = QgsField("fishery", QVariant.String)          
           fields[index+2] = QgsField("pennies", QVariant.Int)
+          fields[index+3] = QgsField("habitat", QVariant.String)
+          fields[index+4] = QgsField("permits", QVariant.String)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -119,14 +123,11 @@ class Interview(object):
               #i = 0
               for index,value in enumerate(self.interviewInfo2):
                 fet.addAttribute(index, QVariant(value[1]))
-                #i += 1
+                
               fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
-              #i += 1
               fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
-              
-              #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
-              #fet.addAttribute(1, QVariant(self.interviewInfo[1]))
-              #fet.addAttribute(2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              fet.addAttribute(index+3, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
+              fet.addAttribute(index+4, QVariant(self.capturedPolygonsPermits[capPolyInd]))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -141,7 +142,7 @@ class Interview(object):
             self.statusbar.showMessage(capture_string)
             return
 
-          layer.label().setLabelField(QgsLabel.Text, 24)
+          layer.label().setLabelField(QgsLabel.Text, 23)
           layer.setLabelOn(True)
           
           # Set the transparency for the layer
@@ -163,6 +164,8 @@ class Interview(object):
       self.capturedPolygons = []
       self.capturedPolygonsFishery = []
       self.capturedPolygonsPennies = []
+      self.capturedPolygonsHabitat = []
+      self.capturedPolygonsPermits = []
       self.capturedPolygonsRub = []
       
       # Fire up the select fishery gui again...

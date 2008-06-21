@@ -101,19 +101,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # set extent to the extent of our layer
 #    self.canvas.setExtent(QgsRect(-79658,-648073,
 #                                  299310,-350475))
-    self.canvas.setExtent(QgsRect(-74785,-634619,294487,-363979))
+    self.canvas.setExtent(QgsRect(-70240,-363544,293292,-636556))
+    #self.canvas.setExtent(QgsRect(-74785,-634619,294487,-363979))
     
-    rasterList = [["Data\Scsr_Zm1_rect.tif",1500000,5000000],
-                  ["Data\Scsr_zm3_rect.tif",10000,1500000]]    
+    rasterList = [["Data\Scsr_zm1a_rect.tif",800001,5000000],
+                  ["Data\Scsr_zm2a_rect.tif",300001,800000],
+                  ["Data\Scsr_zm3b_rect.tif",10000,300000]]    
     
-#    rasterList = [["Data/noaa_7_albs34.tif",1500000,5000000],
-#                  ["Data/noaa_8_albs34.tif",750000,1500000],
-#                  ["Data/noaa_9_albs34.tif",450000,750000],
-#                  ["Data/noaa_10_albs34.tif",125000,450000],
-#                  # Extra incase we want to get rid of level 12
-#                  #["Data/noaa_11_albs34.tif",85000,125000],
-#                  #["Data/noaa_12_albs34.tif",0,85000]]
-#                  ["Data/noaa_11_albs34.tif",0,125000]]
     self.rasterBaseLayer = OOMLayer(self)
     for rasterSet in rasterList:
       raster = rasterSet[0]

@@ -36,6 +36,11 @@
          <widget class="QComboBox" name="fishery_comboBox" >
           <item>
            <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
             <string>Lobster (Trap)</string>
            </property>
           </item>
@@ -132,9 +137,6 @@
          </widget>
         </item>
        </layout>
-       <zorder>fishery_text</zorder>
-       <zorder>fishery_comboBox</zorder>
-       <zorder>widget_3</zorder>
       </widget>
      </item>
      <item>
@@ -468,7 +470,6 @@
        </layout>
        <zorder>pbnFisheryFinished</zorder>
        <zorder>pbnStartShapes</zorder>
-       <zorder>widget_3</zorder>
        <zorder>horizontalSpacer</zorder>
       </widget>
      </item>

@@ -73,11 +73,9 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["v_homep", self.home_port_line.text()])
         
         interviewInfo2.append(["landp_1", self.landing_port_line.text()])                       
-        interviewInfo2.append(["landp_2", self.landing_port_line2.text()])
-        interviewInfo2.append(["landp_3", self.landing_port_line3.text()])
-        interviewInfo2.append(["landp_4", self.landing_port_line4.text()])
-
-        print interviewInfo2
+        interviewInfo2.append(["landp_2", self.landing_port_line_2.text()])
+        interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
+        interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
 
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
