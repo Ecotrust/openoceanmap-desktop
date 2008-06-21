@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Fri Jun 20 19:10:26 2008
+# Created: Sat Jun 21 03:35:29 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -28,6 +28,7 @@ class Ui_SelectFishery(object):
         self.hboxlayout.addWidget(self.fishery_text)
         self.fishery_comboBox = QtGui.QComboBox(self.widget)
         self.fishery_comboBox.setObjectName("fishery_comboBox")
+        self.fishery_comboBox.addItem("")
         self.hboxlayout.addWidget(self.fishery_comboBox)
         self.horizontalLayout_3.addWidget(self.widget)
         spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)

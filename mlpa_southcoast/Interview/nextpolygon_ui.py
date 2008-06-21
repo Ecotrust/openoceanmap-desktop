@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'nextpolygon.ui'
 #
-# Created: Fri Jun 20 19:10:25 2008
+# Created: Sat Jun 21 03:35:28 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -58,6 +58,7 @@ class Ui_NextPolygon(object):
         font.setPointSize(10)
         self.habitat_combo.setFont(font)
         self.habitat_combo.setObjectName("habitat_combo")
+        self.habitat_combo.addItem("")
         self.horizontalLayout.addWidget(self.habitat_combo)
         self.verticalLayout.addWidget(self.frame)
         self.horizontalLayout_2.addLayout(self.verticalLayout)
@@ -96,9 +97,9 @@ class Ui_NextPolygon(object):
         self.label_1.setText(QtGui.QApplication.translate("NextPolygon", "Weighting (Pennies)", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo_label.setText(QtGui.QApplication.translate("NextPolygon", "Habitat Type:", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Hard Bottom", None, QtGui.QApplication.UnicodeUTF8))
+        self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "New Item", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Soft/Sandy", None, QtGui.QApplication.UnicodeUTF8))
         self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Mixed", None, QtGui.QApplication.UnicodeUTF8))
-        self.habitat_combo.addItem(QtGui.QApplication.translate("NextPolygon", "Unknown", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("NextPolygon", "Finished With Fishery", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeDiscard.setText(QtGui.QApplication.translate("NextPolygon", "Discard Last Shape", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnMoreShapes.setText(QtGui.QApplication.translate("NextPolygon", "More Shapes This Fishery", None, QtGui.QApplication.UnicodeUTF8))

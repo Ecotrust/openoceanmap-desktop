@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interviewstart.ui'
 #
-# Created: Fri Jun 20 19:10:24 2008
+# Created: Sat Jun 21 03:35:27 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -97,6 +97,7 @@ class Ui_InterviewStart(object):
         self.gender_comboBox = QtGui.QComboBox(self.gender)
         self.gender_comboBox.setMaximumSize(QtCore.QSize(200,16777215))
         self.gender_comboBox.setObjectName("gender_comboBox")
+        self.gender_comboBox.addItem("")
         self.hboxlayout3.addWidget(self.gender_comboBox)
         self.verticalLayout_2.addWidget(self.gender)
         self.age_2 = QtGui.QWidget(self.interviewee)
