@@ -4,9 +4,9 @@
 # OpenOceanMap - An Open Source GIS tool for performing interviews
 # to obtain socio-economic data using spatial information.
 # 
-# Copyright (C) 2007  Ecotrust
-# Copyright (C) 2007  Aaron Racicot
-# 
+# Copyright (C) 2008  Ecotrust
+# Copyright (C) 2008  Aaron Racicot
+# Copyright (C) 2008  Dane Springmeyer 
 #---------------------------------------------------------------------
 # 
 # licensed under the terms of GNU GPL 2
@@ -40,7 +40,7 @@ from Main.mainwindow import *
 import sys
 
 # Path to local QGIS install
-qgis_prefix = "/usr/local/qgis_svn"
+qgis_prefix = "C:\Program Files\Quantum GIS"
 
 
 # Main entry to program.  Set up the main app and create a new window.
