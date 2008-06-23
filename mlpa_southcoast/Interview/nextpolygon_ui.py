@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'nextpolygon.ui'
 #
-# Created: Sat Jun 21 22:25:25 2008
+# Created: Mon Jun 23 19:26:56 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!

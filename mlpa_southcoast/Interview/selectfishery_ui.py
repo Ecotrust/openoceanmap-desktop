@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Sat Jun 21 03:35:29 2008
+# Created: Mon Jun 23 19:26:57 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -183,25 +183,32 @@ class Ui_SelectFishery(object):
     def retranslateUi(self, SelectFishery):
         SelectFishery.setWindowTitle(QtGui.QApplication.translate("SelectFishery", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "Select Fishery :", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Lobster (Trap)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Squid (Seine)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "California Halibut (Hook & Line)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "California Halibut (Set Gill Net)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Coastal Pelagics (Seine)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Urchin (Diving)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Spot Prawn (Trap)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Nearshore Rockfish (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "NearshoreRockfish (Trap)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Deeper Nearshore Rockfish (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Deeper Nearshore Rockfish (Trap)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "California Halibut (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "California Halibut (Gillnet)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Deep Nearshore Rockfish (Hook & Line)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Lobster (Trap)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Nearshore Rockfish (Hook & Line)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Nearshore Rockfish (Trap)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Pacific Bonito (Seine)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Rock Crab (Trap)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Shark-Swordfish (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Shark-Swordfish (Gillnet)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Sablefish (Hook & Line)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Sablefish (Trap)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Sea Cucumber (Diving)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Tuna (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Thornyhead (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Shark (Drift Gill Net)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Shark (Set Gill Net)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Spot Prawn (Trap)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Squid (Seine)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Swordfish (Drift Gill Net)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Swordfish (Harpoon or Spear)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Swordfish (Hook & Line)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Thornyhead (Hook & Line)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Tuna (Hook & Line)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Tuna (Seine)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Urchin (Diving)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "White Seabass (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "White Seabass (Gillnet)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Other (Note the species)", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox.setTitle(QtGui.QApplication.translate("SelectFishery", "Select Permits for this fishery:", None, QtGui.QApplication.UnicodeUTF8))
         self.p1.setText(QtGui.QApplication.translate("SelectFishery", "Deeper Nearshore Species Permit", None, QtGui.QApplication.UnicodeUTF8))
         self.p2.setText(QtGui.QApplication.translate("SelectFishery", "Drift Gillnet Sharks - Swordfish Permit", None, QtGui.QApplication.UnicodeUTF8))
