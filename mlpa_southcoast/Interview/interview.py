@@ -139,9 +139,12 @@ class Interview(QObject):
           info = QFileInfo(QString(f))
           layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
           
-          if not layer.isValid():
-            capture_string = QString("ERROR reading file")
-            self.statusbar.showMessage(capture_string)
+          if not layer.isValid():            
+            capture_string = QString("ERROR reading file, did it save correctly?  If not, do you have write permission in the save directory you chose?")
+            self.parent.statusbar.showMessage(capture_string)
+            #Restart save dialog
+            self.interviewEnd()
+            #Pull out
             return
 
           layer.label().setLabelField(QgsLabel.Text, 23)
@@ -174,8 +177,7 @@ class Interview(QObject):
       flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
       
       #Reset penny count
-      if self.pennies_left is None:
-        self.pennies_left = 100
+      self.pennies_left = 100
       
       wnd = SelectFisheryGui(self,flags)
       wnd.show()

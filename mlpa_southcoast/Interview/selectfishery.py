@@ -151,14 +151,17 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         wnd = NextPolygonGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()
 
+
+
 class NextPolygonGui(QDialog, Ui_NextPolygon):
-    def __init__(self, parent, fl, num_pennies):
+    def __init__(self, parent, fl, pennies_left):
         QDialog.__init__(self, parent.mainwindow, fl)
         self.setupUi(self)
         self.parent = parent
         self.discardLast = False
-        self.pl_label.setText("  "+str(num_pennies)+" left")
-        if num_pennies == 0:
+        self.pennies_left = pennies_left
+        self.pl_label.setText("  "+str(self.pennies_left)+" left")
+        if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
 
     #Called when "More Shapes this fishery" button pressed        
@@ -168,11 +171,11 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
             if not num_pennies or num_pennies == '0' or not strIsInt(num_pennies):
                 QMessageBox.warning(self, "Pennies Error", "Missing or invalid penny value")
                 return
-            elif int(num_pennies) > self.parent.pennies_left:
+            elif int(num_pennies) > self.pennies_left:
                 QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
                 return            
             else:
-                self.parent.pennies_left = self.parent.pennies_left - int(num_pennies)
+                self.parent.pennies_left = self.pennies_left - int(num_pennies)
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
@@ -205,8 +208,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
     def on_pbnShapeFinished_released(self):
         if not self.discardLast:
             num_pennies = self.line_1.text()
-            print "got here"
-            print num_pennies
+
             if not num_pennies or num_pennies == '0' or not strIsInt(num_pennies):
                 QMessageBox.warning(self, "Pennies Error", "Missing or invalid penny value")
                 return

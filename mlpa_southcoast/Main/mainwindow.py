@@ -105,9 +105,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     rasterList = [["Data\Scsr_zm1a_rect.tif",800001,5000000],
                   ["Data\Scsr_zm2a_rect.tif",300001,800000],
-                  ["Data\Scsr_zm3b_rect.tif",10000,300000]]    
+                  ["Data\Scsr_zm3b_rect.tif",60000,300000]]    
     
     self.rasterBaseLayer = OOMLayer(self)
+    
+    first_raster = None
     for i in range(len(rasterList)):
       rasterSet = rasterList[i]
       
@@ -121,7 +123,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
       if i == 0:
-        self.canvas.setExtent(layer.extent())
+        first_raster = layer        
 
       if self.srs == None:
         self.srs = layer.srs()
@@ -148,9 +150,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem("NOAA ENC",
                                     self.rasterBaseLayer.getCls())
 
-#    vectorList = [["Data/Kayak_Points.shp",0,125000],
-#                  ["Data/Access_Points.shp",0,200000]]
-    vectorList = []
+    vectorList = [["Data/Scsr_oom_ctours.shp",60000,1200000]]
     for vectorSet in vectorList:
       vector = vectorSet[0]
       minScale = vectorSet[1]
@@ -170,24 +170,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       layer.setMinScale(minScale)
       layer.setMaxScale(maxScale)
 
-      if vector == "Data/Access_Points.shp":
-        layer.label().setLabelField(QgsLabel.Text, 25)
-        layer.renderer().symbols()[0].setPointSize(10)
-        layer.setLabelOn(True)
+      if vector == "Data/Scsr_oom_ctours.shp":
+        layer.renderer().symbols()[0].setPointSize(8)
+        layer.renderer().symbols()[0].setLineWidth(1.5)
+        layer.renderer().symbols()[0].setColor(QColor('Black'))
+    
         label = layer.label()
+        print label.fields()
+        label.setLabelField(QgsLabel.Text, 3)
         labelAt = label.layerAttributes()
-        labelAt.setBold(True)
+        labelAt.setBold(False)
         labelAt.setBufferEnabled(True)
-        labelAt.setOffset(0,-10,1)
-      elif vector == "Data/Kayak_Points.shp":
-        layer.label().setLabelField(QgsLabel.Text, 1)
-        layer.renderer().symbols()[0].setPointSize(10)
-        layer.setLabelOn(True)
-        label = layer.label()
-        labelAt = label.layerAttributes()
-        labelAt.setBold(True)
-        labelAt.setBufferEnabled(True)
-        labelAt.setOffset(0,-10,1)
+        labelAt.setOffset(0,0,0)
+        layer.setLabelOn(False)        
       
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
@@ -197,8 +192,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.layers.insert(0,cl)
       self.canvas.setLayerSet(self.layers)
       #Add item to legend
-      self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
       
+      if vector == "Data/Scsr_oom_ctours.shp.shp":
+          self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
+      else:
+          self.legend.addVectorLegendItem("Contours", [cl])
+      
+    self.canvas.setExtent(first_raster.extent())    
 
 class OOMLayer(object):
   def __init__(self, parent):

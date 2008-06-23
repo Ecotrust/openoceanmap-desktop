@@ -6,6 +6,14 @@
 #
 # By default, the installer will be created as dist\Output\setup.exe.
 
+#*********************** READ THIS! *******************
+# To build OOM you'll want to copy the plugins and resources directory
+# from the QGIS install directory and put them in the root directory of OOM
+# were openoceanmap.py is located.  Then change the QGIS prefix path to "."
+# That will tell QGIS to look for the necessary data provider plugins.
+# This build script will also look for and include the resources and plugins
+# directory and include them in the executable.
+
 from distutils.core import setup
 #import matplotlib
 import py2exe
@@ -59,21 +67,28 @@ class InnoScript:
         print >> ofi, r"DefaultGroupName=%s" % self.name
         print >> ofi, r"VersionInfoVersion=%s" % self.version
         print >> ofi, r"VersionInfoCompany=Ecotrust"
-        print >> ofi, r"VersionInfoDescription=OOM SouthCoast Commercial"
+        print >> ofi, r"VersionInfoDescription=OpenOceanMap MLPA SCSR Comm."
         print >> ofi, r"VersionInfoCopyright=Ecotrust"
         print >> ofi, r"AppCopyright=Ecotrust"
-        print >> ofi, r"InfoAfterFile=U:\dev\mlpa_southcoast\README.TXT"
-        print >> ofi, r"LicenseFile=U:\dev\mlpa_southcoast\LICENSE.TXT"
+        print >> ofi, r"InfoAfterFile=U:\dev\oom_sc_mlpa\README.TXT"
+        print >> ofi, r"LicenseFile=U:\dev\oom_sc_mlpa\LICENSE.TXT"
         print >> ofi, r"WizardImageBackColor=clBlack"
-        print >> ofi, r"WizardImageFile=U:\dev\mlpa_southcoast\Images\OCEAN_VERT_INNO.bmp"
-        print >> ofi, r"WizardSmallImageFile=U:\dev\mlpa_southcoast\Images\OCEAN_SMALL_INNO.bmp"
-        print >> ofi, r"SetupIconFile=U:\dev\mlpa_southcoast\Images\OCEAN_SMALL_INNO.ico"
+        print >> ofi, r"WizardImageFile=U:\dev\oom_sc_mlpa\Images\OCEAN_VERT_INNO.bmp"
+        print >> ofi, r"WizardSmallImageFile=U:\dev\oom_sc_mlpa\Images\OCEAN_SMALL_INNO.bmp"
+        print >> ofi, r"SetupIconFile=U:\dev\oom_sc_mlpa\Images\OCEAN_SMALL_INNO.ico"
         print >> ofi
 
         print >> ofi, r"[Files]"
         for path in self.windows_exe_files + self.lib_files:
             print >> ofi, r'Source: "%s"; DestDir: "{app}\%s"; Flags: ignoreversion' % (path, os.path.dirname(path))
+        
+        #Additional libraries that may not be used but which the pre-build QGIS binary will look for and error if it can't find
+        print >> ofi, r'Source: lib\libgdal-1.dll; DestDir: {app}\lib; Flags: ignoreversion'
+        print >> ofi, r'Source: lib\libgrass_dbmibase.6.3.0.dll; DestDir: {app}\lib; Flags: ignoreversion'
+        print >> ofi, r'Source: lib\libgrass_dgl.6.3.0.dll; DestDir: {app}\lib; Flags: ignoreversion'
+        print >> ofi, r'Source: lib\libgrass_rtree.6.3.0.dll; DestDir: {app}\lib; Flags: ignoreversion'
         print >> ofi, r'Source: lib\QtSvg4.dll; DestDir: {app}\lib; Flags: ignoreversion'
+        print >> ofi, r'Source: lib\libproj.dll; DestDir: {app}\lib; Flags: ignoreversion'
 
         print >> ofi, r"[Icons]"
         #print >> ofi, r'WorkingDir: {app}'                  
@@ -124,7 +139,7 @@ class build_installer(py2exe):
         dist_dir = self.dist_dir
         
         # create the Installer, using the files py2exe has created.
-        script = InnoScript("OpenOceanMap",
+        script = InnoScript("OpenOceanMap MLPA SCSR Comm.",
                             lib_dir,
                             dist_dir,
                             self.windows_exe_files,
