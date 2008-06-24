@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Tue Jun 24 20:19:37 2008
+# Created: Tue Jun 24 20:35:02 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -21,7 +21,7 @@ class Ui_SelectFishery(object):
         self.widget.setObjectName("widget")
         self.hboxlayout = QtGui.QHBoxLayout(self.widget)
         self.hboxlayout.setSpacing(6)
-        self.hboxlayout.setMargin(9)
+        self.hboxlayout.setContentsMargins(9,9,9,0)
         self.hboxlayout.setObjectName("hboxlayout")
         self.fishery_text = QtGui.QLabel(self.widget)
         self.fishery_text.setMinimumSize(QtCore.QSize(140,0))
@@ -295,7 +295,7 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "White Seabass (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "White Seabass (Gillnet)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Other (Note the species)", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("SelectFishery", "% income from this fishery:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("SelectFishery", "Percent income from this fishery:", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox.setTitle(QtGui.QApplication.translate("SelectFishery", "Select Permits for this fishery:", None, QtGui.QApplication.UnicodeUTF8))
         self.p1.setText(QtGui.QApplication.translate("SelectFishery", "Anchovy Take", None, QtGui.QApplication.UnicodeUTF8))
         self.p2.setText(QtGui.QApplication.translate("SelectFishery", "Deeper Nearshore Species Fishery Permit", None, QtGui.QApplication.UnicodeUTF8))
