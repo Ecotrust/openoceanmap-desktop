@@ -103,7 +103,7 @@ class MapTools(object):
     self.interviewInProgress = False
     self.interviewSaveTool = None
 
-  # Signal handeler for capturing rectangle
+  # Signal handler for capturing rectangle
   def updateBoundsFromRegion(self):
     mc = self.canvas      
     self.r = RegionTool(mc)
@@ -111,7 +111,7 @@ class MapTools(object):
     self.saveTool = mc.mapTool()
     mc.setMapTool(self.r)
 
-  # Signal handeler for finishing capture of rectangle
+  # Signal handler for finishing capture of rectangle
   def doneRectangle(self):
     self.canvas.setMapTool(self.saveTool)
     capture_string = QString("Captured Rectangle - " +
@@ -123,7 +123,7 @@ class MapTools(object):
     #self.outputWin.append(capture_string)
     self.statusbar.showMessage(capture_string)
 
-  # Signal handeler for capturing polygon
+  # Signal handler for capturing polygon
   def updatePolygon(self):
     mc = self.canvas      
     self.p = PolygonTool(mc)
@@ -131,7 +131,7 @@ class MapTools(object):
     self.saveTool = mc.mapTool()
     mc.setMapTool(self.p)
 
-  # Signal handeler for finishing capture of rectangle
+  # Signal handler for finishing capture of rectangle
   def donePolygon(self):
     self.canvas.setMapTool(self.saveTool)
     capture_string = QString("Captured Polygon")
@@ -159,25 +159,25 @@ class MapTools(object):
       self.interview = Interview(self)
 
 
-  # Signal handeler for zoom in button
+  # Signal handler for zoom in button
   def zoomIn(self):
     if self.interviewInProgress and self.interviewSaveTool == None:
       self.interviewSaveTool = self.canvas.mapTool()
     self.canvas.setMapTool(self.toolZoomIn)
 
-  # Signal handeler for zoom out button
+  # Signal handler for zoom out button
   def zoomOut(self):
     if self.interviewInProgress and self.interviewSaveTool == None:
       self.interviewSaveTool = self.canvas.mapTool()
     self.canvas.setMapTool(self.toolZoomOut)
 
-  # Signal handeler for pan button
+  # Signal handler for pan button
   def pan(self):
     if self.interviewInProgress and self.interviewSaveTool == None:
       self.interviewSaveTool = self.canvas.mapTool()
     self.canvas.setMapTool(self.toolPan)
 
-  # Signal handeler for add layer button
+  # Signal handler for add layer button
   def addVectorLayer(self):
     qd=QFileDialog()
     filter_str = QString("*.shp")
@@ -203,6 +203,8 @@ class MapTools(object):
 
     if self.parent.srs == None:
       self.parent.srs = layer.srs()
+      print 'maptools.py srs setting...'
+      print self.parent.srs
       # set extent to the extent of our layer
       self.parent.canvas.setExtent(layer.extent())
 
@@ -222,7 +224,7 @@ class MapTools(object):
     #Add item to legend
     self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
 
-  # Signal handeler for add layer button
+  # Signal handler for add layer button
   def addRasterLayer(self):
     qd=QFileDialog()
     filter_str = QString("*.tif")
