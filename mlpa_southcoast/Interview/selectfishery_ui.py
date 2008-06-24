@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Tue Jun 24 20:35:02 2008
+# Created: Tue Jun 24 20:36:02 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectFishery(object):
     def setupUi(self, SelectFishery):
         SelectFishery.setObjectName("SelectFishery")
-        SelectFishery.resize(840,653)
+        SelectFishery.resize(840,616)
         self.verticalLayout_5 = QtGui.QVBoxLayout(SelectFishery)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.horizontalLayout_3 = QtGui.QHBoxLayout()
