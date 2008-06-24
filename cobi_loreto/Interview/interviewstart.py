@@ -118,6 +118,14 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
             
     def on_pbnCancel_clicked(self):
         self.close()
+        capture_string = QString("Cancelled out of fishery interview...")
+        print capture_string
+        self.parent.parent.statusbar.showMessage(capture_string)
+        
+        # stop interview process
+        self.parent.parent.interviewInProgress = False
+        self.parent.parent.interviewSaveTool = None
+        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     #def nextPolygon(self):
     #    flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
