@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Tue Jun 24 20:36:02 2008
+# Created: Tue Jun 24 22:01:13 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectFishery(object):
     def setupUi(self, SelectFishery):
         SelectFishery.setObjectName("SelectFishery")
-        SelectFishery.resize(840,616)
+        SelectFishery.resize(821,610)
         self.verticalLayout_5 = QtGui.QVBoxLayout(SelectFishery)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.horizontalLayout_3 = QtGui.QHBoxLayout()
@@ -24,8 +24,8 @@ class Ui_SelectFishery(object):
         self.hboxlayout.setContentsMargins(9,9,9,0)
         self.hboxlayout.setObjectName("hboxlayout")
         self.fishery_text = QtGui.QLabel(self.widget)
-        self.fishery_text.setMinimumSize(QtCore.QSize(140,0))
-        self.fishery_text.setMaximumSize(QtCore.QSize(140,16777215))
+        self.fishery_text.setMinimumSize(QtCore.QSize(160,0))
+        self.fishery_text.setMaximumSize(QtCore.QSize(160,16777215))
         self.fishery_text.setObjectName("fishery_text")
         self.hboxlayout.addWidget(self.fishery_text)
         self.fishery_comboBox = QtGui.QComboBox(self.widget)
@@ -43,8 +43,8 @@ class Ui_SelectFishery(object):
         self.horizontalLayout_4 = QtGui.QHBoxLayout(self.widget_3)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label = QtGui.QLabel(self.widget_3)
-        self.label.setMinimumSize(QtCore.QSize(140,0))
-        self.label.setMaximumSize(QtCore.QSize(140,16777215))
+        self.label.setMinimumSize(QtCore.QSize(160,0))
+        self.label.setMaximumSize(QtCore.QSize(160,16777215))
         self.label.setObjectName("label")
         self.horizontalLayout_4.addWidget(self.label)
         self.fish_perc_income = QtGui.QLineEdit(self.widget_3)
@@ -117,8 +117,6 @@ class Ui_SelectFishery(object):
         self.p17 = QtGui.QCheckBox(self.frame)
         self.p17.setObjectName("p17")
         self.verticalLayout.addWidget(self.p17)
-        spacerItem2 = QtGui.QSpacerItem(20,40,QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem2)
         self.horizontalLayout.addWidget(self.frame)
         self.frame_3 = QtGui.QFrame(self.groupBox)
         self.frame_3.setFrameShape(QtGui.QFrame.StyledPanel)
@@ -174,8 +172,8 @@ class Ui_SelectFishery(object):
         self.p33 = QtGui.QCheckBox(self.frame_3)
         self.p33.setObjectName("p33")
         self.verticalLayout_2.addWidget(self.p33)
-        spacerItem3 = QtGui.QSpacerItem(20,40,QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem3)
+        spacerItem2 = QtGui.QSpacerItem(20,40,QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem2)
         self.horizontalLayout.addWidget(self.frame_3)
         self.verticalLayout_4 = QtGui.QVBoxLayout()
         self.verticalLayout_4.setObjectName("verticalLayout_4")
@@ -233,9 +231,9 @@ class Ui_SelectFishery(object):
         self.p49 = QtGui.QCheckBox(self.frame_2)
         self.p49.setObjectName("p49")
         self.verticalLayout_3.addWidget(self.p49)
+        spacerItem3 = QtGui.QSpacerItem(20,40,QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem3)
         self.verticalLayout_4.addWidget(self.frame_2)
-        spacerItem4 = QtGui.QSpacerItem(20,40,QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem4)
         self.horizontalLayout.addLayout(self.verticalLayout_4)
         self.verticalLayout_5.addWidget(self.groupBox)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
@@ -246,8 +244,8 @@ class Ui_SelectFishery(object):
         self.hboxlayout1.setSpacing(6)
         self.hboxlayout1.setMargin(9)
         self.hboxlayout1.setObjectName("hboxlayout1")
-        spacerItem5 = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout1.addItem(spacerItem5)
+        spacerItem4 = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem4)
         self.pbnFisheryFinished = QtGui.QPushButton(self.widget_2)
         font = QtGui.QFont()
         font.setPointSize(10)
