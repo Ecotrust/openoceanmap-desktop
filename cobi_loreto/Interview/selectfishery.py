@@ -59,7 +59,10 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
             
     def on_pbnFisheryFinished_released(self):
         self.close()
-        # add some features
+        capture_string = QString("Finished with fishery interview...")
+        self.parent.parent.statusbar.showMessage(capture_string)
+        
+        # add some features# add some features
         for capPolyRub in self.parent.capturedPolygonsRub:
             capPolyRub.reset()
         self.parent.parent.interviewInProgress = False
