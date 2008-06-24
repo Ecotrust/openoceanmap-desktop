@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>840</width>
-    <height>429</height>
+    <height>653</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -27,6 +27,18 @@
         </property>
         <item>
          <widget class="QLabel" name="fishery_text" >
+          <property name="minimumSize" >
+           <size>
+            <width>140</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>140</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="text" >
            <string>Select Fishery :</string>
           </property>
@@ -190,6 +202,68 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_3" >
+       <layout class="QHBoxLayout" name="horizontalLayout_4" >
+        <item>
+         <widget class="QLabel" name="label" >
+          <property name="minimumSize" >
+           <size>
+            <width>140</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>140</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>% income from this fishery:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_perc_income" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>fish_perc_income</zorder>
+       <zorder>label</zorder>
+       <zorder>label</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox" >
      <property name="title" >
       <string>Select Permits for this fishery:</string>
@@ -207,28 +281,28 @@
          <item>
           <widget class="QCheckBox" name="p1" >
            <property name="text" >
-            <string>Deeper Nearshore Species Permit</string>
+            <string>Anchovy Take</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p2" >
            <property name="text" >
-            <string>Drift Gillnet Sharks - Swordfish Permit</string>
+            <string>Deeper Nearshore Species Fishery Permit</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p3" >
            <property name="text" >
-            <string>Dungeness Crab Vessel (Nonresident)</string>
+            <string>Drift Gill Net</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p4" >
            <property name="text" >
-            <string>Dungeness Crab Vessel (Resident)</string>
+            <string>Drift Gill Net Sharks - Swordfish Permit</string>
            </property>
           </widget>
          </item>
@@ -263,23 +337,78 @@
          <item>
           <widget class="QCheckBox" name="p9" >
            <property name="text" >
-            <string>Gill/Trammel Net Permit</string>
+            <string>Free Swordfish</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p10" >
            <property name="text" >
-            <string>Herring Gillnet (Nonresident)</string>
+            <string>General Gill Net</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p11" >
            <property name="text" >
-            <string>Herring Gillnet (Resident)</string>
+            <string>Gill/Trammel Net Permit</string>
            </property>
           </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p12" >
+           <property name="text" >
+            <string>Golden, Spot and Ridgeback Prawn</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p13" >
+           <property name="text" >
+            <string>Herring Gill Net (Nonresident)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p14" >
+           <property name="text" >
+            <string>Herring Gill Net (Resident)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p15" >
+           <property name="text" >
+            <string>Lobster Crewmember</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p16" >
+           <property name="text" >
+            <string>Lobster Operator (NT)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p17" >
+           <property name="text" >
+            <string>Lobster Operaotr (T)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3" >
+           <property name="orientation" >
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0" >
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
@@ -294,81 +423,129 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2" >
          <item>
-          <widget class="QCheckBox" name="p12" >
-           <property name="text" >
-            <string>Market Squid Brail Permit (Nontransferable)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p13" >
-           <property name="text" >
-            <string>Market Squid Brail Permit (Transferable)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p14" >
-           <property name="text" >
-            <string>Market Squid Light Boat Owner</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p15" >
-           <property name="text" >
-            <string>Market Squid Light Boat Permit (Nontransferable)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p16" >
-           <property name="text" >
-            <string>Market Squid Vessel (Nontransferable)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p17" >
-           <property name="text" >
-            <string>Market Squid Vessel (Transferable)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QCheckBox" name="p18" >
            <property name="text" >
-            <string>Nearshore Fishery Bycatch</string>
+            <string>Market Squid Brail Permit (NT)</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p19" >
            <property name="text" >
-            <string>Nearshore Fishery Bycatch (Nontransferable)</string>
+            <string>Market Squid Brail Permit (T)</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p20" >
            <property name="text" >
-            <string>Nearshore Fishery Permit</string>
+            <string>Market Squid Light Boat Owner</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p21" >
            <property name="text" >
-            <string>Nearshore Fishery Permit - North Coast</string>
+            <string>Market Squid Light Boat Permit (NT)</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="p22" >
            <property name="text" >
-            <string>Nearshore Fishery Permit - North-Central Coast</string>
+            <string>Market Squid Vessel (NT)</string>
            </property>
           </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p23" >
+           <property name="text" >
+            <string>Market Squid Vessel (T)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p24" >
+           <property name="text" >
+            <string>Nearshore Fishery Bycatch (NT)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p25" >
+           <property name="text" >
+            <string>Nearshore Fishery Bycatch Permit</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p26" >
+           <property name="text" >
+            <string>North Central Coast Fishery Trap Endorsement</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p27" >
+           <property name="text" >
+            <string>North Central Coast Nearshore Fishery (NT)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p28" >
+           <property name="text" >
+            <string>North Central Coast Nearshore Fishery (T)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p29" >
+           <property name="text" >
+            <string>North Coast Nearshore Fishery (T)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p30" >
+           <property name="text" >
+            <string>Northern Rock Crab</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p31" >
+           <property name="text" >
+            <string>Ocean Enhancement</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p32" >
+           <property name="text" >
+            <string>Salmon Stamp</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="p33" >
+           <property name="text" >
+            <string>Salmon Vessel Permit</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2" >
+           <property name="orientation" >
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0" >
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
@@ -385,51 +562,114 @@
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_3" >
            <item>
-            <widget class="QCheckBox" name="p23" >
+            <widget class="QCheckBox" name="p34" >
              <property name="text" >
-              <string>Nearshore Fishery Permit - South Coast</string>
+              <string>Sea Cucumber Diving</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="p24" >
+            <widget class="QCheckBox" name="p35" >
              <property name="text" >
-              <string>Nearshore Fishery Permit - South-Central Coast</string>
+              <string>Sea Cucumber Trawl</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="p25" >
+            <widget class="QCheckBox" name="p36" >
              <property name="text" >
-              <string>Nearshore Fishery Trap Endorsement</string>
+              <string>Sea Urchin Crewmember</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="p26" >
+            <widget class="QCheckBox" name="p37" >
              <property name="text" >
-              <string>Open Access</string>
+              <string>Sea Urchin Permit</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="p27" >
+            <widget class="QCheckBox" name="p38" >
              <property name="text" >
-              <string>Salmon Enhancement Stamp</string>
+              <string>South Central Coast Nearshore Fishery (NT)</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="p28" >
+            <widget class="QCheckBox" name="p39" >
              <property name="text" >
-              <string>Salmon Vessel Permit</string>
+              <string>South Central Coast Nearshore Fishery (T)</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="p29" >
+            <widget class="QCheckBox" name="p40" >
              <property name="text" >
-              <string>Sea Urchin Diving Permit</string>
+              <string>South Central Coast Trap Endorsement (NT)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p41" >
+             <property name="text" >
+              <string>South Central Coast Trap Endoresement (T)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p42" >
+             <property name="text" >
+              <string>South Coast Nearshore Fishery (NT)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p43" >
+             <property name="text" >
+              <string>South Coast Nearshore Fishery (T)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p44" >
+             <property name="text" >
+              <string>South Coast Trap Endorsement (NT)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p45" >
+             <property name="text" >
+              <string>South Coast Trap Endorsement (T)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p46" >
+             <property name="text" >
+              <string>Southern Rock Crab</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p47" >
+             <property name="text" >
+              <string>Swordfish</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p48" >
+             <property name="text" >
+              <string>Tidal Invertebrate</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="p49" >
+             <property name="text" >
+              <string>Trap Permit</string>
              </property>
             </widget>
            </item>
