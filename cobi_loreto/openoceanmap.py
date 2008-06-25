@@ -50,6 +50,14 @@ def main(argv):
   app = QApplication(argv,True)
   #app = QgsApplication(argv,True)
   
+  appTranslator = QTranslator()
+  locale = 'es'
+  if appTranslator.load("Main/i18n/oom_es.qm"):
+    app.installTranslator(appTranslator)
+    print 'translator installed'
+  else:
+    print 'translator not installed'
+        
   # Set the app style
   app.setStyle(QString("plastique"))
   
