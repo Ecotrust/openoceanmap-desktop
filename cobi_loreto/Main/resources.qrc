@@ -11,4 +11,8 @@
         <file>images/mActionZoomOut.png</file>
         <file>images/mIconProperties.png</file>
     </qresource>
+    <qresource>
+        <!--<file>i18n/qis_es.qm</file>-->
+        <file>i18n/oom_es.qm</file>
+        </qresource>
 </RCC>
