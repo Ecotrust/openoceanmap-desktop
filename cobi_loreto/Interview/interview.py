@@ -30,17 +30,27 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+# set up for translateable strings
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
 # Custom Tools
-from interviewstart import *
+#from interviewstart import *
+from selectfishery import *
+from interviewstart import InterviewStartGui
 #from Tools.polygontool import *
 #from nextpolygon import *
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
 # General system includes
 import sys, os
+
+#(QtGui.QApplication.translate("NextPolygon", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
+#def _t(string, ui="Interview"):
+#   u_string = string.encode("UTF-8")
+#   translation_instance = QA.translate("Interview",u_string, None, QApplication.UnicodeUTF8)
+#   return translation_instance
 
 # Interview object for doing interviews
 class Interview(object):
@@ -49,12 +59,24 @@ class Interview(object):
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
+
     self.currentFishery = None
+
+    # User Group interview statuses
+    self.currentCommFish = False
+    self.currentCommSport = False
+    self.currentPrivateFish = False
+    self.currentEcotourism = False
+    self.currentConsScience = False
+    self.currentOther = False
+
     # A place to store polygons we capture
     self.capturedPolygons = []
     self.capturedPolygonsFishery = []
     self.capturedPolygonsPennies = []
     self.capturedPolygonsRub = []
+    
+    self.pennies_left = 100
 
     # Interview info to write in shapefile
     self.interviewInfo = []
@@ -76,25 +98,35 @@ class Interview(object):
           wnd = SelectFisheryGui(self,flags)
           wnd.show()
       else:
+          fishery_name = str(self.currentFishery).replace(' ','_').lower()
+          file_prefix = QString(fishery_name)
+          filter_name = QString("%s_" % file_prefix)
+          # self.parent.statusbar.showMessage(file_prefix)
           capture_string = QString("Writing shapefile...")
           self.parent.statusbar.showMessage(capture_string)
           qd=QFileDialog()
-          filter_str = QString("*.shp")
-          f2=qd.getSaveFileName(self.mainwindow,QString(),QString(),filter_str)
+          qd.DontConfirmOverwrite = True
+          file_type_filter = QString("Shapefiles (*.shp)")
+          f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Shapes as", None, QApplication.UnicodeUTF8),filter_name,file_type_filter)
           # Check to see if the shapefile has been saved
           if f2.count(".shp")==0:
             # If the user cancels return to the same GUI...
             flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = NextPolygonGui(self,flags)
+            # wnd = NextPolygonGui(self,flags)
+            wnd = NextPolygonGui(self,flags,self.pennies_left)
             wnd.show()
           # check to see if the user tried to overwrite an existing shapefile
           elif os.path.isfile(f2):
             # Currently we don't suport overwriting, so return to dialog
             write_string = QString(f2)
-            capture_string = QString("Overwriting existing shapefile is not supported: " + write_string)
+            
+            # this translation is not found perhaps due to line number or order of excution...
+            msg = QA.translate("Interview","Overwriting existing shapefile is not supported: ", None, QApplication.UnicodeUTF8)
+            capture_string = QString(msg + write_string)
             self.parent.statusbar.showMessage(capture_string)
             flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = NextPolygonGui(self,flags)
+            #wnd = NextPolygonGui(self,flags)
+            wnd = NextPolygonGui(self,flags,self.pennies_left)
             wnd.show() 
           else:
             f = f2
@@ -106,9 +138,8 @@ class Interview(object):
             #i = 0
             for index,value in enumerate(self.interviewInfo2):
               fields[index] = QgsField(value[0], QVariant.String)
-              #i += 1
+              
             fields[index+1] = QgsField("fishery", QVariant.String)
-            #i += 1
             fields[index+2] = QgsField("pennies", QVariant.Int)
             
             #fields = { 0 : QgsField("interviewer_name", QVariant.String),
@@ -137,9 +168,8 @@ class Interview(object):
                 #i = 0
                 for index,value in enumerate(self.interviewInfo2):
                   fet.addAttribute(index, QVariant(value[1]))
-                  #i += 1
+
                 fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
-                #i += 1
                 fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
                 
                 #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
@@ -155,11 +185,14 @@ class Interview(object):
             layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
             
             if not layer.isValid():
-              capture_string = QString("ERROR reading file")
+              capture_string = QString("ERROR reading file, did it save correctly?  If not, do you have write permission in the save directory you chose?")
               self.statusbar.showMessage(capture_string)
+              #Restart save dialog
+              self.interviewEnd()
+              #Pull out
               return
-  
-            layer.label().setLabelField(QgsLabel.Text, 24)
+    
+            layer.label().setLabelField(QgsLabel.Text, 23)
             layer.setLabelOn(True)
             
             # Set the transparency for the layer
@@ -184,7 +217,11 @@ class Interview(object):
             self.capturedPolygonsRub = []
             
             # Fire up the select fishery gui again...
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
+            
+            #Reset penny count
+            self.pennies_left = 100
+            
             wnd = SelectFisheryGui(self,flags)
             wnd.show()
 
