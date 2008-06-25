@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'fisherswindow.ui'
 #
-# Created: Tue Jun 24 22:35:10 2008
+# Created: Wed Jun 25 00:05:12 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!

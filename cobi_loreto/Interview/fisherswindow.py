@@ -36,11 +36,11 @@ from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
 #from nextpolygon import *
-from interviewstart import *
-from interviewstart_ui import Ui_InterviewStart
+from interviewstart import InterviewStartGui
+#from interviewstart_ui import Ui_InterviewStart
 from selectfishery import *
 # UI specific includes
-from selectfishery_ui import Ui_SelectFishery
+#from selectfishery_ui import Ui_SelectFishery
 #from nextpolygon_ui import Ui_NextPolygon
 from fisherswindow_ui import Ui_FishersWindow
 
