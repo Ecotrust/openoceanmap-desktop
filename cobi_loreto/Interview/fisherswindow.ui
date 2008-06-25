@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>431</width>
+    <width>490</width>
     <height>397</height>
    </rect>
   </property>
@@ -85,6 +85,11 @@
                <height>16777215</height>
               </size>
              </property>
+             <item>
+              <property name="text" >
+               <string/>
+              </property>
+             </item>
              <item>
               <property name="text" >
                <string>Hook and Line</string>

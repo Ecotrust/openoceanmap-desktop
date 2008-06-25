@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'fisherswindow.ui'
 #
-# Created: Wed Jun 25 00:05:12 2008
+# Created: Wed Jun 25 01:45:50 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_FishersWindow(object):
     def setupUi(self, FishersWindow):
         FishersWindow.setObjectName("FishersWindow")
-        FishersWindow.resize(QtCore.QSize(QtCore.QRect(0,0,431,397).size()).expandedTo(FishersWindow.minimumSizeHint()))
+        FishersWindow.resize(QtCore.QSize(QtCore.QRect(0,0,490,397).size()).expandedTo(FishersWindow.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(FishersWindow)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -56,6 +56,7 @@ class Ui_FishersWindow(object):
         self.gear_comboBox = QtGui.QComboBox(self.home_port_5)
         self.gear_comboBox.setMaximumSize(QtCore.QSize(200,16777215))
         self.gear_comboBox.setObjectName("gear_comboBox")
+        self.gear_comboBox.addItem("")
         self.hboxlayout1.addWidget(self.gear_comboBox)
         self.vboxlayout1.addWidget(self.home_port_5)
 

@@ -36,7 +36,6 @@ from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
 #from nextpolygon import *
-from interviewstart import InterviewStartGui
 #from interviewstart_ui import Ui_InterviewStart
 from selectfishery import *
 # UI specific includes
@@ -50,10 +49,11 @@ from Util.common_functions import *
 import sys
 
 class FishersWindowGui(QDialog, Ui_FishersWindow):
-    def __init__(self, parent, flags):
+    def __init__(self, parent, flags, prevGUI=None):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
+        self.prevGUI = prevGUI
 
     def on_pbnSelectFishery_released(self):
         interviewInfo2 = self.parent.interviewInfo2
@@ -67,7 +67,7 @@ class FishersWindowGui(QDialog, Ui_FishersWindow):
         interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
         interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
 
-        if not self.gear_comboBox:
+        if not self.gear_comboBox.currentText():
             QMessageBox.warning(self, "Gear Error", "Please Choose a Fishing Gear Type")
             return
 
@@ -103,8 +103,11 @@ class FishersWindowGui(QDialog, Ui_FishersWindow):
         capture_string = QString("Going back to first interview step...")
         self.parent.parent.statusbar.showMessage(capture_string)
 
-        # currently now working due to 'NameError: global name 'SelectFisheryGui' is not defined'
+        from interviewstart import InterviewStartGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = InterviewStartGui(self.parent,flags)
-        wnd.show()
+        try:
+            self.prevGUI.show()
+        except:
+            wnd = InterviewStartGui(self.parent,flags)
+            wnd.show()
         self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
