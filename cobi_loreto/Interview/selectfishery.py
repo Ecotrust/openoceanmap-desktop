@@ -35,7 +35,8 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-#from nextpolygon import *
+
+
 # UI specific includes
 from selectfishery_ui import Ui_SelectFishery
 from nextpolygon_ui import Ui_NextPolygon
@@ -76,14 +77,36 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         # add some features# add some features
         for capPolyRub in self.parent.capturedPolygonsRub:
             capPolyRub.reset()
-        self.parent.parent.interviewInProgress = False
-        self.parent.parent.interviewSaveTool = None
+        #self.parent.parent.interviewInProgress = False
+        #self.parent.parent.interviewSaveTool = None
         self.parent.currentCommFish = False
         self.parent.currentCommSport = False
         self.parent.currentPrivateFish = False
-        self.parent.currentEcotourism = False
-        self.parent.currentConsScience = False
-        self.parent.currentOther = False
+
+        if self.parent.currentEcotourism:
+            from ecotourism import EcotourismWindowGui
+            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+            wnd = EcotourismWindowGui(self.parent,flags)
+            wnd.show()    
+
+        #self.parent.currentConsScience = False
+        #self.parent.currentOther = False
+        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+
+    def on_pbnGearFinished_released(self):
+        self.parent.pennies_left = 100;
+        self.close()
+        capture_string = QString("Finished with gear types...")
+        self.parent.parent.statusbar.showMessage(capture_string)
+
+        from fisherswindow import FishersWindowGui
+        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+        wnd = FishersWindowGui(self.parent,flags)
+        wnd.show()
+
+        # add some features
+        for capPolyRub in self.parent.capturedPolygonsRub:
+            capPolyRub.reset()
         self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     def nextPolygon(self):
@@ -106,7 +129,6 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
     def on_pbnMoreShapes_released(self):
         if not self.discardLast:
             num_pennies = self.line_1.text()
-            print num_pennies
             if not num_pennies:
                 QMessageBox.warning(self, "Pennies Error", "Missing penny value")
                 return

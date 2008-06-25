@@ -155,9 +155,9 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         #interviewInfo2["t_tr_dist"] = self.travel_distance_line.text()
         #self.parent.interviewInfo.append(self.line_1.text())
         #self.parent.interviewInfo.append(self.line_2.text())
-        self.close()
+        self.hide()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = FishersWindowGui(self.parent,flags)
+        wnd = FishersWindowGui(self.parent,flags,self)
         wnd.show()
         #mc = self.parent.canvas      
         #self.p = PolygonTool(mc,self.parent)

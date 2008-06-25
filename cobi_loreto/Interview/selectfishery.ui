@@ -6,29 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>125</height>
+    <width>667</width>
+    <height>122</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Select Fishery</string>
   </property>
   <layout class="QVBoxLayout" >
-   <property name="margin" >
-    <number>9</number>
-   </property>
-   <property name="spacing" >
-    <number>6</number>
-   </property>
    <item>
     <widget class="QWidget" native="1" name="widget" >
      <layout class="QHBoxLayout" >
-      <property name="margin" >
-       <number>9</number>
-      </property>
-      <property name="spacing" >
-       <number>6</number>
-      </property>
       <item>
        <widget class="QLabel" name="fishery_text" >
         <property name="text" >
@@ -40,27 +28,37 @@
        <widget class="QComboBox" name="fishery_comboBox" >
         <item>
          <property name="text" >
-          <string>Chinook Salmon</string>
+          <string/>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Rockfish/Lingcod Complex</string>
+          <string>Shark and Skates</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>California Halibut</string>
+          <string>Coastal reef fish</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Dungeness Crab</string>
+          <string>Deep reef fish</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Abalone</string>
+          <string>Migratory fish</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Benthic invertebrate</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Shrimp</string>
          </property>
         </item>
         <item>
@@ -76,23 +74,24 @@
    <item>
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
-      <property name="margin" >
-       <number>9</number>
-      </property>
-      <property name="spacing" >
-       <number>6</number>
-      </property>
       <item>
        <widget class="QPushButton" name="pbnFisheryFinished" >
         <property name="text" >
-         <string>Finished With Interview</string>
+         <string>Exit Fishery Interview</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnGearFinished" >
+        <property name="text" >
+         <string>Switch Vessel / Gear Type</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pbnStartShapes" >
         <property name="text" >
-         <string>Start Drawing Shapes</string>
+         <string>Draw Shapes</string>
         </property>
        </widget>
       </item>
