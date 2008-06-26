@@ -27,7 +27,7 @@
 #---------------------------------------------------------------------
 
 
-all:
+all: cobo_loreto.pro
 	cd Main; $(MAKE)
 	cd Tools; $(MAKE)
 	cd Util; $(MAKE)
@@ -40,3 +40,10 @@ clean:
 	cd Tools; $(MAKE) clean
 	cd Util; $(MAKE) clean
 	cd Interview; $(MAKE) clean
+
+cobo_loreto.pro:
+	qmake -project -o cobi_loreto.pro
+	pylupdate4 -verbose cobi_loreto.pro
+	# missing generating translating sources for .py files
+	# this will patch then manually fix paths and insert:
+	# pylupdate4 -verbose  Main/*.py Interview/*.py Util/*.py -ts all.ts
