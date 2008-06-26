@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Mon Jun 23 18:38:00 2008
-#      by: PyQt4 UI code generator 4.3.3
+# Created: Thu Jun 26 13:06:22 2008
+#      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "OpenOceanMap", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.legend_page), QtGui.QApplication.translate("MainWindow", "Legend", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.legend_page), QtGui.QApplication.translate("MainWindow", "Leyenda", None, QtGui.QApplication.UnicodeUTF8))
         self.toolBox.setItemText(self.toolBox.indexOf(self.debug_page), QtGui.QApplication.translate("MainWindow", "Mensajes", None, QtGui.QApplication.UnicodeUTF8))
         self.menuInterview.setTitle(QtGui.QApplication.translate("MainWindow", "Entrevista", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMap.setTitle(QtGui.QApplication.translate("MainWindow", "Mapa", None, QtGui.QApplication.UnicodeUTF8))

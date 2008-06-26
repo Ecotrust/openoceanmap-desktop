@@ -69,7 +69,7 @@
          </rect>
         </property>
         <attribute name="label" >
-         <string>Legend</string>
+         <string>Leyenda</string>
         </attribute>
         <layout class="QGridLayout" >
          <property name="leftMargin" >
