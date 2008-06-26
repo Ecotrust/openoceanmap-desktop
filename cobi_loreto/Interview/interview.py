@@ -61,14 +61,13 @@ class Interview(object):
     
 
     self.currentFishery = None
-
-    # User Group interview statuses
-    self.currentCommFish = False
-    self.currentCommSport = False
-    self.currentPrivateFish = False
-    self.currentEcotourism = False
-    self.currentConsScience = False
-    self.currentOther = False
+    self.currentFisheryIncome = None
+    self.currentEcotourism = None
+    self.currentEcotourismIncome = None
+    self.currentConsScience = None
+    self.currentConsScienceIncome = None
+    self.currentOther = None
+    self.currentOtherIncome = None
 
     # A place to store polygons we capture
     self.capturedPolygons = []
@@ -93,7 +92,8 @@ class Interview(object):
           # Finished a fishery without writing any shapes...
           capture_string = QString("No Shapes to write, switching to new fishery...")
           self.parent.statusbar.showMessage(capture_string)
-          # Fire up the select fishery gui again...
+          # Fire up the select type gui again...
+          
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
           wnd = SelectFisheryGui(self,flags)
           wnd.show()

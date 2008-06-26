@@ -1,25 +1,25 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'nextpolygon.ui'
+# Form implementation generated from reading ui file 'drawshapes.ui'
 #
-# Created: Wed Jun 25 01:45:49 2008
+# Created: Thu Jun 26 01:23:53 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
 
-class Ui_NextPolygon(object):
-    def setupUi(self, NextPolygon):
-        NextPolygon.setObjectName("NextPolygon")
-        NextPolygon.resize(QtCore.QSize(QtCore.QRect(0,0,610,114).size()).expandedTo(NextPolygon.minimumSizeHint()))
+class Ui_DrawShapes(object):
+    def setupUi(self, DrawShapes):
+        DrawShapes.setObjectName("DrawShapes")
+        DrawShapes.resize(QtCore.QSize(QtCore.QRect(0,0,610,114).size()).expandedTo(DrawShapes.minimumSizeHint()))
 
-        self.gridlayout = QtGui.QGridLayout(NextPolygon)
+        self.gridlayout = QtGui.QGridLayout(DrawShapes)
         self.gridlayout.setMargin(9)
         self.gridlayout.setSpacing(6)
         self.gridlayout.setObjectName("gridlayout")
 
-        self.widget_2 = QtGui.QWidget(NextPolygon)
+        self.widget_2 = QtGui.QWidget(DrawShapes)
         self.widget_2.setObjectName("widget_2")
 
         self.hboxlayout = QtGui.QHBoxLayout(self.widget_2)
@@ -41,7 +41,7 @@ class Ui_NextPolygon(object):
         self.hboxlayout.addWidget(self.pl_label)
         self.gridlayout.addWidget(self.widget_2,0,0,1,1)
 
-        self.widget = QtGui.QWidget(NextPolygon)
+        self.widget = QtGui.QWidget(DrawShapes)
         self.widget.setObjectName("widget")
 
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget)
@@ -60,13 +60,13 @@ class Ui_NextPolygon(object):
         self.hboxlayout1.addWidget(self.pbnMoreShapes)
         self.gridlayout.addWidget(self.widget,1,0,1,1)
 
-        self.retranslateUi(NextPolygon)
-        QtCore.QMetaObject.connectSlotsByName(NextPolygon)
+        self.retranslateUi(DrawShapes)
+        QtCore.QMetaObject.connectSlotsByName(DrawShapes)
 
-    def retranslateUi(self, NextPolygon):
-        NextPolygon.setWindowTitle(QtGui.QApplication.translate("NextPolygon", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_1.setText(QtGui.QApplication.translate("NextPolygon", "Weighting (Pennies)", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnShapeFinished.setText(QtGui.QApplication.translate("NextPolygon", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnShapeDiscard.setText(QtGui.QApplication.translate("NextPolygon", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnMoreShapes.setText(QtGui.QApplication.translate("NextPolygon", "More Shapes for this Fishery...", None, QtGui.QApplication.UnicodeUTF8))
+    def retranslateUi(self, DrawShapes):
+        DrawShapes.setWindowTitle(QtGui.QApplication.translate("DrawShapes", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_1.setText(QtGui.QApplication.translate("DrawShapes", "Weighting (Pennies)", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnShapeFinished.setText(QtGui.QApplication.translate("DrawShapes", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawShapes", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnMoreShapes.setText(QtGui.QApplication.translate("DrawShapes", "Draw More Shapes...", None, QtGui.QApplication.UnicodeUTF8))
 

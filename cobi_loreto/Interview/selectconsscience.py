@@ -39,7 +39,7 @@ from Tools.polygontool import *
 from drawshapes import DrawShapesGui
 
 # UI specific includes
-from selectfishery_ui import Ui_SelectFishery
+from selectconsscience_ui import Ui_ConsScience
 from drawshapes_ui import Ui_DrawShapes
 
 from Util.common_functions import *
@@ -47,7 +47,7 @@ from Util.common_functions import *
 # General system includes
 import sys
 
-class SelectFisheryGui(QDialog, Ui_SelectFishery):
+class ConsScienceGui(QDialog, Ui_ConsScience):
     def __init__(self, parent, flags):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
@@ -100,9 +100,9 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         capture_string = QString("Finished with gear types...")
         self.parent.parent.statusbar.showMessage(capture_string)
 
-        from fishery import FisheryGui
+        from consscience import ConsScienceGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = FisheryGui(self.parent,flags)
+        wnd = ConsScienceGui(self.parent,flags)
         wnd.show()
 
         # add some features

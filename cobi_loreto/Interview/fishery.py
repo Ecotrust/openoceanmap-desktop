@@ -37,18 +37,18 @@ from qgis.gui import *
 from Tools.polygontool import *
 #from nextpolygon import *
 #from interviewstart_ui import Ui_InterviewStart
-from selectfishery import *
+from selectfishery import SelectFisheryGui
 # UI specific includes
 #from selectfishery_ui import Ui_SelectFishery
 #from nextpolygon_ui import Ui_NextPolygon
-from fisherswindow_ui import Ui_FishersWindow
+from fishery_ui import Ui_Fishery
 
 from Util.common_functions import *
 
 # General system includes
 import sys
 
-class FishersWindowGui(QDialog, Ui_FishersWindow):
+class FisheryGui(QDialog, Ui_Fishery):
     def __init__(self, parent, flags, prevGUI=None):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
@@ -75,27 +75,21 @@ class FishersWindowGui(QDialog, Ui_FishersWindow):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = SelectFisheryGui(self.parent,flags)
         wnd.show()
-        #mc = self.parent.canvas      
-        #self.p = PolygonTool(mc,self.parent)
-        #QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
-        #self.saveTool = mc.mapTool()
-        #mc.setMapTool(self.p)
+
             
     def on_pbnCancel_clicked(self):
         self.close()
         capture_string = QString("Cancelled out of fishery interview...")
-        print capture_string
         self.parent.parent.statusbar.showMessage(capture_string)
         
         # stop interview process
+        # stop interview process
         self.parent.parent.interviewInProgress = False
         self.parent.parent.interviewSaveTool = None
-        self.parent.currentCommFish = False
-        self.parent.currentCommSport = False
-        self.parent.currentPrivateFish = False
-        self.parent.currentEcotourism = False
-        self.parent.currentConsScience = False
-        self.parent.currentOther = False
+        self.parent.currentFishery = None
+        self.parent.currentEcotourism = None
+        self.parent.currentConsScience = None
+        self.parent.currentOther = None
         self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     def on_pbnBack_clicked(self):

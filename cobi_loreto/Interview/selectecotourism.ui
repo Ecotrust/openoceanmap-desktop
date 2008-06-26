@@ -1,7 +1,7 @@
 <ui version="4.0" >
  <author>Aaron Racicot</author>
- <class>SelectFishery</class>
- <widget class="QDialog" name="SelectFishery" >
+ <class>SelectEcotourism</class>
+ <widget class="QDialog" name="SelectEcotourism" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -20,7 +20,7 @@
       <item>
        <widget class="QLabel" name="fishery_text" >
         <property name="text" >
-         <string>Select Fishery :</string>
+         <string>Select tourism activity type:</string>
         </property>
        </widget>
       </item>
@@ -33,32 +33,22 @@
         </item>
         <item>
          <property name="text" >
-          <string>Shark and Skates</string>
+          <string>Diving</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Coastal reef fish</string>
+          <string>Snorkling</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Deep reef fish</string>
+          <string>Kayaking</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Migratory fish</string>
-         </property>
-        </item>
-        <item>
-         <property name="text" >
-          <string>Benthic invertebrate</string>
-         </property>
-        </item>
-        <item>
-         <property name="text" >
-          <string>Shrimp</string>
+          <string>Whale Watching</string>
          </property>
         </item>
         <item>
@@ -84,7 +74,7 @@
       <item>
        <widget class="QPushButton" name="pbnTypeFinished" >
         <property name="text" >
-         <string>Switch Vessel / Gear Type</string>
+         <string>Switch Type of Employee</string>
         </property>
        </widget>
       </item>

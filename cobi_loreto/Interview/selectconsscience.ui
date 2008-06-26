@@ -1,7 +1,7 @@
 <ui version="4.0" >
  <author>Aaron Racicot</author>
- <class>SelectFishery</class>
- <widget class="QDialog" name="SelectFishery" >
+ <class>SelectConsScience</class>
+ <widget class="QDialog" name="SelectConsScience" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -20,7 +20,7 @@
       <item>
        <widget class="QLabel" name="fishery_text" >
         <property name="text" >
-         <string>Select Fishery :</string>
+         <string>Select species/ecosystem expertise/concern:</string>
         </property>
        </widget>
       </item>
@@ -33,37 +33,47 @@
         </item>
         <item>
          <property name="text" >
-          <string>Shark and Skates</string>
+          <string>Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Coastal reef fish</string>
+          <string>Deep Sea reefs (all finfish and invertebrates assoc. with reef seamounts)</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Deep reef fish</string>
+          <string>Soft bottom (sand, mud, etc.)</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Migratory fish</string>
+          <string>Small pelagics (sardines, anchovy, etc.)</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Benthic invertebrate</string>
+          <string>Migratory fish (tuna, swordfish, sailfish, yellowtail, etc)</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Shrimp</string>
+          <string>Sea turtles</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Other</string>
+          <string>Sea lions</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Dolphins or whales</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>None of the above</string>
          </property>
         </item>
        </widget>
@@ -84,7 +94,7 @@
       <item>
        <widget class="QPushButton" name="pbnTypeFinished" >
         <property name="text" >
-         <string>Switch Vessel / Gear Type</string>
+         <string>Switch Type of Specialist</string>
         </property>
        </widget>
       </item>

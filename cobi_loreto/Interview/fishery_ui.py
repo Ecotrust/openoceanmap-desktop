@@ -1,26 +1,26 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'fisherswindow.ui'
+# Form implementation generated from reading ui file 'fishery.ui'
 #
-# Created: Wed Jun 25 01:45:50 2008
+# Created: Thu Jun 26 01:23:53 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
 
-class Ui_FishersWindow(object):
-    def setupUi(self, FishersWindow):
-        FishersWindow.setObjectName("FishersWindow")
-        FishersWindow.resize(QtCore.QSize(QtCore.QRect(0,0,490,397).size()).expandedTo(FishersWindow.minimumSizeHint()))
+class Ui_Fishery(object):
+    def setupUi(self, Fishery):
+        Fishery.setObjectName("Fishery")
+        Fishery.resize(QtCore.QSize(QtCore.QRect(0,0,490,397).size()).expandedTo(Fishery.minimumSizeHint()))
 
-        self.vboxlayout = QtGui.QVBoxLayout(FishersWindow)
+        self.vboxlayout = QtGui.QVBoxLayout(Fishery)
         self.vboxlayout.setObjectName("vboxlayout")
 
         self.hboxlayout = QtGui.QHBoxLayout()
         self.hboxlayout.setObjectName("hboxlayout")
 
-        self.vessel_info = QtGui.QGroupBox(FishersWindow)
+        self.vessel_info = QtGui.QGroupBox(Fishery)
 
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -335,7 +335,7 @@ class Ui_FishersWindow(object):
         self.hboxlayout.addWidget(self.vessel_info)
         self.vboxlayout.addLayout(self.hboxlayout)
 
-        self.button_box = QtGui.QWidget(FishersWindow)
+        self.button_box = QtGui.QWidget(Fishery)
         self.button_box.setObjectName("button_box")
 
         self.hboxlayout10 = QtGui.QHBoxLayout(self.button_box)
@@ -369,29 +369,29 @@ class Ui_FishersWindow(object):
         self.hboxlayout10.addWidget(self.pbnSelectFishery)
         self.vboxlayout.addWidget(self.button_box)
 
-        self.retranslateUi(FishersWindow)
-        QtCore.QMetaObject.connectSlotsByName(FishersWindow)
+        self.retranslateUi(Fishery)
+        QtCore.QMetaObject.connectSlotsByName(Fishery)
 
-    def retranslateUi(self, FishersWindow):
-        FishersWindow.setWindowTitle(QtGui.QApplication.translate("FishersWindow", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))
-        self.vessel_info.setTitle(QtGui.QApplication.translate("FishersWindow", "Fishery, Vessel and Port Information", None, QtGui.QApplication.UnicodeUTF8))
-        self.gear_text.setText(QtGui.QApplication.translate("FishersWindow", "Type of Fishing Gear:", None, QtGui.QApplication.UnicodeUTF8))
-        self.gear_comboBox.addItem(QtGui.QApplication.translate("FishersWindow", "Hook and Line", None, QtGui.QApplication.UnicodeUTF8))
-        self.gear_comboBox.addItem(QtGui.QApplication.translate("FishersWindow", "Gillnets", None, QtGui.QApplication.UnicodeUTF8))
-        self.gear_comboBox.addItem(QtGui.QApplication.translate("FishersWindow", "Hooka (compressor)", None, QtGui.QApplication.UnicodeUTF8))
-        self.gear_comboBox.addItem(QtGui.QApplication.translate("FishersWindow", "Traps", None, QtGui.QApplication.UnicodeUTF8))
-        self.gear_comboBox.addItem(QtGui.QApplication.translate("FishersWindow", "Trawling", None, QtGui.QApplication.UnicodeUTF8))
-        self.gear_comboBox.addItem(QtGui.QApplication.translate("FishersWindow", "Purse Seine", None, QtGui.QApplication.UnicodeUTF8))
-        self.gear_comboBox.addItem(QtGui.QApplication.translate("FishersWindow", "Other", None, QtGui.QApplication.UnicodeUTF8))
-        self.vessel_length_text.setText(QtGui.QApplication.translate("FishersWindow", "Vessel length (meters) :", None, QtGui.QApplication.UnicodeUTF8))
-        self.vessel_motor_text.setText(QtGui.QApplication.translate("FishersWindow", "Vessel motor (horsepower):", None, QtGui.QApplication.UnicodeUTF8))
-        self.haul_capacity_text.setText(QtGui.QApplication.translate("FishersWindow", "Haul Capacity (kilograms):", None, QtGui.QApplication.UnicodeUTF8))
-        self.home_port_text.setText(QtGui.QApplication.translate("FishersWindow", "Home Port:", None, QtGui.QApplication.UnicodeUTF8))
-        self.landing_port_text.setText(QtGui.QApplication.translate("FishersWindow", "Landing Port 1:", None, QtGui.QApplication.UnicodeUTF8))
-        self.landing_port_text_2.setText(QtGui.QApplication.translate("FishersWindow", "Landing Port 2:", None, QtGui.QApplication.UnicodeUTF8))
-        self.landing_port_text_3.setText(QtGui.QApplication.translate("FishersWindow", "Landing Port 3:", None, QtGui.QApplication.UnicodeUTF8))
-        self.landing_port_text_4.setText(QtGui.QApplication.translate("FishersWindow", "Landing Port 4:", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnCancel.setText(QtGui.QApplication.translate("FishersWindow", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnBack.setText(QtGui.QApplication.translate("FishersWindow", "Previous", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnSelectFishery.setText(QtGui.QApplication.translate("FishersWindow", "Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
+    def retranslateUi(self, Fishery):
+        Fishery.setWindowTitle(QtGui.QApplication.translate("Fishery", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))
+        self.vessel_info.setTitle(QtGui.QApplication.translate("Fishery", "Fishery, Vessel and Port Information", None, QtGui.QApplication.UnicodeUTF8))
+        self.gear_text.setText(QtGui.QApplication.translate("Fishery", "Type of Fishing Gear:", None, QtGui.QApplication.UnicodeUTF8))
+        self.gear_comboBox.addItem(QtGui.QApplication.translate("Fishery", "Hook and Line", None, QtGui.QApplication.UnicodeUTF8))
+        self.gear_comboBox.addItem(QtGui.QApplication.translate("Fishery", "Gillnets", None, QtGui.QApplication.UnicodeUTF8))
+        self.gear_comboBox.addItem(QtGui.QApplication.translate("Fishery", "Hooka (compressor)", None, QtGui.QApplication.UnicodeUTF8))
+        self.gear_comboBox.addItem(QtGui.QApplication.translate("Fishery", "Traps", None, QtGui.QApplication.UnicodeUTF8))
+        self.gear_comboBox.addItem(QtGui.QApplication.translate("Fishery", "Trawling", None, QtGui.QApplication.UnicodeUTF8))
+        self.gear_comboBox.addItem(QtGui.QApplication.translate("Fishery", "Purse Seine", None, QtGui.QApplication.UnicodeUTF8))
+        self.gear_comboBox.addItem(QtGui.QApplication.translate("Fishery", "Other", None, QtGui.QApplication.UnicodeUTF8))
+        self.vessel_length_text.setText(QtGui.QApplication.translate("Fishery", "Vessel length (meters) :", None, QtGui.QApplication.UnicodeUTF8))
+        self.vessel_motor_text.setText(QtGui.QApplication.translate("Fishery", "Vessel motor (horsepower):", None, QtGui.QApplication.UnicodeUTF8))
+        self.haul_capacity_text.setText(QtGui.QApplication.translate("Fishery", "Haul Capacity (kilograms):", None, QtGui.QApplication.UnicodeUTF8))
+        self.home_port_text.setText(QtGui.QApplication.translate("Fishery", "Home Port:", None, QtGui.QApplication.UnicodeUTF8))
+        self.landing_port_text.setText(QtGui.QApplication.translate("Fishery", "Landing Port 1:", None, QtGui.QApplication.UnicodeUTF8))
+        self.landing_port_text_2.setText(QtGui.QApplication.translate("Fishery", "Landing Port 2:", None, QtGui.QApplication.UnicodeUTF8))
+        self.landing_port_text_3.setText(QtGui.QApplication.translate("Fishery", "Landing Port 3:", None, QtGui.QApplication.UnicodeUTF8))
+        self.landing_port_text_4.setText(QtGui.QApplication.translate("Fishery", "Landing Port 4:", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnCancel.setText(QtGui.QApplication.translate("Fishery", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnBack.setText(QtGui.QApplication.translate("Fishery", "Previous", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnSelectFishery.setText(QtGui.QApplication.translate("Fishery", "Draw Fishery Shapes", None, QtGui.QApplication.UnicodeUTF8))
 

@@ -1,7 +1,7 @@
 <ui version="4.0" >
  <author>Aaron Racicot</author>
- <class>NextPolygon</class>
- <widget class="QDialog" name="NextPolygon" >
+ <class>DrawShapes</class>
+ <widget class="QDialog" name="DrawShapes" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -94,7 +94,7 @@
       <item>
        <widget class="QPushButton" name="pbnMoreShapes" >
         <property name="text" >
-         <string>More Shapes for this Fishery...</string>
+         <string>Draw More Shapes...</string>
         </property>
        </widget>
       </item>

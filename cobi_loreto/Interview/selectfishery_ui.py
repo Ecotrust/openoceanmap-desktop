@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Wed Jun 25 01:52:14 2008
+# Created: Thu Jun 26 01:23:53 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -43,9 +43,9 @@ class Ui_SelectFishery(object):
         self.pbnFisheryFinished.setObjectName("pbnFisheryFinished")
         self.hboxlayout1.addWidget(self.pbnFisheryFinished)
 
-        self.pbnGearFinished = QtGui.QPushButton(self.widget_2)
-        self.pbnGearFinished.setObjectName("pbnGearFinished")
-        self.hboxlayout1.addWidget(self.pbnGearFinished)
+        self.pbnTypeFinished = QtGui.QPushButton(self.widget_2)
+        self.pbnTypeFinished.setObjectName("pbnTypeFinished")
+        self.hboxlayout1.addWidget(self.pbnTypeFinished)
 
         self.pbnStartShapes = QtGui.QPushButton(self.widget_2)
         self.pbnStartShapes.setObjectName("pbnStartShapes")
@@ -66,6 +66,6 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Shrimp", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectFishery", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFisheryFinished.setText(QtGui.QApplication.translate("SelectFishery", "Exit Fishery Interview", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnGearFinished.setText(QtGui.QApplication.translate("SelectFishery", "Switch Vessel / Gear Type", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectFishery", "Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnTypeFinished.setText(QtGui.QApplication.translate("SelectFishery", "Switch Vessel / Gear Type", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectFishery", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 
