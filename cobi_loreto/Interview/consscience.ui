@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>417</width>
-    <height>267</height>
+    <width>427</width>
+    <height>185</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -241,7 +241,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Select Areas of Expertise</string>
+         <string>Draw Shapes of Areas of Knowledge</string>
         </property>
        </widget>
       </item>

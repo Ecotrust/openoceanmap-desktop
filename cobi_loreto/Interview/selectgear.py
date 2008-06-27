@@ -44,7 +44,7 @@ from selectgear_ui import Ui_SelectGear
 import sys
 
 class SelectGearGui(QDialog, Ui_SelectGear):
-    def __init__(self, parent, flags, fishery_sector):
+    def __init__(self, parent, flags, fishery_sector, previousGui):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
@@ -85,5 +85,5 @@ class SelectGearGui(QDialog, Ui_SelectGear):
     def nextPolygon(self):
         from drawgear import DrawGearGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left)
+        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self)
         wnd.show()

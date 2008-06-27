@@ -42,7 +42,7 @@ from Util.common_functions import *
 import sys
 
 class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
-    def __init__(self, parent, flags, pennies_left, shapeType, previousSelectGui):
+    def __init__(self, parent, flags, pennies_left, shapeType, previousGui):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
@@ -50,7 +50,7 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         self.pennies_left = pennies_left
         self.pl_label.setText("  "+str(self.pennies_left)+" left")
         self.shapeType = shapeType
-        self.previousSelectGui = previousSelectGui
+        self.previousGui = previousGui
         self.type_label.setText(self.shapeType)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
@@ -82,7 +82,7 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
             QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This Shape Type is now done.")
-            self.parent.saveShapes(self.previousSelectGui)
+            self.parent.saveShapes(self.previousGui)
         else:
             mc = self.parent.canvas      
             self.p = PolygonTool(mc,self.parent)
@@ -122,12 +122,11 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
-        self.close()
         
         self.parent.saveShapes(self)
 
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawConsScienceGui(self.parent,flags,self.parent.pennies_left,self.parent.shapeType, self.previousSelectGui)
+        wnd = DrawConsScienceGui(self.parent,flags,self.parent.pennies_left,self.parent.shapeType, self.previousGui)
         wnd.show()

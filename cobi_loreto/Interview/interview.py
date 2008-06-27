@@ -191,13 +191,14 @@ class Interview(object):
             
   # End interview dialog
   def saveShapes(self, previousSelectGui):
+      previousSelectGui.hide()
       if len(self.capturedPolygons) == 0:
           # Finished a interview step without writing any shapes...
           capture_string = QString("No Shapes to write, returning to previous choices...")
           self.parent.statusbar.showMessage(capture_string)
           
           # Fire up the previous gui again...
-          previousSelectGui.show()
+          previousSelectGui.previousGui.show()
       else:
           file_prefix = (str(self.currentStep) + '_' + str(self.shapeType)).replace(' ','_').lower()
           file_prefix_obj = QString(file_prefix)
@@ -209,12 +210,13 @@ class Interview(object):
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Shapefiles (*.shp)")
           f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Shapes as", None, QApplication.UnicodeUTF8),file_name,file_type_filter)
+          
           # Check to see if the shapefile has been saved
           if f2.count(".shp")==0:
             # If the user cancels return to the same GUI...
-            
-            previousSelectGui.show()
-            # check to see if the user tried to overwrite an existing shapefile
+            previousSelectGui.previousGui.show()
+          
+          # check to see if the user tried to overwrite an existing shapefile
           elif os.path.isfile(f2):
             # Currently we don't suport overwriting, so return to dialog
             write_string = QString(f2)
@@ -224,6 +226,7 @@ class Interview(object):
             self.parent.statusbar.showMessage(capture_string)
             previousSelectGui.show()
           else:
+            previousSelectGui.close()
             f = f2
             write_string = QString(f)
             # define fields for feature attributes
@@ -320,5 +323,5 @@ class Interview(object):
             #Reset penny count
             self.pennies_left = 100
             
-            self.nextStep(previousSelectGui)
+            previousSelectGui.show()
 

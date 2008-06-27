@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'consscience.ui'
 #
-# Created: Fri Jun 27 01:01:27 2008
+# Created: Fri Jun 27 03:15:38 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_ConsScience(object):
     def setupUi(self, ConsScience):
         ConsScience.setObjectName("ConsScience")
-        ConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,417,267).size()).expandedTo(ConsScience.minimumSizeHint()))
+        ConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,427,185).size()).expandedTo(ConsScience.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(ConsScience)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -137,5 +137,5 @@ class Ui_ConsScience(object):
         self.comboBox.addItem(QtGui.QApplication.translate("ConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.add_info_text.setText(QtGui.QApplication.translate("ConsScience", "additional info:", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnCancel.setText(QtGui.QApplication.translate("ConsScience", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnSelectConsScience.setText(QtGui.QApplication.translate("ConsScience", "Select Areas of Expertise", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnSelectConsScience.setText(QtGui.QApplication.translate("ConsScience", "Draw Shapes of Areas of Knowledge", None, QtGui.QApplication.UnicodeUTF8))
 

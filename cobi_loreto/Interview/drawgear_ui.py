@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawgear.ui'
 #
-# Created: Fri Jun 27 01:01:28 2008
+# Created: Fri Jun 27 03:15:39 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_DrawGear(object):
     def setupUi(self, DrawGear):
         DrawGear.setObjectName("DrawGear")
-        DrawGear.resize(QtCore.QSize(QtCore.QRect(0,0,762,177).size()).expandedTo(DrawGear.minimumSizeHint()))
+        DrawGear.resize(QtCore.QSize(QtCore.QRect(0,0,827,197).size()).expandedTo(DrawGear.minimumSizeHint()))
 
         self.gridlayout = QtGui.QGridLayout(DrawGear)
         self.gridlayout.setMargin(9)
@@ -26,8 +26,12 @@ class Ui_DrawGear(object):
         self.hboxlayout.setObjectName("hboxlayout")
 
         self.type_label = QtGui.QLabel(self.widget_2)
-        self.type_label.setMinimumSize(QtCore.QSize(50,0))
+        self.type_label.setMinimumSize(QtCore.QSize(200,0))
         self.type_label.setMaximumSize(QtCore.QSize(500,16777215))
+
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.type_label.setFont(font)
         self.type_label.setObjectName("type_label")
         self.hboxlayout.addWidget(self.type_label)
 
@@ -37,7 +41,7 @@ class Ui_DrawGear(object):
 
         self.line_1 = QtGui.QLineEdit(self.widget_2)
         self.line_1.setEnabled(True)
-        self.line_1.setMaximumSize(QtCore.QSize(150,16777215))
+        self.line_1.setMaximumSize(QtCore.QSize(200,16777215))
         self.line_1.setObjectName("line_1")
         self.hboxlayout.addWidget(self.line_1)
 
@@ -108,10 +112,11 @@ class Ui_DrawGear(object):
     def retranslateUi(self, DrawGear):
         DrawGear.setWindowTitle(QtGui.QApplication.translate("DrawGear", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
         self.penny_label.setText(QtGui.QApplication.translate("DrawGear", "Weighting (pennies):", None, QtGui.QApplication.UnicodeUTF8))
+        self.pl_label.setText(QtGui.QApplication.translate("DrawGear", "remaining", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("DrawGear", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawGear", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnMoreShapes.setText(QtGui.QApplication.translate("DrawGear", "Draw More Shapes...", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox.setTitle(QtGui.QApplication.translate("DrawGear", "Choose any species caught in this area:", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtGui.QApplication.translate("DrawGear", "Choose any species types caught in this area:", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox.setText(QtGui.QApplication.translate("DrawGear", "Sharkes and Skates", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox_2.setText(QtGui.QApplication.translate("DrawGear", "Coastal reef fish", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox_3.setText(QtGui.QApplication.translate("DrawGear", "Deep reef fish", None, QtGui.QApplication.UnicodeUTF8))

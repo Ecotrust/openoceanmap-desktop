@@ -42,16 +42,18 @@ from Util.common_functions import *
 import sys
 
 class DrawGearGui(QDialog, Ui_DrawGear):
-    def __init__(self, parent, flags, pennies_left):
+    def __init__(self, parent, flags, pennies_left, previousGui):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
         self.discardLast = False
         self.pennies_left = pennies_left
+        self.previousGui = previousGui
+        self.type_label.setText("  "+str(self.parent.shapeType)+": ")
         self.pl_label.setText("  "+str(self.pennies_left)+" left")
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
-
+        
     #Called when "More Shapes" button pressed        
     def on_pbnMoreShapes_released(self):
         if not self.discardLast:
@@ -80,7 +82,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
             QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This Shape Type is now done.")
-            self.parent.interviewEnd()
+            self.parent.saveShapes(self)
         else:
             mc = self.parent.canvas      
             self.p = PolygonTool(mc,self.parent)
@@ -93,6 +95,16 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         self.parent.capturedPolygons.pop()
         rub = self.parent.capturedPolygonsRub.pop()
         rub.reset()
+        #rub = self.parent.capturedPolygonsPennies.pop()
+        #rub.reset()
+        #self.type_label.setText("  "+str(self.parent.shapeType)+": ")
+        try:
+            current_pennies = int(self.line_1.text())
+        except:
+           current_pennies = 0
+        if not current_pennies == self.parent.pennies_left:
+            # then we assume they placed pennies but then decides to descard shape
+            self.line_1.setText(str(current_pennies-current_pennies))
         # Grey out the button...
         self.pbnShapeDiscard.setEnabled(False)
         self.discardLast = True
@@ -119,12 +131,11 @@ class DrawGearGui(QDialog, Ui_DrawGear):
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
-            self.parent.capturedPolygonsType.append(self)
-        self.close()
+            self.parent.capturedPolygonsType.append(self.parent.shapeType)
         
         self.parent.saveShapes(self)
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left)
+        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self)
         wnd.show()
