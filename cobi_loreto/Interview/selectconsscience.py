@@ -44,7 +44,7 @@ from Util.common_functions import *
 # General system includes
 import sys
 
-class ConsScienceGui(QDialog, Ui_ConsScience):
+class SelectConsScienceGui(QDialog, Ui_ConsScience):
     def __init__(self, parent, flags):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
@@ -53,7 +53,7 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
     def on_pbnStartShapes_released(self):
         #Get fishery value
         shape_type = self.comboBox.currentText()
-        if not cur_fishery:
+        if not shape_type:
             QMessageBox.warning(self, "Ecosystem Error", "Please select a focus area")
             return 
         else:
@@ -73,6 +73,7 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
 
 
     def nextPolygon(self):
+        from drawconsscience import DrawConsScienceGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawConsScienceGui(self.parent,flags,self.parent.pennies_left)
+        wnd = DrawConsScienceGui(self.parent,flags,self.parent.pennies_left, self.parent.shapeType, self)
         wnd.show()

@@ -36,19 +36,22 @@ from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
 # UI specific includes
-from drawgear_ui import Ui_DrawGear
+from drawconsscience_ui import Ui_DrawConsScience
 from Util.common_functions import *
 # General system includes
 import sys
 
-class DrawGearGui(QDialog, Ui_DrawGear):
-    def __init__(self, parent, flags, pennies_left):
+class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
+    def __init__(self, parent, flags, pennies_left, shapeType, previousSelectGui):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
         self.discardLast = False
         self.pennies_left = pennies_left
         self.pl_label.setText("  "+str(self.pennies_left)+" left")
+        self.shapeType = shapeType
+        self.previousSelectGui = previousSelectGui
+        self.type_label.setText(self.shapeType)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
 
@@ -122,22 +125,10 @@ class DrawGearGui(QDialog, Ui_DrawGear):
             self.parent.capturedPolygonsType.append(self.parent.currentType)
         self.close()
         
-        ### /// Activity specific interview ends /// ###
-        ### /// Activity specific interview ends /// ###
-        ### /// Activity specific interview ends /// ###
-        ### /// Activity specific interview ends /// ###
-        ### /// Activity specific interview ends /// ###
-        ### /// Activity specific interview ends /// ###
-        ### /// Activity specific interview ends /// ###
-        ### /// Activity specific interview ends /// ###
-        self.parent.interviewEnd(self.parent.currentType)
-
-
-
-
+        self.parent.saveShapes(self.previousSelectGui)
 
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left)
+        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left,self.parent.shapeType, self.previousSelectGui)
         wnd.show()

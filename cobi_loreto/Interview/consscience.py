@@ -58,10 +58,10 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
     def on_pbnSelectConsScience_released(self):
 
         interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append(["artespesca", self.specialist_comboBox.currentText()])
+        interviewInfo2.append(["artespesca", self.comboBox.currentText()])
         interviewInfo2.append(["add_info", self.add_info_line.text()])
 
-        if not self.specialist_comboBox.currentText():
+        if not self.comboBox.currentText():
             QMessageBox.warning(self, "Specialist Error", "Please Choose an Specialist Position")
             return
 

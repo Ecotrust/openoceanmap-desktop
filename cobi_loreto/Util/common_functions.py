@@ -9,3 +9,4 @@ def strIsInt(str):
     except ValueError:
         return False
     return True
+    

@@ -124,13 +124,8 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
                         
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
         self.close()
-        
 
         self.parent.saveShapes(self.previousSelectGui)
-
-
-
-
 
 
     def nextPolygon(self):

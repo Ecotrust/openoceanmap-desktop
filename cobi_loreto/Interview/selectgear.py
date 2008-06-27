@@ -68,7 +68,6 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
             
-
     def on_pbnStepFinished_released(self): 
         self.close()
         fishery_msg = 'Finished with %s interview step' % self.fishery_sector
@@ -82,7 +81,6 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         elif self.fishery_sector == 'Private Fishery':
             self.parent.privateFishIncome = None
             self.parent.nextStep(self, fishery_msg)
-        
 
     def nextPolygon(self):
         from drawgear import DrawGearGui
