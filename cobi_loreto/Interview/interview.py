@@ -313,7 +313,8 @@ class Interview(object):
             
             if writer.hasError() != QgsVectorFileWriter.NoError:
                 print "Error when creating shapefile: ", writer.hasError()
-                
+            
+            label_index = None    
             # add some features
             for capPolyInd, capPoly in enumerate(self.capturedPolygons):
                 fet = QgsFeature()
@@ -349,8 +350,9 @@ class Interview(object):
               self.interviewEnd()
               #Pull out
               return
-    
-            layer.label().setLabelField(QgsLabel.Text, 23)
+            print len(self.interviewInfo2)
+            label_index = len(self.interviewInfo2) + 2
+            layer.label().setLabelField(QgsLabel.Text, label_index)
             layer.setLabelOn(True)
             
             # Set the transparency for the layer
