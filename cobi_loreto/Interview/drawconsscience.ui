@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>762</width>
-    <height>177</height>
+    <width>547</width>
+    <height>134</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -120,64 +120,6 @@
        <widget class="QPushButton" name="pbnMoreShapes" >
         <property name="text" >
          <string>Draw More Shapes...</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="0" >
-    <widget class="QGroupBox" name="groupBox" >
-     <property name="title" >
-      <string>Choose any species caught in this area:</string>
-     </property>
-     <layout class="QHBoxLayout" >
-      <item>
-       <widget class="QCheckBox" name="checkBox" >
-        <property name="text" >
-         <string>Sharkes and Skates</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_2" >
-        <property name="text" >
-         <string>Coastal reef fish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_3" >
-        <property name="text" >
-         <string>Deep reef fish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_4" >
-        <property name="text" >
-         <string>Migratory fish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_5" >
-        <property name="text" >
-         <string>Benthic fish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_6" >
-        <property name="text" >
-         <string>Shrimp</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_7" >
-        <property name="text" >
-         <string>Other</string>
         </property>
        </widget>
       </item>

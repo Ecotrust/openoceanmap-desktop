@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawconsscience.ui'
 #
-# Created: Fri Jun 27 03:15:39 2008
+# Created: Fri Jun 27 15:32:48 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_DrawConsScience(object):
     def setupUi(self, DrawConsScience):
         DrawConsScience.setObjectName("DrawConsScience")
-        DrawConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,762,177).size()).expandedTo(DrawConsScience.minimumSizeHint()))
+        DrawConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,547,134).size()).expandedTo(DrawConsScience.minimumSizeHint()))
 
         self.gridlayout = QtGui.QGridLayout(DrawConsScience)
         self.gridlayout.setMargin(9)
@@ -67,41 +67,6 @@ class Ui_DrawConsScience(object):
         self.hboxlayout1.addWidget(self.pbnMoreShapes)
         self.gridlayout.addWidget(self.widget,2,0,1,1)
 
-        self.groupBox = QtGui.QGroupBox(DrawConsScience)
-        self.groupBox.setObjectName("groupBox")
-
-        self.hboxlayout2 = QtGui.QHBoxLayout(self.groupBox)
-        self.hboxlayout2.setObjectName("hboxlayout2")
-
-        self.checkBox = QtGui.QCheckBox(self.groupBox)
-        self.checkBox.setObjectName("checkBox")
-        self.hboxlayout2.addWidget(self.checkBox)
-
-        self.checkBox_2 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_2.setObjectName("checkBox_2")
-        self.hboxlayout2.addWidget(self.checkBox_2)
-
-        self.checkBox_3 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_3.setObjectName("checkBox_3")
-        self.hboxlayout2.addWidget(self.checkBox_3)
-
-        self.checkBox_4 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_4.setObjectName("checkBox_4")
-        self.hboxlayout2.addWidget(self.checkBox_4)
-
-        self.checkBox_5 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_5.setObjectName("checkBox_5")
-        self.hboxlayout2.addWidget(self.checkBox_5)
-
-        self.checkBox_6 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_6.setObjectName("checkBox_6")
-        self.hboxlayout2.addWidget(self.checkBox_6)
-
-        self.checkBox_7 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_7.setObjectName("checkBox_7")
-        self.hboxlayout2.addWidget(self.checkBox_7)
-        self.gridlayout.addWidget(self.groupBox,1,0,1,1)
-
         self.retranslateUi(DrawConsScience)
         QtCore.QMetaObject.connectSlotsByName(DrawConsScience)
 
@@ -111,12 +76,4 @@ class Ui_DrawConsScience(object):
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("DrawConsScience", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawConsScience", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnMoreShapes.setText(QtGui.QApplication.translate("DrawConsScience", "Draw More Shapes...", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox.setTitle(QtGui.QApplication.translate("DrawConsScience", "Choose any species caught in this area:", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox.setText(QtGui.QApplication.translate("DrawConsScience", "Sharkes and Skates", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_2.setText(QtGui.QApplication.translate("DrawConsScience", "Coastal reef fish", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_3.setText(QtGui.QApplication.translate("DrawConsScience", "Deep reef fish", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_4.setText(QtGui.QApplication.translate("DrawConsScience", "Migratory fish", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_5.setText(QtGui.QApplication.translate("DrawConsScience", "Benthic fish", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_6.setText(QtGui.QApplication.translate("DrawConsScience", "Shrimp", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_7.setText(QtGui.QApplication.translate("DrawConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
 

@@ -73,7 +73,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append([u"ecoturismo", self.ecotourism_line.text()])
         interviewInfo2.append([u"ciencia", self.cons_science_line.text()])
         interviewInfo2.append([u"otro", self.other_line.text()])
-        interviewInfo2.append([u"otro_desc", self.define_other_line.text()])
+        #interviewInfo2.append([u"otro_desc", self.define_other_line.text()])
 
 
         if self.comm_fish_line:
@@ -123,11 +123,6 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
             else:
                 if not self.other_line.text() == '0':
                     self.parent.otherIncome = int(self.other_line.text())
-                    
-                    if not len(self.define_other_line.text()):
-                        QMessageBox.warning(self, "Income Error", "Please Define the Other Income")
-                        return
-
 
         total = int(self.comm_fish_line.text()) + int(self.comm_sport_line.text()) + int(self.private_fish_line.text()) + int(self.ecotourism_line.text()) + int(self.cons_science_line.text()) + int(self.other_line.text())
         if not int(total) == int(100):

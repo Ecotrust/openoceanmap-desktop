@@ -75,14 +75,13 @@ class DrawGearGui(QDialog, Ui_DrawGear):
                 self.parent.capturedPolygonsPennies.append(num_pennies)
 
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
-
-
+            
         self.close()
 
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
             QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This Shape Type is now done.")
-            self.parent.saveShapes(self)
+            self.parent.saveShapes(self) # sends itself as the 'drawGui'
         else:
             mc = self.parent.canvas      
             self.p = PolygonTool(mc,self.parent)
@@ -133,9 +132,9 @@ class DrawGearGui(QDialog, Ui_DrawGear):
                         
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
         
-        self.parent.saveShapes(self)
+        self.parent.saveShapes(self) # sends itself as the 'drawGui'
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self)
+        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self.previousGui)
         wnd.show()

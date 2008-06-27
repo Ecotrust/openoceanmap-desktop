@@ -27,10 +27,10 @@
 #---------------------------------------------------------------------
 
 
-all: interviewstart_ui.py selectgear_ui.py fishery_ui.py selectecotourism_ui.py ecotourism_ui.py selectconsscience_ui.py consscience_ui.py selectother_ui.py drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py
+all: interviewstart_ui.py selectgear_ui.py fishery_ui.py selectecotourism_ui.py ecotourism_ui.py selectconsscience_ui.py consscience_ui.py  drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py other_ui.py
 
 clean:
-	rm -f interviewstart_ui.py nextpolygon_ui.py selectgear_ui.py fishery_ui.py ecotourism_ui.py consscience_ui.py selectother_ui.py drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py interview.pyc
+	rm -f interviewstart_ui.py nextpolygon_ui.py selectgear_ui.py fishery_ui.py ecotourism_ui.py consscience_ui.py drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py interview.pyc other_ui.py
 	rm -f *.pyc
 	rm -f *~
 
@@ -63,9 +63,6 @@ consscience_ui.py: consscience.ui
 
 selectconsscience_ui.py: selectconsscience.ui
 	pyuic4 -o selectconsscience_ui.py selectconsscience.ui
-	
-selectother_ui.py: selectother.ui
-	pyuic4 -o selectother_ui.py selectother.ui	
 
-#other_ui.py: other.ui
-#	pyuic4 -o other_ui.py other.ui	
+other_ui.py: other.ui
+	pyuic4 -o other_ui.py other.ui	

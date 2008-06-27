@@ -6,1108 +6,1002 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>753</width>
-    <height>561</height>
+    <width>747</width>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Interview</string>
   </property>
-  <layout class="QVBoxLayout" >
-   <item>
-    <layout class="QHBoxLayout" >
-     <item>
-      <layout class="QVBoxLayout" >
-       <item>
-        <layout class="QVBoxLayout" >
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QGroupBox" name="interviewee" >
+     <property name="font" >
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="title" >
+      <string>Interviewee</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <item>
+       <widget class="QWidget" native="1" name="interviewee_first_name" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>4</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>4</number>
+         </property>
          <item>
-          <widget class="QGroupBox" name="interviewee" >
+          <widget class="QLabel" name="interviewee_first_name_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="font" >
             <font>
-             <pointsize>11</pointsize>
+             <pointsize>10</pointsize>
             </font>
            </property>
-           <property name="title" >
-            <string>Interviewee</string>
+           <property name="text" >
+            <string>First Name:</string>
            </property>
-           <layout class="QVBoxLayout" >
-            <item>
-             <widget class="QWidget" native="1" name="interviewee_first_name" >
-              <layout class="QHBoxLayout" >
-               <property name="spacing" >
-                <number>4</number>
-               </property>
-               <property name="leftMargin" >
-                <number>4</number>
-               </property>
-               <property name="topMargin" >
-                <number>4</number>
-               </property>
-               <property name="rightMargin" >
-                <number>4</number>
-               </property>
-               <property name="bottomMargin" >
-                <number>4</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="interviewee_first_name_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>First Name:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="interviewee_first_name_line" >
-                 <property name="enabled" >
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text" >
-                  <string/>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" native="1" name="interviewee_last_name" >
-              <layout class="QHBoxLayout" >
-               <property name="spacing" >
-                <number>4</number>
-               </property>
-               <property name="leftMargin" >
-                <number>4</number>
-               </property>
-               <property name="topMargin" >
-                <number>4</number>
-               </property>
-               <property name="rightMargin" >
-                <number>4</number>
-               </property>
-               <property name="bottomMargin" >
-                <number>4</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="interviewee_last_name_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Last Name:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="interviewee_last_name_line" >
-                 <property name="enabled" >
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text" >
-                  <string/>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" native="1" name="age" >
-              <layout class="QHBoxLayout" >
-               <property name="spacing" >
-                <number>4</number>
-               </property>
-               <property name="leftMargin" >
-                <number>4</number>
-               </property>
-               <property name="topMargin" >
-                <number>4</number>
-               </property>
-               <property name="rightMargin" >
-                <number>4</number>
-               </property>
-               <property name="bottomMargin" >
-                <number>4</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="age_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Age:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="age_line" >
-                 <property name="enabled" >
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text" >
-                  <string/>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" native="1" name="gender" >
-              <layout class="QHBoxLayout" >
-               <property name="spacing" >
-                <number>4</number>
-               </property>
-               <property name="leftMargin" >
-                <number>4</number>
-               </property>
-               <property name="topMargin" >
-                <number>4</number>
-               </property>
-               <property name="rightMargin" >
-                <number>4</number>
-               </property>
-               <property name="bottomMargin" >
-                <number>4</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="gender_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Gender:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QComboBox" name="gender_comboBox" >
-                 <property name="maximumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <item>
-                  <property name="text" >
-                   <string/>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text" >
-                   <string>Male</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text" >
-                   <string>Female</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" native="1" name="age_2" >
-              <layout class="QHBoxLayout" >
-               <property name="spacing" >
-                <number>4</number>
-               </property>
-               <property name="leftMargin" >
-                <number>4</number>
-               </property>
-               <property name="topMargin" >
-                <number>4</number>
-               </property>
-               <property name="rightMargin" >
-                <number>4</number>
-               </property>
-               <property name="bottomMargin" >
-                <number>4</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="city_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>100</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>City of residence:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="city_line" >
-                 <property name="enabled" >
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>200</height>
-                  </size>
-                 </property>
-                 <property name="text" >
-                  <string/>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" native="1" name="home_port_6" >
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <layout class="QHBoxLayout" >
-               <item>
-                <widget class="QLabel" name="years_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>250</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Years working in the area:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSpinBox" name="years_spinBox" >
-                 <property name="sizePolicy" >
-                  <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize" >
-                  <size>
-                   <width>15</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>200</width>
-                   <height>200</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
           </widget>
          </item>
          <item>
-          <widget class="QGroupBox" name="interviewee_2" >
-           <property name="font" >
-            <font>
-             <pointsize>11</pointsize>
-            </font>
+          <widget class="QLineEdit" name="interviewee_first_name_line" >
+           <property name="enabled" >
+            <bool>true</bool>
            </property>
-           <property name="title" >
-            <string>Interviewer</string>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
            </property>
-           <layout class="QGridLayout" >
-            <item row="0" column="0" >
-             <widget class="QWidget" native="1" name="interviewee_first_name_2" >
-              <layout class="QHBoxLayout" >
-               <property name="spacing" >
-                <number>4</number>
-               </property>
-               <property name="leftMargin" >
-                <number>4</number>
-               </property>
-               <property name="topMargin" >
-                <number>4</number>
-               </property>
-               <property name="rightMargin" >
-                <number>4</number>
-               </property>
-               <property name="bottomMargin" >
-                <number>4</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="date_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>180</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>180</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Interview Date (mm/dd/yyyy):</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="date_line" >
-                 <property name="enabled" >
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize" >
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text" >
-                  <string>/2008</string>
-                 </property>
-                 <property name="cursorPosition" >
-                  <number>0</number>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item row="1" column="0" >
-             <widget class="QWidget" native="1" name="interviewee_first_name_3" >
-              <layout class="QHBoxLayout" >
-               <property name="spacing" >
-                <number>4</number>
-               </property>
-               <property name="leftMargin" >
-                <number>4</number>
-               </property>
-               <property name="topMargin" >
-                <number>4</number>
-               </property>
-               <property name="rightMargin" >
-                <number>4</number>
-               </property>
-               <property name="bottomMargin" >
-                <number>4</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="interviewer_first_name_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>180</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>180</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>First Name:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="interviewer_first_name_line" >
-                 <property name="enabled" >
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize" >
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text" >
-                  <string/>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item row="2" column="0" >
-             <widget class="QWidget" native="1" name="interviewee_first_name_4" >
-              <layout class="QHBoxLayout" >
-               <property name="spacing" >
-                <number>4</number>
-               </property>
-               <property name="leftMargin" >
-                <number>4</number>
-               </property>
-               <property name="topMargin" >
-                <number>4</number>
-               </property>
-               <property name="rightMargin" >
-                <number>4</number>
-               </property>
-               <property name="bottomMargin" >
-                <number>4</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="interviewer_last_name_text" >
-                 <property name="minimumSize" >
-                  <size>
-                   <width>180</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>180</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font" >
-                  <font>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Last Name:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="interviewer_last_name_line" >
-                 <property name="enabled" >
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize" >
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize" >
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text" >
-                  <string/>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
           </widget>
          </item>
         </layout>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QGroupBox" name="user_group_info" >
-       <property name="font" >
-        <font>
-         <pointsize>11</pointsize>
-        </font>
-       </property>
-       <property name="title" >
-        <string>What percentage of your income comes from the following?</string>
-       </property>
-       <layout class="QGridLayout" >
-        <item row="1" column="0" >
-         <widget class="QWidget" native="1" name="home_port_2" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QGridLayout" >
-           <item row="0" column="0" >
-            <widget class="QLabel" name="comm_fish_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Commercial Fishing:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" >
-            <widget class="QLineEdit" name="comm_fish_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>1</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="2" column="0" >
-         <widget class="QWidget" native="1" name="home_port_3" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QGridLayout" >
-           <item row="0" column="0" >
-            <widget class="QLabel" name="comm_sport_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Commercial Sport Fishing:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" >
-            <widget class="QLineEdit" name="comm_sport_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>1</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="3" column="0" >
-         <widget class="QWidget" native="1" name="ves_license" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="interviewee_last_name" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>4</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="interviewee_last_name_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Last Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="interviewee_last_name_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="age" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>4</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="age_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Age:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="age_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="age_2" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>4</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="city_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>City of residence:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="city_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="gender" >
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="QLabel" name="gender_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>45</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>60</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Gender:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="gender_comboBox" >
+           <property name="maximumSize" >
+            <size>
+             <width>70</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <item>
-            <widget class="QLabel" name="private_fish_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Private Sport Fishing:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="private_fish_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>1</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="4" column="0" >
-         <widget class="QWidget" native="1" name="ves_license_2" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
-           <item>
-            <widget class="QLabel" name="ecotourism_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Ecotourism:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="ecotourism_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>1</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="5" column="0" >
-         <widget class="QWidget" native="1" name="vessel_length" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
-           <item>
-            <widget class="QLabel" name="cons_science_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Conservation/Scientific Research:</string>
-             </property>
-            </widget>
+            <property name="text" >
+             <string/>
+            </property>
            </item>
            <item>
-            <widget class="QLineEdit" name="cons_science_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>96</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="6" column="0" >
-         <widget class="QWidget" native="1" name="vessel_length_2" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
-           <item>
-            <widget class="QLabel" name="other_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Other:</string>
-             </property>
-            </widget>
+            <property name="text" >
+             <string>Male</string>
+            </property>
            </item>
            <item>
-            <widget class="QLineEdit" name="other_line" >
-             <property name="enabled" >
-              <bool>false</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>0</string>
-             </property>
-            </widget>
+            <property name="text" >
+             <string>Female</string>
+            </property>
            </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="7" column="0" >
-         <widget class="QWidget" native="1" name="vessel_length_3" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QVBoxLayout" >
-           <item>
-            <widget class="QLabel" name="define_other_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>300</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Define type of other Income:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="define_other_line" >
-             <property name="enabled" >
-              <bool>false</bool>
-             </property>
-             <property name="sizePolicy" >
-              <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>800</width>
-               <height>200</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="years_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Years working here:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="years_spinBox" >
+           <property name="sizePolicy" >
+            <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>15</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>70</width>
+             <height>200</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
-   <item>
+   <item rowspan="2" row="0" column="1" >
+    <widget class="QGroupBox" name="user_group_info" >
+     <property name="font" >
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="title" >
+      <string>What percentage of your income comes from the following?</string>
+     </property>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
+       <widget class="QWidget" native="1" name="home_port_2" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <layout class="QGridLayout" >
+         <item row="0" column="0" >
+          <widget class="QLabel" name="comm_fish_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Commercial Fishing:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" >
+          <widget class="QLineEdit" name="comm_fish_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QWidget" native="1" name="home_port_3" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <layout class="QGridLayout" >
+         <item row="0" column="0" >
+          <widget class="QLabel" name="comm_sport_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Commercial Sport Fishing:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" >
+          <widget class="QLineEdit" name="comm_sport_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QWidget" native="1" name="ves_license" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="QLabel" name="private_fish_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Private Sport Fishing:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="private_fish_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0" >
+       <widget class="QWidget" native="1" name="ves_license_2" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="QLabel" name="ecotourism_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Ecotourism:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ecotourism_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="4" column="0" >
+       <widget class="QWidget" native="1" name="vessel_length" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="QLabel" name="cons_science_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Conservation/Scientific Research:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="cons_science_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="5" column="0" >
+       <widget class="QWidget" native="1" name="vessel_length_2" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="QLabel" name="other_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Other Income:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="other_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>100</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item rowspan="2" row="1" column="0" >
+    <widget class="QGroupBox" name="interviewee_2" >
+     <property name="font" >
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="title" >
+      <string>Interviewer</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <item>
+       <widget class="QWidget" native="1" name="interviewee_first_name_2" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>4</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="date_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>180</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>180</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Interview Date (mm/dd/yyyy):</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="date_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string>/2008</string>
+           </property>
+           <property name="cursorPosition" >
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="interviewee_first_name_3" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>4</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="interviewer_first_name_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>180</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>180</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>First Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="interviewer_first_name_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="interviewee_first_name_4" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>4</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="interviewer_last_name_text" >
+           <property name="minimumSize" >
+            <size>
+             <width>180</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>180</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>Last Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="interviewer_last_name_line" >
+           <property name="enabled" >
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1" >
     <widget class="QWidget" native="1" name="button_box" >
      <property name="sizePolicy" >
       <sizepolicy vsizetype="MinimumExpanding" hsizetype="Preferred" >
@@ -1122,28 +1016,6 @@
       </size>
      </property>
      <layout class="QHBoxLayout" >
-      <property name="leftMargin" >
-       <number>12</number>
-      </property>
-      <property name="topMargin" >
-       <number>7</number>
-      </property>
-      <property name="bottomMargin" >
-       <number>7</number>
-      </property>
-      <item>
-       <spacer>
-        <property name="orientation" >
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" >
-         <size>
-          <width>693</width>
-          <height>45</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
       <item>
        <widget class="QPushButton" name="pbnCancel" >
         <property name="font" >
@@ -1152,7 +1024,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Cancel</string>
+         <string>Quit</string>
         </property>
        </widget>
       </item>
@@ -1164,7 +1036,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Next Window</string>
+         <string>Next</string>
         </property>
         <property name="checkable" >
          <bool>false</bool>

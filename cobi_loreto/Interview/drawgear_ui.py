@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawgear.ui'
 #
-# Created: Fri Jun 27 03:15:39 2008
+# Created: Fri Jun 27 15:32:48 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!

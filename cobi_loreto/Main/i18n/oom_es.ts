@@ -85,46 +85,6 @@
         <source>Draw More Shapes...</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="Interview/drawconsscience.ui" line="132"/>
-        <source>Choose any species caught in this area:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/drawconsscience.ui" line="138"/>
-        <source>Sharkes and Skates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/drawconsscience.ui" line="145"/>
-        <source>Coastal reef fish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/drawconsscience.ui" line="152"/>
-        <source>Deep reef fish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/drawconsscience.ui" line="159"/>
-        <source>Migratory fish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/drawconsscience.ui" line="166"/>
-        <source>Benthic fish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/drawconsscience.ui" line="173"/>
-        <source>Shrimp</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/drawconsscience.ui" line="180"/>
-        <source>Other</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DrawEcotourism</name>
@@ -381,128 +341,118 @@
         <translation>Inicio</translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="31"/>
+        <location filename="Interview/interviewstart.ui" line="25"/>
         <source>Interviewee</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="292"/>
+        <location filename="Interview/interviewstart.ui" line="338"/>
         <source>Male</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="297"/>
+        <location filename="Interview/interviewstart.ui" line="343"/>
         <source>Female</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="440"/>
+        <location filename="Interview/interviewstart.ui" line="794"/>
         <source>Interviewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="1155"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/interviewstart.ui" line="551"/>
+        <location filename="Interview/interviewstart.ui" line="905"/>
         <source>First Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="618"/>
+        <location filename="Interview/interviewstart.ui" line="972"/>
         <source>Last Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="206"/>
+        <location filename="Interview/interviewstart.ui" line="200"/>
         <source>Age:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="273"/>
+        <location filename="Interview/interviewstart.ui" line="319"/>
         <source>Gender:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="343"/>
+        <location filename="Interview/interviewstart.ui" line="267"/>
         <source>City of residence:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="400"/>
-        <source>Years working in the area:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/interviewstart.ui" line="481"/>
+        <location filename="Interview/interviewstart.ui" line="835"/>
         <source>Interview Date (mm/dd/yyyy):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="503"/>
+        <location filename="Interview/interviewstart.ui" line="857"/>
         <source>/2008</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="662"/>
+        <location filename="Interview/interviewstart.ui" line="408"/>
         <source>What percentage of your income comes from the following?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="693"/>
+        <location filename="Interview/interviewstart.ui" line="439"/>
         <source>Commercial Fishing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="1030"/>
+        <location filename="Interview/interviewstart.ui" line="714"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="755"/>
+        <location filename="Interview/interviewstart.ui" line="501"/>
         <source>Commercial Sport Fishing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="817"/>
+        <location filename="Interview/interviewstart.ui" line="563"/>
         <source>Private Sport Fishing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="879"/>
+        <location filename="Interview/interviewstart.ui" line="625"/>
         <source>Ecotourism:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="941"/>
+        <location filename="Interview/interviewstart.ui" line="687"/>
         <source>Conservation/Scientific Research:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="1003"/>
-        <source>Other:</source>
+        <location filename="Interview/interviewstart.ui" line="368"/>
+        <source>Years working here:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="1065"/>
-        <source>Define type of other Income:</source>
+        <location filename="Interview/interviewstart.ui" line="749"/>
+        <source>Other Income:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="1167"/>
-        <source>Next Window</source>
+        <location filename="Interview/interviewstart.ui" line="1027"/>
+        <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="906"/>
-        <source>1</source>
+        <location filename="Interview/interviewstart.ui" line="1039"/>
+        <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="968"/>
-        <source>96</source>
+        <location filename="Interview/interviewstart.ui" line="776"/>
+        <source>100</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -587,43 +537,63 @@
 <context>
     <name>Other</name>
     <message>
-        <location filename="Interview/other.ui" line="14"/>
+        <location filename="Interview/other___.ui" line="14"/>
         <source>OpenOceanMap - Interview</source>
         <translation type="unfinished">Inicio</translation>
     </message>
     <message>
-        <location filename="Interview/other.ui" line="27"/>
+        <location filename="Interview/other___.ui" line="27"/>
         <source>Other Income</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/other.ui" line="61"/>
+        <location filename="Interview/other___.ui" line="61"/>
         <source>Type of Income:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/other.ui" line="141"/>
+        <location filename="Interview/other___.ui" line="141"/>
         <source>other info1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/other.ui" line="221"/>
+        <location filename="Interview/other___.ui" line="221"/>
         <source>other info2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/other.ui" line="298"/>
+        <location filename="Interview/other___.ui" line="298"/>
         <source>other info3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/other.ui" line="371"/>
+        <location filename="Interview/other___.ui" line="371"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/other.ui" line="383"/>
+        <location filename="Interview/other___.ui" line="383"/>
         <source>Draw Other Income Shapes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Interview/other.ui" line="14"/>
+        <source>OpenOceanMap - Define Other Income</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Interview/other.ui" line="23"/>
+        <source>Describe Other Income:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Interview/other.ui" line="69"/>
+        <source>Save  to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Interview/other.ui" line="57"/>
+        <source>Finish</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

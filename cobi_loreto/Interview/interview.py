@@ -72,6 +72,8 @@ class Interview(object):
     self.otherIncome = None
 
     # A place to store polygons we capture
+    self.capturedText = ''
+    self.capturedTextType = ''
     self.capturedPolygons = []
     self.capturedPolygonsType = []
     self.capturedPolygonsPennies = []
@@ -178,10 +180,11 @@ class Interview(object):
           capture_string = QString("Other Income exists, starting that interview...")
           self.parent.statusbar.showMessage(capture_string)
           self.currentStep = 'Other'
+          textType = "Income" #the type should be gathered
           # skip right to drawing...
-          from selectother import SelectOtherGui
+          from other import OtherGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-          wnd = SelectOtherGui(self,flags,previousGui)
+          wnd = OtherGui(self,flags,self.currentStep,previousGui)
           wnd.show()
       else:
           self.resetInterview('Interview is finished!')
@@ -189,9 +192,61 @@ class Interview(object):
       
       self.parent.canvas.setMapTool(self.parent.toolZoomIn)
             
+
   # End interview dialog
-  def saveShapes(self, previousSelectGui):
-      previousSelectGui.close()
+  def saveText(self, textGui):
+      textGui.close()
+      
+      if len(self.capturedText) == 0:
+          # Finished a interview step without writing any text...
+          capture_string = QString("No info to write, returning to previous choices...")
+          self.parent.statusbar.showMessage(capture_string)
+          # Fire up the previous gui again...
+          textGui.show()
+      else:
+          file_prefix = (str(self.currentStep) + '_' + str(self.capturedTextType)).replace(' ','_').lower()
+          file_prefix_obj = QString(file_prefix)
+          file_name = QString("%s_" % file_prefix_obj)
+          capture_string = QString("Writing text file...")
+          self.parent.statusbar.showMessage(capture_string)
+          qd=QFileDialog()
+          qd.DontConfirmOverwrite = True
+          file_type_filter = QString("Plain Text (*.txt)")
+          f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Text as", None, QApplication.UnicodeUTF8),file_name,file_type_filter)
+          
+          # Check to see if the shapefile has been saved
+          if f2.count(".txt")==0:
+            # If the user cancels...
+            print 'empty so it was cancelled'
+            textGui.show()
+            
+          # check to see if the user tried to overwrite an txt file of the same name
+          elif os.path.isfile(f2):
+            # Currently we don't suport overwriting, so return to same dialog
+            write_string = QString(f2)
+            # this translation is not found perhaps due to line number or order of excution...
+            msg = QA.translate("Interview","Overwriting existing text file is not supported: ", None, QApplication.UnicodeUTF8)
+            capture_string = QString(msg + write_string)
+            self.parent.statusbar.showMessage(capture_string)
+            textGui.show()
+          else:
+              f = f2
+              write_string = QString(f)
+              file = open(write_string, 'w')
+              file.write(self.capturedText)
+              file.close()
+              msg = QA.translate("Other Income Saved","Other income info successfully saved to: ", None, QApplication.UnicodeUTF8)
+              capture_string = QString(msg + write_string)
+              self.parent.statusbar.showMessage(capture_string)
+              # reset values to prepare for another save...
+              self.capturedText = []
+              #self.capturedTextType = []
+              textGui.show()
+
+
+  # End interview dialog
+  def saveShapes(self, drawGui):
+      drawGui.close()
       
       if len(self.capturedPolygons) == 0:
           # Finished a interview step without writing any shapes...
@@ -199,7 +254,7 @@ class Interview(object):
           self.parent.statusbar.showMessage(capture_string)
           
           # Fire up the previous gui again...
-          previousSelectGui.previousGui.show()
+          drawGui.previousGui.show()
       else:
           file_prefix = (str(self.currentStep) + '_' + str(self.shapeType)).replace(' ','_').lower()
           file_prefix_obj = QString(file_prefix)
@@ -212,11 +267,12 @@ class Interview(object):
           file_type_filter = QString("Shapefiles (*.shp)")
           f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Shapes as", None, QApplication.UnicodeUTF8),file_name,file_type_filter)
           
+          
           # Check to see if the shapefile has been saved
           if f2.count(".shp")==0:
             # If the user cancels...
             print 'cancelled'
-            previousSelectGui.previousGui.show()
+            drawGui.previousGui.show()
           
           # check to see if the user tried to overwrite an existing shapefile
           elif os.path.isfile(f2):
@@ -226,7 +282,7 @@ class Interview(object):
             msg = QA.translate("Interview","Overwriting existing shapefile is not supported: ", None, QApplication.UnicodeUTF8)
             capture_string = QString(msg + write_string)
             self.parent.statusbar.showMessage(capture_string)
-            previousSelectGui.show()
+            drawGui.show()
           else:
             f = f2
             write_string = QString(f)
@@ -319,10 +375,10 @@ class Interview(object):
             self.capturedPolygonsRub = []
             
             # Fire up the select type gui again...
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
+            #flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
             
             #Reset penny count
             self.pennies_left = 100
             
-            previousSelectGui.previousGui.show()
+            drawGui.previousGui.show()
 

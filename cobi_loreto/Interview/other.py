@@ -46,29 +46,24 @@ from Util.common_functions import *
 import sys
 
 class OtherGui(QDialog, Ui_Other):
-    def __init__(self, parent, flags, prevGUI=None):
+    def __init__(self, parent, flags, textType, previousGui):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
-        self.prevGUI = prevGUI
+        self.textType = textType
+        self.previousGui = previousGui
 
-    def on_pbnSelectOther_released(self):
+    def on_pbnFinished_released(self):
 
-        #interviewInfo2 = self.parent.interviewInfo2
-        #interviewInfo2.append(["e_v_len", self.vessel_length_line.text()])
-        #interviewInfo2.append(["e_v_motor", self.vessel_motor_line.text()])
-        #interviewInfo2.append(["e_v_cap", self.haul_capacity_line.text()])
-        #interviewInfo2.append(["e_v_homep", self.home_port_line.text()])
-        #interviewInfo2.append(["e_trabajos", self.workers_line.text()])
-
-
-        self.close()
-        # this is a special case: we only assume on type of 'other' income
-        from drawshapes import DrawShapesGui
-        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawShapesGui(self.parent,flags)
-        wnd.show()
-
+        interviewInfo2 = self.parent.interviewInfo2
+        print interviewInfo2
+        #info = ', '.join(interviewInfo2[0])
+        self.parent.capturedText = self.other_line.text()
+        self.parent.capturedTextType = self.textType
+        self.parent.otherIncome = None
+        self.parent.saveText(self)
+#        self.parent.nextStep(self, "Finishing Other income interview")
+        
     def on_pbnCancel_clicked(self):
         self.close()
         # stop interview process
