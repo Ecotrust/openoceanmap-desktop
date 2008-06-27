@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>888</width>
-    <height>177</height>
+    <width>578</width>
+    <height>180</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -16,7 +16,7 @@
   <layout class="QVBoxLayout" >
    <item>
     <widget class="QWidget" native="1" name="widget" >
-     <layout class="QHBoxLayout" >
+     <layout class="QVBoxLayout" >
       <item>
        <widget class="QLabel" name="fishery_text" >
         <property name="text" >
@@ -26,6 +26,12 @@
       </item>
       <item>
        <widget class="QComboBox" name="comboBox" >
+        <property name="maximumSize" >
+         <size>
+          <width>700</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <item>
          <property name="text" >
           <string/>
@@ -84,6 +90,19 @@
    <item>
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
       <item>
        <widget class="QPushButton" name="pbnFinished" >
         <property name="text" >
