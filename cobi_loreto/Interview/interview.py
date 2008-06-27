@@ -191,7 +191,8 @@ class Interview(object):
             
   # End interview dialog
   def saveShapes(self, previousSelectGui):
-      previousSelectGui.hide()
+      previousSelectGui.close()
+      
       if len(self.capturedPolygons) == 0:
           # Finished a interview step without writing any shapes...
           capture_string = QString("No Shapes to write, returning to previous choices...")
@@ -213,12 +214,13 @@ class Interview(object):
           
           # Check to see if the shapefile has been saved
           if f2.count(".shp")==0:
-            # If the user cancels return to the same GUI...
+            # If the user cancels...
+            print 'cancelled'
             previousSelectGui.previousGui.show()
           
           # check to see if the user tried to overwrite an existing shapefile
           elif os.path.isfile(f2):
-            # Currently we don't suport overwriting, so return to dialog
+            # Currently we don't suport overwriting, so return to same dialog
             write_string = QString(f2)
             # this translation is not found perhaps due to line number or order of excution...
             msg = QA.translate("Interview","Overwriting existing shapefile is not supported: ", None, QApplication.UnicodeUTF8)
@@ -226,7 +228,6 @@ class Interview(object):
             self.parent.statusbar.showMessage(capture_string)
             previousSelectGui.show()
           else:
-            previousSelectGui.close()
             f = f2
             write_string = QString(f)
             # define fields for feature attributes
@@ -323,5 +324,5 @@ class Interview(object):
             #Reset penny count
             self.pennies_left = 100
             
-            previousSelectGui.show()
+            previousSelectGui.previousGui.show()
 
