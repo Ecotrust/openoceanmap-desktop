@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'fishery.ui'
 #
-# Created: Fri Jun 27 15:32:47 2008
+# Created: Fri Jun 27 16:23:30 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_Fishery(object):
     def setupUi(self, Fishery):
         Fishery.setObjectName("Fishery")
-        Fishery.resize(QtCore.QSize(QtCore.QRect(0,0,448,433).size()).expandedTo(Fishery.minimumSizeHint()))
+        Fishery.resize(QtCore.QSize(QtCore.QRect(0,0,417,433).size()).expandedTo(Fishery.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(Fishery)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -330,22 +330,6 @@ class Ui_Fishery(object):
         spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
         self.hboxlayout9.addItem(spacerItem)
 
-        self.pbnCancel = QtGui.QPushButton(self.button_box)
-
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.pbnCancel.setFont(font)
-        self.pbnCancel.setObjectName("pbnCancel")
-        self.hboxlayout9.addWidget(self.pbnCancel)
-
-        self.pbnBack = QtGui.QPushButton(self.button_box)
-
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.pbnBack.setFont(font)
-        self.pbnBack.setObjectName("pbnBack")
-        self.hboxlayout9.addWidget(self.pbnBack)
-
         self.pbnSelectGear = QtGui.QPushButton(self.button_box)
 
         font = QtGui.QFont()
@@ -371,7 +355,5 @@ class Ui_Fishery(object):
         self.landing_port_text_2.setText(QtGui.QApplication.translate("Fishery", "Landing Port 2:", None, QtGui.QApplication.UnicodeUTF8))
         self.landing_port_text_3.setText(QtGui.QApplication.translate("Fishery", "Landing Port 3:", None, QtGui.QApplication.UnicodeUTF8))
         self.landing_port_text_4.setText(QtGui.QApplication.translate("Fishery", "Landing Port 4:", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnCancel.setText(QtGui.QApplication.translate("Fishery", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnBack.setText(QtGui.QApplication.translate("Fishery", "Previous", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnSelectGear.setText(QtGui.QApplication.translate("Fishery", "Select Gear Type", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnSelectGear.setText(QtGui.QApplication.translate("Fishery", "Draw Shapes by Gear Type", None, QtGui.QApplication.UnicodeUTF8))
 

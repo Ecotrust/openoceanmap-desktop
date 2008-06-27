@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>417</width>
-    <height>343</height>
+    <width>435</width>
+    <height>344</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -512,7 +512,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Select Ecotourism Type</string>
+         <string>Draw Shapes by Ecotourism Type</string>
         </property>
        </widget>
       </item>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'consscience.ui'
 #
-# Created: Fri Jun 27 15:32:48 2008
+# Created: Fri Jun 27 16:23:31 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -106,14 +106,6 @@ class Ui_ConsScience(object):
         spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
         self.hboxlayout3.addItem(spacerItem)
 
-        self.pbnCancel = QtGui.QPushButton(self.button_box)
-
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.pbnCancel.setFont(font)
-        self.pbnCancel.setObjectName("pbnCancel")
-        self.hboxlayout3.addWidget(self.pbnCancel)
-
         self.pbnSelectConsScience = QtGui.QPushButton(self.button_box)
 
         font = QtGui.QFont()
@@ -136,6 +128,5 @@ class Ui_ConsScience(object):
         self.comboBox.addItem(QtGui.QApplication.translate("ConsScience", "Government Agency", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.addItem(QtGui.QApplication.translate("ConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.add_info_text.setText(QtGui.QApplication.translate("ConsScience", "additional info:", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnCancel.setText(QtGui.QApplication.translate("ConsScience", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnSelectConsScience.setText(QtGui.QApplication.translate("ConsScience", "Draw Shapes of Areas of Knowledge", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnSelectConsScience.setText(QtGui.QApplication.translate("ConsScience", "Draw Shapes by Areas of Knowledge", None, QtGui.QApplication.UnicodeUTF8))
 

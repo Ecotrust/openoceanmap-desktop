@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ecotourism.ui'
 #
-# Created: Fri Jun 27 15:32:47 2008
+# Created: Fri Jun 27 16:23:31 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_Ecotourism(object):
     def setupUi(self, Ecotourism):
         Ecotourism.setObjectName("Ecotourism")
-        Ecotourism.resize(QtCore.QSize(QtCore.QRect(0,0,417,343).size()).expandedTo(Ecotourism.minimumSizeHint()))
+        Ecotourism.resize(QtCore.QSize(QtCore.QRect(0,0,435,344).size()).expandedTo(Ecotourism.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(Ecotourism)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -240,14 +240,6 @@ class Ui_Ecotourism(object):
         spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
         self.hboxlayout6.addItem(spacerItem)
 
-        self.pbnCancel = QtGui.QPushButton(self.button_box)
-
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.pbnCancel.setFont(font)
-        self.pbnCancel.setObjectName("pbnCancel")
-        self.hboxlayout6.addWidget(self.pbnCancel)
-
         self.pbnSelectEcotourism = QtGui.QPushButton(self.button_box)
 
         font = QtGui.QFont()
@@ -272,6 +264,5 @@ class Ui_Ecotourism(object):
         self.haul_capacity_text.setText(QtGui.QApplication.translate("Ecotourism", "Haul Capacity (kilograms):", None, QtGui.QApplication.UnicodeUTF8))
         self.home_port_text.setText(QtGui.QApplication.translate("Ecotourism", "Home Port:", None, QtGui.QApplication.UnicodeUTF8))
         self.workers_text.setText(QtGui.QApplication.translate("Ecotourism", "How many work for the company?", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnCancel.setText(QtGui.QApplication.translate("Ecotourism", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnSelectEcotourism.setText(QtGui.QApplication.translate("Ecotourism", "Select Ecotourism Type", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnSelectEcotourism.setText(QtGui.QApplication.translate("Ecotourism", "Draw Shapes by Ecotourism Type", None, QtGui.QApplication.UnicodeUTF8))
 
