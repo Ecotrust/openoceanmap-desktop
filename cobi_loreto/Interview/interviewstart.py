@@ -36,7 +36,7 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-from selectfishery import *
+
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
 # General system includes
@@ -81,8 +81,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
                 return
             else:
                 if not self.comm_fish_line.text() == '0':
-                    self.parent.currentFisheryIncome = 1
-                    #self.parent.currentFisheryIncome = int(self.comm_fish_line.text())
+                    self.parent.commFishIncome = int(self.comm_fish_line.text())
 
         if self.comm_sport_line:
             if not strIsInt(self.comm_sport_line.text()):
@@ -90,8 +89,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
                 return
             else:
                 if not self.comm_sport_line.text() == '0':
-                    self.parent.currentFisheryIncome = 1
-                    #self.parent.currentFisheryIncome = int(self.parent.currentFisheryIncome) + int(self.comm_sport_line.text())
+                    self.parent.commSportIncome = int(self.comm_sport_line.text())
 
         if self.private_fish_line:
             if not strIsInt(self.private_fish_line.text()):
@@ -99,8 +97,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
                 return
             else:
                 if not self.private_fish_line.text() == '0':
-                    self.parent.currentFisheryIncome = 1
-                    #self.parent.currentFisheryIncome = int(self.parent.currentFisheryIncome) + int(self.private_fish_line.text())
+                    self.parent.privateFishIncome =  int(self.private_fish_line.text())
 
         if self.ecotourism_line:
             if not strIsInt(self.ecotourism_line.text()):
@@ -108,8 +105,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
                 return
             else:
                 if not self.ecotourism_line.text() == '0':
-                    self.parent.currentEcotourismIncome = 1
-                    #self.parent.currentEcotourismIncome = int(self.ecotourism_line.text())
+                    self.parent.ecotourismIncome = int(self.ecotourism_line.text())
 
         if self.cons_science_line:
             if not strIsInt(self.cons_science_line.text()):
@@ -117,8 +113,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
                 return
             else:
                 if not self.cons_science_line.text() == '0':
-                    self.parent.currentConsScienceIncome = 1
-                    #self.parent.currentConsScienceIncome = int(self.cons_science_line.text())
+                    self.parent.consScienceIncome = int(self.cons_science_line.text())
 
         if self.other_line:
             if not strIsInt(self.other_line.text()):
@@ -126,8 +121,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
                 return
             else:
                 if not self.other_line.text() == '0':
-                    self.parent.currentOtherIncome = 1
-                    #self.parent.currentOtherIncome = int(self.other_line.text())
+                    self.parent.otherIncome = int(self.other_line.text())
                     
                     if not len(self.define_other_line.text()):
                         QMessageBox.warning(self, "Income Error", "Please Define the Other Income")
@@ -142,49 +136,10 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         # setup for next gui depending on what incomes were specified
         self.hide()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint         
-        if self.parent.currentFisheryIncome:
-            capture_string = QString("Fishery Income exists, starting that interview...")
-            self.parent.parent.statusbar.showMessage(capture_string)
-            from fishery import FisheryGui
-            wnd = FisheryGui(self.parent,flags,self)
-            wnd.show()
-            
-        elif self.parent.currentEcotourismIncome:
-            capture_string = QString("Ecotourism Income exists, starting that interview...")
-            self.parent.parent.statusbar.showMessage(capture_string)
-            from ecotourism import EcotourismGui
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = EcotourismGui(self.parent,flags)
-            wnd.show()
-            
-        elif self.parent.currentConsScienceIncome:
-            capture_string = QString("Ecotourism Income exists, starting that interview...")
-            self.parent.parent.statusbar.showMessage(capture_string)
-            from consscience import ConsScienceGui
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = ConsScienceGui(self.parent,flags)
-            wnd.show()
-            
-        elif self.parent.currentOtherIncome:
-            capture_string = QString("Ecotourism Income exists, starting that interview...")
-            self.parent.parent.statusbar.showMessage(capture_string)
-            from other import OtherGui
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = OtherGui(self.parent,flags)
-            wnd.show()
+
+        self.parent.nextStep(self)
         
             
     def on_pbnCancel_clicked(self):
         self.close()
-        capture_string = QString("Cancelled out of fishery interview...")
-        print capture_string
-        self.parent.parent.statusbar.showMessage(capture_string)
-        
-        # stop interview process
-        self.parent.parent.interviewInProgress = False
-        self.parent.parent.interviewSaveTool = None
-        self.parent.currentFishery = None
-        self.parent.currentEcotourism = None
-        self.parent.currentConsScience = None
-        self.parent.currentOther = None
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+        self.parent.resetInterview()

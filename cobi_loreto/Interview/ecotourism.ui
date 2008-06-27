@@ -524,7 +524,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Draw Ecotourism Shapes</string>
+         <string>Select Ecotourism Type</string>
         </property>
        </widget>
       </item>

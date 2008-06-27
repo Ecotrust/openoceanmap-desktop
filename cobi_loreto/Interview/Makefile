@@ -27,21 +27,27 @@
 #---------------------------------------------------------------------
 
 
-all: interviewstart_ui.py drawshapes_ui.py selectfishery_ui.py fishery_ui.py selectecotourism_ui.py ecotourism_ui.py selectconsscience_ui.py consscience_ui.py other_ui.py
+all: interviewstart_ui.py selectgear_ui.py fishery_ui.py selectecotourism_ui.py ecotourism_ui.py selectconsscience_ui.py consscience_ui.py selectother_ui.py drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py
 
 clean:
-	rm -f interviewstart_ui.py nextpolygon_ui.py selectfishery_ui.py fishery_ui.py ecotourism_ui.py consscience_ui.py
+	rm -f interviewstart_ui.py nextpolygon_ui.py selectgear_ui.py fishery_ui.py ecotourism_ui.py consscience_ui.py selectother_ui.py drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py interview.pyc
 	rm -f *.pyc
 	rm -f *~
 
 interviewstart_ui.py: interviewstart.ui
 	pyuic4 -o interviewstart_ui.py interviewstart.ui
 
-drawshapes_ui.py: drawshapes.ui
-	pyuic4 -o drawshapes_ui.py drawshapes.ui
+drawgear_ui.py: drawgear.ui
+	pyuic4 -o drawgear_ui.py drawgear.ui
 
-selectfishery_ui.py: selectfishery.ui
-	pyuic4 -o selectfishery_ui.py selectfishery.ui
+drawecotourism_ui.py: drawecotourism.ui
+	pyuic4 -o drawecotourism_ui.py drawecotourism.ui
+	
+drawconsscience_ui.py: drawconsscience.ui
+	pyuic4 -o drawconsscience_ui.py drawconsscience.ui
+	
+selectgear_ui.py: selectgear.ui
+	pyuic4 -o selectgear_ui.py selectgear.ui
 
 fishery_ui.py: fishery.ui
 	pyuic4 -o fishery_ui.py fishery.ui
@@ -58,5 +64,8 @@ consscience_ui.py: consscience.ui
 selectconsscience_ui.py: selectconsscience.ui
 	pyuic4 -o selectconsscience_ui.py selectconsscience.ui
 	
-other_ui.py: other.ui
-	pyuic4 -o other_ui.py other.ui	
+selectother_ui.py: selectother.ui
+	pyuic4 -o selectother_ui.py selectother.ui	
+
+#other_ui.py: other.ui
+#	pyuic4 -o other_ui.py other.ui	

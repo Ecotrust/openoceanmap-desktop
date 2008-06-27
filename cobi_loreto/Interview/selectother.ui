@@ -1,0 +1,57 @@
+<ui version="4.0" >
+ <author>Aaron Racicot</author>
+ <class>SelectOther</class>
+ <widget class="QDialog" name="SelectOther" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>485</width>
+    <height>194</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Select Other Income</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QWidget" native="1" name="widget" >
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QLabel" name="other_text" >
+        <property name="text" >
+         <string>Describe Other Income:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="other_line" />
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="widget_2" >
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QPushButton" name="pbnFinished" >
+        <property name="text" >
+         <string>Exit Other Income Step</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnStartShapes" >
+        <property name="text" >
+         <string>Start Drawing Shapes</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

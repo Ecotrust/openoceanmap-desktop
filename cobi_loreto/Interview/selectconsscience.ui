@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
-    <height>122</height>
+    <width>887</width>
+    <height>145</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap - Select Fishery</string>
+   <string>OpenOceanMap - Select Consservation / Science</string>
   </property>
   <layout class="QVBoxLayout" >
    <item>
@@ -20,7 +20,7 @@
       <item>
        <widget class="QLabel" name="fishery_text" >
         <property name="text" >
-         <string>Select species/ecosystem expertise/concern:</string>
+         <string>Select species/ecosystem of expertise/concern:</string>
         </property>
        </widget>
       </item>
@@ -85,16 +85,9 @@
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
       <item>
-       <widget class="QPushButton" name="pbnFisheryFinished" >
+       <widget class="QPushButton" name="pbnFinished" >
         <property name="text" >
-         <string>Exit Fishery Interview</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pbnTypeFinished" >
-        <property name="text" >
-         <string>Switch Type of Specialist</string>
+         <string>Exit Conservationist / Scientist Step</string>
         </property>
        </widget>
       </item>

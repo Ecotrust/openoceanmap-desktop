@@ -712,7 +712,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>0</string>
+              <string>10</string>
              </property>
             </widget>
            </item>
@@ -774,7 +774,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>0</string>
+              <string>90</string>
              </property>
             </widget>
            </item>
@@ -898,7 +898,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>100</string>
+              <string>0</string>
              </property>
             </widget>
            </item>

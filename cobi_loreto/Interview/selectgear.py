@@ -35,33 +35,32 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-
-from drawshapes import DrawShapesGui
-
-# UI specific includes
-from selectfishery_ui import Ui_SelectFishery
-from drawshapes_ui import Ui_DrawShapes
-
+# Custom Functions
 from Util.common_functions import *
+# UI specific includes
+from selectgear_ui import Ui_SelectGear
 
 # General system includes
 import sys
 
-class SelectFisheryGui(QDialog, Ui_SelectFishery):
-    def __init__(self, parent, flags):
+class SelectGearGui(QDialog, Ui_SelectGear):
+    def __init__(self, parent, flags, fishery_sector):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
-
+        self.fishery_sector = fishery_sector
+        self.fishery_sector_label.setText(str(self.fishery_sector))
+        
+        self.pbnStepFinished.setText('Exit ' + str(self.fishery_sector) + ' Step')
+    
     def on_pbnStartShapes_released(self):
-        #Get fishery value
-        cur_fishery = self.fishery_comboBox.currentText()
-        if not cur_fishery:
+        shape_type = self.gear_comboBox.currentText()
+        if not shape_type:
             QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
             return 
         else:
-            self.parent.currentFishery = cur_fishery
-            
+            self.parent.shapeType = shape_type
+
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
@@ -69,48 +68,24 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
             
-    def on_pbnFisheryFinished_released(self):
-        self.parent.pennies_left = 100; 
+
+    def on_pbnStepFinished_released(self): 
         self.close()
-        capture_string = QString("Finished with fishery interview...")
-        self.parent.parent.statusbar.showMessage(capture_string)
+        fishery_msg = 'Finished with %s interview step' % self.fishery_sector
+        print self.fishery_sector
+        if self.fishery_sector == 'Commercial Fishery':
+            self.parent.commFishIncome = None
+            self.parent.nextStep(self, fishery_msg)
+        elif self.fishery_sector == 'Sport Fishery':
+            self.parent.sportFishIncome = None
+            self.parent.nextStep(self, fishery_msg)
+        elif self.fishery_sector == 'Private Fishery':
+            self.parent.privateFishIncome = None
+            self.parent.nextStep(self, fishery_msg)
         
-        # add some features
-        for capPolyRub in self.parent.capturedPolygonsRub:
-            capPolyRub.reset()
-            
-        self.parent.currentFishery = None
-
-        if self.parent.currentEcotourism:
-            from ecotourism import EcotourismGui
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = EcotourismWindowGui(self.parent,flags)
-            wnd.show()    
-        
-        # need a bunch of logic here...
-
-
-
-
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
-
-    def on_pbnTypeFinished_released(self):
-        self.parent.pennies_left = 100;
-        self.close()
-        capture_string = QString("Finished with gear types...")
-        self.parent.parent.statusbar.showMessage(capture_string)
-
-        from fishery import FisheryGui
-        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = FisheryGui(self.parent,flags)
-        wnd.show()
-
-        # add some features
-        for capPolyRub in self.parent.capturedPolygonsRub:
-            capPolyRub.reset()
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     def nextPolygon(self):
+        from drawgear import DrawGearGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawShapesGui(self.parent,flags,self.parent.pennies_left)
+        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()

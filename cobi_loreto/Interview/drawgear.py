@@ -36,12 +36,12 @@ from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
 # UI specific includes
-from drawshapes_ui import Ui_DrawShapes
+from drawgear_ui import Ui_DrawGear
 from Util.common_functions import *
 # General system includes
 import sys
 
-class DrawShapesGui(QDialog, Ui_DrawShapes):
+class DrawGearGui(QDialog, Ui_DrawGear):
     def __init__(self, parent, flags, pennies_left):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
@@ -52,7 +52,7 @@ class DrawShapesGui(QDialog, Ui_DrawShapes):
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
 
-    #Called when "More Shapes this fishery" button pressed        
+    #Called when "More Shapes" button pressed        
     def on_pbnMoreShapes_released(self):
         if not self.discardLast:
             num_pennies = self.line_1.text()
@@ -72,14 +72,14 @@ class DrawShapesGui(QDialog, Ui_DrawShapes):
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
                 self.parent.capturedPolygonsPennies.append(num_pennies)
 
-            self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+            self.parent.capturedPolygonsType.append(self.parent.shapeType)
 
 
         self.close()
 
-        #Check if this fishery should be done (no pennies left)
+        #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
-            QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This fishery is now done.")
+            QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This Shape Type is now done.")
             self.parent.interviewEnd()
         else:
             mc = self.parent.canvas      
@@ -97,7 +97,7 @@ class DrawShapesGui(QDialog, Ui_DrawShapes):
         self.pbnShapeDiscard.setEnabled(False)
         self.discardLast = True
             
-    #"Finished with Fishery" button clicked
+    #"Finished with Type" button clicked
     def on_pbnShapeFinished_released(self):
         if not self.discardLast:
             num_pennies = self.line_1.text()
@@ -119,13 +119,12 @@ class DrawShapesGui(QDialog, Ui_DrawShapes):
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
-            self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+            self.parent.capturedPolygonsType.append(self.parent.shapeType)
         self.close()
         
-        ### /// Activity specific interview ends /// ###
-        self.parent.interviewEnd()
+        self.parent.saveShapes(self)
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawShapesGui(self.parent,flags,self.parent.pennies_left)
+        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()

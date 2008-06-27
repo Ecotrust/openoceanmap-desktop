@@ -36,11 +36,8 @@ from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
 
-from drawshapes import DrawShapesGui
-
 # UI specific includes
 from selectecotourism_ui import Ui_SelectEcotourism
-from drawshapes_ui import Ui_DrawShapes
 
 from Util.common_functions import *
 
@@ -55,12 +52,12 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
 
     def on_pbnStartShapes_released(self):
         #Get fishery value
-        cur_fishery = self.fishery_comboBox.currentText()
-        if not cur_fishery:
-            QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
+        shape_type = self.fishery_comboBox.currentText()
+        if not shape_type:
+            QMessageBox.warning(self, "Tourism Error", "Please select a tourism type")
             return 
         else:
-            self.parent.currentFishery = cur_fishery
+            self.parent.shapeType = shape_type
             
         self.close()
         mc = self.parent.canvas      
@@ -69,35 +66,15 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
             
-    def on_pbnFisheryFinished_released(self):
-        self.parent.pennies_left = 100; 
+    def on_pbnFinished_released(self): 
         self.close()
-        capture_string = QString("Finished with fishery interview...")
-        self.parent.parent.statusbar.showMessage(capture_string)
-        
-        # add some features
-        for capPolyRub in self.parent.capturedPolygonsRub:
-            capPolyRub.reset()
-            
-        self.parent.currentFishery = None
-
-        if self.parent.currentEcotourism:
-            from ecotourism import EcotourismGui
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = EcotourismWindowGui(self.parent,flags)
-            wnd.show()    
-        
-        # need a bunch of logic here...
-
-
-
-
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+        self.parent.ecotourismIncome = None
+        self.parent.nextStep(self, "Finished with fishery interview...")
 
     def on_pbnTypeFinished_released(self):
         self.parent.pennies_left = 100;
         self.close()
-        capture_string = QString("Finished with gear types...")
+        capture_string = QString("Finished with certain shape type...")
         self.parent.parent.statusbar.showMessage(capture_string)
 
         from ecotourism import EcotourismGui
@@ -111,6 +88,7 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     def nextPolygon(self):
+        from drawecotourism import DrawEcotourismGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawShapesGui(self.parent,flags,self.parent.pennies_left)
+        wnd = DrawEcotourismGui(self.parent,flags,self.parent.pennies_left, self.parent.shapeType, self)
         wnd.show()

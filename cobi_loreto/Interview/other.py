@@ -35,12 +35,9 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-#from nextpolygon import *
-#from interviewstart_ui import Ui_InterviewStart
+
 
 # UI specific includes
-#from selectfishery_ui import Ui_SelectFishery
-#from nextpolygon_ui import Ui_NextPolygon
 from other_ui import Ui_Other
 
 from Util.common_functions import *
@@ -55,40 +52,24 @@ class OtherGui(QDialog, Ui_Other):
         self.parent = parent
         self.prevGUI = prevGUI
 
-    def on_pbnSelectConsScience_released(self):
+    def on_pbnSelectOther_released(self):
 
-        interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append(["artespesca", self.specialist_comboBox.currentText()])
-        interviewInfo2.append(["e_v_len", self.vessel_length_line.text()])
-        interviewInfo2.append(["e_v_motor", self.vessel_motor_line.text()])
-        interviewInfo2.append(["e_v_cap", self.haul_capacity_line.text()])
-        interviewInfo2.append(["e_v_homep", self.home_port_line.text()])
-        interviewInfo2.append(["e_trabajos", self.workers_line.text()])
+        #interviewInfo2 = self.parent.interviewInfo2
+        #interviewInfo2.append(["e_v_len", self.vessel_length_line.text()])
+        #interviewInfo2.append(["e_v_motor", self.vessel_motor_line.text()])
+        #interviewInfo2.append(["e_v_cap", self.haul_capacity_line.text()])
+        #interviewInfo2.append(["e_v_homep", self.home_port_line.text()])
+        #interviewInfo2.append(["e_trabajos", self.workers_line.text()])
 
-        if not self.specialist_comboBox.currentText():
-            QMessageBox.warning(self, "Specialist Error", "Please Choose an Specialist Position")
-            return
 
         self.close()
-        from selectconssciens import SelectConsScienceGui
+        # this is a special case: we only assume on type of 'other' income
+        from drawshapes import DrawShapesGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        
-        # need to implement
-        wnd = SelectConsScienceGui(self.parent,flags)
+        wnd = DrawShapesGui(self.parent,flags)
         wnd.show()
-
 
     def on_pbnCancel_clicked(self):
         self.close()
-        capture_string = QString("Cancelled out of Conservationist / Scientist interview...")
-        self.parent.parent.statusbar.showMessage(capture_string)
         # stop interview process
-        self.parent.parent.interviewInProgress = False
-        self.parent.parent.interviewSaveTool = None
-        self.parent.currentCommFish = False
-        self.parent.currentCommSport = False
-        self.parent.currentPrivateFish = False
-        self.parent.currentEcotourism = False
-        self.parent.currentConsScience = False
-        self.parent.currentOther = False
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+        self.parent.resetInterview("Cancelled out of Other Income interview...")

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectecotourism.ui'
 #
-# Created: Thu Jun 26 01:23:53 2008
+# Created: Thu Jun 26 17:47:07 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectEcotourism(object):
     def setupUi(self, SelectEcotourism):
         SelectEcotourism.setObjectName("SelectEcotourism")
-        SelectEcotourism.resize(QtCore.QSize(QtCore.QRect(0,0,667,122).size()).expandedTo(SelectEcotourism.minimumSizeHint()))
+        SelectEcotourism.resize(QtCore.QSize(QtCore.QRect(0,0,463,122).size()).expandedTo(SelectEcotourism.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(SelectEcotourism)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -39,13 +39,9 @@ class Ui_SelectEcotourism(object):
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget_2)
         self.hboxlayout1.setObjectName("hboxlayout1")
 
-        self.pbnFisheryFinished = QtGui.QPushButton(self.widget_2)
-        self.pbnFisheryFinished.setObjectName("pbnFisheryFinished")
-        self.hboxlayout1.addWidget(self.pbnFisheryFinished)
-
-        self.pbnTypeFinished = QtGui.QPushButton(self.widget_2)
-        self.pbnTypeFinished.setObjectName("pbnTypeFinished")
-        self.hboxlayout1.addWidget(self.pbnTypeFinished)
+        self.pbnFinished = QtGui.QPushButton(self.widget_2)
+        self.pbnFinished.setObjectName("pbnFinished")
+        self.hboxlayout1.addWidget(self.pbnFinished)
 
         self.pbnStartShapes = QtGui.QPushButton(self.widget_2)
         self.pbnStartShapes.setObjectName("pbnStartShapes")
@@ -56,14 +52,13 @@ class Ui_SelectEcotourism(object):
         QtCore.QMetaObject.connectSlotsByName(SelectEcotourism)
 
     def retranslateUi(self, SelectEcotourism):
-        SelectEcotourism.setWindowTitle(QtGui.QApplication.translate("SelectEcotourism", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
+        SelectEcotourism.setWindowTitle(QtGui.QApplication.translate("SelectEcotourism", "OpenOceanMap - Select Ecotourism", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text.setText(QtGui.QApplication.translate("SelectEcotourism", "Select tourism activity type:", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectEcotourism", "Diving", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectEcotourism", "Snorkling", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectEcotourism", "Kayaking", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectEcotourism", "Whale Watching", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectEcotourism", "Other", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnFisheryFinished.setText(QtGui.QApplication.translate("SelectEcotourism", "Exit Fishery Interview", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnTypeFinished.setText(QtGui.QApplication.translate("SelectEcotourism", "Switch Type of Employee", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnFinished.setText(QtGui.QApplication.translate("SelectEcotourism", "Exit Ecotourism Step", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectEcotourism", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 

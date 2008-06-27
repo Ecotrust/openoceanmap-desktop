@@ -37,7 +37,7 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 #from interviewstart import *
-from selectfishery import *
+#from selectfishery import *
 from interviewstart import InterviewStartGui
 #from Tools.polygontool import *
 #from nextpolygon import *
@@ -60,18 +60,22 @@ class Interview(object):
     self.mainwindow = parent.parent
     
 
+    self.currentStep = None
+    self.shapeType = None
+    
+    
+    
     self.currentFishery = None
-    self.currentFisheryIncome = None
-    self.currentEcotourism = None
-    self.currentEcotourismIncome = None
-    self.currentConsScience = None
-    self.currentConsScienceIncome = None
-    self.currentOther = None
-    self.currentOtherIncome = None
+    self.commFishIncome = None
+    self.sportFishIncome = None
+    self.privateFishIncome = None    
+    self.ecotourismIncome = None
+    self.consScienceIncome = None
+    self.otherIncome = None
 
     # A place to store polygons we capture
     self.capturedPolygons = []
-    self.capturedPolygonsFishery = []
+    self.capturedPolygonsType = []
     self.capturedPolygonsPennies = []
     self.capturedPolygonsRub = []
     
@@ -86,48 +90,123 @@ class Interview(object):
     wnd = InterviewStartGui(self,flags)
     wnd.show()
 
-  # End interview dialog
-  def interviewEnd(self):
-      if len(self.capturedPolygons) == 0:
-          # Finished a fishery without writing any shapes...
-          capture_string = QString("No Shapes to write, switching to new fishery...")
+
+  def resetInterview(self,msg="Canceling Interview... "):
+        capture_string = QString(msg)
+        self.parent.statusbar.showMessage(capture_string)
+        self.parent.interviewInProgress = False
+        self.parent.interviewSaveTool = None
+        
+        self.currentFishery = None
+        
+        self.commFishIncome = None
+        self.sportFishIncome = None
+        self.privateFishIncome = None    
+        self.ecotourismIncome = None
+        self.consScienceIncome = None
+        self.otherIncome = None
+        self.canvas.setMapTool(self.parent.toolZoomIn)
+        
+        
+  def nextStep(self, previousGui, msg="Leaving Step"):
+      capture_string = QString(msg)
+      self.parent.statusbar.showMessage(capture_string)
+      self.pennies_left = 100;
+      self.shapeType = None
+      for capPolyRub in self.capturedPolygonsRub:
+          capPolyRub.reset()
+      flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
+      if self.commFishIncome:
+          capture_string = QString("Commericial Fishery Income exists, starting that interview...")
           self.parent.statusbar.showMessage(capture_string)
-          # Fire up the select type gui again...
-          
+          self.currentStep = 'Commercial Fishery'
+          from fishery import FisheryGui
+          wnd = FisheryGui(self,flags,self.currentStep,previousGui)
+          wnd.show()
+    
+      elif self.sportFishIncome:
+          capture_string = QString("Commercial Sport Fishery Income exists, starting that interview...")
+          self.parent.statusbar.showMessage(capture_string)
+          self.currentStep = 'Sport Fishery'
+          from fishery import FisheryGui
+          wnd = FisheryGui(self,flags,self.currentStep,previousGui)
+          wnd.show()            
+    
+      elif self.privateFishIncome:
+          capture_string = QString("Private Sport Fishery Income exists, starting that interview...")
+          self.parent.statusbar.showMessage(capture_string)
+          self.currentStep = 'Private Fishery'
+          from fishery import FisheryGui
+          wnd = FisheryGui(self,flags,self.currentStep,previousGui)
+          wnd.show()
+    
+      elif self.ecotourismIncome:
+          capture_string = QString("Ecotourism Income exists, starting that interview...")
+          self.parent.statusbar.showMessage(capture_string)
+          self.currentStep = 'Ecotourism'
+          from ecotourism import EcotourismGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-          wnd = SelectFisheryGui(self,flags)
+          wnd = EcotourismGui(self,flags,previousGui)
+          wnd.show()
+          
+      elif self.consScienceIncome:
+          capture_string = QString("Ecotourism Income exists, starting that interview...")
+          self.parent.statusbar.showMessage(capture_string)
+          self.currentStep = 'Conservationist / Scientist'
+          from consscience import ConsScienceGui
+          flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+          wnd = ConsScienceGui(self,flags,previousGui)
+          wnd.show()
+          
+      elif self.otherIncome:
+          capture_string = QString("Other Income exists, starting that interview...")
+          self.parent.statusbar.showMessage(capture_string)
+          self.currentStep = 'Other'
+          # skip right to drawing...
+          from selectother import SelectOtherGui
+          flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+          wnd = SelectOtherGui(self,flags,previousGui)
           wnd.show()
       else:
-          fishery_name = str(self.currentFishery).replace(' ','_').lower()
-          file_prefix = QString(fishery_name)
-          filter_name = QString("%s_" % file_prefix)
+          self.resetInterview('Interview is finished!')
+          print 'left interview fully...'
+      
+      self.parent.canvas.setMapTool(self.parent.toolZoomIn)
+            
+  # End interview dialog
+  def saveShapes(self, previousSelectGui):
+      if len(self.capturedPolygons) == 0:
+          # Finished a interview step without writing any shapes...
+          capture_string = QString("No Shapes to write, returning to previous choices...")
+          self.parent.statusbar.showMessage(capture_string)
+          
+          # Fire up the previous gui again...
+          previousSelectGui.show()
+      else:
+          file_prefix = (str(self.currentStep) + '_' + str(self.shapeType)).replace(' ','_').lower()
+          file_prefix_obj = QString(file_prefix)
+          file_name = QString("%s_" % file_prefix_obj)
           # self.parent.statusbar.showMessage(file_prefix)
           capture_string = QString("Writing shapefile...")
           self.parent.statusbar.showMessage(capture_string)
           qd=QFileDialog()
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Shapefiles (*.shp)")
-          f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Shapes as", None, QApplication.UnicodeUTF8),filter_name,file_type_filter)
+          f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Shapes as", None, QApplication.UnicodeUTF8),file_name,file_type_filter)
           # Check to see if the shapefile has been saved
           if f2.count(".shp")==0:
             # If the user cancels return to the same GUI...
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            # wnd = NextPolygonGui(self,flags)
-            wnd = NextPolygonGui(self,flags,self.pennies_left)
-            wnd.show()
-          # check to see if the user tried to overwrite an existing shapefile
+            
+            previousSelectGui.show()
+            # check to see if the user tried to overwrite an existing shapefile
           elif os.path.isfile(f2):
             # Currently we don't suport overwriting, so return to dialog
             write_string = QString(f2)
-            
             # this translation is not found perhaps due to line number or order of excution...
             msg = QA.translate("Interview","Overwriting existing shapefile is not supported: ", None, QApplication.UnicodeUTF8)
             capture_string = QString(msg + write_string)
             self.parent.statusbar.showMessage(capture_string)
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            #wnd = NextPolygonGui(self,flags)
-            wnd = NextPolygonGui(self,flags,self.pennies_left)
-            wnd.show() 
+            previousSelectGui.show()
           else:
             f = f2
             write_string = QString(f)
@@ -139,7 +218,7 @@ class Interview(object):
             for index,value in enumerate(self.interviewInfo2):
               fields[index] = QgsField(value[0], QVariant.String)
               
-            fields[index+1] = QgsField("fishery", QVariant.String)
+            fields[index+1] = QgsField("income", QVariant.String)
             fields[index+2] = QgsField("pennies", QVariant.Int)
             
             #fields = { 0 : QgsField("interviewer_name", QVariant.String),
@@ -167,9 +246,12 @@ class Interview(object):
                 #keySort.sort()
                 #i = 0
                 for index,value in enumerate(self.interviewInfo2):
+                  print index, value
+                
+                for index,value in enumerate(self.interviewInfo2):
                   fet.addAttribute(index, QVariant(value[1]))
 
-                fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
+                fet.addAttribute(index+1, QVariant(self.capturedPolygonsType[capPolyInd]))
                 fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
                 
                 #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
@@ -208,20 +290,19 @@ class Interview(object):
             #Add item to legend
             self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
 
-            ## Reset the rubberbands and then clear out the fishery related objects
+            ## Reset the rubberbands and then clear out the  income type related objects
             for capPolyRub in self.capturedPolygonsRub:
               capPolyRub.reset()
             self.capturedPolygons = []
-            self.capturedPolygonsFishery = []
+            self.capturedPolygonsType = []
             self.capturedPolygonsPennies = []
             self.capturedPolygonsRub = []
             
-            # Fire up the select fishery gui again...
+            # Fire up the select type gui again...
             flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
             
             #Reset penny count
             self.pennies_left = 100
             
-            wnd = SelectFisheryGui(self,flags)
-            wnd.show()
+            self.parent.nextStep(previousSelectGui)
 

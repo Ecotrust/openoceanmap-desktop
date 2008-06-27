@@ -35,12 +35,8 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-#from nextpolygon import *
-#from interviewstart_ui import Ui_InterviewStart
-from selectfishery import SelectFisheryGui
+
 # UI specific includes
-#from selectfishery_ui import Ui_SelectFishery
-#from nextpolygon_ui import Ui_NextPolygon
 from fishery_ui import Ui_Fishery
 
 from Util.common_functions import *
@@ -49,15 +45,16 @@ from Util.common_functions import *
 import sys
 
 class FisheryGui(QDialog, Ui_Fishery):
-    def __init__(self, parent, flags, prevGUI=None):
+    def __init__(self, parent, flags, fishery_sector,prevGUI=None):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
         self.prevGUI = prevGUI
+        self.currentStep = fishery_sector
 
-    def on_pbnSelectFishery_released(self):
+    def on_pbnSelectGear_released(self):
         interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append(["artespesca", self.gear_comboBox.currentText()])
+        #interviewInfo2.append(["artespesca", self.gear_comboBox.currentText()])
         interviewInfo2.append(["v_len", self.vessel_length_line.text()])
         interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])
         interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
@@ -67,30 +64,20 @@ class FisheryGui(QDialog, Ui_Fishery):
         interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
         interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
 
-        if not self.gear_comboBox.currentText():
-            QMessageBox.warning(self, "Gear Error", "Please Choose a Fishing Gear Type")
-            return
+        #if not self.gear_comboBox.currentText():
+         #   QMessageBox.warning(self, "Gear Error", "Please Choose a Fishing Gear Type")
+          #  return
 
         self.close()
+        from selectgear import SelectGearGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = SelectFisheryGui(self.parent,flags)
+        wnd = SelectGearGui(self.parent,flags, self.currentStep)
         wnd.show()
 
-            
     def on_pbnCancel_clicked(self):
         self.close()
-        capture_string = QString("Cancelled out of fishery interview...")
-        self.parent.parent.statusbar.showMessage(capture_string)
-        
         # stop interview process
-        # stop interview process
-        self.parent.parent.interviewInProgress = False
-        self.parent.parent.interviewSaveTool = None
-        self.parent.currentFishery = None
-        self.parent.currentEcotourism = None
-        self.parent.currentConsScience = None
-        self.parent.currentOther = None
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+        self.parent.resetInterview("Cancelled out of fishery interview...")
 
     def on_pbnBack_clicked(self):
         self.close()

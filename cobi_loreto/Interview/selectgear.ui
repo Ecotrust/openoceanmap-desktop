@@ -1,31 +1,65 @@
 <ui version="4.0" >
  <author>Aaron Racicot</author>
- <class>SelectFishery</class>
- <widget class="QDialog" name="SelectFishery" >
+ <class>SelectGear</class>
+ <widget class="QDialog" name="SelectGear" >
   <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
-    <height>122</height>
+    <width>666</width>
+    <height>239</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap - Select Fishery</string>
+   <string>OpenOceanMap - Select Gear</string>
   </property>
   <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>Fishery Sector</string>
+     </property>
+     <widget class="QLabel" name="fishery_sector_label" >
+      <property name="geometry" >
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>581</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string/>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </item>
    <item>
     <widget class="QWidget" native="1" name="widget" >
      <layout class="QHBoxLayout" >
       <item>
        <widget class="QLabel" name="fishery_text" >
         <property name="text" >
-         <string>Select Fishery :</string>
+         <string>Select Gear Type:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="fishery_comboBox" >
+       <widget class="QComboBox" name="gear_comboBox" >
+        <property name="maximumSize" >
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <item>
          <property name="text" >
           <string/>
@@ -33,32 +67,32 @@
         </item>
         <item>
          <property name="text" >
-          <string>Shark and Skates</string>
+          <string>Hook and Line</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Coastal reef fish</string>
+          <string>Gillnets</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Deep reef fish</string>
+          <string>Hooka (compressor)</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Migratory fish</string>
+          <string>Traps</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Benthic invertebrate</string>
+          <string>Trawling</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Shrimp</string>
+          <string>Purse Seine</string>
          </property>
         </item>
         <item>
@@ -75,16 +109,9 @@
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
       <item>
-       <widget class="QPushButton" name="pbnFisheryFinished" >
+       <widget class="QPushButton" name="pbnStepFinished" >
         <property name="text" >
-         <string>Exit Fishery Interview</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pbnTypeFinished" >
-        <property name="text" >
-         <string>Switch Vessel / Gear Type</string>
+         <string/>
         </property>
        </widget>
       </item>

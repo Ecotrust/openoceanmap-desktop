@@ -35,44 +35,64 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-#from nextpolygon import *
-#from interviewstart_ui import Ui_InterviewStart
+
+from drawshapes import DrawShapesGui
 
 # UI specific includes
-#from selectfishery_ui import Ui_SelectFishery
-#from nextpolygon_ui import Ui_NextPolygon
-from consscience_ui import Ui_ConsScience
+from selectother_ui import Ui_SelectOther
+from drawshapes_ui import Ui_DrawShapes
 
 from Util.common_functions import *
 
 # General system includes
 import sys
 
-class ConsScienceGui(QDialog, Ui_ConsScience):
-    def __init__(self, parent, flags, prevGUI=None):
+class SelectOtherGui(QDialog, Ui_SelectOther):
+    def __init__(self, parent, flags):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
-        self.prevGUI = prevGUI
 
-    def on_pbnSelectConsScience_released(self):
-
-        interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append(["artespesca", self.specialist_comboBox.currentText()])
-        interviewInfo2.append(["add_info", self.add_info_line.text()])
-
-        if not self.specialist_comboBox.currentText():
-            QMessageBox.warning(self, "Specialist Error", "Please Choose an Specialist Position")
-            return
-
+    def on_pbnStartShapes_released(self):
+        #Get fishery value
+#        cur_fishery = self.fishery_comboBox.currentText()
+ #       if not cur_fishery:
+   #         QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
+     #       return 
+       # else:
+         #   self.parent.currentFishery = cur_fishery
+            
         self.close()
-        from selectconssciens import SelectConsScienceGui
+        mc = self.parent.canvas      
+        self.p = PolygonTool(mc,self.parent)
+        QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
+        self.saveTool = mc.mapTool()
+        mc.setMapTool(self.p)
+            
+    def on_pbnFinished_released(self):
+        self.parent.pennies_left = 100; 
+        self.close()
+        capture_string = QString("Finished with Other interview...")
+        self.parent.parent.statusbar.showMessage(capture_string)
+        
+        # add some features
+        for capPolyRub in self.parent.capturedPolygonsRub:
+            capPolyRub.reset()
+            
+        self.parent.currentOther = None
+
+        if self.parent.currentEcotourism:
+            from ecotourism import EcotourismGui
+            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+            wnd = EcotourismWindowGui(self.parent,flags)
+            wnd.show()    
+        
+        # need a bunch of logic here...
+
+        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+
+
+    def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = SelectConsScienceGui(self.parent,flags)
+        wnd = DrawShapesGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()
-
-
-    def on_pbnCancel_clicked(self):
-        self.close()
-        # stop interview process
-        self.parent.resetInterview("Cancelled out of Conservationist / Scientist interview...")

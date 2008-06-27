@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>490</width>
-    <height>397</height>
+    <width>417</width>
+    <height>367</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -24,112 +24,12 @@
         </font>
        </property>
        <property name="title" >
-        <string>Fishery, Vessel and Port Information</string>
+        <string>Fisher Information</string>
        </property>
        <layout class="QVBoxLayout" >
         <property name="spacing" >
          <number>0</number>
         </property>
-        <item>
-         <widget class="QWidget" native="1" name="home_port_5" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="gear_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Type of Fishing Gear:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="gear_comboBox" >
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <item>
-              <property name="text" >
-               <string/>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Hook and Line</string>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Gillnets</string>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Hooka (compressor)</string>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Traps</string>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Trawling</string>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Purse Seine</string>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Other</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
         <item>
          <widget class="QWidget" native="1" name="vessel_length" >
           <property name="font" >
@@ -795,14 +695,14 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pbnSelectFishery" >
+       <widget class="QPushButton" name="pbnSelectGear" >
         <property name="font" >
          <font>
           <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text" >
-         <string>Draw Fishery Shapes</string>
+         <string>Select Gear Type</string>
         </property>
        </widget>
       </item>

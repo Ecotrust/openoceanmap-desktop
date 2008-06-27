@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ecotourism.ui'
 #
-# Created: Thu Jun 26 01:23:54 2008
+# Created: Thu Jun 26 22:25:03 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -273,5 +273,5 @@ class Ui_Ecotourism(object):
         self.home_port_text.setText(QtGui.QApplication.translate("Ecotourism", "Home Port:", None, QtGui.QApplication.UnicodeUTF8))
         self.workers_text.setText(QtGui.QApplication.translate("Ecotourism", "How many work for the company?", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnCancel.setText(QtGui.QApplication.translate("Ecotourism", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnSelectEcotourism.setText(QtGui.QApplication.translate("Ecotourism", "Draw Ecotourism Shapes", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnSelectEcotourism.setText(QtGui.QApplication.translate("Ecotourism", "Select Ecotourism Type", None, QtGui.QApplication.UnicodeUTF8))
 

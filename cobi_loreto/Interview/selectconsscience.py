@@ -69,7 +69,7 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
             
-    def on_pbnFisheryFinished_released(self):
+    def on_pbnFinished_released(self):
         self.parent.pennies_left = 100; 
         self.close()
         capture_string = QString("Finished with fishery interview...")

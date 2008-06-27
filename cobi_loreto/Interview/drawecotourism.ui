@@ -1,17 +1,17 @@
 <ui version="4.0" >
- <author>Aaron Racicot</author>
- <class>DrawShapes</class>
- <widget class="QDialog" name="DrawShapes" >
+ <author>Dane Springmeyer</author>
+ <class>DrawEcotourism</class>
+ <widget class="QDialog" name="DrawEcotourism" >
   <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>610</width>
+    <width>547</width>
     <height>114</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap - Draw Shapes</string>
+   <string>OpenOceanMap - Next Polygon</string>
   </property>
   <layout class="QGridLayout" >
    <property name="leftMargin" >
@@ -36,9 +36,28 @@
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
       <item>
-       <widget class="QLabel" name="label_1" >
+       <widget class="QLabel" name="type_label" >
+        <property name="minimumSize" >
+         <size>
+          <width>50</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>500</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text" >
-         <string>Weighting (Pennies)</string>
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="penny_label" >
+        <property name="text" >
+         <string>Weighting (pennies):</string>
         </property>
        </widget>
       </item>
@@ -46,6 +65,12 @@
        <widget class="QLineEdit" name="line_1" >
         <property name="enabled" >
          <bool>true</bool>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
         </property>
         <property name="text" >
          <string/>
@@ -74,7 +99,7 @@
      </layout>
     </widget>
    </item>
-   <item row="1" column="0" >
+   <item rowspan="2" row="1" column="0" >
     <widget class="QWidget" native="1" name="widget" >
      <layout class="QHBoxLayout" >
       <item>

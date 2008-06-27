@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>419</width>
-    <height>269</height>
+    <width>417</width>
+    <height>267</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -144,7 +144,7 @@
             <number>4</number>
            </property>
            <item>
-            <widget class="QLabel" name="vessel_length_text" >
+            <widget class="QLabel" name="add_info_text" >
              <property name="minimumSize" >
               <size>
                <width>150</width>
@@ -163,12 +163,12 @@
               </font>
              </property>
              <property name="text" >
-              <string>other info1</string>
+              <string>additional info:</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="vessel_length_line" >
+            <widget class="QLineEdit" name="add_info_line" >
              <property name="enabled" >
               <bool>true</bool>
              </property>
@@ -198,170 +198,6 @@
             </widget>
            </item>
           </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="vessel_length_2" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="vessel_motor_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>other info2</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="vessel_motor_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="vessel_length_3" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="haul_capacity_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>other info3</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="haul_capacity_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="home_port_4" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QVBoxLayout" />
          </widget>
         </item>
        </layout>
@@ -405,7 +241,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Draw Conservationist / Scientist Shapes</string>
+         <string>Select Areas of Expertise</string>
         </property>
        </widget>
       </item>

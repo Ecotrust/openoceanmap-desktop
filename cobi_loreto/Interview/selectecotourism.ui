@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
+    <width>463</width>
     <height>122</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap - Select Fishery</string>
+   <string>OpenOceanMap - Select Ecotourism</string>
   </property>
   <layout class="QVBoxLayout" >
    <item>
@@ -65,16 +65,9 @@
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
       <item>
-       <widget class="QPushButton" name="pbnFisheryFinished" >
+       <widget class="QPushButton" name="pbnFinished" >
         <property name="text" >
-         <string>Exit Fishery Interview</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pbnTypeFinished" >
-        <property name="text" >
-         <string>Switch Type of Employee</string>
+         <string>Exit Ecotourism Step</string>
         </property>
        </widget>
       </item>

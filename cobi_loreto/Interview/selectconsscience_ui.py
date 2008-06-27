@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectconsscience.ui'
 #
-# Created: Thu Jun 26 01:23:54 2008
+# Created: Thu Jun 26 17:47:07 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectConsScience(object):
     def setupUi(self, SelectConsScience):
         SelectConsScience.setObjectName("SelectConsScience")
-        SelectConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,667,122).size()).expandedTo(SelectConsScience.minimumSizeHint()))
+        SelectConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,887,145).size()).expandedTo(SelectConsScience.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(SelectConsScience)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -39,13 +39,9 @@ class Ui_SelectConsScience(object):
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget_2)
         self.hboxlayout1.setObjectName("hboxlayout1")
 
-        self.pbnFisheryFinished = QtGui.QPushButton(self.widget_2)
-        self.pbnFisheryFinished.setObjectName("pbnFisheryFinished")
-        self.hboxlayout1.addWidget(self.pbnFisheryFinished)
-
-        self.pbnTypeFinished = QtGui.QPushButton(self.widget_2)
-        self.pbnTypeFinished.setObjectName("pbnTypeFinished")
-        self.hboxlayout1.addWidget(self.pbnTypeFinished)
+        self.pbnFinished = QtGui.QPushButton(self.widget_2)
+        self.pbnFinished.setObjectName("pbnFinished")
+        self.hboxlayout1.addWidget(self.pbnFinished)
 
         self.pbnStartShapes = QtGui.QPushButton(self.widget_2)
         self.pbnStartShapes.setObjectName("pbnStartShapes")
@@ -56,8 +52,8 @@ class Ui_SelectConsScience(object):
         QtCore.QMetaObject.connectSlotsByName(SelectConsScience)
 
     def retranslateUi(self, SelectConsScience):
-        SelectConsScience.setWindowTitle(QtGui.QApplication.translate("SelectConsScience", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_text.setText(QtGui.QApplication.translate("SelectConsScience", "Select species/ecosystem expertise/concern:", None, QtGui.QApplication.UnicodeUTF8))
+        SelectConsScience.setWindowTitle(QtGui.QApplication.translate("SelectConsScience", "OpenOceanMap - Select Consservation / Science", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_text.setText(QtGui.QApplication.translate("SelectConsScience", "Select species/ecosystem of expertise/concern:", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Deep Sea reefs (all finfish and invertebrates assoc. with reef seamounts)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Soft bottom (sand, mud, etc.)", None, QtGui.QApplication.UnicodeUTF8))
@@ -67,7 +63,6 @@ class Ui_SelectConsScience(object):
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Sea lions", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Dolphins or whales", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "None of the above", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnFisheryFinished.setText(QtGui.QApplication.translate("SelectConsScience", "Exit Fishery Interview", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnTypeFinished.setText(QtGui.QApplication.translate("SelectConsScience", "Switch Type of Specialist", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnFinished.setText(QtGui.QApplication.translate("SelectConsScience", "Exit Conservationist / Scientist Step", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectConsScience", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 
