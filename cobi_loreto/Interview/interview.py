@@ -304,5 +304,5 @@ class Interview(object):
             #Reset penny count
             self.pennies_left = 100
             
-            self.parent.nextStep(previousSelectGui)
+            self.nextStep(previousSelectGui)
 
