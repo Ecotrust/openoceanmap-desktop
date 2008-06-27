@@ -82,7 +82,7 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
             QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This Shape Type is now done.")
-            self.parent.saveShapes(self.previousGui)
+            self.parent.saveShapes(self)
         else:
             mc = self.parent.canvas      
             self.p = PolygonTool(mc,self.parent)

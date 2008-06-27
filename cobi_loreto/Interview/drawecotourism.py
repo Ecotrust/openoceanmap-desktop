@@ -83,7 +83,7 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
             QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This shape is now done.")
-            self.parent.saveShapes(self.previousGui)
+            self.parent.saveShapes(self)
         else:
             mc = self.parent.canvas      
             self.p = PolygonTool(mc,self.parent)
