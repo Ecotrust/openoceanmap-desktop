@@ -63,8 +63,6 @@ class Interview(object):
     self.currentStep = None
     self.shapeType = None
     
-    
-    
     self.currentFishery = None
     self.commFishIncome = None
     self.sportFishIncome = None
@@ -109,6 +107,9 @@ class Interview(object):
         
         
   def nextStep(self, previousGui, msg="Leaving Step"):
+      sector_specific_vessel_port_info = False
+      S = sector_specific_vessel_port_info
+      
       capture_string = QString(msg)
       self.parent.statusbar.showMessage(capture_string)
       self.pennies_left = 100;
@@ -120,25 +121,40 @@ class Interview(object):
           capture_string = QString("Commericial Fishery Income exists, starting that interview...")
           self.parent.statusbar.showMessage(capture_string)
           self.currentStep = 'Commercial Fishery'
-          from fishery import FisheryGui
-          wnd = FisheryGui(self,flags,self.currentStep,previousGui)
-          wnd.show()
-    
+          if S:          
+              from fishery import FisheryGui
+              wnd = FisheryGui(self,flags,self.currentStep,previousGui)
+              wnd.show()
+          else:
+              from selectgear import SelectGearGui
+              wnd = SelectGearGui(self,flags,self.currentStep,previousGui)
+              wnd.show()
+          
       elif self.sportFishIncome:
           capture_string = QString("Commercial Sport Fishery Income exists, starting that interview...")
           self.parent.statusbar.showMessage(capture_string)
           self.currentStep = 'Sport Fishery'
-          from fishery import FisheryGui
-          wnd = FisheryGui(self,flags,self.currentStep,previousGui)
-          wnd.show()            
+          if S:          
+              from fishery import FisheryGui
+              wnd = FisheryGui(self,flags,self.currentStep,previousGui)
+              wnd.show()
+          else:
+              from selectgear import SelectGearGui
+              wnd = SelectGearGui(self,flags,self.currentStep,previousGui)
+              wnd.show()           
     
       elif self.privateFishIncome:
           capture_string = QString("Private Sport Fishery Income exists, starting that interview...")
           self.parent.statusbar.showMessage(capture_string)
           self.currentStep = 'Private Fishery'
-          from fishery import FisheryGui
-          wnd = FisheryGui(self,flags,self.currentStep,previousGui)
-          wnd.show()
+          if S:          
+              from fishery import FisheryGui
+              wnd = FisheryGui(self,flags,self.currentStep,previousGui)
+              wnd.show()
+          else:
+              from selectgear import SelectGearGui
+              wnd = SelectGearGui(self,flags,self.currentStep,previousGui)
+              wnd.show()
     
       elif self.ecotourismIncome:
           capture_string = QString("Ecotourism Income exists, starting that interview...")

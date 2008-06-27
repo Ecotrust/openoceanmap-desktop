@@ -6,14 +6,54 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>417</width>
-    <height>367</height>
+    <width>448</width>
+    <height>433</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Interview</string>
   </property>
   <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="minimumSize" >
+      <size>
+       <width>0</width>
+       <height>63</height>
+      </size>
+     </property>
+     <property name="title" >
+      <string>Fishery Sector</string>
+     </property>
+     <widget class="QLabel" name="fishery_sector_label" >
+      <property name="geometry" >
+       <rect>
+        <x>15</x>
+        <y>20</y>
+        <width>395</width>
+        <height>43</height>
+       </rect>
+      </property>
+      <property name="minimumSize" >
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Dynamic Fishery Sector Name</string>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </item>
    <item>
     <layout class="QHBoxLayout" >
      <item>

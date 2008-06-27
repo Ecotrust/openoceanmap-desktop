@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>668</width>
-    <height>301</height>
+    <width>504</width>
+    <height>197</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -19,35 +19,39 @@
      <property name="minimumSize" >
       <size>
        <width>0</width>
-       <height>40</height>
+       <height>60</height>
       </size>
      </property>
      <property name="title" >
       <string>Fishery Sector</string>
      </property>
-     <layout class="QGridLayout" >
-      <item row="0" column="0" >
-       <widget class="QLabel" name="fishery_sector_label" >
-        <property name="minimumSize" >
-         <size>
-          <width>0</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="font" >
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-        <property name="text" >
-         <string/>
-        </property>
-        <property name="alignment" >
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QLabel" name="fishery_sector_label" >
+      <property name="geometry" >
+       <rect>
+        <x>15</x>
+        <y>15</y>
+        <width>615</width>
+        <height>49</height>
+       </rect>
+      </property>
+      <property name="minimumSize" >
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string/>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
    </item>
    <item>
@@ -64,7 +68,7 @@
        <widget class="QComboBox" name="gear_comboBox" >
         <property name="maximumSize" >
          <size>
-          <width>200</width>
+          <width>300</width>
           <height>16777215</height>
          </size>
         </property>

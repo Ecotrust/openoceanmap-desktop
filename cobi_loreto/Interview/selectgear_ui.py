@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectgear.ui'
 #
-# Created: Fri Jun 27 00:52:40 2008
+# Created: Fri Jun 27 01:01:26 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,19 +12,17 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectGear(object):
     def setupUi(self, SelectGear):
         SelectGear.setObjectName("SelectGear")
-        SelectGear.resize(QtCore.QSize(QtCore.QRect(0,0,668,301).size()).expandedTo(SelectGear.minimumSizeHint()))
+        SelectGear.resize(QtCore.QSize(QtCore.QRect(0,0,504,197).size()).expandedTo(SelectGear.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(SelectGear)
         self.vboxlayout.setObjectName("vboxlayout")
 
         self.groupBox = QtGui.QGroupBox(SelectGear)
-        self.groupBox.setMinimumSize(QtCore.QSize(0,40))
+        self.groupBox.setMinimumSize(QtCore.QSize(0,60))
         self.groupBox.setObjectName("groupBox")
 
-        self.gridlayout = QtGui.QGridLayout(self.groupBox)
-        self.gridlayout.setObjectName("gridlayout")
-
         self.fishery_sector_label = QtGui.QLabel(self.groupBox)
+        self.fishery_sector_label.setGeometry(QtCore.QRect(15,15,615,49))
         self.fishery_sector_label.setMinimumSize(QtCore.QSize(0,40))
 
         font = QtGui.QFont()
@@ -32,7 +30,6 @@ class Ui_SelectGear(object):
         self.fishery_sector_label.setFont(font)
         self.fishery_sector_label.setAlignment(QtCore.Qt.AlignCenter)
         self.fishery_sector_label.setObjectName("fishery_sector_label")
-        self.gridlayout.addWidget(self.fishery_sector_label,0,0,1,1)
         self.vboxlayout.addWidget(self.groupBox)
 
         self.widget = QtGui.QWidget(SelectGear)
@@ -46,7 +43,7 @@ class Ui_SelectGear(object):
         self.hboxlayout.addWidget(self.fishery_text)
 
         self.gear_comboBox = QtGui.QComboBox(self.widget)
-        self.gear_comboBox.setMaximumSize(QtCore.QSize(200,16777215))
+        self.gear_comboBox.setMaximumSize(QtCore.QSize(300,16777215))
         self.gear_comboBox.setObjectName("gear_comboBox")
         self.gear_comboBox.addItem("")
         self.hboxlayout.addWidget(self.gear_comboBox)

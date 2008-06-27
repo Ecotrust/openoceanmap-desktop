@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectother.ui'
 #
-# Created: Fri Jun 27 00:52:42 2008
+# Created: Fri Jun 27 01:01:27 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!

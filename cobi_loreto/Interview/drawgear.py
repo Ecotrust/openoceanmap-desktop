@@ -119,7 +119,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
-            self.parent.capturedPolygonsType.append(self.parent.shapeType)
+            self.parent.capturedPolygonsType.append(self)
         self.close()
         
         self.parent.saveShapes(self)

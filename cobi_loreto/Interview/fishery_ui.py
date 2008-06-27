@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'fishery.ui'
 #
-# Created: Fri Jun 27 00:52:41 2008
+# Created: Fri Jun 27 01:10:57 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,10 +12,25 @@ from PyQt4 import QtCore, QtGui
 class Ui_Fishery(object):
     def setupUi(self, Fishery):
         Fishery.setObjectName("Fishery")
-        Fishery.resize(QtCore.QSize(QtCore.QRect(0,0,417,367).size()).expandedTo(Fishery.minimumSizeHint()))
+        Fishery.resize(QtCore.QSize(QtCore.QRect(0,0,448,433).size()).expandedTo(Fishery.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(Fishery)
         self.vboxlayout.setObjectName("vboxlayout")
+
+        self.groupBox = QtGui.QGroupBox(Fishery)
+        self.groupBox.setMinimumSize(QtCore.QSize(0,63))
+        self.groupBox.setObjectName("groupBox")
+
+        self.fishery_sector_label = QtGui.QLabel(self.groupBox)
+        self.fishery_sector_label.setGeometry(QtCore.QRect(15,20,395,43))
+        self.fishery_sector_label.setMinimumSize(QtCore.QSize(0,40))
+
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.fishery_sector_label.setFont(font)
+        self.fishery_sector_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.fishery_sector_label.setObjectName("fishery_sector_label")
+        self.vboxlayout.addWidget(self.groupBox)
 
         self.hboxlayout = QtGui.QHBoxLayout()
         self.hboxlayout.setObjectName("hboxlayout")
@@ -345,6 +360,8 @@ class Ui_Fishery(object):
 
     def retranslateUi(self, Fishery):
         Fishery.setWindowTitle(QtGui.QApplication.translate("Fishery", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtGui.QApplication.translate("Fishery", "Fishery Sector", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_sector_label.setText(QtGui.QApplication.translate("Fishery", "Dynamic Fishery Sector Name", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_info.setTitle(QtGui.QApplication.translate("Fishery", "Fisher Information", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_length_text.setText(QtGui.QApplication.translate("Fishery", "Vessel length (meters) :", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_motor_text.setText(QtGui.QApplication.translate("Fishery", "Vessel motor (horsepower):", None, QtGui.QApplication.UnicodeUTF8))

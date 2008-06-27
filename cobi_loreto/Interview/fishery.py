@@ -51,6 +51,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.parent = parent
         self.prevGUI = prevGUI
         self.currentStep = fishery_sector
+        self.fishery_sector_label.setText(str(self.currentStep))
 
     def on_pbnSelectGear_released(self):
         interviewInfo2 = self.parent.interviewInfo2
