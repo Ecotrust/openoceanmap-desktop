@@ -89,7 +89,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
                 return
             else:
                 if not self.comm_sport_line.text() == '0':
-                    self.parent.commSportIncome = int(self.comm_sport_line.text())
+                    self.parent.sportFishIncome = int(self.comm_sport_line.text())
 
         if self.private_fish_line:
             if not strIsInt(self.private_fish_line.text()):

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectgear.ui'
 #
-# Created: Thu Jun 26 22:25:03 2008
+# Created: Thu Jun 26 22:34:30 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,22 +12,27 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectGear(object):
     def setupUi(self, SelectGear):
         SelectGear.setObjectName("SelectGear")
-        SelectGear.resize(QtCore.QSize(QtCore.QRect(0,0,666,239).size()).expandedTo(SelectGear.minimumSizeHint()))
+        SelectGear.resize(QtCore.QSize(QtCore.QRect(0,0,668,301).size()).expandedTo(SelectGear.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(SelectGear)
         self.vboxlayout.setObjectName("vboxlayout")
 
         self.groupBox = QtGui.QGroupBox(SelectGear)
+        self.groupBox.setMinimumSize(QtCore.QSize(0,40))
         self.groupBox.setObjectName("groupBox")
 
+        self.gridlayout = QtGui.QGridLayout(self.groupBox)
+        self.gridlayout.setObjectName("gridlayout")
+
         self.fishery_sector_label = QtGui.QLabel(self.groupBox)
-        self.fishery_sector_label.setGeometry(QtCore.QRect(30,30,581,36))
+        self.fishery_sector_label.setMinimumSize(QtCore.QSize(0,40))
 
         font = QtGui.QFont()
         font.setPointSize(14)
         self.fishery_sector_label.setFont(font)
         self.fishery_sector_label.setAlignment(QtCore.Qt.AlignCenter)
         self.fishery_sector_label.setObjectName("fishery_sector_label")
+        self.gridlayout.addWidget(self.fishery_sector_label,0,0,1,1)
         self.vboxlayout.addWidget(self.groupBox)
 
         self.widget = QtGui.QWidget(SelectGear)
