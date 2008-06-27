@@ -37,7 +37,7 @@ from qgis.gui import *
 from Tools.polygontool import *
 
 # UI specific includes
-from selectconsscience_ui import Ui_ConsScience
+from consscience_ui import Ui_ConsScience
 
 from Util.common_functions import *
 
