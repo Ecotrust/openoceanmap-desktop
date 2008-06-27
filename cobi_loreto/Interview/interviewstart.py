@@ -75,6 +75,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append([u"otro", self.other_line.text()])
         interviewInfo2.append([u"otro_desc", self.define_other_line.text()])
 
+
         if self.comm_fish_line:
             if not strIsInt(self.comm_fish_line.text()):
                 QMessageBox.warning(self, "Income Error", "Income value must be a number (no decimals)")
