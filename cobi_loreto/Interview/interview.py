@@ -319,22 +319,14 @@ class Interview(object):
             for capPolyInd, capPoly in enumerate(self.capturedPolygons):
                 fet = QgsFeature()
                 ret_val = fet.setGeometry(QgsGeometry.fromWkt(capPoly))
-                #keySort = self.interviewInfo2.keys()
-                #keySort.sort()
-                #i = 0
-                for index,value in enumerate(self.interviewInfo2):
-                  print index, value
                 
                 for index,value in enumerate(self.interviewInfo2):
                   fet.addAttribute(index, QVariant(value[1]))
 
                 fet.addAttribute(index+1, QVariant(self.capturedPolygonsType[capPolyInd]))
-                fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
-                
-                #fet.addAttribute(0, QVariant(self.interviewInfo[0]))
-                #fet.addAttribute(1, QVariant(self.interviewInfo[1]))
-                #fet.addAttribute(2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+                fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))                
                 writer.addFeature(fet)
+                
             del writer
             capture_string = QString("Wrote Shapefile..." + write_string)
             self.parent.statusbar.showMessage(capture_string)
@@ -351,20 +343,20 @@ class Interview(object):
               #Pull out
               return
             print len(self.interviewInfo2)
-            label_index = len(self.interviewInfo2) + 2
-            layer.label().setLabelField(QgsLabel.Text, label_index)
+            penny_label_index = len(self.interviewInfo2) + 1
+            layer.label().setLabelField(QgsLabel.Text, penny_label_index)
             layer.setLabelOn(True)
-            
+
             # Set the transparency for the layer
             layer.setTransparency(190)
             
             QgsMapLayerRegistry.instance().addMapLayer(layer)
-            
+
             # set the map canvas layer set
             cl = QgsMapCanvasLayer(layer)
             self.mainwindow.layers.insert(0,cl)
             self.canvas.setLayerSet(self.mainwindow.layers)
-            
+
             #Add item to legend
             self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
 
@@ -375,12 +367,9 @@ class Interview(object):
             self.capturedPolygonsType = []
             self.capturedPolygonsPennies = []
             self.capturedPolygonsRub = []
-            
-            # Fire up the select type gui again...
-            #flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
-            
+
             #Reset penny count
             self.pennies_left = 100
-            
+
             drawGui.previousGui.show()
 

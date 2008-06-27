@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>547</width>
-    <height>134</height>
+    <height>142</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -34,8 +34,8 @@
    </property>
    <item row="0" column="0" >
     <widget class="QWidget" native="1" name="widget_2" >
-     <layout class="QHBoxLayout" >
-      <item>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
        <widget class="QLabel" name="type_label" >
         <property name="minimumSize" >
          <size>
@@ -49,74 +49,86 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="font" >
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text" >
-         <string/>
+         <string>Type of Tourism</string>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QLabel" name="penny_label" >
-        <property name="text" >
-         <string>Weighting (pennies):</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="line_1" >
-        <property name="enabled" >
-         <bool>true</bool>
-        </property>
-        <property name="maximumSize" >
-         <size>
-          <width>150</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text" >
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="pl_label" >
-        <property name="minimumSize" >
-         <size>
-          <width>50</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize" >
-         <size>
-          <width>50</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text" >
-         <string/>
-        </property>
-       </widget>
+      <item row="1" column="0" >
+       <layout class="QHBoxLayout" >
+        <item>
+         <widget class="QLabel" name="penny_label" >
+          <property name="text" >
+           <string>Weighting (pennies):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="line_1" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>150</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="pl_label" >
+          <property name="minimumSize" >
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="2" column="0" >
+   <item rowspan="2" row="1" column="0" >
     <widget class="QWidget" native="1" name="widget" >
-     <layout class="QHBoxLayout" >
-      <item>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
        <widget class="QPushButton" name="pbnShapeFinished" >
         <property name="text" >
          <string>Finished With Shapes</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="0" column="1" >
        <widget class="QPushButton" name="pbnShapeDiscard" >
         <property name="text" >
          <string>Discard Last Shape...</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="0" column="2" >
        <widget class="QPushButton" name="pbnMoreShapes" >
         <property name="text" >
          <string>Draw More Shapes...</string>

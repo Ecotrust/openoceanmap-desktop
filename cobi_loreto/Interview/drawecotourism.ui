@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>547</width>
-    <height>114</height>
+    <width>555</width>
+    <height>142</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -34,7 +34,7 @@
    </property>
    <item row="0" column="0" >
     <widget class="QWidget" native="1" name="widget_2" >
-     <layout class="QHBoxLayout" >
+     <layout class="QVBoxLayout" >
       <item>
        <widget class="QLabel" name="type_label" >
         <property name="minimumSize" >
@@ -49,52 +49,64 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="font" >
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text" >
-         <string/>
+         <string>Type of Tourism</string>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="penny_label" >
-        <property name="text" >
-         <string>Weighting (pennies):</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="line_1" >
-        <property name="enabled" >
-         <bool>true</bool>
-        </property>
-        <property name="maximumSize" >
-         <size>
-          <width>150</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text" >
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="pl_label" >
-        <property name="minimumSize" >
-         <size>
-          <width>50</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize" >
-         <size>
-          <width>50</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text" >
-         <string/>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" >
+        <item>
+         <widget class="QLabel" name="penny_label" >
+          <property name="text" >
+           <string>Weighting (pennies):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="line_1" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>150</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="pl_label" >
+          <property name="minimumSize" >
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>

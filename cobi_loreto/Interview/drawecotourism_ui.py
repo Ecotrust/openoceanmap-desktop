@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawecotourism.ui'
 #
-# Created: Fri Jun 27 16:23:31 2008
+# Created: Fri Jun 27 16:39:33 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_DrawEcotourism(object):
     def setupUi(self, DrawEcotourism):
         DrawEcotourism.setObjectName("DrawEcotourism")
-        DrawEcotourism.resize(QtCore.QSize(QtCore.QRect(0,0,547,114).size()).expandedTo(DrawEcotourism.minimumSizeHint()))
+        DrawEcotourism.resize(QtCore.QSize(QtCore.QRect(0,0,547,142).size()).expandedTo(DrawEcotourism.minimumSizeHint()))
 
         self.gridlayout = QtGui.QGridLayout(DrawEcotourism)
         self.gridlayout.setMargin(9)
@@ -22,14 +22,18 @@ class Ui_DrawEcotourism(object):
         self.widget_2 = QtGui.QWidget(DrawEcotourism)
         self.widget_2.setObjectName("widget_2")
 
-        self.hboxlayout = QtGui.QHBoxLayout(self.widget_2)
-        self.hboxlayout.setObjectName("hboxlayout")
+        self.vboxlayout = QtGui.QVBoxLayout(self.widget_2)
+        self.vboxlayout.setObjectName("vboxlayout")
 
         self.type_label = QtGui.QLabel(self.widget_2)
         self.type_label.setMinimumSize(QtCore.QSize(50,0))
         self.type_label.setMaximumSize(QtCore.QSize(500,16777215))
+        self.type_label.setAlignment(QtCore.Qt.AlignCenter)
         self.type_label.setObjectName("type_label")
-        self.hboxlayout.addWidget(self.type_label)
+        self.vboxlayout.addWidget(self.type_label)
+
+        self.hboxlayout = QtGui.QHBoxLayout()
+        self.hboxlayout.setObjectName("hboxlayout")
 
         self.penny_label = QtGui.QLabel(self.widget_2)
         self.penny_label.setObjectName("penny_label")
@@ -46,6 +50,7 @@ class Ui_DrawEcotourism(object):
         self.pl_label.setMaximumSize(QtCore.QSize(50,16777215))
         self.pl_label.setObjectName("pl_label")
         self.hboxlayout.addWidget(self.pl_label)
+        self.vboxlayout.addLayout(self.hboxlayout)
         self.gridlayout.addWidget(self.widget_2,0,0,1,1)
 
         self.widget = QtGui.QWidget(DrawEcotourism)
@@ -72,6 +77,7 @@ class Ui_DrawEcotourism(object):
 
     def retranslateUi(self, DrawEcotourism):
         DrawEcotourism.setWindowTitle(QtGui.QApplication.translate("DrawEcotourism", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
+        self.type_label.setText(QtGui.QApplication.translate("DrawEcotourism", "Type of Tourism", None, QtGui.QApplication.UnicodeUTF8))
         self.penny_label.setText(QtGui.QApplication.translate("DrawEcotourism", "Weighting (pennies):", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("DrawEcotourism", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawEcotourism", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))

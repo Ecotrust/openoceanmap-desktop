@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawconsscience.ui'
 #
-# Created: Fri Jun 27 16:23:32 2008
+# Created: Fri Jun 27 16:39:33 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_DrawConsScience(object):
     def setupUi(self, DrawConsScience):
         DrawConsScience.setObjectName("DrawConsScience")
-        DrawConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,547,134).size()).expandedTo(DrawConsScience.minimumSizeHint()))
+        DrawConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,547,142).size()).expandedTo(DrawConsScience.minimumSizeHint()))
 
         self.gridlayout = QtGui.QGridLayout(DrawConsScience)
         self.gridlayout.setMargin(9)
@@ -22,14 +22,18 @@ class Ui_DrawConsScience(object):
         self.widget_2 = QtGui.QWidget(DrawConsScience)
         self.widget_2.setObjectName("widget_2")
 
-        self.hboxlayout = QtGui.QHBoxLayout(self.widget_2)
-        self.hboxlayout.setObjectName("hboxlayout")
+        self.gridlayout1 = QtGui.QGridLayout(self.widget_2)
+        self.gridlayout1.setObjectName("gridlayout1")
 
         self.type_label = QtGui.QLabel(self.widget_2)
         self.type_label.setMinimumSize(QtCore.QSize(50,0))
         self.type_label.setMaximumSize(QtCore.QSize(500,16777215))
+        self.type_label.setAlignment(QtCore.Qt.AlignCenter)
         self.type_label.setObjectName("type_label")
-        self.hboxlayout.addWidget(self.type_label)
+        self.gridlayout1.addWidget(self.type_label,0,0,1,1)
+
+        self.hboxlayout = QtGui.QHBoxLayout()
+        self.hboxlayout.setObjectName("hboxlayout")
 
         self.penny_label = QtGui.QLabel(self.widget_2)
         self.penny_label.setObjectName("penny_label")
@@ -46,32 +50,34 @@ class Ui_DrawConsScience(object):
         self.pl_label.setMaximumSize(QtCore.QSize(50,16777215))
         self.pl_label.setObjectName("pl_label")
         self.hboxlayout.addWidget(self.pl_label)
+        self.gridlayout1.addLayout(self.hboxlayout,1,0,1,1)
         self.gridlayout.addWidget(self.widget_2,0,0,1,1)
 
         self.widget = QtGui.QWidget(DrawConsScience)
         self.widget.setObjectName("widget")
 
-        self.hboxlayout1 = QtGui.QHBoxLayout(self.widget)
-        self.hboxlayout1.setObjectName("hboxlayout1")
+        self.gridlayout2 = QtGui.QGridLayout(self.widget)
+        self.gridlayout2.setObjectName("gridlayout2")
 
         self.pbnShapeFinished = QtGui.QPushButton(self.widget)
         self.pbnShapeFinished.setObjectName("pbnShapeFinished")
-        self.hboxlayout1.addWidget(self.pbnShapeFinished)
+        self.gridlayout2.addWidget(self.pbnShapeFinished,0,0,1,1)
 
         self.pbnShapeDiscard = QtGui.QPushButton(self.widget)
         self.pbnShapeDiscard.setObjectName("pbnShapeDiscard")
-        self.hboxlayout1.addWidget(self.pbnShapeDiscard)
+        self.gridlayout2.addWidget(self.pbnShapeDiscard,0,1,1,1)
 
         self.pbnMoreShapes = QtGui.QPushButton(self.widget)
         self.pbnMoreShapes.setObjectName("pbnMoreShapes")
-        self.hboxlayout1.addWidget(self.pbnMoreShapes)
-        self.gridlayout.addWidget(self.widget,2,0,1,1)
+        self.gridlayout2.addWidget(self.pbnMoreShapes,0,2,1,1)
+        self.gridlayout.addWidget(self.widget,1,0,2,1)
 
         self.retranslateUi(DrawConsScience)
         QtCore.QMetaObject.connectSlotsByName(DrawConsScience)
 
     def retranslateUi(self, DrawConsScience):
         DrawConsScience.setWindowTitle(QtGui.QApplication.translate("DrawConsScience", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
+        self.type_label.setText(QtGui.QApplication.translate("DrawConsScience", "Type of Tourism", None, QtGui.QApplication.UnicodeUTF8))
         self.penny_label.setText(QtGui.QApplication.translate("DrawConsScience", "Weighting (pennies):", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("DrawConsScience", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawConsScience", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))
