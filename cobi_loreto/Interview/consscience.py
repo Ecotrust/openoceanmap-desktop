@@ -66,7 +66,7 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
             return
 
         self.close()
-        from selectconssciens import SelectConsScienceGui
+        from selectconsscience import SelectConsScienceGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = SelectConsScienceGui(self.parent,flags)
         wnd.show()
