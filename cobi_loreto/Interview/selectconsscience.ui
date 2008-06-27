@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>578</width>
-    <height>180</height>
+    <width>479</width>
+    <height>122</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -16,11 +16,11 @@
   <layout class="QVBoxLayout" >
    <item>
     <widget class="QWidget" native="1" name="widget" >
-     <layout class="QVBoxLayout" >
+     <layout class="QHBoxLayout" >
       <item>
        <widget class="QLabel" name="fishery_text" >
         <property name="text" >
-         <string>Select species/ecosystem of expertise/concern:</string>
+         <string>Select focus:</string>
         </property>
        </widget>
       </item>
@@ -28,9 +28,15 @@
        <widget class="QComboBox" name="comboBox" >
         <property name="maximumSize" >
          <size>
-          <width>700</width>
+          <width>350</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="layoutDirection" >
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="sizeAdjustPolicy" >
+         <enum>QComboBox::AdjustToContents</enum>
         </property>
         <item>
          <property name="text" >
@@ -91,22 +97,9 @@
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
       <item>
-       <spacer>
-        <property name="orientation" >
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" >
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
        <widget class="QPushButton" name="pbnFinished" >
         <property name="text" >
-         <string>Exit Conservationist / Scientist Step</string>
+         <string>Exit Cons / Scientist Step</string>
         </property>
        </widget>
       </item>

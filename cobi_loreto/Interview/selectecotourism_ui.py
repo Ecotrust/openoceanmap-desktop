@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectecotourism.ui'
 #
-# Created: Fri Jun 27 00:06:28 2008
+# Created: Fri Jun 27 16:31:09 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
