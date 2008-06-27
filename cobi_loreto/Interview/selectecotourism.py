@@ -52,7 +52,7 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
 
     def on_pbnStartShapes_released(self):
         #Get fishery value
-        shape_type = self.fishery_comboBox.currentText()
+        shape_type = self.comboBox.currentText()
         if not shape_type:
             QMessageBox.warning(self, "Tourism Error", "Please select a tourism type")
             return 
@@ -71,21 +71,6 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         self.parent.ecotourismIncome = None
         self.parent.nextStep(self, "Finished with fishery interview...")
 
-    def on_pbnTypeFinished_released(self):
-        self.parent.pennies_left = 100;
-        self.close()
-        capture_string = QString("Finished with certain shape type...")
-        self.parent.parent.statusbar.showMessage(capture_string)
-
-        from ecotourism import EcotourismGui
-        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = EcotourismGui(self.parent,flags)
-        wnd.show()
-
-        # add some features
-        for capPolyRub in self.parent.capturedPolygonsRub:
-            capPolyRub.reset()
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     def nextPolygon(self):
         from drawecotourism import DrawEcotourismGui

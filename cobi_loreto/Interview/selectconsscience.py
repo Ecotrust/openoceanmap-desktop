@@ -36,11 +36,8 @@ from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
 
-from drawshapes import DrawShapesGui
-
 # UI specific includes
 from selectconsscience_ui import Ui_ConsScience
-from drawshapes_ui import Ui_DrawShapes
 
 from Util.common_functions import *
 
@@ -55,12 +52,12 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
 
     def on_pbnStartShapes_released(self):
         #Get fishery value
-        cur_fishery = self.fishery_comboBox.currentText()
+        shape_type = self.comboBox.currentText()
         if not cur_fishery:
-            QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
+            QMessageBox.warning(self, "Ecosystem Error", "Please select a focus area")
             return 
         else:
-            self.parent.currentFishery = cur_fishery
+            self.parent.shapeType = shape_type
             
         self.close()
         mc = self.parent.canvas      
@@ -70,47 +67,12 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
         mc.setMapTool(self.p)
             
     def on_pbnFinished_released(self):
-        self.parent.pennies_left = 100; 
         self.close()
-        capture_string = QString("Finished with fishery interview...")
-        self.parent.parent.statusbar.showMessage(capture_string)
-        
-        # add some features
-        for capPolyRub in self.parent.capturedPolygonsRub:
-            capPolyRub.reset()
-            
-        self.parent.currentFishery = None
+        self.parent.consScienceIncome = None
+        self.parent.nextStep(self, "Finishing Cons interview")
 
-        if self.parent.currentEcotourism:
-            from ecotourism import EcotourismGui
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = EcotourismWindowGui(self.parent,flags)
-            wnd.show()    
-        
-        # need a bunch of logic here...
-
-
-
-
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
-
-    def on_pbnTypeFinished_released(self):
-        self.parent.pennies_left = 100;
-        self.close()
-        capture_string = QString("Finished with gear types...")
-        self.parent.parent.statusbar.showMessage(capture_string)
-
-        from consscience import ConsScienceGui
-        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = ConsScienceGui(self.parent,flags)
-        wnd.show()
-
-        # add some features
-        for capPolyRub in self.parent.capturedPolygonsRub:
-            capPolyRub.reset()
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawShapesGui(self.parent,flags,self.parent.pennies_left)
+        wnd = DrawConsScienceGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()

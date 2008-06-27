@@ -25,7 +25,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="fishery_comboBox" >
+       <widget class="QComboBox" name="comboBox" >
         <item>
          <property name="text" >
           <string/>

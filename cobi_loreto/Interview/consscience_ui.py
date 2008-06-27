@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'consscience.ui'
 #
-# Created: Thu Jun 26 22:34:30 2008
+# Created: Thu Jun 26 22:57:22 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
