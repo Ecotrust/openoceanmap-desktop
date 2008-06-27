@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ecotourism.ui'
 #
-# Created: Thu Jun 26 23:51:08 2008
+# Created: Fri Jun 27 00:52:41 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -53,11 +53,11 @@ class Ui_Ecotourism(object):
         self.employee_text.setObjectName("employee_text")
         self.hboxlayout1.addWidget(self.employee_text)
 
-        self.employee_comboBox = QtGui.QComboBox(self.home_port_5)
-        self.employee_comboBox.setMaximumSize(QtCore.QSize(200,16777215))
-        self.employee_comboBox.setObjectName("employee_comboBox")
-        self.employee_comboBox.addItem("")
-        self.hboxlayout1.addWidget(self.employee_comboBox)
+        self.comboBox = QtGui.QComboBox(self.home_port_5)
+        self.comboBox.setMaximumSize(QtCore.QSize(200,16777215))
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.hboxlayout1.addWidget(self.comboBox)
         self.vboxlayout1.addWidget(self.home_port_5)
 
         self.vessel_length = QtGui.QWidget(self.vessel_info)
@@ -263,10 +263,10 @@ class Ui_Ecotourism(object):
     def retranslateUi(self, Ecotourism):
         Ecotourism.setWindowTitle(QtGui.QApplication.translate("Ecotourism", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_info.setTitle(QtGui.QApplication.translate("Ecotourism", "Ecotourism Info", None, QtGui.QApplication.UnicodeUTF8))
-        self.employee_text.setText(QtGui.QApplication.translate("Ecotourism", "Type of Empolyee:", None, QtGui.QApplication.UnicodeUTF8))
-        self.employee_comboBox.addItem(QtGui.QApplication.translate("Ecotourism", "Owner", None, QtGui.QApplication.UnicodeUTF8))
-        self.employee_comboBox.addItem(QtGui.QApplication.translate("Ecotourism", "Captain of Boat", None, QtGui.QApplication.UnicodeUTF8))
-        self.employee_comboBox.addItem(QtGui.QApplication.translate("Ecotourism", "Other", None, QtGui.QApplication.UnicodeUTF8))
+        self.employee_text.setText(QtGui.QApplication.translate("Ecotourism", "Type of Employee:", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.addItem(QtGui.QApplication.translate("Ecotourism", "Owner", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.addItem(QtGui.QApplication.translate("Ecotourism", "Captain of Boat", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.addItem(QtGui.QApplication.translate("Ecotourism", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_length_text.setText(QtGui.QApplication.translate("Ecotourism", "Vessel length (meters) :", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_motor_text.setText(QtGui.QApplication.translate("Ecotourism", "Vessel motor (horsepower):", None, QtGui.QApplication.UnicodeUTF8))
         self.haul_capacity_text.setText(QtGui.QApplication.translate("Ecotourism", "Haul Capacity (kilograms):", None, QtGui.QApplication.UnicodeUTF8))

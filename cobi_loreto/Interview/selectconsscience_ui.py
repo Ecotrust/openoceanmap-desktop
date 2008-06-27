@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectconsscience.ui'
 #
-# Created: Thu Jun 26 23:16:04 2008
+# Created: Fri Jun 27 00:52:41 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectConsScience(object):
     def setupUi(self, SelectConsScience):
         SelectConsScience.setObjectName("SelectConsScience")
-        SelectConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,887,145).size()).expandedTo(SelectConsScience.minimumSizeHint()))
+        SelectConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,888,177).size()).expandedTo(SelectConsScience.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(SelectConsScience)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -52,7 +52,7 @@ class Ui_SelectConsScience(object):
         QtCore.QMetaObject.connectSlotsByName(SelectConsScience)
 
     def retranslateUi(self, SelectConsScience):
-        SelectConsScience.setWindowTitle(QtGui.QApplication.translate("SelectConsScience", "OpenOceanMap - Select Consservation / Science", None, QtGui.QApplication.UnicodeUTF8))
+        SelectConsScience.setWindowTitle(QtGui.QApplication.translate("SelectConsScience", "OpenOceanMap - Select Conservation / Science", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text.setText(QtGui.QApplication.translate("SelectConsScience", "Select species/ecosystem of expertise/concern:", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Deep Sea reefs (all finfish and invertebrates assoc. with reef seamounts)", None, QtGui.QApplication.UnicodeUTF8))

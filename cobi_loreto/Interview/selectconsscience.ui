@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>887</width>
-    <height>145</height>
+    <width>888</width>
+    <height>177</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap - Select Consservation / Science</string>
+   <string>OpenOceanMap - Select Conservation / Science</string>
   </property>
   <layout class="QVBoxLayout" >
    <item>

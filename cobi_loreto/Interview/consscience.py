@@ -35,12 +35,9 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-#from nextpolygon import *
-#from interviewstart_ui import Ui_InterviewStart
 
 # UI specific includes
-#from selectfishery_ui import Ui_SelectFishery
-#from nextpolygon_ui import Ui_NextPolygon
+
 from consscience_ui import Ui_ConsScience
 
 from Util.common_functions import *
@@ -70,7 +67,6 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = SelectConsScienceGui(self.parent,flags)
         wnd.show()
-
 
     def on_pbnCancel_clicked(self):
         self.close()

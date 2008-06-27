@@ -53,14 +53,14 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
     def on_pbnSelectEcotourism_released(self):
 
         interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append(["artespesca", self.employee_comboBox.currentText()])
+        interviewInfo2.append(["artespesca", self.comboBox.currentText()])
         interviewInfo2.append(["e_v_len", self.vessel_length_line.text()])
         interviewInfo2.append(["e_v_motor", self.vessel_motor_line.text()])
         interviewInfo2.append(["e_v_cap", self.haul_capacity_line.text()])
         interviewInfo2.append(["e_v_homep", self.home_port_line.text()])
         interviewInfo2.append(["e_trabajos", self.workers_line.text()])
 
-        if not self.employee_comboBox.currentText():
+        if not self.comboBox.currentText():
             QMessageBox.warning(self, "Employee Error", "Please Choose an Ecotourism Activity")
             return
 
@@ -69,6 +69,7 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = SelectEcotourismGui(self.parent,flags)
         wnd.show()
+
 
     def on_pbnCancel_clicked(self):
         self.close()

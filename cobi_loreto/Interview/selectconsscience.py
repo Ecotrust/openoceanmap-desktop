@@ -37,14 +37,14 @@ from qgis.gui import *
 from Tools.polygontool import *
 
 # UI specific includes
-from consscience_ui import Ui_ConsScience
+from selectconsscience_ui import Ui_SelectConsScience
 
 from Util.common_functions import *
 
 # General system includes
 import sys
 
-class SelectConsScienceGui(QDialog, Ui_ConsScience):
+class SelectConsScienceGui(QDialog, Ui_SelectConsScience):
     def __init__(self, parent, flags):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)

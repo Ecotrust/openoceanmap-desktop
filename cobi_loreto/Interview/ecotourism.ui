@@ -73,12 +73,12 @@
               </font>
              </property>
              <property name="text" >
-              <string>Type of Empolyee:</string>
+              <string>Type of Employee:</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QComboBox" name="employee_comboBox" >
+            <widget class="QComboBox" name="comboBox" >
              <property name="maximumSize" >
               <size>
                <width>200</width>

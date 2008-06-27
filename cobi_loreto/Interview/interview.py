@@ -150,9 +150,9 @@ class Interview(object):
           wnd.show()
           
       elif self.consScienceIncome:
-          capture_string = QString("Ecotourism Income exists, starting that interview...")
+          capture_string = QString("Conservation / Scientist Income exists, starting that interview...")
           self.parent.statusbar.showMessage(capture_string)
-          self.currentStep = 'Conservationist / Scientist'
+          self.currentStep = 'Conservationist Scientist'
           from consscience import ConsScienceGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
           wnd = ConsScienceGui(self,flags,previousGui)
