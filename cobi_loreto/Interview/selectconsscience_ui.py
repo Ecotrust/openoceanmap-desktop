@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectconsscience.ui'
 #
-# Created: Fri Jun 27 16:31:10 2008
+# Created: Sat Jun 28 18:45:45 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,21 +12,16 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectConsScience(object):
     def setupUi(self, SelectConsScience):
         SelectConsScience.setObjectName("SelectConsScience")
-        SelectConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,479,122).size()).expandedTo(SelectConsScience.minimumSizeHint()))
-
+        SelectConsScience.resize(454,105)
         self.vboxlayout = QtGui.QVBoxLayout(SelectConsScience)
         self.vboxlayout.setObjectName("vboxlayout")
-
         self.widget = QtGui.QWidget(SelectConsScience)
         self.widget.setObjectName("widget")
-
         self.hboxlayout = QtGui.QHBoxLayout(self.widget)
         self.hboxlayout.setObjectName("hboxlayout")
-
         self.fishery_text = QtGui.QLabel(self.widget)
         self.fishery_text.setObjectName("fishery_text")
         self.hboxlayout.addWidget(self.fishery_text)
-
         self.comboBox = QtGui.QComboBox(self.widget)
         self.comboBox.setMaximumSize(QtCore.QSize(350,16777215))
         self.comboBox.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -35,17 +30,13 @@ class Ui_SelectConsScience(object):
         self.comboBox.addItem("")
         self.hboxlayout.addWidget(self.comboBox)
         self.vboxlayout.addWidget(self.widget)
-
         self.widget_2 = QtGui.QWidget(SelectConsScience)
         self.widget_2.setObjectName("widget_2")
-
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget_2)
         self.hboxlayout1.setObjectName("hboxlayout1")
-
         self.pbnFinished = QtGui.QPushButton(self.widget_2)
         self.pbnFinished.setObjectName("pbnFinished")
         self.hboxlayout1.addWidget(self.pbnFinished)
-
         self.pbnStartShapes = QtGui.QPushButton(self.widget_2)
         self.pbnStartShapes.setObjectName("pbnStartShapes")
         self.hboxlayout1.addWidget(self.pbnStartShapes)

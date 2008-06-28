@@ -6,33 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>775</width>
-    <height>183</height>
+    <width>452</width>
+    <height>239</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Next Polygon</string>
   </property>
-  <layout class="QGridLayout" >
-   <property name="leftMargin" >
-    <number>9</number>
-   </property>
-   <property name="topMargin" >
-    <number>9</number>
-   </property>
-   <property name="rightMargin" >
-    <number>9</number>
-   </property>
-   <property name="bottomMargin" >
-    <number>9</number>
-   </property>
-   <property name="horizontalSpacing" >
-    <number>6</number>
-   </property>
-   <property name="verticalSpacing" >
-    <number>6</number>
-   </property>
-   <item row="0" column="0" >
+  <layout class="QVBoxLayout" name="verticalLayout_4" >
+   <item>
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
       <item>
@@ -104,7 +86,90 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="0" >
+   <item>
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>Check which types of species are caught in this area:</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" >
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout" >
+        <item>
+         <widget class="QCheckBox" name="s5" >
+          <property name="text" >
+           <string>Benthic fish</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="s2" >
+          <property name="text" >
+           <string>Coastal reef fish</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="s3" >
+          <property name="text" >
+           <string>Deep reef fish</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2" >
+        <item>
+         <widget class="QCheckBox" name="s4" >
+          <property name="text" >
+           <string>Migratory fish</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="s1" >
+          <property name="text" >
+           <string>Sharks and Skates</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="s6" >
+          <property name="text" >
+           <string>Shrimp</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3" >
+        <item>
+         <widget class="QCheckBox" name="s7" >
+          <property name="text" >
+           <string>Other</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer" >
+          <property name="orientation" >
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QWidget" native="1" name="widget" >
      <layout class="QHBoxLayout" >
       <item>
@@ -112,7 +177,7 @@
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" >
+        <property name="sizeHint" stdset="0" >
          <size>
           <width>196</width>
           <height>20</height>
@@ -140,90 +205,6 @@
          <string>Draw More Shapes...</string>
         </property>
        </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="0" >
-    <widget class="QGroupBox" name="groupBox" >
-     <property name="title" >
-      <string>Check which types of species are caught in this area:</string>
-     </property>
-     <layout class="QHBoxLayout" >
-      <item>
-       <spacer>
-        <property name="orientation" >
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" >
-         <size>
-          <width>66</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="s1" >
-        <property name="text" >
-         <string>Sharks and Skates</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="s2" >
-        <property name="text" >
-         <string>Coastal reef fish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="s3" >
-        <property name="text" >
-         <string>Deep reef fish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="s4" >
-        <property name="text" >
-         <string>Migratory fish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="s5" >
-        <property name="text" >
-         <string>Benthic fish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="s6" >
-        <property name="text" >
-         <string>Shrimp</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="s7" >
-        <property name="text" >
-         <string>Other</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer>
-        <property name="orientation" >
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" >
-         <size>
-          <width>66</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
       </item>
      </layout>
     </widget>

@@ -13,42 +13,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="76"/>
+        <location filename="Interview/consscience.ui" line="67"/>
         <source>Type of Specialist:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="95"/>
+        <location filename="Interview/consscience.ui" line="86"/>
         <source>Environmental Science</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="100"/>
+        <location filename="Interview/consscience.ui" line="91"/>
         <source>Social Science</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="105"/>
+        <location filename="Interview/consscience.ui" line="96"/>
         <source>Non-Governmental Organization</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="110"/>
+        <location filename="Interview/consscience.ui" line="101"/>
         <source>Government Agency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="115"/>
+        <location filename="Interview/consscience.ui" line="106"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="166"/>
+        <location filename="Interview/consscience.ui" line="148"/>
         <source>additional info:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="232"/>
+        <location filename="Interview/consscience.ui" line="214"/>
         <source>Draw Shapes by Areas of Knowledge</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61,27 +61,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="70"/>
+        <location filename="Interview/drawconsscience.ui" line="58"/>
         <source>Weighting (pennies):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="133"/>
+        <location filename="Interview/drawconsscience.ui" line="121"/>
         <source>Finished With Shapes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="140"/>
+        <location filename="Interview/drawconsscience.ui" line="128"/>
         <source>Discard Last Shape...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="147"/>
+        <location filename="Interview/drawconsscience.ui" line="135"/>
         <source>Draw More Shapes...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="58"/>
+        <location filename="Interview/drawconsscience.ui" line="46"/>
         <source>Type of Tourism</source>
         <translation type="unfinished"></translation>
     </message>
@@ -94,27 +94,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="70"/>
+        <location filename="Interview/drawecotourism.ui" line="58"/>
         <source>Weighting (pennies):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="133"/>
+        <location filename="Interview/drawecotourism.ui" line="121"/>
         <source>Finished With Shapes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="140"/>
+        <location filename="Interview/drawecotourism.ui" line="128"/>
         <source>Discard Last Shape...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="147"/>
+        <location filename="Interview/drawecotourism.ui" line="135"/>
         <source>Draw More Shapes...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="58"/>
+        <location filename="Interview/drawecotourism.ui" line="46"/>
         <source>Type of Tourism</source>
         <translation type="unfinished"></translation>
     </message>
@@ -127,67 +127,67 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="65"/>
+        <location filename="Interview/drawgear.ui" line="47"/>
         <source>Weighting (pennies):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="126"/>
+        <location filename="Interview/drawgear.ui" line="191"/>
         <source>Finished With Shapes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="133"/>
+        <location filename="Interview/drawgear.ui" line="198"/>
         <source>Discard Last Shape...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="140"/>
+        <location filename="Interview/drawgear.ui" line="205"/>
         <source>Draw More Shapes...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="176"/>
+        <location filename="Interview/drawgear.ui" line="107"/>
         <source>Coastal reef fish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="183"/>
+        <location filename="Interview/drawgear.ui" line="114"/>
         <source>Deep reef fish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="190"/>
+        <location filename="Interview/drawgear.ui" line="125"/>
         <source>Migratory fish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="197"/>
+        <location filename="Interview/drawgear.ui" line="100"/>
         <source>Benthic fish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="204"/>
+        <location filename="Interview/drawgear.ui" line="139"/>
         <source>Shrimp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="211"/>
+        <location filename="Interview/drawgear.ui" line="150"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="100"/>
+        <location filename="Interview/drawgear.ui" line="82"/>
         <source>remaining</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="169"/>
+        <location filename="Interview/drawgear.ui" line="132"/>
         <source>Sharks and Skates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="150"/>
+        <location filename="Interview/drawgear.ui" line="92"/>
         <source>Check which types of species are caught in this area:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -205,52 +205,52 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="95"/>
+        <location filename="Interview/ecotourism.ui" line="86"/>
         <source>Owner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="100"/>
+        <location filename="Interview/ecotourism.ui" line="91"/>
         <source>Captain of Boat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="105"/>
+        <location filename="Interview/ecotourism.ui" line="96"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="156"/>
+        <location filename="Interview/ecotourism.ui" line="138"/>
         <source>Vessel length (meters) :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="236"/>
+        <location filename="Interview/ecotourism.ui" line="209"/>
         <source>Vessel motor (horsepower):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="313"/>
+        <location filename="Interview/ecotourism.ui" line="277"/>
         <source>Haul Capacity (kilograms):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="390"/>
+        <location filename="Interview/ecotourism.ui" line="345"/>
         <source>Home Port:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="452"/>
+        <location filename="Interview/ecotourism.ui" line="407"/>
         <source>How many work for the company?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="76"/>
+        <location filename="Interview/ecotourism.ui" line="67"/>
         <source>Type of Employee:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="515"/>
+        <location filename="Interview/ecotourism.ui" line="470"/>
         <source>Draw Shapes by Ecotourism Type</source>
         <translation type="unfinished"></translation>
     </message>
@@ -263,42 +263,42 @@
         <translation type="unfinished">Inicio</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="116"/>
+        <location filename="Interview/fishery.ui" line="103"/>
         <source>Vessel length (meters) :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="196"/>
+        <location filename="Interview/fishery.ui" line="174"/>
         <source>Vessel motor (horsepower):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="273"/>
+        <location filename="Interview/fishery.ui" line="242"/>
         <source>Haul Capacity (kilograms):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="350"/>
+        <location filename="Interview/fishery.ui" line="310"/>
         <source>Home Port:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="427"/>
+        <location filename="Interview/fishery.ui" line="378"/>
         <source>Landing Port 1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="504"/>
+        <location filename="Interview/fishery.ui" line="446"/>
         <source>Landing Port 2:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="581"/>
+        <location filename="Interview/fishery.ui" line="514"/>
         <source>Landing Port 3:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="658"/>
+        <location filename="Interview/fishery.ui" line="582"/>
         <source>Landing Port 4:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -308,17 +308,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="49"/>
+        <location filename="Interview/fishery.ui" line="43"/>
         <source>Dynamic Fishery Sector Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="67"/>
+        <location filename="Interview/fishery.ui" line="63"/>
         <source>Fisher Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="721"/>
+        <location filename="Interview/fishery.ui" line="645"/>
         <source>Draw Shapes by Gear Type</source>
         <translation type="unfinished"></translation>
     </message>
@@ -331,118 +331,108 @@
         <translation>Inicio</translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="25"/>
+        <location filename="Interview/interviewstart.ui" line="27"/>
         <source>Interviewee</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="338"/>
+        <location filename="Interview/interviewstart.ui" line="304"/>
         <source>Male</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="343"/>
+        <location filename="Interview/interviewstart.ui" line="309"/>
         <source>Female</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="794"/>
+        <location filename="Interview/interviewstart.ui" line="374"/>
         <source>Interviewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="905"/>
+        <location filename="Interview/interviewstart.ui" line="467"/>
         <source>First Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="972"/>
+        <location filename="Interview/interviewstart.ui" line="525"/>
         <source>Last Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="200"/>
+        <location filename="Interview/interviewstart.ui" line="175"/>
         <source>Age:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="319"/>
+        <location filename="Interview/interviewstart.ui" line="285"/>
         <source>Gender:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="267"/>
+        <location filename="Interview/interviewstart.ui" line="233"/>
         <source>City of residence:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="835"/>
+        <location filename="Interview/interviewstart.ui" line="406"/>
         <source>Interview Date (mm/dd/yyyy):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="857"/>
-        <source>/2008</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/interviewstart.ui" line="408"/>
+        <location filename="Interview/interviewstart.ui" line="569"/>
         <source>What percentage of your income comes from the following?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="439"/>
+        <location filename="Interview/interviewstart.ui" line="600"/>
         <source>Commercial Fishing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="714"/>
+        <location filename="Interview/interviewstart.ui" line="937"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="501"/>
+        <location filename="Interview/interviewstart.ui" line="662"/>
         <source>Commercial Sport Fishing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="563"/>
+        <location filename="Interview/interviewstart.ui" line="724"/>
         <source>Private Sport Fishing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="625"/>
+        <location filename="Interview/interviewstart.ui" line="786"/>
         <source>Ecotourism:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="687"/>
+        <location filename="Interview/interviewstart.ui" line="848"/>
         <source>Conservation/Scientific Research:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="368"/>
+        <location filename="Interview/interviewstart.ui" line="334"/>
         <source>Years working here:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="749"/>
+        <location filename="Interview/interviewstart.ui" line="910"/>
         <source>Other Income:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="1027"/>
+        <location filename="Interview/interviewstart.ui" line="1000"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/interviewstart.ui" line="1039"/>
+        <location filename="Interview/interviewstart.ui" line="1012"/>
         <source>Next</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/interviewstart.ui" line="776"/>
-        <source>100</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -699,47 +689,47 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="63"/>
+        <location filename="Interview/selectgear.ui" line="59"/>
         <source>Select Gear Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="82"/>
+        <location filename="Interview/selectgear.ui" line="78"/>
         <source>Hook and Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="87"/>
+        <location filename="Interview/selectgear.ui" line="83"/>
         <source>Gillnets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="92"/>
+        <location filename="Interview/selectgear.ui" line="88"/>
         <source>Hooka (compressor)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="97"/>
+        <location filename="Interview/selectgear.ui" line="93"/>
         <source>Traps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="102"/>
+        <location filename="Interview/selectgear.ui" line="98"/>
         <source>Trawling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="107"/>
+        <location filename="Interview/selectgear.ui" line="103"/>
         <source>Purse Seine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="112"/>
+        <location filename="Interview/selectgear.ui" line="108"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectgear.ui" line="133"/>
+        <location filename="Interview/selectgear.ui" line="154"/>
         <source>Start Drawing Shapes</source>
         <translation type="unfinished"></translation>
     </message>

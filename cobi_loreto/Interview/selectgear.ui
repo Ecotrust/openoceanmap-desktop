@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>504</width>
-    <height>197</height>
+    <width>448</width>
+    <height>171</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -25,33 +25,29 @@
      <property name="title" >
       <string>Fishery Sector</string>
      </property>
-     <widget class="QLabel" name="fishery_sector_label" >
-      <property name="geometry" >
-       <rect>
-        <x>15</x>
-        <y>15</y>
-        <width>615</width>
-        <height>49</height>
-       </rect>
-      </property>
-      <property name="minimumSize" >
-       <size>
-        <width>0</width>
-        <height>40</height>
-       </size>
-      </property>
-      <property name="font" >
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text" >
-       <string/>
-      </property>
-      <property name="alignment" >
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout" >
+      <item>
+       <widget class="QLabel" name="fishery_sector_label" >
+        <property name="minimumSize" >
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
@@ -121,7 +117,26 @@
     <widget class="QWidget" native="1" name="widget_2" >
      <layout class="QHBoxLayout" >
       <item>
+       <spacer name="horizontalSpacer" >
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QPushButton" name="pbnStepFinished" >
+        <property name="minimumSize" >
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="text" >
          <string/>
         </property>
@@ -129,6 +144,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="pbnStartShapes" >
+        <property name="minimumSize" >
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="text" >
          <string>Start Drawing Shapes</string>
         </property>

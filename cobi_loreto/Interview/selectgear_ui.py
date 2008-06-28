@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectgear.ui'
 #
-# Created: Fri Jun 27 18:24:03 2008
+# Created: Sat Jun 28 18:45:42 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,54 +12,48 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectGear(object):
     def setupUi(self, SelectGear):
         SelectGear.setObjectName("SelectGear")
-        SelectGear.resize(QtCore.QSize(QtCore.QRect(0,0,504,197).size()).expandedTo(SelectGear.minimumSizeHint()))
-
+        SelectGear.resize(448,171)
         self.vboxlayout = QtGui.QVBoxLayout(SelectGear)
         self.vboxlayout.setObjectName("vboxlayout")
-
         self.groupBox = QtGui.QGroupBox(SelectGear)
         self.groupBox.setMinimumSize(QtCore.QSize(0,60))
         self.groupBox.setObjectName("groupBox")
-
+        self.horizontalLayout = QtGui.QHBoxLayout(self.groupBox)
+        self.horizontalLayout.setObjectName("horizontalLayout")
         self.fishery_sector_label = QtGui.QLabel(self.groupBox)
-        self.fishery_sector_label.setGeometry(QtCore.QRect(15,15,615,49))
         self.fishery_sector_label.setMinimumSize(QtCore.QSize(0,40))
-
         font = QtGui.QFont()
         font.setPointSize(14)
         self.fishery_sector_label.setFont(font)
         self.fishery_sector_label.setAlignment(QtCore.Qt.AlignCenter)
         self.fishery_sector_label.setObjectName("fishery_sector_label")
+        self.horizontalLayout.addWidget(self.fishery_sector_label)
         self.vboxlayout.addWidget(self.groupBox)
-
         self.widget = QtGui.QWidget(SelectGear)
         self.widget.setObjectName("widget")
-
         self.hboxlayout = QtGui.QHBoxLayout(self.widget)
         self.hboxlayout.setObjectName("hboxlayout")
-
         self.fishery_text = QtGui.QLabel(self.widget)
         self.fishery_text.setObjectName("fishery_text")
         self.hboxlayout.addWidget(self.fishery_text)
-
         self.gear_comboBox = QtGui.QComboBox(self.widget)
         self.gear_comboBox.setMaximumSize(QtCore.QSize(300,16777215))
         self.gear_comboBox.setObjectName("gear_comboBox")
         self.gear_comboBox.addItem("")
         self.hboxlayout.addWidget(self.gear_comboBox)
         self.vboxlayout.addWidget(self.widget)
-
         self.widget_2 = QtGui.QWidget(SelectGear)
         self.widget_2.setObjectName("widget_2")
-
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget_2)
         self.hboxlayout1.setObjectName("hboxlayout1")
-
+        spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem)
         self.pbnStepFinished = QtGui.QPushButton(self.widget_2)
+        self.pbnStepFinished.setMinimumSize(QtCore.QSize(200,0))
         self.pbnStepFinished.setObjectName("pbnStepFinished")
         self.hboxlayout1.addWidget(self.pbnStepFinished)
-
         self.pbnStartShapes = QtGui.QPushButton(self.widget_2)
+        self.pbnStartShapes.setMinimumSize(QtCore.QSize(200,0))
         self.pbnStartShapes.setObjectName("pbnStartShapes")
         self.hboxlayout1.addWidget(self.pbnStartShapes)
         self.vboxlayout.addWidget(self.widget_2)
