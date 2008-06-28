@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawecotourism.ui'
 #
-# Created: Fri Jun 27 18:24:05 2008
+# Created: Fri Jun 27 19:27:11 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -30,7 +30,7 @@ class Ui_DrawEcotourism(object):
         self.type_label.setMaximumSize(QtCore.QSize(500,16777215))
 
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(13)
         self.type_label.setFont(font)
         self.type_label.setAlignment(QtCore.Qt.AlignCenter)
         self.type_label.setObjectName("type_label")
