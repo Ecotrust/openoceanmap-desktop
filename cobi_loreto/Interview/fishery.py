@@ -54,9 +54,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.currentStep = fishery_sector
         self.fishery_sector_label.setText(str(self.currentStep))
 
-    def on_pbnSelectGear_released(self):
-        interviewInfo2 = self.parent.interviewInfo2
-        #interviewInfo2.append(["artespesca", self.gear_comboBox.currentText()])
+    def append_data(self):
         interviewInfo2.append(["v_len", self.vessel_length_line.text()])
         interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])
         interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
@@ -66,9 +64,21 @@ class FisheryGui(QDialog, Ui_Fishery):
         interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
         interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
 
-        #if not self.gear_comboBox.currentText():
-         #   QMessageBox.warning(self, "Gear Error", "Please Choose a Fishing Gear Type")
-          #  return
+    def on_pbnSelectGear_released(self):
+        interviewInfo2 = self.parent.interviewInfo2
+
+        if self.currentStep == 'Commercial Fishery':
+            if not self.parent.commFishStarted:
+                self.append_data()
+                self.parent.commFishStarted = True
+        elif self.currentStep == 'Sport Fishery':
+            if not self.parent.commFishStarted:
+                self.append_data()
+                self.parent.sportFishStarted = True
+        elif self.currentStep == 'Private Fishery':
+            if not self.parent.commFishStarted:
+                self.append_data()
+                self.parent.privateFishStarted = True
 
         self.close()
         from selectgear import SelectGearGui

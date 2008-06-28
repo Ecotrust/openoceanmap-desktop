@@ -99,8 +99,11 @@ class Interview(object):
         self.currentStep = None
         self.shapeType = None
         self.commFishIncome = None
+        self.commFishStarted= False
         self.sportFishIncome = None
-        self.privateFishIncome = None    
+        self.sportFishStarted = False
+        self.privateFishStarted = None
+        self.privateFishIncome = False   
         self.ecotourismIncome = None
         self.consScienceIncome = None
         self.otherIncome = None
