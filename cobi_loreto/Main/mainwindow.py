@@ -102,20 +102,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
     # set extent to the extent of our layer
-    self.canvas.setExtent(QgsRect(-340000,-70000,
-                                  -191000,52500))
+    #self.canvas.setExtent(QgsRect(-340000,-70000,
+    #                              -191000,52500))
     
-    rasterList = [["Data/noaa_7_albs34.tif",1500000,5000000],
-                  ["Data/noaa_8_albs34.tif",750000,1500000],
-                  ["Data/noaa_9_albs34.tif",450000,750000],
-                  #["Data/noaa_10_albs34.tif",125000,450000],
-                  # Extra incase we want to get rid of level 12
-                  #["Data/noaa_11_albs34.tif",85000,125000],
-                  #["Data/noaa_12_albs34.tif",0,85000]]
-                  #["Data/noaa_11_albs34.tif",0,125000]
-                  ]
+    rasterList = [["Data/cat_merc.tif",100000,5000000]]
     self.rasterBaseLayer = OOMLayer(self)
-    for rasterSet in rasterList:
+    
+    first_raster = None
+    for i in range(len(rasterList)):
+      rasterSet = rasterList[i]
+
       raster = rasterSet[0]
       minScale = rasterSet[1]
       maxScale = rasterSet[2]
@@ -124,6 +120,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
+
+      if i == 0:
+        first_raster = layer        
+
 
       if self.srs == None:
         self.srs = layer.srs()
@@ -154,11 +154,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.rasterBaseLayer.addLayerItem(layer,cl)
       
     #Add one base raster item to legend
-    self.legend.addRasterLegendItem("NOAA ENC",
+    self.legend.addRasterLegendItem("Loreto Base Map",
                                     self.rasterBaseLayer.getCls())
 
-    vectorList = [["Data/Kayak_Points.shp",0,125000],
-                  ["Data/Access_Points.shp",0,200000]]
+    #vectorList = [["Data/Kayak_Points.shp",0,125000],
+    #              ["Data/Access_Points.shp",0,200000]]
+    vectorList = []
     for vectorSet in vectorList:
       vector = vectorSet[0]
       minScale = vectorSet[1]
@@ -206,7 +207,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.canvas.setLayerSet(self.layers)
       #Add item to legend
       self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
-      
+    self.canvas.setExtent(first_raster.extent())
 
 class OOMLayer(object):
   def __init__(self, parent):
