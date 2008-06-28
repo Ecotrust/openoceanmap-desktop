@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectgear.ui'
 #
-# Created: Fri Jun 27 15:32:47 2008
+# Created: Fri Jun 27 18:24:03 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!

@@ -3,8 +3,9 @@
 # OpenOceanMap - An Open Source GIS tool for performing interviews
 # to obtain socio-economic data using spatial information.
 # 
-# Copyright (C) 2007  Ecotrust
-# Copyright (C) 2007  Aaron Racicot
+# Copyright (C) 2008  Ecotrust
+# Copyright (C) 2008  Aaron Racicot
+# Copyright (C) 2008  Dane Springmeyer
 # 
 #---------------------------------------------------------------------
 # 
@@ -62,8 +63,6 @@ class Interview(object):
 
     self.currentStep = None
     self.shapeType = None
-    
-    self.currentFishery = None
     self.commFishIncome = None
     self.sportFishIncome = None
     self.privateFishIncome = None    
@@ -75,6 +74,7 @@ class Interview(object):
     self.capturedText = ''
     self.capturedTextType = ''
     self.capturedPolygons = []
+    self.capturedPolygonsSpecies = []
     self.capturedPolygonsType = []
     self.capturedPolygonsPennies = []
     self.capturedPolygonsRub = []
@@ -95,10 +95,9 @@ class Interview(object):
         capture_string = QString(msg)
         self.parent.statusbar.showMessage(capture_string)
         self.parent.interviewInProgress = False
-        self.parent.interviewSaveTool = None
-        
-        self.currentFishery = None
-        
+        self.parent.interviewSaveTool = None        
+        self.currentStep = None
+        self.shapeType = None
         self.commFishIncome = None
         self.sportFishIncome = None
         self.privateFishIncome = None    
@@ -196,7 +195,6 @@ class Interview(object):
   # End interview dialog
   def saveText(self, textGui):
       textGui.close()
-      
       if len(self.capturedText) == 0:
           # Finished a interview step without writing any text...
           capture_string = QString("No info to write, returning to previous choices...")
@@ -247,12 +245,10 @@ class Interview(object):
   # End interview dialog
   def saveShapes(self, drawGui):
       drawGui.close()
-      
       if len(self.capturedPolygons) == 0:
           # Finished a interview step without writing any shapes...
           capture_string = QString("No Shapes to write, returning to previous choices...")
           self.parent.statusbar.showMessage(capture_string)
-          
           # Fire up the previous gui again...
           drawGui.previousGui.show()
       else:
@@ -266,14 +262,11 @@ class Interview(object):
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Shapefiles (*.shp)")
           f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Shapes as", None, QApplication.UnicodeUTF8),file_name,file_type_filter)
-          
-          
           # Check to see if the shapefile has been saved
           if f2.count(".shp")==0:
             # If the user cancels...
             print 'cancelled'
             drawGui.previousGui.show()
-          
           # check to see if the user tried to overwrite an existing shapefile
           elif os.path.isfile(f2):
             # Currently we don't suport overwriting, so return to same dialog
@@ -296,11 +289,8 @@ class Interview(object):
               
             fields[index+1] = QgsField("income", QVariant.String)
             fields[index+2] = QgsField("pennies", QVariant.Int)
-            
-            #fields = { 0 : QgsField("interviewer_name", QVariant.String),
-            #           1 : QgsField("participant_name", QVariant.String),
-            #           2 : QgsField("pennies", QVariant.Int) }
-            
+            fields[index+3] = QgsField("species", QVariant.String)
+
             # create an instance of vector file writer,
             # it will create the shapefile. Arguments:
             # 1. path to new shapefile (will fail if exists already)
@@ -314,17 +304,17 @@ class Interview(object):
             if writer.hasError() != QgsVectorFileWriter.NoError:
                 print "Error when creating shapefile: ", writer.hasError()
             
-            label_index = None    
             # add some features
             for capPolyInd, capPoly in enumerate(self.capturedPolygons):
                 fet = QgsFeature()
                 ret_val = fet.setGeometry(QgsGeometry.fromWkt(capPoly))
-                
                 for index,value in enumerate(self.interviewInfo2):
                   fet.addAttribute(index, QVariant(value[1]))
 
                 fet.addAttribute(index+1, QVariant(self.capturedPolygonsType[capPolyInd]))
-                fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))                
+                fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+                if self.capturedPolygonsSpecies:
+                    fet.addAttribute(index+3, QVariant(self.capturedPolygonsSpecies[capPolyInd]))                                  
                 writer.addFeature(fet)
                 
             del writer
@@ -339,10 +329,10 @@ class Interview(object):
               capture_string = QString("ERROR reading file, did it save correctly?  If not, do you have write permission in the save directory you chose?")
               self.statusbar.showMessage(capture_string)
               #Restart save dialog
-              self.interviewEnd()
+              self.saveShapes(drawGui)
               #Pull out
               return
-            print len(self.interviewInfo2)
+
             penny_label_index = len(self.interviewInfo2) + 1
             layer.label().setLabelField(QgsLabel.Text, penny_label_index)
             layer.setLabelOn(True)
@@ -360,11 +350,12 @@ class Interview(object):
             #Add item to legend
             self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
 
-            ## Reset the rubberbands and then clear out the  income type related objects
+            ## Reset the rubberbands and then clear out the income type related objects
             for capPolyRub in self.capturedPolygonsRub:
               capPolyRub.reset()
             self.capturedPolygons = []
             self.capturedPolygonsType = []
+            self.capturedPolygonsSpecies = []
             self.capturedPolygonsPennies = []
             self.capturedPolygonsRub = []
 

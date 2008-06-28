@@ -43,18 +43,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="232"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Interview/consscience.ui" line="166"/>
         <source>additional info:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/consscience.ui" line="244"/>
-        <source>Draw Shapes of Areas of Knowledge</source>
+        <location filename="Interview/consscience.ui" line="232"/>
+        <source>Draw Shapes by Areas of Knowledge</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -66,23 +61,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="60"/>
+        <location filename="Interview/drawconsscience.ui" line="70"/>
         <source>Weighting (pennies):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="108"/>
+        <location filename="Interview/drawconsscience.ui" line="133"/>
         <source>Finished With Shapes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="115"/>
+        <location filename="Interview/drawconsscience.ui" line="140"/>
         <source>Discard Last Shape...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="122"/>
+        <location filename="Interview/drawconsscience.ui" line="147"/>
         <source>Draw More Shapes...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Interview/drawconsscience.ui" line="58"/>
+        <source>Type of Tourism</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -94,23 +94,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="60"/>
+        <location filename="Interview/drawecotourism.ui" line="70"/>
         <source>Weighting (pennies):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="108"/>
+        <location filename="Interview/drawecotourism.ui" line="133"/>
         <source>Finished With Shapes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="115"/>
+        <location filename="Interview/drawecotourism.ui" line="140"/>
         <source>Discard Last Shape...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawecotourism.ui" line="122"/>
+        <location filename="Interview/drawecotourism.ui" line="147"/>
         <source>Draw More Shapes...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Interview/drawecotourism.ui" line="58"/>
+        <source>Type of Tourism</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -127,52 +132,47 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="113"/>
+        <location filename="Interview/drawgear.ui" line="126"/>
         <source>Finished With Shapes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="120"/>
+        <location filename="Interview/drawgear.ui" line="133"/>
         <source>Discard Last Shape...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="127"/>
+        <location filename="Interview/drawgear.ui" line="140"/>
         <source>Draw More Shapes...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="143"/>
-        <source>Sharkes and Skates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/drawgear.ui" line="150"/>
+        <location filename="Interview/drawgear.ui" line="176"/>
         <source>Coastal reef fish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="157"/>
+        <location filename="Interview/drawgear.ui" line="183"/>
         <source>Deep reef fish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="164"/>
+        <location filename="Interview/drawgear.ui" line="190"/>
         <source>Migratory fish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="171"/>
+        <location filename="Interview/drawgear.ui" line="197"/>
         <source>Benthic fish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="178"/>
+        <location filename="Interview/drawgear.ui" line="204"/>
         <source>Shrimp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="185"/>
+        <location filename="Interview/drawgear.ui" line="211"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
@@ -182,8 +182,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/drawgear.ui" line="137"/>
-        <source>Choose any species types caught in this area:</source>
+        <location filename="Interview/drawgear.ui" line="169"/>
+        <source>Sharks and Skates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Interview/drawgear.ui" line="150"/>
+        <source>Check which types of species are caught in this area:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -240,18 +245,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="515"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Interview/ecotourism.ui" line="76"/>
         <source>Type of Employee:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="527"/>
-        <source>Select Ecotourism Type</source>
+        <location filename="Interview/ecotourism.ui" line="515"/>
+        <source>Draw Shapes by Ecotourism Type</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -303,16 +303,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="721"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/fishery.ui" line="733"/>
-        <source>Previous</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Interview/fishery.ui" line="26"/>
         <source>Fishery Sector</source>
         <translation type="unfinished"></translation>
@@ -328,8 +318,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="745"/>
-        <source>Select Gear Type</source>
+        <location filename="Interview/fishery.ui" line="721"/>
+        <source>Draw Shapes by Gear Type</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -539,42 +529,7 @@
     <message>
         <location filename="Interview/other___.ui" line="14"/>
         <source>OpenOceanMap - Interview</source>
-        <translation type="unfinished">Inicio</translation>
-    </message>
-    <message>
-        <location filename="Interview/other___.ui" line="27"/>
-        <source>Other Income</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/other___.ui" line="61"/>
-        <source>Type of Income:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/other___.ui" line="141"/>
-        <source>other info1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/other___.ui" line="221"/>
-        <source>other info2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/other___.ui" line="298"/>
-        <source>other info3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/other___.ui" line="371"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/other___.ui" line="383"/>
-        <source>Draw Other Income Shapes</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Inicio</translation>
     </message>
     <message>
         <location filename="Interview/other.ui" line="14"/>
@@ -618,58 +573,53 @@
 <context>
     <name>SelectConsScience</name>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="36"/>
+        <location filename="Interview/selectconsscience.ui" line="48"/>
         <source>Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="41"/>
+        <location filename="Interview/selectconsscience.ui" line="53"/>
         <source>Deep Sea reefs (all finfish and invertebrates assoc. with reef seamounts)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="46"/>
+        <location filename="Interview/selectconsscience.ui" line="58"/>
         <source>Soft bottom (sand, mud, etc.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="51"/>
+        <location filename="Interview/selectconsscience.ui" line="63"/>
         <source>Small pelagics (sardines, anchovy, etc.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="56"/>
+        <location filename="Interview/selectconsscience.ui" line="68"/>
         <source>Migratory fish (tuna, swordfish, sailfish, yellowtail, etc)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="61"/>
+        <location filename="Interview/selectconsscience.ui" line="73"/>
         <source>Sea turtles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="66"/>
+        <location filename="Interview/selectconsscience.ui" line="78"/>
         <source>Sea lions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="71"/>
+        <location filename="Interview/selectconsscience.ui" line="83"/>
         <source>Dolphins or whales</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="76"/>
+        <location filename="Interview/selectconsscience.ui" line="88"/>
         <source>None of the above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Interview/selectconsscience.ui" line="97"/>
+        <location filename="Interview/selectconsscience.ui" line="109"/>
         <source>Start Drawing Shapes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/selectconsscience.ui" line="90"/>
-        <source>Exit Conservationist / Scientist Step</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -679,7 +629,12 @@
     </message>
     <message>
         <location filename="Interview/selectconsscience.ui" line="23"/>
-        <source>Select species/ecosystem of expertise/concern:</source>
+        <source>Select focus:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Interview/selectconsscience.ui" line="102"/>
+        <source>Exit Cons / Scientist Step</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -785,29 +740,6 @@
     </message>
     <message>
         <location filename="Interview/selectgear.ui" line="133"/>
-        <source>Start Drawing Shapes</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SelectOther</name>
-    <message>
-        <location filename="Interview/selectother.ui" line="14"/>
-        <source>OpenOceanMap - Select Other Income</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/selectother.ui" line="23"/>
-        <source>Describe Other Income:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/selectother.ui" line="39"/>
-        <source>Exit Other Income Step</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Interview/selectother.ui" line="46"/>
         <source>Start Drawing Shapes</source>
         <translation type="unfinished"></translation>
     </message>

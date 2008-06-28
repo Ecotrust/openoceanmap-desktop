@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawconsscience.ui'
 #
-# Created: Fri Jun 27 16:39:33 2008
+# Created: Fri Jun 27 18:24:05 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_DrawConsScience(object):
     def setupUi(self, DrawConsScience):
         DrawConsScience.setObjectName("DrawConsScience")
-        DrawConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,547,142).size()).expandedTo(DrawConsScience.minimumSizeHint()))
+        DrawConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,559,142).size()).expandedTo(DrawConsScience.minimumSizeHint()))
 
         self.gridlayout = QtGui.QGridLayout(DrawConsScience)
         self.gridlayout.setMargin(9)
@@ -28,6 +28,10 @@ class Ui_DrawConsScience(object):
         self.type_label = QtGui.QLabel(self.widget_2)
         self.type_label.setMinimumSize(QtCore.QSize(50,0))
         self.type_label.setMaximumSize(QtCore.QSize(500,16777215))
+
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.type_label.setFont(font)
         self.type_label.setAlignment(QtCore.Qt.AlignCenter)
         self.type_label.setObjectName("type_label")
         self.gridlayout1.addWidget(self.type_label,0,0,1,1)
@@ -56,20 +60,23 @@ class Ui_DrawConsScience(object):
         self.widget = QtGui.QWidget(DrawConsScience)
         self.widget.setObjectName("widget")
 
-        self.gridlayout2 = QtGui.QGridLayout(self.widget)
-        self.gridlayout2.setObjectName("gridlayout2")
+        self.hboxlayout1 = QtGui.QHBoxLayout(self.widget)
+        self.hboxlayout1.setObjectName("hboxlayout1")
+
+        spacerItem = QtGui.QSpacerItem(106,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem)
 
         self.pbnShapeFinished = QtGui.QPushButton(self.widget)
         self.pbnShapeFinished.setObjectName("pbnShapeFinished")
-        self.gridlayout2.addWidget(self.pbnShapeFinished,0,0,1,1)
+        self.hboxlayout1.addWidget(self.pbnShapeFinished)
 
         self.pbnShapeDiscard = QtGui.QPushButton(self.widget)
         self.pbnShapeDiscard.setObjectName("pbnShapeDiscard")
-        self.gridlayout2.addWidget(self.pbnShapeDiscard,0,1,1,1)
+        self.hboxlayout1.addWidget(self.pbnShapeDiscard)
 
         self.pbnMoreShapes = QtGui.QPushButton(self.widget)
         self.pbnMoreShapes.setObjectName("pbnMoreShapes")
-        self.gridlayout2.addWidget(self.pbnMoreShapes,0,2,1,1)
+        self.hboxlayout1.addWidget(self.pbnMoreShapes)
         self.gridlayout.addWidget(self.widget,1,0,2,1)
 
         self.retranslateUi(DrawConsScience)

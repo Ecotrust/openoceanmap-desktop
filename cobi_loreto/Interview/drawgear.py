@@ -3,8 +3,9 @@
 # OpenOceanMap - An Open Source GIS tool for performing interviews
 # to obtain socio-economic data using spatial information.
 # 
-# Copyright (C) 2007  Ecotrust
-# Copyright (C) 2007  Aaron Racicot
+# Copyright (C) 2008  Ecotrust
+# Copyright (C) 2008  Aaron Racicot
+# Copyright (C) 2008  Dane Springmeyer
 # 
 #---------------------------------------------------------------------
 # 
@@ -53,7 +54,27 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         self.pl_label.setText("  "+str(self.pennies_left)+" left")
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
-        
+        self.species = []
+ 
+    def fetch_species(self):
+            species = []
+            if self.s1.isChecked():
+                species.append('Sharks and Skates')
+            if self.s2.isChecked():
+                species.append('Coastal reef fish')
+            if self.s3.isChecked():
+                species.append('Deep reef fish')
+            if self.s4.isChecked():
+                species.append('Migratory fish')
+            if self.s5.isChecked():
+                species.append('Benthic fish')
+            if self.s6.isChecked():
+                species.append('Shrimp')
+            if self.s7.isChecked():
+                species.append('Other')
+            species_list_text = ','.join(species)
+            return species_list_text
+            
     #Called when "More Shapes" button pressed        
     def on_pbnMoreShapes_released(self):
         if not self.discardLast:
@@ -73,7 +94,8 @@ class DrawGearGui(QDialog, Ui_DrawGear):
             else:
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
                 self.parent.capturedPolygonsPennies.append(num_pennies)
-
+            
+            self.parent.capturedPolygonsSpecies.append(self.fetch_species())
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
             
         self.close()
@@ -129,7 +151,8 @@ class DrawGearGui(QDialog, Ui_DrawGear):
                 return
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
-                        
+                
+            self.parent.capturedPolygonsSpecies.append(self.fetch_species())            
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
         
         self.parent.saveShapes(self) # sends itself as the 'drawGui'

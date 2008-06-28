@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawgear.ui'
 #
-# Created: Fri Jun 27 15:32:48 2008
+# Created: Fri Jun 27 18:24:05 2008
 #      by: PyQt4 UI code generator 4.4.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_DrawGear(object):
     def setupUi(self, DrawGear):
         DrawGear.setObjectName("DrawGear")
-        DrawGear.resize(QtCore.QSize(QtCore.QRect(0,0,827,197).size()).expandedTo(DrawGear.minimumSizeHint()))
+        DrawGear.resize(QtCore.QSize(QtCore.QRect(0,0,775,183).size()).expandedTo(DrawGear.minimumSizeHint()))
 
         self.gridlayout = QtGui.QGridLayout(DrawGear)
         self.gridlayout.setMargin(9)
@@ -58,6 +58,9 @@ class Ui_DrawGear(object):
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget)
         self.hboxlayout1.setObjectName("hboxlayout1")
 
+        spacerItem = QtGui.QSpacerItem(196,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem)
+
         self.pbnShapeFinished = QtGui.QPushButton(self.widget)
         self.pbnShapeFinished.setObjectName("pbnShapeFinished")
         self.hboxlayout1.addWidget(self.pbnShapeFinished)
@@ -77,33 +80,39 @@ class Ui_DrawGear(object):
         self.hboxlayout2 = QtGui.QHBoxLayout(self.groupBox)
         self.hboxlayout2.setObjectName("hboxlayout2")
 
-        self.checkBox = QtGui.QCheckBox(self.groupBox)
-        self.checkBox.setObjectName("checkBox")
-        self.hboxlayout2.addWidget(self.checkBox)
+        spacerItem1 = QtGui.QSpacerItem(66,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout2.addItem(spacerItem1)
 
-        self.checkBox_2 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_2.setObjectName("checkBox_2")
-        self.hboxlayout2.addWidget(self.checkBox_2)
+        self.s1 = QtGui.QCheckBox(self.groupBox)
+        self.s1.setObjectName("s1")
+        self.hboxlayout2.addWidget(self.s1)
 
-        self.checkBox_3 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_3.setObjectName("checkBox_3")
-        self.hboxlayout2.addWidget(self.checkBox_3)
+        self.s2 = QtGui.QCheckBox(self.groupBox)
+        self.s2.setObjectName("s2")
+        self.hboxlayout2.addWidget(self.s2)
 
-        self.checkBox_4 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_4.setObjectName("checkBox_4")
-        self.hboxlayout2.addWidget(self.checkBox_4)
+        self.s3 = QtGui.QCheckBox(self.groupBox)
+        self.s3.setObjectName("s3")
+        self.hboxlayout2.addWidget(self.s3)
 
-        self.checkBox_5 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_5.setObjectName("checkBox_5")
-        self.hboxlayout2.addWidget(self.checkBox_5)
+        self.s4 = QtGui.QCheckBox(self.groupBox)
+        self.s4.setObjectName("s4")
+        self.hboxlayout2.addWidget(self.s4)
 
-        self.checkBox_6 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_6.setObjectName("checkBox_6")
-        self.hboxlayout2.addWidget(self.checkBox_6)
+        self.s5 = QtGui.QCheckBox(self.groupBox)
+        self.s5.setObjectName("s5")
+        self.hboxlayout2.addWidget(self.s5)
 
-        self.checkBox_7 = QtGui.QCheckBox(self.groupBox)
-        self.checkBox_7.setObjectName("checkBox_7")
-        self.hboxlayout2.addWidget(self.checkBox_7)
+        self.s6 = QtGui.QCheckBox(self.groupBox)
+        self.s6.setObjectName("s6")
+        self.hboxlayout2.addWidget(self.s6)
+
+        self.s7 = QtGui.QCheckBox(self.groupBox)
+        self.s7.setObjectName("s7")
+        self.hboxlayout2.addWidget(self.s7)
+
+        spacerItem2 = QtGui.QSpacerItem(66,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout2.addItem(spacerItem2)
         self.gridlayout.addWidget(self.groupBox,1,0,1,1)
 
         self.retranslateUi(DrawGear)
@@ -116,12 +125,12 @@ class Ui_DrawGear(object):
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("DrawGear", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawGear", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnMoreShapes.setText(QtGui.QApplication.translate("DrawGear", "Draw More Shapes...", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox.setTitle(QtGui.QApplication.translate("DrawGear", "Choose any species types caught in this area:", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox.setText(QtGui.QApplication.translate("DrawGear", "Sharkes and Skates", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_2.setText(QtGui.QApplication.translate("DrawGear", "Coastal reef fish", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_3.setText(QtGui.QApplication.translate("DrawGear", "Deep reef fish", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_4.setText(QtGui.QApplication.translate("DrawGear", "Migratory fish", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_5.setText(QtGui.QApplication.translate("DrawGear", "Benthic fish", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_6.setText(QtGui.QApplication.translate("DrawGear", "Shrimp", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_7.setText(QtGui.QApplication.translate("DrawGear", "Other", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtGui.QApplication.translate("DrawGear", "Check which types of species are caught in this area:", None, QtGui.QApplication.UnicodeUTF8))
+        self.s1.setText(QtGui.QApplication.translate("DrawGear", "Sharks and Skates", None, QtGui.QApplication.UnicodeUTF8))
+        self.s2.setText(QtGui.QApplication.translate("DrawGear", "Coastal reef fish", None, QtGui.QApplication.UnicodeUTF8))
+        self.s3.setText(QtGui.QApplication.translate("DrawGear", "Deep reef fish", None, QtGui.QApplication.UnicodeUTF8))
+        self.s4.setText(QtGui.QApplication.translate("DrawGear", "Migratory fish", None, QtGui.QApplication.UnicodeUTF8))
+        self.s5.setText(QtGui.QApplication.translate("DrawGear", "Benthic fish", None, QtGui.QApplication.UnicodeUTF8))
+        self.s6.setText(QtGui.QApplication.translate("DrawGear", "Shrimp", None, QtGui.QApplication.UnicodeUTF8))
+        self.s7.setText(QtGui.QApplication.translate("DrawGear", "Other", None, QtGui.QApplication.UnicodeUTF8))
 

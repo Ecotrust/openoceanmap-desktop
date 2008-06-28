@@ -1,5 +1,5 @@
 <ui version="4.0" >
- <author>Aaron Racicot</author>
+ <author>Dane Springmeyer</author>
  <class>SelectGear</class>
  <widget class="QDialog" name="SelectGear" >
   <property name="geometry" >
