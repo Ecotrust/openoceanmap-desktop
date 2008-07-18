@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>402</width>
-    <height>170</height>
+    <width>404</width>
+    <height>187</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -41,7 +41,16 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="margin" >
+           <property name="leftMargin" >
+            <number>4</number>
+           </property>
+           <property name="topMargin" >
+            <number>4</number>
+           </property>
+           <property name="rightMargin" >
+            <number>4</number>
+           </property>
+           <property name="bottomMargin" >
             <number>4</number>
            </property>
            <item>
@@ -83,12 +92,7 @@
              </item>
              <item>
               <property name="text" >
-               <string>Environmental Science</string>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Social Science</string>
+               <string>Academic</string>
               </property>
              </item>
              <item>
@@ -98,7 +102,17 @@
              </item>
              <item>
               <property name="text" >
-               <string>Government Agency</string>
+               <string>Government (Municipal)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Government (State)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Government (Federal)</string>
               </property>
              </item>
              <item>
@@ -122,7 +136,16 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="margin" >
+           <property name="leftMargin" >
+            <number>4</number>
+           </property>
+           <property name="topMargin" >
+            <number>4</number>
+           </property>
+           <property name="rightMargin" >
+            <number>4</number>
+           </property>
+           <property name="bottomMargin" >
             <number>4</number>
            </property>
            <item>
@@ -145,7 +168,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>additional info:</string>
+              <string>Additional info:</string>
              </property>
             </widget>
            </item>
@@ -195,7 +218,7 @@
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" stdset="0" >
+        <property name="sizeHint" >
          <size>
           <width>40</width>
           <height>20</height>

@@ -62,6 +62,14 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         else:
             self.parent.shapeType = shape_type
 
+        gear_perc_inc = self.gear_perc_income.text()
+        if not gear_perc_inc or gear_perc_inc == '0':
+            QMessageBox.warning(self, "Percent Error", "Missing gear percentage")
+            return
+        else:
+            self.parent.interviewInfo2.append(["gear_inc",gear_perc_inc])
+
+
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)

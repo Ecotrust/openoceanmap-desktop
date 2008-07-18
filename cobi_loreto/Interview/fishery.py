@@ -55,18 +55,16 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.fishery_sector_label.setText(str(self.currentStep))
 
     def append_data(self):
-        interviewInfo2.append(["v_len", self.vessel_length_line.text()])
-        interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])
-        interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
-        interviewInfo2.append(["v_homep", self.home_port_line.text()])
-        interviewInfo2.append(["landp_1", self.landing_port_line.text()])
-        interviewInfo2.append(["landp_2", self.landing_port_line_2.text()])
-        interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
-        interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
+        self.parent.interviewInfo2.append(["v_len", self.vessel_length_line.text()])
+        self.parent.interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])
+        self.parent.interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
+        self.parent.interviewInfo2.append(["v_homep", self.home_port_line.text()])
+        self.parent.interviewInfo2.append(["landp_1", self.landing_port_line.text()])
+        self.parent.interviewInfo2.append(["landp_2", self.landing_port_line_2.text()])
+        self.parent.interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
+        self.parent.interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
 
     def on_pbnSelectGear_released(self):
-        interviewInfo2 = self.parent.interviewInfo2
-
         if self.currentStep == 'Commercial Fishery':
             if not self.parent.commFishStarted:
                 self.append_data()
@@ -83,7 +81,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.close()
         from selectgear import SelectGearGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = SelectGearGui(self.parent,flags, self.currentStep)
+        wnd = SelectGearGui(self.parent,flags, self.currentStep, self.prevGUI)
         wnd.show()
 
     def on_pbnCancel_clicked(self):

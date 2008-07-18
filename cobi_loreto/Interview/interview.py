@@ -59,12 +59,14 @@ class Interview(object):
     self.parent = parent
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
-    
 
     self.currentStep = None
     self.shapeType = None
+    self.commFishStarted= False    
     self.commFishIncome = None
+    self.sportFishStarted = False
     self.sportFishIncome = None
+    self.privateFishStarted = False
     self.privateFishIncome = None    
     self.ecotourismIncome = None
     self.consScienceIncome = None
@@ -111,7 +113,7 @@ class Interview(object):
         
         
   def nextStep(self, previousGui, msg="Leaving Step"):
-      sector_specific_vessel_port_info = False
+      sector_specific_vessel_port_info = True
       S = sector_specific_vessel_port_info
       
       capture_string = QString(msg)
@@ -122,7 +124,7 @@ class Interview(object):
           capPolyRub.reset()
       flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
       if self.commFishIncome:
-          capture_string = QString("Commericial Fishery Income exists, starting that interview...")
+          capture_string = QString("Commercial Fishery Income exists, starting that interview...")
           self.parent.statusbar.showMessage(capture_string)
           self.currentStep = 'Commercial Fishery'
           if S:          
@@ -190,7 +192,8 @@ class Interview(object):
           wnd.show()
       else:
           self.resetInterview('Interview is finished!')
-          print 'left interview fully...'
+          print 'Interview complete'
+          QMessageBox.information(self.mainwindow, "Success", "Interview completed")
       
       self.parent.canvas.setMapTool(self.parent.toolZoomIn)
             
@@ -254,7 +257,7 @@ class Interview(object):
           self.parent.statusbar.showMessage(capture_string)
           # Fire up the previous gui again...
           drawGui.previousGui.show()
-      else:
+      else:      
           file_prefix = (str(self.currentStep) + '_' + str(self.shapeType)).replace(' ','_').lower()
           file_prefix_obj = QString(file_prefix)
           file_name = QString("%s_" % file_prefix_obj)
@@ -265,11 +268,11 @@ class Interview(object):
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Shapefiles (*.shp)")
           f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Shapes as", None, QApplication.UnicodeUTF8),file_name,file_type_filter)
+          
           # Check to see if the shapefile has been saved
-          if f2.count(".shp")==0:
-            # If the user cancels...
-            print 'cancelled'
-            drawGui.previousGui.show()
+          if f2 == "":
+            print 'Cancelled'
+            drawGui.previousGui.show()              
           # check to see if the user tried to overwrite an existing shapefile
           elif os.path.isfile(f2):
             # Currently we don't suport overwriting, so return to same dialog
@@ -280,6 +283,10 @@ class Interview(object):
             self.parent.statusbar.showMessage(capture_string)
             drawGui.show()
           else:
+            if f2.count(".shp")==0:
+                # If user typed name but didn't end it with .shp
+                f2 = f2 + ".shp"              
+              
             f = f2
             write_string = QString(f)
             # define fields for feature attributes

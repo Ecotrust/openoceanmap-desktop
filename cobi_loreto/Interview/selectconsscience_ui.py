@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'selectconsscience.ui'
 #
-# Created: Sat Jun 28 18:45:45 2008
-#      by: PyQt4 UI code generator 4.4.2
+# Created: Thu Jul 17 16:10:30 2008
+#      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,16 +12,21 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectConsScience(object):
     def setupUi(self, SelectConsScience):
         SelectConsScience.setObjectName("SelectConsScience")
-        SelectConsScience.resize(454,105)
+        SelectConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,461,115).size()).expandedTo(SelectConsScience.minimumSizeHint()))
+
         self.vboxlayout = QtGui.QVBoxLayout(SelectConsScience)
         self.vboxlayout.setObjectName("vboxlayout")
+
         self.widget = QtGui.QWidget(SelectConsScience)
         self.widget.setObjectName("widget")
+
         self.hboxlayout = QtGui.QHBoxLayout(self.widget)
         self.hboxlayout.setObjectName("hboxlayout")
+
         self.fishery_text = QtGui.QLabel(self.widget)
         self.fishery_text.setObjectName("fishery_text")
         self.hboxlayout.addWidget(self.fishery_text)
+
         self.comboBox = QtGui.QComboBox(self.widget)
         self.comboBox.setMaximumSize(QtCore.QSize(350,16777215))
         self.comboBox.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -30,13 +35,17 @@ class Ui_SelectConsScience(object):
         self.comboBox.addItem("")
         self.hboxlayout.addWidget(self.comboBox)
         self.vboxlayout.addWidget(self.widget)
+
         self.widget_2 = QtGui.QWidget(SelectConsScience)
         self.widget_2.setObjectName("widget_2")
+
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget_2)
         self.hboxlayout1.setObjectName("hboxlayout1")
+
         self.pbnFinished = QtGui.QPushButton(self.widget_2)
         self.pbnFinished.setObjectName("pbnFinished")
         self.hboxlayout1.addWidget(self.pbnFinished)
+
         self.pbnStartShapes = QtGui.QPushButton(self.widget_2)
         self.pbnStartShapes.setObjectName("pbnStartShapes")
         self.hboxlayout1.addWidget(self.pbnStartShapes)
@@ -56,7 +65,7 @@ class Ui_SelectConsScience(object):
         self.comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Sea turtles", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Sea lions", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Dolphins or whales", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "None of the above", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.addItem(QtGui.QApplication.translate("SelectConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFinished.setText(QtGui.QApplication.translate("SelectConsScience", "Exit Cons / Scientist Step", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectConsScience", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 
