@@ -40,8 +40,7 @@ from Main.mainwindow import *
 import sys
 
 # Path to local QGIS install
-qgis_prefix = "/usr"
-
+qgis_prefix = "."
 
 # Main entry to program.  Set up the main app and create a new window.
 def main(argv):
@@ -51,9 +50,10 @@ def main(argv):
   #app = QgsApplication(argv,True)
   
   appTranslator = QTranslator()
-  #locale = QLocale.system().name()
-  locale = 'es'
-  if appTranslator.load("i18n/oom_es.qm"):
+  #locale_name = QLocale.system().name()
+  locale_name = 'es_MX'  
+  
+  if appTranslator.load("i18n/"+locale_name+".qm"):
     app.installTranslator(appTranslator)
     print 'translator installed'
   else:
