@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Fri Jun 27 18:24:02 2008
-#      by: PyQt4 UI code generator 4.4.2
+# Created: Fri Jul 18 12:29:00 2008
+#      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.toolBox.setObjectName("toolBox")
 
         self.legend_page = QtGui.QWidget()
-        self.legend_page.setGeometry(QtCore.QRect(0,0,390,463))
+        self.legend_page.setGeometry(QtCore.QRect(0,0,375,464))
         self.legend_page.setObjectName("legend_page")
 
         self.gridlayout1 = QtGui.QGridLayout(self.legend_page)
@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
         self.toolBox.addItem(self.legend_page,"")
 
         self.debug_page = QtGui.QWidget()
-        self.debug_page.setGeometry(QtCore.QRect(0,0,278,500))
+        self.debug_page.setGeometry(QtCore.QRect(0,0,375,464))
         self.debug_page.setObjectName("debug_page")
         self.toolBox.addItem(self.debug_page,"")
 
@@ -72,7 +72,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0,0,928,22))
+        self.menubar.setGeometry(QtCore.QRect(0,0,928,26))
         self.menubar.setObjectName("menubar")
 
         self.menuInterview = QtGui.QMenu(self.menubar)
@@ -138,26 +138,26 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuUtilities.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.toolBox.setCurrentIndex(0)
+        self.toolBox.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "OpenOceanMap", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.legend_page), QtGui.QApplication.translate("MainWindow", "Leyenda", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.debug_page), QtGui.QApplication.translate("MainWindow", "Mensajes", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuInterview.setTitle(QtGui.QApplication.translate("MainWindow", "Entrevista", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuMap.setTitle(QtGui.QApplication.translate("MainWindow", "Mapa", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuUtilities.setTitle(QtGui.QApplication.translate("MainWindow", "Utilidades", None, QtGui.QApplication.UnicodeUTF8))
-        self.mpActionZoomOut.setText(QtGui.QApplication.translate("MainWindow", "Alejar zum", None, QtGui.QApplication.UnicodeUTF8))
-        self.mpActionPan.setText(QtGui.QApplication.translate("MainWindow", "Desplazar mapa", None, QtGui.QApplication.UnicodeUTF8))
-        self.mpActionAddRasterLayer.setText(QtGui.QApplication.translate("MainWindow", "Añadir una capa ráster", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionStart_Interview.setText(QtGui.QApplication.translate("MainWindow", "Inicio Entrevista", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.legend_page), QtGui.QApplication.translate("MainWindow", "Legend", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.debug_page), QtGui.QApplication.translate("MainWindow", "Debug", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuInterview.setTitle(QtGui.QApplication.translate("MainWindow", "Interview", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuMap.setTitle(QtGui.QApplication.translate("MainWindow", "Map", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuUtilities.setTitle(QtGui.QApplication.translate("MainWindow", "Utilities", None, QtGui.QApplication.UnicodeUTF8))
+        self.mpActionZoomOut.setText(QtGui.QApplication.translate("MainWindow", "Zoom Out", None, QtGui.QApplication.UnicodeUTF8))
+        self.mpActionPan.setText(QtGui.QApplication.translate("MainWindow", "Pan", None, QtGui.QApplication.UnicodeUTF8))
+        self.mpActionAddRasterLayer.setText(QtGui.QApplication.translate("MainWindow", "Add Raster Layer", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionStart_Interview.setText(QtGui.QApplication.translate("MainWindow", "Start Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.actionStart_Interview.setIconText(QtGui.QApplication.translate("MainWindow", "Inicio Entrevista", None, QtGui.QApplication.UnicodeUTF8))
         self.actionStart_Interview.setToolTip(QtGui.QApplication.translate("MainWindow", "Inicio Entrevista", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionRegion_Tool.setText(QtGui.QApplication.translate("MainWindow", "Región herramienta", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionRegion_Tool.setText(QtGui.QApplication.translate("MainWindow", "Region Tool", None, QtGui.QApplication.UnicodeUTF8))
         self.actionPolygon_Tool.setText(QtGui.QApplication.translate("MainWindow", "Polygon Tool", None, QtGui.QApplication.UnicodeUTF8))
-        self.mpActionZoomIn.setText(QtGui.QApplication.translate("MainWindow", "Acercar zum", None, QtGui.QApplication.UnicodeUTF8))
-        self.mpActionAddVectorLayer.setText(QtGui.QApplication.translate("MainWindow", "Añadir una capa vectorial", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionPython_Console.setText(QtGui.QApplication.translate("MainWindow", "Consola de Python", None, QtGui.QApplication.UnicodeUTF8))
+        self.mpActionZoomIn.setText(QtGui.QApplication.translate("MainWindow", "Zoom In", None, QtGui.QApplication.UnicodeUTF8))
+        self.mpActionAddVectorLayer.setText(QtGui.QApplication.translate("MainWindow", "Add Vector Layer", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionPython_Console.setText(QtGui.QApplication.translate("MainWindow", "Python Console", None, QtGui.QApplication.UnicodeUTF8))
 
 import resources_rc

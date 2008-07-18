@@ -459,73 +459,78 @@
         <translation>MapaOceanAbierto</translation>
     </message>
     <message>
-        <location filename="Main/mainwindow.ui" line="72"/>
-        <source>Leyenda</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="Main/mainwindow.ui" line="115"/>
-        <source>Mensajes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Main/mainwindow.ui" line="148"/>
-        <source>Entrevista</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Main/mainwindow.ui" line="154"/>
-        <source>Mapa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Main/mainwindow.ui" line="166"/>
-        <source>Utilidades</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Main/mainwindow.ui" line="180"/>
-        <source>Alejar zum</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Main/mainwindow.ui" line="188"/>
-        <source>Desplazar mapa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message encoding="UTF-8">
-        <location filename="Main/mainwindow.ui" line="196"/>
-        <source>Añadir una capa ráster</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Main/mainwindow.ui" line="210"/>
         <source>Inicio Entrevista</source>
         <translation type="unfinished"></translation>
     </message>
-    <message encoding="UTF-8">
+    <message>
+        <location filename="Main/mainwindow.ui" line="154"/>
+        <source>Map</source>
+        <translation>Mapa</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="196"/>
+        <source>Add Raster Layer</source>
+        <translation>Añadir una capa ráster</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="242"/>
+        <source>Add Vector Layer</source>
+        <translation>Añadir una capa vectorial</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="148"/>
+        <source>Interview</source>
+        <translation>Entrevista</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="166"/>
+        <source>Utilities</source>
+        <translation>Utilidades</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="180"/>
+        <source>Zoom Out</source>
+        <translation>Alejar Zum</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="188"/>
+        <source>Pan</source>
+        <translation>Desplezar mapa</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="204"/>
+        <source>Start Interview</source>
+        <translation>Inicio Entrevista</translation>
+    </message>
+    <message>
         <location filename="Main/mainwindow.ui" line="218"/>
-        <source>Región herramienta</source>
-        <translation type="unfinished"></translation>
+        <source>Region Tool</source>
+        <translation>Región herramienta</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="234"/>
+        <source>Zoom In</source>
+        <translation>Acercar Zum</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="250"/>
+        <source>Python Console</source>
+        <translation>Consola de Python</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="72"/>
+        <source>Legend</source>
+        <translation>Leyenda</translation>
+    </message>
+    <message>
+        <location filename="Main/mainwindow.ui" line="115"/>
+        <source>Debug</source>
+        <translation>Mensajes</translation>
     </message>
     <message>
         <location filename="Main/mainwindow.ui" line="226"/>
         <source>Polygon Tool</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Main/mainwindow.ui" line="234"/>
-        <source>Acercar zum</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message encoding="UTF-8">
-        <location filename="Main/mainwindow.ui" line="242"/>
-        <source>Añadir una capa vectorial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Main/mainwindow.ui" line="250"/>
-        <source>Consola de Python</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

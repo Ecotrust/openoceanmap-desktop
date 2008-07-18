@@ -57,19 +57,19 @@
         </size>
        </property>
        <property name="currentIndex" >
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="legend_page" >
         <property name="geometry" >
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>390</width>
-          <height>463</height>
+          <width>375</width>
+          <height>464</height>
          </rect>
         </property>
         <attribute name="label" >
-         <string>Leyenda</string>
+         <string>Legend</string>
         </attribute>
         <layout class="QGridLayout" >
          <property name="leftMargin" >
@@ -107,12 +107,12 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>278</width>
-          <height>500</height>
+          <width>375</width>
+          <height>464</height>
          </rect>
         </property>
         <attribute name="label" >
-         <string>Mensajes</string>
+         <string>Debug</string>
         </attribute>
        </widget>
       </widget>
@@ -140,18 +140,18 @@
      <x>0</x>
      <y>0</y>
      <width>928</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuInterview" >
     <property name="title" >
-     <string>Entrevista</string>
+     <string>Interview</string>
     </property>
     <addaction name="actionStart_Interview" />
    </widget>
    <widget class="QMenu" name="menuMap" >
     <property name="title" >
-     <string>Mapa</string>
+     <string>Map</string>
     </property>
     <addaction name="mpActionAddRasterLayer" />
     <addaction name="mpActionAddVectorLayer" />
@@ -163,7 +163,7 @@
    </widget>
    <widget class="QMenu" name="menuUtilities" >
     <property name="title" >
-     <string>Utilidades</string>
+     <string>Utilities</string>
     </property>
     <addaction name="actionPython_Console" />
    </widget>
@@ -177,7 +177,7 @@
     <iconset resource="resources.qrc" >:/images/mActionZoomOut.png</iconset>
    </property>
    <property name="text" >
-    <string>Alejar zum</string>
+    <string>Zoom Out</string>
    </property>
   </action>
   <action name="mpActionPan" >
@@ -185,7 +185,7 @@
     <iconset resource="resources.qrc" >:/images/mActionPan.png</iconset>
    </property>
    <property name="text" >
-    <string>Desplazar mapa</string>
+    <string>Pan</string>
    </property>
   </action>
   <action name="mpActionAddRasterLayer" >
@@ -193,7 +193,7 @@
     <iconset resource="resources.qrc" >:/images/mActionAddRasterLayer.png</iconset>
    </property>
    <property name="text" >
-    <string>Añadir una capa ráster</string>
+    <string>Add Raster Layer</string>
    </property>
   </action>
   <action name="actionStart_Interview" >
@@ -201,7 +201,7 @@
     <iconset resource="resources.qrc" >:/images/mActionStartEditing.png</iconset>
    </property>
    <property name="text" >
-    <string>Inicio Entrevista</string>
+    <string>Start Interview</string>
    </property>
    <property name="iconText" >
     <string>Inicio Entrevista</string>
@@ -215,7 +215,7 @@
     <iconset resource="resources.qrc" >:/images/mActionMeasureArea.png</iconset>
    </property>
    <property name="text" >
-    <string>Región herramienta</string>
+    <string>Region Tool</string>
    </property>
   </action>
   <action name="actionPolygon_Tool" >
@@ -231,7 +231,7 @@
     <iconset resource="resources.qrc" >:/images/mActionZoomIn.png</iconset>
    </property>
    <property name="text" >
-    <string>Acercar zum</string>
+    <string>Zoom In</string>
    </property>
   </action>
   <action name="mpActionAddVectorLayer" >
@@ -239,7 +239,7 @@
     <iconset resource="resources.qrc" >:/images/mActionAddLayer.png</iconset>
    </property>
    <property name="text" >
-    <string>Añadir una capa vectorial</string>
+    <string>Add Vector Layer</string>
    </property>
   </action>
   <action name="actionPython_Console" >
@@ -247,7 +247,7 @@
     <iconset resource="resources.qrc" >:/images/mIconProperties.png</iconset>
    </property>
    <property name="text" >
-    <string>Consola de Python</string>
+    <string>Python Console</string>
    </property>
   </action>
  </widget>
