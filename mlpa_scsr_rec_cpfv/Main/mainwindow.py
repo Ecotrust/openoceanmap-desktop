@@ -103,9 +103,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 #                                  299310,-350475))
     #self.canvas.setExtent(QgsRect(-74785,-634619,294487,-363979))
     
-    rasterList = [["Data\Scsr_zm1a_rect.tif",800001,5000000],
-                  ["Data\Scsr_zm2a_rect.tif",300001,800000],
-                  ["Data\Scsr_zm3b_rect.tif",60000,300000]]    
+    rasterList = [["Data/Scsr_zm1a_rect.tif",800001,5000000],
+                  ["Data/Scsr_zm2a_rect.tif",300001,800000],
+                  ["Data/Scsr_zm3b_rect.tif",60000,300000]]    
     
     self.rasterBaseLayer = OOMLayer(self)
     
@@ -150,7 +150,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem("NOAA ENC",
                                     self.rasterBaseLayer.getCls())
 
-    vectorList = [["Data/Scsr_oom_ctours.shp",60000,1200000]]
+    #vectorList = [["Data/Scsr_oom_ctours.shp",60000,1200000]]
+    vectorList = []
     for vectorSet in vectorList:
       vector = vectorSet[0]
       minScale = vectorSet[1]
