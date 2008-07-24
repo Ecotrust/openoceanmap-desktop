@@ -46,11 +46,10 @@ from Util.common_functions import *
 import sys
 
 class SelectFisheryGui(QDialog, Ui_SelectFishery):
-    def __init__(self, parent, fl):
-        QDialog.__init__(self, parent.mainwindow, fl)
+    def __init__(self, parent):
+        QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent
-        self.permits = []
 
     def on_pbnStartShapes_released(self):
         #Get fishery value
@@ -59,74 +58,22 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
             QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
             return 
         else:
-            self.parent.currentFishery = cur_fishery
-        
+            self.parent.currentFishery = cur_fishery        
 
-        #Build permit id string
-        permits = []
-        
-        if self.p1.isChecked():
-            permits.append('01')
-        if self.p2.isChecked():
-            permits.append('02')
-        if self.p3.isChecked():
-            permits.append('03')
-        if self.p4.isChecked():
-            permits.append('04')
-        if self.p5.isChecked():
-            permits.append('05')
-        if self.p6.isChecked():
-            permits.append('06')
-        if self.p7.isChecked():
-            permits.append('07')
-        if self.p8.isChecked():
-            permits.append('08')
-        if self.p9.isChecked():
-            permits.append('09')
-        if self.p10.isChecked():
-            permits.append('10')
-        if self.p11.isChecked():
-            permits.append('11')
-        if self.p12.isChecked():
-            permits.append('12')
-        if self.p13.isChecked():
-            permits.append('13')
-        if self.p14.isChecked():
-            permits.append('14')
-        if self.p15.isChecked():
-            permits.append('15')
-        if self.p16.isChecked():
-            permits.append('16')
-        if self.p17.isChecked():
-            permits.append('17')
-        if self.p18.isChecked():
-            permits.append('18')
-        if self.p19.isChecked():
-            permits.append('19')
-        if self.p20.isChecked():
-            permits.append('20')
-        if self.p21.isChecked():
-            permits.append('21')
-        if self.p22.isChecked():
-            permits.append('22')
-        if self.p23.isChecked():
-            permits.append('23')
-        if self.p24.isChecked():
-            permits.append('24')
-        if self.p25.isChecked():
-            permits.append('25')
-        if self.p26.isChecked():
-            permits.append('26')
-        if self.p27.isChecked():
-            permits.append('27')
-        if self.p28.isChecked():
-            permits.append('28')
-        if self.p29.isChecked():
-            permits.append('29')
-                        
-        permit_str = ','.join(permits)
-        self.parent.currentPermits = permit_str 
-        
+        perc_trips = self.perc_trip_fish_line.text()
+        if perc_trips == "":
+            QMessageBox.warning(self, "Input Error", "Please enter percentage of trips")
+            return 
+        else:
+            self.parent.interviewInfo2.append(["perc_trips",self.perc_trip_fish_line.text()])
+            
+        perc_land = self.perc_trip_land_line.text()
+        if perc_land == "":
+            QMessageBox.warning(self, "Input Error", "Please enter percentage of landings")
+            return    
+        else:
+            self.parent.interviewInfo2.append(["perc_land",self.perc_trip_land_line.text()])
+             
         self.close()
         
         mc = self.parent.canvas      
@@ -179,8 +126,6 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
-            self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
-            self.parent.capturedPolygonsPermits.append(self.parent.currentPermits)
             
         self.close()
 
@@ -222,8 +167,6 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
-            self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
-            self.parent.capturedPolygonsPermits.append(self.parent.currentPermits)
         self.close()
         self.parent.interviewEnd()
 

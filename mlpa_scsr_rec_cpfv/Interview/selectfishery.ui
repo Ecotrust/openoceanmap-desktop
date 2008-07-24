@@ -6,16 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>821</width>
-    <height>610</height>
+    <width>598</width>
+    <height>223</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Select Fishery</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_5" >
+  <layout class="QVBoxLayout" >
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3" >
+    <layout class="QHBoxLayout" >
      <item>
       <widget class="QWidget" native="1" name="widget" >
        <layout class="QHBoxLayout" >
@@ -38,13 +38,13 @@
          <widget class="QLabel" name="fishery_text" >
           <property name="minimumSize" >
            <size>
-            <width>160</width>
+            <width>300</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>160</width>
+            <width>300</width>
             <height>16777215</height>
            </size>
           </property>
@@ -54,135 +54,168 @@
          </widget>
         </item>
         <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QComboBox" name="fishery_comboBox" >
           <item>
            <property name="text" >
-            <string/>
+            <string>Abalone</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>California Halibut (Hook &amp; Line)</string>
+            <string>Barracuda</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>California Halibut (Set Gill Net)</string>
+            <string>Bonita</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Coastal Pelagics (Seine)</string>
+            <string>Calico Bass</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Deep Nearshore Rockfish (Hook &amp; Line)</string>
+            <string>California Halibut</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Lobster (Trap)</string>
+            <string>Clams</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Rockfish (Hook &amp; Line)</string>
+            <string>Croaker</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Rockfish (Trap)</string>
+            <string>Dorado (Mahi Mahi)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Pacific Bonito (Seine)</string>
+            <string>Jack Smelt</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Rock Crab (Trap)</string>
+            <string>Lobster</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish (Hook &amp; Line)</string>
+            <string>Mackerel</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish (Trap)</string>
+            <string>Mako Shark</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sea Cucumber (Diving)</string>
+            <string>Marlin (Swordfish)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Shark (Drift Gill Net)</string>
+            <string>Mussels</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Shark (Set Gill Net)</string>
+            <string>Rays/Skates</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Spot Prawn (Trap)</string>
+            <string>Rock Crab</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Squid (Seine)</string>
+            <string>Rockfish/Lingcod</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Swordfish (Drift Gill Net)</string>
+            <string>Sand Crab</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Swordfish (Harpoon or Spear)</string>
+            <string>Salmon</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Swordfish (Hook &amp; Line)</string>
+            <string>Sand Bass</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Thornyhead (Hook &amp; Line)</string>
+            <string>Scallops</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Tuna (Hook &amp; Line)</string>
+            <string>Sharks (Other)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Tuna (Seine)</string>
+            <string>Sheephead</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Urchin (Diving)</string>
+            <string>Squid</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>White Seabass (Hook-Line)</string>
+            <string>Surfperch</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>White Seabass (Gillnet)</string>
+            <string>Thresher Shark</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Tuna</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>White Sea Bass</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Yellowtail</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Urchin</string>
            </property>
           </item>
           <item>
@@ -195,67 +228,41 @@
        </layout>
       </widget>
      </item>
-     <item>
-      <spacer name="horizontalSpacer_2" >
-       <property name="orientation" >
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0" >
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5" >
+    <layout class="QHBoxLayout" >
      <item>
       <widget class="QWidget" native="1" name="widget_3" >
-       <layout class="QHBoxLayout" name="horizontalLayout_4" >
+       <layout class="QHBoxLayout" >
         <item>
          <widget class="QLabel" name="label" >
           <property name="minimumSize" >
            <size>
-            <width>160</width>
+            <width>300</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>160</width>
+            <width>300</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Percent income from this fishery:</string>
+           <string>What percentage of your trips (annually) are associated with this fishery (on average)?</string>
+          </property>
+          <property name="wordWrap" >
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="fish_perc_income" >
-          <property name="minimumSize" >
-           <size>
-            <width>40</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>40</width>
-            <height>16777215</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3" >
+         <spacer>
           <property name="orientation" >
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeHint" stdset="0" >
+          <property name="sizeHint" >
            <size>
             <width>40</width>
             <height>20</height>
@@ -263,450 +270,123 @@
           </property>
          </spacer>
         </item>
+        <item>
+         <widget class="QLineEdit" name="perc_trip_fish_line" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
        </layout>
-       <zorder>fish_perc_income</zorder>
-       <zorder>label</zorder>
-       <zorder>label</zorder>
-       <zorder>horizontalSpacer_3</zorder>
       </widget>
      </item>
     </layout>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox" >
-     <property name="title" >
-      <string>Select Permits for this fishery:</string>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout" >
+    <widget class="QWidget" native="1" name="widget_4" >
+     <layout class="QHBoxLayout" >
       <item>
-       <widget class="QFrame" name="frame" >
-        <property name="frameShape" >
-         <enum>QFrame::StyledPanel</enum>
+       <widget class="QLabel" name="label_2" >
+        <property name="minimumSize" >
+         <size>
+          <width>300</width>
+          <height>0</height>
+         </size>
         </property>
-        <property name="frameShadow" >
-         <enum>QFrame::Raised</enum>
+        <property name="maximumSize" >
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout" >
-         <item>
-          <widget class="QCheckBox" name="p1" >
-           <property name="text" >
-            <string>Anchovy Take</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p2" >
-           <property name="text" >
-            <string>Deeper Nearshore Species Fishery Permit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p3" >
-           <property name="text" >
-            <string>Drift Gill Net</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p4" >
-           <property name="text" >
-            <string>Drift Gill Net Sharks - Swordfish Permit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p5" >
-           <property name="text" >
-            <string>Federal (HMS) Permit - Thresher Shark</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p6" >
-           <property name="text" >
-            <string>Federal Coastal Pelagic Species Permit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p7" >
-           <property name="text" >
-            <string>Federal Limited Entry Fixed Gear Permit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p8" >
-           <property name="text" >
-            <string>Federal Limited Entry Trap Permit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p9" >
-           <property name="text" >
-            <string>Free Swordfish</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p10" >
-           <property name="text" >
-            <string>General Gill Net</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p11" >
-           <property name="text" >
-            <string>Gill/Trammel Net Permit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p12" >
-           <property name="text" >
-            <string>Golden, Spot and Ridgeback Prawn</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p13" >
-           <property name="text" >
-            <string>Herring Gill Net (Nonresident)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p14" >
-           <property name="text" >
-            <string>Herring Gill Net (Resident)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p15" >
-           <property name="text" >
-            <string>Lobster Crewmember</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p16" >
-           <property name="text" >
-            <string>Lobster Operator (NT)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p17" >
-           <property name="text" >
-            <string>Lobster Operaotr (T)</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <property name="text" >
+         <string>What percentage of your total landings (annually) are associated with this fishery (on average)</string>
+        </property>
+        <property name="wordWrap" >
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
-       <widget class="QFrame" name="frame_3" >
-        <property name="frameShape" >
-         <enum>QFrame::StyledPanel</enum>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
         </property>
-        <property name="frameShadow" >
-         <enum>QFrame::Raised</enum>
+        <property name="sizeHint" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2" >
-         <item>
-          <widget class="QCheckBox" name="p18" >
-           <property name="text" >
-            <string>Market Squid Brail Permit (NT)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p19" >
-           <property name="text" >
-            <string>Market Squid Brail Permit (T)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p20" >
-           <property name="text" >
-            <string>Market Squid Light Boat Owner</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p21" >
-           <property name="text" >
-            <string>Market Squid Light Boat Permit (NT)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p22" >
-           <property name="text" >
-            <string>Market Squid Vessel (NT)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p23" >
-           <property name="text" >
-            <string>Market Squid Vessel (T)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p24" >
-           <property name="text" >
-            <string>Nearshore Fishery Bycatch (NT)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p25" >
-           <property name="text" >
-            <string>Nearshore Fishery Bycatch Permit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p26" >
-           <property name="text" >
-            <string>North Central Coast Fishery Trap Endorsement</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p27" >
-           <property name="text" >
-            <string>North Central Coast Nearshore Fishery (NT)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p28" >
-           <property name="text" >
-            <string>North Central Coast Nearshore Fishery (T)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p29" >
-           <property name="text" >
-            <string>North Coast Nearshore Fishery (T)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p30" >
-           <property name="text" >
-            <string>Northern Rock Crab</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p31" >
-           <property name="text" >
-            <string>Ocean Enhancement</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p32" >
-           <property name="text" >
-            <string>Salmon Stamp</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="p33" >
-           <property name="text" >
-            <string>Salmon Vessel Permit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer" >
-           <property name="orientation" >
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0" >
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </widget>
+       </spacer>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4" >
-        <item>
-         <widget class="QFrame" name="frame_2" >
-          <property name="frameShape" >
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow" >
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_3" >
-           <item>
-            <widget class="QCheckBox" name="p34" >
-             <property name="text" >
-              <string>Sea Cucumber Diving</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p35" >
-             <property name="text" >
-              <string>Sea Cucumber Trawl</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p36" >
-             <property name="text" >
-              <string>Sea Urchin Crewmember</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p37" >
-             <property name="text" >
-              <string>Sea Urchin Permit</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p38" >
-             <property name="text" >
-              <string>South Central Coast Nearshore Fishery (NT)</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p39" >
-             <property name="text" >
-              <string>South Central Coast Nearshore Fishery (T)</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p40" >
-             <property name="text" >
-              <string>South Central Coast Trap Endorsement (NT)</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p41" >
-             <property name="text" >
-              <string>South Central Coast Trap Endoresement (T)</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p42" >
-             <property name="text" >
-              <string>South Coast Nearshore Fishery (NT)</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p43" >
-             <property name="text" >
-              <string>South Coast Nearshore Fishery (T)</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p44" >
-             <property name="text" >
-              <string>South Coast Trap Endorsement (NT)</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p45" >
-             <property name="text" >
-              <string>South Coast Trap Endorsement (T)</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p46" >
-             <property name="text" >
-              <string>Southern Rock Crab</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p47" >
-             <property name="text" >
-              <string>Swordfish</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p48" >
-             <property name="text" >
-              <string>Tidal Invertebrate</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="p49" >
-             <property name="text" >
-              <string>Trap Permit</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="verticalSpacer_2" >
-             <property name="orientation" >
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0" >
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QLineEdit" name="perc_trip_land_line" >
+        <property name="minimumSize" >
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>40</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>580</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" >
      <item>
       <widget class="QWidget" native="1" name="widget_2" >
        <layout class="QHBoxLayout" >
         <property name="spacing" >
          <number>6</number>
         </property>
-        <property name="margin" >
+        <property name="leftMargin" >
+         <number>9</number>
+        </property>
+        <property name="topMargin" >
+         <number>9</number>
+        </property>
+        <property name="rightMargin" >
+         <number>9</number>
+        </property>
+        <property name="bottomMargin" >
          <number>9</number>
         </property>
         <item>
-         <spacer name="horizontalSpacer" >
+         <spacer>
           <property name="orientation" >
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeHint" stdset="0" >
+          <property name="sizeHint" >
            <size>
             <width>40</width>
             <height>20</height>
@@ -739,9 +419,6 @@
          </widget>
         </item>
        </layout>
-       <zorder>pbnFisheryFinished</zorder>
-       <zorder>pbnStartShapes</zorder>
-       <zorder>horizontalSpacer</zorder>
       </widget>
      </item>
     </layout>

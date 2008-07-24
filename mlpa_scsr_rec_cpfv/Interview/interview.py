@@ -35,6 +35,7 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from interviewstart import *
+from selectfishery import *
 #from Tools.polygontool import *
 #from nextpolygon import *
 # UI specific includes
@@ -50,16 +51,15 @@ class Interview(QObject):
     self.mainwindow = parent.parent
     
     self.currentFishery = None
-    self.currentPermits = None
+        
     # A place to store polygons we capture
     self.capturedPolygons = []
     self.capturedPolygonsFishery = []
     self.capturedPolygonsPennies = []
-    self.capturedPolygonsHabitat = []
-    self.capturedPolygonsPermits = []
     self.capturedPolygonsRub = []
     
     self.pennies_left = 100
+    self.cpfv_completed = False
 
     # Interview info to write in shapefile
     self.interviewInfo = []
@@ -70,6 +70,16 @@ class Interview(QObject):
     wnd = InterviewStartGui(self,flags)
     wnd.show()
 
+  def nextStep(self, previousGui, msg="Leaving Step"):
+      if not self.cpfv_completed:
+          new_status = "Starting CPFV interview"
+          self.parent.statusbar.showMessage(new_status)
+          self.currentStep = 'CPFV'
+          from rec_cpfv import RecCpfvGui
+          wnd = RecCpfvGui(self)
+          wnd.show()
+
+      self.interviewInfo2.append(["user_group",self.currentStep])
   # End interview dialog for current fishery, then start a new one
   def interviewEnd(self):
       if len(self.capturedPolygons) == 0:
@@ -96,8 +106,6 @@ class Interview(QObject):
 
           fields[index+1] = QgsField("fishery", QVariant.String)          
           fields[index+2] = QgsField("pennies", QVariant.Int)
-          fields[index+3] = QgsField("habitat", QVariant.String)
-          fields[index+4] = QgsField("permits", QVariant.String)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -128,8 +136,6 @@ class Interview(QObject):
                 
               fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
               fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
-              fet.addAttribute(index+3, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
-              fet.addAttribute(index+4, QVariant(self.capturedPolygonsPermits[capPolyInd]))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -147,7 +153,7 @@ class Interview(QObject):
             #Pull out
             return
 
-          layer.label().setLabelField(QgsLabel.Text, 23)
+          layer.label().setLabelField(QgsLabel.Text, 28)
           layer.setLabelOn(True)
           
           # Set the transparency for the layer
@@ -169,16 +175,11 @@ class Interview(QObject):
       self.capturedPolygons = []
       self.capturedPolygonsFishery = []
       self.capturedPolygonsPennies = []
-      self.capturedPolygonsHabitat = []
-      self.capturedPolygonsPermits = []
       self.capturedPolygonsRub = []
-      
-      # Fire up the select fishery gui again...
-      flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
       
       #Reset penny count
       self.pennies_left = 100
       
-      wnd = SelectFisheryGui(self,flags)
+      wnd = SelectFisheryGui(self)
       wnd.show()
 

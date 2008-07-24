@@ -36,7 +36,6 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
-from selectfishery import *
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
 # General system includes
@@ -62,25 +61,13 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
         interviewInfo2.append(["mood", self.mood_line.text()])
 
-        interviewInfo2.append(["years", self.years_line.text()])
-        interviewInfo2.append(["perc_incom", self.perc_income_line.text()])
-        interviewInfo2.append(["fsh_lic_id", self.fisherman_license_id_line.text()])
-        interviewInfo2.append(["fed_vsl_id", self.federal_vessel_id_line.text()])
-        interviewInfo2.append(["sta_vsl_id", self.state_vessel_id_line.text()])
-        interviewInfo2.append(["v_len", self.vessel_length_line.text()])
-        interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])
-        interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
-        interviewInfo2.append(["v_homep", self.home_port_line.text()])
-        
-        interviewInfo2.append(["landp_1", self.landing_port_line.text()])                       
-        interviewInfo2.append(["landp_2", self.landing_port_line_2.text()])
-        interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
-        interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
+        interviewInfo2.append(["cpfv_inc", self.cpfv_income_line.text()])
 
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = SelectFisheryGui(self.parent,flags)
-        wnd.show()
+
+        self.parent.nextStep(self)
+        
         #mc = self.parent.canvas      
         #self.p = PolygonTool(mc,self.parent)
         #QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
