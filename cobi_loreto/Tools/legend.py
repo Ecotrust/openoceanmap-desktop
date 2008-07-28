@@ -41,7 +41,7 @@ import sys,string
 
 # Legend Check Box
 class LegendCheckBox(QCheckBox):
-  def __init__(self, parent, name, canvasLayers,isVect):
+  def __init__(self, parent, name, canvasLayers,isVect,isChecked=Qt.Checked):
     QCheckBox.__init__(self, name)
     self.parent = parent
     self.name = name
@@ -56,9 +56,11 @@ class LegendCheckBox(QCheckBox):
     QObject.connect(self.act2, SIGNAL("triggered()"), self.action2)
     self.act3 = QAction(self.removeIcon, "Change Color", self)
     QObject.connect(self.act3, SIGNAL("triggered()"), self.action3)
-    self.setCheckState(Qt.Checked)
+    self.setCheckState(isChecked)
     QObject.connect(self, SIGNAL("refresh()"),
                     self.parent.parent.canvas, SLOT("layerStateChange()"))
+    
+    self.updateLayerStatus(isChecked)
 
   def mousePressEvent(self, event):
     if event.button() == Qt.RightButton:
@@ -135,8 +137,8 @@ class Legend(object):
     self.groupBoxLayout.addWidget(item_new)
 
   # Add Item To Legend
-  def addVectorLegendItem(self, name, cls):
-    item_new = LegendCheckBox(self, name, cls, True)
+  def addVectorLegendItem(self, name, cls, isChecked=Qt.Checked):
+    item_new = LegendCheckBox(self, name, cls, True, isChecked)
     QObject.connect(item_new, SIGNAL("stateChanged(int)"),
                  item_new.updateLayerStatus)    
     pm = QPixmap(20,20)

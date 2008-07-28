@@ -6,6 +6,7 @@
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Aaron Racicot
 # Copyright (C) 2008  Dane Springmeyer
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -105,7 +106,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     #self.canvas.setExtent(QgsRect(-340000,-70000,
     #                              -191000,52500))
     
-    rasterList = [["Data/cat_merc.tif",100000,5000000]]
+    rasterList = [["Data/Loreto_Base.tif",10000,5000000]]
     self.rasterBaseLayer = OOMLayer(self)
     
     first_raster = None
@@ -120,10 +121,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
+      # turn off contrast enhancement
+      layer.setContrastEnhancementAlgorithm(QString("NO_STRETCH"))
 
       if i == 0:
         first_raster = layer        
-
 
       if self.srs == None:
         self.srs = layer.srs()
@@ -157,13 +159,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem("Loreto Base Map",
                                     self.rasterBaseLayer.getCls())
 
+
+
     #vectorList = [["Data/Kayak_Points.shp",0,125000],
     #              ["Data/Access_Points.shp",0,200000]]
-    vectorList = []
+    vectorList = [["Data/Aprov_Susten.shp","Aprov Susten", 0,5000000],
+                  ["Data/Bathymetry.shp","Bathymetry", 0,5000000],
+                  ["Data/Zona_Restringido.shp","Zona de Restringido", 0,5000000],
+                  ["Data/Zona_Proteccion.shp","Zona de Proteccion", 0,5000000],                                   
+                  ["Data/Zona_Proteccion_Points.shp","Zona Proteccion (Points)", 0,5000000],
+                  ["Data/Seamounts.shp","Seamounts", 0,5000000],
+                  ]
     for vectorSet in vectorList:
       vector = vectorSet[0]
-      minScale = vectorSet[1]
-      maxScale = vectorSet[2]
+      minScale = vectorSet[2]
+      maxScale = vectorSet[3]
       
       info = QFileInfo(QString(vector))
       # create layer
@@ -179,24 +189,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       layer.setMinScale(minScale)
       layer.setMaxScale(maxScale)
 
-      if vector == "Data/Access_Points.shp":
-        layer.label().setLabelField(QgsLabel.Text, 25)
+      layer_on = Qt.Checked
+      if vector == "Data/Aprov_Susten.shp":
+        layer.renderer().symbols()[0].setColor(QColor('Black'))
+        layer.renderer().symbols()[0].setFillStyle(Qt.NoBrush)          
+      elif vector == 'Data/Zona_Proteccion_Points.shp':
+        layer.renderer().symbols()[0].setPointSize(11)
+        layer.renderer().symbols()[0].setNamedPointSymbol("hard:triangle")
+        layer.renderer().symbols()[0].setFillColor(QColor("Red"))
+      elif vector == 'Data/Seamounts.shp':
         layer.renderer().symbols()[0].setPointSize(10)
-        layer.setLabelOn(True)
-        label = layer.label()
-        labelAt = label.layerAttributes()
-        labelAt.setBold(True)
-        labelAt.setBufferEnabled(True)
-        labelAt.setOffset(0,-10,1)
-      elif vector == "Data/Kayak_Points.shp":
-        layer.label().setLabelField(QgsLabel.Text, 1)
-        layer.renderer().symbols()[0].setPointSize(10)
-        layer.setLabelOn(True)
-        label = layer.label()
-        labelAt = label.layerAttributes()
-        labelAt.setBold(True)
-        labelAt.setBufferEnabled(True)
-        labelAt.setOffset(0,-10,1)
+        layer.renderer().symbols()[0].setFillColor(QColor(200,84,232))
+      elif vector == "Data/Zona_Restringido.shp":
+        layer.renderer().symbols()[0].setColor(QColor(220,147,0))
+        layer.renderer().symbols()[0].setFillColor(QColor(255,170,0))
+        layer.renderer().symbols()[0].setFillStyle(Qt.FDiagPattern)
+      elif vector == "Data/Zona_Proteccion.shp":
+        layer.renderer().symbols()[0].setColor(QColor(192,0,0))
+        layer.renderer().symbols()[0].setFillColor(QColor(221,48,18))
+        layer.renderer().symbols()[0].setFillStyle(Qt.Dense7Pattern)
+      elif vector == "Data/Bathymetry.shp":
+        layer.renderer().symbols()[0].setPointSize(8)
+        layer.renderer().symbols()[0].setLineWidth(1)
+        layer.renderer().symbols()[0].setColor(QColor(8,83,137))
+        layer_on = Qt.Unchecked
       
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
@@ -206,7 +222,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.layers.insert(0,cl)
       self.canvas.setLayerSet(self.layers)
       #Add item to legend
-      self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
+      self.legend.addVectorLegendItem(vectorSet[1],[cl],layer_on)
     self.canvas.setExtent(first_raster.extent())
 
 class OOMLayer(object):
