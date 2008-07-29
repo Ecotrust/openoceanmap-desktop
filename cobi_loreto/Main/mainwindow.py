@@ -194,7 +194,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         layer.renderer().symbols()[0].setColor(QColor('Black'))
         layer.renderer().symbols()[0].setFillStyle(Qt.NoBrush)          
       elif vector == 'Data/Zona_Proteccion_Points.shp':
-        layer.renderer().symbols()[0].setPointSize(11)
+        layer.renderer().symbols()[0].setPointSize(12)
         layer.renderer().symbols()[0].setNamedPointSymbol("hard:triangle")
         layer.renderer().symbols()[0].setFillColor(QColor("Red"))
       elif vector == 'Data/Seamounts.shp':
