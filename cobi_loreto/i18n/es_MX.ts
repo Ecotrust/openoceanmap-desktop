@@ -280,40 +280,40 @@
     <message>
         <location filename="Interview/fishery.ui" line="112"/>
         <source>Vessel length (meters) :</source>
-        <translation>Longitud de la embarcación (metros) :</translation>
+        <translation type="obsolete">Longitud de la embarcación (metros) :</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="192"/>
+        <location filename="Interview/fishery.ui" line="195"/>
         <source>Vessel motor (horsepower):</source>
         <translation>Tipo de motor de la embarcación (caballos, hp):</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="269"/>
+        <location filename="Interview/fishery.ui" line="275"/>
         <source>Haul Capacity (kilograms):</source>
         <translation>Capacidad de la embarcación (kg):</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="346"/>
+        <location filename="Interview/fishery.ui" line="355"/>
         <source>Home Port:</source>
         <translation>Puerto de origen:</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="423"/>
+        <location filename="Interview/fishery.ui" line="435"/>
         <source>Landing Port 1:</source>
         <translation>Puerto de desembarque 1:</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="500"/>
+        <location filename="Interview/fishery.ui" line="515"/>
         <source>Landing Port 2:</source>
         <translation>Puerto de desembarque 2:</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="577"/>
+        <location filename="Interview/fishery.ui" line="595"/>
         <source>Landing Port 3:</source>
         <translation>Puerto de desembarque 3:</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="654"/>
+        <location filename="Interview/fishery.ui" line="675"/>
         <source>Landing Port 4:</source>
         <translation>Puerto de desembarque 4:</translation>
     </message>
@@ -333,9 +333,14 @@
         <translation>Información del pescador</translation>
     </message>
     <message>
-        <location filename="Interview/fishery.ui" line="717"/>
+        <location filename="Interview/fishery.ui" line="741"/>
         <source>Draw Shapes by Gear Type</source>
         <translation>Dibujar figuras para cada tipo de equipo</translation>
+    </message>
+    <message>
+        <location filename="Interview/fishery.ui" line="112"/>
+        <source>Vessel length (meters):</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

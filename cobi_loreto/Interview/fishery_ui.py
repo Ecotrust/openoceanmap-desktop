@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'fishery.ui'
 #
-# Created: Thu Jul 17 16:10:30 2008
+# Created: Thu Jul 24 17:18:32 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_Fishery(object):
     def setupUi(self, Fishery):
         Fishery.setObjectName("Fishery")
-        Fishery.resize(QtCore.QSize(QtCore.QRect(0,0,404,479).size()).expandedTo(Fishery.minimumSizeHint()))
+        Fishery.resize(QtCore.QSize(QtCore.QRect(0,0,504,479).size()).expandedTo(Fishery.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(Fishery)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -62,12 +62,13 @@ class Ui_Fishery(object):
         self.hboxlayout2.setObjectName("hboxlayout2")
 
         self.vessel_length_text = QtGui.QLabel(self.vessel_length)
-        self.vessel_length_text.setMinimumSize(QtCore.QSize(150,0))
-        self.vessel_length_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.vessel_length_text.setMinimumSize(QtCore.QSize(250,0))
+        self.vessel_length_text.setMaximumSize(QtCore.QSize(300,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
         self.vessel_length_text.setFont(font)
+        self.vessel_length_text.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.vessel_length_text.setObjectName("vessel_length_text")
         self.hboxlayout2.addWidget(self.vessel_length_text)
 
@@ -97,12 +98,13 @@ class Ui_Fishery(object):
         self.hboxlayout3.setObjectName("hboxlayout3")
 
         self.vessel_motor_text = QtGui.QLabel(self.vessel_length_2)
-        self.vessel_motor_text.setMinimumSize(QtCore.QSize(150,0))
-        self.vessel_motor_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.vessel_motor_text.setMinimumSize(QtCore.QSize(250,0))
+        self.vessel_motor_text.setMaximumSize(QtCore.QSize(300,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
         self.vessel_motor_text.setFont(font)
+        self.vessel_motor_text.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.vessel_motor_text.setObjectName("vessel_motor_text")
         self.hboxlayout3.addWidget(self.vessel_motor_text)
 
@@ -131,12 +133,13 @@ class Ui_Fishery(object):
         self.hboxlayout4.setObjectName("hboxlayout4")
 
         self.haul_capacity_text = QtGui.QLabel(self.vessel_length_3)
-        self.haul_capacity_text.setMinimumSize(QtCore.QSize(150,0))
-        self.haul_capacity_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.haul_capacity_text.setMinimumSize(QtCore.QSize(250,0))
+        self.haul_capacity_text.setMaximumSize(QtCore.QSize(300,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
         self.haul_capacity_text.setFont(font)
+        self.haul_capacity_text.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.haul_capacity_text.setObjectName("haul_capacity_text")
         self.hboxlayout4.addWidget(self.haul_capacity_text)
 
@@ -165,12 +168,13 @@ class Ui_Fishery(object):
         self.hboxlayout5.setObjectName("hboxlayout5")
 
         self.home_port_text = QtGui.QLabel(self.home_port)
-        self.home_port_text.setMinimumSize(QtCore.QSize(150,0))
-        self.home_port_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.home_port_text.setMinimumSize(QtCore.QSize(250,0))
+        self.home_port_text.setMaximumSize(QtCore.QSize(300,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
         self.home_port_text.setFont(font)
+        self.home_port_text.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.home_port_text.setObjectName("home_port_text")
         self.hboxlayout5.addWidget(self.home_port_text)
 
@@ -199,12 +203,13 @@ class Ui_Fishery(object):
         self.hboxlayout6.setObjectName("hboxlayout6")
 
         self.landing_port_text = QtGui.QLabel(self.home_port_4)
-        self.landing_port_text.setMinimumSize(QtCore.QSize(150,0))
-        self.landing_port_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.landing_port_text.setMinimumSize(QtCore.QSize(250,0))
+        self.landing_port_text.setMaximumSize(QtCore.QSize(300,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
         self.landing_port_text.setFont(font)
+        self.landing_port_text.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.landing_port_text.setObjectName("landing_port_text")
         self.hboxlayout6.addWidget(self.landing_port_text)
 
@@ -233,12 +238,13 @@ class Ui_Fishery(object):
         self.hboxlayout7.setObjectName("hboxlayout7")
 
         self.landing_port_text_2 = QtGui.QLabel(self.home_port_7)
-        self.landing_port_text_2.setMinimumSize(QtCore.QSize(150,0))
-        self.landing_port_text_2.setMaximumSize(QtCore.QSize(150,16777215))
+        self.landing_port_text_2.setMinimumSize(QtCore.QSize(250,0))
+        self.landing_port_text_2.setMaximumSize(QtCore.QSize(300,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
         self.landing_port_text_2.setFont(font)
+        self.landing_port_text_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.landing_port_text_2.setObjectName("landing_port_text_2")
         self.hboxlayout7.addWidget(self.landing_port_text_2)
 
@@ -267,12 +273,13 @@ class Ui_Fishery(object):
         self.hboxlayout8.setObjectName("hboxlayout8")
 
         self.landing_port_text_3 = QtGui.QLabel(self.home_port_8)
-        self.landing_port_text_3.setMinimumSize(QtCore.QSize(150,0))
-        self.landing_port_text_3.setMaximumSize(QtCore.QSize(150,16777215))
+        self.landing_port_text_3.setMinimumSize(QtCore.QSize(250,0))
+        self.landing_port_text_3.setMaximumSize(QtCore.QSize(300,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
         self.landing_port_text_3.setFont(font)
+        self.landing_port_text_3.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.landing_port_text_3.setObjectName("landing_port_text_3")
         self.hboxlayout8.addWidget(self.landing_port_text_3)
 
@@ -301,12 +308,13 @@ class Ui_Fishery(object):
         self.hboxlayout9.setObjectName("hboxlayout9")
 
         self.landing_port_text_4 = QtGui.QLabel(self.home_port_9)
-        self.landing_port_text_4.setMinimumSize(QtCore.QSize(150,0))
-        self.landing_port_text_4.setMaximumSize(QtCore.QSize(150,16777215))
+        self.landing_port_text_4.setMinimumSize(QtCore.QSize(250,0))
+        self.landing_port_text_4.setMaximumSize(QtCore.QSize(300,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
         self.landing_port_text_4.setFont(font)
+        self.landing_port_text_4.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.landing_port_text_4.setObjectName("landing_port_text_4")
         self.hboxlayout9.addWidget(self.landing_port_text_4)
 
@@ -350,7 +358,7 @@ class Ui_Fishery(object):
         self.groupBox.setTitle(QtGui.QApplication.translate("Fishery", "Fishery Sector", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_sector_label.setText(QtGui.QApplication.translate("Fishery", "Dynamic Fishery Sector Name", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_info.setTitle(QtGui.QApplication.translate("Fishery", "Fisher Information", None, QtGui.QApplication.UnicodeUTF8))
-        self.vessel_length_text.setText(QtGui.QApplication.translate("Fishery", "Vessel length (meters) :", None, QtGui.QApplication.UnicodeUTF8))
+        self.vessel_length_text.setText(QtGui.QApplication.translate("Fishery", "Vessel length (meters):", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_motor_text.setText(QtGui.QApplication.translate("Fishery", "Vessel motor (horsepower):", None, QtGui.QApplication.UnicodeUTF8))
         self.haul_capacity_text.setText(QtGui.QApplication.translate("Fishery", "Haul Capacity (kilograms):", None, QtGui.QApplication.UnicodeUTF8))
         self.home_port_text.setText(QtGui.QApplication.translate("Fishery", "Home Port:", None, QtGui.QApplication.UnicodeUTF8))

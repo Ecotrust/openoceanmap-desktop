@@ -52,6 +52,8 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.parent = parent
         self.prevGUI = prevGUI
         self.currentStep = fishery_sector
+        fishery_label = QtGui.QApplication.translate("FisheryGui", self.current_step, "dynamic fishery name", QtGui.QApplication.UnicodeUTF8)
+        print fishery_label
         self.fishery_sector_label.setText(str(self.currentStep))
 
     def append_data(self):

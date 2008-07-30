@@ -106,7 +106,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     #self.canvas.setExtent(QgsRect(-340000,-70000,
     #                              -191000,52500))
     
-    rasterList = [["Data/Loreto_Base.tif",10000,5000000]]
+    rasterList = [["Data/Loreto_base.tif",10000,5000000]]
     self.rasterBaseLayer = OOMLayer(self)
     
     first_raster = None

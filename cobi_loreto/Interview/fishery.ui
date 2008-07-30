@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>404</width>
+    <width>504</width>
     <height>479</height>
    </rect>
   </property>
@@ -93,13 +93,13 @@
             <widget class="QLabel" name="vessel_length_text" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>250</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>300</width>
                <height>16777215</height>
               </size>
              </property>
@@ -109,7 +109,10 @@
               </font>
              </property>
              <property name="text" >
-              <string>Vessel length (meters) :</string>
+              <string>Vessel length (meters):</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
              </property>
             </widget>
            </item>
@@ -173,13 +176,13 @@
             <widget class="QLabel" name="vessel_motor_text" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>250</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>300</width>
                <height>16777215</height>
               </size>
              </property>
@@ -190,6 +193,9 @@
              </property>
              <property name="text" >
               <string>Vessel motor (horsepower):</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
              </property>
             </widget>
            </item>
@@ -250,13 +256,13 @@
             <widget class="QLabel" name="haul_capacity_text" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>250</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>300</width>
                <height>16777215</height>
               </size>
              </property>
@@ -267,6 +273,9 @@
              </property>
              <property name="text" >
               <string>Haul Capacity (kilograms):</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
              </property>
             </widget>
            </item>
@@ -327,13 +336,13 @@
             <widget class="QLabel" name="home_port_text" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>250</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>300</width>
                <height>16777215</height>
               </size>
              </property>
@@ -344,6 +353,9 @@
              </property>
              <property name="text" >
               <string>Home Port:</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
              </property>
             </widget>
            </item>
@@ -404,13 +416,13 @@
             <widget class="QLabel" name="landing_port_text" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>250</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>300</width>
                <height>16777215</height>
               </size>
              </property>
@@ -421,6 +433,9 @@
              </property>
              <property name="text" >
               <string>Landing Port 1:</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
              </property>
             </widget>
            </item>
@@ -481,13 +496,13 @@
             <widget class="QLabel" name="landing_port_text_2" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>250</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>300</width>
                <height>16777215</height>
               </size>
              </property>
@@ -498,6 +513,9 @@
              </property>
              <property name="text" >
               <string>Landing Port 2:</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
              </property>
             </widget>
            </item>
@@ -558,13 +576,13 @@
             <widget class="QLabel" name="landing_port_text_3" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>250</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>300</width>
                <height>16777215</height>
               </size>
              </property>
@@ -575,6 +593,9 @@
              </property>
              <property name="text" >
               <string>Landing Port 3:</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
              </property>
             </widget>
            </item>
@@ -635,13 +656,13 @@
             <widget class="QLabel" name="landing_port_text_4" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>250</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>300</width>
                <height>16777215</height>
               </size>
              </property>
@@ -652,6 +673,9 @@
              </property>
              <property name="text" >
               <string>Landing Port 4:</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
              </property>
             </widget>
            </item>
