@@ -45,6 +45,7 @@ qgis_prefix="/usr"
 
 # Main entry to program.  Set up the main app and create a new window.
 def main(argv):
+  pyqtRemoveInputHook()
   
   # create Qt application
   app = QApplication(argv,True)
