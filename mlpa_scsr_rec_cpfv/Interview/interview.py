@@ -81,7 +81,7 @@ class Interview(QObject):
 
       self.interviewInfo2.append(["user_group",self.currentStep])
   # End interview dialog for current fishery, then start a new one
-  def interviewEnd(self):
+  def end_fishery(self):
       if len(self.capturedPolygons) == 0:
           capture_string = QString("No Shapes to write...")
           self.parent.statusbar.showMessage(capture_string)
@@ -153,7 +153,7 @@ class Interview(QObject):
             #Pull out
             return
 
-          layer.label().setLabelField(QgsLabel.Text, 28)
+          layer.label().setLabelField(QgsLabel.Text, 36)
           layer.setLabelOn(True)
           
           # Set the transparency for the layer
@@ -180,6 +180,15 @@ class Interview(QObject):
       #Reset penny count
       self.pennies_left = 100
       
-      wnd = SelectFisheryGui(self)
-      wnd.show()
+      self.next_fishery()
 
+  def next_fishery(self):        
+      (fishery,value) = self.fisheries.pop()
+      if fishery:
+        wnd = SelectFisheryGui(self, fishery, value)
+        wnd.show()
+      else:
+        self.end_interview()
+
+  def end_interview(self):
+      QMessageBox.warning(self, "Completed", "Interview Completed")

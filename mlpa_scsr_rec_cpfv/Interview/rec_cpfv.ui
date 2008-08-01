@@ -8,8 +8,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>935</width>
-    <height>629</height>
+    <width>938</width>
+    <height>598</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -967,7 +967,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QLineEdit" name="cpfv_len_line_2" >
+            <widget class="QLineEdit" name="cpfv_name_line" >
              <property name="enabled" >
               <bool>true</bool>
              </property>
@@ -1539,7 +1539,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QLineEdit" name="cpfv_num_clients_line" >
+            <widget class="QLineEdit" name="cpfv_num_pass_line" >
              <property name="enabled" >
               <bool>true</bool>
              </property>
@@ -1632,7 +1632,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QLineEdit" name="cpfv_num_crew_line_2" >
+            <widget class="QLineEdit" name="cpfv_num_out_state_line" >
              <property name="enabled" >
               <bool>true</bool>
              </property>
@@ -1791,7 +1791,7 @@
              </font>
             </property>
             <property name="text" >
-             <string>Assuming there are five (5) major fishing strategies, what percentage of your trips are associated with each strategy?</string>
+             <string>Assuming there are five (5) major fishing strategies, what percentage of your trips (annually) are associated with each strategy?</string>
             </property>
             <property name="wordWrap" >
              <bool>true</bool>
@@ -1801,229 +1801,174 @@
           <item>
            <layout class="QHBoxLayout" >
             <item>
-             <spacer>
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" >
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
+             <layout class="QVBoxLayout" >
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_2" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>110</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>110</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Offshore Tuna</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_strat_tuna" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>9</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_3" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>110</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>110</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Coastal Freelance</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_strat_coast" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>9</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_5" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>110</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>110</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Island Freelance</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_strat_island" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>9</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
             </item>
-            <item>
-             <widget class="QLabel" name="label_2" >
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>Offshore Tuna</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="cpfv_strat_tuna" >
-              <property name="enabled" >
-               <bool>true</bool>
-              </property>
-              <property name="minimumSize" >
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string/>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" >
-            <item>
-             <spacer>
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" >
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_3" >
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>Coastal Freelance</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="cpfv_strat_coastal" >
-              <property name="enabled" >
-               <bool>true</bool>
-              </property>
-              <property name="minimumSize" >
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string/>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" >
-            <item>
-             <spacer>
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" >
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_5" >
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>Island Freelance</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="cpfv_strat_island" >
-              <property name="enabled" >
-               <bool>true</bool>
-              </property>
-              <property name="minimumSize" >
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string/>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" >
-            <item>
-             <spacer>
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" >
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_4" >
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>Rockfish</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="cpfv_strat_rockfish" >
-              <property name="enabled" >
-               <bool>true</bool>
-              </property>
-              <property name="minimumSize" >
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string/>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" >
             <item>
              <spacer>
               <property name="orientation" >
@@ -2038,43 +1983,131 @@
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_6" >
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>Misc.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="cpfv_strat_misc" >
-              <property name="enabled" >
-               <bool>true</bool>
-              </property>
-              <property name="minimumSize" >
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string/>
-              </property>
-             </widget>
+             <layout class="QVBoxLayout" >
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_4" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>60</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>60</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Rockfish</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_strat_rock" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>9</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_6" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>60</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>60</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Misc.</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_strat_misc" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>9</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer>
+                <property name="orientation" >
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" >
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -2091,890 +2124,909 @@
          <property name="title" >
           <string>Targeted Species:</string>
          </property>
-         <layout class="QHBoxLayout" >
+         <layout class="QVBoxLayout" >
           <item>
-           <layout class="QVBoxLayout" >
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_7" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Barracuda:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_barracuda" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_8" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Bonito</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_bonito" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_9" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Calico Bass</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_calico" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_10" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Humboldt Squid</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_humboldt" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_11" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Halibut</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_halibut" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_18" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Lingcod</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_lingcod" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_16" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Dockfish</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_dockfish" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_17" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Sand Bass</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_sand" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
+           <widget class="QLabel" name="label_12" >
+            <property name="font" >
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>What percentage of your trips (annually) are associated with each species?</string>
+            </property>
+            <property name="wordWrap" >
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item>
-           <layout class="QVBoxLayout" >
+           <layout class="QHBoxLayout" >
             <item>
-             <layout class="QHBoxLayout" >
+             <layout class="QVBoxLayout" >
               <item>
-               <widget class="QLabel" name="cpfv_strat_sculpin_label" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Sculpin (Cal. Scorpion Fish)</string>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_7" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Barracuda:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_barracuda" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
-               <widget class="QLineEdit" name="cpfv_target_sculpin" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_8" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Bonito</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_bonito" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_9" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Calico Bass</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_calico" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_10" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Humboldt Squid</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_humboldt" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_11" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Halibut</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_halibut" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_18" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Lingcod</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_lingcod" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_16" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Rockfish</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_rockfish" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_17" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Sand Bass</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_sand" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" >
+             <layout class="QVBoxLayout" >
               <item>
-               <widget class="QLabel" name="cpfv_strat_white_abel" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>White Seabass</string>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="cpfv_strat_sculpin_label" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Sculpin (Cal. Scorpion Fish)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_sculpin" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
-               <widget class="QLineEdit" name="cpfv_target_white" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_19" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Yellowtail</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_yellowtail" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_21" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Sheephead</string>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="cpfv_strat_white_abel" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>White Seabass</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_white" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
-               <widget class="QLineEdit" name="cpfv_target_sheephead" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_24" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Thresher/Mako/Blue Shark</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_shark" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_26" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Salmon</string>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_19" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Yellowtail</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_yellowtail" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
-               <widget class="QLineEdit" name="cpfv_target_salmon" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_23" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Tuna &amp; Dorado</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cpfv_target_tuna" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" >
-              <item>
-               <widget class="QLabel" name="label_25" >
-                <property name="minimumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>135</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string>Whitefish</string>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_21" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Sheephead</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_sheephead" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
-               <widget class="QLineEdit" name="cpfv_target_whitefish" >
-                <property name="enabled" >
-                 <bool>true</bool>
-                </property>
-                <property name="minimumSize" >
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize" >
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font" >
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="text" >
-                 <string/>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_24" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Thresher/Mako/Blue Shark</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_shark" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_26" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Salmon</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_salmon" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_23" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Tuna &amp; Dorado</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_tuna" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" >
+                <item>
+                 <widget class="QLabel" name="label_25" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>135</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>Whitefish</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cpfv_target_whitefish" >
+                  <property name="enabled" >
+                   <bool>true</bool>
+                  </property>
+                  <property name="minimumSize" >
+                   <size>
+                    <width>30</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font" >
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text" >
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>

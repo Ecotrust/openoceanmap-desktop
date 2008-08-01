@@ -46,41 +46,26 @@ from Util.common_functions import *
 import sys
 
 class SelectFisheryGui(QDialog, Ui_SelectFishery):
-    def __init__(self, parent):
+    def __init__(self, parent, fishery, trip_value):
         QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent
+        self.fishery = fishery
+        self.trip_value = trip_value
 
-    def on_pbnStartShapes_released(self):
-        #Get fishery value
-        cur_fishery = self.fishery_comboBox.currentText()
-        if not cur_fishery:
-            QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
-            return 
-        else:
-            self.parent.currentFishery = cur_fishery        
+        self.fishery_line.setText(self.fishery)
+        self.perc_trip_fish_line.setText(self.trip_value)
+        self.parent.currentFishery = self.fishery
 
-        perc_trips = self.perc_trip_fish_line.text()
-        if perc_trips == "":
-            QMessageBox.warning(self, "Input Error", "Please enter percentage of trips")
-            return 
-        else:
-            self.parent.interviewInfo2.append(["perc_trips",self.perc_trip_fish_line.text()])
-            
-        perc_land = self.perc_trip_land_line.text()
-        if perc_land == "":
-            QMessageBox.warning(self, "Input Error", "Please enter percentage of landings")
-            return    
-        else:
-            self.parent.interviewInfo2.append(["perc_land",self.perc_trip_land_line.text()])
-             
+    def on_pbnStartShapes_released(self):        
         self.close()
-        
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
+
+
             
     def on_pbnFisheryFinished_released(self):
         self.parent.pennies_left = 100;            
@@ -97,7 +82,6 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = NextPolygonGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()
-
 
 
 class NextPolygonGui(QDialog, Ui_NextPolygon):
@@ -132,7 +116,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         #Check if this fishery should be done (no pennies left)
         if self.parent.pennies_left == 0:
             QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This fishery is now done.")
-            self.parent.interviewEnd()
+            self.parent.end_fishery()
         else:
             mc = self.parent.canvas      
             self.p = PolygonTool(mc,self.parent)
@@ -168,7 +152,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
         self.close()
-        self.parent.interviewEnd()
+        self.parent.end_fishery()
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 

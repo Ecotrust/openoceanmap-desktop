@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'nextpolygon.ui'
 #
-# Created: Wed Jul 23 16:46:45 2008
+# Created: Thu Jul 31 16:19:22 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_NextPolygon(object):
     def setupUi(self, NextPolygon):
         NextPolygon.setObjectName("NextPolygon")
-        NextPolygon.resize(QtCore.QSize(QtCore.QRect(0,0,550,109).size()).expandedTo(NextPolygon.minimumSizeHint()))
+        NextPolygon.resize(QtCore.QSize(QtCore.QRect(0,0,493,109).size()).expandedTo(NextPolygon.minimumSizeHint()))
 
         self.hboxlayout = QtGui.QHBoxLayout(NextPolygon)
         self.hboxlayout.setObjectName("hboxlayout")

@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>598</width>
-    <height>223</height>
+    <width>550</width>
+    <height>166</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap - Select Fishery</string>
+   <string>OpenOceanMap - Start Fishery</string>
   </property>
   <layout class="QVBoxLayout" >
    <item>
@@ -49,7 +49,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Select Fishery :</string>
+           <string>Current Fishery :</string>
           </property>
          </widget>
         </item>
@@ -67,162 +67,13 @@
          </spacer>
         </item>
         <item>
-         <widget class="QComboBox" name="fishery_comboBox" >
-          <item>
-           <property name="text" >
-            <string>Abalone</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Barracuda</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Bonita</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Calico Bass</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>California Halibut</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Clams</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Croaker</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Dorado (Mahi Mahi)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Jack Smelt</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Lobster</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Mackerel</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Mako Shark</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Marlin (Swordfish)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Mussels</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Rays/Skates</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Rock Crab</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Rockfish/Lingcod</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Sand Crab</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Salmon</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Sand Bass</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Scallops</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Sharks (Other)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Sheephead</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Squid</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Surfperch</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Thresher Shark</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Tuna</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>White Sea Bass</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Yellowtail</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Urchin</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Other (Note the species)</string>
-           </property>
-          </item>
+         <widget class="QLineEdit" name="fishery_line" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
          </widget>
         </item>
        </layout>
@@ -250,7 +101,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>What percentage of your trips (annually) are associated with this fishery (on average)?</string>
+           <string>Percentage of trips (annually) you said were associated with this fishery:</string>
           </property>
           <property name="wordWrap" >
            <bool>true</bool>
@@ -292,76 +143,6 @@
     </layout>
    </item>
    <item>
-    <widget class="QWidget" native="1" name="widget_4" >
-     <layout class="QHBoxLayout" >
-      <item>
-       <widget class="QLabel" name="label_2" >
-        <property name="minimumSize" >
-         <size>
-          <width>300</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize" >
-         <size>
-          <width>300</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text" >
-         <string>What percentage of your total landings (annually) are associated with this fishery (on average)</string>
-        </property>
-        <property name="wordWrap" >
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer>
-        <property name="orientation" >
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" >
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="perc_trip_land_line" >
-        <property name="minimumSize" >
-         <size>
-          <width>40</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize" >
-         <size>
-          <width>40</width>
-          <height>16777215</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <spacer>
-     <property name="orientation" >
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" >
-      <size>
-       <width>580</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item>
     <layout class="QHBoxLayout" >
      <item>
       <widget class="QWidget" native="1" name="widget_2" >
@@ -393,18 +174,6 @@
            </size>
           </property>
          </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pbnFisheryFinished" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="text" >
-           <string>Finished With Interview</string>
-          </property>
-         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pbnStartShapes" >
