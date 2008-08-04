@@ -124,9 +124,11 @@ class Interview(object):
           capPolyRub.reset()
       flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
       if self.commFishIncome:
-          capture_string = QString("Commercial Fishery Income exists, starting that interview...")
+          capture_string = QApplication.translate("Interview", 'Starting commercial fishery interview', "", QApplication.UnicodeUTF8)
           self.parent.statusbar.showMessage(capture_string)
-          self.currentStep = 'Commercial Fishery'
+
+          self.currentStep = QApplication.translate("Interview", 'Commercial Fishery', "", QApplication.UnicodeUTF8)
+
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -137,9 +139,11 @@ class Interview(object):
               wnd.show()
           
       elif self.sportFishIncome:
-          capture_string = QString("Commercial Sport Fishery Income exists, starting that interview...")
+          capture_string = QApplication.translate("Interview", 'Starting commercial sport fishery interview', "", QApplication.UnicodeUTF8)
           self.parent.statusbar.showMessage(capture_string)
-          self.currentStep = 'Sport Fishery'
+
+          self.currentStep = QApplication.translate("Interview", 'Sport Fishery', "", QApplication.UnicodeUTF8)
+
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -150,9 +154,11 @@ class Interview(object):
               wnd.show()           
     
       elif self.privateFishIncome:
-          capture_string = QString("Private Sport Fishery Income exists, starting that interview...")
+          capture_string = QApplication.translate("Interview", 'Starting private sport fishery interview', "", QApplication.UnicodeUTF8)
           self.parent.statusbar.showMessage(capture_string)
-          self.currentStep = 'Private Fishery'
+
+          self.currentStep = QApplication.translate("Interview", 'Private Fishery', "", QApplication.UnicodeUTF8)
+
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
