@@ -68,4 +68,4 @@ class OtherGui(QDialog, Ui_Other):
     def on_pbnCancel_clicked(self):
         self.close()
         # stop interview process
-        self.parent.resetInterview("Cancelled out of Other Income interview...")
+        self.parent.resetInterview("Canceled other income...")

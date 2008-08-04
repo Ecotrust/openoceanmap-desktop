@@ -47,12 +47,6 @@ from interviewstart_ui import Ui_InterviewStart
 # General system includes
 import sys, os
 
-#(QtGui.QApplication.translate("NextPolygon", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
-#def _t(string, ui="Interview"):
-#   u_string = string.encode("UTF-8")
-#   translation_instance = QA.translate("Interview",u_string, None, QApplication.UnicodeUTF8)
-#   return translation_instance
-
 # Interview object for doing interviews
 class Interview(object):
   def __init__(self, parent):
@@ -124,11 +118,8 @@ class Interview(object):
           capPolyRub.reset()
       flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
       if self.commFishIncome:
-          capture_string = QApplication.translate("Interview", 'Starting commercial fishery interview', "", QApplication.UnicodeUTF8)
-          self.parent.statusbar.showMessage(capture_string)
-
-          self.currentStep = QApplication.translate("Interview", 'Commercial Fishery', "", QApplication.UnicodeUTF8)
-
+          self.parent.statusbar.showMessage(self.start_comm_fish_str)
+          self.currentStep = self.comm_fish_str
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -139,11 +130,8 @@ class Interview(object):
               wnd.show()
           
       elif self.sportFishIncome:
-          capture_string = QApplication.translate("Interview", 'Starting commercial sport fishery interview', "", QApplication.UnicodeUTF8)
-          self.parent.statusbar.showMessage(capture_string)
-
-          self.currentStep = QApplication.translate("Interview", 'Sport Fishery', "", QApplication.UnicodeUTF8)
-
+          self.parent.statusbar.showMessage(self.start_comm_sport_fish_str)
+          self.currentStep = self.comm_sport_fish_str
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -154,11 +142,8 @@ class Interview(object):
               wnd.show()           
     
       elif self.privateFishIncome:
-          capture_string = QApplication.translate("Interview", 'Starting private sport fishery interview', "", QApplication.UnicodeUTF8)
-          self.parent.statusbar.showMessage(capture_string)
-
-          self.currentStep = QApplication.translate("Interview", 'Private Fishery', "", QApplication.UnicodeUTF8)
-
+          self.parent.statusbar.showMessage(self.start_priv_fish_str)
+          self.currentStep = self.priv_fish_str 
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -169,37 +154,33 @@ class Interview(object):
               wnd.show()
     
       elif self.ecotourismIncome:
-          capture_string = QString("Ecotourism Income exists, starting that interview...")
-          self.parent.statusbar.showMessage(capture_string)
-          self.currentStep = 'Ecotourism'
+          self.parent.statusbar.showMessage(self.start_eco_str)
+          self.currentStep = self.eco_str
           from ecotourism import EcotourismGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
           wnd = EcotourismGui(self,flags,previousGui)
           wnd.show()
           
       elif self.consScienceIncome:
-          capture_string = QString("Conservation / Scientist Income exists, starting that interview...")
-          self.parent.statusbar.showMessage(capture_string)
-          self.currentStep = 'Conservationist Scientist'
+          self.parent.statusbar.showMessage(self.start_consci_str)
+          self.currentStep = self.consci_str
           from consscience import ConsScienceGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
           wnd = ConsScienceGui(self,flags,previousGui)
           wnd.show()
           
       elif self.otherIncome:
-          capture_string = QString("Other Income exists, starting that interview...")
-          self.parent.statusbar.showMessage(capture_string)
-          self.currentStep = 'Other'
-          textType = "Income" #the type should be gathered
+          self.parent.statusbar.showMessage(self.start_other_str)
+          self.currentStep = self.other_str
+          textType = self.income_str #the type should be gathered
           # skip right to drawing...
           from other import OtherGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
           wnd = OtherGui(self,flags,self.currentStep,previousGui)
           wnd.show()
       else:
-          self.resetInterview('Interview is finished!')
-          print 'Interview complete'
-          QMessageBox.information(self.mainwindow, "Success", "Interview completed")
+          self.resetInterview(self.int_finished_str)
+          QMessageBox.information(self.mainwindow, self.success_str, self.int_comp_str)
       
       self.parent.canvas.setMapTool(self.parent.toolZoomIn)
             
@@ -209,7 +190,7 @@ class Interview(object):
       textGui.close()
       if len(self.capturedText) == 0:
           # Finished a interview step without writing any text...
-          capture_string = QString("No info to write, returning to previous choices...")
+          capture_string = self.no_info_str
           self.parent.statusbar.showMessage(capture_string)
           # Fire up the previous gui again...
           textGui.show()
@@ -222,12 +203,11 @@ class Interview(object):
           qd=QFileDialog()
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Plain Text (*.txt)")
-          f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Text as", None, QApplication.UnicodeUTF8),file_name,file_type_filter)
+          f2=qd.getSaveFileName(self.mainwindow, self.save_text_str, file_name, file_type_filter)
           
           # Check to see if the shapefile has been saved
           if f2.count(".txt")==0:
             # If the user cancels...
-            print 'empty so it was cancelled'
             textGui.show()
             
           # check to see if the user tried to overwrite an txt file of the same name
@@ -235,8 +215,7 @@ class Interview(object):
             # Currently we don't suport overwriting, so return to same dialog
             write_string = QString(f2)
             # this translation is not found perhaps due to line number or order of excution...
-            msg = QA.translate("Interview","Overwriting existing text file is not supported: ", None, QApplication.UnicodeUTF8)
-            capture_string = QString(msg + write_string)
+            capture_string = QString(self.overwrite_support_str + write_string)
             self.parent.statusbar.showMessage(capture_string)
             textGui.show()
           else:
@@ -245,8 +224,7 @@ class Interview(object):
               file = open(write_string, 'w')
               file.write(self.capturedText)
               file.close()
-              msg = QA.translate("Other Income Saved","Other income info successfully saved to: ", None, QApplication.UnicodeUTF8)
-              capture_string = QString(msg + write_string)
+              capture_string = QString(self.other_info_save_str + write_string)
               self.parent.statusbar.showMessage(capture_string)
               # reset values to prepare for another save...
               self.capturedText = []
@@ -273,19 +251,17 @@ class Interview(object):
           qd=QFileDialog()
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Shapefiles (*.shp)")
-          f2=qd.getSaveFileName(self.mainwindow,QA.translate("Interview","Save Shapes as", None, QApplication.UnicodeUTF8),file_name,file_type_filter)
+          f2=qd.getSaveFileName(self.mainwindow, self.save_shape_str, file_name, file_type_filter)
           
           # Check to see if the shapefile has been saved
           if f2 == "":
-            print 'Cancelled'
             drawGui.previousGui.show()              
           # check to see if the user tried to overwrite an existing shapefile
           elif os.path.isfile(f2):
             # Currently we don't suport overwriting, so return to same dialog
             write_string = QString(f2)
             # this translation is not found perhaps due to line number or order of excution...
-            msg = QA.translate("Interview","Overwriting existing shapefile is not supported: ", None, QApplication.UnicodeUTF8)
-            capture_string = QString(msg + write_string)
+            capture_string = QString(self.overwrite_support_str + write_string)
             self.parent.statusbar.showMessage(capture_string)
             drawGui.show()
           else:
@@ -380,3 +356,25 @@ class Interview(object):
 
             drawGui.previousGui.show()
 
+  def retranslate(self):
+      self.start_comm_fish_str = QA.translate("Interview", 'Starting commercial fishery interview', "", QA.UnicodeUTF8)      
+      self.comm_fish_str = QA.translate("Interview", 'Commercial Fishery', "", QA.UnicodeUTF8)
+      self.start_comm_sport_fish_str = QA.translate("Interview", 'Starting commercial sport fishery interview', "", QA.UnicodeUTF8)
+      self.comm_sport_fish_str = QA.translate("Interview", 'Sport Fishery', "", QA.UnicodeUTF8)
+      self.start_priv_fish_str = QA.translate("Interview", 'Starting private sport fishery interview', "", QA.UnicodeUTF8)          
+      self.priv_fish_str = QA.translate("Interview", 'Private Fishery', "", QA.UnicodeUTF8)
+      self.start_eco_str = QA.translate("Interview", "Starting ecotourism interview", "", QA.UnicodeUTF8)
+      self.eco_str = QA.translate("Interview", 'Ecotourism', "", QA.UnicodeUTF8)
+      self.start_consci_str = QA.translate("Interview", "Starting conservation/scientist interview", "", QA.UnicodeUTF8)
+      self.consci_str = QA.translate("Interview", 'Conservationist Scientist', "", QA.UnicodeUTF8)
+      self.start_other_str = QA.translate("Interview", "Starting other interview", "", QA.UnicodeUTF8)
+      self.other_str = QA.translate("Interview", "Other", "", QA.UnicodeUTF8)
+      self.income_str = QA.translate("Interview", "Income", "", QA.UnicodeUTF8)
+      self.success_str = QA.translate("Interview", "Success", "", QA.UnicodeUTF8)
+      self.int_comp_str = QA.translate("Interview", "Interview Completed", "", QA.UnicodeUTF8)
+      self.int_finished_str = QA.translate("Interview", "Interview Finished", "", QA.UnicodeUTF8)
+      self.no_info_str = QA.translate("Interview", "No info, returning to previous choices", "", QA.UnicodeUTF8)
+      self.save_text_str = QA.translate("Interview", "Save Text as", "", QA.UnicodeUTF8)
+      self.overwrite_support_str = QA.translate("Interview","Overwriting existing text file is not supported: ", None, QA.UnicodeUTF8)
+      self.other_info_save_str = QA.translate("Other Income Saved","Other income info successfully saved to: ", None, QA.UnicodeUTF8)
+      self.save_shape_str = QA.translate("Interview","Save Shapes as", None, QA.UnicodeUTF8)

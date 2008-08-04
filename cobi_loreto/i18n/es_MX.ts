@@ -369,32 +369,32 @@
     <message>
         <location filename="interview.py" line="128"/>
         <source>Starting commercial fishery interview</source>
-        <translation type="unfinished"></translation>
+        <translation>Empezando entrevista de pesca comercial</translation>
     </message>
     <message>
         <location filename="interview.py" line="132"/>
         <source>Commercial Fishery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pesca comercial</translation>
     </message>
     <message>
         <location filename="interview.py" line="143"/>
         <source>Starting commercial sport fishery interview</source>
-        <translation type="unfinished"></translation>
+        <translation>Empezando entrevista de pesca deportiva</translation>
     </message>
     <message>
         <location filename="interview.py" line="147"/>
         <source>Sport Fishery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pesca deportiva</translation>
     </message>
     <message>
         <location filename="interview.py" line="158"/>
         <source>Starting private sport fishery interview</source>
-        <translation type="unfinished"></translation>
+        <translation>Empezando entrevista de pesca deportiva privado</translation>
     </message>
     <message>
         <location filename="interview.py" line="162"/>
         <source>Private Fishery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pesca privada</translation>
     </message>
 </context>
 <context>

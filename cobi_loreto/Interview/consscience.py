@@ -56,11 +56,11 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
     def on_pbnSelectConsScience_released(self):
 
         interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append(["artespesca", self.comboBox.currentText()])
+        interviewInfo2.append(["focus", self.comboBox.currentText()])
         interviewInfo2.append(["add_info", self.add_info_line.text()])
 
         if not self.comboBox.currentText():
-            QMessageBox.warning(self, "Specialist Error", "Please Choose an Specialist Position")
+            QMessageBox.warning(self, "Specialist Error", "Please choose a specialist position")
             return
 
         self.close()
@@ -72,4 +72,4 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
     def on_pbnCancel_clicked(self):
         self.close()
         # stop interview process
-        self.parent.resetInterview("Cancelled out of Conservationist / Scientist interview...")
+        self.parent.resetInterview("Cancelled conservationist/scientist interview")
