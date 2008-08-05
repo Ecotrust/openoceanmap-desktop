@@ -59,6 +59,36 @@
     </message>
 </context>
 <context>
+    <name>ConsScienceGui</name>
+    <message>
+        <location filename="consscience.py" line="80"/>
+        <source>Specialist Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="81"/>
+        <source>Please choose a specialist position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="82"/>
+        <source>focus</source>
+        <comment>conservationist/scientist area of focus</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="83"/>
+        <source>add_info</source>
+        <comment>additional info about con/science focus (kelp, mangrove, etc)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="84"/>
+        <source>Cancelled conservationist/scientist interview</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DrawConsScience</name>
     <message>
         <location filename="drawconsscience_ui.py" line="89"/>
@@ -97,6 +127,44 @@
     </message>
 </context>
 <context>
+    <name>DrawConsScienceGui</name>
+    <message>
+        <location filename="drawconsscience.py" line="138"/>
+        <source>Pennies Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawconsscience.py" line="139"/>
+        <source>Missing penny value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawconsscience.py" line="140"/>
+        <source>Penny value must be a number (no decimals)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawconsscience.py" line="141"/>
+        <source>Please add a penny value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawconsscience.py" line="142"/>
+        <source>You don&apos;t have that many pennies left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawconsscience.py" line="143"/>
+        <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawconsscience.py" line="144"/>
+        <source>You are out of pennies.  This shape drawing session is now done.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DrawEcotourism</name>
     <message>
         <location filename="drawecotourism_ui.py" line="86"/>
@@ -127,6 +195,50 @@
         <location filename="drawecotourism_ui.py" line="87"/>
         <source>Type of Tourism</source>
         <translation>Tipo de Turismo</translation>
+    </message>
+</context>
+<context>
+    <name>DrawEcotourismGui</name>
+    <message>
+        <location filename="drawecotourism.py" line="140"/>
+        <source>Pennies Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawecotourism.py" line="141"/>
+        <source>Missing penny value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawecotourism.py" line="142"/>
+        <source>Penny value must be a number (no decimals)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawecotourism.py" line="143"/>
+        <source>Please add a penny value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawecotourism.py" line="144"/>
+        <source>You don&apos;t have that many pennies left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawecotourism.py" line="145"/>
+        <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawecotourism.py" line="146"/>
+        <source>You are out of pennies.  This shape drawing session is now done.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawecotourism.py" line="147"/>
+        <source> left</source>
+        <comment>Partial string used to tell you how many pennies you have remaining</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -200,6 +312,79 @@
         <location filename="drawgear_ui.py" line="132"/>
         <source>Check which types of species are caught in this area:</source>
         <translation>Marca que tipo de especies son capturadas en esta área:</translation>
+    </message>
+</context>
+<context>
+    <name>DrawGearGui</name>
+    <message>
+        <location filename="drawgear.py" line="176"/>
+        <source>Sharks and Skates</source>
+        <translation type="unfinished">Tiburones y rayas</translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="177"/>
+        <source>Coastal reef fish</source>
+        <translation type="unfinished">Peces de arrecife costero</translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="178"/>
+        <source>Deep reef fish</source>
+        <translation type="unfinished">Peces de arrecife profundo</translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="179"/>
+        <source>Migratory fish</source>
+        <translation type="unfinished">Peces migratorios</translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="180"/>
+        <source>Benthic fish</source>
+        <translation type="unfinished">Peces bentónicos</translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="181"/>
+        <source>Shrimp</source>
+        <translation type="unfinished">Gamba</translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="169"/>
+        <source>Pennies Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="170"/>
+        <source>Missing penny value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="171"/>
+        <source>Penny value must be a number (no decimals)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="172"/>
+        <source>Please add a penny value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="173"/>
+        <source>You don&apos;t have that many pennies left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="174"/>
+        <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="175"/>
+        <source>You are out of pennies.  This shape drawing session is now done.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="drawgear.py" line="182"/>
+        <source>Other</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -344,6 +529,72 @@
     </message>
 </context>
 <context>
+    <name>FisheryGui</name>
+    <message>
+        <location filename="fishery.py" line="111"/>
+        <source>Commercial Fishery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="112"/>
+        <source>Sport Fishery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="113"/>
+        <source>Private Fishery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="115"/>
+        <source>v_len</source>
+        <comment>vessel length</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="116"/>
+        <source>v_motor</source>
+        <comment>vessel motor horsepower</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="117"/>
+        <source>haul_cap</source>
+        <comment>vessel haul capacity in kilograms</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="118"/>
+        <source>v_homep</source>
+        <comment>vessel homeport</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="119"/>
+        <source>landp_1</source>
+        <comment>landing port 1</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="120"/>
+        <source>landp_2</source>
+        <comment>landing port 2</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="121"/>
+        <source>landp_3</source>
+        <comment>landing port 3</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="122"/>
+        <source>landp_4</source>
+        <comment>landing port 4</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Interview</name>
     <message>
         <location filename="interview.py" line="383"/>
@@ -449,6 +700,59 @@
         <location filename="interview.py" line="382"/>
         <source>No info, returning to previous choices</source>
         <translation type="unfinished">No se dispone de información, volviendo a las anteriores elecciones</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="387"/>
+        <source>Writing text file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="388"/>
+        <source>Writing shapefile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="389"/>
+        <source>No shapes drawn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="390"/>
+        <source>Wrote shapefile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="391"/>
+        <source>Error reading file, did it save correctly?  If not, do you have write permission in the save directory you chose?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="392"/>
+        <source>Canceling interview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="393"/>
+        <source>Leaving this step</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="395"/>
+        <source>income</source>
+        <comment>fisherman income field</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="396"/>
+        <source>pennies</source>
+        <comment>fishing ground penny value</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="397"/>
+        <source>species</source>
+        <comment>fish species name</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -653,6 +957,24 @@
     </message>
 </context>
 <context>
+    <name>MapTools</name>
+    <message>
+        <location filename="maptools.py" line="274"/>
+        <source>Captured Rectangle - </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="maptools.py" line="275"/>
+        <source>Error reading file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="maptools.py" line="276"/>
+        <source>Starting interview</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Other</name>
     <message>
         <location filename="Interview/other___.ui" line="14"/>
@@ -777,49 +1099,49 @@
 <context>
     <name>SelectEcotourism</name>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="23"/>
+        <location filename="selectecotourism_ui.py" line="56"/>
         <source>Select tourism activity type:</source>
-        <translation type="obsolete">Seleccionar tipo de actividad turística:</translation>
+        <translation type="unfinished">Seleccionar tipo de actividad turística:</translation>
     </message>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="36"/>
+        <location filename="selectecotourism_ui.py" line="57"/>
         <source>Diving</source>
-        <translation type="obsolete">Buceo</translation>
+        <translation type="unfinished">Buceo</translation>
     </message>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="41"/>
+        <location filename="selectecotourism_ui.py" line="58"/>
         <source>Snorkling</source>
-        <translation type="obsolete">Snorkelear</translation>
+        <translation type="unfinished">Snorkelear</translation>
     </message>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="46"/>
+        <location filename="selectecotourism_ui.py" line="59"/>
         <source>Kayaking</source>
-        <translation type="obsolete">Kayakeo</translation>
+        <translation type="unfinished">Kayakeo</translation>
     </message>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="51"/>
+        <location filename="selectecotourism_ui.py" line="60"/>
         <source>Whale Watching</source>
-        <translation type="obsolete">Observación de megafauna marina</translation>
+        <translation type="unfinished">Observación de megafauna marina</translation>
     </message>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="56"/>
+        <location filename="selectecotourism_ui.py" line="61"/>
         <source>Other</source>
-        <translation type="obsolete">Otro</translation>
+        <translation type="unfinished">Otro</translation>
     </message>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="77"/>
+        <location filename="selectecotourism_ui.py" line="63"/>
         <source>Start Drawing Shapes</source>
-        <translation type="obsolete">Empezar a dibujar figuras</translation>
+        <translation type="unfinished">Empezar a dibujar figuras</translation>
     </message>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="14"/>
+        <location filename="selectecotourism_ui.py" line="55"/>
         <source>OpenOceanMap - Select Ecotourism</source>
-        <translation type="obsolete">MapaOceanAbierto - Salir ecoturismo</translation>
+        <translation type="unfinished">MapaOceanAbierto - Salir ecoturismo</translation>
     </message>
     <message>
-        <location filename="Interview/selectecotourism.ui" line="70"/>
+        <location filename="selectecotourism_ui.py" line="62"/>
         <source>Exit Ecotourism Step</source>
-        <translation type="obsolete">Salir paso ecoturismo</translation>
+        <translation type="unfinished">Salir paso ecoturismo</translation>
     </message>
 </context>
 <context>
