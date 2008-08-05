@@ -4,7 +4,6 @@
 # to obtain socio-economic data using spatial information.
 # 
 # Copyright (C) 2008  Ecotrust
-# Copyright (C) 2008  Aaron Racicot
 # Copyright (C) 2008  Dane Springmeyer
 # 
 #---------------------------------------------------------------------
@@ -31,6 +30,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -50,6 +50,8 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         self.setupUi(self)
         self.parent = parent
         self.prevGUI = prevGUI
+        
+        self.retranslate()
 
     def on_pbnSelectEcotourism_released(self):
 

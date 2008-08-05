@@ -6,6 +6,7 @@
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Aaron Racicot
 # Copyright (C) 2008  Dane Springmeyer
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -57,14 +58,14 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.retranslate()
 
     def append_data(self):
-        self.parent.interviewInfo2.append(["v_len", self.vessel_length_line.text()])
-        self.parent.interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])
-        self.parent.interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
-        self.parent.interviewInfo2.append(["v_homep", self.home_port_line.text()])
-        self.parent.interviewInfo2.append(["landp_1", self.landing_port_line.text()])
-        self.parent.interviewInfo2.append(["landp_2", self.landing_port_line_2.text()])
-        self.parent.interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
-        self.parent.interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
+        self.parent.interviewInfo2.append([self.f_v_len_str, self.vessel_length_line.text()])
+        self.parent.interviewInfo2.append([self.f_v_motor_str, self.vessel_motor_line.text()])
+        self.parent.interviewInfo2.append([self.f_haul_cap_str, self.haul_capacity_line.text()])
+        self.parent.interviewInfo2.append([self.f_v_homep_str, self.home_port_line.text()])
+        self.parent.interviewInfo2.append([self.f_landp_1_str, self.landing_port_line.text()])
+        self.parent.interviewInfo2.append([self.f_landp_2_str, self.landing_port_line_2.text()])
+        self.parent.interviewInfo2.append([self.f_landp_3_str, self.landing_port_line_3.text()])
+        self.parent.interviewInfo2.append([self.f_landp_4_str, self.landing_port_line_4.text()])
 
     def on_pbnSelectGear_released(self):
         if self.currentStep == self.comm_fish_str:
@@ -89,8 +90,9 @@ class FisheryGui(QDialog, Ui_Fishery):
     def on_pbnCancel_clicked(self):
         self.close()
         # stop interview process
-        self.parent.resetInterview("Cancelled out of fishery interview...")
+        self.parent.resetInterview()
 
+    #Not used
     def on_pbnBack_clicked(self):
         self.close()
         capture_string = QString("Going back to first interview step...")
@@ -109,3 +111,12 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.comm_fish_str = QA.translate("FisheryGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
         self.comm_sport_fish_str = QA.translate("FisheryGui", 'Sport Fishery', "", QA.UnicodeUTF8)
         self.priv_fish_str = QA.translate("FisheryGui", 'Private Fishery', "", QA.UnicodeUTF8)
+
+        self.f_v_len_str = QA.translate("FisheryGui", 'v_len', "vessel length", QA.UnicodeUTF8)
+        self.f_v_motor_str = QA.translate("FisheryGui", 'v_motor', "vessel motor horsepower", QA.UnicodeUTF8)
+        self.f_haul_cap_str = QA.translate("FisheryGui", 'haul_cap', "vessel haul capacity in kilograms", QA.UnicodeUTF8)
+        self.f_v_homep_str = QA.translate("FisheryGui", 'v_homep', "vessel homeport", QA.UnicodeUTF8)
+        self.f_landp_1_str = QA.translate("FisheryGui", 'landp_1', "landing port 1", QA.UnicodeUTF8)
+        self.f_landp_2_str = QA.translate("FisheryGui", 'landp_2', "landing port 2", QA.UnicodeUTF8)
+        self.f_landp_3_str = QA.translate("FisheryGui", 'landp_3', "landing port 3", QA.UnicodeUTF8)
+        self.f_landp_4_str = QA.translate("FisheryGui", 'landp_4', "landing port 4", QA.UnicodeUTF8)

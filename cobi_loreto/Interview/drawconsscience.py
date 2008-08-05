@@ -4,7 +4,6 @@
 # to obtain socio-economic data using spatial information.
 # 
 # Copyright (C) 2008  Ecotrust
-# Copyright (C) 2008  Aaron Racicot
 # Copyright (C) 2008  Dane Springmeyer
 # 
 #---------------------------------------------------------------------
@@ -85,7 +84,7 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
 
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
-            QMessageBox.warning(self, self.pennies_error_str, "You are out of pennies.  This Shape Type is now done.")
+            QMessageBox.warning(self, self.pennies_error_str, self.out_penny_str)
             self.parent.saveShapes(self)
         else:
             mc = self.parent.canvas      
@@ -142,4 +141,4 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         self.add_penny_str = QA.translate("DrawConsScienceGui", "Please add a penny value", "", QA.UnicodeUTF8)
         self.no_penny_str = QA.translate("DrawConsScienceGui", "You don't have that many pennies left", "", QA.UnicodeUTF8)
         self.more_penny_str = QA.translate("DrawConsScienceGui", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes", "", QA.UnicodeUTF8)
-        
+        self.out_penny_str = QA.translate("DrawConsScienceGui", "You are out of pennies.  This shape drawing session is now done.", "", QA.UnicodeUTF8)        

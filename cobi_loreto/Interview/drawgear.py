@@ -4,9 +4,8 @@
 # to obtain socio-economic data using spatial information.
 # 
 # Copyright (C) 2008  Ecotrust
-# Copyright (C) 2008  Aaron Racicot
-# Copyright (C) 2008  Tim Welch
 # Copyright (C) 2008  Dane Springmeyer
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -32,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -56,23 +56,25 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
         self.species = []
+        
+        self.retranslate()
  
     def fetch_species(self):
             species = []
             if self.s1.isChecked():
-                species.append('Sharks and Skates')
+                species.append(str(self.sharks_and_skates_str))
             if self.s2.isChecked():
-                species.append('Coastal reef fish')
+                species.append(str(self.coastal_reef_fish_str))
             if self.s3.isChecked():
-                species.append('Deep reef fish')
+                species.append(str(self.deep_reef_fish_str))
             if self.s4.isChecked():
-                species.append('Migratory fish')
+                species.append(str(self.migratory_fish_str))
             if self.s5.isChecked():
-                species.append('Benthic fish')
+                species.append(str(self.benthic_fish_str))
             if self.s6.isChecked():
-                species.append('Shrimp')
+                species.append(str(self.shrimp_str))
             if self.s7.isChecked():
-                species.append('Other')
+                species.append(str(self.other_str))
             species_list_text = ','.join(species)
             return species_list_text
             
@@ -81,16 +83,16 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         if not self.discardLast:
             num_pennies = self.line_1.text()
             if not num_pennies:
-                QMessageBox.warning(self, "Pennies Error", "Missing penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.missing_penny_str)
                 return
             elif not strIsInt(num_pennies):
-                QMessageBox.warning(self, "Pennies Error", "Penny value must be a number (no decimals)")
+                QMessageBox.warning(self, self.pennies_error_str, self.penny_number_str)
                 return
             elif num_pennies == '0':
-                QMessageBox.warning(self, "Pennies Error", "Please add a penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.add_penny_str)
                 return
             elif int(num_pennies) > self.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                QMessageBox.warning(self, self.pennies_error_str, self.no_penny_str)
                 return
             else:
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
@@ -103,7 +105,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
 
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
-            QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This Shape Type is now done.")
+            QMessageBox.warning(self, self.pennies_error_str, self.out_penny_str)
             self.parent.saveShapes(self) # sends itself as the 'drawGui'
         else:
             mc = self.parent.canvas      
@@ -136,19 +138,19 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         if not self.discardLast:
             num_pennies = self.line_1.text()
             if not num_pennies:
-                QMessageBox.warning(self, "Pennies Error", "Missing penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.missing_penny_str)
                 return
             elif not strIsInt(num_pennies):
-                QMessageBox.warning(self, "Pennies Error", "Penny value must be a number (no decimals)")
+                QMessageBox.warning(self, self.pennies_error_str, self.penny_number_str)
                 return
             elif num_pennies == '0':
-                QMessageBox.warning(self, "Pennies Error", "Please add a penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.add_penny_str)
                 return
             elif int(num_pennies) > self.parent.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                QMessageBox.warning(self, self.pennies_error_str, self.no_penny_str)
                 return
             elif int(num_pennies) < self.parent.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes")
+                QMessageBox.warning(self, self.pennies_error_str, self.more_penny_str)
                 return
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
@@ -162,3 +164,19 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self.previousGui)
         wnd.show()
+
+    def retranslate(self):
+        self.pennies_error_str = QA.translate("DrawGearGui", "Pennies Error", "", QA.UnicodeUTF8)
+        self.missing_penny_str = QA.translate("DrawGearGui", "Missing penny value", "", QA.UnicodeUTF8)
+        self.penny_number_str = QA.translate("DrawGearGui", "Penny value must be a number (no decimals)", "", QA.UnicodeUTF8)
+        self.add_penny_str = QA.translate("DrawGearGui", "Please add a penny value", "", QA.UnicodeUTF8)
+        self.no_penny_str = QA.translate("DrawGearGui", "You don't have that many pennies left", "", QA.UnicodeUTF8)
+        self.more_penny_str = QA.translate("DrawGearGui", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes", "", QA.UnicodeUTF8)
+        self.out_penny_str = QA.translate("DrawGearGui", "You are out of pennies.  This shape drawing session is now done.", "", QA.UnicodeUTF8)
+        self.sharks_and_skates_str = QA.translate("DrawGearGui", 'Sharks and Skates', "", QA.UnicodeUTF8)
+        self.coastal_reef_fish_str = QA.translate("DrawGearGui", 'Coastal reef fish', "", QA.UnicodeUTF8)
+        self.deep_reef_fish_str = QA.translate("DrawGearGui", 'Deep reef fish', "", QA.UnicodeUTF8)
+        self.migratory_fish_str = QA.translate("DrawGearGui", 'Migratory fish', "", QA.UnicodeUTF8)
+        self.benthic_fish_str = QA.translate("DrawGearGui", 'Benthic fish', "", QA.UnicodeUTF8)
+        self.shrimp_str = QA.translate("DrawGearGui", 'Shrimp', "", QA.UnicodeUTF8)
+        self.other_str = QA.translate("DrawGearGui", 'Other', "", QA.UnicodeUTF8)

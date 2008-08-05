@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -49,28 +50,30 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
         self.parent = parent
         self.discardLast = False
         self.pennies_left = pennies_left
-        self.pl_label.setText("  "+str(self.pennies_left)+" left")
+        self.pl_label.setText("  "+str(self.pennies_left)+self.left_str)
         self.shapeType = shapeType
         self.previousGui = previousGui
         self.type_label.setText(self.shapeType)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
+        
+        self.retranslate()
 
     #Called when "More Shapes" button pressed        
     def on_pbnMoreShapes_released(self):
         if not self.discardLast:
             num_pennies = self.line_1.text()
             if not num_pennies:
-                QMessageBox.warning(self, "Pennies Error", "Missing penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.missing_penny_str)
                 return
             elif not strIsInt(num_pennies):
-                QMessageBox.warning(self, "Pennies Error", "Penny value must be a number (no decimals)")
+                QMessageBox.warning(self, self.pennies_error_str, self.penny_number_str)
                 return
             elif num_pennies == '0':
-                QMessageBox.warning(self, "Pennies Error", "Please add a penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.add_penny_str)
                 return
             elif int(num_pennies) > self.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                QMessageBox.warning(self, self.pennies_error_str, self.no_penny_str)
                 return
             else:
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
@@ -83,7 +86,7 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
 
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
-            QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This shape is now done.")
+            QMessageBox.warning(self, self.pennies_error_str, self.out_penny_str)
             self.parent.saveShapes(self)
         else:
             mc = self.parent.canvas      
@@ -106,19 +109,19 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
         if not self.discardLast:
             num_pennies = self.line_1.text()
             if not num_pennies:
-                QMessageBox.warning(self, "Pennies Error", "Missing penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.missing_penny_str)
                 return
             elif not strIsInt(num_pennies):
-                QMessageBox.warning(self, "Pennies Error", "Penny value must be a number (no decimals)")
+                QMessageBox.warning(self, self.pennies_error_str, self.penny_number_str)
                 return
             elif num_pennies == '0':
-                QMessageBox.warning(self, "Pennies Error", "Please add a penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.add_penny_str)
                 return
             elif int(num_pennies) > self.parent.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                QMessageBox.warning(self, self.pennies_error_str, self.no_penny_str)
                 return
             elif int(num_pennies) < self.parent.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes")
+                QMessageBox.warning(self, self.pennies_error_str, self.out_penny_str)
                 return
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
@@ -132,3 +135,13 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = DrawEcotourismGui(self.parent,flags,self.parent.pennies_left,self.parent.shapeType, self.previousGui)
         wnd.show()
+
+    def retranslate(self):
+        self.pennies_error_str = QA.translate("DrawEcotourismGui", "Pennies Error", "", QA.UnicodeUTF8)
+        self.missing_penny_str = QA.translate("DrawEcotourismGui", "Missing penny value", "", QA.UnicodeUTF8)
+        self.penny_number_str = QA.translate("DrawEcotourismGui", "Penny value must be a number (no decimals)", "", QA.UnicodeUTF8)
+        self.add_penny_str = QA.translate("DrawEcotourismGui", "Please add a penny value", "", QA.UnicodeUTF8)
+        self.no_penny_str = QA.translate("DrawEcotourismGui", "You don't have that many pennies left", "", QA.UnicodeUTF8)
+        self.more_penny_str = QA.translate("DrawEcotourismGui", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes", "", QA.UnicodeUTF8)
+        self.out_penny_str = QA.translate("DrawEcotourismGui", "You are out of pennies.  This shape drawing session is now done.", "", QA.UnicodeUTF8)        
+        self.left_str = QA.translate("DrawEcotourismGui", " left", "Partial string used to tell you how many pennies you have remaining", QA.UnicodeUTF8)
