@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -53,6 +54,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.prevGUI = prevGUI
         self.currentStep = fishery_sector
         self.fishery_sector_label.setText(str(self.currentStep))
+        self.retranslate()
 
     def append_data(self):
         self.parent.interviewInfo2.append(["v_len", self.vessel_length_line.text()])
@@ -65,15 +67,15 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.parent.interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
 
     def on_pbnSelectGear_released(self):
-        if self.currentStep == 'Commercial Fishery':
+        if self.currentStep == self.comm_fish_str:
             if not self.parent.commFishStarted:
                 self.append_data()
                 self.parent.commFishStarted = True
-        elif self.currentStep == 'Sport Fishery':
+        elif self.currentStep == self.comm_sport_fish_str :
             if not self.parent.commFishStarted:
                 self.append_data()
                 self.parent.sportFishStarted = True
-        elif self.currentStep == 'Private Fishery':
+        elif self.currentStep == self.priv_fish_str:
             if not self.parent.commFishStarted:
                 self.append_data()
                 self.parent.privateFishStarted = True
@@ -102,3 +104,8 @@ class FisheryGui(QDialog, Ui_Fishery):
             wnd = InterviewStartGui(self.parent,flags)
             wnd.show()
         self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+
+    def retranslate(self):
+        self.comm_fish_str = QA.translate("FisheryGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
+        self.comm_sport_fish_str = QA.translate("FisheryGui", 'Sport Fishery', "", QA.UnicodeUTF8)
+        self.priv_fish_str = QA.translate("FisheryGui", 'Private Fishery', "", QA.UnicodeUTF8)

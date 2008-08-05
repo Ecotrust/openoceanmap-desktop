@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -52,15 +53,16 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
         self.setupUi(self)
         self.parent = parent
         self.prevGUI = prevGUI
+        self.retranslate()
 
     def on_pbnSelectConsScience_released(self):
 
         interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append(["focus", self.comboBox.currentText()])
-        interviewInfo2.append(["add_info", self.add_info_line.text()])
+        interviewInfo2.append([self.f_focus_str, self.comboBox.currentText()])
+        interviewInfo2.append([self.f_add_info_str, self.add_info_line.text()])
 
         if not self.comboBox.currentText():
-            QMessageBox.warning(self, "Specialist Error", "Please choose a specialist position")
+            QMessageBox.warning(self, self.spec_error_str, self.choose_specialist_str)
             return
 
         self.close()
@@ -72,4 +74,11 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
     def on_pbnCancel_clicked(self):
         self.close()
         # stop interview process
-        self.parent.resetInterview("Cancelled conservationist/scientist interview")
+        self.parent.resetInterview(self.cancel_conscience_str)
+
+    def retranslate(self):
+        self.spec_error_str = QA.translate("ConsScienceGui", 'Specialist Error', "", QA.UnicodeUTF8)
+        self.choose_specialist_str = QA.translate("ConsScienceGui", "Please choose a specialist position", "", QA.UnicodeUTF8)
+        self.f_focus_str = QA.translate("ConsScienceGui", "focus", "conservationist/scientist area of focus", QA.UnicodeUTF8)
+        self.f_add_info_str = QA.translate("ConsScienceGui", "add_info", "additional info about con/science focus (kelp, mangrove, etc)", QA.UnicodeUTF8)
+        self.cancel_conscience_str = QA.translate("ConsScienceGui", "Cancelled conservationist/scientist interview", "", QA.UnicodeUTF8)        

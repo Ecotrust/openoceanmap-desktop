@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -55,22 +56,24 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         self.type_label.setText(self.shapeType)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
+        
+        self.retranslate()
 
     #Called when "More Shapes" button pressed        
     def on_pbnMoreShapes_released(self):
         if not self.discardLast:
             num_pennies = self.line_1.text()
             if not num_pennies:
-                QMessageBox.warning(self, "Pennies Error", "Missing penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.missing_penny_str)
                 return
             elif not strIsInt(num_pennies):
-                QMessageBox.warning(self, "Pennies Error", "Penny value must be a number (no decimals)")
+                QMessageBox.warning(self, self.pennies_error_str, self.penny_number_str)
                 return
             elif num_pennies == '0':
-                QMessageBox.warning(self, "Pennies Error", "Please add a penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.add_penny_str)
                 return
             elif int(num_pennies) > self.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                QMessageBox.warning(self, self.pennies_error_str, self.no_penny_str)
                 return
             else:
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
@@ -82,7 +85,7 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
 
         #Check if this shape type should be done (no pennies left)
         if self.parent.pennies_left == 0:
-            QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This Shape Type is now done.")
+            QMessageBox.warning(self, self.pennies_error_str, "You are out of pennies.  This Shape Type is now done.")
             self.parent.saveShapes(self)
         else:
             mc = self.parent.canvas      
@@ -105,19 +108,19 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         if not self.discardLast:
             num_pennies = self.line_1.text()
             if not num_pennies:
-                QMessageBox.warning(self, "Pennies Error", "Missing penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.missing_penny_str)
                 return
             elif not strIsInt(num_pennies):
-                QMessageBox.warning(self, "Pennies Error", "Penny value must be a number (no decimals)")
+                QMessageBox.warning(self, self.pennies_error_str, self.penny_number_str)
                 return
             elif num_pennies == '0':
-                QMessageBox.warning(self, "Pennies Error", "Please add a penny value")
+                QMessageBox.warning(self, self.pennies_error_str, self.add_penny_str)
                 return
             elif int(num_pennies) > self.parent.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                QMessageBox.warning(self, self.pennies_error_str, self.no_penny_str)
                 return
             elif int(num_pennies) < self.parent.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes")
+                QMessageBox.warning(self, self.pennies_error_str, self.more_penny_str)
                 return
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
@@ -131,3 +134,12 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = DrawConsScienceGui(self.parent,flags,self.parent.pennies_left,self.parent.shapeType, self.previousGui)
         wnd.show()
+
+    def retranslate(self):
+        self.pennies_error_str = QA.translate("DrawConsScienceGui", "Pennies Error", "", QA.UnicodeUTF8)
+        self.missing_penny_str = QA.translate("DrawConsScienceGui", "Missing penny value", "", QA.UnicodeUTF8)
+        self.penny_number_str = QA.translate("DrawConsScienceGui", "Penny value must be a number (no decimals)", "", QA.UnicodeUTF8)
+        self.add_penny_str = QA.translate("DrawConsScienceGui", "Please add a penny value", "", QA.UnicodeUTF8)
+        self.no_penny_str = QA.translate("DrawConsScienceGui", "You don't have that many pennies left", "", QA.UnicodeUTF8)
+        self.more_penny_str = QA.translate("DrawConsScienceGui", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes", "", QA.UnicodeUTF8)
+        

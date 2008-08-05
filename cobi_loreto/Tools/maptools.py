@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -104,6 +105,7 @@ class MapTools(object):
     self.interviewInProgress = False
     self.interviewSaveTool = None
 
+    self.retranslate()
   # Signal handler for capturing rectangle
   def updateBoundsFromRegion(self):
     mc = self.canvas      
@@ -115,7 +117,7 @@ class MapTools(object):
   # Signal handler for finishing capture of rectangle
   def doneRectangle(self):
     self.canvas.setMapTool(self.saveTool)
-    capture_string = QString("Captured Rectangle - " +
+    capture_string = QString(self.capt_rect_str +
                              str(self.r.bb.xMin()) + " " +
                              str(self.r.bb.yMax()) +
                              " :: " +
@@ -154,8 +156,7 @@ class MapTools(object):
       self.interviewSaveTool = None
     else:
       # Start up a new interview
-      capture_string = QString("Starting Interview Dialog...")
-      self.statusbar.showMessage(capture_string)
+      self.statusbar.showMessage(self.start_interview_str)
       self.interviewInProgress = True
       self.interview = Interview(self)
 
@@ -197,15 +198,13 @@ class MapTools(object):
     self.vec_layer = layer
     
     if not layer.isValid():
-        capture_string = QString("ERROR reading file")
         #self.canvas.parentWin.outputWin.append(capture_string)
-        self.statusbar.showMessage(capture_string)
+        self.statusbar.showMessage(self.error_reading_str)
         return
 
     if self.parent.srs == None:
       self.parent.srs = layer.srs()
-      print 'maptools.py srs setting...'
-      print self.parent.srs
+      print 'maptools.py srs setting...' + str(self.parent.srs)
       # set extent to the extent of our layer
       self.parent.canvas.setExtent(layer.extent())
 
@@ -243,9 +242,8 @@ class MapTools(object):
     layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
     if not layer.isValid():
-        capture_string = QString("ERROR reading file")
         #self.canvas.parentWin.outputWin.append(capture_string)
-        self.statusbar.showMessage(capture_string)
+        self.statusbar.showMessage(self.error_reading_str)
         return
 
     if self.parent.srs == None:
@@ -271,3 +269,8 @@ class MapTools(object):
   # Geo-transform helper function
   def transform(self, x, y):
     return QgsPoint(self.canvas.getCoordinateTransform().toMapCoordinates(x,y))
+
+  def retranslate(self):
+    self.capt_rect_str = QA.translate("MapTools", "Captured Rectangle - ", "", QA.UnicodeUTF8)
+    self.error_reading_str = QA.translate("MapTools", "Error reading file", "", QA.UnicodeUTF8)
+    self.start_interview_str = QA.translate("MapTools", "Starting interview", "", QA.UnicodeUTF8)

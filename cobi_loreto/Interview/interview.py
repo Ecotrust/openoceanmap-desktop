@@ -90,7 +90,9 @@ class Interview(object):
     wnd.show()
 
 
-  def resetInterview(self,msg="Canceling Interview... "):
+  def resetInterview(self,msg=None):
+        if not msg:
+            msg = self.cancel_str
         capture_string = QString(msg)
         self.parent.statusbar.showMessage(capture_string)
         self.parent.interviewInProgress = False
@@ -109,7 +111,9 @@ class Interview(object):
         self.canvas.setMapTool(self.parent.toolZoomIn)
         
         
-  def nextStep(self, previousGui, msg="Leaving Step"):
+  def nextStep(self, previousGui, msg=None):
+      if not msg:
+          msg = self.leaving_step_str
       sector_specific_vessel_port_info = True
       S = sector_specific_vessel_port_info
       
@@ -201,8 +205,7 @@ class Interview(object):
           file_prefix = self.first_name+'_' + self.last_name+'_' + QString(self.currentStep) + '_' + QString(self.capturedTextType).replace(' ','_').toLower()
           file_prefix_obj = QString(file_prefix)
           file_name = QString("%s_" % file_prefix_obj)
-          capture_string = QString("Writing text file...")
-          self.parent.statusbar.showMessage(capture_string)
+          self.parent.statusbar.showMessage(self.writing_text_str)
           qd=QFileDialog()
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Plain Text (*.txt)")
@@ -240,8 +243,7 @@ class Interview(object):
       drawGui.close()
       if len(self.capturedPolygons) == 0:
           # Finished a interview step without writing any shapes...
-          capture_string = QString("No Shapes to write, returning to previous choices...")
-          self.parent.statusbar.showMessage(capture_string)
+          self.parent.statusbar.showMessage(self.no_shapes_str)
           # Fire up the previous gui again...
           drawGui.previousGui.show()
       else:      
@@ -252,8 +254,7 @@ class Interview(object):
           file_prefix_obj = QString(file_prefix)
           file_name = QString("%s_" % file_prefix_obj)
           # self.parent.statusbar.showMessage(file_prefix)
-          capture_string = QString("Writing shapefile...")
-          self.parent.statusbar.showMessage(capture_string)
+          self.parent.statusbar.showMessage(self.writing_shape_str)
           qd=QFileDialog()
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Shapefiles (*.shp)")
@@ -285,9 +286,9 @@ class Interview(object):
             for index,value in enumerate(self.interviewInfo2):
               fields[index] = QgsField(value[0], QVariant.String)
               
-            fields[index+1] = QgsField("income", QVariant.String)
-            fields[index+2] = QgsField("pennies", QVariant.Int)
-            fields[index+3] = QgsField("species", QVariant.String)
+            fields[index+1] = QgsField(self.f_income_str, QVariant.String)
+            fields[index+2] = QgsField(self.f_pennies_str, QVariant.Int)
+            fields[index+3] = QgsField(self.f_species_str, QVariant.String)
 
             # create an instance of vector file writer,
             # it will create the shapefile. Arguments:
@@ -316,7 +317,7 @@ class Interview(object):
                 writer.addFeature(fet)
                 
             del writer
-            capture_string = QString("Wrote Shapefile..." + write_string)
+            capture_string = QString(self.wrote_shape_str + write_string)
             self.parent.statusbar.showMessage(capture_string)
   
             # Now add the new layer back... but with styling...
@@ -324,8 +325,7 @@ class Interview(object):
             layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
             
             if not layer.isValid():
-              capture_string = QString("ERROR reading file, did it save correctly?  If not, do you have write permission in the save directory you chose?")
-              self.statusbar.showMessage(capture_string)
+              self.statusbar.showMessage(self.save_error_str)
               #Restart save dialog
               self.saveShapes(drawGui)
               #Pull out
@@ -384,3 +384,14 @@ class Interview(object):
       self.overwrite_support_str = QA.translate("Interview","Overwriting existing text file is not supported: ", None, QA.UnicodeUTF8)
       self.other_info_save_str = QA.translate("Other Income Saved","Other income info successfully saved to: ", None, QA.UnicodeUTF8)
       self.save_shape_str = QA.translate("Interview","Save Shapes as", None, QA.UnicodeUTF8)
+      self.writing_text_str = QA.translate("Interview","Writing text file", None, QA.UnicodeUTF8)
+      self.writing_shape_str = QA.translate("Interview","Writing shapefile", None, QA.UnicodeUTF8)
+      self.no_shapes_str = QA.translate("Interview","No shapes drawn", None, QA.UnicodeUTF8)
+      self.wrote_shape_str = QA.translate("Interview","Wrote shapefile", None, QA.UnicodeUTF8)
+      self.save_error_str = QA.translate("Interview","Error reading file, did it save correctly?  If not, do you have write permission in the save directory you chose?", None, QA.UnicodeUTF8)
+      self.cancel_str = QA.translate("Interview","Canceling interview", None, QA.UnicodeUTF8)
+      self.leaving_step_str = QA.translate("Interview","Leaving this step", None, QA.UnicodeUTF8)
+      
+      self.f_income_str = QA.translate("Interview","income", "fisherman income field", QA.UnicodeUTF8)
+      self.f_pennies_str = QA.translate("Interview","pennies", "fishing ground penny value", QA.UnicodeUTF8)
+      self.f_species_str = QA.translate("Interview","species", "fish species name", QA.UnicodeUTF8)
