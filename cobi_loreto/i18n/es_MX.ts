@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="lo">
-<defaultcodec></defaultcodec>
 <context>
     <name>ConsScience</name>
     <message>
@@ -62,39 +61,39 @@
 <context>
     <name>DrawConsScience</name>
     <message>
-        <location filename="drawconsscience_ui.py" line="71"/>
+        <location filename="drawconsscience_ui.py" line="89"/>
         <source>OpenOceanMap - Next Polygon</source>
         <translation>MapaOceanAbierto - Siguiente Polígono</translation>
     </message>
     <message>
-        <location filename="drawconsscience_ui.py" line="73"/>
+        <location filename="drawconsscience_ui.py" line="91"/>
         <source>Weighting (pennies):</source>
         <translation>Valorar (pesos):</translation>
     </message>
     <message>
-        <location filename="drawconsscience_ui.py" line="74"/>
+        <location filename="drawconsscience_ui.py" line="92"/>
         <source>Finished With Shapes</source>
         <translation>Terminar con figuras</translation>
     </message>
     <message>
-        <location filename="drawconsscience_ui.py" line="75"/>
+        <location filename="drawconsscience_ui.py" line="93"/>
         <source>Discard Last Shape...</source>
         <translation>Descartar última figura...</translation>
     </message>
     <message>
-        <location filename="drawconsscience_ui.py" line="76"/>
+        <location filename="drawconsscience_ui.py" line="94"/>
         <source>Draw More Shapes...</source>
         <translation>Dibujar más figuras...</translation>
     </message>
     <message>
         <location filename="drawconsscience_ui.py" line="72"/>
         <source>Type of Tourism</source>
-        <translation>Tipo de Turismo</translation>
+        <translation type="obsolete">Tipo de Turismo</translation>
     </message>
     <message>
-        <location filename="Interview/drawconsscience.ui" line="46"/>
+        <location filename="drawconsscience_ui.py" line="90"/>
         <source>Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)</source>
-        <translation type="obsolete">Ecosistema de arrecife costero (Peces e invertebrados asociados al arrecife costero)</translation>
+        <translation type="unfinished">Ecosistema de arrecife costero (Peces e invertebrados asociados al arrecife costero)</translation>
     </message>
 </context>
 <context>
@@ -133,72 +132,72 @@
 <context>
     <name>DrawGear</name>
     <message>
-        <location filename="drawgear_ui.py" line="102"/>
+        <location filename="drawgear_ui.py" line="129"/>
         <source>OpenOceanMap - Next Polygon</source>
         <translation>SiguienteMapaOceanAbierto - Siguiente Polígono</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="103"/>
+        <location filename="drawgear_ui.py" line="130"/>
         <source>Weighting (pennies):</source>
         <translation>Valorar (pesos):</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="113"/>
+        <location filename="drawgear_ui.py" line="140"/>
         <source>Finished With Shapes</source>
         <translation>Terminar con figuras</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="114"/>
+        <location filename="drawgear_ui.py" line="141"/>
         <source>Discard Last Shape...</source>
         <translation>Descartar última figura...</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="115"/>
+        <location filename="drawgear_ui.py" line="142"/>
         <source>Draw More Shapes...</source>
         <translation>Dibujar más figuras...</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="107"/>
+        <location filename="drawgear_ui.py" line="134"/>
         <source>Coastal reef fish</source>
         <translation>Peces de arrecife costero</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="108"/>
+        <location filename="drawgear_ui.py" line="135"/>
         <source>Deep reef fish</source>
         <translation>Peces de arrecife profundo</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="109"/>
+        <location filename="drawgear_ui.py" line="136"/>
         <source>Migratory fish</source>
         <translation>Peces migratorios</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="106"/>
+        <location filename="drawgear_ui.py" line="133"/>
         <source>Benthic fish</source>
         <translation>Peces bentónicos</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="111"/>
+        <location filename="drawgear_ui.py" line="138"/>
         <source>Shrimp</source>
         <translation>Gamba</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="112"/>
+        <location filename="drawgear_ui.py" line="139"/>
         <source>Other</source>
         <translation>Otros</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="104"/>
+        <location filename="drawgear_ui.py" line="131"/>
         <source>remaining</source>
         <translation>restantes</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="110"/>
+        <location filename="drawgear_ui.py" line="137"/>
         <source>Sharks and Skates</source>
         <translation>Tiburones y rayas</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="105"/>
+        <location filename="drawgear_ui.py" line="132"/>
         <source>Check which types of species are caught in this area:</source>
         <translation>Marca que tipo de especies son capturadas en esta área:</translation>
     </message>
@@ -206,69 +205,69 @@
 <context>
     <name>Ecotourism</name>
     <message>
-        <location filename="Interview/ecotourism.ui" line="14"/>
+        <location filename="ecotourism_ui.py" line="255"/>
         <source>OpenOceanMap - Interview</source>
-        <translation type="obsolete">InicioMapaOceanAbierto - Entrevista</translation>
+        <translation type="unfinished">InicioMapaOceanAbierto - Entrevista</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="27"/>
+        <location filename="ecotourism_ui.py" line="256"/>
         <source>Ecotourism Info</source>
-        <translation type="obsolete">Información ecoturismo</translation>
+        <translation type="unfinished">Información ecoturismo</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="100"/>
+        <location filename="ecotourism_ui.py" line="260"/>
         <source>Owner</source>
-        <translation type="obsolete">Dueño de barco</translation>
+        <translation type="unfinished">Dueño de barco</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="90"/>
+        <location filename="ecotourism_ui.py" line="258"/>
         <source>Captain of Boat</source>
-        <translation type="obsolete">Capitán de barco</translation>
+        <translation type="unfinished">Capitán de barco</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="105"/>
+        <location filename="ecotourism_ui.py" line="261"/>
         <source>Other</source>
-        <translation type="obsolete">Otro</translation>
+        <translation type="unfinished">Otro</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="156"/>
+        <location filename="ecotourism_ui.py" line="262"/>
         <source>Vessel length (meters) :</source>
-        <translation type="obsolete">Longitud de la embarcación (metros) :</translation>
+        <translation type="unfinished">Longitud de la embarcación (metros) :</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="236"/>
+        <location filename="ecotourism_ui.py" line="263"/>
         <source>Vessel motor (horsepower):</source>
-        <translation type="obsolete">Tipo de motor de la embarcación (caballos, hp):</translation>
+        <translation type="unfinished">Tipo de motor de la embarcación (caballos, hp):</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="313"/>
+        <location filename="ecotourism_ui.py" line="264"/>
         <source>Haul Capacity (kilograms):</source>
-        <translation type="obsolete">Capacidad de la embarcación (kg):</translation>
+        <translation type="unfinished">Capacidad de la embarcación (kg):</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="390"/>
+        <location filename="ecotourism_ui.py" line="265"/>
         <source>Home Port:</source>
-        <translation type="obsolete">Puerto de origen:</translation>
+        <translation type="unfinished">Puerto de origen:</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="452"/>
+        <location filename="ecotourism_ui.py" line="266"/>
         <source>How many work for the company?</source>
-        <translation type="obsolete">¿Cuántas personas trabajan para la compañía?</translation>
+        <translation type="unfinished">¿Cuántas personas trabajan para la compañía?</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="76"/>
+        <location filename="ecotourism_ui.py" line="257"/>
         <source>Type of Employee:</source>
-        <translation type="obsolete">Tipo de empleado:</translation>
+        <translation type="unfinished">Tipo de empleado:</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="515"/>
+        <location filename="ecotourism_ui.py" line="267"/>
         <source>Draw Shapes by Ecotourism Type</source>
-        <translation type="obsolete">Dibujar figuras para cada tipo de ecoturismo</translation>
+        <translation type="unfinished">Dibujar figuras para cada tipo de ecoturismo</translation>
     </message>
     <message>
-        <location filename="Interview/ecotourism.ui" line="95"/>
+        <location filename="ecotourism_ui.py" line="259"/>
         <source>Guide</source>
-        <translation type="obsolete">Guía</translation>
+        <translation type="unfinished">Guía</translation>
     </message>
 </context>
 <context>
@@ -347,54 +346,109 @@
 <context>
     <name>Interview</name>
     <message>
-        <location filename="interview.py" line="225"/>
+        <location filename="interview.py" line="383"/>
         <source>Save Text as</source>
-        <translation>Guardar Texto</translation>
+        <translation type="unfinished">Guardar Texto</translation>
     </message>
     <message>
-        <location filename="interview.py" line="239"/>
+        <location filename="interview.py" line="384"/>
         <source>Overwriting existing text file is not supported: </source>
-        <translation>No sobreescribir el apoyo:</translation>
+        <translation type="unfinished">No sobreescribir el apoyo:</translation>
     </message>
     <message>
-        <location filename="interview.py" line="276"/>
+        <location filename="interview.py" line="386"/>
         <source>Save Shapes as</source>
-        <translation>Guardar Las Formas Como</translation>
+        <translation type="unfinished">Guardar Las Formas Como</translation>
     </message>
     <message>
         <location filename="interview.py" line="288"/>
         <source>Overwriting existing shapefile is not supported: </source>
-        <translation>No sobreescribir el shapefile:</translation>
+        <translation type="obsolete">No sobreescribir el shapefile:</translation>
     </message>
     <message>
-        <location filename="interview.py" line="128"/>
+        <location filename="interview.py" line="366"/>
         <source>Starting commercial fishery interview</source>
-        <translation>Empezando entrevista de pesca comercial</translation>
+        <translation type="unfinished">Empezando entrevista de pesca comercial</translation>
     </message>
     <message>
-        <location filename="interview.py" line="132"/>
+        <location filename="interview.py" line="367"/>
         <source>Commercial Fishery</source>
-        <translation>Pesca comercial</translation>
+        <translation type="unfinished">Pesca comercial</translation>
     </message>
     <message>
-        <location filename="interview.py" line="143"/>
+        <location filename="interview.py" line="368"/>
         <source>Starting commercial sport fishery interview</source>
-        <translation>Empezando entrevista de pesca deportiva</translation>
+        <translation type="unfinished">Empezando entrevista de pesca deportiva</translation>
     </message>
     <message>
-        <location filename="interview.py" line="147"/>
+        <location filename="interview.py" line="369"/>
         <source>Sport Fishery</source>
-        <translation>Pesca deportiva</translation>
+        <translation type="unfinished">Pesca deportiva</translation>
     </message>
     <message>
-        <location filename="interview.py" line="158"/>
+        <location filename="interview.py" line="370"/>
         <source>Starting private sport fishery interview</source>
-        <translation>Empezando entrevista de pesca deportiva privado</translation>
+        <translation type="unfinished">Empezando entrevista de pesca deportiva privado</translation>
     </message>
     <message>
-        <location filename="interview.py" line="162"/>
+        <location filename="interview.py" line="371"/>
         <source>Private Fishery</source>
-        <translation>Pesca privada</translation>
+        <translation type="unfinished">Pesca privada</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="372"/>
+        <source>Starting ecotourism interview</source>
+        <translation type="unfinished">Inicio ecoturismo entrevista</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="373"/>
+        <source>Ecotourism</source>
+        <translation type="unfinished">Ecoturismo</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="374"/>
+        <source>Starting conservation/scientist interview</source>
+        <translation type="unfinished">Inicio conservación/científico entrevista</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="375"/>
+        <source>Conservationist Scientist</source>
+        <translation type="unfinished">Conservación Científico</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="376"/>
+        <source>Starting other interview</source>
+        <translation type="unfinished">Inicio otra entrevista</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="377"/>
+        <source>Other</source>
+        <translation type="unfinished">Otra</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="378"/>
+        <source>Income</source>
+        <translation type="unfinished">Ingresos</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="379"/>
+        <source>Success</source>
+        <translation type="unfinished">éxito</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="380"/>
+        <source>Interview Completed</source>
+        <translation type="unfinished">Entrevista Terminado</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="381"/>
+        <source>Interview Finished</source>
+        <translation type="unfinished">Entrevista Hecho</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="382"/>
+        <source>No info, returning to previous choices</source>
+        <translation type="unfinished">No se dispone de información, volviendo a las anteriores elecciones</translation>
     </message>
 </context>
 <context>
@@ -520,82 +574,82 @@
     <message>
         <location filename="mainwindow_ui.py" line="145"/>
         <source>OpenOceanMap</source>
-        <translation>MapaOceanAbierto</translation>
-    </message>
-    <message>
-        <location filename="mainwindow_ui.py" line="156"/>
-        <source>Inicio Entrevista</source>
-        <translation></translation>
+        <translation type="unfinished">MapaOceanAbierto</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="149"/>
         <source>Map</source>
-        <translation>Mapa</translation>
+        <translation type="unfinished">Mapa</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="153"/>
         <source>Add Raster Layer</source>
-        <translation>Añadir capa de ráster</translation>
+        <translation type="unfinished">Añadir capa de ráster</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="160"/>
         <source>Add Vector Layer</source>
-        <translation>Añadir capa de vector</translation>
+        <translation type="unfinished">Añadir capa de vector</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="148"/>
         <source>Interview</source>
-        <translation>Entrevista</translation>
+        <translation type="unfinished">Entrevista</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="150"/>
         <source>Utilities</source>
-        <translation>Herramientas</translation>
+        <translation type="unfinished">Herramientas</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="151"/>
         <source>Zoom Out</source>
-        <translation>Alejarse</translation>
+        <translation type="unfinished">Alejarse</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="152"/>
         <source>Pan</source>
-        <translation>Desplezar mapa</translation>
+        <translation type="unfinished">Desplezar mapa</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="154"/>
         <source>Start Interview</source>
-        <translation>Empezar Entrevista</translation>
+        <translation type="unfinished">Empezar Entrevista</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="157"/>
         <source>Region Tool</source>
-        <translation>Región herramienta</translation>
+        <translation type="unfinished">Región herramienta</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="159"/>
         <source>Zoom In</source>
-        <translation>Acercarse</translation>
+        <translation type="unfinished">Acercarse</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="161"/>
         <source>Python Console</source>
-        <translation>Consola Python</translation>
+        <translation type="unfinished">Consola Python</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="146"/>
         <source>Legend</source>
-        <translation>Leyenda</translation>
+        <translation type="unfinished">Leyenda</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="147"/>
         <source>Debug</source>
-        <translation>Depurar</translation>
+        <translation type="unfinished">Depurar</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="158"/>
         <source>Polygon Tool</source>
-        <translation>Polígono herramienta</translation>
+        <translation type="unfinished">Polígono herramienta</translation>
+    </message>
+    <message>
+        <location filename="mainwindow_ui.py" line="156"/>
+        <source>Inicio Entrevista</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -606,22 +660,22 @@
         <translation type="obsolete">Inicio</translation>
     </message>
     <message>
-        <location filename="other_ui.py" line="53"/>
+        <location filename="other_ui.py" line="65"/>
         <source>OpenOceanMap - Define Other Income</source>
         <translation>MapaOceanAbierto - Se define otro ingreso</translation>
     </message>
     <message>
-        <location filename="other_ui.py" line="54"/>
+        <location filename="other_ui.py" line="66"/>
         <source>Describe Other Income:</source>
         <translation>Describe otros ingresos:</translation>
     </message>
     <message>
-        <location filename="other_ui.py" line="56"/>
+        <location filename="other_ui.py" line="68"/>
         <source>Save  to file</source>
         <translation>Guardar en la carpeta</translation>
     </message>
     <message>
-        <location filename="other_ui.py" line="55"/>
+        <location filename="other_ui.py" line="67"/>
         <source>Finish</source>
         <translation>Terminar</translation>
     </message>
@@ -629,7 +683,7 @@
 <context>
     <name>Other Income Saved</name>
     <message>
-        <location filename="interview.py" line="249"/>
+        <location filename="interview.py" line="385"/>
         <source>Other income info successfully saved to: </source>
         <translation type="unfinished">Otro ingresar guardado a:</translation>
     </message>

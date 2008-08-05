@@ -54,9 +54,6 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.currentStep = fishery_sector
         self.fishery_sector_label.setText(str(self.currentStep))
 
-        import pdb
-        pdb.set_trace()
-
     def append_data(self):
         self.parent.interviewInfo2.append(["v_len", self.vessel_length_line.text()])
         self.parent.interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])

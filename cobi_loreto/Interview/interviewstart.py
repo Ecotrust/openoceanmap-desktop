@@ -56,7 +56,10 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         
         # interviewee group
         interviewInfo2.append([u"nombre", self.interviewee_first_name_line.text()])
+        self.parent.first_name = self.interviewee_first_name_line.text().toLower()
         interviewInfo2.append([u"apellido", self.interviewee_last_name_line.text()])
+        self.parent.last_name = self.interviewee_last_name_line.text().toLower()
+
         interviewInfo2.append([u"edad", self.age_line.text()])
         interviewInfo2.append([u"genero", self.gender_comboBox.currentText()])
         interviewInfo2.append([u"ciudad", self.city_line.text()])

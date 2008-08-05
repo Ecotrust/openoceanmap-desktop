@@ -83,6 +83,9 @@ class Interview(object):
     
     # Reset previous polygons
     flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+    
+    self.retranslate()
+
     wnd = InterviewStartGui(self,flags)
     wnd.show()
 
@@ -194,8 +197,8 @@ class Interview(object):
           self.parent.statusbar.showMessage(capture_string)
           # Fire up the previous gui again...
           textGui.show()
-      else:
-          file_prefix = (str(self.currentStep) + '_' + str(self.capturedTextType)).replace(' ','_').lower()
+      else:                         
+          file_prefix = self.first_name+'_' + self.last_name+'_' + QString(self.currentStep) + '_' + QString(self.capturedTextType).replace(' ','_').toLower()
           file_prefix_obj = QString(file_prefix)
           file_name = QString("%s_" % file_prefix_obj)
           capture_string = QString("Writing text file...")
@@ -242,7 +245,10 @@ class Interview(object):
           # Fire up the previous gui again...
           drawGui.previousGui.show()
       else:      
-          file_prefix = (str(self.currentStep) + '_' + str(self.shapeType)).replace(' ','_').lower()
+          file_prefix = (self.first_name+'_'+
+                         self.last_name+'_'+
+                         QString(self.currentStep) + '_' + 
+                         QString(self.shapeType)).replace(' ','_').toLower()
           file_prefix_obj = QString(file_prefix)
           file_name = QString("%s_" % file_prefix_obj)
           # self.parent.statusbar.showMessage(file_prefix)
