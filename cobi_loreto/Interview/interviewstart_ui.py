@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interviewstart.ui'
 #
-# Created: Mon Aug  4 16:27:25 2008
+# Created: Mon Aug  4 21:56:16 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_InterviewStart(object):
     def setupUi(self, InterviewStart):
         InterviewStart.setObjectName("InterviewStart")
-        InterviewStart.resize(QtCore.QSize(QtCore.QRect(0,0,893,480).size()).expandedTo(InterviewStart.minimumSizeHint()))
+        InterviewStart.resize(QtCore.QSize(QtCore.QRect(0,0,902,421).size()).expandedTo(InterviewStart.minimumSizeHint()))
 
         self.hboxlayout = QtGui.QHBoxLayout(InterviewStart)
         self.hboxlayout.setObjectName("hboxlayout")

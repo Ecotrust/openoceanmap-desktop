@@ -63,11 +63,13 @@
     <message>
         <location filename="consscience.py" line="80"/>
         <source>Specialist Error</source>
+        <comment>Error message when specialist type not selected</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="consscience.py" line="81"/>
         <source>Please choose a specialist position</source>
+        <comment>Error message when specialist type not selected</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -84,7 +86,7 @@
     </message>
     <message>
         <location filename="consscience.py" line="84"/>
-        <source>Cancelled conservationist/scientist interview</source>
+        <source>Canceled conservationist/scientist interview</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -163,6 +165,12 @@
         <source>You are out of pennies.  This shape drawing session is now done.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="drawconsscience.py" line="145"/>
+        <source> left</source>
+        <comment>Partial text used as part of a larger message about number of pennies left, for example &apos;20 left&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DrawEcotourism</name>
@@ -202,11 +210,13 @@
     <message>
         <location filename="drawecotourism.py" line="140"/>
         <source>Pennies Error</source>
+        <comment>Error message given when user doesn&apos;t enter a pennies value</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="drawecotourism.py" line="141"/>
         <source>Missing penny value</source>
+        <comment>Error message given when user doesn&apos;t enter a pennies value</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -216,7 +226,7 @@
     </message>
     <message>
         <location filename="drawecotourism.py" line="143"/>
-        <source>Please add a penny value</source>
+        <source>Please enter a penny value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -237,7 +247,7 @@
     <message>
         <location filename="drawecotourism.py" line="147"/>
         <source> left</source>
-        <comment>Partial string used to tell you how many pennies you have remaining</comment>
+        <comment>Partial string used to tell you how many pennies you have remaining, for example &apos;20 left&apos;</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -386,6 +396,12 @@
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="drawgear.py" line="183"/>
+        <source> left</source>
+        <comment>Partial string used to tell you how many pennies you have remaining, for example &apos;20 left&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Ecotourism</name>
@@ -453,6 +469,62 @@
         <location filename="ecotourism_ui.py" line="259"/>
         <source>Guide</source>
         <translation type="unfinished">Guía</translation>
+    </message>
+</context>
+<context>
+    <name>EcotourismGui</name>
+    <message>
+        <location filename="ecotourism.py" line="83"/>
+        <source>emp_type</source>
+        <comment>Employee type DB field name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="84"/>
+        <source>v_len</source>
+        <comment>Vessel length DB field name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="85"/>
+        <source>v_motor</source>
+        <comment>Vessel motor (horsepower) DB field name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="86"/>
+        <source>v_cap</source>
+        <comment>Vessel capacity (kilograms) DB field name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="87"/>
+        <source>v_homep</source>
+        <comment>Vessel homeport DB field name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="88"/>
+        <source>trabajos</source>
+        <comment>Number that work for company DB field name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="89"/>
+        <source>Employee Error</source>
+        <comment>Error given when user fails to enter an employee type</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="90"/>
+        <source>Please Choose an Ecotourism Activity</source>
+        <comment>Error given when user fails to enter an employee type</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="91"/>
+        <source>Cancel ecotourism interview</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -531,66 +603,72 @@
 <context>
     <name>FisheryGui</name>
     <message>
-        <location filename="fishery.py" line="111"/>
+        <location filename="fishery.py" line="110"/>
         <source>Commercial Fishery</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="112"/>
+        <location filename="fishery.py" line="111"/>
         <source>Sport Fishery</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="113"/>
+        <location filename="fishery.py" line="112"/>
         <source>Private Fishery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="113"/>
+        <source>Going back to first interview step...</source>
+        <comment>landing port 4</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery.py" line="115"/>
         <source>v_len</source>
-        <comment>vessel length</comment>
+        <comment>vessel length attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery.py" line="116"/>
         <source>v_motor</source>
-        <comment>vessel motor horsepower</comment>
+        <comment>vessel motor horsepower attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery.py" line="117"/>
         <source>haul_cap</source>
-        <comment>vessel haul capacity in kilograms</comment>
+        <comment>vessel haul capacity in kilograms attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery.py" line="118"/>
         <source>v_homep</source>
-        <comment>vessel homeport</comment>
+        <comment>vessel homeport attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery.py" line="119"/>
         <source>landp_1</source>
-        <comment>landing port 1</comment>
+        <comment>landing port 1 attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery.py" line="120"/>
         <source>landp_2</source>
-        <comment>landing port 2</comment>
+        <comment>landing port 2 attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery.py" line="121"/>
         <source>landp_3</source>
-        <comment>landing port 3</comment>
+        <comment>landing port 3 attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery.py" line="122"/>
         <source>landp_4</source>
-        <comment>landing port 4</comment>
+        <comment>landing port 4 attribute</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -739,19 +817,19 @@
     <message>
         <location filename="interview.py" line="395"/>
         <source>income</source>
-        <comment>fisherman income field</comment>
+        <comment>fisherman income field attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="interview.py" line="396"/>
         <source>pennies</source>
-        <comment>fishing ground penny value</comment>
+        <comment>fishing ground penny value attribute</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="interview.py" line="397"/>
         <source>species</source>
-        <comment>fish species name</comment>
+        <comment>fish species name attribute</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -874,6 +952,121 @@
     </message>
 </context>
 <context>
+    <name>InterviewStartGui</name>
+    <message>
+        <location filename="interviewstart.py" line="143"/>
+        <source>f_name</source>
+        <comment>Interviewee first name attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="144"/>
+        <source>l_name</source>
+        <comment>Interviewee last name attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="145"/>
+        <source>age</source>
+        <comment>Age attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="146"/>
+        <source>gender</source>
+        <comment>Gender attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="147"/>
+        <source>city</source>
+        <comment>City attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="148"/>
+        <source>date</source>
+        <comment>Date of interview attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="149"/>
+        <source>i_f_name</source>
+        <comment>Interviewer first name attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="150"/>
+        <source>i_l_name</source>
+        <comment>Interview last name attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="151"/>
+        <source>years</source>
+        <comment>Number of years fishing attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="152"/>
+        <source>inc_f_comm</source>
+        <comment>Percent income from commercial fishing attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="153"/>
+        <source>inc_f_sprt</source>
+        <comment>Percent income from sport fishing attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="154"/>
+        <source>inc_f_priv</source>
+        <comment>Percent income from private fishing attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="155"/>
+        <source>inc_ecotou</source>
+        <comment>Percent income from ecotourism attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="156"/>
+        <source>inc_consci</source>
+        <comment>Percent income from conservation/scientist attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="157"/>
+        <source>inc_other</source>
+        <comment>Percent income from other attribute</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="158"/>
+        <source>Income Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="159"/>
+        <source>Income value must be a number (no decimals)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="160"/>
+        <source>All Values currently total</source>
+        <comment>First part of text that tells the user the total for all income percentages they entered</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="161"/>
+        <source>. Please change them.</source>
+        <comment>Second part of text telling the user their incomes don&apos;t add up to 100 so they need to change the values such that they do add up to 100</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <location filename="mainwindow_ui.py" line="145"/>
@@ -955,6 +1148,18 @@
         <source>Inicio Entrevista</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="mainwindow.py" line="231"/>
+        <source>ERROR reading file</source>
+        <comment>message when failing to load a map layer</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.py" line="232"/>
+        <source>Loreto Base Map</source>
+        <comment>map legend text for base layer</comment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MapTools</name>
@@ -971,6 +1176,23 @@
     <message>
         <location filename="maptools.py" line="276"/>
         <source>Starting interview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="maptools.py" line="277"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="maptools.py" line="278"/>
+        <source>File2</source>
+        <comment>Menu bar title</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="maptools.py" line="279"/>
+        <source>Polygon captured</source>
+        <comment>Status message shown after user finished a polygon</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1008,6 +1230,15 @@
         <location filename="interview.py" line="385"/>
         <source>Other income info successfully saved to: </source>
         <translation type="unfinished">Otro ingresar guardado a:</translation>
+    </message>
+</context>
+<context>
+    <name>OtherGui</name>
+    <message>
+        <location filename="other.py" line="76"/>
+        <source>Canceling other interview</source>
+        <comment>Status message shown when user cancels out of the &apos;other&apos; portion of the interview</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1097,6 +1328,25 @@
     </message>
 </context>
 <context>
+    <name>SelectConsScienceGui</name>
+    <message>
+        <location filename="selectconsscience.py" line="85"/>
+        <source>Cons/Science Error</source>
+        <comment>Error when user fails to select type of conservationist/scientist</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectconsscience.py" line="86"/>
+        <source>Please select a focus area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectconsscience.py" line="87"/>
+        <source>Finishing Cons/Sci interview</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SelectEcotourism</name>
     <message>
         <location filename="selectecotourism_ui.py" line="56"/>
@@ -1142,6 +1392,25 @@
         <location filename="selectecotourism_ui.py" line="62"/>
         <source>Exit Ecotourism Step</source>
         <translation type="unfinished">Salir paso ecoturismo</translation>
+    </message>
+</context>
+<context>
+    <name>SelectEcotourismGui</name>
+    <message>
+        <location filename="selectecotourism.py" line="85"/>
+        <source>Ecotourism Error</source>
+        <comment>Error when user didn&apos;t select an ecotourism type </comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectecotourism.py" line="86"/>
+        <source>Please select an ecotourism type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectecotourism.py" line="87"/>
+        <source>Finished with ecotourism interview</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1212,6 +1481,77 @@
  current fishery sector) do you use this gear type?</source>
         <translation>¿Qué porcentaje de su ingreso proviene 
 de este tipo de equipo?</translation>
+    </message>
+</context>
+<context>
+    <name>SelectGearGui</name>
+    <message>
+        <location filename="selectgear.py" line="103"/>
+        <source>Gear Type Error</source>
+        <comment>Displayed when user forgot to select a gear type</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="104"/>
+        <source>Please select a gear type</source>
+        <comment>Displayed when user forgot to select a gear type</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="105"/>
+        <source>Exit </source>
+        <comment>Partial text used to build a larger message, for example &apos;Exit Sport Fishery Step&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="106"/>
+        <source> Step</source>
+        <comment>Partial text used to build a larger message, for example &apos;Exit Sport Fishery Step&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="107"/>
+        <source>Percent Error</source>
+        <comment>Displayed when there is an error with the percentage given for gear type</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="108"/>
+        <source>Missing percentage for gear type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="109"/>
+        <source>Finished with</source>
+        <comment>Partial text used to build a larger message, for example &apos;finished with sport fishery interview step&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="110"/>
+        <source> interview step</source>
+        <comment>Partial text used to build a larger message, for example &apos;finished with sport fishery interview step&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="111"/>
+        <source>Commercial Fishery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="112"/>
+        <source>Sport Fishery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="113"/>
+        <source>Private Fishery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="selectgear.py" line="114"/>
+        <source>gear_inc</source>
+        <comment>Attribute for income from gear type</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
