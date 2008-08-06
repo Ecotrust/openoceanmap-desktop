@@ -56,15 +56,15 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
     def on_pbnSelectEcotourism_released(self):
 
         interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append(["artespesca", self.comboBox.currentText()])
-        interviewInfo2.append(["e_v_len", self.vessel_length_line.text()])
-        interviewInfo2.append(["e_v_motor", self.vessel_motor_line.text()])
-        interviewInfo2.append(["e_v_cap", self.haul_capacity_line.text()])
-        interviewInfo2.append(["e_v_homep", self.home_port_line.text()])
-        interviewInfo2.append(["e_trabajos", self.workers_line.text()])
+        interviewInfo2.append([self.f_emp_type_str, self.comboBox.currentText()])
+        interviewInfo2.append([self.f_v_len_str, self.vessel_length_line.text()])
+        interviewInfo2.append([self.f_v_motor_str, self.vessel_motor_line.text()])
+        interviewInfo2.append([self.f_v_cap_str, self.haul_capacity_line.text()])
+        interviewInfo2.append([self.f_v_homep_str, self.home_port_line.text()])
+        interviewInfo2.append([self.f_trabajos_str, self.workers_line.text()])
 
         if not self.comboBox.currentText():
-            QMessageBox.warning(self, "Employee Error", "Please Choose an Ecotourism Activity")
+            QMessageBox.warning(self, self.emp_error_str, self.choose_activity_str)
             return
 
         self.close()
@@ -77,4 +77,15 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
     def on_pbnCancel_clicked(self):
         self.close()
         # stop interview process
-        self.parent.resetInterview("Cancelled out of Ecotourism interview...")
+        self.parent.resetInterview(self.cancel_ecotourism_str)
+
+    def retranslate(self):
+        self.f_emp_type_str = QA.translate("EcotourismGui", "emp_type", "Employee type DB field name", QA.UnicodeUTF8)
+        self.f_v_len_str = QA.translate("EcotourismGui", "v_len", "Vessel length DB field name", QA.UnicodeUTF8)
+        self.f_v_motor_str = QA.translate("EcotourismGui", "v_motor", "Vessel motor (horsepower) DB field name", QA.UnicodeUTF8)
+        self.f_v_cap_str = QA.translate("EcotourismGui", "v_cap", "Vessel capacity (kilograms) DB field name", QA.UnicodeUTF8)
+        self.f_v_homep_str = QA.translate("EcotourismGui", "v_homep", "Vessel homeport DB field name", QA.UnicodeUTF8)
+        self.f_trabajos_str = QA.translate("EcotourismGui", "trabajos", "Number that work for company DB field name", QA.UnicodeUTF8)
+        self.emp_error_str = QA.translate("EcotourismGui", "Employee Error", "", QA.UnicodeUTF8)
+        self.choose_activity_str = QA.translate("EcotourismGui", "Please Choose an Ecotourism Activity", "", QA.UnicodeUTF8)
+        self.cancel_ecotourism_str = QA.translate("EcotourismGui", "Cancel ecotourism interview", "", QA.UnicodeUTF8)

@@ -95,8 +95,7 @@ class FisheryGui(QDialog, Ui_Fishery):
     #Not used
     def on_pbnBack_clicked(self):
         self.close()
-        capture_string = QString("Going back to first interview step...")
-        self.parent.parent.statusbar.showMessage(capture_string)
+        self.parent.parent.statusbar.showMessage(self.back_to_interview_str)
 
         from interviewstart import InterviewStartGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -111,12 +110,13 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.comm_fish_str = QA.translate("FisheryGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
         self.comm_sport_fish_str = QA.translate("FisheryGui", 'Sport Fishery', "", QA.UnicodeUTF8)
         self.priv_fish_str = QA.translate("FisheryGui", 'Private Fishery', "", QA.UnicodeUTF8)
+        self.back_to_interview_str = QA.translate("FisheryGui", "Going back to first interview step...", "landing port 4", QA.UnicodeUTF8)
 
-        self.f_v_len_str = QA.translate("FisheryGui", 'v_len', "vessel length", QA.UnicodeUTF8)
-        self.f_v_motor_str = QA.translate("FisheryGui", 'v_motor', "vessel motor horsepower", QA.UnicodeUTF8)
-        self.f_haul_cap_str = QA.translate("FisheryGui", 'haul_cap', "vessel haul capacity in kilograms", QA.UnicodeUTF8)
-        self.f_v_homep_str = QA.translate("FisheryGui", 'v_homep', "vessel homeport", QA.UnicodeUTF8)
-        self.f_landp_1_str = QA.translate("FisheryGui", 'landp_1', "landing port 1", QA.UnicodeUTF8)
-        self.f_landp_2_str = QA.translate("FisheryGui", 'landp_2', "landing port 2", QA.UnicodeUTF8)
-        self.f_landp_3_str = QA.translate("FisheryGui", 'landp_3', "landing port 3", QA.UnicodeUTF8)
-        self.f_landp_4_str = QA.translate("FisheryGui", 'landp_4', "landing port 4", QA.UnicodeUTF8)
+        self.f_v_len_str = QA.translate("FisheryGui", 'v_len', "vessel length attribute", QA.UnicodeUTF8)
+        self.f_v_motor_str = QA.translate("FisheryGui", 'v_motor', "vessel motor horsepower attribute", QA.UnicodeUTF8)
+        self.f_haul_cap_str = QA.translate("FisheryGui", 'haul_cap', "vessel haul capacity in kilograms attribute", QA.UnicodeUTF8)
+        self.f_v_homep_str = QA.translate("FisheryGui", 'v_homep', "vessel homeport attribute", QA.UnicodeUTF8)
+        self.f_landp_1_str = QA.translate("FisheryGui", 'landp_1', "landing port 1 attribute", QA.UnicodeUTF8)
+        self.f_landp_2_str = QA.translate("FisheryGui", 'landp_2', "landing port 2 attribute", QA.UnicodeUTF8)
+        self.f_landp_3_str = QA.translate("FisheryGui", 'landp_3', "landing port 3 attribute", QA.UnicodeUTF8)
+        self.f_landp_4_str = QA.translate("FisheryGui", 'landp_4', "landing port 4 attribute", QA.UnicodeUTF8)

@@ -392,6 +392,6 @@ class Interview(object):
       self.cancel_str = QA.translate("Interview","Canceling interview", None, QA.UnicodeUTF8)
       self.leaving_step_str = QA.translate("Interview","Leaving this step", None, QA.UnicodeUTF8)
       
-      self.f_income_str = QA.translate("Interview","income", "fisherman income field", QA.UnicodeUTF8)
-      self.f_pennies_str = QA.translate("Interview","pennies", "fishing ground penny value", QA.UnicodeUTF8)
-      self.f_species_str = QA.translate("Interview","species", "fish species name", QA.UnicodeUTF8)
+      self.f_income_str = QA.translate("Interview","income", "fisherman income field attribute", QA.UnicodeUTF8)
+      self.f_pennies_str = QA.translate("Interview","pennies", "fishing ground penny value attribute", QA.UnicodeUTF8)
+      self.f_species_str = QA.translate("Interview","species", "fish species name attribute", QA.UnicodeUTF8)

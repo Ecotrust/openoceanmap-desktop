@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>893</width>
-    <height>480</height>
+    <width>902</width>
+    <height>421</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -33,16 +33,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -105,16 +96,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -177,16 +159,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -249,16 +222,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -436,16 +400,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -511,16 +466,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -583,16 +529,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -1061,7 +998,7 @@
          <property name="orientation" >
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0" >
           <size>
            <width>40</width>
            <height>20</height>
@@ -1076,7 +1013,7 @@
            <property name="orientation" >
             <enum>Qt::Vertical</enum>
            </property>
-           <property name="sizeHint" >
+           <property name="sizeHint" stdset="0" >
             <size>
              <width>20</width>
              <height>40</height>
