@@ -77,8 +77,8 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
         self.parent.resetInterview(self.cancel_conscience_str)
 
     def retranslate(self):
-        self.spec_error_str = QA.translate("ConsScienceGui", 'Specialist Error', "", QA.UnicodeUTF8)
-        self.choose_specialist_str = QA.translate("ConsScienceGui", "Please choose a specialist position", "", QA.UnicodeUTF8)
+        self.spec_error_str = QA.translate("ConsScienceGui", 'Specialist Error', "Error message when specialist type not selected", QA.UnicodeUTF8)
+        self.choose_specialist_str = QA.translate("ConsScienceGui", "Please choose a specialist position", "Error message when specialist type not selected", QA.UnicodeUTF8)
         self.f_focus_str = QA.translate("ConsScienceGui", "focus", "conservationist/scientist area of focus", QA.UnicodeUTF8)
         self.f_add_info_str = QA.translate("ConsScienceGui", "add_info", "additional info about con/science focus (kelp, mangrove, etc)", QA.UnicodeUTF8)
-        self.cancel_conscience_str = QA.translate("ConsScienceGui", "Cancelled conservationist/scientist interview", "", QA.UnicodeUTF8)        
+        self.cancel_conscience_str = QA.translate("ConsScienceGui", "Canceled conservationist/scientist interview", "", QA.UnicodeUTF8)        

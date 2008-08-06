@@ -55,6 +55,7 @@ class MapTools(object):
     self.statusbar = parent.statusbar
     self.legend = parent.legend
     self.layers = parent.layers
+    self.retranslate()
 
     # create the actions behaviours
     QObject.connect(parent.mpActionAddVectorLayer, SIGNAL("triggered()"),
@@ -74,7 +75,7 @@ class MapTools(object):
                  self.startPythonConsole)
 
     # create a little toolbar for map tools
-    self.toolbar = parent.addToolBar("File")
+    self.toolbar = parent.addToolBar(self.file_bar_str)
     self.toolbar.addAction(parent.mpActionAddVectorLayer)
     self.toolbar.addAction(parent.mpActionAddRasterLayer)
     self.toolbar.addAction(parent.mpActionZoomIn)
@@ -83,7 +84,7 @@ class MapTools(object):
     self.toolbar.addAction(parent.actionRegion_Tool)
 
     # create a little toolbar for interview tools
-    self.toolbar2 = parent.addToolBar("File2")
+    self.toolbar2 = parent.addToolBar(self.file_bar_2_str)
     self.toolbar2.addAction(parent.actionStart_Interview)
 
     # create a little toolbar for utilities
@@ -104,8 +105,7 @@ class MapTools(object):
     # Default to not interviewing and no saved tool for interview
     self.interviewInProgress = False
     self.interviewSaveTool = None
-
-    self.retranslate()
+    
   # Signal handler for capturing rectangle
   def updateBoundsFromRegion(self):
     mc = self.canvas      
@@ -137,7 +137,7 @@ class MapTools(object):
   # Signal handler for finishing capture of rectangle
   def donePolygon(self):
     self.canvas.setMapTool(self.saveTool)
-    capture_string = QString("Captured Polygon")
+    capture_string = QString(self.poly_captured_str)
     #self.outputWin.append(capture_string)
     self.statusbar.showMessage(capture_string)
 
@@ -274,3 +274,6 @@ class MapTools(object):
     self.capt_rect_str = QA.translate("MapTools", "Captured Rectangle - ", "", QA.UnicodeUTF8)
     self.error_reading_str = QA.translate("MapTools", "Error reading file", "", QA.UnicodeUTF8)
     self.start_interview_str = QA.translate("MapTools", "Starting interview", "", QA.UnicodeUTF8)
+    self.file_bar_str = QA.translate("MapTools", "File", "", QA.UnicodeUTF8)
+    self.file_bar_2_str = QA.translate("MapTools", "File2", "Menu bar title", QA.UnicodeUTF8)
+    self.poly_captured_str = QA.translate("MapTools", "Polygon captured", "Status message shown after user finished a polygon", QA.UnicodeUTF8)

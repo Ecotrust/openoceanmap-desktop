@@ -32,6 +32,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -56,6 +57,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # required by Qt4 to initialize the UI
     self.setupUi(self)
     self.splash = splash
+    self.retranslate()
     
     # create map canvas
     self.canvas = QgsMapCanvas(self)
@@ -139,7 +141,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       layer.setMaxScale(maxScale)
       
       if not layer.isValid():
-        capture_string = QString("ERROR reading file")
+        capture_string = QString(self.file_error_str)
         #self.canvas.parentWin.outputWin.append(capture_string)
         self.statusbar.showMessage(capture_string)
         return
@@ -156,7 +158,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.rasterBaseLayer.addLayerItem(layer,cl)
       
     #Add one base raster item to legend
-    self.legend.addRasterLegendItem("Loreto Base Map",
+    self.legend.addRasterLegendItem(self.loreto_base_str,
                                     self.rasterBaseLayer.getCls())
 
 
@@ -179,7 +181,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # create layer
       layer = QgsVectorLayer(info.filePath(), info.completeBaseName(), "ogr")
       if not layer.isValid():
-        capture_string = QString("ERROR reading file")
+        capture_string = QString(self.file_error_str)
         #self.canvas.parentWin.outputWin.append(capture_string)
         self.statusbar.showMessage(capture_string)
         return
@@ -225,6 +227,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.legend.addVectorLegendItem(vectorSet[1],[cl],layer_on)
     self.canvas.setExtent(first_raster.extent())
 
+  def retranslate(self):
+    self.file_error_str = QA.translate("MainWindow", "ERROR reading file", "message when failing to load a map layer", QA.UnicodeUTF8)    
+    self.loreto_base_str = QA.translate("MainWindow", "Loreto Base Map", "map legend text for base layer", QA.UnicodeUTF8)
+
 class OOMLayer(object):
   def __init__(self, parent):
     # Get parent
@@ -257,5 +263,3 @@ class OOMLayer(object):
     for layer in self.layers:
       # set the layer visibility to on
       layer[1].setVisible(True)
-  
-    

@@ -86,6 +86,6 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         self.f_v_cap_str = QA.translate("EcotourismGui", "v_cap", "Vessel capacity (kilograms) DB field name", QA.UnicodeUTF8)
         self.f_v_homep_str = QA.translate("EcotourismGui", "v_homep", "Vessel homeport DB field name", QA.UnicodeUTF8)
         self.f_trabajos_str = QA.translate("EcotourismGui", "trabajos", "Number that work for company DB field name", QA.UnicodeUTF8)
-        self.emp_error_str = QA.translate("EcotourismGui", "Employee Error", "", QA.UnicodeUTF8)
-        self.choose_activity_str = QA.translate("EcotourismGui", "Please Choose an Ecotourism Activity", "", QA.UnicodeUTF8)
+        self.emp_error_str = QA.translate("EcotourismGui", "Employee Error", "Error given when user fails to enter an employee type", QA.UnicodeUTF8)
+        self.choose_activity_str = QA.translate("EcotourismGui", "Please Choose an Ecotourism Activity", "Error given when user fails to enter an employee type", QA.UnicodeUTF8)
         self.cancel_ecotourism_str = QA.translate("EcotourismGui", "Cancel ecotourism interview", "", QA.UnicodeUTF8)

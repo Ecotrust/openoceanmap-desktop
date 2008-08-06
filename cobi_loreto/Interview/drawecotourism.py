@@ -137,11 +137,11 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
         wnd.show()
 
     def retranslate(self):
-        self.pennies_error_str = QA.translate("DrawEcotourismGui", "Pennies Error", "", QA.UnicodeUTF8)
-        self.missing_penny_str = QA.translate("DrawEcotourismGui", "Missing penny value", "", QA.UnicodeUTF8)
+        self.pennies_error_str = QA.translate("DrawEcotourismGui", "Pennies Error", "Error message given when user doesn't enter a pennies value", QA.UnicodeUTF8)
+        self.missing_penny_str = QA.translate("DrawEcotourismGui", "Missing penny value", "Error message given when user doesn't enter a pennies value", QA.UnicodeUTF8)
         self.penny_number_str = QA.translate("DrawEcotourismGui", "Penny value must be a number (no decimals)", "", QA.UnicodeUTF8)
-        self.add_penny_str = QA.translate("DrawEcotourismGui", "Please add a penny value", "", QA.UnicodeUTF8)
+        self.add_penny_str = QA.translate("DrawEcotourismGui", "Please enter a penny value", "", QA.UnicodeUTF8)
         self.no_penny_str = QA.translate("DrawEcotourismGui", "You don't have that many pennies left", "", QA.UnicodeUTF8)
         self.more_penny_str = QA.translate("DrawEcotourismGui", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes", "", QA.UnicodeUTF8)
         self.out_penny_str = QA.translate("DrawEcotourismGui", "You are out of pennies.  This shape drawing session is now done.", "", QA.UnicodeUTF8)        
-        self.left_str = QA.translate("DrawEcotourismGui", " left", "Partial string used to tell you how many pennies you have remaining", QA.UnicodeUTF8)
+        self.left_str = QA.translate("DrawEcotourismGui", " left", "Partial string used to tell you how many pennies you have remaining, for example '20 left'", QA.UnicodeUTF8)

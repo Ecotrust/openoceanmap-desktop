@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -50,12 +51,13 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
+        self.retranslate()
 
     def on_pbnStartShapes_released(self):
         #Get fishery value
         shape_type = self.comboBox.currentText()
         if not shape_type:
-            QMessageBox.warning(self, "Tourism Error", "Please select a tourism type")
+            QMessageBox.warning(self, self.tourism_error_str, self.select_tourism_str)
             return 
         else:
             self.parent.shapeType = shape_type
@@ -70,7 +72,7 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
     def on_pbnFinished_released(self): 
         self.close()
         self.parent.ecotourismIncome = None
-        self.parent.nextStep(self, "Finished with fishery interview...")
+        self.parent.nextStep(self, self.finish_tourism_str)
 
 
     def nextPolygon(self):
@@ -78,3 +80,8 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = DrawEcotourismGui(self.parent,flags,self.parent.pennies_left, self.parent.shapeType, self)
         wnd.show()
+        
+    def retranslate(self):
+        self.tourism_error_str = QA.translate("SelectEcotourismGui", "Ecotourism Error", "Error when user didn't select an ecotourism type ", QA.UnicodeUTF8)        
+        self.select_tourism_str = QA.translate("SelectEcotourismGui", "Please select an ecotourism type", "", QA.UnicodeUTF8)
+        self.finish_tourism_str = QA.translate("SelectEcotourismGui", "Finished with ecotourism interview", "", QA.UnicodeUTF8)        

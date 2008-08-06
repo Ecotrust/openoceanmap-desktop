@@ -49,7 +49,7 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         self.parent = parent
         self.discardLast = False
         self.pennies_left = pennies_left
-        self.pl_label.setText("  "+str(self.pennies_left)+" left")
+        self.pl_label.setText("  "+str(self.pennies_left)+self.pennies_left_str)
         self.shapeType = shapeType
         self.previousGui = previousGui
         self.type_label.setText(self.shapeType)
@@ -141,4 +141,5 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         self.add_penny_str = QA.translate("DrawConsScienceGui", "Please add a penny value", "", QA.UnicodeUTF8)
         self.no_penny_str = QA.translate("DrawConsScienceGui", "You don't have that many pennies left", "", QA.UnicodeUTF8)
         self.more_penny_str = QA.translate("DrawConsScienceGui", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes", "", QA.UnicodeUTF8)
-        self.out_penny_str = QA.translate("DrawConsScienceGui", "You are out of pennies.  This shape drawing session is now done.", "", QA.UnicodeUTF8)        
+        self.out_penny_str = QA.translate("DrawConsScienceGui", "You are out of pennies.  This shape drawing session is now done.", "", QA.UnicodeUTF8)
+        self.pennies_left_str = QA.translate("DrawConsScienceGui", " left", "Partial text used as part of a larger message about number of pennies left, for example '20 left'", QA.UnicodeUTF8)        

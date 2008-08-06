@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -50,24 +51,25 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         self.setupUi(self)
         self.parent = parent
         self.fishery_sector = fishery_sector
-        self.fishery_sector_label.setText(str(self.fishery_sector))
+        self.retranslate()
         
-        self.pbnStepFinished.setText('Exit ' + str(self.fishery_sector) + ' Step')
+        self.fishery_sector_label.setText(str(self.fishery_sector))        
+        self.pbnStepFinished.setText(self.exit_part_str + str(self.fishery_sector) + self.step_str)
     
     def on_pbnStartShapes_released(self):
         shape_type = self.gear_comboBox.currentText()
         if not shape_type:
-            QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
+            QMessageBox.warning(self, self.gear_error_str, self.select_gear_str)
             return 
         else:
             self.parent.shapeType = shape_type
 
         gear_perc_inc = self.gear_perc_income.text()
         if not gear_perc_inc or gear_perc_inc == '0':
-            QMessageBox.warning(self, "Percent Error", "Missing gear percentage")
+            QMessageBox.warning(self, self.percent_error_str, self.missing_gear_str)
             return
         else:
-            self.parent.interviewInfo2.append(["gear_inc",gear_perc_inc])
+            self.parent.interviewInfo2.append([self.f_gear_inc_str,gear_perc_inc])
 
 
         self.close()
@@ -79,15 +81,15 @@ class SelectGearGui(QDialog, Ui_SelectGear):
             
     def on_pbnStepFinished_released(self): 
         self.close()
-        fishery_msg = 'Finished with %s interview step' % self.fishery_sector
+        fishery_msg = self.finish_str + self.fishery_sector + self.interview_step_str
         print self.fishery_sector
-        if self.fishery_sector == 'Commercial Fishery':
+        if self.fishery_sector == self.comm_fish_str:
             self.parent.commFishIncome = None
             self.parent.nextStep(self, fishery_msg)
-        elif self.fishery_sector == 'Sport Fishery':
+        elif self.fishery_sector == self.sport_fish_str:
             self.parent.sportFishIncome = None
             self.parent.nextStep(self, fishery_msg)
-        elif self.fishery_sector == 'Private Fishery':
+        elif self.fishery_sector == self.priv_fish_str:
             self.parent.privateFishIncome = None
             self.parent.nextStep(self, fishery_msg)
 
@@ -96,3 +98,17 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self)
         wnd.show()
+
+    def retranslate(self):
+        self.gear_error_str = QA.translate("SelectGearGui", "Gear Type Error", "Displayed when user forgot to select a gear type", QA.UnicodeUTF8)
+        self.select_gear_str = QA.translate("SelectGearGui", "Please select a gear type", "Displayed when user forgot to select a gear type", QA.UnicodeUTF8)
+        self.exit_part_str = QA.translate("SelectGearGui", 'Exit ', "Partial text used to build a larger message, for example 'Exit Sport Fishery Step'", QA.UnicodeUTF8)
+        self.step_str = QA.translate("SelectGearGui", ' Step', "Partial text used to build a larger message, for example 'Exit Sport Fishery Step'", QA.UnicodeUTF8)
+        self.percent_error_str = QA.translate("SelectGearGui", "Percent Error", "Displayed when there is an error with the percentage given for gear type", QA.UnicodeUTF8)
+        self.missing_gear_str = QA.translate("SelectGearGui", "Missing percentage for gear type", "", QA.UnicodeUTF8)
+        self.finish_str = QA.translate("SelectGearGui", 'Finished with', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
+        self.interview_step_str = QA.translate("SelectGearGui", ' interview step', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
+        self.comm_fish_str = QA.translate("SelectGearGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
+        self.sport_fish_str = QA.translate("SelectGearGui", 'Sport Fishery', "", QA.UnicodeUTF8)
+        self.priv_fish_str = QA.translate("SelectGearGui", 'Private Fishery', "", QA.UnicodeUTF8)
+        self.f_gear_inc_str = QA.translate("SelectGearGui", "gear_inc", "Attribute for income from gear type", QA.UnicodeUTF8)        

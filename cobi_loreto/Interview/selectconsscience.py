@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -50,12 +51,13 @@ class SelectConsScienceGui(QDialog, Ui_SelectConsScience):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
+        self.retranslate()
 
     def on_pbnStartShapes_released(self):
         #Get fishery value
         shape_type = self.comboBox.currentText()
         if not shape_type:
-            QMessageBox.warning(self, "Ecosystem Error", "Please select a focus area")
+            QMessageBox.warning(self, self.consci_error_str, self.focus_str)
             return 
         else:
             self.parent.shapeType = shape_type
@@ -70,7 +72,7 @@ class SelectConsScienceGui(QDialog, Ui_SelectConsScience):
     def on_pbnFinished_released(self):
         self.close()
         self.parent.consScienceIncome = None
-        self.parent.nextStep(self, "Finishing Cons interview")
+        self.parent.nextStep(self, self.finish_cons_str)
 
 
     def nextPolygon(self):
@@ -78,3 +80,8 @@ class SelectConsScienceGui(QDialog, Ui_SelectConsScience):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = DrawConsScienceGui(self.parent,flags,self.parent.pennies_left, self.parent.shapeType, self)
         wnd.show()
+        
+    def retranslate(self):
+        self.consci_error_str = QA.translate("SelectConsScienceGui", "Cons/Science Error", "Error when user fails to select type of conservationist/scientist", QA.UnicodeUTF8)        
+        self.focus_str = QA.translate("SelectConsScienceGui", "Please select a focus area", "", QA.UnicodeUTF8)
+        self.finish_cons_str = QA.translate("SelectConsScienceGui", "Finishing Cons/Sci interview", "", QA.UnicodeUTF8)

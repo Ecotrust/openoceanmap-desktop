@@ -52,7 +52,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         self.pennies_left = pennies_left
         self.previousGui = previousGui
         self.type_label.setText("  "+str(self.parent.shapeType)+": ")
-        self.pl_label.setText("  "+str(self.pennies_left)+" left")
+        self.pl_label.setText("  "+str(self.pennies_left)+self.left_str)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
         self.species = []
@@ -180,3 +180,4 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         self.benthic_fish_str = QA.translate("DrawGearGui", 'Benthic fish', "", QA.UnicodeUTF8)
         self.shrimp_str = QA.translate("DrawGearGui", 'Shrimp', "", QA.UnicodeUTF8)
         self.other_str = QA.translate("DrawGearGui", 'Other', "", QA.UnicodeUTF8)
+        self.left_str = QA.translate("DrawGearGui", " left", "Partial string used to tell you how many pennies you have remaining, for example '20 left'", QA.UnicodeUTF8)

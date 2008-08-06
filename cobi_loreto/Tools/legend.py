@@ -106,12 +106,6 @@ class LegendCheckBox(QCheckBox):
         #self.emit(SIGNAL("refresh()"))
         self.parent.parent.canvas.setLayerSet(self.parent.parent.layers)
         #self.parent.parent.canvas.refresh()
-      # Debug
-      capture_string = QString("Setting layer visibility for layer " +
-                               cl.layer().name() + " " + str(cl.visible()))
-      self.parent.parent.statusbar.showMessage(capture_string)
-  
-
 
 # Main window used for houseing the canvas, toolbars, and dialogs
 class Legend(object):

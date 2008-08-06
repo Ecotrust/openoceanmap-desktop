@@ -50,32 +50,47 @@ class PolygonTool(QgsMapTool):
         self.down=False
         self.started=False
         self.o = QObject()
-        self.cursor = QCursor(QPixmap(["16 16 3 1",
-                                       "# c None","a c #000000",". c #ffffff",
-                                       ".###############",
-                                       "...#############",
-                                       ".aa..###########",
-                                       "#.aaa..a.a.a.a.#",
-                                       "#.aaaaa..#####a#",
-                                       "#a.aaaaaa..###.#",
-                                       "#..aaaaaa...##a#",
-                                       "#a.aaaaa.#####.#",
-                                       "#.#.aaaaa.####a#",
-                                       "#a#.aa.aaa.###.#",
-                                       "#.##..#..aa.##a#",
-                                       "#a##.####.aa.#.#",
-                                       "#.########.aa.a#",
-                                       "#a#########.aa..",
-                                       "#.a.a.a.a.a..a.#",
-                                       "#############.##"]))
+
+        self.cursor = QCursor(QPixmap(["13 13 3 1",
+                                       "# c None","a c #222222",". c #dddddd",
+                                       "#####...#####",
+                                       "#####.a.#####",
+                                       "#####.a.#####",
+                                       "#####.a.#####",
+                                       "#####.a.#####",
+                                       "......a......",
+                                       ".aaaaaaaaaaa.",
+                                       "......a......",
+                                       "#####.a.#####",
+                                       "#####.a.#####",
+                                       "#####.a.#####",
+                                       "#####.a.#####",
+                                       "#####...#####"]))
+
+#        self.cursor = QCursor(QPixmap(["16 16 3 1",
+#                                       "# c None","a c #000000",". c #ffffff",
+#                                       ".###############",
+#                                       "...#############",
+#                                       ".aa..###########",
+#                                       "#.aaa..a.a.a.a.#",
+#                                       "#.aaaaa..#####a#",
+#                                       "#a.aaaaaa..###.#",
+#                                       "#..aaaaaa...##a#",
+#                                       "#a.aaaaa.#####.#",
+#                                       "#.#.aaaaa.####a#",
+#                                       "#a#.aa.aaa.###.#",
+#                                       "#.##..#..aa.##a#",
+#                                       "#a##.####.aa.#.#",
+#                                       "#.########.aa.a#",
+#                                       "#a#########.aa..",
+#                                       "#.a.a.a.a.a..a.#",
+#                                       "#############.##"]))
         
     def canvasPressEvent(self,event):
         self.down=True
-        capture_string = QString("Starting Polygon - Down event")
 
     def canvasMoveEvent(self,event):
         if self.started==True:
-            capture_string = QString("Move event")
             transform = self.canvas.getCoordinateTransform()
             pt = transform.toMapCoordinates(event.pos().x(),
                                             event.pos().y())
@@ -93,7 +108,6 @@ class PolygonTool(QgsMapTool):
                 self.currentPolygon = 'POLYGON(('
                 self.numberOfPoints = 0
             self.started=True
-            capture_string = QString("Polygon point added")
             
             transform = self.canvas.getCoordinateTransform()
             pt = transform.toMapCoordinates(event.pos().x(),
@@ -113,14 +127,10 @@ class PolygonTool(QgsMapTool):
             
     def activate(self):
         #print "Start Polygon Tool"
-        capture_string = QString("Starting Polygon Tool")
         self.canvas.setCursor(self.cursor)
-        capture_string = QString("Draw polygon on canvas " +
-                                 "by digitizing points...")
 
     def deactivate(self):
-        #print "End Polygon Tool Selection"
-        capture_string = QString("End Polygon Tool Selection")
+        pass
 
     def isZoomTool(self):
         return False

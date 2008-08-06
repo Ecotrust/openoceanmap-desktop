@@ -31,6 +31,7 @@
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtGui import QApplication as QA
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
@@ -53,6 +54,7 @@ class OtherGui(QDialog, Ui_Other):
         self.parent = parent
         self.textType = textType
         self.previousGui = previousGui
+        self.retranslate()
 
     def on_pbnFinished_released(self):
 
@@ -68,4 +70,7 @@ class OtherGui(QDialog, Ui_Other):
     def on_pbnCancel_clicked(self):
         self.close()
         # stop interview process
-        self.parent.resetInterview("Canceled other income...")
+        self.parent.resetInterview(self.cancel_str)
+
+    def retranslate(self):
+        self.cancel_str = QA.translate("OtherGui", "Canceling other interview", "Status message shown when user cancels out of the 'other' portion of the interview", QA.UnicodeUTF8)
