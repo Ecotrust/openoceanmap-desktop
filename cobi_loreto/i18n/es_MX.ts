@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="lo">
+<defaultcodec></defaultcodec>
 <context>
     <name>ConsScience</name>
     <message>
@@ -329,32 +330,32 @@
     <message>
         <location filename="drawgear.py" line="174"/>
         <source>Sharks and Skates</source>
-        <translation type="unfinished">Tiburones y rayas</translation>
+        <translation>Tiburones y rayas</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="175"/>
         <source>Coastal reef fish</source>
-        <translation type="unfinished">Peces de arrecife costero</translation>
+        <translation>Peces de arrecife costero</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="176"/>
         <source>Deep reef fish</source>
-        <translation type="unfinished">Peces de arrecife profundo</translation>
+        <translation>Peces de arrecife profundo</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="177"/>
         <source>Migratory fish</source>
-        <translation type="unfinished">Peces migratorios</translation>
+        <translation>Peces migratorios</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="178"/>
         <source>Benthic fish</source>
-        <translation type="unfinished">Peces bentónicos</translation>
+        <translation>Peces bentónicos</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="179"/>
         <source>Shrimp</source>
-        <translation type="unfinished">Gamba</translation>
+        <translation>Gamba</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="167"/>
@@ -605,17 +606,17 @@
     <message>
         <location filename="fishery.py" line="110"/>
         <source>Commercial Fishery</source>
-        <translation type="unfinished">Pesca Comercial</translation>
+        <translation>Pesca Comercial</translation>
     </message>
     <message>
         <location filename="fishery.py" line="111"/>
         <source>Sport Fishery</source>
-        <translation type="unfinished">Pesca Deportiva</translation>
+        <translation>Pesca Deportiva</translation>
     </message>
     <message>
         <location filename="fishery.py" line="112"/>
         <source>Private Fishery</source>
-        <translation type="unfinished">Pesca Privada</translation>
+        <translation>Pesca Privada</translation>
     </message>
     <message>
         <location filename="fishery.py" line="113"/>
@@ -677,17 +678,17 @@
     <message>
         <location filename="interview.py" line="384"/>
         <source>Save Text as</source>
-        <translation type="unfinished">Guardar Texto</translation>
+        <translation>Guardar Texto</translation>
     </message>
     <message>
         <location filename="interview.py" line="385"/>
         <source>Overwriting existing text file is not supported: </source>
-        <translation type="unfinished">No sobreescribir el apoyo:</translation>
+        <translation>No sobreescribir el apoyo:</translation>
     </message>
     <message>
         <location filename="interview.py" line="387"/>
         <source>Save Shapes as</source>
-        <translation type="unfinished">Guardar Las Formas Como</translation>
+        <translation>Guardar Las Formas Como</translation>
     </message>
     <message>
         <location filename="interview.py" line="288"/>
@@ -697,87 +698,87 @@
     <message>
         <location filename="interview.py" line="367"/>
         <source>Starting commercial fishery interview</source>
-        <translation type="unfinished">Empezando entrevista de pesca comercial</translation>
+        <translation>Empezando entrevista de pesca comercial</translation>
     </message>
     <message>
         <location filename="interview.py" line="368"/>
         <source>Commercial Fishery</source>
-        <translation type="unfinished">Pesca comercial</translation>
+        <translation>Pesca comercial</translation>
     </message>
     <message>
         <location filename="interview.py" line="369"/>
         <source>Starting commercial sport fishery interview</source>
-        <translation type="unfinished">Empezando entrevista de pesca deportiva</translation>
+        <translation>Empezando entrevista de pesca deportiva</translation>
     </message>
     <message>
         <location filename="interview.py" line="370"/>
         <source>Sport Fishery</source>
-        <translation type="unfinished">Pesca deportiva</translation>
+        <translation>Pesca deportiva</translation>
     </message>
     <message>
         <location filename="interview.py" line="371"/>
         <source>Starting private sport fishery interview</source>
-        <translation type="unfinished">Empezando entrevista de pesca deportiva privado</translation>
+        <translation>Empezando entrevista de pesca deportiva privado</translation>
     </message>
     <message>
         <location filename="interview.py" line="372"/>
         <source>Private Fishery</source>
-        <translation type="unfinished">Pesca privada</translation>
+        <translation>Pesca privada</translation>
     </message>
     <message>
         <location filename="interview.py" line="373"/>
         <source>Starting ecotourism interview</source>
-        <translation type="unfinished">Inicio ecoturismo entrevista</translation>
+        <translation>Inicio ecoturismo entrevista</translation>
     </message>
     <message>
         <location filename="interview.py" line="374"/>
         <source>Ecotourism</source>
-        <translation type="unfinished">Ecoturismo</translation>
+        <translation>Ecoturismo</translation>
     </message>
     <message>
         <location filename="interview.py" line="375"/>
         <source>Starting conservation/scientist interview</source>
-        <translation type="unfinished">Inicio conservación/científico entrevista</translation>
+        <translation>Inicio conservación/científico entrevista</translation>
     </message>
     <message>
         <location filename="interview.py" line="376"/>
         <source>Conservationist Scientist</source>
-        <translation type="unfinished">Conservación Científico</translation>
+        <translation>Conservación Científico</translation>
     </message>
     <message>
         <location filename="interview.py" line="377"/>
         <source>Starting other interview</source>
-        <translation type="unfinished">Inicio otra entrevista</translation>
+        <translation>Inicio otra entrevista</translation>
     </message>
     <message>
         <location filename="interview.py" line="378"/>
         <source>Other</source>
-        <translation type="unfinished">Otra</translation>
+        <translation>Otra</translation>
     </message>
     <message>
         <location filename="interview.py" line="379"/>
         <source>Income</source>
-        <translation type="unfinished">Ingresos</translation>
+        <translation>Ingresos</translation>
     </message>
     <message>
         <location filename="interview.py" line="380"/>
         <source>Success</source>
-        <translation type="unfinished">éxito</translation>
+        <translation>éxito</translation>
     </message>
     <message>
         <location filename="interview.py" line="381"/>
         <source>Interview Completed</source>
-        <translation type="unfinished">Entrevista Terminado</translation>
+        <translation>Entrevista Terminado</translation>
     </message>
     <message>
         <location filename="interview.py" line="382"/>
         <source>Interview Finished</source>
-        <translation type="unfinished">Entrevista Hecho</translation>
+        <translation>Entrevista Hecho</translation>
     </message>
     <message>
         <location filename="interview.py" line="383"/>
         <source>No info, returning to previous choices</source>
-        <translation type="unfinished">No se dispone de información, volviendo a las anteriores elecciones</translation>
+        <translation>No se dispone de información, volviendo a las anteriores elecciones</translation>
     </message>
     <message>
         <location filename="interview.py" line="388"/>
