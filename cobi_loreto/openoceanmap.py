@@ -39,9 +39,8 @@ from qgis.gui import *
 from Main.mainwindow import *
 # General system includes
 import sys
-
-# Path to local QGIS install
-qgis_prefix = "."
+# Import OOM config
+from config import *
 
 # Main entry to program.  Set up the main app and create a new window.
 def main(argv):

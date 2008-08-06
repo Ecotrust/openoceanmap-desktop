@@ -703,7 +703,7 @@
     <message>
         <location filename="interview.py" line="368"/>
         <source>Commercial Fishery</source>
-        <translation>Pesca comercial</translation>
+        <translation>Pesca Comercial</translation>
     </message>
     <message>
         <location filename="interview.py" line="369"/>
@@ -713,7 +713,7 @@
     <message>
         <location filename="interview.py" line="370"/>
         <source>Sport Fishery</source>
-        <translation>Pesca deportiva</translation>
+        <translation>Pesca Deportiva</translation>
     </message>
     <message>
         <location filename="interview.py" line="371"/>
@@ -723,7 +723,7 @@
     <message>
         <location filename="interview.py" line="372"/>
         <source>Private Fishery</source>
-        <translation>Pesca privada</translation>
+        <translation>Pesca Privada</translation>
     </message>
     <message>
         <location filename="interview.py" line="373"/>
