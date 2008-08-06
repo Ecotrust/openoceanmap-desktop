@@ -54,7 +54,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.parent = parent
         self.prevGUI = prevGUI
         self.currentStep = fishery_sector
-        self.fishery_sector_label.setText(str(self.currentStep))
+        self.fishery_sector_label.setText(unicode(self.currentStep))
         self.retranslate()
 
     def append_data(self):

@@ -6,6 +6,7 @@
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Aaron Racicot
 # Copyright (C) 2008  Dane Springmeyer
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -53,8 +54,8 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         self.fishery_sector = fishery_sector
         self.retranslate()
         
-        self.fishery_sector_label.setText(str(self.fishery_sector))        
-        self.pbnStepFinished.setText(self.exit_part_str + str(self.fishery_sector) + self.step_str)
+        self.fishery_sector_label.setText(unicode(self.fishery_sector))        
+        self.pbnStepFinished.setText(self.exit_part_str + unicode(self.fishery_sector) + self.step_str)
     
     def on_pbnStartShapes_released(self):
         shape_type = self.gear_comboBox.currentText()

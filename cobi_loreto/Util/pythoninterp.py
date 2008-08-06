@@ -6,6 +6,7 @@
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Aaron Racicot
 # Copyright (C) 2008  Dane Springmeyer
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -191,7 +192,7 @@ class EPythonShell(QTextBrowser):
     sys.stdout, sys.stderr = self.stdout, self.stderr
     
   def slotReturnPressed( self ):
-    line = str(self.cmdline.text())
+    line = unicode(self.cmdline.text())
     self.cmdline.clear()
     self.handleInput( line )
     #if self.more:

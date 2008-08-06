@@ -5,6 +5,7 @@
 # 
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Dane Springmeyer
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -49,7 +50,7 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         self.parent = parent
         self.discardLast = False
         self.pennies_left = pennies_left
-        self.pl_label.setText("  "+str(self.pennies_left)+self.pennies_left_str)
+        self.pl_label.setText(u"  "+unicode(self.pennies_left)+self.pennies_left_str)
         self.shapeType = shapeType
         self.previousGui = previousGui
         self.type_label.setText(self.shapeType)

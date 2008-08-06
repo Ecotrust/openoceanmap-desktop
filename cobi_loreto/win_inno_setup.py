@@ -1,3 +1,33 @@
+#!/usr/bin/python
+#---------------------------------------------------------------------
+# 
+# OpenOceanMap - An Open Source GIS tool for performing interviews
+# to obtain socio-economic data using spatial information.
+# 
+# Copyright (C) 2008  Ecotrust
+# Copyright (C) 2008  Aaron Racicot
+# Copyright (C) 2008  Tim Welch
+#---------------------------------------------------------------------
+# 
+# licensed under the terms of GNU GPL 2
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+# 
+#---------------------------------------------------------------------
+
+
 # A setup script showing how to extend py2exe.
 #
 # In this case, the py2exe command is subclassed to create an installation
@@ -10,9 +40,11 @@
 # To build OOM you'll want to copy the plugins and resources directory
 # from the QGIS install directory and put them in the root directory of OOM
 # were openoceanmap.py is located.  Then change the QGIS prefix path to "."
-# That will tell QGIS to look for the necessary data provider plugins.
+# in openoceanmap.py.  That point QGIS to the right place when it looks for the necessary 
+# data provider plugins at runtime.
+#
 # This build script will also look for and include the resources and plugins
-# directory and include them in the executable.
+# directory and include them in the install executable.
 
 from distutils.core import setup
 #import matplotlib

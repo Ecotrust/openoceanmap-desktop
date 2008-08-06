@@ -7,6 +7,7 @@
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Aaron Racicot
 # Copyright (C) 2008  Dane Springmeyer
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -126,7 +127,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
         total = int(self.comm_fish_line.text()) + int(self.comm_sport_line.text()) + int(self.private_fish_line.text()) + int(self.ecotourism_line.text()) + int(self.cons_science_line.text()) + int(self.other_line.text())
         if int(total) != int(100):
-            QMessageBox.warning(self, self.income_error_str, self.values_total_str + str(total) + self.change_str)
+            QMessageBox.warning(self, self.income_error_str, self.values_total_str + unicode(total) + self.change_str)
             return
 
         # setup for next gui depending on what incomes were specified

@@ -6,6 +6,7 @@
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Dane Springmeyer
 # Copyright (C) 2008  Tim Welch
+# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -48,34 +49,34 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
+        self.retranslate()
+        
         self.discardLast = False
         self.pennies_left = pennies_left
         self.previousGui = previousGui
-        self.type_label.setText("  "+str(self.parent.shapeType)+": ")
-        self.pl_label.setText("  "+str(self.pennies_left)+self.left_str)
+        self.type_label.setText("  "+unicode(self.parent.shapeType)+": ")
+        self.pl_label.setText(u"  "+unicode(self.pennies_left)+self.left_str)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
-        self.species = []
-        
-        self.retranslate()
+        self.species = []    
  
     def fetch_species(self):
             species = []
             if self.s1.isChecked():
-                species.append(str(self.sharks_and_skates_str))
+                species.append(unicode(self.sharks_and_skates_str))
             if self.s2.isChecked():
-                species.append(str(self.coastal_reef_fish_str))
+                species.append(unicode(self.coastal_reef_fish_str))
             if self.s3.isChecked():
-                species.append(str(self.deep_reef_fish_str))
+                species.append(unicode(self.deep_reef_fish_str))
             if self.s4.isChecked():
-                species.append(str(self.migratory_fish_str))
+                species.append(unicode(self.migratory_fish_str))
             if self.s5.isChecked():
-                species.append(str(self.benthic_fish_str))
+                species.append(unicode(self.benthic_fish_str))
             if self.s6.isChecked():
-                species.append(str(self.shrimp_str))
+                species.append(unicode(self.shrimp_str))
             if self.s7.isChecked():
-                species.append(str(self.other_str))
-            species_list_text = ','.join(species)
+                species.append(unicode(self.other_str))
+            species_list_text = u','.join(species)
             return species_list_text
             
     #Called when "More Shapes" button pressed        
@@ -119,16 +120,13 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         self.parent.capturedPolygons.pop()
         rub = self.parent.capturedPolygonsRub.pop()
         rub.reset()
-        #rub = self.parent.capturedPolygonsPennies.pop()
-        #rub.reset()
-        #self.type_label.setText("  "+str(self.parent.shapeType)+": ")
         try:
             current_pennies = int(self.line_1.text())
         except:
            current_pennies = 0
         if not current_pennies == self.parent.pennies_left:
             # then we assume they placed pennies but then decides to descard shape
-            self.line_1.setText(str(current_pennies-current_pennies))
+            self.line_1.setText(unicode(current_pennies-current_pennies))
         # Grey out the button...
         self.pbnShapeDiscard.setEnabled(False)
         self.discardLast = True
