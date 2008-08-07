@@ -203,7 +203,7 @@ class Interview(object):
           # Fire up the previous gui again...
           textGui.show()
       else:                         
-          file_prefix = self.first_name+'_' + self.last_name+'_' + QString(self.currentStep) + '_' + QString(self.capturedTextType).replace(' ','_').toLower()
+          file_prefix = 'fname_lname_' + QString(self.currentStep) + '_' + QString(self.capturedTextType).replace(' ','_').toLower()
           file_prefix_obj = QString(file_prefix)
           file_name = QString("%s_" % file_prefix_obj)
           self.parent.statusbar.showMessage(self.writing_text_str)

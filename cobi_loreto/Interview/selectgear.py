@@ -83,7 +83,7 @@ class SelectGearGui(QDialog, Ui_SelectGear):
     def on_pbnStepFinished_released(self): 
         self.close()
         fishery_msg = self.finish_str + self.fishery_sector + self.interview_step_str
-        print self.fishery_sector
+        
         if self.fishery_sector == self.comm_fish_str:
             self.parent.commFishIncome = None
             self.parent.nextStep(self, fishery_msg)

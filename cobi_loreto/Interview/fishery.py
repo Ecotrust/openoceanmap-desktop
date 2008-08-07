@@ -67,7 +67,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.parent.interviewInfo2.append([self.f_landp_3_str, self.landing_port_line_3.text()])
         self.parent.interviewInfo2.append([self.f_landp_4_str, self.landing_port_line_4.text()])
 
-    def on_pbnSelectGear_released(self):
+    def on_pbnSelectGear_released(self):        
         if self.currentStep == self.comm_fish_str:
             if not self.parent.commFishStarted:
                 self.append_data()

@@ -158,5 +158,5 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.f_other_str = QA.translate("InterviewStartGui", "inc_other", "Percent income from other attribute", QA.UnicodeUTF8)
         self.income_error_str = QA.translate("InterviewStartGui", "Income Error", "", QA.UnicodeUTF8)
         self.income_value_str = QA.translate("InterviewStartGui", "Income value must be a number (no decimals)", "", QA.UnicodeUTF8)
-        self.values_total_str = QA.translate("InterviewStartGui", "All Values currently total", "First part of text that tells the user the total for all income percentages they entered", QA.UnicodeUTF8)        
+        self.values_total_str = QA.translate("InterviewStartGui", "All Values currently total ", "First part of text that tells the user the total for all income percentages they entered", QA.UnicodeUTF8)        
         self.change_str = QA.translate("InterviewStartGui", ". Please change them.", "Second part of text telling the user their incomes don't add up to 100 so they need to change the values such that they do add up to 100", QA.UnicodeUTF8)

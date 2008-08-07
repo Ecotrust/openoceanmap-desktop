@@ -578,12 +578,12 @@
     <message>
         <location filename="fishery_ui.py" line="358"/>
         <source>Fishery Sector</source>
-        <translation>Sector pesquero</translation>
+        <translation>Sector Pesquero</translation>
     </message>
     <message>
         <location filename="fishery_ui.py" line="359"/>
         <source>Dynamic Fishery Sector Name</source>
-        <translation>Sector pesquero</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="fishery_ui.py" line="360"/>
@@ -1525,7 +1525,7 @@ de este tipo de equipo?</translation>
         <location filename="selectgear.py" line="110"/>
         <source>Finished with</source>
         <comment>Partial text used to build a larger message, for example &apos;finished with sport fishery interview step&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Terminar con</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="111"/>
@@ -1536,17 +1536,17 @@ de este tipo de equipo?</translation>
     <message>
         <location filename="selectgear.py" line="112"/>
         <source>Commercial Fishery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pesca Comercial</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="113"/>
         <source>Sport Fishery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pesca Deportiva</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="114"/>
         <source>Private Fishery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pesca Privada</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="115"/>
