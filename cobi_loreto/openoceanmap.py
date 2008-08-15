@@ -37,59 +37,73 @@ from qgis.core import *
 from qgis.gui import *
 # Custom Tools
 from Main.mainwindow import *
+from Main.language_dialog_ui import *
 # General system includes
 import sys
 # Import OOM config
 from config import *
 
-# Main entry to program.  Set up the main app and create a new window.
-def main(argv):
-  
-  # create Qt application
-  app = QApplication(argv,True)
-  #app = QgsApplication(argv,True)
-  
-  appTranslator = QTranslator()
-  #locale_name = QLocale.system().name()
-  locale_name = 'es_MX'  
-  
-  if appTranslator.load("i18n/"+locale_name+".qm"):
-    app.installTranslator(appTranslator)
-    print 'translator installed'
-  else:
-    print 'translator not installed'
+class OpenOceanMap(QObject):
 
-  # Set the app style
-  app.setStyle(QString("plastique"))
-  
-  mySplashPix = QPixmap(QString("Data/OCEAN.png"))
-  mySplashPixScaled = mySplashPix.scaled(500,300,Qt.KeepAspectRatio)
-  mySplash = QSplashScreen(mySplashPixScaled)
-  mySplash.show()
-  
-  # initialize qgis libraries
-  QgsApplication.setPrefixPath(qgis_prefix, True)
-  QgsApplication.initQgis()
-  #app.setPrefixPath(qgis_prefix, True)
-  #app.initQgis()
+  def __init__(self, argv):
+    self.app = QApplication(argv,True)
 
-  # create main window
-  wnd = MainWindow(mySplash)
-  wnd.show()
+    self.appTranslator = QTranslator()
+    #Get system locale
+    #locale_name = QLocale.system().name()  
+    #Start with spanish, this is hackish
+    locale_name = 'es_MX'  
+    if self.appTranslator.load("i18n/"+locale_name+".qm"):
+      self.app.installTranslator(self.appTranslator)
+      print 'translator installed'
 
-  # Create signal for app finish
-  app.connect(app, SIGNAL("lastWindowClosed()"), app, SLOT("quit()"))
+    # Set the app style
+    self.app.setStyle(QString("plastique"))
   
-  # Start the app up
-  retval = app.exec_()
-  
-  # We got an exit signal so time to clean up
-  QgsApplication.exitQgis()
-  #app.exitQgis()
-  
-  sys.exit(retval)
+    mySplashPix = QPixmap(QString("Data/OCEAN.png"))
+    mySplashPixScaled = mySplashPix.scaled(500,300,Qt.KeepAspectRatio)
+    mySplash = QSplashScreen(mySplashPixScaled)
+    mySplash.show()
+    
+    # initialize qgis libraries
+    QgsApplication.setPrefixPath(qgis_prefix, True)
+    QgsApplication.initQgis()
 
+    # create main window
+    self.win = MainWindow(mySplash)
+    self.win.show()
 
+    self.start_language_selection()
+
+    # Create signal for app finish
+    self.app.connect(self.app, SIGNAL("lastWindowClosed()"), self.app, SLOT("quit()"))
+  
+    # Start the app up
+    retval = self.app.exec_()
+  
+    # We got an exit signal so time to clean up
+    QgsApplication.exitQgis()
+
+    sys.exit(retval)
+
+  def start_language_selection(self):
+    """Used for selecting language and translating if necessary"""
+    self.language_dialog = LanguageDialog(self.win, self.finish_language_selection)
+    QObject.connect(self.language_dialog, SIGNAL("language_selected"), self.finish_language_selection)
+    self.language_dialog.show()
+    
+  def finish_language_selection(self, language):
+    self.language = language
+    self.language_dialog.hide()
+    self.language_dialog.deleteLater()
+    
+    print language
+    if language == 'english': 
+      #Switch back to english, this is a hack
+      self.app.removeTranslator(self.appTranslator)
+      print "translator removed"
+      self.win.retranslateUi(self.win)
+
+#Start us off
 if __name__ == "__main__":
-  main(sys.argv)
-
+  oom = OpenOceanMap(sys.argv)

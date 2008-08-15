@@ -27,7 +27,7 @@
 #---------------------------------------------------------------------
 
 
-all: resources_rc.py mainwindow_ui.py
+all: resources_rc.py mainwindow_ui.py language_dialog_ui.py
 
 clean:
 	rm -f mainwindow_ui.py resources_rc.py
@@ -36,6 +36,9 @@ clean:
 
 mainwindow_ui.py: mainwindow.ui
 	pyuic4 -o mainwindow_ui.py mainwindow.ui
+
+language_dialog_ui.py: language_dialog.ui
+	pyuic4 -o language_dialog_ui.py language_dialog.ui
 
 resources_rc.py: resources.qrc
 	pyrcc4 -o resources_rc.py resources.qrc

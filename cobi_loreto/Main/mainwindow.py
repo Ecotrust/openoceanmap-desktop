@@ -42,6 +42,7 @@ from Tools.legend import *
 from Tools.mapcoords import *
 # UI specific includes
 from mainwindow_ui import Ui_MainWindow
+from language_dialog import LanguageDialog
 # General system includes
 import sys,string,time
 import pdb
@@ -67,7 +68,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.show()
     self.canvas.parentWin = self
     self.srs = None
-    
+
     # lay our widgets out in the main window
     self.layout = QVBoxLayout(self.frameMap)
     self.layout.addWidget(self.canvas)

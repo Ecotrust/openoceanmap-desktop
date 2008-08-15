@@ -50,14 +50,15 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
         self.parent = parent
         self.discardLast = False
         self.pennies_left = pennies_left
+
+        self.retranslate()
+
         self.pl_label.setText(u"  "+unicode(self.pennies_left)+self.pennies_left_str)
         self.shapeType = shapeType
         self.previousGui = previousGui
         self.type_label.setText(self.shapeType)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
-        
-        self.retranslate()
 
     #Called when "More Shapes" button pressed        
     def on_pbnMoreShapes_released(self):
