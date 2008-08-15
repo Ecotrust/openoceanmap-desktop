@@ -33,6 +33,7 @@ all:
 	cd Util; $(MAKE)
 	cd Interview; $(MAKE)
 
+translate:
 	qmake -project -o oom.pro
 	pylupdate4 -verbose oom.pro
 	# missing generating translating sources for .py files

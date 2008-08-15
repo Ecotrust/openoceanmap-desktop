@@ -55,7 +55,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         self.pennies_left = pennies_left
         self.previousGui = previousGui
         self.type_label.setText("  "+unicode(self.parent.shapeType)+": ")
-        self.pl_label.setText(u"  "+unicode(self.pennies_left)+self.left_str)
+        self.pl_label_4.setText(u"  "+unicode(self.pennies_left)+self.left_str)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
         self.species = []    
@@ -134,7 +134,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
     #"Finished with Type" button clicked
     def on_pbnShapeFinished_released(self):
         if not self.discardLast:
-            num_pennies = self.line_1.text()
+            num_pennies = self.line_3.text()
             if not num_pennies:
                 QMessageBox.warning(self, self.pennies_error_str, self.missing_penny_str)
                 return
