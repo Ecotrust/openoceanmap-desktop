@@ -132,42 +132,42 @@
 <context>
     <name>DrawConsScienceGui</name>
     <message>
-        <location filename="drawconsscience.py" line="139"/>
+        <location filename="drawconsscience.py" line="142"/>
         <source>Pennies Error</source>
         <translation>Error en pesos</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="140"/>
+        <location filename="drawconsscience.py" line="143"/>
         <source>Missing penny value</source>
         <translation>Falta valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="141"/>
+        <location filename="drawconsscience.py" line="144"/>
         <source>Penny value must be a number (no decimals)</source>
         <translation>El valor de pesos debe ser un número (no decimales)</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="142"/>
+        <location filename="drawconsscience.py" line="145"/>
         <source>Please add a penny value</source>
         <translation>Por favor añada un valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="143"/>
+        <location filename="drawconsscience.py" line="146"/>
         <source>You don&apos;t have that many pennies left</source>
         <translation>No le quedan tantos pesos de sobra</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="144"/>
+        <location filename="drawconsscience.py" line="147"/>
         <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
         <translation>Aún tendría pesos de sobra.  Por favor añada un valor de pesos mayor o dibuje figuras adicionales</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="145"/>
+        <location filename="drawconsscience.py" line="148"/>
         <source>You are out of pennies.  This shape drawing session is now done.</source>
         <translation>Se le terminaron los pesos.  Ésta sesión de dibujar figuras ha terminado.</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="146"/>
+        <location filename="drawconsscience.py" line="149"/>
         <source> left</source>
         <comment>Partial text used as part of a larger message about number of pennies left, for example &apos;20 left&apos;</comment>
         <translation> restantes</translation>
@@ -209,44 +209,44 @@
 <context>
     <name>DrawEcotourismGui</name>
     <message>
-        <location filename="drawecotourism.py" line="141"/>
+        <location filename="drawecotourism.py" line="142"/>
         <source>Pennies Error</source>
         <comment>Error message given when user doesn&apos;t enter a pennies value</comment>
         <translation>Error en pesos</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="142"/>
+        <location filename="drawecotourism.py" line="143"/>
         <source>Missing penny value</source>
         <comment>Error message given when user doesn&apos;t enter a pennies value</comment>
         <translation>Falta valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="143"/>
+        <location filename="drawecotourism.py" line="144"/>
         <source>Penny value must be a number (no decimals)</source>
         <translation>El valor de pesos debe ser un número (no decimales)</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="144"/>
+        <location filename="drawecotourism.py" line="145"/>
         <source>Please enter a penny value</source>
         <translation>Por favor añada un valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="145"/>
+        <location filename="drawecotourism.py" line="146"/>
         <source>You don&apos;t have that many pennies left</source>
         <translation>No le quedan tantos pesos de sobra</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="146"/>
+        <location filename="drawecotourism.py" line="147"/>
         <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
         <translation>Aún tendría pesos de sobra.  Por favor añada un valor de pesos mayor o dibuje figuras adicionales</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="147"/>
+        <location filename="drawecotourism.py" line="148"/>
         <source>You are out of pennies.  This shape drawing session is now done.</source>
         <translation>Se le terminaron los pesos. Ésta sesión de dibujar figuras ha terminado</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="148"/>
+        <location filename="drawecotourism.py" line="149"/>
         <source> left</source>
         <comment>Partial string used to tell you how many pennies you have remaining, for example &apos;20 left&apos;</comment>
         <translation>restantes</translation>
@@ -255,72 +255,72 @@
 <context>
     <name>DrawGear</name>
     <message>
-        <location filename="drawgear_ui.py" line="129"/>
+        <location filename="drawgear_ui.py" line="145"/>
         <source>OpenOceanMap - Next Polygon</source>
         <translation>MapaOcéanoAbierto - Siguiente Polígono</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="130"/>
+        <location filename="drawgear_ui.py" line="146"/>
         <source>Weighting (pennies):</source>
         <translation>Valorar (pesos):</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="140"/>
+        <location filename="drawgear_ui.py" line="155"/>
         <source>Finished With Shapes</source>
         <translation>Terminar con figuras</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="141"/>
+        <location filename="drawgear_ui.py" line="156"/>
         <source>Discard Last Shape...</source>
         <translation>Descartar última figura...</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="142"/>
+        <location filename="drawgear_ui.py" line="157"/>
         <source>Draw More Shapes...</source>
         <translation>Dibujar más figuras...</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="134"/>
+        <location filename="drawgear_ui.py" line="149"/>
         <source>Coastal reef fish</source>
         <translation>Peces de arrecife costero</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="135"/>
+        <location filename="drawgear_ui.py" line="150"/>
         <source>Deep reef fish</source>
         <translation>Peces de arrecife profundo</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="136"/>
+        <location filename="drawgear_ui.py" line="151"/>
         <source>Migratory fish</source>
         <translation>Peces migratorios</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="133"/>
+        <location filename="drawgear_ui.py" line="148"/>
         <source>Benthic fish</source>
         <translation>Peces bentónicos</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="138"/>
+        <location filename="drawgear_ui.py" line="153"/>
         <source>Shrimp</source>
         <translation>Camarón</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="139"/>
+        <location filename="drawgear_ui.py" line="154"/>
         <source>Other</source>
         <translation>Otros</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="131"/>
         <source>remaining</source>
-        <translation>restantes</translation>
+        <translation type="obsolete">restantes</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="137"/>
+        <location filename="drawgear_ui.py" line="152"/>
         <source>Sharks and Skates</source>
         <translation>Tiburones y rayas</translation>
     </message>
     <message>
-        <location filename="drawgear_ui.py" line="132"/>
+        <location filename="drawgear_ui.py" line="147"/>
         <source>Check which types of species are caught in this area:</source>
         <translation>Marca que tipo de especies son capturadas en esta área:</translation>
     </message>
@@ -328,77 +328,77 @@
 <context>
     <name>DrawGearGui</name>
     <message>
-        <location filename="drawgear.py" line="174"/>
+        <location filename="drawgear.py" line="175"/>
         <source>Sharks and Skates</source>
         <translation>Tiburones y rayas</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="175"/>
+        <location filename="drawgear.py" line="176"/>
         <source>Coastal reef fish</source>
         <translation>Peces de arrecife costero</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="176"/>
+        <location filename="drawgear.py" line="177"/>
         <source>Deep reef fish</source>
         <translation>Peces de arrecife profundo</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="177"/>
+        <location filename="drawgear.py" line="178"/>
         <source>Migratory fish</source>
         <translation>Peces migratorios</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="178"/>
+        <location filename="drawgear.py" line="179"/>
         <source>Benthic fish</source>
         <translation>Peces bentónicos</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="179"/>
+        <location filename="drawgear.py" line="180"/>
         <source>Shrimp</source>
         <translation>Camarón</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="167"/>
+        <location filename="drawgear.py" line="168"/>
         <source>Pennies Error</source>
         <translation>Error en pesos</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="168"/>
+        <location filename="drawgear.py" line="169"/>
         <source>Missing penny value</source>
         <translation>Falta valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="169"/>
+        <location filename="drawgear.py" line="170"/>
         <source>Penny value must be a number (no decimals)</source>
         <translation>El valor de pesos debe ser un número (no decimales)</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="170"/>
+        <location filename="drawgear.py" line="171"/>
         <source>Please add a penny value</source>
         <translation>Por favor añada un valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="171"/>
+        <location filename="drawgear.py" line="172"/>
         <source>You don&apos;t have that many pennies left</source>
         <translation>No le quedan tantos pesos de sobra</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="172"/>
+        <location filename="drawgear.py" line="173"/>
         <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
         <translation>Aún tendría pesos de sobra. Por favor añada un valor de pesos mayor o dibuje figuras adicionales</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="173"/>
+        <location filename="drawgear.py" line="174"/>
         <source>You are out of pennies.  This shape drawing session is now done.</source>
         <translation>Se le terminaron los pesos.  Ésta sesión de dibujar figuras ha terminado.</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="180"/>
+        <location filename="drawgear.py" line="181"/>
         <source>Other</source>
         <translation>Otro</translation>
     </message>
     <message>
-        <location filename="drawgear.py" line="181"/>
+        <location filename="drawgear.py" line="182"/>
         <source> left</source>
         <comment>Partial string used to tell you how many pennies you have remaining, for example &apos;20 left&apos;</comment>
         <translation> restantes</translation>
@@ -676,17 +676,17 @@
 <context>
     <name>Interview</name>
     <message>
-        <location filename="interview.py" line="384"/>
+        <location filename="interview.py" line="423"/>
         <source>Save Text as</source>
         <translation>Guardar Texto</translation>
     </message>
     <message>
-        <location filename="interview.py" line="385"/>
+        <location filename="interview.py" line="424"/>
         <source>Overwriting existing text file is not supported: </source>
         <translation>No sobreescribir el apoyo:</translation>
     </message>
     <message>
-        <location filename="interview.py" line="387"/>
+        <location filename="interview.py" line="426"/>
         <source>Save Shapes as</source>
         <translation>Guardar las formas como</translation>
     </message>
@@ -696,122 +696,122 @@
         <translation type="obsolete">No sobreescribir el shapefile:</translation>
     </message>
     <message>
-        <location filename="interview.py" line="367"/>
+        <location filename="interview.py" line="406"/>
         <source>Starting commercial fishery interview</source>
         <translation>Empezando entrevista de pesca comercial</translation>
     </message>
     <message>
-        <location filename="interview.py" line="368"/>
+        <location filename="interview.py" line="407"/>
         <source>Commercial Fishery</source>
         <translation>Pesca Comercial</translation>
     </message>
     <message>
-        <location filename="interview.py" line="369"/>
+        <location filename="interview.py" line="408"/>
         <source>Starting commercial sport fishery interview</source>
         <translation>Empezando entrevista de pesca deportiva</translation>
     </message>
     <message>
-        <location filename="interview.py" line="370"/>
+        <location filename="interview.py" line="409"/>
         <source>Sport Fishery</source>
         <translation>Pesca Deportiva</translation>
     </message>
     <message>
-        <location filename="interview.py" line="371"/>
+        <location filename="interview.py" line="410"/>
         <source>Starting private sport fishery interview</source>
         <translation>Empezando entrevista de pesca deportiva privado</translation>
     </message>
     <message>
-        <location filename="interview.py" line="372"/>
+        <location filename="interview.py" line="411"/>
         <source>Private Fishery</source>
         <translation>Pesca Privada</translation>
     </message>
     <message>
-        <location filename="interview.py" line="373"/>
+        <location filename="interview.py" line="412"/>
         <source>Starting ecotourism interview</source>
         <translation>Inicio entrevista ecoturismo</translation>
     </message>
     <message>
-        <location filename="interview.py" line="374"/>
+        <location filename="interview.py" line="413"/>
         <source>Ecotourism</source>
         <translation>Ecoturismo</translation>
     </message>
     <message>
-        <location filename="interview.py" line="375"/>
+        <location filename="interview.py" line="414"/>
         <source>Starting conservation/scientist interview</source>
         <translation>Inicio entrevista conservación/científico </translation>
     </message>
     <message>
-        <location filename="interview.py" line="376"/>
+        <location filename="interview.py" line="415"/>
         <source>Conservationist Scientist</source>
         <translation>Conservacionista Científico</translation>
     </message>
     <message>
-        <location filename="interview.py" line="377"/>
+        <location filename="interview.py" line="416"/>
         <source>Starting other interview</source>
         <translation>Inicio otra entrevista</translation>
     </message>
     <message>
-        <location filename="interview.py" line="378"/>
+        <location filename="interview.py" line="417"/>
         <source>Other</source>
         <translation>Otra</translation>
     </message>
     <message>
-        <location filename="interview.py" line="379"/>
+        <location filename="interview.py" line="418"/>
         <source>Income</source>
         <translation>Ingresos</translation>
     </message>
     <message>
-        <location filename="interview.py" line="380"/>
+        <location filename="interview.py" line="419"/>
         <source>Success</source>
         <translation>Éxito</translation>
     </message>
     <message>
-        <location filename="interview.py" line="381"/>
+        <location filename="interview.py" line="420"/>
         <source>Interview Completed</source>
         <translation>Entrevista terminada</translation>
     </message>
     <message>
-        <location filename="interview.py" line="382"/>
+        <location filename="interview.py" line="421"/>
         <source>Interview Finished</source>
         <translation>Entrevista terminada</translation>
     </message>
     <message>
-        <location filename="interview.py" line="383"/>
+        <location filename="interview.py" line="422"/>
         <source>No info, returning to previous choices</source>
         <translation>No se dispone de información, volviendo a las anteriores elecciones</translation>
     </message>
     <message>
-        <location filename="interview.py" line="388"/>
+        <location filename="interview.py" line="427"/>
         <source>Writing text file</source>
         <translation>Escribiendo archivo de texto</translation>
     </message>
     <message>
-        <location filename="interview.py" line="389"/>
+        <location filename="interview.py" line="428"/>
         <source>Writing shapefile</source>
         <translation>Escribiendo shapefile</translation>
     </message>
     <message>
-        <location filename="interview.py" line="390"/>
+        <location filename="interview.py" line="429"/>
         <source>No shapes drawn</source>
         <translation>No se dibujaron figuras</translation>
     </message>
     <message>
-        <location filename="interview.py" line="391"/>
+        <location filename="interview.py" line="430"/>
         <source>Wrote shapefile</source>
         <translation>Escribió shapefile</translation>
     </message>
     <message>
-        <location filename="interview.py" line="392"/>
+        <location filename="interview.py" line="431"/>
         <source>Error reading file, did it save correctly?  If not, do you have write permission in the save directory you chose?</source>
         <translation>Error al leer archivo. ¿Se guardó correctamente? Si no, ¿tiene permiso de escribir en el directorio de guardar que escogió?</translation>
     </message>
     <message>
-        <location filename="interview.py" line="393"/>
+        <location filename="interview.py" line="432"/>
         <source>Canceling interview</source>
         <translation>Cancelando entrevista</translation>
     </message>
     <message>
-        <location filename="interview.py" line="394"/>
+        <location filename="interview.py" line="433"/>
         <source>Leaving this step</source>
         <translation>Saliendo de este paso</translation>
     </message>
@@ -819,19 +819,43 @@
         <location filename="interview.py" line="396"/>
         <source>income</source>
         <comment>fisherman income field attribute</comment>
-        <translation>ingreso</translation>
+        <translation type="obsolete">ingreso</translation>
     </message>
     <message>
-        <location filename="interview.py" line="397"/>
+        <location filename="interview.py" line="437"/>
         <source>pennies</source>
         <comment>fishing ground penny value attribute</comment>
         <translation>pesos</translation>
     </message>
     <message>
-        <location filename="interview.py" line="398"/>
+        <location filename="interview.py" line="438"/>
         <source>species</source>
         <comment>fish species name attribute</comment>
         <translation>especies</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="435"/>
+        <source>gear_type</source>
+        <comment>fisherman income field attribute</comment>
+        <translation>equip_tipo</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="436"/>
+        <source>grp_income</source>
+        <comment>Percent income value</comment>
+        <translation>grp_ingres</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="439"/>
+        <source>gear_incom</source>
+        <comment>Attribute for income from gear type</comment>
+        <translation>equip_ingr</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="441"/>
+        <source>user_grp</source>
+        <comment>User group for current shape</comment>
+        <translation>usua_grp</translation>
     </message>
 </context>
 <context>
@@ -955,55 +979,55 @@
 <context>
     <name>InterviewStartGui</name>
     <message>
-        <location filename="interviewstart.py" line="144"/>
+        <location filename="interviewstart.py" line="137"/>
         <source>f_name</source>
         <comment>Interviewee first name attribute</comment>
         <translation>nombre</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="145"/>
+        <location filename="interviewstart.py" line="138"/>
         <source>l_name</source>
         <comment>Interviewee last name attribute</comment>
         <translation>apellido</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="146"/>
+        <location filename="interviewstart.py" line="139"/>
         <source>age</source>
         <comment>Age attribute</comment>
         <translation>edad</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="147"/>
+        <location filename="interviewstart.py" line="140"/>
         <source>gender</source>
         <comment>Gender attribute</comment>
         <translation>genero</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="148"/>
+        <location filename="interviewstart.py" line="141"/>
         <source>city</source>
         <comment>City attribute</comment>
         <translation>ciudad</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="149"/>
+        <location filename="interviewstart.py" line="142"/>
         <source>date</source>
         <comment>Date of interview attribute</comment>
         <translation>fecha</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="150"/>
+        <location filename="interviewstart.py" line="143"/>
         <source>i_f_name</source>
         <comment>Interviewer first name attribute</comment>
         <translation>i_nombre</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="151"/>
+        <location filename="interviewstart.py" line="144"/>
         <source>i_l_name</source>
         <comment>Interview last name attribute</comment>
         <translation>i_apellido</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="152"/>
+        <location filename="interviewstart.py" line="145"/>
         <source>years</source>
         <comment>Number of years fishing attribute</comment>
         <translation>anos</translation>
@@ -1012,45 +1036,45 @@
         <location filename="interviewstart.py" line="153"/>
         <source>inc_f_comm</source>
         <comment>Percent income from commercial fishing attribute</comment>
-        <translation>ingr_p_comm</translation>
+        <translation type="obsolete">ingr_p_comm</translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="154"/>
         <source>inc_f_sprt</source>
         <comment>Percent income from sport fishing attribute</comment>
-        <translation>ing_p_deportiva</translation>
+        <translation type="obsolete">ing_p_deportiva</translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="155"/>
         <source>inc_f_priv</source>
         <comment>Percent income from private fishing attribute</comment>
-        <translation>ing_p_privada</translation>
+        <translation type="obsolete">ing_p_privada</translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="156"/>
         <source>inc_ecotou</source>
         <comment>Percent income from ecotourism attribute</comment>
-        <translation>ing_ecotur</translation>
+        <translation type="obsolete">ing_ecotur</translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="157"/>
         <source>inc_consci</source>
         <comment>Percent income from conservation/scientist attribute</comment>
-        <translation>ing_concien</translation>
+        <translation type="obsolete">ing_concien</translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="158"/>
         <source>inc_other</source>
         <comment>Percent income from other attribute</comment>
-        <translation>ing_otra</translation>
+        <translation type="obsolete">ing_otra</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="159"/>
+        <location filename="interviewstart.py" line="146"/>
         <source>Income Error</source>
         <translation>Error en ingresos</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="160"/>
+        <location filename="interviewstart.py" line="147"/>
         <source>Income value must be a number (no decimals)</source>
         <translation>El valor de ingreso debe ser un número (no decimales)</translation>
     </message>
@@ -1058,13 +1082,54 @@
         <location filename="interviewstart.py" line="161"/>
         <source>All Values currently total</source>
         <comment>First part of text that tells the user the total for all income percentages they entered</comment>
-        <translation>Todos los valores de ingreso tienen un total de</translation>
+        <translation type="obsolete">Todos los valores de ingreso tienen un total de</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="162"/>
+        <location filename="interviewstart.py" line="149"/>
         <source>. Please change them.</source>
         <comment>Second part of text telling the user their incomes don&apos;t add up to 100 so they need to change the values such that they do add up to 100</comment>
         <translation>. Por favor cambie.</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="403"/>
+        <source>firstname</source>
+        <comment>Interviewee first name attribute</comment>
+        <translation>nombre</translation>
+    </message>
+    <message>
+        <location filename="interview.py" line="404"/>
+        <source>lastname</source>
+        <comment>Interviewee last name attribute</comment>
+        <translation>apellido</translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="148"/>
+        <source>All Values currently total </source>
+        <comment>First part of text that tells the user the total for all income percentages they entered</comment>
+        <translation>Actualmente, todos los valores totales </translation>
+    </message>
+</context>
+<context>
+    <name>LanguageDialog</name>
+    <message>
+        <location filename="language_dialog_ui.py" line="39"/>
+        <source>Language</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="language_dialog_ui.py" line="40"/>
+        <source>Select a Language:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="language_dialog_ui.py" line="41"/>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="language_dialog_ui.py" line="42"/>
+        <source>Spanish</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1150,16 +1215,51 @@
         <translation>Inicio entrevista</translation>
     </message>
     <message>
-        <location filename="mainwindow.py" line="231"/>
+        <location filename="mainwindow.py" line="247"/>
         <source>ERROR reading file</source>
         <comment>message when failing to load a map layer</comment>
         <translation>Error al leer el achivo</translation>
     </message>
     <message>
-        <location filename="mainwindow.py" line="232"/>
+        <location filename="mainwindow.py" line="248"/>
         <source>Loreto Base Map</source>
         <comment>map legend text for base layer</comment>
         <translation>Mapa base de Loreto</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.py" line="249"/>
+        <source>Study Area</source>
+        <translation>Área de estudio</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.py" line="250"/>
+        <source>Bathymetry</source>
+        <translation>Bathymetry</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.py" line="251"/>
+        <source>Restricted Zones</source>
+        <translation>Zona de restringido</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.py" line="252"/>
+        <source>Protecteded Zones</source>
+        <translation>Zonas de proteccion</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.py" line="253"/>
+        <source>Protected Zones (pts)</source>
+        <translation>Zonas de proteccion (pts)</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.py" line="254"/>
+        <source>Seamounts</source>
+        <translation>Seamounts</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.py" line="255"/>
+        <source>Reference Points</source>
+        <translation>Puntas de referencia</translation>
     </message>
 </context>
 <context>
@@ -1228,7 +1328,7 @@
 <context>
     <name>Other Income Saved</name>
     <message>
-        <location filename="interview.py" line="386"/>
+        <location filename="interview.py" line="425"/>
         <source>Other income info successfully saved to: </source>
         <translation>Información de otros ingresos guardada exitosamente en:</translation>
     </message>
@@ -1552,7 +1652,7 @@ de este tipo de equipo?</translation>
         <location filename="selectgear.py" line="115"/>
         <source>gear_inc</source>
         <comment>Attribute for income from gear type</comment>
-        <translation>ing_equip</translation>
+        <translation type="obsolete">ing_equip</translation>
     </message>
 </context>
 </TS>
