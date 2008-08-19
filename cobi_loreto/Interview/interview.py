@@ -57,11 +57,13 @@ class Interview(object):
 
     self.currentStep = None
     self.shapeType = None
+    self.gear_inc = None
     self.commFishStarted= False    
-    self.commFishIncome = None
     self.sportFishStarted = False
-    self.sportFishIncome = None
     self.privateFishStarted = False
+
+    self.commFishIncome = None
+    self.sportFishIncome = None    
     self.privateFishIncome = None    
     self.ecotourismIncome = None
     self.consScienceIncome = None
@@ -73,6 +75,7 @@ class Interview(object):
     self.capturedPolygons = []
     self.capturedPolygonsSpecies = []
     self.capturedPolygonsType = []
+    self.capturedPolygonsGear = []
     self.capturedPolygonsPennies = []
     self.capturedPolygonsRub = []
     
@@ -100,6 +103,7 @@ class Interview(object):
         self.parent.interviewSaveTool = None        
         self.currentStep = None
         self.shapeType = None
+        self.gear_inc = None
         self.commFishIncome = None
         self.commFishStarted= False
         self.sportFishIncome = None
@@ -122,12 +126,18 @@ class Interview(object):
       self.parent.statusbar.showMessage(capture_string)
       self.pennies_left = 100;
       self.shapeType = None
+      self.gear_inc = None
       for capPolyRub in self.capturedPolygonsRub:
           capPolyRub.reset()
-      flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint
+      flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint    
+      
       if self.commFishIncome:
           self.parent.statusbar.showMessage(self.start_comm_fish_str)
           self.currentStep = self.comm_fish_str
+          #Append user group name and income percent          
+          self.interviewInfo2.append([self.f_user_group_str,self.comm_fish_str])
+          self.interviewInfo2.append([self.f_percent_income_str, self.commFishIncome])
+          
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -140,6 +150,10 @@ class Interview(object):
       elif self.sportFishIncome:
           self.parent.statusbar.showMessage(self.start_comm_sport_fish_str)
           self.currentStep = self.comm_sport_fish_str
+          #Append user group name and income percent
+          self.interviewInfo2.append([self.f_user_group_str,self.comm_sport_fish_str])
+          self.interviewInfo2.append([self.f_percent_income_str, self.sportFishIncome])
+          
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -151,7 +165,11 @@ class Interview(object):
     
       elif self.privateFishIncome:
           self.parent.statusbar.showMessage(self.start_priv_fish_str)
-          self.currentStep = self.priv_fish_str 
+          self.currentStep = self.priv_fish_str
+          #Append user group name and income percent
+          self.interviewInfo2.append([self.f_user_group_str,self.priv_fish_str])
+          self.interviewInfo2.append([self.f_percent_income_str, self.privateFishIncome])
+
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -164,6 +182,10 @@ class Interview(object):
       elif self.ecotourismIncome:
           self.parent.statusbar.showMessage(self.start_eco_str)
           self.currentStep = self.eco_str
+          #Append user group name and income percent
+          self.interviewInfo2.append([self.f_user_group_str,self.eco_str])
+          self.interviewInfo2.append([self.f_percent_income_str, self.ecotourismIncome])
+          
           from ecotourism import EcotourismGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
           wnd = EcotourismGui(self,flags,previousGui)
@@ -172,6 +194,10 @@ class Interview(object):
       elif self.consScienceIncome:
           self.parent.statusbar.showMessage(self.start_consci_str)
           self.currentStep = self.consci_str
+          #Append user group name and income percent
+          self.interviewInfo2.append([self.f_user_group_str,self.consci_str])
+          self.interviewInfo2.append([self.f_percent_income_str, self.consScienceIncome])
+          
           from consscience import ConsScienceGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
           wnd = ConsScienceGui(self,flags,previousGui)
@@ -180,6 +206,10 @@ class Interview(object):
       elif self.otherIncome:
           self.parent.statusbar.showMessage(self.start_other_str)
           self.currentStep = self.other_str
+          #Append user group name and income percent
+          self.interviewInfo2.append([self.f_user_group_str,self.other_str])
+          self.interviewInfo2.append([self.f_percent_income_str, self.otherIncome])
+          
           textType = self.income_str #the type should be gathered
           # skip right to drawing...
           from other import OtherGui
@@ -191,6 +221,9 @@ class Interview(object):
           QMessageBox.information(self.mainwindow, self.success_str, self.int_comp_str)
       
       self.parent.canvas.setMapTool(self.parent.toolZoomIn)
+            
+  def save_gear_inc(self):
+      self.capturedPolygonsGear.append(self.gear_inc)
             
 
   # End interview dialog
@@ -205,7 +238,7 @@ class Interview(object):
       else:                         
           file_prefix = 'fname_lname_' + QString(self.currentStep) + '_' + QString(self.capturedTextType).replace(' ','_').toLower()
           file_prefix_obj = QString(file_prefix)
-          file_name = QString("%s_" % file_prefix_obj)
+          file_name = QString("%s" % file_prefix_obj)
           self.parent.statusbar.showMessage(self.writing_text_str)
           qd=QFileDialog()
           qd.DontConfirmOverwrite = True
@@ -248,8 +281,8 @@ class Interview(object):
           # Fire up the previous gui again...
           drawGui.previousGui.show()
       else:      
-          file_prefix = (self.first_name+'_'+
-                         self.last_name+'_'+
+          file_prefix = (self.first_name_str+'_'+
+                         self.last_name_str+'_'+
                          QString(self.currentStep) + '_' + 
                          QString(self.shapeType)).replace(' ','_').toLower()
           file_prefix_obj = QString(file_prefix)
@@ -286,10 +319,11 @@ class Interview(object):
             #i = 0
             for index,value in enumerate(self.interviewInfo2):
               fields[index] = QgsField(value[0], QVariant.String)
-              
-            fields[index+1] = QgsField(self.f_income_str, QVariant.String)
+
+            fields[index+1] = QgsField(self.f_gear_inc_str, QVariant.String)              
             fields[index+2] = QgsField(self.f_pennies_str, QVariant.Int)
-            fields[index+3] = QgsField(self.f_species_str, QVariant.String)
+            fields[index+3] = QgsField(self.f_income_str, QVariant.String)
+            fields[index+4] = QgsField(self.f_species_str, QVariant.String)
 
             # create an instance of vector file writer,
             # it will create the shapefile. Arguments:
@@ -311,11 +345,12 @@ class Interview(object):
                 for index,value in enumerate(self.interviewInfo2):
                   fet.addAttribute(index, QVariant(value[1]))
 
-                fet.addAttribute(index+1, QVariant(self.capturedPolygonsType[capPolyInd]))
+                fet.addAttribute(index+1, QVariant(self.capturedPolygonsGear[capPolyInd]))
                 fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+                fet.addAttribute(index+3, QVariant(self.capturedPolygonsType[capPolyInd]))
                 if self.capturedPolygonsSpecies:
-                    fet.addAttribute(index+3, QVariant(self.capturedPolygonsSpecies[capPolyInd]))                                  
-                writer.addFeature(fet)
+                    fet.addAttribute(index+4, QVariant(self.capturedPolygonsSpecies[capPolyInd]))                                                  
+                writer.addFeature(fet)                
                 
             del writer
             capture_string = QString(self.wrote_shape_str + write_string)
@@ -354,6 +389,7 @@ class Interview(object):
               capPolyRub.reset()
             self.capturedPolygons = []
             self.capturedPolygonsType = []
+            self.capturedPolygonsGear = []
             self.capturedPolygonsSpecies = []
             self.capturedPolygonsPennies = []
             self.capturedPolygonsRub = []
@@ -364,6 +400,9 @@ class Interview(object):
             drawGui.previousGui.show()
 
   def retranslate(self):
+      self.first_name_str = QA.translate("InterviewStartGui", "firstname", "Interviewee first name attribute", QA.UnicodeUTF8)
+      self.last_name_str = QA.translate("InterviewStartGui", "lastname", "Interviewee last name attribute", QA.UnicodeUTF8)      
+      
       self.start_comm_fish_str = QA.translate("Interview", 'Starting commercial fishery interview', "", QA.UnicodeUTF8)      
       self.comm_fish_str = QA.translate("Interview", 'Commercial Fishery', "", QA.UnicodeUTF8)
       self.start_comm_sport_fish_str = QA.translate("Interview", 'Starting commercial sport fishery interview', "", QA.UnicodeUTF8)
@@ -393,6 +432,10 @@ class Interview(object):
       self.cancel_str = QA.translate("Interview","Canceling interview", None, QA.UnicodeUTF8)
       self.leaving_step_str = QA.translate("Interview","Leaving this step", None, QA.UnicodeUTF8)
       
-      self.f_income_str = QA.translate("Interview","income", "fisherman income field attribute", QA.UnicodeUTF8)
+      self.f_income_str = QA.translate("Interview","gear_type", "fisherman income field attribute", QA.UnicodeUTF8)
+      self.f_percent_income_str = QA.translate("Interview","grp_income", "Percent income value", QA.UnicodeUTF8)
       self.f_pennies_str = QA.translate("Interview","pennies", "fishing ground penny value attribute", QA.UnicodeUTF8)
       self.f_species_str = QA.translate("Interview","species", "fish species name attribute", QA.UnicodeUTF8)
+      self.f_gear_inc_str = QA.translate("Interview", "gear_incom", "Attribute for income from gear type", QA.UnicodeUTF8)
+      
+      self.f_user_group_str = QA.translate("Interview", "user_grp", "User group for current shape", QA.UnicodeUTF8)

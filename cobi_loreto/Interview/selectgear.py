@@ -70,8 +70,8 @@ class SelectGearGui(QDialog, Ui_SelectGear):
             QMessageBox.warning(self, self.percent_error_str, self.missing_gear_str)
             return
         else:
-            self.parent.interviewInfo2.append([self.f_gear_inc_str,gear_perc_inc])
-
+            self.parent.gear_inc = gear_perc_inc
+            #self.parent.interviewInfo2.append([self.f_gear_inc_str,gear_perc_inc])
 
         self.close()
         mc = self.parent.canvas      
@@ -111,5 +111,4 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         self.interview_step_str = QA.translate("SelectGearGui", ' interview step', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
         self.comm_fish_str = QA.translate("SelectGearGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
         self.sport_fish_str = QA.translate("SelectGearGui", 'Sport Fishery', "", QA.UnicodeUTF8)
-        self.priv_fish_str = QA.translate("SelectGearGui", 'Private Fishery', "", QA.UnicodeUTF8)
-        self.f_gear_inc_str = QA.translate("SelectGearGui", "gear_inc", "Attribute for income from gear type", QA.UnicodeUTF8)        
+        self.priv_fish_str = QA.translate("SelectGearGui", 'Private Fishery', "", QA.UnicodeUTF8)                

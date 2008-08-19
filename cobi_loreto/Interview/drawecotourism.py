@@ -81,7 +81,7 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
                 self.parent.capturedPolygonsPennies.append(num_pennies)
 
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
-
+            self.parent.save_gear_inc()
 
         self.close()
 
@@ -128,6 +128,7 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
+            self.parent.save_gear_inc()
 
         self.parent.saveShapes(self)
 

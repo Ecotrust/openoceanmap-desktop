@@ -6,7 +6,6 @@
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Dane Springmeyer
 # Copyright (C) 2008  Tim Welch
-# Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
 # 
@@ -82,7 +81,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
     #Called when "More Shapes" button pressed        
     def on_pbnMoreShapes_released(self):
         if not self.discardLast:
-            num_pennies = self.line_1.text()
+            num_pennies = self.line_3.text()
             if not num_pennies:
                 QMessageBox.warning(self, self.pennies_error_str, self.missing_penny_str)
                 return
@@ -101,6 +100,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
             
             self.parent.capturedPolygonsSpecies.append(self.fetch_species())
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
+            self.parent.save_gear_inc()
             
         self.close()
 
@@ -121,12 +121,12 @@ class DrawGearGui(QDialog, Ui_DrawGear):
         rub = self.parent.capturedPolygonsRub.pop()
         rub.reset()
         try:
-            current_pennies = int(self.line_1.text())
+            current_pennies = int(self.line_3.text())
         except:
            current_pennies = 0
         if not current_pennies == self.parent.pennies_left:
             # then we assume they placed pennies but then decides to descard shape
-            self.line_1.setText(unicode(current_pennies-current_pennies))
+            self.line_3.setText(unicode(current_pennies-current_pennies))
         # Grey out the button...
         self.pbnShapeDiscard.setEnabled(False)
         self.discardLast = True
@@ -155,6 +155,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
                 
             self.parent.capturedPolygonsSpecies.append(self.fetch_species())            
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
+            self.parent.save_gear_inc()
         
         self.parent.saveShapes(self) # sends itself as the 'drawGui'
 

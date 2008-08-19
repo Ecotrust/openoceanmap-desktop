@@ -162,16 +162,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem(self.loreto_base_str,
                                     self.rasterBaseLayer.getCls())
 
+#Aprov Susten
+#Bathymetry
+#Zonas de Restringido
+#Zonas de Proteccion
+#Zonas de Proteccion (Points)
+#Seamounts
+#Ref. Points
 
-
-    #vectorList = [["Data/Kayak_Points.shp",0,125000],
-    #              ["Data/Access_Points.shp",0,200000]]
-    vectorList = [["Data/Aprov_Susten.shp","Aprov Susten", 0,5000000],
-                  ["Data/Bathymetry.shp","Bathymetry", 0,5000000],
-                  ["Data/Zona_Restringido.shp","Zona de Restringido", 0,5000000],
-                  ["Data/Zona_Proteccion.shp","Zona de Proteccion", 0,5000000],                                   
-                  ["Data/Zona_Proteccion_Points.shp","Zona Proteccion (Points)", 0,5000000],
-                  ["Data/Seamounts.shp","Seamounts", 0,5000000],
+    vectorList = [["Data/Aprov_Susten.shp",self.study_area_str, 0,5000000],
+                  ["Data/Bathymetry.shp",self.bathymetry_str, 0,5000000],
+                  ["Data/Zona_Restringido.shp",self.restricted_zone_str, 0,5000000],
+                  ["Data/Zona_Proteccion.shp",self.protected_zone_str, 0,5000000],                                   
+                  ["Data/Zona_Proteccion_Points.shp",self.protected_point_str, 0,5000000],
+                  ["Data/Seamounts.shp",self.seamount_str, 0,5000000],
+                  ["Data/Reference_Points.shp",self.ref_point_str, 0, 300000],
                   ]
     for vectorSet in vectorList:
       vector = vectorSet[0]
@@ -197,11 +202,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         layer.renderer().symbols()[0].setColor(QColor('Black'))
         layer.renderer().symbols()[0].setFillStyle(Qt.NoBrush)          
       elif vector == 'Data/Zona_Proteccion_Points.shp':
-        layer.renderer().symbols()[0].setPointSize(12)
+        layer.renderer().symbols()[0].setPointSize(10)
         layer.renderer().symbols()[0].setNamedPointSymbol("hard:triangle")
         layer.renderer().symbols()[0].setFillColor(QColor("Red"))
       elif vector == 'Data/Seamounts.shp':
-        layer.renderer().symbols()[0].setPointSize(10)
+        layer.renderer().symbols()[0].setPointSize(9)
         layer.renderer().symbols()[0].setFillColor(QColor(200,84,232))
       elif vector == "Data/Zona_Restringido.shp":
         layer.renderer().symbols()[0].setColor(QColor(220,147,0))
@@ -216,7 +221,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         layer.renderer().symbols()[0].setLineWidth(1)
         layer.renderer().symbols()[0].setColor(QColor(8,83,137))
         layer_on = Qt.Unchecked
-      
+      elif vector == 'Data/Reference_Points.shp':
+        layer.renderer().symbols()[0].setPointSize(9)
+        layer.renderer().symbols()[0].setFillColor(QColor(255,170,0))
+        layer.setLabelOn(True)
+        layer.label().setLabelField(0,0)
+        layer.label().layerAttributes().setSize(8,1)
+        layer.label().layerAttributes().setAlignment(3)
+        print layer.label().layerAttributes().offsetType()        
+        layer.label().layerAttributes().setOffset(4,2,1)
+        layer.label().layerAttributes().setBufferEnabled(True)
+        layer.label().layerAttributes().setBufferColor(QColor(250,250,250))
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
       
@@ -231,6 +246,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
   def retranslate(self):
     self.file_error_str = QA.translate("MainWindow", "ERROR reading file", "message when failing to load a map layer", QA.UnicodeUTF8)    
     self.loreto_base_str = QA.translate("MainWindow", "Loreto Base Map", "map legend text for base layer", QA.UnicodeUTF8)
+    self.study_area_str = QA.translate("MainWindow", "Study Area", "", QA.UnicodeUTF8)
+    self.bathymetry_str = QA.translate("MainWindow", "Bathymetry", "", QA.UnicodeUTF8)
+    self.restricted_zone_str = QA.translate("MainWindow", "Restricted Zones", "", QA.UnicodeUTF8)
+    self.protected_zone_str = QA.translate("MainWindow", "Protecteded Zones", "", QA.UnicodeUTF8)
+    self.protected_point_str = QA.translate("MainWindow", "Protected Zones (pts)", "", QA.UnicodeUTF8)
+    self.seamount_str = QA.translate("MainWindow", "Seamounts", "", QA.UnicodeUTF8)
+    self.ref_point_str = QA.translate("MainWindow", "Reference Points", "", QA.UnicodeUTF8)
 
 class OOMLayer(object):
   def __init__(self, parent):

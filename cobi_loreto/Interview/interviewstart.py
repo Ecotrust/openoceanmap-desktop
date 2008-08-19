@@ -69,13 +69,6 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append([self.f_int_first_name_str, self.interviewer_first_name_line.text()])
         interviewInfo2.append([self.f_int_last_name_str, self.interviewer_last_name_line.text()])
         interviewInfo2.append([self.f_years_str, self.years_spinBox.text()])
-        # income sources group
-        interviewInfo2.append([self.f_comm_fish_str, self.comm_fish_line.text()])
-        interviewInfo2.append([self.f_comm_sport_str, self.comm_sport_line.text()])
-        interviewInfo2.append([self.f_private_fish_str, self.private_fish_line.text()])
-        interviewInfo2.append([self.f_ecotourism_str, self.ecotourism_line.text()])
-        interviewInfo2.append([self.f_cons_science_str, self.cons_science_line.text()])
-        interviewInfo2.append([self.f_other_str, self.other_line.text()])
 
         if self.comm_fish_line:
             if not strIsInt(self.comm_fish_line.text()):
@@ -142,7 +135,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
     def retranslate(self):
         self.f_first_name_str = QA.translate("InterviewStartGui", "f_name", "Interviewee first name attribute", QA.UnicodeUTF8)
-        self.f_last_name_str = QA.translate("InterviewStartGui", "l_name", "Interviewee last name attribute", QA.UnicodeUTF8)
+        self.f_last_name_str = QA.translate("InterviewStartGui", "l_name", "Interviewee last name attribute", QA.UnicodeUTF8)       
         self.f_age_str = QA.translate("InterviewStartGui", "age", "Age attribute", QA.UnicodeUTF8)
         self.f_gender_str = QA.translate("InterviewStartGui", "gender", "Gender attribute", QA.UnicodeUTF8)
         self.f_city_str = QA.translate("InterviewStartGui", "city", "City attribute", QA.UnicodeUTF8)
@@ -150,12 +143,6 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.f_int_first_name_str = QA.translate("InterviewStartGui", "i_f_name", "Interviewer first name attribute", QA.UnicodeUTF8)
         self.f_int_last_name_str = QA.translate("InterviewStartGui", "i_l_name", "Interview last name attribute", QA.UnicodeUTF8)
         self.f_years_str = QA.translate("InterviewStartGui", "years", "Number of years fishing attribute", QA.UnicodeUTF8)
-        self.f_comm_fish_str = QA.translate("InterviewStartGui", "inc_f_comm", "Percent income from commercial fishing attribute", QA.UnicodeUTF8)
-        self.f_comm_sport_str = QA.translate("InterviewStartGui", "inc_f_sprt", "Percent income from sport fishing attribute", QA.UnicodeUTF8)
-        self.f_private_fish_str = QA.translate("InterviewStartGui", "inc_f_priv", "Percent income from private fishing attribute", QA.UnicodeUTF8)
-        self.f_ecotourism_str = QA.translate("InterviewStartGui", "inc_ecotou", "Percent income from ecotourism attribute", QA.UnicodeUTF8)
-        self.f_cons_science_str = QA.translate("InterviewStartGui", "inc_consci", "Percent income from conservation/scientist attribute", QA.UnicodeUTF8)
-        self.f_other_str = QA.translate("InterviewStartGui", "inc_other", "Percent income from other attribute", QA.UnicodeUTF8)
         self.income_error_str = QA.translate("InterviewStartGui", "Income Error", "", QA.UnicodeUTF8)
         self.income_value_str = QA.translate("InterviewStartGui", "Income value must be a number (no decimals)", "", QA.UnicodeUTF8)
         self.values_total_str = QA.translate("InterviewStartGui", "All Values currently total ", "First part of text that tells the user the total for all income percentages they entered", QA.UnicodeUTF8)        
