@@ -236,25 +236,23 @@ class Interview(object):
           # Fire up the previous gui again...
           textGui.show()
       else:                         
-          file_prefix = 'fname_lname_' + QString(self.currentStep) + '_' + QString(self.capturedTextType).replace(' ','_').toLower()
+          file_prefix = self.first_name_str+'_'+ self.last_name_str+'_'+ QString(self.currentStep) + '_' + QString(self.capturedTextType).replace(' ','_').toLower()
           file_prefix_obj = QString(file_prefix)
           file_name = QString("%s" % file_prefix_obj)
           self.parent.statusbar.showMessage(self.writing_text_str)
           qd=QFileDialog()
           qd.DontConfirmOverwrite = True
-          file_type_filter = QString("Plain Text (*.txt)")
+          file_type_filter = QString("Plain Text (*.csv)")
           f2=qd.getSaveFileName(self.mainwindow, self.save_text_str, file_name, file_type_filter)
-          
-          # Check to see if the shapefile has been saved
-          if f2.count(".txt")==0:
-            # If the user cancels...
-            textGui.show()
+
+          #Check for correct extension and add if necessary
+          if f2.count(".csv")==0:
+            f2 = f2 + ".csv"              
             
-          # check to see if the user tried to overwrite an txt file of the same name
-          elif os.path.isfile(f2):
+          # check to see if the user tried to overwrite an csv file of the same name
+          if os.path.isfile(f2):
             # Currently we don't suport overwriting, so return to same dialog
             write_string = QString(f2)
-            # this translation is not found perhaps due to line number or order of excution...
             capture_string = QString(self.overwrite_support_str + write_string)
             self.parent.statusbar.showMessage(capture_string)
             textGui.show()
@@ -262,15 +260,26 @@ class Interview(object):
               f = f2
               write_string = QString(f)
               file = open(write_string, 'w')
-              file.write(self.capturedText)
+              line1 = []
+              line2 = []
+
+              for index,value in enumerate(self.interviewInfo2):
+                line1.append(str(value[0]))
+                line2.append(str(value[1]))
+              
+              line1.append(str('other_text'))
+              line2.append(str(self.capturedText))
+
+              #file.write(self.capturedText)
+              file.write(', '.join(line1)+'\n')
+              file.write(', '.join(line2))
+
               file.close()
               capture_string = QString(self.other_info_save_str + write_string)
               self.parent.statusbar.showMessage(capture_string)
               # reset values to prepare for another save...
               self.capturedText = []
               #self.capturedTextType = []
-              textGui.show()
-
 
   # End interview dialog
   def saveShapes(self, drawGui):
@@ -320,7 +329,7 @@ class Interview(object):
             for index,value in enumerate(self.interviewInfo2):
               fields[index] = QgsField(value[0], QVariant.String)
 
-            fields[index+1] = QgsField(self.f_gear_inc_str, QVariant.String)              
+            fields[index+1] = QgsField(self.f_gear_inc_str, QVariant.String)
             fields[index+2] = QgsField(self.f_pennies_str, QVariant.Int)
             fields[index+3] = QgsField(self.f_income_str, QVariant.String)
             fields[index+4] = QgsField(self.f_species_str, QVariant.String)
@@ -345,7 +354,8 @@ class Interview(object):
                 for index,value in enumerate(self.interviewInfo2):
                   fet.addAttribute(index, QVariant(value[1]))
 
-                fet.addAttribute(index+1, QVariant(self.capturedPolygonsGear[capPolyInd]))
+                if self.capturedPolygonsGear[capPolyInd]:
+                  fet.addAttribute(index+1, QVariant(self.capturedPolygonsGear[capPolyInd]))
                 fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
                 fet.addAttribute(index+3, QVariant(self.capturedPolygonsType[capPolyInd]))
                 if self.capturedPolygonsSpecies:
