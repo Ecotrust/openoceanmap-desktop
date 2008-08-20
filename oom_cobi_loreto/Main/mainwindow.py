@@ -109,7 +109,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     #self.canvas.setExtent(QgsRect(-340000,-70000,
     #                              -191000,52500))
     
-    rasterList = [["Data/Loreto_base.tif",10000,5000000]]
+    rasterList = [["Data\Loreto_base.tif",10000,5000000]]
     self.rasterBaseLayer = OOMLayer(self)
     
     first_raster = None
@@ -162,13 +162,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem(self.loreto_base_str,
                                     self.rasterBaseLayer.getCls())
 
-    vectorList = [["Data/Aprov_Susten.shp",self.study_area_str, 0,5000000],
-                  ["Data/Bathymetry.shp",self.bathymetry_str, 0,5000000],
-                  ["Data/Zona_Restringido.shp",self.restricted_zone_str, 0,5000000],
-                  ["Data/Zona_Proteccion.shp",self.protected_zone_str, 0,5000000],                                   
-                  ["Data/Zona_Proteccion_Points.shp",self.protected_point_str, 0,5000000],
-                  ["Data/Seamounts.shp",self.seamount_str, 0,5000000],
-                  ["Data/Reference_Points.shp",self.ref_point_str, 0, 300000],
+    vectorList = [["Data\Aprov_Susten.shp",self.study_area_str, 0,5000000],
+                  ["Data\Bathymetry.shp",self.bathymetry_str, 0,5000000],
+                  ["Data\Zona_Restringido.shp",self.restricted_zone_str, 0,5000000],
+                  ["Data\Zona_Proteccion.shp",self.protected_zone_str, 0,5000000],                                   
+                  ["Data\Zona_Proteccion_Points.shp",self.protected_point_str, 0,5000000],
+                  ["Data\Seamounts.shp",self.seamount_str, 0,5000000],
+                  ["Data\Reference_Points.shp",self.ref_point_str, 0, 300000],
                   ]
     for vectorSet in vectorList:
       vector = vectorSet[0]
@@ -190,30 +190,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       layer.setMaxScale(maxScale)
 
       layer_on = Qt.Checked
-      if vector == "Data/Aprov_Susten.shp":
+      if vector == "Data\Aprov_Susten.shp":
         layer.renderer().symbols()[0].setColor(QColor('Black'))
         layer.renderer().symbols()[0].setFillStyle(Qt.NoBrush)          
-      elif vector == 'Data/Zona_Proteccion_Points.shp':
+      elif vector == 'Data\Zona_Proteccion_Points.shp':
         layer.renderer().symbols()[0].setPointSize(10)
         layer.renderer().symbols()[0].setNamedPointSymbol("hard:triangle")
         layer.renderer().symbols()[0].setFillColor(QColor("Red"))
-      elif vector == 'Data/Seamounts.shp':
+      elif vector == 'Data\Seamounts.shp':
         layer.renderer().symbols()[0].setPointSize(9)
         layer.renderer().symbols()[0].setFillColor(QColor(200,84,232))
-      elif vector == "Data/Zona_Restringido.shp":
+      elif vector == "Data\Zona_Restringido.shp":
         layer.renderer().symbols()[0].setColor(QColor(220,147,0))
         layer.renderer().symbols()[0].setFillColor(QColor(255,170,0))
         layer.renderer().symbols()[0].setFillStyle(Qt.FDiagPattern)
-      elif vector == "Data/Zona_Proteccion.shp":
+      elif vector == "Data\Zona_Proteccion.shp":
         layer.renderer().symbols()[0].setColor(QColor(192,0,0))
         layer.renderer().symbols()[0].setFillColor(QColor(221,48,18))
         layer.renderer().symbols()[0].setFillStyle(Qt.Dense7Pattern)
-      elif vector == "Data/Bathymetry.shp":
+      elif vector == "Data\Bathymetry.shp":
         layer.renderer().symbols()[0].setPointSize(8)
         layer.renderer().symbols()[0].setLineWidth(1)
         layer.renderer().symbols()[0].setColor(QColor(8,83,137))
         layer_on = Qt.Unchecked
-      elif vector == 'Data/Reference_Points.shp':
+      elif vector == 'Data\Reference_Points.shp':
         layer.renderer().symbols()[0].setPointSize(9)
         layer.renderer().symbols()[0].setFillColor(QColor(255,170,0))
         layer.setLabelOn(True)
