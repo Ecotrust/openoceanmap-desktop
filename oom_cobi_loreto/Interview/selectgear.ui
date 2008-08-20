@@ -1,0 +1,236 @@
+<ui version="4.0" >
+ <author>Dane Springmeyer</author>
+ <class>SelectGear</class>
+ <widget class="QDialog" name="SelectGear" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>448</width>
+    <height>279</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Select Gear</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="minimumSize" >
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="title" >
+      <string>Fishery Sector</string>
+     </property>
+     <widget class="QLabel" name="fishery_sector_label" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>408</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize" >
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string/>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="widget" >
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QLabel" name="fishery_text" >
+        <property name="text" >
+         <string>Select Gear Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QComboBox" name="gear_comboBox" >
+        <property name="maximumSize" >
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <item>
+         <property name="text" >
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Hook and Line</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Gillnets</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Hooka (compressor)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Traps</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Trawling</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Purse Seine</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Other</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="widget_3" >
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QLabel" name="fishery_text_3" >
+        <property name="text" >
+         <string>For what % of income/interest/stake (for 
+ current fishery sector) do you use this gear type?</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="gear_perc_income" >
+        <property name="enabled" >
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize" >
+         <size>
+          <width>50</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="widget_2" >
+     <layout class="QHBoxLayout" >
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnStepFinished" >
+        <property name="minimumSize" >
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnStartShapes" >
+        <property name="minimumSize" >
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text" >
+         <string>Start Drawing Shapes</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

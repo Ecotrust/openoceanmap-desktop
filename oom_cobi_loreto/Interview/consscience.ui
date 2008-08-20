@@ -1,0 +1,248 @@
+<ui version="4.0" >
+ <author>Dane Springmeyer</author>
+ <class>ConsScience</class>
+ <widget class="QDialog" name="ConsScience" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>404</width>
+    <height>187</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Interview</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QGroupBox" name="vessel_info" >
+       <property name="font" >
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="title" >
+        <string>Conservationist / Scientist Info</string>
+       </property>
+       <layout class="QVBoxLayout" >
+        <property name="spacing" >
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" native="1" name="home_port_5" >
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="leftMargin" >
+            <number>4</number>
+           </property>
+           <property name="topMargin" >
+            <number>4</number>
+           </property>
+           <property name="rightMargin" >
+            <number>4</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="employee_text" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>Type of Specialist:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox" >
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <item>
+              <property name="text" >
+               <string/>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Academic</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Non-Governmental Organization</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Government (Municipal)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Government (State)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Government (Federal)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Other</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" native="1" name="vessel_length" >
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="leftMargin" >
+            <number>4</number>
+           </property>
+           <property name="topMargin" >
+            <number>4</number>
+           </property>
+           <property name="rightMargin" >
+            <number>4</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="add_info_text" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>Additional info:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="add_info_line" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="contextMenuPolicy" >
+              <enum>Qt::PreventContextMenu</enum>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="button_box" >
+     <layout class="QHBoxLayout" >
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnSelectConsScience" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Draw Shapes by Areas of Knowledge</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
