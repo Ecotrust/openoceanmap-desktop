@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>461</width>
+    <width>590</width>
     <height>115</height>
    </rect>
   </property>
@@ -28,7 +28,7 @@
        <widget class="QComboBox" name="comboBox" >
         <property name="maximumSize" >
          <size>
-          <width>350</width>
+          <width>450</width>
           <height>16777215</height>
          </size>
         </property>
@@ -45,27 +45,27 @@
         </item>
         <item>
          <property name="text" >
-          <string>Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)</string>
+          <string>Coastal reef ecosystem - finfish and invertebrates</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Deep Sea reefs (all finfish and invertebrates assoc. with reef seamounts)</string>
+          <string>Deep Sea reefs and seamounts - finfish and invertebrates</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Soft bottom (sand, mud, etc.)</string>
+          <string>Soft bottom - sand-mud-etc</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Small pelagics (sardines, anchovy, etc.)</string>
+          <string>Small pelagics - sardines-anchovy-etc</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Migratory fish (tuna, swordfish, sailfish, yellowtail, etc)</string>
+          <string>Migratory fish - tuna-swordfish-sailfish-yellowtail-etc</string>
          </property>
         </item>
         <item>

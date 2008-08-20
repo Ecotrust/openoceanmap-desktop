@@ -14,10 +14,22 @@
    <string>OpenOceanMap - Next Polygon</string>
   </property>
   <layout class="QGridLayout" >
-   <property name="margin" >
+   <property name="leftMargin" >
     <number>9</number>
    </property>
-   <property name="spacing" >
+   <property name="topMargin" >
+    <number>9</number>
+   </property>
+   <property name="rightMargin" >
+    <number>9</number>
+   </property>
+   <property name="bottomMargin" >
+    <number>9</number>
+   </property>
+   <property name="horizontalSpacing" >
+    <number>6</number>
+   </property>
+   <property name="verticalSpacing" >
     <number>6</number>
    </property>
    <item row="0" column="0" >
@@ -76,29 +88,16 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer" >
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
          <widget class="QLabel" name="pl_label" >
           <property name="minimumSize" >
            <size>
-            <width>50</width>
+            <width>200</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>50</width>
+            <width>250</width>
             <height>16777215</height>
            </size>
           </property>
@@ -106,6 +105,19 @@
            <string/>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
@@ -120,7 +132,7 @@
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" stdset="0" >
+        <property name="sizeHint" >
          <size>
           <width>106</width>
           <height>20</height>

@@ -91,13 +91,13 @@
          <widget class="QLabel" name="pl_label" >
           <property name="minimumSize" >
            <size>
-            <width>50</width>
+            <width>200</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>50</width>
+            <width>200</width>
             <height>16777215</height>
            </size>
           </property>
@@ -105,6 +105,19 @@
            <string/>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>

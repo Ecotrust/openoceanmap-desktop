@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawecotourism.ui'
 #
-# Created: Mon Aug  4 16:27:26 2008
+# Created: Tue Aug 19 17:08:48 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -50,10 +50,13 @@ class Ui_DrawEcotourism(object):
         self.hboxlayout.addWidget(self.line_1)
 
         self.pl_label = QtGui.QLabel(self.widget_2)
-        self.pl_label.setMinimumSize(QtCore.QSize(50,0))
-        self.pl_label.setMaximumSize(QtCore.QSize(50,16777215))
+        self.pl_label.setMinimumSize(QtCore.QSize(200,0))
+        self.pl_label.setMaximumSize(QtCore.QSize(200,16777215))
         self.pl_label.setObjectName("pl_label")
         self.hboxlayout.addWidget(self.pl_label)
+
+        spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout.addItem(spacerItem)
         self.vboxlayout.addLayout(self.hboxlayout)
         self.gridlayout.addWidget(self.widget_2,0,0,1,1)
 
@@ -63,8 +66,8 @@ class Ui_DrawEcotourism(object):
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget)
         self.hboxlayout1.setObjectName("hboxlayout1")
 
-        spacerItem = QtGui.QSpacerItem(106,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout1.addItem(spacerItem)
+        spacerItem1 = QtGui.QSpacerItem(106,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem1)
 
         self.pbnShapeFinished = QtGui.QPushButton(self.widget)
         self.pbnShapeFinished.setObjectName("pbnShapeFinished")

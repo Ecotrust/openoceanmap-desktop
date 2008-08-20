@@ -162,14 +162,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem(self.loreto_base_str,
                                     self.rasterBaseLayer.getCls())
 
-#Aprov Susten
-#Bathymetry
-#Zonas de Restringido
-#Zonas de Proteccion
-#Zonas de Proteccion (Points)
-#Seamounts
-#Ref. Points
-
     vectorList = [["Data/Aprov_Susten.shp",self.study_area_str, 0,5000000],
                   ["Data/Bathymetry.shp",self.bathymetry_str, 0,5000000],
                   ["Data/Zona_Restringido.shp",self.restricted_zone_str, 0,5000000],

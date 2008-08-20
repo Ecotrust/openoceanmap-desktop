@@ -113,6 +113,7 @@ class Interview(object):
         self.ecotourismIncome = None
         self.consScienceIncome = None
         self.otherIncome = None
+        self.interviewInfo2 = []
         self.canvas.setMapTool(self.parent.toolZoomIn)
   
   def add_attrib(self, b_name, b_value):
@@ -319,6 +320,9 @@ class Interview(object):
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Shapefiles (*.shp)")
           f2=qd.getSaveFileName(self.mainwindow, self.save_shape_str, file_name, file_type_filter)
+
+          file = open('/home/twelch/foo.txt', 'w')
+          file.write(f2)
           
           # Check to see if the shapefile has been saved
           if f2 == "":

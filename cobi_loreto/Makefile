@@ -33,11 +33,12 @@ all:
 	cd Util; $(MAKE)
 	cd Interview; $(MAKE)
 
-translate:
+build_translate:
 	qmake -project -o oom.pro
 	pylupdate4 -verbose oom.pro
-	# missing generating translating sources for .py files
-	# this will patch then manually fix paths and insert:
+	pylupdate4 -verbose  Main/*.py Interview/*.py Util/*.py Tools/*.py -ts i18n/es_MX.ts
+
+update_translate:
 	pylupdate4 -verbose  Main/*.py Interview/*.py Util/*.py Tools/*.py -ts i18n/es_MX.ts
 
 clean:

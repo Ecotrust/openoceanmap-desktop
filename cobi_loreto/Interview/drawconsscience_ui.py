@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawconsscience.ui'
 #
-# Created: Mon Aug  4 16:27:26 2008
+# Created: Tue Aug 19 17:08:48 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -49,14 +49,14 @@ class Ui_DrawConsScience(object):
         self.line_1.setObjectName("line_1")
         self.hboxlayout.addWidget(self.line_1)
 
-        spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout.addItem(spacerItem)
-
         self.pl_label = QtGui.QLabel(self.widget_2)
-        self.pl_label.setMinimumSize(QtCore.QSize(50,0))
-        self.pl_label.setMaximumSize(QtCore.QSize(50,16777215))
+        self.pl_label.setMinimumSize(QtCore.QSize(200,0))
+        self.pl_label.setMaximumSize(QtCore.QSize(250,16777215))
         self.pl_label.setObjectName("pl_label")
         self.hboxlayout.addWidget(self.pl_label)
+
+        spacerItem = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout.addItem(spacerItem)
         self.gridlayout1.addLayout(self.hboxlayout,1,0,1,1)
         self.gridlayout.addWidget(self.widget_2,0,0,1,1)
 

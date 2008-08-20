@@ -62,19 +62,26 @@ class DrawGearGui(QDialog, Ui_DrawGear):
     def fetch_species(self):
             species = []
             if self.s1.isChecked():
-                species.append(unicode(self.sharks_and_skates_str))
+                #species.append(unicode(self.sharks_and_skates_str))
+                species.append('1')
             if self.s2.isChecked():
-                species.append(unicode(self.coastal_reef_fish_str))
+                #species.append(unicode(self.coastal_reef_fish_str))
+                species.append('2')
             if self.s3.isChecked():
-                species.append(unicode(self.deep_reef_fish_str))
+                #species.append(unicode(self.deep_reef_fish_str))
+                species.append('3')
             if self.s4.isChecked():
-                species.append(unicode(self.migratory_fish_str))
+                #species.append(unicode(self.migratory_fish_str))
+                species.append('4')
             if self.s5.isChecked():
-                species.append(unicode(self.benthic_fish_str))
+                #species.append(unicode(self.benthic_fish_str))
+                species.append('5')
             if self.s6.isChecked():
-                species.append(unicode(self.shrimp_str))
+                #species.append(unicode(self.shrimp_str))
+                species.append('6')
             if self.s7.isChecked():
-                species.append(unicode(self.other_str))
+                #species.append(unicode(self.other_str))
+                species.append('7')
             species_list_text = u','.join(species)
             return species_list_text
             
