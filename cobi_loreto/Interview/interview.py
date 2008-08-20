@@ -114,7 +114,16 @@ class Interview(object):
         self.consScienceIncome = None
         self.otherIncome = None
         self.canvas.setMapTool(self.parent.toolZoomIn)
-        
+  
+  def add_attrib(self, b_name, b_value):
+    found_group = False
+    for i in range(len(self.interviewInfo2)):
+      [a_name, a_value] = self.interviewInfo2[i]
+      if a_name == b_name:
+        found_group = True
+        self.interviewInfo2[i] = [b_name,b_value]
+    if not found_group:
+      self.interviewInfo2.append([b_name,b_value])                  
         
   def nextStep(self, previousGui, msg=None):
       if not msg:
@@ -124,19 +133,23 @@ class Interview(object):
       
       capture_string = QString(msg)
       self.parent.statusbar.showMessage(capture_string)
+
+      #Reset some stuff
       self.pennies_left = 100;
       self.shapeType = None
       self.gear_inc = None
       for capPolyRub in self.capturedPolygonsRub:
           capPolyRub.reset()
+
       flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint    
       
       if self.commFishIncome:
           self.parent.statusbar.showMessage(self.start_comm_fish_str)
           self.currentStep = self.comm_fish_str
-          #Append user group name and income percent          
-          self.interviewInfo2.append([self.f_user_group_str,self.comm_fish_str])
-          self.interviewInfo2.append([self.f_percent_income_str, self.commFishIncome])
+
+          #Append user group name and income percent, overwrite if already exists          
+          self.add_attrib(self.f_user_group_str,self.comm_fish_str)
+          self.add_attrib(self.f_percent_income_str, self.commFishIncome)
           
           if S:          
               from fishery import FisheryGui
@@ -150,10 +163,11 @@ class Interview(object):
       elif self.sportFishIncome:
           self.parent.statusbar.showMessage(self.start_comm_sport_fish_str)
           self.currentStep = self.comm_sport_fish_str
+
           #Append user group name and income percent
-          self.interviewInfo2.append([self.f_user_group_str,self.comm_sport_fish_str])
-          self.interviewInfo2.append([self.f_percent_income_str, self.sportFishIncome])
-          
+          self.add_attrib(self.f_user_group_str,self.comm_sport_fish_str)
+          self.add_attrib(self.f_percent_income_str, self.sportFishIncome)
+
           if S:          
               from fishery import FisheryGui
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -166,9 +180,10 @@ class Interview(object):
       elif self.privateFishIncome:
           self.parent.statusbar.showMessage(self.start_priv_fish_str)
           self.currentStep = self.priv_fish_str
-          #Append user group name and income percent
-          self.interviewInfo2.append([self.f_user_group_str,self.priv_fish_str])
-          self.interviewInfo2.append([self.f_percent_income_str, self.privateFishIncome])
+
+          #Append user group name and income percent, overwrite if already exists          
+          self.add_attrib(self.f_user_group_str,self.priv_fish_str)
+          self.add_attrib(self.f_percent_income_str, self.privateFishIncome)
 
           if S:          
               from fishery import FisheryGui
@@ -194,9 +209,10 @@ class Interview(object):
       elif self.consScienceIncome:
           self.parent.statusbar.showMessage(self.start_consci_str)
           self.currentStep = self.consci_str
-          #Append user group name and income percent
-          self.interviewInfo2.append([self.f_user_group_str,self.consci_str])
-          self.interviewInfo2.append([self.f_percent_income_str, self.consScienceIncome])
+
+          #Append user group name and income percent, overwrite if already exists          
+          self.add_attrib(self.f_user_group_str,self.consci_str)
+          self.add_attrib(self.f_percent_income_str, self.consScienceIncome)
           
           from consscience import ConsScienceGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -206,9 +222,10 @@ class Interview(object):
       elif self.otherIncome:
           self.parent.statusbar.showMessage(self.start_other_str)
           self.currentStep = self.other_str
-          #Append user group name and income percent
-          self.interviewInfo2.append([self.f_user_group_str,self.other_str])
-          self.interviewInfo2.append([self.f_percent_income_str, self.otherIncome])
+
+          #Append user group name and income percent, overwrite if already exists          
+          self.add_attrib(self.f_user_group_str,self.other_str)
+          self.add_attrib(self.f_percent_income_str, self.otherIncome)
           
           textType = self.income_str #the type should be gathered
           # skip right to drawing...
