@@ -1,2 +1,2 @@
 # Path to local QGIS install
-qgis_prefix = "."
+qgis_prefix = "/usr"

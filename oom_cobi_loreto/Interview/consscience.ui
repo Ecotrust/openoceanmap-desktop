@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>404</width>
+    <width>454</width>
     <height>187</height>
    </rect>
   </property>
@@ -57,13 +57,13 @@
             <widget class="QLabel" name="employee_text" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>200</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>200</width>
                <height>16777215</height>
               </size>
              </property>
@@ -152,13 +152,13 @@
             <widget class="QLabel" name="add_info_text" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>200</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>200</width>
                <height>16777215</height>
               </size>
              </property>

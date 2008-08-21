@@ -1,0 +1,69 @@
+<html>
+<body>
+<h3>Shapefile Attribute Descriptions</h3>
+<h4>General Attributes</h4>
+<p>Interviewing for any of the user groups will produce shapefiles with these attributes.</p>
+<table border='1'>
+<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
+<tr><td>id</td><td>Shape ID, unique only to shapefile</td><td>Shape</td></tr>
+<tr><td>f_name</td><td>Interviewee first name</td><td>Interview</td></tr>
+<tr><td>l_name</td><td>Interviewee last name</td><td>Interview</td></tr>
+<tr><td>age</td><td>Interviewee Age</td><td>Interview</td></tr>
+<tr><td>gender</td><td>Interviewee Gender</td><td>Interview</td></tr>
+<tr><td>city</td><td>Interviewee City</td><td>Interview</td></tr>
+<tr><td>date</td><td>Interview Date</td><td>Interview</td></tr>
+<tr><td>i_f_name</td><td>Interviewer first name</td><td>Interview</td></tr>
+<tr><td>i_l_name</td><td>Interviewer last name</td><td>Interview</td></tr>
+<tr><td>years</td><td>Years working here</td><td>Interview</td></tr>
+<tr><td>user_grp</td><td>Current user group</td><td>User Group</td></tr>
+<tr><td>grp_income</td><td>Percent of income/interest/stake in current user group</td><td>User Group</td></tr>
+<tr><td>Pennies</td><td>Number of pennies placed on this shape out of 100</td><td>Shape</td></tr>
+</table>
+
+<h4>Fishery Attributes</h4>
+<p>Interviews for any of the three fishing user groups will produce shapefiles with these attributes.
+<table border='1'>
+<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
+<tr><td>v_len</td><td>Vessel length</td><td>Fishery user group</td></tr>
+<tr><td>v_motor</td><td>Vessel motor (horsepower)</td><td>Fishery user group</td></tr>
+<tr><td>haul_cap</td><td>Vessel haul capacity (kilograms)</td><td>Fishery user group</td></tr>
+<tr><td>v_homep</td><td>Vessel homeport</td><td>Fishery user groups</td></tr>
+<tr><td>landp_1</td><td>Launch port 1</td><td>Fishery user groups</td></tr>
+<tr><td>landp_2</td><td>Launch port 2</td><td>Fishery user groups</td></tr>
+<tr><td>landp_3</td><td>Launch port 3</td><td>Fishery user groups</td></tr>
+<tr><td>landp_4</td><td>Launch port 4</td><td>Fishery user groups</td></tr>
+<tr><td>gear_type</td><td>Fishing gear type used in this shape</td><td>Gear type, 1 or more per fishing user group</td></tr>
+<tr><td>gear_income</td><td>Percentage of income associated with this gear type</td><td>Gear type, 1 or more per fishing user group</td></tr>
+<tr><td>species</td><td>Species caught within this shape or fishing ground.  Represented as a numeric value.  1 - Sharks and Skates, 2 - Coastal Reef Fish, 3 - Deep Reef Fish, 4 - Migratory Fish, 5 - Benthic Fish, 6 - Shrimp, 7 - Other</td><td>Shape</td></tr>
+</table>
+
+<h4>Ecotourism Attributes</h4>
+<p>Interviews for the ecotourism user group will produce shapefiles with these attributes.</p>
+<table border='1'>
+<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
+<tr><td>emp_type</td><td>Type of employee</td><td>Ecotourism user group</td></tr>
+<tr><td>v_len</td><td>Tourism vessel length</td><td>Ecotourism user group</td></tr>
+<tr><td>v_motor</td><td>Tourism vessel motor (horsepower)</td><td>Ecotourism user group</td></tr>
+<tr><td>v_cap</td><td>Tourism vessel capacity (people)</td><td>Ecotourism user group</td></tr>
+<tr><td>v_homep</td><td>Tourism vessel homeport</td><td>Ecotourism user group</td></tr>
+<tr><td>workers</td><td>Numbers of workers for company</td><td>Ecotourism user group</td></tr>
+<tr><td>gear_type</td><td>Type of tourism activities</td><td>Ecotourism user group</td></tr>
+</table>
+
+<h4>Conservation/Scientist Attributes</h4>
+<p>Interviews for the conservationist/scientist user group will produce shapefiles with these attributes.</p>
+<table border='1'>
+<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
+<tr><td>focus</td><td>Type of specialist</td><td>Conserv/sci user group</td></tr>
+<tr><td>add_info</td><td>Additional information about their specialty</td><td>Conserv/sci user group</td></tr>
+<tr><td>gear_type</td><td>Area of Knowledge</td><td>Conserv/sci user group</td></tr>
+</table>
+
+<h4>Conservation/Scientist Attributes</h4>
+<p>Interviews in this user group are typically done in addition to that of other user groups and is simply a way to describe briefly any other forms of income a person might have.  Interviewing in this user group will produce a comma-separated value (CSV) text file instead of a shapefile since no shapes need to be captured.</p>
+<table border='1'>
+<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
+<tr><td>other_txt</td><td>Description of ther types of income that the interviewer earns</td><td>Other user group</td></tr>
+</table
+</body>
+</html>
