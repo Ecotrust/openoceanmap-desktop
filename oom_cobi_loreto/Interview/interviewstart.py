@@ -55,20 +55,18 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.retranslate()
 
     def on_pbnNextWindow_released(self):
-        interviewInfo2 = self.parent.interviewInfo2        
-        # interviewee group
-        interviewInfo2.append([self.f_first_name_str, self.interviewee_first_name_line.text()])
-        self.parent.first_name = self.interviewee_first_name_line.text().toLower()
-        interviewInfo2.append([self.f_last_name_str, self.interviewee_last_name_line.text()])
-        self.parent.last_name = self.interviewee_last_name_line.text().toLower()
-        interviewInfo2.append([self.f_age_str, self.age_line.text()])
-        interviewInfo2.append([self.f_gender_str, self.gender_comboBox.currentText()])
-        interviewInfo2.append([self.f_city_str, self.city_line.text()])
-        # interviewer group
-        interviewInfo2.append([self.f_date_str, self.date_line.text()])        
-        interviewInfo2.append([self.f_int_first_name_str, self.interviewer_first_name_line.text()])
-        interviewInfo2.append([self.f_int_last_name_str, self.interviewer_last_name_line.text()])
-        interviewInfo2.append([self.f_years_str, self.years_spinBox.text()])
+	self.parent.add_attrib(self.f_first_name_str, self.interviewee_first_name_line.text())
+	self.parent.first_name = self.interviewee_first_name_line.text().toLower()
+	self.parent.add_attrib(self.f_last_name_str, self.interviewee_last_name_line.text())
+	self.parent.last_name = self.interviewee_last_name_line.text().toLower()
+	
+	self.parent.add_attrib(self.f_age_str, self.age_line.text())
+	self.parent.add_attrib(self.f_gender_str, self.gender_comboBox.currentText())
+	self.parent.add_attrib(self.f_city_str, self.city_line.text())
+	self.parent.add_attrib(self.f_date_str, self.date_line.text())
+	self.parent.add_attrib(self.f_int_first_name_str, self.interviewer_first_name_line.text())
+	self.parent.add_attrib(self.f_int_last_name_str, self.interviewer_last_name_line.text())
+	self.parent.add_attrib(self.f_years_str, self.years_spinBox.text())
 
         if self.comm_fish_line:
             if not strIsInt(self.comm_fish_line.text()):

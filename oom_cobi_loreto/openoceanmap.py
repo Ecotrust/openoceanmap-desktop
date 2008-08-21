@@ -97,11 +97,9 @@ class OpenOceanMap(QObject):
     self.language_dialog.hide()
     self.language_dialog.deleteLater()
     
-    print language
     if language == 'english': 
       #Switch back to english, this is a hack
       self.app.removeTranslator(self.appTranslator)
-      print "translator removed"
       self.win.retranslateUi(self.win)
 
 #Start us off

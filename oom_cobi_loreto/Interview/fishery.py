@@ -56,16 +56,16 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.currentStep = fishery_sector
         self.fishery_sector_label.setText(unicode(self.currentStep))
         self.retranslate()
-
+ 
     def append_data(self):
-        self.parent.interviewInfo2.append([self.f_v_len_str, self.vessel_length_line.text()])
-        self.parent.interviewInfo2.append([self.f_v_motor_str, self.vessel_motor_line.text()])
-        self.parent.interviewInfo2.append([self.f_haul_cap_str, self.haul_capacity_line.text()])
-        self.parent.interviewInfo2.append([self.f_v_homep_str, self.home_port_line.text()])
-        self.parent.interviewInfo2.append([self.f_landp_1_str, self.landing_port_line.text()])
-        self.parent.interviewInfo2.append([self.f_landp_2_str, self.landing_port_line_2.text()])
-        self.parent.interviewInfo2.append([self.f_landp_3_str, self.landing_port_line_3.text()])
-        self.parent.interviewInfo2.append([self.f_landp_4_str, self.landing_port_line_4.text()])
+        self.parent.add_attrib(self.f_v_len_str, self.vessel_length_line.text())
+        self.parent.add_attrib(self.f_v_motor_str, self.vessel_motor_line.text())
+        self.parent.add_attrib(self.f_haul_cap_str, self.haul_capacity_line.text())
+        self.parent.add_attrib(self.f_v_homep_str, self.home_port_line.text())
+        self.parent.add_attrib(self.f_landp_1_str, self.landing_port_line.text())
+        self.parent.add_attrib(self.f_landp_2_str, self.landing_port_line_2.text())
+        self.parent.add_attrib(self.f_landp_3_str, self.landing_port_line_3.text())
+        self.parent.add_attrib(self.f_landp_4_str, self.landing_port_line_4.text())        
 
     def on_pbnSelectGear_released(self):        
         if self.currentStep == self.comm_fish_str:

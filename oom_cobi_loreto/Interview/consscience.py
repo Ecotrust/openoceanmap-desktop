@@ -58,9 +58,8 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
 
     def on_pbnSelectConsScience_released(self):
 
-        interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append([self.f_focus_str, self.comboBox.currentText()])
-        interviewInfo2.append([self.f_add_info_str, self.add_info_line.text()])
+        self.parent.add_attrib(self.f_focus_str, self.comboBox.currentText())
+        self.parent.add_attrib(self.f_add_info_str, self.add_info_line.text())
 
         if not self.comboBox.currentText():
             QMessageBox.warning(self, self.spec_error_str, self.choose_specialist_str)

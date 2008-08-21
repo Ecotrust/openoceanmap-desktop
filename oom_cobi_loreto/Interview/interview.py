@@ -199,8 +199,8 @@ class Interview(object):
           self.parent.statusbar.showMessage(self.start_eco_str)
           self.currentStep = self.eco_str
           #Append user group name and income percent
-          self.interviewInfo2.append([self.f_user_group_str,self.eco_str])
-          self.interviewInfo2.append([self.f_percent_income_str, self.ecotourismIncome])
+          self.add_attrib(self.f_user_group_str,self.eco_str)
+          self.add_attrib(self.f_percent_income_str, self.ecotourismIncome)
           
           from ecotourism import EcotourismGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -320,10 +320,7 @@ class Interview(object):
           qd.DontConfirmOverwrite = True
           file_type_filter = QString("Shapefiles (*.shp)")
           f2=qd.getSaveFileName(self.mainwindow, self.save_shape_str, file_name, file_type_filter)
-
-          file = open('/home/twelch/foo.txt', 'w')
-          file.write(f2)
-          
+         
           # Check to see if the shapefile has been saved
           if f2 == "":
             drawGui.previousGui.show()              

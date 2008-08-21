@@ -132,7 +132,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
       if self.srs == None:
         self.srs = layer.srs()
-        #pdb.set_trace()
         print 'mainwindow: setting srs from layers.srs()...'
         print self.srs.epsg().__str__()
       
@@ -220,7 +219,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         layer.label().setLabelField(0,0)
         layer.label().layerAttributes().setSize(8,1)
         layer.label().layerAttributes().setAlignment(3)
-        print layer.label().layerAttributes().offsetType()        
         layer.label().layerAttributes().setOffset(4,2,1)
         layer.label().layerAttributes().setBufferEnabled(True)
         layer.label().layerAttributes().setBufferColor(QColor(250,250,250))

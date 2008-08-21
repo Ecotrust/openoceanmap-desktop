@@ -55,14 +55,15 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         self.retranslate()
 
     def on_pbnSelectEcotourism_released(self):
-
-        interviewInfo2 = self.parent.interviewInfo2
-        interviewInfo2.append([self.f_emp_type_str, self.comboBox.currentText()])
-        interviewInfo2.append([self.f_v_len_str, self.vessel_length_line.text()])
-        interviewInfo2.append([self.f_v_motor_str, self.vessel_motor_line.text()])
-        interviewInfo2.append([self.f_v_cap_str, self.haul_capacity_line.text()])
-        interviewInfo2.append([self.f_v_homep_str, self.home_port_line.text()])
-        interviewInfo2.append([self.f_trabajos_str, self.workers_line.text()])
+    	import pdb
+    	pdb.set_trace()
+    
+	self.parent.add_attrib(self.f_emp_type_str, self.comboBox.currentText())
+	self.parent.add_attrib(self.f_v_len_str, self.vessel_length_line.text())
+	self.parent.add_attrib(self.f_v_motor_str, self.vessel_motor_line.text())
+	self.parent.add_attrib(self.f_v_cap_str, self.haul_capacity_line.text())
+	self.parent.add_attrib(self.f_v_homep_str, self.home_port_line.text())
+	self.parent.add_attrib(self.f_trabajos_str, self.workers_line.text())
 
         if not self.comboBox.currentText():
             QMessageBox.warning(self, self.emp_error_str, self.choose_activity_str)
