@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ecotourism.ui'
 #
-# Created: Mon Aug  4 16:27:25 2008
+# Created: Mon Aug 25 13:26:21 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_Ecotourism(object):
     def setupUi(self, Ecotourism):
         Ecotourism.setObjectName("Ecotourism")
-        Ecotourism.resize(QtCore.QSize(QtCore.QRect(0,0,404,371).size()).expandedTo(Ecotourism.minimumSizeHint()))
+        Ecotourism.resize(QtCore.QSize(QtCore.QRect(0,0,478,371).size()).expandedTo(Ecotourism.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(Ecotourism)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -44,8 +44,8 @@ class Ui_Ecotourism(object):
         self.hboxlayout1.setObjectName("hboxlayout1")
 
         self.employee_text = QtGui.QLabel(self.home_port_5)
-        self.employee_text.setMinimumSize(QtCore.QSize(150,0))
-        self.employee_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.employee_text.setMinimumSize(QtCore.QSize(220,0))
+        self.employee_text.setMaximumSize(QtCore.QSize(220,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -72,8 +72,8 @@ class Ui_Ecotourism(object):
         self.hboxlayout2.setObjectName("hboxlayout2")
 
         self.vessel_length_text = QtGui.QLabel(self.vessel_length)
-        self.vessel_length_text.setMinimumSize(QtCore.QSize(150,0))
-        self.vessel_length_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.vessel_length_text.setMinimumSize(QtCore.QSize(220,0))
+        self.vessel_length_text.setMaximumSize(QtCore.QSize(220,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -107,8 +107,8 @@ class Ui_Ecotourism(object):
         self.hboxlayout3.setObjectName("hboxlayout3")
 
         self.vessel_motor_text = QtGui.QLabel(self.vessel_length_2)
-        self.vessel_motor_text.setMinimumSize(QtCore.QSize(150,0))
-        self.vessel_motor_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.vessel_motor_text.setMinimumSize(QtCore.QSize(220,0))
+        self.vessel_motor_text.setMaximumSize(QtCore.QSize(220,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -141,8 +141,8 @@ class Ui_Ecotourism(object):
         self.hboxlayout4.setObjectName("hboxlayout4")
 
         self.haul_capacity_text = QtGui.QLabel(self.vessel_length_3)
-        self.haul_capacity_text.setMinimumSize(QtCore.QSize(150,0))
-        self.haul_capacity_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.haul_capacity_text.setMinimumSize(QtCore.QSize(220,0))
+        self.haul_capacity_text.setMaximumSize(QtCore.QSize(220,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -175,8 +175,8 @@ class Ui_Ecotourism(object):
         self.hboxlayout5.setObjectName("hboxlayout5")
 
         self.home_port_text = QtGui.QLabel(self.home_port)
-        self.home_port_text.setMinimumSize(QtCore.QSize(150,0))
-        self.home_port_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.home_port_text.setMinimumSize(QtCore.QSize(220,0))
+        self.home_port_text.setMaximumSize(QtCore.QSize(220,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)

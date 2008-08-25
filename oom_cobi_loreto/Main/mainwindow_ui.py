@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Tue Aug 19 15:39:21 2008
+# Created: Mon Aug 25 13:26:45 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.toolBox.setObjectName("toolBox")
 
         self.legend_page = QtGui.QWidget()
-        self.legend_page.setGeometry(QtCore.QRect(0,0,375,464))
+        self.legend_page.setGeometry(QtCore.QRect(0,0,375,496))
         self.legend_page.setObjectName("legend_page")
 
         self.gridlayout1 = QtGui.QGridLayout(self.legend_page)
@@ -52,11 +52,6 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName("groupBox")
         self.gridlayout1.addWidget(self.groupBox,0,0,1,1)
         self.toolBox.addItem(self.legend_page,"")
-
-        self.debug_page = QtGui.QWidget()
-        self.debug_page.setGeometry(QtCore.QRect(0,0,375,464))
-        self.debug_page.setObjectName("debug_page")
-        self.toolBox.addItem(self.debug_page,"")
 
         self.frameMap = QtGui.QFrame(self.splitter)
 
@@ -138,13 +133,12 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuUtilities.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.toolBox.setCurrentIndex(1)
+        self.toolBox.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "OpenOceanMap", None, QtGui.QApplication.UnicodeUTF8))
         self.toolBox.setItemText(self.toolBox.indexOf(self.legend_page), QtGui.QApplication.translate("MainWindow", "Legend", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.debug_page), QtGui.QApplication.translate("MainWindow", "Debug", None, QtGui.QApplication.UnicodeUTF8))
         self.menuInterview.setTitle(QtGui.QApplication.translate("MainWindow", "Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMap.setTitle(QtGui.QApplication.translate("MainWindow", "Map", None, QtGui.QApplication.UnicodeUTF8))
         self.menuUtilities.setTitle(QtGui.QApplication.translate("MainWindow", "Utilities", None, QtGui.QApplication.UnicodeUTF8))

@@ -57,7 +57,7 @@
         </size>
        </property>
        <property name="currentIndex" >
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="legend_page" >
         <property name="geometry" >
@@ -65,7 +65,7 @@
           <x>0</x>
           <y>0</y>
           <width>375</width>
-          <height>464</height>
+          <height>496</height>
          </rect>
         </property>
         <attribute name="label" >
@@ -101,19 +101,6 @@
           </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QWidget" name="debug_page" >
-        <property name="geometry" >
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>375</width>
-          <height>464</height>
-         </rect>
-        </property>
-        <attribute name="label" >
-         <string>Debug</string>
-        </attribute>
        </widget>
       </widget>
       <widget class="QFrame" name="frameMap" >

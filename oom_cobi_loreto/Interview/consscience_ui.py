@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'consscience.ui'
 #
-# Created: Mon Aug  4 16:27:25 2008
+# Created: Mon Aug 25 13:26:21 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_ConsScience(object):
     def setupUi(self, ConsScience):
         ConsScience.setObjectName("ConsScience")
-        ConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,404,187).size()).expandedTo(ConsScience.minimumSizeHint()))
+        ConsScience.resize(QtCore.QSize(QtCore.QRect(0,0,454,187).size()).expandedTo(ConsScience.minimumSizeHint()))
 
         self.vboxlayout = QtGui.QVBoxLayout(ConsScience)
         self.vboxlayout.setObjectName("vboxlayout")
@@ -44,8 +44,8 @@ class Ui_ConsScience(object):
         self.hboxlayout1.setObjectName("hboxlayout1")
 
         self.employee_text = QtGui.QLabel(self.home_port_5)
-        self.employee_text.setMinimumSize(QtCore.QSize(150,0))
-        self.employee_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.employee_text.setMinimumSize(QtCore.QSize(200,0))
+        self.employee_text.setMaximumSize(QtCore.QSize(200,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -73,8 +73,8 @@ class Ui_ConsScience(object):
         self.hboxlayout2.setObjectName("hboxlayout2")
 
         self.add_info_text = QtGui.QLabel(self.vessel_length)
-        self.add_info_text.setMinimumSize(QtCore.QSize(150,0))
-        self.add_info_text.setMaximumSize(QtCore.QSize(150,16777215))
+        self.add_info_text.setMinimumSize(QtCore.QSize(200,0))
+        self.add_info_text.setMaximumSize(QtCore.QSize(200,16777215))
 
         font = QtGui.QFont()
         font.setPointSize(10)
