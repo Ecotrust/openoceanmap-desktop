@@ -99,7 +99,7 @@ class InnoScript:
         print >> ofi, r"DefaultGroupName=%s" % self.name
         print >> ofi, r"VersionInfoVersion=%s" % self.version
         print >> ofi, r"VersionInfoCompany=Ecotrust"
-        print >> ofi, r"VersionInfoDescription=OpenOceanMap COBI Loreto"
+        print >> ofi, r"VersionInfoDescription=OpenOceanMap Loreto Bay"
         print >> ofi, r"VersionInfoCopyright=Ecotrust"
         print >> ofi, r"AppCopyright=Ecotrust"
         print >> ofi, r"InfoAfterFile=U:\dev\cobi_loreto\README.TXT"
@@ -128,6 +128,7 @@ class InnoScript:
             print >> ofi, r'Name: "{group}\%s"; Filename: "{app}\%s"; WorkingDir: {app}' % \
                   (self.name, path)                  
         print >> ofi, 'Name: "{group}\Uninstall %s"; Filename: "{uninstallexe}"' % self.name
+        print >> ofi, r'Name: "{group}\Documentation - English"; Filename: "{app}\Documentation\English_Manual.html"'        
 
     def compile(self):
         try:
@@ -171,7 +172,7 @@ class build_installer(py2exe):
         dist_dir = self.dist_dir
         
         # create the Installer, using the files py2exe has created.
-        script = InnoScript("OpenOceanMap Cobi Loreto",
+        script = InnoScript("OpenOceanMap Loreto Bay",
                             lib_dir,
                             dist_dir,
                             self.windows_exe_files,
@@ -199,11 +200,8 @@ options = {
 }
 
 matplotlib_data_files = tree('lib\matplotlibdata')
-doc_data_files = tree('documentation')
 base_files = ("",["LICENSE.txt", "README.txt"])
-data_files = matplotlib_data_files + doc_data_files
-
-data_files = tree('Data') + tree('plugins') + tree('Interviews') + tree('resources')
+data_files = tree('Data') + tree('plugins') + tree('Interviews') + tree('resources') + tree('Documentation')
 
 setup(
     options = options,
