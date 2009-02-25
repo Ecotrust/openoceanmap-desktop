@@ -64,7 +64,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
 
-        self.parent.nextStep(self)
+        self.parent.nextStep()
         
         #mc = self.parent.canvas      
         #self.p = PolygonTool(mc,self.parent)

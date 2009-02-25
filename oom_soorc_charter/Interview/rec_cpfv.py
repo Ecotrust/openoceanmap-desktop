@@ -119,7 +119,7 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         print "Total: "+str(total)
 
         self.hide()
-        self.parent.next_fishery();
+        self.parent.nextStep();
 
     def on_pbnCancel_clicked(self):
         self.close()

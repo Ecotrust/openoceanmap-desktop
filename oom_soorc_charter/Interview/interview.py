@@ -59,7 +59,8 @@ class Interview(QObject):
     self.capturedPolygonsRub = []
     
     self.pennies_left = 100
-    self.cpfv_completed = False
+    self.phase = ["start","cpfv","shapes","clipped_shapes","finished"]
+    self.phase_index = 0
 
     # Interview info to write in shapefile
     self.interviewInfo = []
@@ -70,14 +71,31 @@ class Interview(QObject):
     wnd = InterviewStartGui(self,flags)
     wnd.show()
 
-  def nextStep(self, previousGui, msg="Leaving Step"):
-      if not self.cpfv_completed:
-          new_status = "Starting CPFV interview"
+  def nextStep(self):
+      self.phase_index = self.phase_index + 1
+      if self.phase[ self.phase_index ] == "cpfv":
+          new_status = "Starting Charter Boat interview"
           self.parent.statusbar.showMessage(new_status)
-          self.currentStep = 'CPFV'
           from rec_cpfv import RecCpfvGui
           wnd = RecCpfvGui(self)
           wnd.show()
+          
+      elif self.phase[ self.phase_index ] == "shapes":
+          new_status = "Drawing full extent fisheries"
+          self.parent.statusbar.showMessage(new_status)
+          self.next_fishery()
+          
+      elif self.phase[ self.phase_index ] == "clipped_shapes":
+          new_status = "Assigning pennies to clipped fishery shapes"
+          self.parent.statusbar.showMessage(new_status)
+          self.fisheries = self.clipped_fisheries
+          self.next_fishery()
+          
+      else: # "finished"
+          new_status = "Interview complete"
+          self.parent.statusbar.showMessage(new_status)
+          self.end_interview()
+      
 
   # End interview dialog for current fishery, then start a new one
   def end_fishery(self):
@@ -182,18 +200,13 @@ class Interview(QObject):
       
       self.next_fishery()
 
-  def next_fishery(self):        
+  def next_fishery(self): 
       if len(self.fisheries) > 0:
         (fishery,value) = self.fisheries.pop()
         wnd = SelectFisheryGui(self, fishery, value)
         wnd.show()
       else:
-        if len(self.clipped_fisheries) > 0:
-            (fishery,value) = self.clipped_fisheries.pop()
-            wnd = SelectFisheryGui(self, fishery, value)
-            wnd.show()
-        else:
-            self.end_interview()
-
+        self.nextStep()
+        
   def end_interview(self):
       QMessageBox.warning(self.mainwindow, "Completed", "Interview Completed")
