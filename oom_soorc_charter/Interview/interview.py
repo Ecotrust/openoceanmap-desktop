@@ -79,7 +79,6 @@ class Interview(QObject):
           wnd = RecCpfvGui(self)
           wnd.show()
 
-      self.interviewInfo2.append(["user_group",self.currentStep])
   # End interview dialog for current fishery, then start a new one
   def end_fishery(self):
       if len(self.capturedPolygons) == 0:
@@ -153,7 +152,8 @@ class Interview(QObject):
             #Pull out
             return
 
-          layer.label().setLabelField(QgsLabel.Text, 36)
+          penny_label_index = len(self.interviewInfo2) + 1
+          layer.label().setLabelField(QgsLabel.Text, penny_label_index)
           layer.setLabelOn(True)
           
           # Set the transparency for the layer

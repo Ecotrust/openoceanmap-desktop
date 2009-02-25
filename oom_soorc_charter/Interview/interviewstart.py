@@ -61,8 +61,6 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
         interviewInfo2.append(["mood", self.mood_line.text()])
 
-        interviewInfo2.append(["cpfv_inc", self.cpfv_income_line.text()])
-
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
 
