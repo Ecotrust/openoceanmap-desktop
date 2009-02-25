@@ -188,7 +188,12 @@ class Interview(QObject):
         wnd = SelectFisheryGui(self, fishery, value)
         wnd.show()
       else:
-        self.end_interview()
+        if len(self.clipped_fisheries) > 0:
+            (fishery,value) = self.clipped_fisheries.pop()
+            wnd = SelectFisheryGui(self, fishery, value)
+            wnd.show()
+        else:
+            self.end_interview()
 
   def end_interview(self):
       QMessageBox.warning(self.mainwindow, "Completed", "Interview Completed")
