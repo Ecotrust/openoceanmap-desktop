@@ -36,6 +36,7 @@ from qgis.gui import *
 # Custom Tools
 from interviewstart import *
 from selectfishery import *
+from nextclippedpolygon import *
 #from Tools.polygontool import *
 #from nextpolygon import *
 # UI specific includes
@@ -67,6 +68,7 @@ class Interview(QObject):
     self.interviewInfo2 = []
     
     self.userLayers = {}
+    self.clipped_fisheries = []
     
     # Reset previous polygons
     flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -122,8 +124,10 @@ class Interview(QObject):
           for index,value in enumerate(self.interviewInfo2):
             fields[index] = QgsField(value[0], QVariant.String)
 
-          fields[index+1] = QgsField("fishery", QVariant.String)          
-          fields[index+2] = QgsField("pennies", QVariant.Int)
+          self.fisheryIndex = index+1
+          self.penniesIndex = index+2
+          fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
+          fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -152,8 +156,8 @@ class Interview(QObject):
               for index,value in enumerate(self.interviewInfo2):
                 fet.addAttribute(index, QVariant(value[1]))
                 
-              fet.addAttribute(index+1, QVariant(self.capturedPolygonsFishery[capPolyInd]))
-              fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              fet.addAttribute(self.fisheryIndex, QVariant(self.capturedPolygonsFishery[capPolyInd]))
+              fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -235,6 +239,13 @@ class Interview(QObject):
         self.parent.statusbar.showMessage(error_string)
         self.interviewEnd()
         return
+       
+      # set up our field names for our new clipped shapefile
+      fields = {}
+      for index,value in enumerate(self.interviewInfo2):
+        fields[index] = QgsField(value[0], QVariant.String) 
+      fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
+      fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
       
       # iterate over the user fishery layers
       for working_filename, working_layer in self.userLayers.items():
@@ -249,16 +260,16 @@ class Interview(QObject):
         allAttrs = provider.allAttributesList()
         provider.select(allAttrs)
         
-        writer = QgsVectorFileWriter( clip_filename, "UTF-8", {}, QGis.WKBPolygon, self.mainwindow.srs)
+        writer = QgsVectorFileWriter( clip_filename, "UTF-8", fields, QGis.WKBPolygon, self.mainwindow.srs)
         if writer.hasError() != QgsVectorFileWriter.NoError:
             print "Error when creating clip_temp shapefile: ", writer.hasError()
 
         feat = QgsFeature()
         while provider.getNextFeature(feat):
             clipped_feat = QgsFeature()
-            clipped_feat.setGeometry( study_region_feat.geometry().intersection( feat.geometry() )) # or difference?
+            clipped_feat.setAttributeMap( feat.attributeMap() )
+            clipped_feat.setGeometry( study_region_feat.geometry().intersection( feat.geometry() )) 
             writer.addFeature( clipped_feat )
-            
         del writer
         
         # display the clipped layer
@@ -276,11 +287,21 @@ class Interview(QObject):
         #Add item to legend
         self.mainwindow.legend.addVectorLegendItem("clipped layer", [cl])
         
+        # keep a pointer to this layer where we can easily reference it later
+        self.clipped_fisheries.append(( feat.attributeMap()[index+1].toString(), clip_layer ))
+        
         
       # iterate over each remaining shape in each layer and assign pennies
+      self.next_clipped_fishery()
       
-      #self.fisheries = self.clipped_fisheries
-      #self.next_fishery()
+      
+  def next_clipped_fishery(self):
+      if len(self.clipped_fisheries) > 0:
+        (fishery,clipped_layer) = self.clipped_fisheries.pop()
+        wnd = NextClippedPolygonGui(self, fishery, clipped_layer)
+        wnd.show()
+      else:
+        self.nextStep()
         
   def end_interview(self):
       QMessageBox.warning(self.mainwindow, "Completed", "Interview Completed")

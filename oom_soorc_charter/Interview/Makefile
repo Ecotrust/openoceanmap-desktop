@@ -27,7 +27,7 @@
 #---------------------------------------------------------------------
 
 
-all: interviewstart_ui.py nextpolygon_ui.py selectfishery_ui.py rec_cpfv_ui.py
+all: interviewstart_ui.py nextpolygon_ui.py selectfishery_ui.py rec_cpfv_ui.py nextclippedpolygon_ui.py
 
 clean:
 	rm -f *_ui.py
@@ -45,3 +45,6 @@ selectfishery_ui.py: selectfishery.ui
 
 rec_cpfv_ui.py: rec_cpfv.ui
 	pyuic4 -o rec_cpfv_ui.py rec_cpfv.ui
+    
+nextclippedpolygon_ui.py: nextclippedpolygon.ui
+	pyuic4 -o nextclippedpolygon_ui.py nextclippedpolygon.ui
