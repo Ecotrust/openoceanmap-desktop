@@ -65,19 +65,6 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
 
-
-            
-    def on_pbnFisheryFinished_released(self):
-        self.parent.pennies_left = 100;            
-        self.close()        
-        
-        # add some features
-        for capPolyRub in self.parent.capturedPolygonsRub:
-            capPolyRub.reset()
-        self.parent.parent.interviewInProgress = False
-        self.parent.parent.interviewSaveTool = None
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
-
     def nextPolygon(self):        
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = NextPolygonGui(self.parent,flags,self.parent.pennies_left)
@@ -153,6 +140,10 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
         self.close()
         self.parent.end_fishery()
+       
+        # turn off the draw tool
+        self.parent.canvas.setMapTool(self.parent.parent.toolPan)
+        
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 

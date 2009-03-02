@@ -124,4 +124,5 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
     def on_pbnCancel_clicked(self):
         self.close()
         # stop interview process
-        self.parent.resetInterview("Cancelled out of interview")
+        self.parent.parent.statusbar.showMessage("Cancelled out of interview")
+        self.parent.resetInterview()
