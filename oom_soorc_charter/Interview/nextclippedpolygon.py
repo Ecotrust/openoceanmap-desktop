@@ -73,7 +73,13 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
             return
         elif int(num_pennies) > self.parent.pennies_left:
             QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
-            return            
+            return       
+        elif self.parent.pennies_left - int(num_pennies) < self.num_shapes - self.shape_index:
+            QMessageBox.warning(self, "Pennies Error", "You must leave enough pennies to assign at least 1 to each of the remaining shapes")
+            return 
+        elif self.shape_index == self.shape_index and self.parent.pennies_left > int(num_pennies):
+            QMessageBox.warning(self, "Pennies Error", "This is your last shape -- you must use all your pennies")
+            return 
         else:
             self.parent.pennies_left = self.parent.pennies_left - int(num_pennies)
             self.feat.changeAttribute( self.parent.penniesIndex, QVariant( int(num_pennies) ))

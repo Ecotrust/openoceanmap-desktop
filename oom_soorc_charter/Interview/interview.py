@@ -180,9 +180,8 @@ class Interview(QObject):
             clip_layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
             self.userLayers[ str(f) ] = clip_layer
 
-          penny_label_index = len(self.interviewInfo2) + 1
-          layer.label().setLabelField(QgsLabel.Text, penny_label_index)
-          layer.setLabelOn(True)
+          #layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
+          #layer.setLabelOn(True)
           
           # Set the transparency for the layer
           layer.setTransparency(190)
@@ -197,9 +196,7 @@ class Interview(QObject):
           #Add item to legend
           self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
           
-          
-
-      ## Reset the rubberbands and then clear out the fishery related objects
+      # Reset the rubberbands and then clear out the fishery related objects
       for capPolyRub in self.capturedPolygonsRub:
         capPolyRub.reset()
       self.capturedPolygons = []
@@ -224,9 +221,10 @@ class Interview(QObject):
       # load the study region shapefile to clip against
       study_region_layer = QgsVectorLayer("Data/study_region.shp", "study region", "ogr")
       if not study_region_layer.isValid(): 
-        error_string = QString("ERROR reading study region file: could not load file")
+        error_string = QString("ERROR reading study region file: could not load file Data/study_region.shp")
+        QMessageBox.warning(self.mainwindow, "Error - interview aborted", error_string)
         self.parent.statusbar.showMessage(error_string)
-        self.interviewEnd()
+        self.resetInterview()
         return
         
       study_region_provider = study_region_layer.getDataProvider()
@@ -235,9 +233,10 @@ class Interview(QObject):
       study_region_feat = QgsFeature()
       
       if not study_region_provider.getNextFeature( study_region_feat ):
-        error_string = QString("ERROR reading study region file: no features found")
+        error_string = QString("ERROR reading study region file Data/study_region.shp: no features found")
+        QMessageBox.warning(self.mainwindow, "Error - interview aborted", error_string)
         self.parent.statusbar.showMessage(error_string)
-        self.interviewEnd()
+        self.resetInterview()
         return
        
       # set up our field names for our new clipped shapefile
@@ -273,7 +272,8 @@ class Interview(QObject):
         del writer
         
         # display the clipped layer
-        clip_layer = QgsVectorLayer( clip_filename, "clipped_layer", "ogr" )
+        info = QFileInfo(QString(clip_filename))
+        clip_layer = QgsVectorLayer( clip_filename, info.completeBaseName(), "ogr" )
                    
         clip_layer.setTransparency(190)
       
@@ -283,13 +283,15 @@ class Interview(QObject):
         cl = QgsMapCanvasLayer(clip_layer)
         self.mainwindow.layers.insert(0,cl)
         self.canvas.setLayerSet(self.mainwindow.layers)
+        
+        clip_layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
+        clip_layer.setLabelOn(True)
           
         #Add item to legend
-        self.mainwindow.legend.addVectorLegendItem("clipped layer", [cl])
+        self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
         
         # keep a pointer to this layer where we can easily reference it later
         self.clipped_fisheries.append(( feat.attributeMap()[index+1].toString(), clip_layer ))
-        
         
       # iterate over each remaining shape in each layer and assign pennies
       self.next_clipped_fishery()
@@ -303,5 +305,11 @@ class Interview(QObject):
       else:
         self.nextStep()
         
+        
   def end_interview(self):
       QMessageBox.warning(self.mainwindow, "Completed", "Interview Completed")
+      self.resetInterview()
+      
+      
+  def resetInterview(self):
+      return
