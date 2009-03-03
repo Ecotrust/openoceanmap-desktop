@@ -258,8 +258,18 @@ class Interview(QObject):
             clipped_feat = QgsFeature()
             clipped_feat.setAttributeMap( feat.attributeMap() )
             clipped_feat.changeAttribute( self.originalShapeIndex, QVariant( feat.featureId() ))
-            clipped_feat.setGeometry( study_region_feat.geometry().intersection( feat.geometry() )) 
-            writer.addFeature( clipped_feat )
+            new_geometry = study_region_feat.geometry().intersection( feat.geometry() )
+            if not new_geometry.isMultipart():
+                clipped_feat.setGeometry( new_geometry ) 
+                writer.addFeature( clipped_feat )
+            else:
+                for poly in new_geometry.asMultiPolygon():
+                    sub_feat = QgsFeature()
+                    sub_feat.setAttributeMap( feat.attributeMap() )
+                    sub_feat.changeAttribute( self.originalShapeIndex, QVariant( feat.featureId() ))
+                    sub_feat.setGeometry( QgsGeometry().fromPolygon(poly) ) 
+                    writer.addFeature( sub_feat )
+                    
         del writer
         
         # display the clipped layer
