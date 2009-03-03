@@ -111,8 +111,10 @@ class Interview(QObject):
 
           self.fisheryIndex = index+1
           self.penniesIndex = index+2
+          self.originalShapeIndex = index+3
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
+          fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -143,6 +145,7 @@ class Interview(QObject):
                 
               fet.addAttribute(self.fisheryIndex, QVariant(self.capturedPolygonsFishery[capPolyInd]))
               fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
+              fet.addAttribute(self.originalShapeIndex, QVariant(-1))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -231,6 +234,7 @@ class Interview(QObject):
         fields[index] = QgsField(value[0], QVariant.String) 
       fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
       fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
+      fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
       
       # iterate over the user fishery layers
       for (working_filename, working_layer) in self.userLayers:
@@ -253,6 +257,7 @@ class Interview(QObject):
         while provider.getNextFeature(feat):
             clipped_feat = QgsFeature()
             clipped_feat.setAttributeMap( feat.attributeMap() )
+            clipped_feat.changeAttribute( self.originalShapeIndex, QVariant( feat.featureId() ))
             clipped_feat.setGeometry( study_region_feat.geometry().intersection( feat.geometry() )) 
             writer.addFeature( clipped_feat )
         del writer
@@ -260,6 +265,15 @@ class Interview(QObject):
         # display the clipped layer
         info = QFileInfo(QString(clip_filename))
         clip_layer = QgsVectorLayer( clip_filename, info.completeBaseName(), "ogr" )
+        
+        #prov = clip_layer.getDataProvider()
+        #allattr = prov.allAttributesList()
+        #prov.select(allattr)
+        #feat2 = QgsFeature()
+        #print "just after save"
+        #while prov.getNextFeature(feat2):
+        #    print str(feat2.featureId())+": "+feat2.attributeMap()[45].toString()
+        
                    
         clip_layer.setTransparency(190)
       

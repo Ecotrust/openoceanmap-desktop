@@ -50,10 +50,6 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
         self.parent = parent
         self.fishery = fishery
         self.layer = layer
-        self.feat = QgsFeature()
-        self.provider = layer.getDataProvider()
-        allAttrs = self.provider.allAttributesList()
-        self.provider.select(allAttrs)
         
         self.fishery_line.setText(self.fishery)
         self.parent.currentFishery = self.fishery
@@ -61,6 +57,14 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
         
         self.shape_index = 1
         self.num_shapes = layer.featureCount()
+        
+        #prov = self.layer.getDataProvider()
+        #allattr = prov.allAttributesList()
+        #prov.select(allattr)
+        #feat2 = QgsFeature()
+        #print "init next clipped polygon ui"
+        #while prov.getNextFeature(feat2):
+        #    print str(feat2.featureId())+": "+feat2.attributeMap()[45].toString()
         
         self.next_clipped_polygon()
         
@@ -105,7 +109,14 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
         self.shapeNum_label.setText("Shape #" + str(self.shape_index) + " of " + str(self.num_shapes))
         
         # select the next shape (layer's feature iterator gets reset by something -- prob setSelectedFeatures -- so we need to count it up from 0 each time)
+        self.feat = QgsFeature()
+        self.provider = self.layer.getDataProvider()
+        allAttrs = self.provider.allAttributesList()
+        self.provider.select(allAttrs)
+        
+        #print "iterating in next_clipped_polygon"
         for counter in range( self.shape_index ):
             self.provider.getNextFeature(self.feat)
+            #print str(self.feat.featureId())+": "+self.feat.attributeMap()[45].toString()
             
         self.layer.setSelectedFeatures([self.feat.featureId()])
