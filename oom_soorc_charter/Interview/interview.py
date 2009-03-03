@@ -51,24 +51,9 @@ class Interview(QObject):
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
-    self.currentFishery = None
-        
-    # A place to store polygons we capture
-    self.capturedPolygons = []
-    self.capturedPolygonsFishery = []
-    self.capturedPolygonsPennies = []
-    self.capturedPolygonsRub = []
-    
-    self.pennies_left = 100
     self.phase = ["start","cpfv","shapes","clipped_shapes","finished"]
-    self.phase_index = 0
-
-    # Interview info to write in shapefile
-    self.interviewInfo = []
-    self.interviewInfo2 = []
     
-    self.userLayers = {}
-    self.clipped_fisheries = []
+    self.resetInterview()
     
     # Reset previous polygons
     flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -177,8 +162,8 @@ class Interview(QObject):
             
           # track user-added layers for later clipping
           if self.phase[ self.phase_index ] == "shapes":
-            clip_layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
-            self.userLayers[ str(f) ] = clip_layer
+            new_layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
+            self.userLayers.append((str(f), new_layer))
 
           #layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
           #layer.setLabelOn(True)
@@ -209,6 +194,7 @@ class Interview(QObject):
       
       self.next_fishery()
 
+      
   def next_fishery(self): 
       if len(self.fisheries) > 0:
         (fishery,value) = self.fisheries.pop()
@@ -247,7 +233,7 @@ class Interview(QObject):
       fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
       
       # iterate over the user fishery layers
-      for working_filename, working_layer in self.userLayers.items():
+      for (working_filename, working_layer) in self.userLayers:
       
         # set up new shapefile name (append "_c") to prev filename
         ext_index = working_filename.find( ".shp" )
@@ -292,16 +278,23 @@ class Interview(QObject):
         
         # keep a pointer to this layer where we can easily reference it later
         self.clipped_fisheries.append(( feat.attributeMap()[index+1].toString(), clip_layer ))
+        #print "appending "+feat.attributeMap()[index+1].toString()
         
       # iterate over each remaining shape in each layer and assign pennies
       self.next_clipped_fishery()
       
       
   def next_clipped_fishery(self):
-      if len(self.clipped_fisheries) > 0:
-        (fishery,clipped_layer) = self.clipped_fisheries.pop()
-        wnd = NextClippedPolygonGui(self, fishery, clipped_layer)
-        wnd.show()
+      if self.curr_clip_fishery < len(self.clipped_fisheries):
+        (fishery,clipped_layer) = self.clipped_fisheries[self.curr_clip_fishery]
+        self.curr_clip_fishery = self.curr_clip_fishery + 1
+        if clipped_layer.featureCount() > 0:
+            wnd = NextClippedPolygonGui(self, fishery, clipped_layer)
+            wnd.show()
+        else:
+            QMessageBox.warning(None, "No shapes remaining", "None of the shapes in the "+fishery+" fishery were in the study region.")
+            self.next_clipped_fishery()
+
       else:
         self.nextStep()
         
@@ -312,4 +305,22 @@ class Interview(QObject):
       
       
   def resetInterview(self):
+      self.currentFishery = None
+        
+      # A place to store polygons we capture
+      self.capturedPolygons = []
+      self.capturedPolygonsFishery = []
+      self.capturedPolygonsPennies = []
+      self.capturedPolygonsRub = []
+    
+      self.pennies_left = 100
+      self.phase_index = 0
+      
+      # Interview info to write in shapefile
+      self.interviewInfo = []
+      self.interviewInfo2 = []
+    
+      self.userLayers = []
+      self.clipped_fisheries = []
+      self.curr_clip_fishery = 0
       return

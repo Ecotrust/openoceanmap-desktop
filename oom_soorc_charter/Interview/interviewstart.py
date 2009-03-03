@@ -72,8 +72,13 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         #self.saveTool = mc.mapTool()
         #mc.setMapTool(self.p)
             
-    def on_pbnCancel_clicked(self):
-        self.close()
+    def on_pbnCancel_released(self):
+        cancel_choice = QMessageBox.question(self, "Really quit this interview?", "Are you sure you want to cancel and lose any entered data for this interview?", QMessageBox.Yes, QMessageBox.No)
+        
+        if cancel_choice == QMessageBox.Yes:
+            self.close()
+            self.parent.resetInterview()
+            self.parent.parent.interviewInProgress = False
 
     #def nextPolygon(self):
     #    flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 

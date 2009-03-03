@@ -121,8 +121,12 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         self.hide()
         self.parent.nextStep();
 
-    def on_pbnCancel_clicked(self):
-        self.close()
-        # stop interview process
-        self.parent.parent.statusbar.showMessage("Cancelled out of interview")
-        self.parent.resetInterview()
+    def on_pbnCancel_released(self):
+        cancel_choice = QMessageBox.question(self, "Really quit this interview?", "Are you sure you want to cancel and lose any entered data for this interview?", QMessageBox.Yes, QMessageBox.No)
+        
+        if cancel_choice == QMessageBox.Yes:
+            # stop interview process
+            self.close()
+            self.parent.parent.statusbar.showMessage("Cancelled out of interview")
+            self.parent.resetInterview()
+            self.parent.parent.interviewInProgress = False

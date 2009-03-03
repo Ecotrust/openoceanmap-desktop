@@ -68,12 +68,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # We need to initialize the window sizes
     self.splitter.setSizes([175,800])
 
-    ## A place to store polygons we capture
+    # A place to store polygons we capture
     #self.capturedPolygons = []
     #self.capturedPolygonsPennies = []
     #self.capturedPolygonsRub = []
     #
-    ## Interview info to write in shapefile
+    # Interview info to write in shapefile
     #self.interviewInfo = []
 
     self.layers = []
@@ -98,25 +98,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # Set units to meters
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
-    # set extent to the extent of our layer
-#    self.canvas.setExtent(QgsRect(-79658,-648073,
-#                                  299310,-350475))
-    #self.canvas.setExtent(QgsRect(-74785,-634619,294487,-363979))
     
-    rasterList = [["Data/Scsr_zm1a_rect.tif",800001,5000000],
-                  ["Data/Scsr_zm2a_rect.tif",300001,800000],
-                  ["Data/Scsr_zm3b_rect.tif",40000,300000],    
-                  ["Data/ScsrNautChart.tif",40000,1200000]]    
+    rasterList = [["Data/Trin2Blanco.tif"], #,40000,1200000], # these are just the scale vals from the prev set -- we aren't using them here
+                  ["Data/SwWash.tif"], #,800001,5000000],
+                  ["Data/Yaq2Col.tif"], #,300001,800000],
+                  ["Data/Blanco2Yaq.tif"] #,40000,300000]   
+                  ]    
     
     self.rasterBaseLayer = OOMLayer(self)
     
-    first_raster = None
+    extent_raster = None
     for i in range(len(rasterList)):
       rasterSet = rasterList[i]
       
       raster = rasterSet[0]
-      minScale = rasterSet[1]
-      maxScale = rasterSet[2]
+      #minScale = rasterSet[1]
+      #maxScale = rasterSet[2]
       
       info = QFileInfo(QString(raster))
       
@@ -124,20 +121,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
       if i == 0:
-        first_raster = layer        
+        extent_raster = layer        
 
       if self.srs == None:
         self.srs = layer.srs()
       
       # Set the scales
-      layer.setScaleBasedVisibility(True)
-      layer.setMinScale(minScale)
-      layer.setMaxScale(maxScale)
+      #layer.setScaleBasedVisibility(True)
+      #layer.setMinScale(minScale)
+      #layer.setMaxScale(maxScale)
       
       if not layer.isValid():
         capture_string = QString("ERROR reading file")
         self.statusbar.showMessage(capture_string)
         return
+        
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
       
@@ -147,11 +145,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.canvas.setLayerSet(self.layers)
       self.rasterBaseLayer.addLayerItem(layer,cl)
       
-      #Add one base raster item to legend
+    #Add one base raster item to legend
     self.legend.addRasterLegendItem("NOAA ENC",
                                     self.rasterBaseLayer.getCls())
 
-    vectorList = [["Data/Scsr_oom_ctours.shp",60000,1200000]]
+    '''vectorList = [["Data/Scsr_oom_ctours.shp",60000,1200000]]
     vectorList = []
     for vectorSet in vectorList:
       vector = vectorSet[0]
@@ -198,9 +196,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       if vector == "Data/Scsr_oom_ctours.shp.shp":
           self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
       else:
-          self.legend.addVectorLegendItem("Contours", [cl])
+          self.legend.addVectorLegendItem("Contours", [cl])'''
       
-    self.canvas.setExtent(first_raster.extent())    
+    self.canvas.setExtent(extent_raster.extent())    
 
 class OOMLayer(object):
   def __init__(self, parent):
