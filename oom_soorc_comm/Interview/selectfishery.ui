@@ -6,16 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>550</width>
-    <height>166</height>
+    <width>460</width>
+    <height>168</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap - Start Fishery</string>
+   <string>OpenOceanMap - Select Fishery</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout" name="verticalLayout_5" >
    <item>
-    <layout class="QHBoxLayout" >
+    <layout class="QHBoxLayout" name="horizontalLayout_3" >
      <item>
       <widget class="QWidget" native="1" name="widget" >
        <layout class="QHBoxLayout" >
@@ -38,91 +38,204 @@
          <widget class="QLabel" name="fishery_text" >
           <property name="minimumSize" >
            <size>
-            <width>300</width>
+            <width>160</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>300</width>
+            <width>160</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Current Fishery :</string>
+           <string>Select Fishery :</string>
           </property>
          </widget>
         </item>
         <item>
-         <spacer>
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="fishery_line" >
-          <property name="minimumSize" >
-           <size>
-            <width>200</width>
-            <height>0</height>
-           </size>
-          </property>
+         <widget class="QComboBox" name="fishery_comboBox" >
+          <item>
+           <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>California Halibut (Hook &amp; Line)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>California Halibut (Set Gill Net)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Coastal Pelagics (Seine)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Deep Nearshore Rockfish (Hook &amp; Line)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Lobster (Trap)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore Rockfish (Hook &amp; Line)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore Rockfish (Trap)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Pacific Bonito (Seine)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Rock Crab (Trap)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sablefish (Hook &amp; Line)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sablefish (Trap)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sea Cucumber (Diving)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Shark (Drift Gill Net)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Shark (Set Gill Net)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Spot Prawn (Trap)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Squid (Seine)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Swordfish (Drift Gill Net)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Swordfish (Harpoon or Spear)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Swordfish (Hook &amp; Line)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Thornyhead (Hook &amp; Line)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Tuna (Hook &amp; Line)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Tuna (Seine)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Urchin (Diving)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>White Seabass (Hook-Line)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>White Seabass (Gillnet)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Other (Note the species)</string>
+           </property>
+          </item>
          </widget>
         </item>
        </layout>
       </widget>
      </item>
+     <item>
+      <spacer name="horizontalSpacer_2" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" >
+    <layout class="QHBoxLayout" name="horizontalLayout_5" >
      <item>
       <widget class="QWidget" native="1" name="widget_3" >
-       <layout class="QHBoxLayout" >
+       <layout class="QHBoxLayout" name="horizontalLayout_4" >
         <item>
          <widget class="QLabel" name="label" >
           <property name="minimumSize" >
            <size>
-            <width>300</width>
+            <width>160</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>300</width>
+            <width>160</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Percentage of trips (annually) you said were associated with this fishery:</string>
-          </property>
-          <property name="wordWrap" >
-           <bool>true</bool>
+           <string>Percent income from this fishery:</string>
           </property>
          </widget>
         </item>
         <item>
-         <spacer>
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="perc_trip_fish_line" >
+         <widget class="QLineEdit" name="fish_perc_income" >
           <property name="minimumSize" >
            <size>
             <width>40</width>
@@ -137,43 +250,62 @@
           </property>
          </widget>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
+       <zorder>fish_perc_income</zorder>
+       <zorder>label</zorder>
+       <zorder>horizontalSpacer_3</zorder>
       </widget>
      </item>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" >
+    <layout class="QHBoxLayout" name="horizontalLayout_2" >
      <item>
       <widget class="QWidget" native="1" name="widget_2" >
        <layout class="QHBoxLayout" >
         <property name="spacing" >
          <number>6</number>
         </property>
-        <property name="leftMargin" >
-         <number>9</number>
-        </property>
-        <property name="topMargin" >
-         <number>9</number>
-        </property>
-        <property name="rightMargin" >
-         <number>9</number>
-        </property>
-        <property name="bottomMargin" >
+        <property name="margin" >
          <number>9</number>
         </property>
         <item>
-         <spacer>
+         <spacer name="horizontalSpacer" >
           <property name="orientation" >
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0" >
            <size>
             <width>40</width>
             <height>20</height>
            </size>
           </property>
          </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbnFisheryFinished" >
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text" >
+           <string>Finished With Interview</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pbnStartShapes" >
@@ -188,6 +320,9 @@
          </widget>
         </item>
        </layout>
+       <zorder>pbnFisheryFinished</zorder>
+       <zorder>pbnStartShapes</zorder>
+       <zorder>horizontalSpacer</zorder>
       </widget>
      </item>
     </layout>

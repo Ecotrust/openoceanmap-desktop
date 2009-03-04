@@ -46,25 +46,39 @@ from Util.common_functions import *
 import sys
 
 class SelectFisheryGui(QDialog, Ui_SelectFishery):
-    def __init__(self, parent, fishery, trip_value):
+    def __init__(self, parent):
         QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent
-        self.fishery = fishery
-        self.trip_value = trip_value
+        
 
-        self.fishery_line.setText(self.fishery)
-        self.perc_trip_fish_line.setText(self.trip_value)
-        self.parent.currentFishery = self.fishery
-
-    def on_pbnStartShapes_released(self):        
+    def on_pbnStartShapes_released(self):    
+        #Get fishery value
+        cur_fishery = self.fishery_comboBox.currentText()
+        if not cur_fishery:
+            QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
+            return 
+        else:
+            self.parent.currentFishery = cur_fishery    
+            
+        self.parent.currentFisheryIncome = self.fish_perc_income.text()
+    
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
         self.saveTool = mc.mapTool()
         mc.setMapTool(self.p)
+        
+        
+    def on_pbnFisheryFinished_released(self):
+        self.parent.pennies_left = 100;            
+        self.close()        
+        
+        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+        self.parent.nextStep()
 
+        
     def nextPolygon(self):        
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = NextPolygonGui(self.parent,flags,self.parent.pennies_left)
@@ -98,6 +112,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+            self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
             
         self.close()
 
@@ -140,6 +155,8 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+            self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
+            
         self.close()
         self.parent.end_fishery()
        

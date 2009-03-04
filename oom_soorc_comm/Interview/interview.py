@@ -51,7 +51,7 @@ class Interview(QObject):
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
-    self.phase = ["start","cpfv","shapes","finished"]
+    self.phase = ["start","shapes","finished"]
     
     self.resetInterview()
     
@@ -62,14 +62,7 @@ class Interview(QObject):
 
   def nextStep(self):
       self.phase_index = self.phase_index + 1
-      if self.phase[ self.phase_index ] == "cpfv":
-          new_status = "Starting Charter Boat interview"
-          self.parent.statusbar.showMessage(new_status)
-          from rec_cpfv import RecCpfvGui
-          wnd = RecCpfvGui(self)
-          wnd.show()
-          
-      elif self.phase[ self.phase_index ] == "shapes":
+      if self.phase[ self.phase_index ] == "shapes":
           new_status = "Drawing full extent fisheries"
           self.parent.statusbar.showMessage(new_status)
           self.next_fishery()
@@ -108,10 +101,12 @@ class Interview(QObject):
           self.penniesIndex = index+2
           self.originalShapeIndex = index+3
           self.habitatIndex = index+4
+          self.fisheryIncIndex = index+5
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
+          fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -144,6 +139,7 @@ class Interview(QObject):
               fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               fet.addAttribute(self.originalShapeIndex, QVariant(-1))
               fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
+              fet.addAttribute(self.fisheryIncIndex, QVariant(self.capturedPolygonsFisheryIncome[capPolyInd]))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -188,6 +184,7 @@ class Interview(QObject):
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
+      self.capturedPolygonsFisheryIncome = []
       
       #Reset penny count
       self.pennies_left = 100
@@ -197,12 +194,9 @@ class Interview(QObject):
 
       
   def next_fishery(self): 
-      if len(self.fisheries) > 0:
-        (fishery,value) = self.fisheries.pop()
-        wnd = SelectFisheryGui(self, fishery, value)
-        wnd.show()
-      else:
-        self.nextStep()
+      wnd = SelectFisheryGui(self)
+      wnd.show()
+        
         
   def create_clipped_layer(self, working_filename, working_layer):
       # load the study region shapefile to clip against
@@ -234,6 +228,7 @@ class Interview(QObject):
       fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
       fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
       fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
+      fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
       
       
       # set up new shapefile name (append "_c") to prev filename
@@ -315,6 +310,7 @@ class Interview(QObject):
       
   def resetInterview(self):
       self.currentFishery = None
+      self.currentFisheryIncome = 0
         
       # A place to store polygons we capture
       self.capturedPolygons = []
@@ -322,6 +318,7 @@ class Interview(QObject):
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
+      self.capturedPolygonsFisheryIncome = []
     
       self.pennies_left = 100
       self.phase_index = 0
