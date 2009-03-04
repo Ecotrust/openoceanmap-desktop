@@ -301,6 +301,7 @@ class Interview(QObject):
         
         clip_layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
         clip_layer.setLabelOn(True)
+        clip_layer.renderer().setSelectionColor(QColor(0,255,100))
           
         #Add item to legend
         self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
