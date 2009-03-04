@@ -98,7 +98,7 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
             self.parent.pennies_left = 100;    
             self.close()
             self.layer.setSelectedFeatures([])
-            self.parent.next_clipped_fishery()
+            self.parent.next_fishery()
         else:
             self.next_clipped_polygon()
             

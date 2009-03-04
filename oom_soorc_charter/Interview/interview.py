@@ -51,7 +51,7 @@ class Interview(QObject):
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
-    self.phase = ["start","cpfv","shapes","clipped_shapes","finished"]
+    self.phase = ["start","cpfv","shapes","finished"]
     
     self.resetInterview()
     
@@ -73,11 +73,6 @@ class Interview(QObject):
           new_status = "Drawing full extent fisheries"
           self.parent.statusbar.showMessage(new_status)
           self.next_fishery()
-          
-      elif self.phase[ self.phase_index ] == "clipped_shapes":
-          new_status = "Assigning pennies to clipped fishery shapes"
-          self.parent.statusbar.showMessage(new_status)
-          self.start_clipped_phase()
 
       else: # "finished"
           new_status = "Interview complete"
@@ -167,9 +162,7 @@ class Interview(QObject):
             return
             
           # track user-added layers for later clipping
-          if self.phase[ self.phase_index ] == "shapes":
-            new_layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
-            self.userLayers.append((str(f), new_layer))
+          new_layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
 
           #layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
           #layer.setLabelOn(True)
@@ -198,8 +191,9 @@ class Interview(QObject):
       
       #Reset penny count
       self.pennies_left = 100
-      
-      self.next_fishery()
+
+      # create a shapefile clipped to the study region and reassign pennies
+      self.create_clipped_layer( str(f), new_layer )
 
       
   def next_fishery(self): 
@@ -210,7 +204,7 @@ class Interview(QObject):
       else:
         self.nextStep()
         
-  def start_clipped_phase(self):
+  def create_clipped_layer(self, working_filename, working_layer):
       # load the study region shapefile to clip against
       study_region_layer = QgsVectorLayer("Data/Soorc_sr.shp", "study region", "ogr")
       if not study_region_layer.isValid(): 
@@ -241,93 +235,78 @@ class Interview(QObject):
       fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
       fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
       
-      # iterate over the user fishery layers
-      for (working_filename, working_layer) in self.userLayers:
       
-        # set up new shapefile name (append "_c") to prev filename
-        ext_index = working_filename.find( ".shp" )
-        clip_filename = working_filename[0:ext_index]
-        clip_filename = clip_filename + "_c.shp"
-        
-        # clip each shape in the layer to study region
-        provider = working_layer.getDataProvider()
-        allAttrs = provider.allAttributesList()
-        provider.select(allAttrs)
-        
-        writer = QgsVectorFileWriter( clip_filename, "UTF-8", fields, QGis.WKBPolygon, self.mainwindow.srs)
-        if writer.hasError() != QgsVectorFileWriter.NoError:
-            print "Error when creating clip_temp shapefile: ", writer.hasError()
+      # set up new shapefile name (append "_c") to prev filename
+      ext_index = working_filename.find( ".shp" )
+      clip_filename = working_filename[0:ext_index]
+      clip_filename = clip_filename + "_c.shp"
 
-        feat = QgsFeature()
-        while provider.getNextFeature(feat):
-            clipped_feat = QgsFeature()
-            clipped_feat.setAttributeMap( feat.attributeMap() )
-            clipped_feat.changeAttribute( self.originalShapeIndex, QVariant( feat.featureId() ))
-            new_geometry = study_region_feat.geometry().intersection( feat.geometry() )
-            if not new_geometry.isMultipart():
-                clipped_feat.setGeometry( new_geometry ) 
-                writer.addFeature( clipped_feat )
-            else:
-                for poly in new_geometry.asMultiPolygon():
-                    sub_feat = QgsFeature()
-                    sub_feat.setAttributeMap( feat.attributeMap() )
-                    sub_feat.changeAttribute( self.originalShapeIndex, QVariant( feat.featureId() ))
-                    sub_feat.setGeometry( QgsGeometry().fromPolygon(poly) ) 
-                    writer.addFeature( sub_feat )
+      # clip each shape in the layer to study region
+      provider = working_layer.getDataProvider()
+      allAttrs = provider.allAttributesList()
+      provider.select(allAttrs)
+
+      writer = QgsVectorFileWriter( clip_filename, "UTF-8", fields, QGis.WKBPolygon, self.mainwindow.srs)
+      if writer.hasError() != QgsVectorFileWriter.NoError:
+          print "Error when creating clip_temp shapefile: ", writer.hasError()
+
+      feat = QgsFeature()
+      while provider.getNextFeature(feat):
+          clipped_feat = QgsFeature()
+          clipped_feat.setAttributeMap( feat.attributeMap() )
+          clipped_feat.changeAttribute( self.originalShapeIndex, QVariant( feat.featureId() ))
+          new_geometry = study_region_feat.geometry().intersection( feat.geometry() )
+          if not new_geometry.isMultipart():
+              clipped_feat.setGeometry( new_geometry ) 
+              writer.addFeature( clipped_feat )
+          else:
+              for poly in new_geometry.asMultiPolygon():
+                  sub_feat = QgsFeature()
+                  sub_feat.setAttributeMap( feat.attributeMap() )
+                  sub_feat.changeAttribute( self.originalShapeIndex, QVariant( feat.featureId() ))
+                  sub_feat.setGeometry( QgsGeometry().fromPolygon(poly) ) 
+                  writer.addFeature( sub_feat )
                     
-        del writer
+      del writer
         
-        # display the clipped layer
-        info = QFileInfo(QString(clip_filename))
-        clip_layer = QgsVectorLayer( clip_filename, info.completeBaseName(), "ogr" )
+      # display the clipped layer
+      info = QFileInfo(QString(clip_filename))
+      clip_layer = QgsVectorLayer( clip_filename, info.completeBaseName(), "ogr" )
         
-        #prov = clip_layer.getDataProvider()
-        #allattr = prov.allAttributesList()
-        #prov.select(allattr)
-        #feat2 = QgsFeature()
-        #print "just after save"
-        #while prov.getNextFeature(feat2):
-        #    print str(feat2.featureId())+": "+feat2.attributeMap()[45].toString()
+      #prov = clip_layer.getDataProvider()
+      #allattr = prov.allAttributesList()
+      #prov.select(allattr)
+      #feat2 = QgsFeature()
+      #print "just after save"
+      #while prov.getNextFeature(feat2):
+      #    print str(feat2.featureId())+": "+feat2.attributeMap()[45].toString()
         
                    
-        clip_layer.setTransparency(190)
+      clip_layer.setTransparency(190)
       
-        QgsMapLayerRegistry.instance().addMapLayer(clip_layer)
+      QgsMapLayerRegistry.instance().addMapLayer(clip_layer)
       
-        #set the map canvas layer set
-        cl = QgsMapCanvasLayer(clip_layer)
-        self.mainwindow.layers.insert(0,cl)
-        self.canvas.setLayerSet(self.mainwindow.layers)
+      #set the map canvas layer set
+      cl = QgsMapCanvasLayer(clip_layer)
+      self.mainwindow.layers.insert(0,cl)
+      self.canvas.setLayerSet(self.mainwindow.layers)
         
-        clip_layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
-        clip_layer.setLabelOn(True)
-        clip_layer.renderer().setSelectionColor(QColor(0,255,100))
+      clip_layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
+      clip_layer.setLabelOn(True)
+      clip_layer.renderer().setSelectionColor(QColor(0,255,100))
           
-        #Add item to legend
-        self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
+      #Add item to legend
+      self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
         
-        # keep a pointer to this layer where we can easily reference it later
-        self.clipped_fisheries.append(( feat.attributeMap()[index+1].toString(), clip_layer ))
-        #print "appending "+feat.attributeMap()[index+1].toString()
-        
-      # iterate over each remaining shape in each layer and assign pennies
-      self.next_clipped_fishery()
-      
-      
-  def next_clipped_fishery(self):
-      if self.curr_clip_fishery < len(self.clipped_fisheries):
-        (fishery,clipped_layer) = self.clipped_fisheries[self.curr_clip_fishery]
-        self.curr_clip_fishery = self.curr_clip_fishery + 1
-        if clipped_layer.featureCount() > 0:
-            wnd = NextClippedPolygonGui(self, fishery, clipped_layer)
-            wnd.show()
-        else:
-            QMessageBox.warning(None, "No shapes remaining", "None of the shapes in the "+fishery+" fishery were in the study region.")
-            self.next_clipped_fishery()
-
+      # reassign pennies to the shapes in this layer
+      fishery = feat.attributeMap()[index+1].toString()
+      if clip_layer.featureCount() > 0:
+        wnd = NextClippedPolygonGui(self, fishery, clip_layer)
+        wnd.show()
       else:
-        self.nextStep()
-        
+        QMessageBox.warning(None, "No shapes remaining", "None of the shapes in the "+fishery+" fishery were in the study region.")
+        self.next_fishery()
+          
         
   def end_interview(self):
       QMessageBox.warning(self.mainwindow, "Completed", "Interview Completed")
@@ -351,7 +330,5 @@ class Interview(QObject):
       self.interviewInfo = []
       self.interviewInfo2 = []
     
-      self.userLayers = []
-      self.clipped_fisheries = []
       self.curr_clip_fishery = 0
       return
