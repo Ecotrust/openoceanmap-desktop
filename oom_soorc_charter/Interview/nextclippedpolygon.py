@@ -107,6 +107,10 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
         # update the dialog box's labels
         self.pl_label.setText("  "+str(self.parent.pennies_left)+" left")
         self.shapeNum_label.setText("Shape #" + str(self.shape_index) + " of " + str(self.num_shapes))
+        if self.shape_index < self.num_shapes:
+            self.line_1.setText("")
+        else:
+            self.line_1.setText(str(self.parent.pennies_left))
         
         # select the next shape (layer's feature iterator gets reset by something -- prob setSelectedFeatures -- so we need to count it up from 0 each time)
         self.feat = QgsFeature()
