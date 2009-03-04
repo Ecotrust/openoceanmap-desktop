@@ -46,6 +46,11 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent
+        self.cpfv_target_tuna.setText('0')
+        self.cpfv_target_salmon.setText('0')
+        self.cpfv_target_halibut.setText('0')
+        self.cpfv_target_groundfish.setText('0')
+        self.cpfv_target_dcrab.setText('0')
 
     def on_pbnFinished_released(self):
         
@@ -61,12 +66,17 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
             cpfv_fisheries.append(('Groundfish',self.cpfv_target_groundfish.text()))
         if self.cpfv_target_dcrab.text() != '0':
             cpfv_fisheries.append(('Dungeness Crab',self.cpfv_target_dcrab.text())) 
-
+            
+        total_values = 0
         for (fishery,value) in cpfv_fisheries:
             if not strIsInt(value):
                 QMessageBox.warning(self, "Input Error", "One of your fishery percentages is not a number")
                 return 
+            total_values = total_values + int(value)
                 
+        if total_values != 100:
+            QMessageBox.warning(self, "Input Error", "Fishery percentages must add up to 100")
+            return 
                 
         # error checks complete, go ahead and add fields to data store
         self.parent.fisheries = cpfv_fisheries
@@ -115,8 +125,8 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         interviewInfo2.append(["tlen_tuna",self.cpfv_trip_len_tuna.text()])
         interviewInfo2.append(["acst_tuna",self.cpfv_angler_cost_tuna.text()])
 
-        total = sum([int(b) for (a,b) in cpfv_fisheries])
-        print "Total: "+str(total)
+        #total = sum([int(b) for (a,b) in cpfv_fisheries])
+        #print "Total: "+str(total)
 
         self.hide()
         self.parent.nextStep();

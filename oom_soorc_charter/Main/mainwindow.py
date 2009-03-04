@@ -120,7 +120,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
-      if i == 0:
+      if i == 3: # Cafe Blanco 2 Yaquino Head
         extent_raster = layer        
 
       if self.srs == None:
@@ -146,15 +146,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.rasterBaseLayer.addLayerItem(layer,cl)
       
     #Add one base raster item to legend
-    self.legend.addRasterLegendItem("NOAA ENC",
+    self.legend.addRasterLegendItem("Nautical Charts",
                                     self.rasterBaseLayer.getCls())
+    
 
-    '''vectorList = [["Data/Scsr_oom_ctours.shp",60000,1200000]]
-    vectorList = []
+    # now add the study region as a vector layer
+    vectorList = [["Data/Soorc_sr.shp"]] #,60000,1200000]]
     for vectorSet in vectorList:
       vector = vectorSet[0]
-      minScale = vectorSet[1]
-      maxScale = vectorSet[2]
+      #minScale = vectorSet[1]
+      #maxScale = vectorSet[2]
       
       info = QFileInfo(QString(vector))
       # create layer
@@ -166,37 +167,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         return
       
       # Set the scales
-      layer.setScaleBasedVisibility(True)
-      layer.setMinScale(minScale)
-      layer.setMaxScale(maxScale)
-
-      if vector == "Data/Scsr_oom_ctours.shp":
-        layer.renderer().symbols()[0].setPointSize(8)
-        layer.renderer().symbols()[0].setLineWidth(1.5)
-        layer.renderer().symbols()[0].setColor(QColor('Black'))
-    
-        label = layer.label()
-        print label.fields()
-        label.setLabelField(QgsLabel.Text, 3)
-        labelAt = label.layerAttributes()
-        labelAt.setBold(False)
-        labelAt.setBufferEnabled(True)
-        labelAt.setOffset(0,0,0)
-        layer.setLabelOn(False)        
+      #layer.setScaleBasedVisibility(True)
+      #layer.setMinScale(minScale)
+      #layer.setMaxScale(maxScale)
       
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
+      
+      layer.setTransparency(50)
       
       # set the map canvas layer set
       cl = QgsMapCanvasLayer(layer)
       self.layers.insert(0,cl)
       self.canvas.setLayerSet(self.layers)
-      #Add item to legend
       
-      if vector == "Data/Scsr_oom_ctours.shp.shp":
-          self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
-      else:
-          self.legend.addVectorLegendItem("Contours", [cl])'''
+      #Add item to legend
+      self.legend.addVectorLegendItem("Study Region", [cl])
       
     self.canvas.setExtent(extent_raster.extent())    
 

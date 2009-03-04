@@ -208,9 +208,9 @@ class Interview(QObject):
         
   def start_clipped_phase(self):
       # load the study region shapefile to clip against
-      study_region_layer = QgsVectorLayer("Data/study_region.shp", "study region", "ogr")
+      study_region_layer = QgsVectorLayer("Data/Soorc_sr.shp", "study region", "ogr")
       if not study_region_layer.isValid(): 
-        error_string = QString("ERROR reading study region file: could not load file Data/study_region.shp")
+        error_string = QString("ERROR reading study region file: could not load file Data/Soorc_sr.shp")
         QMessageBox.warning(self.mainwindow, "Error - interview aborted", error_string)
         self.parent.statusbar.showMessage(error_string)
         self.resetInterview()
@@ -222,7 +222,7 @@ class Interview(QObject):
       study_region_feat = QgsFeature()
       
       if not study_region_provider.getNextFeature( study_region_feat ):
-        error_string = QString("ERROR reading study region file Data/study_region.shp: no features found")
+        error_string = QString("ERROR reading study region file Data/Soorc_sr.shp: no features found")
         QMessageBox.warning(self.mainwindow, "Error - interview aborted", error_string)
         self.parent.statusbar.showMessage(error_string)
         self.resetInterview()
