@@ -96,6 +96,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
+            self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
             
         self.close()
@@ -137,6 +138,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
+            self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
         self.close()
         self.parent.end_fishery()

@@ -112,9 +112,11 @@ class Interview(QObject):
           self.fisheryIndex = index+1
           self.penniesIndex = index+2
           self.originalShapeIndex = index+3
+          self.habitatIndex = index+4
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
+          fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -146,6 +148,7 @@ class Interview(QObject):
               fet.addAttribute(self.fisheryIndex, QVariant(self.capturedPolygonsFishery[capPolyInd]))
               fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               fet.addAttribute(self.originalShapeIndex, QVariant(-1))
+              fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -191,6 +194,7 @@ class Interview(QObject):
       self.capturedPolygonsFishery = []
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
+      self.capturedPolygonsHabitat = []
       
       #Reset penny count
       self.pennies_left = 100
@@ -235,6 +239,7 @@ class Interview(QObject):
       fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
       fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
       fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
+      fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
       
       # iterate over the user fishery layers
       for (working_filename, working_layer) in self.userLayers:
@@ -336,6 +341,7 @@ class Interview(QObject):
       self.capturedPolygonsFishery = []
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
+      self.capturedPolygonsHabitat = []
     
       self.pennies_left = 100
       self.phase_index = 0
