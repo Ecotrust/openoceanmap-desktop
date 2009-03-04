@@ -80,7 +80,6 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
                 
         # error checks complete, go ahead and add fields to data store
         self.parent.fisheries = cpfv_fisheries
-        #self.parent.clipped_fisheries = copy.copy(cpfv_fisheries)
         
         interviewInfo2 = self.parent.interviewInfo2
         interviewInfo2.append(["user_group", "charter"])
