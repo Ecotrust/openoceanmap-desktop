@@ -61,8 +61,6 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         else:
             self.parent.currentFishery = cur_fishery    
             
-        self.parent.currentFisheryIncome = self.fish_perc_income.text()
-    
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
@@ -112,7 +110,6 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
-            self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
             
         self.close()
 
@@ -155,7 +152,6 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
-            self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
             
         self.close()
         self.parent.end_fishery()

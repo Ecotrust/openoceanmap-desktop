@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Wed Mar 04 13:28:25 2009
+# Created: Mon Mar 09 14:45:36 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectFishery(object):
     def setupUi(self, SelectFishery):
         SelectFishery.setObjectName("SelectFishery")
-        SelectFishery.resize(460, 168)
+        SelectFishery.resize(459, 121)
         self.verticalLayout_5 = QtGui.QVBoxLayout(SelectFishery)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.horizontalLayout_3 = QtGui.QHBoxLayout()
@@ -63,26 +63,6 @@ class Ui_SelectFishery(object):
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem)
         self.verticalLayout_5.addLayout(self.horizontalLayout_3)
-        self.horizontalLayout_5 = QtGui.QHBoxLayout()
-        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.widget_3 = QtGui.QWidget(SelectFishery)
-        self.widget_3.setObjectName("widget_3")
-        self.horizontalLayout_4 = QtGui.QHBoxLayout(self.widget_3)
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.label = QtGui.QLabel(self.widget_3)
-        self.label.setMinimumSize(QtCore.QSize(160, 0))
-        self.label.setMaximumSize(QtCore.QSize(160, 16777215))
-        self.label.setObjectName("label")
-        self.horizontalLayout_4.addWidget(self.label)
-        self.fish_perc_income = QtGui.QLineEdit(self.widget_3)
-        self.fish_perc_income.setMinimumSize(QtCore.QSize(40, 0))
-        self.fish_perc_income.setMaximumSize(QtCore.QSize(40, 16777215))
-        self.fish_perc_income.setObjectName("fish_perc_income")
-        self.horizontalLayout_4.addWidget(self.fish_perc_income)
-        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem1)
-        self.horizontalLayout_5.addWidget(self.widget_3)
-        self.verticalLayout_5.addLayout(self.horizontalLayout_5)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.widget_2 = QtGui.QWidget(SelectFishery)
@@ -91,8 +71,8 @@ class Ui_SelectFishery(object):
         self.hboxlayout1.setSpacing(6)
         self.hboxlayout1.setMargin(9)
         self.hboxlayout1.setObjectName("hboxlayout1")
-        spacerItem2 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.hboxlayout1.addItem(spacerItem2)
+        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem1)
         self.pbnFisheryFinished = QtGui.QPushButton(self.widget_2)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -140,7 +120,6 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.setItemText(24, QtGui.QApplication.translate("SelectFishery", "White Seabass (Hook-Line)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(25, QtGui.QApplication.translate("SelectFishery", "White Seabass (Gillnet)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(26, QtGui.QApplication.translate("SelectFishery", "Other (Note the species)", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("SelectFishery", "Percent income from this fishery:", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFisheryFinished.setText(QtGui.QApplication.translate("SelectFishery", "Finished With Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectFishery", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 

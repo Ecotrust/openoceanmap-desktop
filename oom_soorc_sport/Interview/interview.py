@@ -101,12 +101,10 @@ class Interview(QObject):
           self.penniesIndex = index+2
           self.originalShapeIndex = index+3
           self.habitatIndex = index+4
-          self.fisheryIncIndex = index+5
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
-          fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -139,7 +137,6 @@ class Interview(QObject):
               fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               fet.addAttribute(self.originalShapeIndex, QVariant(-1))
               fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
-              fet.addAttribute(self.fisheryIncIndex, QVariant(self.capturedPolygonsFisheryIncome[capPolyInd]))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -184,7 +181,6 @@ class Interview(QObject):
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
-      self.capturedPolygonsFisheryIncome = []
       
       #Reset penny count
       self.pennies_left = 100
@@ -228,9 +224,7 @@ class Interview(QObject):
       fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
       fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
       fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
-      fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
-      
-      
+
       # set up new shapefile name (append "_c") to prev filename
       ext_index = working_filename.find( ".shp" )
       clip_filename = working_filename[0:ext_index]
@@ -310,7 +304,6 @@ class Interview(QObject):
       
   def resetInterview(self):
       self.currentFishery = None
-      self.currentFisheryIncome = 0
         
       # A place to store polygons we capture
       self.capturedPolygons = []
@@ -318,7 +311,6 @@ class Interview(QObject):
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
-      self.capturedPolygonsFisheryIncome = []
     
       self.pennies_left = 100
       self.phase_index = 0
