@@ -72,6 +72,10 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         
         
     def on_pbnFisheryFinished_released(self):
+        if self.parent.currentFishery == None:
+            QMessageBox.warning(self, "Fishery Error", "You must draw shapes for at least one fishery")
+            return 
+            
         self.parent.pennies_left = 100;            
         self.close()        
         
