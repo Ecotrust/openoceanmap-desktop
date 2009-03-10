@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rec_cpfv.ui'
 #
-# Created: Tue Mar 10 10:51:52 2009
+# Created: Tue Mar 10 16:13:09 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -395,6 +395,7 @@ class Ui_RecCpfv(object):
         spacerItem13 = QtGui.QSpacerItem(138, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem13)
         self.cpfv_num_op_line = QtGui.QLineEdit(self.widget)
+        self.cpfv_num_op_line.setMinimumSize(QtCore.QSize(50, 0))
         self.cpfv_num_op_line.setMaximumSize(QtCore.QSize(50, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -998,10 +999,9 @@ class Ui_RecCpfv(object):
 
         self.retranslateUi(RecCpfv)
         QtCore.QMetaObject.connectSlotsByName(RecCpfv)
-        RecCpfv.setTabOrder(self.pbnFinished, self.pbnCancel)
-        RecCpfv.setTabOrder(self.pbnCancel, self.cpfv_num_own_line)
         RecCpfv.setTabOrder(self.cpfv_num_own_line, self.cpfv_yr_own_line)
-        RecCpfv.setTabOrder(self.cpfv_yr_own_line, self.cpfv_operating_cost_line)
+        RecCpfv.setTabOrder(self.cpfv_yr_own_line, self.cpfv_revenue_line)
+        RecCpfv.setTabOrder(self.cpfv_revenue_line, self.cpfv_operating_cost_line)
         RecCpfv.setTabOrder(self.cpfv_operating_cost_line, self.cpfv_labor_cost_line)
         RecCpfv.setTabOrder(self.cpfv_labor_cost_line, self.cpfv_fuel_cost_line)
         RecCpfv.setTabOrder(self.cpfv_fuel_cost_line, self.cpfv_percent_income_line)
@@ -1017,15 +1017,22 @@ class Ui_RecCpfv(object):
         RecCpfv.setTabOrder(self.cpfv_num_pass_line, self.cpfv_num_out_state_line)
         RecCpfv.setTabOrder(self.cpfv_num_out_state_line, self.cpfv_num_crew_line)
         RecCpfv.setTabOrder(self.cpfv_num_crew_line, self.cpfv_target_dcrab)
-        RecCpfv.setTabOrder(self.cpfv_target_dcrab, self.cpfv_angler_cost_dcrab)
+        RecCpfv.setTabOrder(self.cpfv_target_dcrab, self.cpfv_tlen_combo_dcrab)
+        RecCpfv.setTabOrder(self.cpfv_tlen_combo_dcrab, self.cpfv_angler_cost_dcrab)
         RecCpfv.setTabOrder(self.cpfv_angler_cost_dcrab, self.cpfv_target_groundfish)
-        RecCpfv.setTabOrder(self.cpfv_target_groundfish, self.cpfv_angler_cost_groundfish)
+        RecCpfv.setTabOrder(self.cpfv_target_groundfish, self.cpfv_tlen_combo_groundfish)
+        RecCpfv.setTabOrder(self.cpfv_tlen_combo_groundfish, self.cpfv_angler_cost_groundfish)
         RecCpfv.setTabOrder(self.cpfv_angler_cost_groundfish, self.cpfv_target_halibut)
-        RecCpfv.setTabOrder(self.cpfv_target_halibut, self.cpfv_angler_cost_halibut)
+        RecCpfv.setTabOrder(self.cpfv_target_halibut, self.cpfv_tlen_combo_halibut)
+        RecCpfv.setTabOrder(self.cpfv_tlen_combo_halibut, self.cpfv_angler_cost_halibut)
         RecCpfv.setTabOrder(self.cpfv_angler_cost_halibut, self.cpfv_target_salmon)
-        RecCpfv.setTabOrder(self.cpfv_target_salmon, self.cpfv_angler_cost_salmon)
+        RecCpfv.setTabOrder(self.cpfv_target_salmon, self.cpfv_tlen_combo_salmon)
+        RecCpfv.setTabOrder(self.cpfv_tlen_combo_salmon, self.cpfv_angler_cost_salmon)
         RecCpfv.setTabOrder(self.cpfv_angler_cost_salmon, self.cpfv_target_tuna)
-        RecCpfv.setTabOrder(self.cpfv_target_tuna, self.cpfv_angler_cost_tuna)
+        RecCpfv.setTabOrder(self.cpfv_target_tuna, self.cpfv_tlen_combo_tuna)
+        RecCpfv.setTabOrder(self.cpfv_tlen_combo_tuna, self.cpfv_angler_cost_tuna)
+        RecCpfv.setTabOrder(self.cpfv_angler_cost_tuna, self.pbnFinished)
+        RecCpfv.setTabOrder(self.pbnFinished, self.pbnCancel)
 
     def retranslateUi(self, RecCpfv):
         RecCpfv.setWindowTitle(QtGui.QApplication.translate("RecCpfv", "Form", None, QtGui.QApplication.UnicodeUTF8))

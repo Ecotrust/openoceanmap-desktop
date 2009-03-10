@@ -1040,6 +1040,12 @@
            </item>
            <item>
             <widget class="QLineEdit" name="cpfv_num_op_line" >
+             <property name="minimumSize" >
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="maximumSize" >
               <size>
                <width>50</width>
@@ -2726,10 +2732,9 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>pbnFinished</tabstop>
-  <tabstop>pbnCancel</tabstop>
   <tabstop>cpfv_num_own_line</tabstop>
   <tabstop>cpfv_yr_own_line</tabstop>
+  <tabstop>cpfv_revenue_line</tabstop>
   <tabstop>cpfv_operating_cost_line</tabstop>
   <tabstop>cpfv_labor_cost_line</tabstop>
   <tabstop>cpfv_fuel_cost_line</tabstop>
@@ -2746,15 +2751,22 @@
   <tabstop>cpfv_num_out_state_line</tabstop>
   <tabstop>cpfv_num_crew_line</tabstop>
   <tabstop>cpfv_target_dcrab</tabstop>
+  <tabstop>cpfv_tlen_combo_dcrab</tabstop>
   <tabstop>cpfv_angler_cost_dcrab</tabstop>
   <tabstop>cpfv_target_groundfish</tabstop>
+  <tabstop>cpfv_tlen_combo_groundfish</tabstop>
   <tabstop>cpfv_angler_cost_groundfish</tabstop>
   <tabstop>cpfv_target_halibut</tabstop>
+  <tabstop>cpfv_tlen_combo_halibut</tabstop>
   <tabstop>cpfv_angler_cost_halibut</tabstop>
   <tabstop>cpfv_target_salmon</tabstop>
+  <tabstop>cpfv_tlen_combo_salmon</tabstop>
   <tabstop>cpfv_angler_cost_salmon</tabstop>
   <tabstop>cpfv_target_tuna</tabstop>
+  <tabstop>cpfv_tlen_combo_tuna</tabstop>
   <tabstop>cpfv_angler_cost_tuna</tabstop>
+  <tabstop>pbnFinished</tabstop>
+  <tabstop>pbnCancel</tabstop>
  </tabstops>
  <resources/>
  <connections/>
