@@ -243,55 +243,7 @@
               </spacer>
              </item>
              <item>
-              <widget class="QComboBox" name="cpfv_revenue_combo" >
-               <property name="minimumSize" >
-                <size>
-                 <width>100</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize" >
-                <size>
-                 <width>16777215</width>
-                 <height>23</height>
-                </size>
-               </property>
-               <property name="font" >
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <item>
-                <property name="text" >
-                 <string/>
-                </property>
-               </item>
-               <item>
-                <property name="text" >
-                 <string>&lt; $5,000</string>
-                </property>
-               </item>
-               <item>
-                <property name="text" >
-                 <string>$5,000 - $10,000</string>
-                </property>
-               </item>
-               <item>
-                <property name="text" >
-                 <string>$10,000 - $15,000</string>
-                </property>
-               </item>
-               <item>
-                <property name="text" >
-                 <string>$15,000 - $20,000</string>
-                </property>
-               </item>
-               <item>
-                <property name="text" >
-                 <string>> $20,000</string>
-                </property>
-               </item>
-              </widget>
+              <widget class="QLineEdit" name="cpfv_revenue_line" />
              </item>
             </layout>
            </widget>
@@ -1561,6 +1513,12 @@
          <layout class="QVBoxLayout" name="verticalLayout_6" >
           <item>
            <widget class="QWidget" native="1" name="widget_20" >
+            <property name="minimumSize" >
+             <size>
+              <width>230</width>
+              <height>0</height>
+             </size>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_5" >
              <property name="spacing" >
               <number>4</number>
@@ -1694,18 +1652,32 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="cpfv_trip_len_dcrab" >
-                  <property name="maximumSize" >
-                   <size>
-                    <width>50</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="font" >
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
+                 <widget class="QComboBox" name="cpfv_tlen_combo_dcrab" >
+                  <item>
+                   <property name="text" >
+                    <string/>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1/2 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>3/4 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>> 1 day</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                </layout>
@@ -1910,18 +1882,32 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="cpfv_trip_len_groundfish" >
-                  <property name="maximumSize" >
-                   <size>
-                    <width>50</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="font" >
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
+                 <widget class="QComboBox" name="cpfv_tlen_combo_groundfish" >
+                  <item>
+                   <property name="text" >
+                    <string/>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1/2 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>3/4 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>> 1 day</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                </layout>
@@ -2126,18 +2112,32 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="cpfv_trip_len_halibut" >
-                  <property name="maximumSize" >
-                   <size>
-                    <width>50</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="font" >
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
+                 <widget class="QComboBox" name="cpfv_tlen_combo_halibut" >
+                  <item>
+                   <property name="text" >
+                    <string/>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1/2 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>3/4 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>> 1 day</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                </layout>
@@ -2342,18 +2342,32 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="cpfv_trip_len_salmon" >
-                  <property name="maximumSize" >
-                   <size>
-                    <width>50</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="font" >
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
+                 <widget class="QComboBox" name="cpfv_tlen_combo_salmon" >
+                  <item>
+                   <property name="text" >
+                    <string/>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1/2 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>3/4 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>> 1 day</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                </layout>
@@ -2558,18 +2572,32 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="cpfv_trip_len_tuna" >
-                  <property name="maximumSize" >
-                   <size>
-                    <width>50</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="font" >
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
+                 <widget class="QComboBox" name="cpfv_tlen_combo_tuna" >
+                  <item>
+                   <property name="text" >
+                    <string/>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1/2 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>3/4 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>1 day</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text" >
+                    <string>> 1 day</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                </layout>
@@ -2702,7 +2730,6 @@
   <tabstop>pbnCancel</tabstop>
   <tabstop>cpfv_num_own_line</tabstop>
   <tabstop>cpfv_yr_own_line</tabstop>
-  <tabstop>cpfv_revenue_combo</tabstop>
   <tabstop>cpfv_operating_cost_line</tabstop>
   <tabstop>cpfv_labor_cost_line</tabstop>
   <tabstop>cpfv_fuel_cost_line</tabstop>
@@ -2719,19 +2746,14 @@
   <tabstop>cpfv_num_out_state_line</tabstop>
   <tabstop>cpfv_num_crew_line</tabstop>
   <tabstop>cpfv_target_dcrab</tabstop>
-  <tabstop>cpfv_trip_len_dcrab</tabstop>
   <tabstop>cpfv_angler_cost_dcrab</tabstop>
   <tabstop>cpfv_target_groundfish</tabstop>
-  <tabstop>cpfv_trip_len_groundfish</tabstop>
   <tabstop>cpfv_angler_cost_groundfish</tabstop>
   <tabstop>cpfv_target_halibut</tabstop>
-  <tabstop>cpfv_trip_len_halibut</tabstop>
   <tabstop>cpfv_angler_cost_halibut</tabstop>
   <tabstop>cpfv_target_salmon</tabstop>
-  <tabstop>cpfv_trip_len_salmon</tabstop>
   <tabstop>cpfv_angler_cost_salmon</tabstop>
   <tabstop>cpfv_target_tuna</tabstop>
-  <tabstop>cpfv_trip_len_tuna</tabstop>
   <tabstop>cpfv_angler_cost_tuna</tabstop>
  </tabstops>
  <resources/>

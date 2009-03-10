@@ -74,8 +74,8 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
                 return 
             total_values = total_values + int(value)
                 
-        if total_values != 100:
-            QMessageBox.warning(self, "Input Error", "Fishery percentages must add up to 100")
+        if total_values == 0:
+            QMessageBox.warning(self, "Input Error", "At least one fishery must exceed 0% of annual trips")
             return 
                 
         # error checks complete, go ahead and add fields to data store
@@ -86,7 +86,7 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
 
         interviewInfo2.append(["cp_num_own", self.cpfv_num_own_line.text()])
         interviewInfo2.append(["cp_yr_own", self.cpfv_yr_own_line.text()])
-        interviewInfo2.append(["annl_rev",self.cpfv_revenue_combo.currentText()])
+        interviewInfo2.append(["annl_rev",self.cpfv_revenue_line.text()])
         interviewInfo2.append(["oper_cost",self.cpfv_operating_cost_line.text()])
         interviewInfo2.append(["labor_cost",self.cpfv_labor_cost_line.text()])
         interviewInfo2.append(["fuel_cost",self.cpfv_fuel_cost_line.text()])
@@ -105,23 +105,23 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         interviewInfo2.append(["num_crew",self.cpfv_num_crew_line.text()])
          
         interviewInfo2.append(["pcnt_dcrab",self.cpfv_target_dcrab.text()])
-        interviewInfo2.append(["tlen_dcrab",self.cpfv_trip_len_dcrab.text()])
+        interviewInfo2.append(["tlen_dcrab",self.cpfv_tlen_combo_dcrab.currentText()])
         interviewInfo2.append(["acst_dcrab",self.cpfv_angler_cost_dcrab.text()])
    
         interviewInfo2.append(["pcnt_grndf",self.cpfv_target_groundfish.text()])
-        interviewInfo2.append(["tlen_grndf",self.cpfv_trip_len_groundfish.text()])
+        interviewInfo2.append(["tlen_grndf",self.cpfv_tlen_combo_groundfish.currentText()])
         interviewInfo2.append(["acst_grndf",self.cpfv_angler_cost_groundfish.text()])
     
         interviewInfo2.append(["pcnt_halib",self.cpfv_target_halibut.text()])
-        interviewInfo2.append(["tlen_halib",self.cpfv_trip_len_halibut.text()])
+        interviewInfo2.append(["tlen_halib",self.cpfv_tlen_combo_halibut.currentText()])
         interviewInfo2.append(["acst_halib",self.cpfv_angler_cost_halibut.text()])
               
         interviewInfo2.append(["pcnt_salmn",self.cpfv_target_salmon.text()])
-        interviewInfo2.append(["tlen_salmn",self.cpfv_trip_len_salmon.text()])
+        interviewInfo2.append(["tlen_salmn",self.cpfv_tlen_combo_salmon.currentText()])
         interviewInfo2.append(["acst_salmn",self.cpfv_angler_cost_salmon.text()])
              
         interviewInfo2.append(["pcnt_tuna",self.cpfv_target_tuna.text()])
-        interviewInfo2.append(["tlen_tuna",self.cpfv_trip_len_tuna.text()])
+        interviewInfo2.append(["tlen_tuna",self.cpfv_tlen_combo_tuna.currentText()])
         interviewInfo2.append(["acst_tuna",self.cpfv_angler_cost_tuna.text()])
 
         #total = sum([int(b) for (a,b) in cpfv_fisheries])

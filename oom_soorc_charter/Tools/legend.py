@@ -55,7 +55,12 @@ class LegendCheckBox(QCheckBox):
     QObject.connect(self.act2, SIGNAL("triggered()"), self.action2)
     self.act3 = QAction(self.removeIcon, "Change Color", self)
     QObject.connect(self.act3, SIGNAL("triggered()"), self.action3)
-    self.setCheckState(Qt.Checked)
+    
+    if canvasLayers[0].visible():
+        self.setCheckState(Qt.Checked)
+    else:
+        self.setCheckState(Qt.Unchecked)
+        
     QObject.connect(self, SIGNAL("refresh()"),
                     self.parent.parent.canvas, SLOT("layerStateChange()"))
 
