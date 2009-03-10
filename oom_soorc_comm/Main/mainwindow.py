@@ -179,6 +179,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # set the map canvas layer set
       cl = QgsMapCanvasLayer(layer)
       self.layers.insert(0,cl)
+      cl.setVisible(False) # off by default
       self.canvas.setLayerSet(self.layers)
       
       #Add item to legend

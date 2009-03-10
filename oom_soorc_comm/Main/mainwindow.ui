@@ -10,29 +10,18 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap</string>
+   <string>OpenOceanMap SOORC Comm.</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="resources.qrc" >:/images/OCEAN_SMALL_INNO.png</iconset>
+   <iconset resource="resources.qrc" >
+    <normaloff>:/images/OCEAN_SMALL_INNO.png</normaloff>:/images/OCEAN_SMALL_INNO.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget" >
    <layout class="QGridLayout" >
-    <property name="leftMargin" >
+    <property name="margin" >
      <number>9</number>
     </property>
-    <property name="topMargin" >
-     <number>9</number>
-    </property>
-    <property name="rightMargin" >
-     <number>9</number>
-    </property>
-    <property name="bottomMargin" >
-     <number>9</number>
-    </property>
-    <property name="horizontalSpacing" >
-     <number>6</number>
-    </property>
-    <property name="verticalSpacing" >
+    <property name="spacing" >
      <number>6</number>
     </property>
     <item row="0" column="0" >
@@ -64,30 +53,18 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>462</width>
-          <height>581</height>
+          <width>366</width>
+          <height>586</height>
          </rect>
         </property>
         <attribute name="label" >
          <string>Legend</string>
         </attribute>
         <layout class="QGridLayout" >
-         <property name="leftMargin" >
+         <property name="margin" >
           <number>9</number>
          </property>
-         <property name="topMargin" >
-          <number>9</number>
-         </property>
-         <property name="rightMargin" >
-          <number>9</number>
-         </property>
-         <property name="bottomMargin" >
-          <number>9</number>
-         </property>
-         <property name="horizontalSpacing" >
-          <number>6</number>
-         </property>
-         <property name="verticalSpacing" >
+         <property name="spacing" >
           <number>6</number>
          </property>
          <item row="0" column="0" >
@@ -107,8 +84,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>96</width>
-          <height>26</height>
+          <width>98</width>
+          <height>28</height>
          </rect>
         </property>
         <attribute name="label" >
@@ -140,7 +117,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuInterview" >
@@ -174,7 +151,8 @@
   <widget class="QStatusBar" name="statusbar" />
   <action name="mpActionZoomOut" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mActionZoomOut.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mActionZoomOut.png</normaloff>:/images/mActionZoomOut.png</iconset>
    </property>
    <property name="text" >
     <string>Zoom Out</string>
@@ -182,7 +160,8 @@
   </action>
   <action name="mpActionPan" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mActionPan.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mActionPan.png</normaloff>:/images/mActionPan.png</iconset>
    </property>
    <property name="text" >
     <string>Pan</string>
@@ -190,7 +169,8 @@
   </action>
   <action name="mpActionAddRasterLayer" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mActionAddRasterLayer.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mActionAddRasterLayer.png</normaloff>:/images/mActionAddRasterLayer.png</iconset>
    </property>
    <property name="text" >
     <string>Add Raster Layer</string>
@@ -198,7 +178,8 @@
   </action>
   <action name="actionStart_Interview" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mActionStartEditing.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mActionStartEditing.png</normaloff>:/images/mActionStartEditing.png</iconset>
    </property>
    <property name="text" >
     <string>Start Interview</string>
@@ -212,7 +193,8 @@
   </action>
   <action name="actionRegion_Tool" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mActionMeasureArea.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mActionMeasureArea.png</normaloff>:/images/mActionMeasureArea.png</iconset>
    </property>
    <property name="text" >
     <string>Region Tool</string>
@@ -220,7 +202,8 @@
   </action>
   <action name="actionPolygon_Tool" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mActionCapturePolygon.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mActionCapturePolygon.png</normaloff>:/images/mActionCapturePolygon.png</iconset>
    </property>
    <property name="text" >
     <string>Polygon Tool</string>
@@ -228,7 +211,8 @@
   </action>
   <action name="mpActionZoomIn" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mActionZoomIn.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mActionZoomIn.png</normaloff>:/images/mActionZoomIn.png</iconset>
    </property>
    <property name="text" >
     <string>Zoom In</string>
@@ -236,7 +220,8 @@
   </action>
   <action name="mpActionAddVectorLayer" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mActionAddLayer.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mActionAddLayer.png</normaloff>:/images/mActionAddLayer.png</iconset>
    </property>
    <property name="text" >
     <string>Add Vector Layer</string>
@@ -244,7 +229,8 @@
   </action>
   <action name="actionPython_Console" >
    <property name="icon" >
-    <iconset resource="resources.qrc" >:/images/mIconProperties.png</iconset>
+    <iconset resource="resources.qrc" >
+     <normaloff>:/images/mIconProperties.png</normaloff>:/images/mIconProperties.png</iconset>
    </property>
    <property name="text" >
     <string>Python Console</string>

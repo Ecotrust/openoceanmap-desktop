@@ -62,132 +62,57 @@
           </item>
           <item>
            <property name="text" >
-            <string>California Halibut (Hook &amp; Line)</string>
+            <string>Dungeness Crab - trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>California Halibut (Set Gill Net)</string>
+            <string>Groundfish - trawl</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Coastal Pelagics (Seine)</string>
+            <string>Groundfish - longline</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Deep Nearshore Rockfish (Hook &amp; Line)</string>
+            <string>Halibut - longline</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Lobster (Trap)</string>
+            <string>Sablefish - longline</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Rockfish (Hook &amp; Line)</string>
+            <string>Sablefish - trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Rockfish (Trap)</string>
+            <string>Salmon - troll</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Pacific Bonito (Seine)</string>
+            <string>Shrimp - trawl</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Rock Crab (Trap)</string>
+            <string>Thornyhead - longline</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish (Hook &amp; Line)</string>
+            <string>Thornyhead - trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish (Trap)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Sea Cucumber (Diving)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Shark (Drift Gill Net)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Shark (Set Gill Net)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Spot Prawn (Trap)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Squid (Seine)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Swordfish (Drift Gill Net)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Swordfish (Harpoon or Spear)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Swordfish (Hook &amp; Line)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Thornyhead (Hook &amp; Line)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Tuna (Hook &amp; Line)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Tuna (Seine)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Urchin (Diving)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>White Seabass (Hook-Line)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>White Seabass (Gillnet)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Other (Note the species)</string>
+            <string>Tuna - longline</string>
            </property>
           </item>
          </widget>
