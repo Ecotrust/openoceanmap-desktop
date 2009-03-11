@@ -58,13 +58,14 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
         self.shape_index = 1
         self.num_shapes = layer.featureCount()
         
-        #prov = self.layer.getDataProvider()
-        #allattr = prov.allAttributesList()
-        #prov.select(allattr)
-        #feat2 = QgsFeature()
-        #print "init next clipped polygon ui"
-        #while prov.getNextFeature(feat2):
-        #    print str(feat2.featureId())+": "+feat2.attributeMap()[45].toString()
+        self.all_features = []
+        prov = self.layer.getDataProvider()
+        allattr = prov.allAttributesList()
+        prov.select(allattr)
+        feat2 = QgsFeature()
+       
+        while prov.getNextFeature(feat2):
+            self.all_features.append( feat2.featureId() )
         
         self.next_clipped_polygon()
         
@@ -95,6 +96,9 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
     
         # if no more shapes, close and go to next step
         if self.shape_index > self.num_shapes:
+            # zoom out to show starting extent
+            self.parent.canvas.setExtent(self.parent.mainwindow.extent_raster.extent())
+            
             self.parent.pennies_left = 100;    
             self.close()
             self.layer.setSelectedFeatures([])
@@ -111,6 +115,11 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
             self.line_1.setText("")
         else:
             self.line_1.setText(str(self.parent.pennies_left))
+            
+        # reset zoom to show all clipped shapes in this layer
+        self.layer.setSelectedFeatures( self.all_features )
+        self.parent.canvas.setCurrentLayer( self.layer )
+        self.parent.canvas.zoomToSelected()
         
         # select the next shape (layer's feature iterator gets reset by something -- prob setSelectedFeatures -- so we need to count it up from 0 each time)
         self.feat = QgsFeature()
