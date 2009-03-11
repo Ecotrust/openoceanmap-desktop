@@ -37,6 +37,7 @@ from qgis.gui import *
 from Tools.maptools import *
 from Tools.legend import *
 from Tools.mapcoords import *
+from Tools.mapscale import *
 # UI specific includes
 from mainwindow_ui import Ui_MainWindow
 # General system includes
@@ -86,6 +87,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     # New Map Coords display in status bar
     self.mapcoords = MapCoords(self)
+    
+    self.mapscale = MapScale(self)
 
     #Uncomment to run the pre-load of data
     self.loadBaseDataLayers()
@@ -107,7 +110,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     self.rasterBaseLayer = OOMLayer(self)
     
-    extent_raster = None
+    self.extent_raster = None
     for i in range(len(rasterList)):
       rasterSet = rasterList[i]
       
@@ -121,7 +124,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
       if i == 3: # Cafe Blanco 2 Yaquino Head
-        extent_raster = layer        
+        self.extent_raster = layer        
 
       if self.srs == None:
         self.srs = layer.srs()
@@ -185,7 +188,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       #Add item to legend
       self.legend.addVectorLegendItem("Study Region", [cl])
       
-    self.canvas.setExtent(extent_raster.extent())    
+    self.canvas.setExtent(self.extent_raster.extent())    
 
 class OOMLayer(object):
   def __init__(self, parent):
