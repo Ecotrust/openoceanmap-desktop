@@ -119,27 +119,28 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         rub.reset()
         # Grey out the button...
         self.pbnShapeDiscard.setEnabled(False)
+        self.pbnShapeFinished.setEnabled(False)
         self.discardLast = True
             
     #"Finished with Fishery" button clicked
     def on_pbnShapeFinished_released(self):
-        if not self.discardLast:
-            num_pennies = self.line_1.text()
+        num_pennies = self.line_1.text()
 
-            if not num_pennies or num_pennies == '0' or not strIsInt(num_pennies):
-                QMessageBox.warning(self, "Pennies Error", "Missing or invalid penny value")
-                return
-            elif int(num_pennies) > self.parent.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
-                return
-            elif int(num_pennies) < self.parent.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes")
-                return
-            else:
-                self.parent.capturedPolygonsPennies.append(num_pennies)
-                        
-            self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
-            self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+        if not num_pennies or num_pennies == '0' or not strIsInt(num_pennies):
+            QMessageBox.warning(self, "Pennies Error", "Missing or invalid penny value")
+            return
+        elif int(num_pennies) > self.parent.pennies_left:
+            QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+            return
+        elif int(num_pennies) < self.parent.pennies_left:
+            QMessageBox.warning(self, "Pennies Error", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes")
+            return
+        else:
+            self.parent.capturedPolygonsPennies.append(num_pennies)
+                    
+        self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
+        self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+        
         self.close()
         self.parent.end_fishery()
        
