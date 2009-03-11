@@ -70,7 +70,7 @@ class Interview(QObject):
           wnd.show()
           
       elif self.phase[ self.phase_index ] == "shapes":
-          new_status = "Drawing full extent fisheries"
+          new_status = "Drawing fisheries"
           self.parent.statusbar.showMessage(new_status)
           self.next_fishery()
 
