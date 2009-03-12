@@ -126,6 +126,14 @@ class Legend(object):
     self.groupBoxLayout = QVBoxLayout()
     self.groupBoxLayout.setAlignment(Qt.AlignTop)
     self.groupBox.setLayout(self.groupBoxLayout)
+    self.checkboxes = []
+    
+  # toggle a checkbox
+  def setLayerCheckboxes(self,layer_type,state):
+    for (layer,widget) in self.checkboxes:
+        if layer.type() == layer_type:
+            widget.setCheckState(state)
+            widget.updateLayerStatus(state)
 
   # Add Item To Legend
   def addRasterLegendItem(self, name, cls):
@@ -137,7 +145,11 @@ class Legend(object):
     icon = QIcon(pm)
     item_new.setIcon(icon)
     self.groupBoxLayout.addWidget(item_new)
+    
+    # preserve easy access to this widget for toggle purposes
+    self.checkboxes.append((cls[0].layer(), item_new))
 
+    
   # Add Item To Legend
   def addVectorLegendItem(self, name, cls):
     item_new = LegendCheckBox(self, name, cls, True)
@@ -148,6 +160,10 @@ class Legend(object):
     icon = QIcon(pm)
     item_new.setIcon(icon)
     self.groupBoxLayout.addWidget(item_new)
+    
+    # preserve easy access to this widget for toggle purposes
+    self.checkboxes.append((cls[0].layer(), item_new))
+    
 
   # Remove Item To Legend
   def removeLegendItem(self, widget):
