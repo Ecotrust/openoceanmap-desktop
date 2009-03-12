@@ -197,6 +197,9 @@ class Interview(QObject):
 
       
   def next_fishery(self): 
+      # turn any  newly-added layers off to avoid clutter
+      self.parent.legend.setLayerCheckboxes(QgsMapLayer.VECTOR,Qt.Unchecked)
+      
       if len(self.fisheries) > 0:
         (fishery,value) = self.fisheries.pop()
         wnd = SelectFisheryGui(self, fishery, value)
