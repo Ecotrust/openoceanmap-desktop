@@ -19,61 +19,13 @@
      <property name="title" >
       <string/>
      </property>
-     <widget class="QWidget" native="1" name="widget" >
-      <property name="geometry" >
-       <rect>
-        <x>10</x>
-        <y>104</y>
-        <width>455</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" >
-       <item>
-        <widget class="QPushButton" name="pbnShapeFinished" >
-         <property name="font" >
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text" >
-          <string>Finished With Fishery</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pbnShapeDiscard" >
-         <property name="font" >
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text" >
-          <string>Discard Last Shape</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pbnMoreShapes" >
-         <property name="font" >
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text" >
-          <string>More Shapes This Fishery</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="" >
+     <widget class="QWidget" name="layoutWidget" >
       <property name="geometry" >
        <rect>
         <x>12</x>
         <y>3</y>
-        <width>261</width>
-        <height>94</height>
+        <width>461</width>
+        <height>141</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout" >
@@ -149,10 +101,26 @@
            </property>
           </widget>
          </item>
+         <item>
+          <spacer name="horizontalSpacer" >
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0" >
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout" >
+         <property name="bottomMargin" >
+          <number>0</number>
+         </property>
          <item>
           <widget class="QLabel" name="habitat_combo_label" >
            <property name="minimumSize" >
@@ -232,6 +200,51 @@
           </spacer>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="QWidget" native="1" name="widget" >
+         <layout class="QHBoxLayout" >
+          <property name="margin" >
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pbnShapeFinished" >
+            <property name="font" >
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Finished With Fishery</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pbnShapeDiscard" >
+            <property name="font" >
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Discard Last Shape</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pbnMoreShapes" >
+            <property name="font" >
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>More Shapes This Fishery</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
       </layout>
      </widget>

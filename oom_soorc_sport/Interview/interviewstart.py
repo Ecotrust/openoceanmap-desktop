@@ -60,6 +60,8 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
         interviewInfo2.append(["mood", self.mood_line.text()])
+        
+        interviewInfo2.append(["user_group", "sportboat"])
 
         interviewInfo2.append(["bt_type", self.type_boat_line.text()])
         interviewInfo2.append(["boat_lic", self.boat_license_line.text()])
