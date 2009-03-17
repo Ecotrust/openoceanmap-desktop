@@ -102,21 +102,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
     
-    rasterList = [["Data/Trin2Blanco.tif"], #,40000,1200000], # these are just the scale vals from the prev set -- we aren't using them here
-                  ["Data/SwWash.tif"], #,800001,5000000],
-                  ["Data/Yaq2Col.tif"], #,300001,800000],
-                  ["Data/Blanco2Yaq.tif"] #,40000,300000]   
+    rasterList = [["Data/t180071b2.tif",0,50000000],   
+                  ["Data/t185001b_tiled.tif",0,200000], # these are just the scale vals from the prev set -- we aren't using them here
+                  ["Data/t185201b_tiled.tif",0,200000],
+                  ["Data/t185801b_tiled.tif",0,200000],
+                  ["Data/t186001b2_tiled.tif",0,200000]   
                   ]    
     
     self.rasterBaseLayer = OOMLayer(self)
+    self.openSeaRasterBaseLayer = OOMLayer(self)
     
     self.extent_raster = None
     for i in range(len(rasterList)):
       rasterSet = rasterList[i]
       
       raster = rasterSet[0]
-      #minScale = rasterSet[1]
-      #maxScale = rasterSet[2]
+      minScale = rasterSet[1]
+      maxScale = rasterSet[2]
       
       info = QFileInfo(QString(raster))
       
@@ -130,9 +132,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.srs = layer.srs()
       
       # Set the scales
-      #layer.setScaleBasedVisibility(True)
-      #layer.setMinScale(minScale)
-      #layer.setMaxScale(maxScale)
+      layer.setScaleBasedVisibility(True)
+      layer.setMinScale(minScale)
+      layer.setMaxScale(maxScale)
       
       if not layer.isValid():
         capture_string = QString("ERROR reading file")
@@ -146,11 +148,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       cl = QgsMapCanvasLayer(layer)
       self.layers.insert(0,cl)
       self.canvas.setLayerSet(self.layers)
-      self.rasterBaseLayer.addLayerItem(layer,cl)
       
-    #Add one base raster item to legend
-    self.legend.addRasterLegendItem("Nautical Charts",
+      if i == 0:
+        self.openSeaRasterBaseLayer.addLayerItem(layer,cl)
+      else:
+        self.rasterBaseLayer.addLayerItem(layer,cl)
+      
+    #Add base raster items to legend
+    self.legend.addRasterLegendItem("Coastal Nautical Charts",
                                     self.rasterBaseLayer.getCls())
+    self.legend.addRasterLegendItem("Open Sea Nautical Charts",
+                                    self.openSeaRasterBaseLayer.getCls())
     
 
     # now add the study region as a vector layer
