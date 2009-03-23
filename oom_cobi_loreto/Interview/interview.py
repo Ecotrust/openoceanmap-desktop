@@ -282,15 +282,18 @@ class Interview(object):
               line2 = []
 
               for index,value in enumerate(self.interviewInfo2):
-                line1.append(str(value[0]))
-                line2.append(str(value[1]))
+                line1.append(unicode(value[0]))
+                line2.append(unicode(value[1]))
               
-              line1.append(str('other_text'))
-              line2.append(str(self.capturedText))
+              line1.append(unicode('other_text'))
+              line2.append(unicode(self.capturedText))
 
               #file.write(self.capturedText)
-              file.write(', '.join(line1)+'\n')
-              file.write(', '.join(line2))
+              str1 = u', '.join(line1)+u'\n'
+              str2 = u', '.join(line2)
+              
+              file.write(str1.encode('iso-8859-1'))
+              file.write(str2.encode('iso-8859-1'))
 
               file.close()
               capture_string = QString(self.other_info_save_str + write_string)

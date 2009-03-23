@@ -73,7 +73,7 @@ class InnoScript:
                  dist_dir,
                  windows_exe_files = [],
                  lib_files = [],
-                 version = "0.2"):
+                 version = ""):
         self.lib_dir = lib_dir
         self.dist_dir = dist_dir
         if not self.dist_dir[-1] in "\\/":
@@ -201,7 +201,7 @@ options = {
 
 matplotlib_data_files = tree('lib\matplotlibdata')
 base_files = ("",["LICENSE.txt", "README.txt"])
-data_files = tree('Data') + tree('plugins') + tree('Interviews') + tree('resources') + tree('Documentation')
+data_files = tree('Data') + tree('plugins') + tree('Interviews') + tree('resources') + tree('Documentation') + tree('i18n')
 
 setup(
     options = options,

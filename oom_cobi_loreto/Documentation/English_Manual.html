@@ -1,69 +1,110 @@
 <html>
 <body>
+<h2>OpenOceanMap Loreto Bay Documentation</h2>
+<h3>Getting Started</h3>
+<p>To start an interview, click the "Interview" menu button and select "Start Interview".  Alternatively,
+ you can click the start interview icon which has a picture of a red pencil.  One interview is done per person.</p>
+<p>To add additional vector and raster layers to the map for use in drawing shapes, use the 'Add raster layer' and 'Add vector layer'
+options in the Map menu or click the appropriate icon on the toolbar.</p>
+<h3>Drawing Shapes</h3>
+<p>Once you select to start drawing shapes, move to the appropriate area on the map using the pan and zoom buttons.  To begin a shape
+click once with your <b>left</b> mouse button.  This will create the first point.  Continue adding points by moving your mouse and clicking
+with your <b>left</b> mouse button.  Complete your shape by clicking once with your <b>right</b> mouse button.  Continue as directed.</p> 
+
+<h3>Using The Map</h3>
+<p>The legend on the left allows you to turn on and off the map layer.  By default all of them
+are turned on except for the bathymetry layer.  The layers include:</p>
+<ul>
+<li>Loreto Base Map - includes the mainland, islands and sea bottom shaded relief.</li>
+<li>Study Area - black line outlining the area of study in Loreto Bay National Park</li>
+<li>Bathymetry - bathymetry lines in regular intervals.  Units are in fathoms - (10, 20, 30, 40, 50, 60, 80, 100, 200, 300, 400, 500, 600, 700, 800)
+<li>Restricted Zones - restricted areas around the shorelines</li>
+<li>Protected Zones - protected areas on land and sea.
+<li>Protected Zones (pts) - Additional locations that are protected.  Represented as red triangles</li>
+<li>Seamounts - deep reef seamount locations</li>
+<li>Reference Points - navigational reference points.  They appear once you zoom in on the map.</li>
+</ul>
+
+<h3>Things To Note</h3>
+ <ul>
+ <li>You may come across software bugs.  If you do please report them to Ecotrust Knowledge Systems</li>
+ <li>You cannot go back and change values in the middle of an interview.  Try to get it right the first time.  If
+ you need to change something you will need to start over or if you know what you're doing simply finish the interview 
+ and alter the shapefile outputs accordingly.</li>
+ <li>Re-sorting of map layers is not supported.  Adding any additional layers will simply place them on top of the default layers
+ </li>
+ <li>On occasion when interviewing for multiple user groups in one interview, you will notice attributes for one user group showing up in the file for another user group.
+ For example if you interview for both Ecotourism and Other, the emp_type attribute for ecotourism will show up in the CSV file for Other.  This is because it is 
+ not cleared appropriately when moving to the next user group.  This is a known issue and is not of concern as long as you know which attribute to use based on the user
+ group</li>
+ <li>If you are unable to start a new interview, simply close OpenOceanMap and run it again.  This is a known issue
+ </li>
+</ul>
+
 <h3>Shapefile Attribute Descriptions</h3>
 <h4>General Attributes</h4>
 <p>Interviewing for any of the user groups will produce shapefile records with these attributes.</p>
 <table border='1'>
-<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
-<tr><td>id</td><td>Shape ID, unique only to shapefile</td><td>Shape</td></tr>
-<tr><td>f_name</td><td>Interviewee first name</td><td>Interview</td></tr>
-<tr><td>l_name</td><td>Interviewee last name</td><td>Interview</td></tr>
-<tr><td>age</td><td>Interviewee Age</td><td>Interview</td></tr>
-<tr><td>gender</td><td>Interviewee Gender</td><td>Interview</td></tr>
-<tr><td>city</td><td>Interviewee City</td><td>Interview</td></tr>
-<tr><td>date</td><td>Interview Date</td><td>Interview</td></tr>
-<tr><td>i_f_name</td><td>Interviewer first name</td><td>Interview</td></tr>
-<tr><td>i_l_name</td><td>Interviewer last name</td><td>Interview</td></tr>
-<tr><td>years</td><td>Years working here</td><td>Interview</td></tr>
-<tr><td>user_grp</td><td>Current user group</td><td>User Group</td></tr>
-<tr><td>grp_income</td><td>Percent of income/interest/stake in current user group</td><td>User Group</td></tr>
-<tr><td>Pennies</td><td>Number of pennies placed on this shape out of 100</td><td>Shape</td></tr>
+<tr><th>Attribute Name</th><th>Description</th></tr>
+<tr><td>id</td><td>Shape ID, unique only to shapefile</td></tr>
+<tr><td>f_name</td><td>Interviewee first name</td></tr>
+<tr><td>l_name</td><td>Interviewee last name</td></tr>
+<tr><td>age</td><td>Interviewee Age</td></tr>
+<tr><td>gender</td><td>Interviewee Gender</td></tr>
+<tr><td>city</td><td>Interviewee City</td></tr>
+<tr><td>date</td><td>Interview Date</td></tr>
+<tr><td>i_f_name</td><td>Interviewer first name</td></tr>
+<tr><td>i_l_name</td><td>Interviewer last name</td></tr>
+<tr><td>years</td><td>Years working here</td></tr>
+<tr><td>user_grp</td><td>Current user group</td></tr>
+<tr><td>grp_income</td><td>Percent of income/interest/stake in current user group</td></tr>
+<tr><td>Pennies</td><td>Number of pennies placed on this shape out of 100</td></tr>
 </table>
 
 <h4>Fishery Attributes</h4>
 <p>Interviews for any of the three fishing user groups will produce shapefile records with these attributes.
 <table border='1'>
-<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
-<tr><td>v_len</td><td>Vessel length</td><td>Fishery user group</td></tr>
-<tr><td>v_motor</td><td>Vessel motor (horsepower)</td><td>Fishery user group</td></tr>
-<tr><td>haul_cap</td><td>Vessel haul capacity (kilograms)</td><td>Fishery user group</td></tr>
-<tr><td>v_homep</td><td>Vessel homeport</td><td>Fishery user groups</td></tr>
-<tr><td>landp_1</td><td>Launch port 1</td><td>Fishery user groups</td></tr>
-<tr><td>landp_2</td><td>Launch port 2</td><td>Fishery user groups</td></tr>
-<tr><td>landp_3</td><td>Launch port 3</td><td>Fishery user groups</td></tr>
-<tr><td>landp_4</td><td>Launch port 4</td><td>Fishery user groups</td></tr>
-<tr><td>gear_type</td><td>Fishing gear type used in this shape</td><td>Gear type, 1 or more per fishing user group</td></tr>
-<tr><td>gear_income</td><td>Percentage of income associated with this gear type</td><td>Gear type, 1 or more per fishing user group</td></tr>
-<tr><td>species</td><td>Species caught within this shape or fishing ground.  Represented as a numeric value.  1 - Sharks and Skates, 2 - Coastal Reef Fish, 3 - Deep Reef Fish, 4 - Migratory Fish, 5 - Benthic Fish, 6 - Shrimp, 7 - Other</td><td>Shape</td></tr>
+<tr><th>Attribute Name</th><th>Description</th></th></tr>
+<tr><td>v_len</td><td>Vessel length</td></tr>
+<tr><td>v_motor</td><td>Vessel motor (horsepower)</td></tr>
+<tr><td>haul_cap</td><td>Vessel haul capacity (kilograms)</td></tr>
+<tr><td>v_homep</td><td>Vessel homeport</td></tr>
+<tr><td>landp_1</td><td>Launch port 1</td></tr>
+<tr><td>landp_2</td><td>Launch port 2</td></tr>
+<tr><td>landp_3</td><td>Launch port 3</td></tr>
+<tr><td>landp_4</td><td>Launch port 4</td></tr>
+<tr><td>gear_type</td><td>Fishing gear type used in this shape</td></tr>
+<tr><td>gear_income</td><td>Percentage of income associated with this gear type</td></tr>
+<tr><td>species</td><td>Species caught within this shape or fishing ground.  Represented as a numeric value.  1 - Sharks and Skates, 2 - Coastal Reef Fish, 3 - Deep Reef Fish, 4 - Migratory Fish, 5 - Benthic Fish, 6 - Shrimp, 7 - Other</td></tr>
 </table>
 
 <h4>Ecotourism Attributes</h4>
 <p>Interviews for the ecotourism user group will produce shapefile records with these attributes.</p>
 <table border='1'>
-<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
-<tr><td>emp_type</td><td>Type of employee</td><td>Ecotourism user group</td></tr>
-<tr><td>v_len</td><td>Tourism vessel length</td><td>Ecotourism user group</td></tr>
-<tr><td>v_motor</td><td>Tourism vessel motor (horsepower)</td><td>Ecotourism user group</td></tr>
-<tr><td>v_cap</td><td>Tourism vessel capacity (people)</td><td>Ecotourism user group</td></tr>
-<tr><td>v_homep</td><td>Tourism vessel homeport</td><td>Ecotourism user group</td></tr>
-<tr><td>workers</td><td>Numbers of workers for company</td><td>Ecotourism user group</td></tr>
-<tr><td>gear_type</td><td>Type of tourism activities</td><td>Ecotourism user group</td></tr>
+<tr><th>Attribute Name</th><th>Description</th></th></tr>
+<tr><td>emp_type</td><td>Type of employee</td></tr>
+<tr><td>v_len</td><td>Tourism vessel length</td></tr>
+<tr><td>v_motor</td><td>Tourism vessel motor (horsepower)</td></tr>
+<tr><td>v_cap</td><td>Tourism vessel capacity (people)</td></tr>
+<tr><td>v_homep</td><td>Tourism vessel homeport</td></tr>
+<tr><td>workers</td><td>Numbers of workers for company</td></tr>
+<tr><td>gear_type</td><td>Type of tourism activities</td></tr>
 </table>
 
 <h4>Conservation/Scientist Attributes</h4>
 <p>Interviews for the conservationist/scientist user group will produce shapefile records with these attributes.</p>
 <table border='1'>
-<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
-<tr><td>focus</td><td>Type of specialist</td><td>Conserv/sci user group</td></tr>
-<tr><td>add_info</td><td>Additional information about their specialty</td><td>Conserv/sci user group</td></tr>
-<tr><td>gear_type</td><td>Area of Knowledge</td><td>Conserv/sci user group</td></tr>
+<tr><th>Attribute Name</th><th>Description</th></th></tr>
+<tr><td>focus</td><td>Type of specialist</td></tr>
+<tr><td>add_info</td><td>Additional information about their specialty</td></tr>
+<tr><td>gear_type</td><td>Area of Knowledge</td></tr>
 </table>
 
-<h4>Conservation/Scientist Attributes</h4>
+<h4>Other Income Attributes</h4>
 <p>Interviews in this user group are typically done in addition to that of other user groups and is simply a way to describe briefly any other forms of income a person might have.  Interviewing in this user group will produce a comma-separated value (CSV) text file instead of a shapefile since no shapes need to be captured.</p>
 <table border='1'>
-<tr><th>Attribute Name</th><th>Description</th><th>Specificity</th></th></tr>
-<tr><td>other_txt</td><td>Description of ther types of income that the interviewer earns</td><td>Other user group</td></tr>
+<tr><th>Attribute Name</th><th>Description</th></tr>
+<tr><td>other_txt</td><td>Description of ther types of income that the interviewer earns</td></tr>
 </table
 </body>
 </html>
