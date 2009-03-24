@@ -174,9 +174,10 @@ class Interview(object):
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
           else:
-              from selectgear import SelectGearGui
-              wnd = SelectGearGui(self,flags,self.currentStep,previousGui)
-              wnd.show()           
+              from selectgear import SelectGearGuiz
+              for (fishery,value) in self.res_groups:
+                  wnd = SelectGearGui(self,flags,self.currentStep,previousGui)
+                  wnd.show()          
     
       elif self.privateFishIncome:
           self.parent.statusbar.showMessage(self.start_priv_fish_str)

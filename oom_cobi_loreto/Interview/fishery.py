@@ -58,6 +58,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.retranslate()
  
     def append_data(self):
+        self.parent.add_attrib(self.f_emp_type_str, self.comboBox.currentText())
         self.parent.add_attrib(self.f_v_len_str, self.vessel_length_line.text())
         self.parent.add_attrib(self.f_v_motor_str, self.vessel_motor_line.text())
         self.parent.add_attrib(self.f_haul_cap_str, self.haul_capacity_line.text())
@@ -67,7 +68,44 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.parent.add_attrib(self.f_landp_3_str, self.landing_port_line_3.text())
         self.parent.add_attrib(self.f_landp_4_str, self.landing_port_line_4.text())        
 
-    def on_pbnSelectGear_released(self):        
+    def get_groups(self):
+        res_groups = []        
+        if self.target_target_coastal.text() != '0':
+            res_groups.append(('Coastal Reef Fish',self.target_coastal.text()))
+        if self.target_deep.text() != '0':
+            res_groups.append(('Deep Red Fish',self.target_deep.text()))
+        if self.target_migratory.text() != '0':
+            res_groups.append(('Migratory Fish',self.target_migratory.text()))
+        if self.target_cucumber.text() != '0':
+            res_groups.append(('Sea Cucumber',self.target_cucumber.text()))
+        if self.target_chocolate.text() != '0':
+            res_groups.append(('Chocolate Clam',self.target_chocolate.text()))
+        if self.target_squid.text() != '0':
+            res_groups.append(('Squid',self.target_squid.text()))
+        if self.target_sharks.text() != '0':
+            res_groups.append(('Sharks and Skates',self.target_sharks.text()))
+        if self.target_octopus.text() != '0':
+            res_groups.append(('Octopus',self.target_octopus.text()))
+        if self.target_bait.text() != '0':
+            res_groups.append(('Bait',self.target_bait.text()))
+
+        self.parent.fisheries = cpfv_fisheries
+
+        for (fishery,value) in cpfv_fisheries:
+            if not strIsInt(value):
+                QMessageBox.warning(self, "Input Error", "One of your fishery percentages is not a number")
+                return 
+        
+        total = sum([int(b) for (a,b) in cpfv_fisheries])
+        if total != 100:
+            QMessageBox.warning(self, "Percent Error", "Your percentages must add up to 100, currently: "+str(total))
+            return             
+        #print "Total: "+str(total)
+
+        #self.hide()
+        #self.parent.next_fishery();        
+
+    def on_pbnDrawShapes_released(self):        
         if self.currentStep == self.comm_fish_str:
             if not self.parent.commFishStarted:
                 self.append_data()
@@ -112,6 +150,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.priv_fish_str = QA.translate("FisheryGui", 'Private Fishery', "", QA.UnicodeUTF8)
         self.back_to_interview_str = QA.translate("FisheryGui", "Going back to first interview step...", "landing port 4", QA.UnicodeUTF8)
 
+        self.f_emp_type_str = QA.translate("EcotourismGui", "emp_type", "Employee type DB field name", QA.UnicodeUTF8)
         self.f_v_len_str = QA.translate("FisheryGui", 'v_len', "vessel length attribute", QA.UnicodeUTF8)
         self.f_v_motor_str = QA.translate("FisheryGui", 'v_motor', "vessel motor horsepower attribute", QA.UnicodeUTF8)
         self.f_haul_cap_str = QA.translate("FisheryGui", 'haul_cap', "vessel haul capacity in kilograms attribute", QA.UnicodeUTF8)

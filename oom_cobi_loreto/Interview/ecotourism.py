@@ -54,18 +54,17 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         
         self.retranslate()
 
-    def on_pbnSelectEcotourism_released(self):
-	self.parent.add_attrib(self.f_emp_type_str, self.comboBox.currentText())
-	self.parent.add_attrib(self.f_v_len_str, self.vessel_length_line.text())
-	self.parent.add_attrib(self.f_v_motor_str, self.vessel_motor_line.text())
-	self.parent.add_attrib(self.f_v_cap_str, self.haul_capacity_line.text())
-	self.parent.add_attrib(self.f_v_homep_str, self.home_port_line.text())
-	self.parent.add_attrib(self.f_trabajos_str, self.workers_line.text())
-
+    def on_pbnSelectEcotourism_released(self):          
+    	self.parent.add_attrib(self.f_v_len_str, self.vessel_length_line.text())
+    	self.parent.add_attrib(self.f_v_motor_str, self.vessel_motor_line.text())
+    	self.parent.add_attrib(self.f_v_cap_str, self.haul_capacity_line.text())
+    	self.parent.add_attrib(self.f_v_homep_str, self.home_port_line.text())
+    	self.parent.add_attrib(self.f_trabajos_str, self.workers_line.text())
+    
         if not self.comboBox.currentText():
             QMessageBox.warning(self, self.emp_error_str, self.choose_activity_str)
             return
-
+ 
         self.close()
         from selectecotourism import SelectEcotourismGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -78,7 +77,7 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         # stop interview process
         self.parent.resetInterview(self.cancel_ecotourism_str)
 
-    def retranslate(self):
+    def retranslate(self):       
         self.f_emp_type_str = QA.translate("EcotourismGui", "emp_type", "Employee type DB field name", QA.UnicodeUTF8)
         self.f_v_len_str = QA.translate("EcotourismGui", "v_len", "Vessel length DB field name", QA.UnicodeUTF8)
         self.f_v_motor_str = QA.translate("EcotourismGui", "v_motor", "Vessel motor (horsepower) DB field name", QA.UnicodeUTF8)

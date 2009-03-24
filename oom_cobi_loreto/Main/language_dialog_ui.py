@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'language_dialog.ui'
 #
-# Created: Thu Aug 14 20:52:20 2008
-#      by: PyQt4 UI code generator 4.3.3
+# Created: Mon Mar 23 14:44:18 2009
+#      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,21 +12,16 @@ from PyQt4 import QtCore, QtGui
 class Ui_LanguageDialog(object):
     def setupUi(self, LanguageDialog):
         LanguageDialog.setObjectName("LanguageDialog")
-        LanguageDialog.resize(QtCore.QSize(QtCore.QRect(0,0,152,112).size()).expandedTo(LanguageDialog.minimumSizeHint()))
-
+        LanguageDialog.resize(152, 112)
         self.hboxlayout = QtGui.QHBoxLayout(LanguageDialog)
         self.hboxlayout.setObjectName("hboxlayout")
-
         self.groupBox = QtGui.QGroupBox(LanguageDialog)
         self.groupBox.setObjectName("groupBox")
-
         self.vboxlayout = QtGui.QVBoxLayout(self.groupBox)
         self.vboxlayout.setObjectName("vboxlayout")
-
         self.english_button = QtGui.QPushButton(self.groupBox)
         self.english_button.setObjectName("english_button")
         self.vboxlayout.addWidget(self.english_button)
-
         self.spanish_button = QtGui.QPushButton(self.groupBox)
         self.spanish_button.setObjectName("spanish_button")
         self.vboxlayout.addWidget(self.spanish_button)

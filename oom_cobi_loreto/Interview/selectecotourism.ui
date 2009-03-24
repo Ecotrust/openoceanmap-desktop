@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>281</width>
-    <height>122</height>
+    <height>152</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Select Ecotourism</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout" name="verticalLayout" >
    <item>
     <widget class="QWidget" native="1" name="widget" >
      <layout class="QHBoxLayout" >
@@ -25,7 +25,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBox" >
+       <widget class="QComboBox" name="comboActivity" >
         <item>
          <property name="text" >
           <string/>
@@ -56,6 +56,49 @@
           <string>Other</string>
          </property>
         </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="other_wrap" >
+     <property name="enabled" >
+      <bool>true</bool>
+     </property>
+     <layout class="QHBoxLayout" name="_2" >
+      <item>
+       <widget class="QLabel" name="fishery_text_2" >
+        <property name="text" >
+         <string>    Other activity:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="other_line" >
+        <property name="enabled" >
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize" >
+         <size>
+          <width>50</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
        </widget>
       </item>
      </layout>

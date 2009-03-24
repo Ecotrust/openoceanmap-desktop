@@ -54,15 +54,30 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         self.parent = parent
         self.retranslate()
 
-    def on_pbnStartShapes_released(self):
-        #Get fishery value
-        shape_type = self.comboBox.currentText()
+    #Controls whether other field activity lineEdit is enabled
+    def on_comboActivity_activated(self):
+        import pdb
+        pdb.set_trace()
+        activity_type = self.comboActivity.currentText()
+        if activity_type == 'Other':
+            self.other_line.setEnabled(True)
+        else:
+            self.other_line.setEnabled(False)
+
+    def on_pbnStartShapes_released(self):       
+        shape_type = self.comboActivity.currentText()
         if not shape_type:
             QMessageBox.warning(self, self.tourism_error_str, self.select_tourism_str)
             return 
-        else:
-            self.parent.shapeType = shape_type
-            
+
+        if shape_type == 'Other':
+            shape_type = self.other_line.text()
+            if not shape_type:
+                QMessageBox.warning(self, self.other_error_str, self.no_other_error_str)
+                return
+
+        self.parent.add_attrib(self.f_emp_type_str, activity_type)
+        self.parent.shapeType = shape_type            
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
@@ -84,5 +99,7 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         
     def retranslate(self):
         self.tourism_error_str = QA.translate("SelectEcotourismGui", "Ecotourism Error", "Error when user didn't select an ecotourism type ", QA.UnicodeUTF8)        
+        self.other_error_str = QA.translate("EcotourismGui", "Ecotourism Error", "Error message given when user doesn't enter an other activity type", QA.UnicodeUTF8)
+        self.no_other_error_str = QA.translate("EcotourismGui", "You selected 'Other' activity, you must enter the name of that activity", "Top title of error window when you dont enter a name for the other activity", QA.UnicodeUTF8)        
         self.select_tourism_str = QA.translate("SelectEcotourismGui", "Please select an ecotourism type", "", QA.UnicodeUTF8)
         self.finish_tourism_str = QA.translate("SelectEcotourismGui", "Finished with ecotourism interview", "", QA.UnicodeUTF8)        
