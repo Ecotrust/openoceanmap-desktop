@@ -72,7 +72,12 @@
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - longline</string>
+            <string>Groundfish - hook &amp; line</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Hagfish - trap</string>
            </property>
           </item>
           <item>
@@ -82,12 +87,22 @@
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish - longline</string>
+            <string>Lingcod - hook &amp; line</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish - trap</string>
+            <string>Prawn - trap</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sablefish (Blackcod) - longline</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sablefish (Blackcod) - trap</string>
            </property>
           </item>
           <item>
@@ -102,17 +117,17 @@
           </item>
           <item>
            <property name="text" >
-            <string>Thornyhead - longline</string>
+            <string>Tuna - jig</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Thornyhead - trap</string>
+            <string>Tuna - pole</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Tuna - longline</string>
+            <string>Other</string>
            </property>
           </item>
          </widget>

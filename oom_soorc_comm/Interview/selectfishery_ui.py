@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Tue Mar 10 11:51:50 2009
+# Created: Wed Mar 25 10:06:29 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -32,6 +32,9 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.setObjectName("fishery_comboBox")
         self.fishery_comboBox.addItem(QtCore.QString())
         self.fishery_comboBox.setItemText(0, "")
+        self.fishery_comboBox.addItem(QtCore.QString())
+        self.fishery_comboBox.addItem(QtCore.QString())
+        self.fishery_comboBox.addItem(QtCore.QString())
         self.fishery_comboBox.addItem(QtCore.QString())
         self.fishery_comboBox.addItem(QtCore.QString())
         self.fishery_comboBox.addItem(QtCore.QString())
@@ -101,15 +104,18 @@ class Ui_SelectFishery(object):
         self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "Select Fishery :", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Dungeness Crab - trap", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Groundfish - trawl", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Groundfish - longline", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(4, QtGui.QApplication.translate("SelectFishery", "Halibut - longline", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(5, QtGui.QApplication.translate("SelectFishery", "Sablefish - longline", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(6, QtGui.QApplication.translate("SelectFishery", "Sablefish - trap", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(7, QtGui.QApplication.translate("SelectFishery", "Salmon - troll", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(8, QtGui.QApplication.translate("SelectFishery", "Shrimp - trawl", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(9, QtGui.QApplication.translate("SelectFishery", "Thornyhead - longline", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(10, QtGui.QApplication.translate("SelectFishery", "Thornyhead - trap", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(11, QtGui.QApplication.translate("SelectFishery", "Tuna - longline", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Groundfish - hook & line", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(4, QtGui.QApplication.translate("SelectFishery", "Hagfish - trap", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(5, QtGui.QApplication.translate("SelectFishery", "Halibut - longline", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(6, QtGui.QApplication.translate("SelectFishery", "Lingcod - hook & line", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(7, QtGui.QApplication.translate("SelectFishery", "Prawn - trap", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(8, QtGui.QApplication.translate("SelectFishery", "Sablefish (Blackcod) - longline", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(9, QtGui.QApplication.translate("SelectFishery", "Sablefish (Blackcod) - trap", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(10, QtGui.QApplication.translate("SelectFishery", "Salmon - troll", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(11, QtGui.QApplication.translate("SelectFishery", "Shrimp - trawl", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(12, QtGui.QApplication.translate("SelectFishery", "Tuna - jig", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(13, QtGui.QApplication.translate("SelectFishery", "Tuna - pole", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(14, QtGui.QApplication.translate("SelectFishery", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("SelectFishery", "Percent income from this fishery:", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFisheryFinished.setText(QtGui.QApplication.translate("SelectFishery", "Finished With Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectFishery", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
