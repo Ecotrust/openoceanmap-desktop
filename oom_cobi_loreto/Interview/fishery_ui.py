@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'fishery.ui'
 #
-# Created: Tue Mar 24 15:31:41 2009
+# Created: Wed Mar 25 16:56:32 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -768,7 +768,7 @@ class Ui_Fishery(object):
         self.label_12.setText(QtGui.QApplication.translate("Fishery", "What percent interest do you have in each resource group? (Must add up to 100)", None, QtGui.QApplication.UnicodeUTF8))
         self.label_7.setText(QtGui.QApplication.translate("Fishery", "Coastal Reef Fish:", None, QtGui.QApplication.UnicodeUTF8))
         self.target_coastal.setText(QtGui.QApplication.translate("Fishery", "0", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_8.setText(QtGui.QApplication.translate("Fishery", "Deep Red Fish:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_8.setText(QtGui.QApplication.translate("Fishery", "Deep Reef Fish:", None, QtGui.QApplication.UnicodeUTF8))
         self.target_deep.setText(QtGui.QApplication.translate("Fishery", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.label_9.setText(QtGui.QApplication.translate("Fishery", "Migratory Fish", None, QtGui.QApplication.UnicodeUTF8))
         self.target_migratory.setText(QtGui.QApplication.translate("Fishery", "0", None, QtGui.QApplication.UnicodeUTF8))

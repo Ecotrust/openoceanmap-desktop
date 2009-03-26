@@ -47,31 +47,47 @@ from selectgear_ui import Ui_SelectGear
 import sys
 
 class SelectGearGui(QDialog, Ui_SelectGear):
-    def __init__(self, parent, flags, fishery_sector, previousGui):
+    def __init__(self, parent, flags, fishery_sector, res_group):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
         self.fishery_sector = fishery_sector
+        self.res_group = res_group
         self.retranslate()
         
-        self.fishery_sector_label.setText(unicode(self.fishery_sector))        
+        self.fishery_sector_label.setText(unicode(self.fishery_sector))
+        self.resource_group_label.setText(unicode(self.res_group))
         self.pbnStepFinished.setText(self.exit_part_str + unicode(self.fishery_sector) + self.step_str)
     
-    def on_pbnStartShapes_released(self):
-        shape_type = self.gear_comboBox.currentText()
-        if not shape_type:
-            QMessageBox.warning(self, self.gear_error_str, self.select_gear_str)
-            return 
-        else:
-            self.parent.shapeType = shape_type
-
-        gear_perc_inc = self.gear_perc_income.text()
-        if not gear_perc_inc or gear_perc_inc == '0':
-            QMessageBox.warning(self, self.percent_error_str, self.missing_gear_str)
-            return
-        else:
-            self.parent.gear_inc = gear_perc_inc
-            #self.parent.interviewInfo2.append([self.f_gear_inc_str,gear_perc_inc])
+    def on_pbnStartShapes_released(self):               
+        self.parent.shapeType = self.res_group
+        main_species = self.editMainSpecies.document().toPlainText()
+        
+        #Build permit id string
+        gear_types = []        
+        if self.gear_hook_line.isChecked():
+            gear_types.append('Hook and Line')
+        if self.gear_traps.isChecked():
+            gear_types.append('Traps')    
+        if self.gear_purse_seine.isChecked():
+            gear_types.append('Purse Seine')
+        if self.gear_gillnet.isChecked():
+            gear_types.append('Gillnet')
+        if self.gear_trawling.isChecked():
+            gear_types.append('Trawling')
+        if self.gear_hooka.isChecked():
+            gear_types.append('Hooka (compressor)')                                                                       
+        if self.gear_other_1.text() != '':
+            gear_types.append(str(self.gear_other_1.text()))
+        if self.gear_other_2.text() != '':
+            gear_types.append(str(self.gear_other_2.text()))
+        if self.gear_other_3.text() != '':
+            gear_types.append(str(self.gear_other_3.text()))
+        if self.gear_other_4.text() != '':
+            gear_types.append(str(self.gear_other_4.text()))
+                                                            
+        gear_type_str = ','.join(gear_types)        
+        self.parent.capturedPolygonsGear.append(gear_type_str)
 
         self.close()
         mc = self.parent.canvas      
@@ -97,7 +113,7 @@ class SelectGearGui(QDialog, Ui_SelectGear):
     def nextPolygon(self):
         from drawgear import DrawGearGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self)
+        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
         wnd.show()
 
     def retranslate(self):

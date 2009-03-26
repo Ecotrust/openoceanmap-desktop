@@ -41,6 +41,7 @@ from Tools.polygontool import *
 
 # UI specific includes
 from fishery_ui import Ui_Fishery
+from selectgear import SelectGearGui
 
 from Util.common_functions import *
 
@@ -55,7 +56,8 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.prevGUI = prevGUI
         self.currentStep = fishery_sector
         self.fishery_sector_label.setText(unicode(self.currentStep))
-        self.retranslate()
+        self.retranslate()    
+        self.res_groups = [] #Resource groups harvested by fisherman    
  
     def append_data(self):
         self.parent.add_attrib(self.f_emp_type_str, self.comboBox.currentText())
@@ -68,62 +70,72 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.parent.add_attrib(self.f_landp_3_str, self.landing_port_line_3.text())
         self.parent.add_attrib(self.f_landp_4_str, self.landing_port_line_4.text())        
 
-    def get_groups(self):
-        res_groups = []        
-        if self.target_target_coastal.text() != '0':
-            res_groups.append(('Coastal Reef Fish',self.target_coastal.text()))
+    def loadResGroups(self):        
+        self.res_groups = []
+        if self.target_coastal.text() != '0':
+            self.res_groups.append(('Coastal Reef Fish',self.target_coastal.text()))
         if self.target_deep.text() != '0':
-            res_groups.append(('Deep Red Fish',self.target_deep.text()))
+            self.res_groups.append(('Deep Red Fish',self.target_deep.text()))
         if self.target_migratory.text() != '0':
-            res_groups.append(('Migratory Fish',self.target_migratory.text()))
+            self.res_groups.append(('Migratory Fish',self.target_migratory.text()))
         if self.target_cucumber.text() != '0':
-            res_groups.append(('Sea Cucumber',self.target_cucumber.text()))
+            self.res_groups.append(('Sea Cucumber',self.target_cucumber.text()))
         if self.target_chocolate.text() != '0':
-            res_groups.append(('Chocolate Clam',self.target_chocolate.text()))
+            self.res_groups.append(('Chocolate Clam',self.target_chocolate.text()))
         if self.target_squid.text() != '0':
-            res_groups.append(('Squid',self.target_squid.text()))
+            self.res_groups.append(('Squid',self.target_squid.text()))
         if self.target_sharks.text() != '0':
-            res_groups.append(('Sharks and Skates',self.target_sharks.text()))
+            self.res_groups.append(('Sharks and Skates',self.target_sharks.text()))
         if self.target_octopus.text() != '0':
-            res_groups.append(('Octopus',self.target_octopus.text()))
+            self.res_groups.append(('Octopus',self.target_octopus.text()))
         if self.target_bait.text() != '0':
-            res_groups.append(('Bait',self.target_bait.text()))
+            self.res_groups.append(('Bait',self.target_bait.text()))
 
-        self.parent.fisheries = cpfv_fisheries
-
-        for (fishery,value) in cpfv_fisheries:
+        for (group, value) in self.res_groups:
             if not strIsInt(value):
                 QMessageBox.warning(self, "Input Error", "One of your fishery percentages is not a number")
                 return 
         
-        total = sum([int(b) for (a,b) in cpfv_fisheries])
+        total = sum([int(b) for (a,b) in self.res_groups])
         if total != 100:
             QMessageBox.warning(self, "Percent Error", "Your percentages must add up to 100, currently: "+str(total))
             return             
-        #print "Total: "+str(total)
+        return 1
 
         #self.hide()
         #self.parent.next_fishery();        
 
-    def on_pbnDrawShapes_released(self):        
+    '''
+    Pulls the next resource group and starts the dialog for collecting information
+    about that group
+    '''
+    def startNextResGroup(self):        
+        if len(self.res_groups) > 0:
+            (res_group,value) = self.res_groups.pop()
+            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+            wnd = SelectGearGui(self.parent,flags, self.currentStep, res_group)
+            wnd.show()                        
+            #wnd = SelectFisheryGui(self, fishery, value)
+            #wnd.show()
+        else:
+            self.end_interview()
+
+    def on_pbnDrawShapes_released(self):                
         if self.currentStep == self.comm_fish_str:
-            if not self.parent.commFishStarted:
-                self.append_data()
+            if not self.parent.commFishStarted:                
                 self.parent.commFishStarted = True
         elif self.currentStep == self.comm_sport_fish_str :
-            if not self.parent.commFishStarted:
-                self.append_data()
+            if not self.parent.commFishStarted:                
                 self.parent.sportFishStarted = True
         elif self.currentStep == self.priv_fish_str:
             if not self.parent.commFishStarted:
-                self.append_data()
                 self.parent.privateFishStarted = True
-
-        self.close()
-        from selectgear import SelectGearGui
-        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = SelectGearGui(self.parent,flags, self.currentStep, self.prevGUI)
-        wnd.show()
+             
+        self.append_data()
+        code = self.loadResGroups()        
+        if code >= 0:
+            self.close()            
+            self.startNextResGroup()                        
 
     def on_pbnCancel_clicked(self):
         self.close()

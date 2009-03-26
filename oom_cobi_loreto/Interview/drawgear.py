@@ -44,46 +44,20 @@ from Util.common_functions import *
 import sys
 
 class DrawGearGui(QDialog, Ui_DrawGear):
-    def __init__(self, parent, flags, pennies_left, previousGui):
+    def __init__(self, parent, flags, pennies_left, fishery_sector, res_group):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
-        self.retranslate()
-        
+        self.retranslate()        
         self.discardLast = False
         self.pennies_left = pennies_left
-        self.previousGui = previousGui
-        self.type_label.setText("  "+unicode(self.parent.shapeType)+": ")
+        self.type_label.setText("  "+unicode(fishery_sector)+" "+unicode(res_group))
         self.pl_label_4.setText(u"  "+unicode(self.pennies_left)+self.left_str)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
-        self.species = []    
- 
-    def fetch_species(self):
-            species = []
-            if self.s1.isChecked():
-                #species.append(unicode(self.sharks_and_skates_str))
-                species.append('1')
-            if self.s2.isChecked():
-                #species.append(unicode(self.coastal_reef_fish_str))
-                species.append('2')
-            if self.s3.isChecked():
-                #species.append(unicode(self.deep_reef_fish_str))
-                species.append('3')
-            if self.s4.isChecked():
-                #species.append(unicode(self.migratory_fish_str))
-                species.append('4')
-            if self.s5.isChecked():
-                #species.append(unicode(self.benthic_fish_str))
-                species.append('5')
-            if self.s6.isChecked():
-                #species.append(unicode(self.shrimp_str))
-                species.append('6')
-            if self.s7.isChecked():
-                #species.append(unicode(self.other_str))
-                species.append('7')
-            species_list_text = u','.join(species)
-            return species_list_text
+
+        self.fishery_sector = fishery_sector
+        self.res_group = res_group
             
     #Called when "More Shapes" button pressed        
     def on_pbnMoreShapes_released(self):
@@ -104,8 +78,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
             else:
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
                 self.parent.capturedPolygonsPennies.append(num_pennies)
-            
-            self.parent.capturedPolygonsSpecies.append(self.fetch_species())
+                        
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
             self.parent.save_gear_inc()
             
@@ -159,8 +132,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
                 return
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
-                
-            self.parent.capturedPolygonsSpecies.append(self.fetch_species())            
+                            
             self.parent.capturedPolygonsType.append(self.parent.shapeType)
             self.parent.save_gear_inc()
         
@@ -168,7 +140,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self.previousGui)
+        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
         wnd.show()
 
     def retranslate(self):

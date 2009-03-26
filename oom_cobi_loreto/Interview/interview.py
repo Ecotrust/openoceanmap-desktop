@@ -242,8 +242,7 @@ class Interview(object):
       self.parent.canvas.setMapTool(self.parent.toolZoomIn)
             
   def save_gear_inc(self):
-      self.capturedPolygonsGear.append(self.gear_inc)
-            
+      self.capturedPolygonsGear.append(self.gear_inc)            
 
   # End interview dialog
   def saveText(self, textGui):

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectgear.ui'
 #
-# Created: Tue Mar 24 16:53:13 2009
+# Created: Wed Mar 25 16:27:00 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -62,9 +62,9 @@ class Ui_SelectGear(object):
         self.groupBox_2.setObjectName("groupBox_2")
         self.horizontalLayout_9 = QtGui.QHBoxLayout(self.groupBox_2)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        self.textEdit = QtGui.QTextEdit(self.groupBox_2)
-        self.textEdit.setObjectName("textEdit")
-        self.horizontalLayout_9.addWidget(self.textEdit)
+        self.editMainSpecies = QtGui.QTextEdit(self.groupBox_2)
+        self.editMainSpecies.setObjectName("editMainSpecies")
+        self.horizontalLayout_9.addWidget(self.editMainSpecies)
         self.verticalLayout_8.addWidget(self.groupBox_2)
         self.groupBox = QtGui.QGroupBox(SelectGear)
         self.groupBox.setObjectName("groupBox")
