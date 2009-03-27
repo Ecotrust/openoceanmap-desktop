@@ -41,7 +41,7 @@ from qgis.gui import *
 from interviewstart import InterviewStartGui
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
-from resgrp import ResGroupGui
+from resgroup import ResGroupGui
 # General system includes
 import sys, os
 

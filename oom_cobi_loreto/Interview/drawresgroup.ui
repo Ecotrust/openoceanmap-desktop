@@ -1,7 +1,7 @@
 <ui version="4.0" >
  <author>Dane Springmeyer</author>
- <class>DrawGear</class>
- <widget class="QDialog" name="DrawGear" >
+ <class>drawResGroup</class>
+ <widget class="QDialog" name="drawResGroup" >
   <property name="geometry" >
    <rect>
     <x>0</x>
