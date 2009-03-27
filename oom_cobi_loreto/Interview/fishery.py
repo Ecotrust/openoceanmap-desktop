@@ -41,7 +41,6 @@ from Tools.polygontool import *
 
 # UI specific includes
 from fishery_ui import Ui_Fishery
-from selectgear import SelectGearGui
 
 from Util.common_functions import *
 
@@ -99,28 +98,15 @@ class FisheryGui(QDialog, Ui_Fishery):
         total = sum([int(b) for (a,b) in self.res_groups])
         if total != 100:
             QMessageBox.warning(self, "Percent Error", "Your percentages must add up to 100, currently: "+str(total))
-            return             
-        return 1
+            return     
+        
+        #Store res group info in Interview object for parent to handle looping
+        #through res groups.  ALso other dialogs with the same parent can
+        #then request to move onto the next res group.
+        self.parent.res_groups = self.res_groups        
+        return 1     
 
-        #self.hide()
-        #self.parent.next_fishery();        
-
-    '''
-    Pulls the next resource group and starts the dialog for collecting information
-    about that group
-    '''
-    def startNextResGroup(self):        
-        if len(self.res_groups) > 0:
-            (res_group,value) = self.res_groups.pop()
-            flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-            wnd = SelectGearGui(self.parent,flags, self.currentStep, res_group)
-            wnd.show()                        
-            #wnd = SelectFisheryGui(self, fishery, value)
-            #wnd.show()
-        else:
-            self.end_interview()
-
-    def on_pbnDrawShapes_released(self):                
+    def on_pbnStartGroups_released(self):                
         if self.currentStep == self.comm_fish_str:
             if not self.parent.commFishStarted:                
                 self.parent.commFishStarted = True
@@ -135,7 +121,7 @@ class FisheryGui(QDialog, Ui_Fishery):
         code = self.loadResGroups()        
         if code >= 0:
             self.close()            
-            self.startNextResGroup()                        
+            self.parent.nextStep()                        
 
     def on_pbnCancel_clicked(self):
         self.close()

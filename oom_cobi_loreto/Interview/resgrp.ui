@@ -1,7 +1,7 @@
 <ui version="4.0" >
  <author>Dane Springmeyer</author>
- <class>SelectGear</class>
- <widget class="QDialog" name="SelectGear" >
+ <class>ResGroup</class>
+ <widget class="QDialog" name="ResGroup" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -96,14 +96,6 @@
        </layout>
       </item>
      </layout>
-     <zorder>fishery_text_3</zorder>
-     <zorder>gear_perc_income</zorder>
-     <zorder>groupBox_2</zorder>
-     <zorder>label</zorder>
-     <zorder>fishery_sector_label</zorder>
-     <zorder>label_2</zorder>
-     <zorder>resource_group_label</zorder>
-     <zorder>groupBox_2</zorder>
     </widget>
    </item>
    <item>
@@ -116,34 +108,6 @@
        <widget class="QTextEdit" name="editMainSpecies" />
       </item>
      </layout>
-     <zorder>species_1</zorder>
-     <zorder>label_7</zorder>
-     <zorder>species_2</zorder>
-     <zorder>label_8</zorder>
-     <zorder>species_5</zorder>
-     <zorder>label_9</zorder>
-     <zorder>species_6</zorder>
-     <zorder>label_10</zorder>
-     <zorder>species_9</zorder>
-     <zorder>label_11</zorder>
-     <zorder>species_10</zorder>
-     <zorder>label_12</zorder>
-     <zorder>species_3</zorder>
-     <zorder>species_7</zorder>
-     <zorder>species_11</zorder>
-     <zorder>label_13</zorder>
-     <zorder>label_14</zorder>
-     <zorder>label_15</zorder>
-     <zorder>species_4</zorder>
-     <zorder>species_8</zorder>
-     <zorder>species_12</zorder>
-     <zorder>label_16</zorder>
-     <zorder>label_17</zorder>
-     <zorder>label_18</zorder>
-     <zorder>horizontalSpacer_5</zorder>
-     <zorder>horizontalSpacer_6</zorder>
-     <zorder>editMainSpecies</zorder>
-     <zorder>widget_3</zorder>
     </widget>
    </item>
    <item>

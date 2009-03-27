@@ -41,12 +41,12 @@ from Tools.polygontool import *
 # Custom Functions
 from Util.common_functions import *
 # UI specific includes
-from selectgear_ui import Ui_SelectGear
+from resgroup_ui import Ui_ResGroup
 
 # General system includes
 import sys
 
-class SelectGearGui(QDialog, Ui_SelectGear):
+class ResGroupGui(QDialog, Ui_ResGroup):
     def __init__(self, parent, flags, fishery_sector, res_group):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
@@ -118,14 +118,14 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         wnd.show()
 
     def retranslate(self):
-        self.gear_error_str = QA.translate("SelectGearGui", "Gear Type Error", "Displayed when user forgot to select a gear type", QA.UnicodeUTF8)
-        self.select_gear_str = QA.translate("SelectGearGui", "Please select a gear type", "Displayed when user forgot to select a gear type", QA.UnicodeUTF8)
-        self.exit_part_str = QA.translate("SelectGearGui", 'Exit ', "Partial text used to build a larger message, for example 'Exit Sport Fishery Step'", QA.UnicodeUTF8)
-        self.step_str = QA.translate("SelectGearGui", ' Step', "Partial text used to build a larger message, for example 'Exit Sport Fishery Step'", QA.UnicodeUTF8)
-        self.percent_error_str = QA.translate("SelectGearGui", "Percent Error", "Displayed when there is an error with the percentage given for gear type", QA.UnicodeUTF8)
-        self.missing_gear_str = QA.translate("SelectGearGui", "Missing percentage for gear type", "", QA.UnicodeUTF8)
-        self.finish_str = QA.translate("SelectGearGui", 'Finished with', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
-        self.interview_step_str = QA.translate("SelectGearGui", ' interview step', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
-        self.comm_fish_str = QA.translate("SelectGearGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
-        self.sport_fish_str = QA.translate("SelectGearGui", 'Sport Fishery', "", QA.UnicodeUTF8)
-        self.priv_fish_str = QA.translate("SelectGearGui", 'Private Fishery', "", QA.UnicodeUTF8)                
+        self.gear_error_str = QA.translate("ResGroupGui", "Gear Type Error", "Displayed when user forgot to select a gear type", QA.UnicodeUTF8)
+        self.select_gear_str = QA.translate("ResGroupGui", "Please select a gear type", "Displayed when user forgot to select a gear type", QA.UnicodeUTF8)
+        self.exit_part_str = QA.translate("ResGroupGui", 'Exit ', "Partial text used to build a larger message, for example 'Exit Sport Fishery Step'", QA.UnicodeUTF8)
+        self.step_str = QA.translate("ResGroupGui", ' Step', "Partial text used to build a larger message, for example 'Exit Sport Fishery Step'", QA.UnicodeUTF8)
+        self.percent_error_str = QA.translate("ResGroupGui", "Percent Error", "Displayed when there is an error with the percentage given for gear type", QA.UnicodeUTF8)
+        self.missing_gear_str = QA.translate("ResGroupGui", "Missing percentage for gear type", "", QA.UnicodeUTF8)
+        self.finish_str = QA.translate("ResGroupGui", 'Finished with', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
+        self.interview_step_str = QA.translate("ResGroupGui", ' interview step', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
+        self.comm_fish_str = QA.translate("ResGroupGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
+        self.sport_fish_str = QA.translate("ResGroupGui", 'Sport Fishery', "", QA.UnicodeUTF8)
+        self.priv_fish_str = QA.translate("ResGroupGui", 'Private Fishery', "", QA.UnicodeUTF8)                

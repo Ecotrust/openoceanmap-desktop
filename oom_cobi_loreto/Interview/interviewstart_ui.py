@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interviewstart.ui'
 #
-# Created: Mon Mar 23 14:39:32 2009
+# Created: Fri Mar 27 13:22:54 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -466,9 +466,9 @@ class Ui_InterviewStart(object):
         self.interviewer_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Last Name:", None, QtGui.QApplication.UnicodeUTF8))
         self.user_group_info.setTitle(QtGui.QApplication.translate("InterviewStart", "What percentage of income/interest/stake do you have from the following?", None, QtGui.QApplication.UnicodeUTF8))
         self.comm_fish_text.setText(QtGui.QApplication.translate("InterviewStart", "Commercial Fishing:", None, QtGui.QApplication.UnicodeUTF8))
-        self.comm_fish_line.setText(QtGui.QApplication.translate("InterviewStart", "0", None, QtGui.QApplication.UnicodeUTF8))
+        self.comm_fish_line.setText(QtGui.QApplication.translate("InterviewStart", "50", None, QtGui.QApplication.UnicodeUTF8))
         self.comm_sport_text.setText(QtGui.QApplication.translate("InterviewStart", "Commercial Sport Fishing:", None, QtGui.QApplication.UnicodeUTF8))
-        self.comm_sport_line.setText(QtGui.QApplication.translate("InterviewStart", "0", None, QtGui.QApplication.UnicodeUTF8))
+        self.comm_sport_line.setText(QtGui.QApplication.translate("InterviewStart", "50", None, QtGui.QApplication.UnicodeUTF8))
         self.private_fish_text.setText(QtGui.QApplication.translate("InterviewStart", "Private Sport Fishing:", None, QtGui.QApplication.UnicodeUTF8))
         self.private_fish_line.setText(QtGui.QApplication.translate("InterviewStart", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.ecotourism_text.setText(QtGui.QApplication.translate("InterviewStart", "Ecotourism:", None, QtGui.QApplication.UnicodeUTF8))

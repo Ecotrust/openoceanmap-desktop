@@ -27,10 +27,10 @@
 #---------------------------------------------------------------------
 
 
-all: interviewstart_ui.py selectgear_ui.py fishery_ui.py selectecotourism_ui.py ecotourism_ui.py selectconsscience_ui.py consscience_ui.py  drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py other_ui.py
+all: interviewstart_ui.py resgroup_ui.py fishery_ui.py selectecotourism_ui.py ecotourism_ui.py selectconsscience_ui.py consscience_ui.py  drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py other_ui.py
 
 clean:
-	rm -f interviewstart_ui.py nextpolygon_ui.py selectgear_ui.py fishery_ui.py ecotourism_ui.py consscience_ui.py drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py interview.pyc other_ui.py
+	rm -f interviewstart_ui.py nextpolygon_ui.py resgroup_ui.py fishery_ui.py ecotourism_ui.py consscience_ui.py drawgear_ui.py drawecotourism_ui.py drawconsscience_ui.py interview.pyc other_ui.py
 	rm -f *.pyc
 	rm -f *~
 
@@ -46,8 +46,8 @@ drawecotourism_ui.py: drawecotourism.ui
 drawconsscience_ui.py: drawconsscience.ui
 	pyuic4 -o drawconsscience_ui.py drawconsscience.ui
 	
-selectgear_ui.py: selectgear.ui
-	pyuic4 -o selectgear_ui.py selectgear.ui
+resgroup_ui.py: resgroup.ui
+	pyuic4 -o resgroup_ui.py resgroup.ui
 
 fishery_ui.py: fishery.ui
 	pyuic4 -o fishery_ui.py fishery.ui

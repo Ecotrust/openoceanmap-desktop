@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectgear.ui'
 #
-# Created: Wed Mar 25 16:27:00 2009
+# Created: Fri Mar 27 11:00:35 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -180,7 +180,7 @@ class Ui_SelectGear(object):
     def retranslateUi(self, SelectGear):
         SelectGear.setWindowTitle(QtGui.QApplication.translate("SelectGear", "OpenOceanMap - Resource Group Information", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("SelectGear", "Current Fishery Sector: ", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_sector_label.setText(QtGui.QApplication.translate("SelectGear", "Fishery Sectory Here", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_sector_label.setText(QtGui.QApplication.translate("SelectGear", "Fishery Sector Here", None, QtGui.QApplication.UnicodeUTF8))
         self.label_2.setText(QtGui.QApplication.translate("SelectGear", "Current Resource Group:", None, QtGui.QApplication.UnicodeUTF8))
         self.resource_group_label.setText(QtGui.QApplication.translate("SelectGear", "Resource Group Here", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox_2.setTitle(QtGui.QApplication.translate("SelectGear", "Main Species Harvested (comma-separated):", None, QtGui.QApplication.UnicodeUTF8))

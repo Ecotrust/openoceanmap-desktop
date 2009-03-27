@@ -41,6 +41,7 @@ from qgis.gui import *
 from interviewstart import InterviewStartGui
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
+from resgrp import ResGroupGui
 # General system includes
 import sys, os
 
@@ -89,7 +90,9 @@ class Interview(object):
     wnd = InterviewStartGui(self,flags)
     wnd.show()
 
-
+  '''
+  Reset interview state
+  '''
   def resetInterview(self,msg=None):
         if not msg:
             msg = self.cancel_str
@@ -112,6 +115,10 @@ class Interview(object):
         self.interviewInfo2 = []
         self.canvas.setMapTool(self.parent.toolZoomIn)
   
+  '''
+  Add a key value pair to the set of attributes to be written
+  out to shapefile.
+  '''
   def add_attrib(self, b_name, b_value):
     found_group = False
     for i in range(len(self.interviewInfo2)):
@@ -122,7 +129,12 @@ class Interview(object):
     if not found_group:
       self.interviewInfo2.append([b_name,b_value])                  
         
-  def nextStep(self, previousGui, msg=None):
+  '''
+  Manages progress through the interview.  A state machine figures out what
+  should be handled next.  Other dialogs are expected to set the appropriate
+  state when steps wrap up before calling this function.
+  '''
+  def nextStep(self, previousGui=None, msg=None):
       if not msg:
           msg = self.leaving_step_str
       sector_specific_vessel_port_info = True
@@ -153,8 +165,8 @@ class Interview(object):
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
           else:
-              from selectgear import SelectGearGui
-              wnd = SelectGearGui(self,flags,self.currentStep,previousGui)
+              from selectgear import ResGrpGui
+              wnd = ResGrpGui(self,flags,self.currentStep,previousGui)
               wnd.show()
           
       elif self.sportFishIncome:
@@ -170,9 +182,9 @@ class Interview(object):
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
           else:
-              from selectgear import SelectGearGuiz
+              from selectgear import ResGrpGuiz
               for (fishery,value) in self.res_groups:
-                  wnd = SelectGearGui(self,flags,self.currentStep,previousGui)
+                  wnd = ResGrpGui(self,flags,self.currentStep,previousGui)
                   wnd.show()          
     
       elif self.privateFishIncome:
@@ -188,8 +200,8 @@ class Interview(object):
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
           else:
-              from selectgear import SelectGearGui
-              wnd = SelectGearGui(self,flags,self.currentStep,previousGui)
+              from selectgear import ResGrpGui
+              wnd = ResGrpGui(self,flags,self.currentStep,previousGui)
               wnd.show()
     
       elif self.ecotourismIncome:
@@ -236,6 +248,19 @@ class Interview(object):
           QMessageBox.information(self.mainwindow, self.success_str, self.int_comp_str)
       
       self.parent.canvas.setMapTool(self.parent.toolZoomIn)
+
+  '''
+  Pulls the next resource group and starts the dialog for collecting information
+  about that group
+  '''
+  def startNextResGroup(self):        
+      if len(self.res_groups) > 0:
+          (res_group,value) = self.res_groups.pop()
+          flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+          wnd = ResGrpGui(self.parent,flags, self.currentStep, res_group)
+          wnd.show()                        
+      else:
+          self.end_interview()
             
   def save_gear_inc(self):
       self.capturedPolygonsGear.append(self.gear_inc)            
@@ -424,7 +449,12 @@ class Interview(object):
             #Reset penny count
             self.pennies_left = 100
 
-            drawGui.previousGui.show()
+            import pdb
+            pdb.set_trace()
+            if self.currentStep == self.comm_fish_str or self.currentStep == self.comm_sport_fish_str or self.currentStep == self.priv_fish_str:
+                self.startNextResGroup()
+            else:
+                drawGui.previousGui.show()
 
   def retranslate(self):
       self.first_name_str = QA.translate("InterviewStartGui", "firstname", "Interviewee first name attribute", QA.UnicodeUTF8)

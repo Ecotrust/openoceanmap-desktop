@@ -948,7 +948,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>0</string>
+                  <string>50</string>
                  </property>
                 </widget>
                </item>
@@ -1003,7 +1003,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>0</string>
+                  <string>25</string>
                  </property>
                 </widget>
                </item>
@@ -1058,7 +1058,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>0</string>
+                  <string>25</string>
                  </property>
                 </widget>
                </item>
@@ -1488,7 +1488,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string/>
+                  <string>TestGroup</string>
                  </property>
                 </widget>
                </item>
@@ -1543,7 +1543,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>0</string>
+                  <string>25</string>
                  </property>
                 </widget>
                </item>
@@ -1990,14 +1990,14 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pbnDrawShapes" >
+       <widget class="QPushButton" name="pbnStartGroups" >
         <property name="font" >
          <font>
           <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text" >
-         <string>Draw Shapes</string>
+         <string>Next</string>
         </property>
        </widget>
       </item>
