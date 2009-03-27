@@ -47,7 +47,7 @@
            </font>
           </property>
           <property name="text" >
-           <string>Fishery Sectory Here</string>
+           <string>Fishery Sector Here</string>
           </property>
           <property name="alignment" >
            <set>Qt::AlignCenter</set>
@@ -116,6 +116,34 @@
        <widget class="QTextEdit" name="editMainSpecies" />
       </item>
      </layout>
+     <zorder>species_1</zorder>
+     <zorder>label_7</zorder>
+     <zorder>species_2</zorder>
+     <zorder>label_8</zorder>
+     <zorder>species_5</zorder>
+     <zorder>label_9</zorder>
+     <zorder>species_6</zorder>
+     <zorder>label_10</zorder>
+     <zorder>species_9</zorder>
+     <zorder>label_11</zorder>
+     <zorder>species_10</zorder>
+     <zorder>label_12</zorder>
+     <zorder>species_3</zorder>
+     <zorder>species_7</zorder>
+     <zorder>species_11</zorder>
+     <zorder>label_13</zorder>
+     <zorder>label_14</zorder>
+     <zorder>label_15</zorder>
+     <zorder>species_4</zorder>
+     <zorder>species_8</zorder>
+     <zorder>species_12</zorder>
+     <zorder>label_16</zorder>
+     <zorder>label_17</zorder>
+     <zorder>label_18</zorder>
+     <zorder>horizontalSpacer_5</zorder>
+     <zorder>horizontalSpacer_6</zorder>
+     <zorder>editMainSpecies</zorder>
+     <zorder>widget_3</zorder>
     </widget>
    </item>
    <item>

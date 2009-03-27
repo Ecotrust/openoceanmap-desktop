@@ -78,7 +78,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
         if self.comm_sport_line:
             if not strIsInt(self.comm_sport_line.text()):
-                QMessageBox.warning(self, self.income_error_str, self.income_value_st)
+                QMessageBox.warning(self, self.income_error_str, self.income_value_str)
                 return
             else:
                 if not self.comm_sport_line.text() == '0':

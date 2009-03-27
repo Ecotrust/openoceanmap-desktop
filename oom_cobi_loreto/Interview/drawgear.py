@@ -43,16 +43,21 @@ from Util.common_functions import *
 # General system includes
 import sys
 
+'''
+previousGui is the QT Dialog that should be loaded once the user is done drawing
+and assigning pennies with this dialog.  
+'''
 class DrawGearGui(QDialog, Ui_DrawGear):
-    def __init__(self, parent, flags, pennies_left, fishery_sector, res_group):
+    def __init__(self, parent, previousGui, flags, pennies_left, fishery_sector, res_group):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
+        self.previousGui = previousGui
         self.retranslate()        
         self.discardLast = False
         self.pennies_left = pennies_left
-        self.type_label.setText("  "+unicode(fishery_sector)+" "+unicode(res_group))
-        self.pl_label_4.setText(u"  "+unicode(self.pennies_left)+self.left_str)
+        self.type_label.setText(unicode(fishery_sector)+": "+unicode(res_group))
+        self.pl_label_4.setText(unicode(self.pennies_left)+self.left_str)
         if pennies_left == 0:
             self.pbnMoreShapes.setDisabled(True)
 
@@ -140,7 +145,7 @@ class DrawGearGui(QDialog, Ui_DrawGear):
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
+        wnd = DrawGearGui(self.parent, self.previousGui, flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
         wnd.show()
 
     def retranslate(self):

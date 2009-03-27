@@ -94,6 +94,7 @@ class SelectGearGui(QDialog, Ui_SelectGear):
         self.p = PolygonTool(mc,self.parent)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
         self.saveTool = mc.mapTool()
+        self.parent.parent.interviewSaveTool = None
         mc.setMapTool(self.p)
             
     def on_pbnStepFinished_released(self): 
@@ -113,7 +114,7 @@ class SelectGearGui(QDialog, Ui_SelectGear):
     def nextPolygon(self):
         from drawgear import DrawGearGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent,flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
+        wnd = DrawGearGui(self.parent, self, flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
         wnd.show()
 
     def retranslate(self):

@@ -64,6 +64,8 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         if not self.comboBox.currentText():
             QMessageBox.warning(self, self.emp_error_str, self.choose_activity_str)
             return
+        else:
+            self.parent.add_attrib(self.f_emp_type_str, self.comboBox.currentText())            
  
         self.close()
         from selectecotourism import SelectEcotourismGui

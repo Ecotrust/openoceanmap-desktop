@@ -38,11 +38,7 @@ from PyQt4.QtGui import QApplication as QA
 from qgis.core import *
 from qgis.gui import *
 # Custom Tools
-#from interviewstart import *
-#from selectfishery import *
 from interviewstart import InterviewStartGui
-#from Tools.polygontool import *
-#from nextpolygon import *
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
 # General system includes

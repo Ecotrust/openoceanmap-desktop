@@ -83,13 +83,13 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         self.p = PolygonTool(mc,self.parent)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
         self.saveTool = mc.mapTool()
+        self.parent.parent.interviewSaveTool = None
         mc.setMapTool(self.p)
             
     def on_pbnFinished_released(self): 
         self.close()
         self.parent.ecotourismIncome = None
         self.parent.nextStep(self, self.finish_tourism_str)
-
 
     def nextPolygon(self):
         from drawecotourism import DrawEcotourismGui
@@ -98,6 +98,7 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
         wnd.show()
         
     def retranslate(self):
+        self.f_act_type_str = QA.translate("EcotourismGui", "act_type", "Type of ecotourism activity", QA.UnicodeUTF8)
         self.tourism_error_str = QA.translate("SelectEcotourismGui", "Ecotourism Error", "Error when user didn't select an ecotourism type ", QA.UnicodeUTF8)        
         self.other_error_str = QA.translate("EcotourismGui", "Ecotourism Error", "Error message given when user doesn't enter an other activity type", QA.UnicodeUTF8)
         self.no_other_error_str = QA.translate("EcotourismGui", "You selected 'Other' activity, you must enter the name of that activity", "Top title of error window when you dont enter a name for the other activity", QA.UnicodeUTF8)        

@@ -68,6 +68,7 @@ class SelectConsScienceGui(QDialog, Ui_SelectConsScience):
         self.p = PolygonTool(mc,self.parent)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
         self.saveTool = mc.mapTool()
+        self.parent.parent.interviewSaveTool = None
         mc.setMapTool(self.p)
             
     def on_pbnFinished_released(self):
