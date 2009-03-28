@@ -42,6 +42,7 @@ from interviewstart import InterviewStartGui
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
 from resgroup import ResGroupGui
+from fishery import FisheryGui
 # General system includes
 import sys, os
 
@@ -55,6 +56,7 @@ class Interview(object):
     self.currentStep = None
     self.shapeType = None
     self.gear_inc = None
+    self.res_groups = None
     self.commFishStarted= False    
     self.sportFishStarted = False
     self.privateFishStarted = False
@@ -103,6 +105,7 @@ class Interview(object):
         self.currentStep = None
         self.shapeType = None
         self.gear_inc = None
+        self.res_groups = None
         self.commFishIncome = None
         self.commFishStarted= False
         self.sportFishIncome = None
@@ -137,8 +140,6 @@ class Interview(object):
   def nextStep(self, previousGui=None, msg=None):
       if not msg:
           msg = self.leaving_step_str
-      sector_specific_vessel_port_info = True
-      S = sector_specific_vessel_port_info
       
       capture_string = QString(msg)
       self.parent.statusbar.showMessage(capture_string)
@@ -160,14 +161,14 @@ class Interview(object):
           self.add_attrib(self.f_user_group_str,self.comm_fish_str)
           self.add_attrib(self.f_percent_income_str, self.commFishIncome)
           
-          if S:          
-              from fishery import FisheryGui
+          #Get resource group information first time, then loop through resource groups
+          #the second time
+          if not self.res_groups:          
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
           else:
-              from selectgear import ResGrpGui
-              wnd = ResGrpGui(self,flags,self.currentStep,previousGui)
-              wnd.show()
+              if len(self.res_groups) > 0:
+                  self.startNextResGroup()
           
       elif self.sportFishIncome:
           self.parent.statusbar.showMessage(self.start_comm_sport_fish_str)
@@ -177,15 +178,12 @@ class Interview(object):
           self.add_attrib(self.f_user_group_str,self.comm_sport_fish_str)
           self.add_attrib(self.f_percent_income_str, self.sportFishIncome)
 
-          if S:          
-              from fishery import FisheryGui
+          if not self.res_groups:      
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
           else:
-              from selectgear import ResGrpGuiz
-              for (fishery,value) in self.res_groups:
-                  wnd = ResGrpGui(self,flags,self.currentStep,previousGui)
-                  wnd.show()          
+              if len(self.res_groups) > 0:
+                  self.startNextResGroup()          
     
       elif self.privateFishIncome:
           self.parent.statusbar.showMessage(self.start_priv_fish_str)
@@ -195,14 +193,12 @@ class Interview(object):
           self.add_attrib(self.f_user_group_str,self.priv_fish_str)
           self.add_attrib(self.f_percent_income_str, self.privateFishIncome)
 
-          if S:          
-              from fishery import FisheryGui
+          if not self.res_groups:         
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
           else:
-              from selectgear import ResGrpGui
-              wnd = ResGrpGui(self,flags,self.currentStep,previousGui)
-              wnd.show()
+            if len(self.res_groups) > 0:
+                  self.startNextResGroup()
     
       elif self.ecotourismIncome:
           self.parent.statusbar.showMessage(self.start_eco_str)
@@ -257,10 +253,8 @@ class Interview(object):
       if len(self.res_groups) > 0:
           (res_group,value) = self.res_groups.pop()
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-          wnd = ResGrpGui(self.parent,flags, self.currentStep, res_group)
+          wnd = ResGroupGui(self,flags, self.currentStep, res_group)
           wnd.show()                        
-      else:
-          self.end_interview()
             
   def save_gear_inc(self):
       self.capturedPolygonsGear.append(self.gear_inc)            
@@ -449,10 +443,21 @@ class Interview(object):
             #Reset penny count
             self.pennies_left = 100
 
-            import pdb
-            pdb.set_trace()
+            #If fisheries, go to next res group or if done with them all, go to next sector
             if self.currentStep == self.comm_fish_str or self.currentStep == self.comm_sport_fish_str or self.currentStep == self.priv_fish_str:
-                self.startNextResGroup()
+                if len(self.res_groups) > 0:
+                    self.startNextResGroup()
+                else:
+                    #Clear the current sector so we can move on to the next
+                    if self.currentStep == self.comm_fish_str:
+                        self.commFishIncome = None
+                        self.nextStep(drawGui)
+                    elif self.currentStep == self.comm_sport_fish_str:
+                        self.sportFishIncome = None
+                        self.nextStep(drawGui)
+                    elif self.currentStep == self.priv_fish_str:
+                        self.privateFishIncome = None
+                        self.nextStep(drawGui)                    
             else:
                 drawGui.previousGui.show()
 

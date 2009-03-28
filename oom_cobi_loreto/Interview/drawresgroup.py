@@ -38,7 +38,7 @@ from qgis.gui import *
 # Custom Tools
 from Tools.polygontool import *
 # UI specific includes
-from drawresgroup_ui import Ui_DrawResGrp
+from drawresgroup_ui import Ui_DrawResGroup
 from Util.common_functions import *
 # General system includes
 import sys
@@ -47,7 +47,7 @@ import sys
 previousGui is the QT Dialog that should be loaded once the user is done drawing
 and assigning pennies with this dialog.  
 '''
-class DrawResGrpGui(QDialog, Ui_DrawResGrp):
+class DrawResGroupGui(QDialog, Ui_DrawResGroup):
     def __init__(self, parent, previousGui, flags, pennies_left, fishery_sector, res_group):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
@@ -145,22 +145,22 @@ class DrawResGrpGui(QDialog, Ui_DrawResGrp):
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawResGrpGui(self.parent, self.previousGui, flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
+        wnd = DrawResGroupGui(self.parent, self.previousGui, flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
         wnd.show()
 
     def retranslate(self):
-        self.pennies_error_str = QA.translate("DrawResGrpGui", "Pennies Error", "", QA.UnicodeUTF8)
-        self.missing_penny_str = QA.translate("DrawResGrpGui", "Missing penny value", "", QA.UnicodeUTF8)
-        self.penny_number_str = QA.translate("DrawResGrpGui", "Penny value must be a number (no decimals)", "", QA.UnicodeUTF8)
-        self.add_penny_str = QA.translate("DrawResGrpGui", "Please add a penny value", "", QA.UnicodeUTF8)
-        self.no_penny_str = QA.translate("DrawResGrpGui", "You don't have that many pennies left", "", QA.UnicodeUTF8)
-        self.more_penny_str = QA.translate("DrawResGrpGui", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes", "", QA.UnicodeUTF8)
-        self.out_penny_str = QA.translate("DrawResGrpGui", "You are out of pennies.  This shape drawing session is now done.", "", QA.UnicodeUTF8)
-        self.sharks_and_skates_str = QA.translate("DrawResGrpGui", 'Sharks and Skates', "", QA.UnicodeUTF8)
-        self.coastal_reef_fish_str = QA.translate("DrawResGrpGui", 'Coastal reef fish', "", QA.UnicodeUTF8)
-        self.deep_reef_fish_str = QA.translate("DrawResGrpGui", 'Deep reef fish', "", QA.UnicodeUTF8)
-        self.migratory_fish_str = QA.translate("DrawResGrpGui", 'Migratory fish', "", QA.UnicodeUTF8)
-        self.benthic_fish_str = QA.translate("DrawResGrpGui", 'Benthic fish', "", QA.UnicodeUTF8)
-        self.shrimp_str = QA.translate("DrawResGrpGui", 'Shrimp', "", QA.UnicodeUTF8)
-        self.other_str = QA.translate("DrawResGrpGui", 'Other', "", QA.UnicodeUTF8)
-        self.left_str = QA.translate("DrawResGrpGui", " left", "Partial string used to tell you how many pennies you have remaining, for example '20 left'", QA.UnicodeUTF8)
+        self.pennies_error_str = QA.translate("DrawResGroupGui", "Pennies Error", "", QA.UnicodeUTF8)
+        self.missing_penny_str = QA.translate("DrawResGroupGui", "Missing penny value", "", QA.UnicodeUTF8)
+        self.penny_number_str = QA.translate("DrawResGroupGui", "Penny value must be a number (no decimals)", "", QA.UnicodeUTF8)
+        self.add_penny_str = QA.translate("DrawResGroupGui", "Please add a penny value", "", QA.UnicodeUTF8)
+        self.no_penny_str = QA.translate("DrawResGroupGui", "You don't have that many pennies left", "", QA.UnicodeUTF8)
+        self.more_penny_str = QA.translate("DrawResGroupGui", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes", "", QA.UnicodeUTF8)
+        self.out_penny_str = QA.translate("DrawResGroupGui", "You are out of pennies.  This shape drawing session is now done.", "", QA.UnicodeUTF8)
+        self.sharks_and_skates_str = QA.translate("DrawResGroupGui", 'Sharks and Skates', "", QA.UnicodeUTF8)
+        self.coastal_reef_fish_str = QA.translate("DrawResGroupGui", 'Coastal reef fish', "", QA.UnicodeUTF8)
+        self.deep_reef_fish_str = QA.translate("DrawResGroupGui", 'Deep reef fish', "", QA.UnicodeUTF8)
+        self.migratory_fish_str = QA.translate("DrawResGroupGui", 'Migratory fish', "", QA.UnicodeUTF8)
+        self.benthic_fish_str = QA.translate("DrawResGroupGui", 'Benthic fish', "", QA.UnicodeUTF8)
+        self.shrimp_str = QA.translate("DrawResGroupGui", 'Shrimp', "", QA.UnicodeUTF8)
+        self.other_str = QA.translate("DrawResGroupGui", 'Other', "", QA.UnicodeUTF8)
+        self.left_str = QA.translate("DrawResGroupGui", " left", "Partial string used to tell you how many pennies you have remaining, for example '20 left'", QA.UnicodeUTF8)

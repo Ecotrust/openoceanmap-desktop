@@ -42,6 +42,7 @@ from Tools.polygontool import *
 from Util.common_functions import *
 # UI specific includes
 from resgroup_ui import Ui_ResGroup
+from drawresgroup import DrawResGroupGui
 
 # General system includes
 import sys
@@ -89,7 +90,7 @@ class ResGroupGui(QDialog, Ui_ResGroup):
         gear_type_str = ','.join(gear_types)        
         self.parent.capturedPolygonsGear.append(gear_type_str)
 
-        self.close()
+        self.hide()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
@@ -112,9 +113,8 @@ class ResGroupGui(QDialog, Ui_ResGroup):
             self.parent.nextStep(self, fishery_msg)
 
     def nextPolygon(self):
-        from drawgear import DrawGearGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        wnd = DrawGearGui(self.parent, self, flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
+        wnd = DrawResGroupGui(self.parent, self, flags,self.parent.pennies_left, self.fishery_sector, self.res_group)
         wnd.show()
 
     def retranslate(self):

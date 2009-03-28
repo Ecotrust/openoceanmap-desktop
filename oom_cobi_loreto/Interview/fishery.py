@@ -90,6 +90,19 @@ class FisheryGui(QDialog, Ui_Fishery):
         if self.target_bait.text() != '0':
             self.res_groups.append(('Bait',self.target_bait.text()))
 
+        if self.target_other_1_name.text() != '':            
+            group_tuple = (str(self.target_other_1_name.text()), self.target_other_1_interest.text())
+            self.res_groups.append(group_tuple)
+        if self.target_other_2_name.text() != '':            
+            group_tuple = (str(self.target_other_2_name.text()), self.target_other_2_interest.text())
+            self.res_groups.append(group_tuple)
+        if self.target_other_3_name.text() != '':            
+            group_tuple = (str(self.target_other_3_name.text()), self.target_other_3_interest.text())
+            self.res_groups.append(group_tuple)
+        if self.target_other_4_name.text() != '':
+            group_tuple = (str(self.target_other_4_name.text()), self.target_other_4_interest.text())            
+            self.res_groups.append(group_tuple)                        
+
         for (group, value) in self.res_groups:
             if not strIsInt(value):
                 QMessageBox.warning(self, "Input Error", "One of your fishery percentages is not a number")
@@ -127,20 +140,6 @@ class FisheryGui(QDialog, Ui_Fishery):
         self.close()
         # stop interview process
         self.parent.resetInterview()
-
-    #Not used
-    def on_pbnBack_clicked(self):
-        self.close()
-        self.parent.parent.statusbar.showMessage(self.back_to_interview_str)
-
-        from interviewstart import InterviewStartGui
-        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-        try:
-            self.prevGUI.show()
-        except:
-            wnd = InterviewStartGui(self.parent,flags)
-            wnd.show()
-        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
 
     def retranslate(self):
         self.comm_fish_str = QA.translate("FisheryGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
