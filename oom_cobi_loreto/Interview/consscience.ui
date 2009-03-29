@@ -41,16 +41,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -85,11 +76,6 @@
                <height>16777215</height>
               </size>
              </property>
-             <item>
-              <property name="text" >
-               <string/>
-              </property>
-             </item>
              <item>
               <property name="text" >
                <string>Academic</string>
@@ -136,16 +122,7 @@
            <property name="spacing" >
             <number>4</number>
            </property>
-           <property name="leftMargin" >
-            <number>4</number>
-           </property>
-           <property name="topMargin" >
-            <number>4</number>
-           </property>
-           <property name="rightMargin" >
-            <number>4</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>4</number>
            </property>
            <item>
@@ -198,7 +175,7 @@
               <enum>Qt::PreventContextMenu</enum>
              </property>
              <property name="text" >
-              <string/>
+              <string>add info yo</string>
              </property>
             </widget>
            </item>
@@ -218,7 +195,7 @@
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" >
+        <property name="sizeHint" stdset="0" >
          <size>
           <width>40</width>
           <height>20</height>

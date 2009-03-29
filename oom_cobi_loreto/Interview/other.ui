@@ -25,7 +25,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="other_line" />
+       <widget class="QLineEdit" name="other_line" >
+        <property name="text" >
+         <string>other income</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

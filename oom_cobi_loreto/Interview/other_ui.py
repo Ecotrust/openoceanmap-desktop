@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'other.ui'
 #
-# Created: Mon Mar 23 14:39:37 2009
+# Created: Sun Mar 29 05:07:49 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -52,6 +52,7 @@ class Ui_Other(object):
     def retranslateUi(self, Other):
         Other.setWindowTitle(QtGui.QApplication.translate("Other", "OpenOceanMap - Define Other Income", None, QtGui.QApplication.UnicodeUTF8))
         self.other_text.setText(QtGui.QApplication.translate("Other", "Describe Other Income:", None, QtGui.QApplication.UnicodeUTF8))
+        self.other_line.setText(QtGui.QApplication.translate("Other", "other income", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnCancel.setText(QtGui.QApplication.translate("Other", "Finish", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFinished.setText(QtGui.QApplication.translate("Other", "Save  to file", None, QtGui.QApplication.UnicodeUTF8))
 

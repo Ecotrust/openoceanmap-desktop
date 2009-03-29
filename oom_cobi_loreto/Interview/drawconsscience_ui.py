@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawconsscience.ui'
 #
-# Created: Mon Mar 23 14:39:37 2009
+# Created: Sun Mar 29 02:20:46 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -74,6 +74,6 @@ class Ui_DrawConsScience(object):
         self.type_label.setText(QtGui.QApplication.translate("DrawConsScience", "Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)", None, QtGui.QApplication.UnicodeUTF8))
         self.penny_label.setText(QtGui.QApplication.translate("DrawConsScience", "Weighting (pennies):", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("DrawConsScience", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawConsScience", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawConsScience", "Discard Last Shape", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnMoreShapes.setText(QtGui.QApplication.translate("DrawConsScience", "Draw More Shapes...", None, QtGui.QApplication.UnicodeUTF8))
 

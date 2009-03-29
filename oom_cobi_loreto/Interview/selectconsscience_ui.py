@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectconsscience.ui'
 #
-# Created: Mon Mar 23 14:38:45 2009
+# Created: Sun Mar 29 05:07:47 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,9 +12,9 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectConsScience(object):
     def setupUi(self, SelectConsScience):
         SelectConsScience.setObjectName("SelectConsScience")
-        SelectConsScience.resize(590, 115)
-        self.vboxlayout = QtGui.QVBoxLayout(SelectConsScience)
-        self.vboxlayout.setObjectName("vboxlayout")
+        SelectConsScience.resize(590, 152)
+        self.verticalLayout = QtGui.QVBoxLayout(SelectConsScience)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.widget = QtGui.QWidget(SelectConsScience)
         self.widget.setObjectName("widget")
         self.hboxlayout = QtGui.QHBoxLayout(self.widget)
@@ -28,8 +28,6 @@ class Ui_SelectConsScience(object):
         self.comboBox.setSizeAdjustPolicy(QtGui.QComboBox.AdjustToContents)
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem(QtCore.QString())
-        self.comboBox.setItemText(0, "")
-        self.comboBox.addItem(QtCore.QString())
         self.comboBox.addItem(QtCore.QString())
         self.comboBox.addItem(QtCore.QString())
         self.comboBox.addItem(QtCore.QString())
@@ -39,7 +37,27 @@ class Ui_SelectConsScience(object):
         self.comboBox.addItem(QtCore.QString())
         self.comboBox.addItem(QtCore.QString())
         self.hboxlayout.addWidget(self.comboBox)
-        self.vboxlayout.addWidget(self.widget)
+        self.verticalLayout.addWidget(self.widget)
+        self.other_wrap = QtGui.QWidget(SelectConsScience)
+        self.other_wrap.setEnabled(True)
+        self.other_wrap.setObjectName("other_wrap")
+        self._2 = QtGui.QHBoxLayout(self.other_wrap)
+        self._2.setObjectName("_2")
+        self.fishery_text_2 = QtGui.QLabel(self.other_wrap)
+        self.fishery_text_2.setObjectName("fishery_text_2")
+        self._2.addWidget(self.fishery_text_2)
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self._2.addItem(spacerItem)
+        self.other_line = QtGui.QLineEdit(self.other_wrap)
+        self.other_line.setEnabled(False)
+        self.other_line.setMinimumSize(QtCore.QSize(305, 0))
+        self.other_line.setMaximumSize(QtCore.QSize(200, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.other_line.setFont(font)
+        self.other_line.setObjectName("other_line")
+        self._2.addWidget(self.other_line)
+        self.verticalLayout.addWidget(self.other_wrap)
         self.widget_2 = QtGui.QWidget(SelectConsScience)
         self.widget_2.setObjectName("widget_2")
         self.hboxlayout1 = QtGui.QHBoxLayout(self.widget_2)
@@ -50,7 +68,7 @@ class Ui_SelectConsScience(object):
         self.pbnStartShapes = QtGui.QPushButton(self.widget_2)
         self.pbnStartShapes.setObjectName("pbnStartShapes")
         self.hboxlayout1.addWidget(self.pbnStartShapes)
-        self.vboxlayout.addWidget(self.widget_2)
+        self.verticalLayout.addWidget(self.widget_2)
 
         self.retranslateUi(SelectConsScience)
         QtCore.QMetaObject.connectSlotsByName(SelectConsScience)
@@ -58,15 +76,17 @@ class Ui_SelectConsScience(object):
     def retranslateUi(self, SelectConsScience):
         SelectConsScience.setWindowTitle(QtGui.QApplication.translate("SelectConsScience", "OpenOceanMap - Select Conservation / Science", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text.setText(QtGui.QApplication.translate("SelectConsScience", "Select focus:", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(1, QtGui.QApplication.translate("SelectConsScience", "Coastal reef ecosystem - finfish and invertebrates", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(2, QtGui.QApplication.translate("SelectConsScience", "Deep Sea reefs and seamounts - finfish and invertebrates", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(3, QtGui.QApplication.translate("SelectConsScience", "Soft bottom - sand-mud-etc", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(4, QtGui.QApplication.translate("SelectConsScience", "Small pelagics - sardines-anchovy-etc", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(5, QtGui.QApplication.translate("SelectConsScience", "Migratory fish - tuna-swordfish-sailfish-yellowtail-etc", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(6, QtGui.QApplication.translate("SelectConsScience", "Sea turtles", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(7, QtGui.QApplication.translate("SelectConsScience", "Sea lions", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(8, QtGui.QApplication.translate("SelectConsScience", "Dolphins or whales", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(9, QtGui.QApplication.translate("SelectConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(0, QtGui.QApplication.translate("SelectConsScience", "Coastal reef ecosystem - fish and invertebrates", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(1, QtGui.QApplication.translate("SelectConsScience", "Deep sea reef ecosystem - fish and invertebrates", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(2, QtGui.QApplication.translate("SelectConsScience", "Soft bottom - sand-mud-etc", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(3, QtGui.QApplication.translate("SelectConsScience", "Small pelagics - sardines-anchovy-etc", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(4, QtGui.QApplication.translate("SelectConsScience", "Migratory fish - tuna-swordfish-sailfish-yellowtail-etc", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(5, QtGui.QApplication.translate("SelectConsScience", "Sea turtles", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(6, QtGui.QApplication.translate("SelectConsScience", "Sea lions", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(7, QtGui.QApplication.translate("SelectConsScience", "Dolphins or whales", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(8, QtGui.QApplication.translate("SelectConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_text_2.setText(QtGui.QApplication.translate("SelectConsScience", " Other focus:", None, QtGui.QApplication.UnicodeUTF8))
+        self.other_line.setText(QtGui.QApplication.translate("SelectConsScience", "other focus", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFinished.setText(QtGui.QApplication.translate("SelectConsScience", "Exit Cons / Scientist Step", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectConsScience", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 

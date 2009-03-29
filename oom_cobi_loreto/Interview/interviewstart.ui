@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>902</width>
-    <height>421</height>
+    <height>435</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -83,7 +83,7 @@
               </font>
              </property>
              <property name="text" >
-              <string/>
+              <string>Tim</string>
              </property>
             </widget>
            </item>
@@ -146,7 +146,7 @@
               </font>
              </property>
              <property name="text" >
-              <string/>
+              <string>Welch</string>
              </property>
             </widget>
            </item>
@@ -209,7 +209,7 @@
               </font>
              </property>
              <property name="text" >
-              <string/>
+              <string>27</string>
              </property>
             </widget>
            </item>
@@ -272,7 +272,7 @@
               </font>
              </property>
              <property name="text" >
-              <string/>
+              <string>Warrenton</string>
              </property>
             </widget>
            </item>
@@ -316,11 +316,6 @@
              </property>
              <item>
               <property name="text" >
-               <string/>
-              </property>
-             </item>
-             <item>
-              <property name="text" >
                <string>Male</string>
               </property>
              </item>
@@ -335,13 +330,13 @@
             <widget class="QLabel" name="years_text" >
              <property name="minimumSize" >
               <size>
-               <width>100</width>
-               <height>0</height>
+               <width>80</width>
+               <height>60</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>80</width>
                <height>16777215</height>
               </size>
              </property>
@@ -351,7 +346,10 @@
               </font>
              </property>
              <property name="text" >
-              <string>Years working here:</string>
+              <string>Years working or visiting the area:</string>
+             </property>
+             <property name="wordWrap" >
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -372,7 +370,7 @@
              <property name="maximumSize" >
               <size>
                <width>70</width>
-               <height>200</height>
+               <height>25</height>
               </size>
              </property>
             </widget>
@@ -450,10 +448,10 @@
               </font>
              </property>
              <property name="text" >
-              <string/>
+              <string>1-2-04</string>
              </property>
              <property name="cursorPosition" >
-              <number>0</number>
+              <number>6</number>
              </property>
             </widget>
            </item>
@@ -516,7 +514,7 @@
               </font>
              </property>
              <property name="text" >
-              <string/>
+              <string>Joe</string>
              </property>
             </widget>
            </item>
@@ -579,7 +577,7 @@
               </font>
              </property>
              <property name="text" >
-              <string/>
+              <string>Bob</string>
              </property>
             </widget>
            </item>
@@ -601,7 +599,7 @@
         </font>
        </property>
        <property name="title" >
-        <string>What percentage of income/interest/stake do you have from the following?</string>
+        <string>What percentage of income/interest/stake do you have in the following?</string>
        </property>
        <layout class="QGridLayout" >
         <item row="1" column="0" >
@@ -659,7 +657,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>50</string>
+              <string>5</string>
              </property>
             </widget>
            </item>
@@ -721,7 +719,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>50</string>
+              <string>15</string>
              </property>
             </widget>
            </item>
@@ -783,7 +781,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>0</string>
+              <string>25</string>
              </property>
             </widget>
            </item>
@@ -845,7 +843,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>0</string>
+              <string>35</string>
              </property>
             </widget>
            </item>
@@ -907,7 +905,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>0</string>
+              <string>3</string>
              </property>
             </widget>
            </item>
@@ -969,7 +967,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>0</string>
+              <string>7</string>
              </property>
             </widget>
            </item>

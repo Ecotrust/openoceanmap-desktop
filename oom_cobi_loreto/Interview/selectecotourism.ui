@@ -28,17 +28,12 @@
        <widget class="QComboBox" name="comboActivity" >
         <item>
          <property name="text" >
-          <string/>
-         </property>
-        </item>
-        <item>
-         <property name="text" >
           <string>Diving</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Snorkling</string>
+          <string>Snorkeling</string>
          </property>
         </item>
         <item>
@@ -48,7 +43,7 @@
         </item>
         <item>
          <property name="text" >
-          <string>Whale Watching</string>
+          <string>Marine Fauna Watching</string>
          </property>
         </item>
         <item>
@@ -97,7 +92,7 @@
          </font>
         </property>
         <property name="text" >
-         <string/>
+         <string>other activity</string>
         </property>
        </widget>
       </item>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawecotourism.ui'
 #
-# Created: Mon Mar 23 14:39:36 2009
+# Created: Sun Mar 29 02:20:45 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -71,9 +71,9 @@ class Ui_DrawEcotourism(object):
 
     def retranslateUi(self, DrawEcotourism):
         DrawEcotourism.setWindowTitle(QtGui.QApplication.translate("DrawEcotourism", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
-        self.type_label.setText(QtGui.QApplication.translate("DrawEcotourism", "Type of Tourism", None, QtGui.QApplication.UnicodeUTF8))
+        self.type_label.setText(QtGui.QApplication.translate("DrawEcotourism", "Type of ecotourism", None, QtGui.QApplication.UnicodeUTF8))
         self.penny_label.setText(QtGui.QApplication.translate("DrawEcotourism", "Weighting (pennies):", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("DrawEcotourism", "Finished With Shapes", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawEcotourism", "Discard Last Shape...", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnShapeDiscard.setText(QtGui.QApplication.translate("DrawEcotourism", "Discard Last Shape", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnMoreShapes.setText(QtGui.QApplication.translate("DrawEcotourism", "Draw More Shapes...", None, QtGui.QApplication.UnicodeUTF8))
 

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'consscience.ui'
 #
-# Created: Mon Mar 23 14:39:35 2009
+# Created: Sun Mar 29 05:07:48 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -45,8 +45,6 @@ class Ui_ConsScience(object):
         self.comboBox = QtGui.QComboBox(self.home_port_5)
         self.comboBox.setMaximumSize(QtCore.QSize(200, 16777215))
         self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem(QtCore.QString())
-        self.comboBox.setItemText(0, "")
         self.comboBox.addItem(QtCore.QString())
         self.comboBox.addItem(QtCore.QString())
         self.comboBox.addItem(QtCore.QString())
@@ -106,12 +104,13 @@ class Ui_ConsScience(object):
         ConsScience.setWindowTitle(QtGui.QApplication.translate("ConsScience", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_info.setTitle(QtGui.QApplication.translate("ConsScience", "Conservationist / Scientist Info", None, QtGui.QApplication.UnicodeUTF8))
         self.employee_text.setText(QtGui.QApplication.translate("ConsScience", "Type of Specialist:", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(1, QtGui.QApplication.translate("ConsScience", "Academic", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(2, QtGui.QApplication.translate("ConsScience", "Non-Governmental Organization", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(3, QtGui.QApplication.translate("ConsScience", "Government (Municipal)", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(4, QtGui.QApplication.translate("ConsScience", "Government (State)", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(5, QtGui.QApplication.translate("ConsScience", "Government (Federal)", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboBox.setItemText(6, QtGui.QApplication.translate("ConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(0, QtGui.QApplication.translate("ConsScience", "Academic", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(1, QtGui.QApplication.translate("ConsScience", "Non-Governmental Organization", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(2, QtGui.QApplication.translate("ConsScience", "Government (Municipal)", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(3, QtGui.QApplication.translate("ConsScience", "Government (State)", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(4, QtGui.QApplication.translate("ConsScience", "Government (Federal)", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(5, QtGui.QApplication.translate("ConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.add_info_text.setText(QtGui.QApplication.translate("ConsScience", "Additional info:", None, QtGui.QApplication.UnicodeUTF8))
+        self.add_info_line.setText(QtGui.QApplication.translate("ConsScience", "add info yo", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnSelectConsScience.setText(QtGui.QApplication.translate("ConsScience", "Draw Shapes by Areas of Knowledge", None, QtGui.QApplication.UnicodeUTF8))
 

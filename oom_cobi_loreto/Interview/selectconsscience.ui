@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>590</width>
-    <height>115</height>
+    <height>152</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Select Conservation / Science</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout" name="verticalLayout" >
    <item>
     <widget class="QWidget" native="1" name="widget" >
      <layout class="QHBoxLayout" >
@@ -40,17 +40,12 @@
         </property>
         <item>
          <property name="text" >
-          <string/>
+          <string>Coastal reef ecosystem - fish and invertebrates</string>
          </property>
         </item>
         <item>
          <property name="text" >
-          <string>Coastal reef ecosystem - finfish and invertebrates</string>
-         </property>
-        </item>
-        <item>
-         <property name="text" >
-          <string>Deep Sea reefs and seamounts - finfish and invertebrates</string>
+          <string>Deep sea reef ecosystem - fish and invertebrates</string>
          </property>
         </item>
         <item>
@@ -88,6 +83,62 @@
           <string>Other</string>
          </property>
         </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="other_wrap" >
+     <property name="enabled" >
+      <bool>true</bool>
+     </property>
+     <layout class="QHBoxLayout" name="_2" >
+      <item>
+       <widget class="QLabel" name="fishery_text_2" >
+        <property name="text" >
+         <string> Other focus:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer" >
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="other_line" >
+        <property name="enabled" >
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize" >
+         <size>
+          <width>305</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>other focus</string>
+        </property>
        </widget>
       </item>
      </layout>

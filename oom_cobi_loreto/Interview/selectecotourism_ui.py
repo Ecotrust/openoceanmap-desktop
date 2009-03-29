@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectecotourism.ui'
 #
-# Created: Tue Mar 24 11:56:25 2009
+# Created: Sun Mar 29 05:07:45 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -24,8 +24,6 @@ class Ui_SelectEcotourism(object):
         self.hboxlayout.addWidget(self.fishery_text)
         self.comboActivity = QtGui.QComboBox(self.widget)
         self.comboActivity.setObjectName("comboActivity")
-        self.comboActivity.addItem(QtCore.QString())
-        self.comboActivity.setItemText(0, "")
         self.comboActivity.addItem(QtCore.QString())
         self.comboActivity.addItem(QtCore.QString())
         self.comboActivity.addItem(QtCore.QString())
@@ -69,12 +67,13 @@ class Ui_SelectEcotourism(object):
     def retranslateUi(self, SelectEcotourism):
         SelectEcotourism.setWindowTitle(QtGui.QApplication.translate("SelectEcotourism", "OpenOceanMap - Select Ecotourism", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text.setText(QtGui.QApplication.translate("SelectEcotourism", "Select tourism activity type:", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboActivity.setItemText(1, QtGui.QApplication.translate("SelectEcotourism", "Diving", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboActivity.setItemText(2, QtGui.QApplication.translate("SelectEcotourism", "Snorkling", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboActivity.setItemText(3, QtGui.QApplication.translate("SelectEcotourism", "Kayaking", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboActivity.setItemText(4, QtGui.QApplication.translate("SelectEcotourism", "Whale Watching", None, QtGui.QApplication.UnicodeUTF8))
-        self.comboActivity.setItemText(5, QtGui.QApplication.translate("SelectEcotourism", "Other", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboActivity.setItemText(0, QtGui.QApplication.translate("SelectEcotourism", "Diving", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboActivity.setItemText(1, QtGui.QApplication.translate("SelectEcotourism", "Snorkeling", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboActivity.setItemText(2, QtGui.QApplication.translate("SelectEcotourism", "Kayaking", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboActivity.setItemText(3, QtGui.QApplication.translate("SelectEcotourism", "Marine Fauna Watching", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboActivity.setItemText(4, QtGui.QApplication.translate("SelectEcotourism", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text_2.setText(QtGui.QApplication.translate("SelectEcotourism", "    Other activity:", None, QtGui.QApplication.UnicodeUTF8))
+        self.other_line.setText(QtGui.QApplication.translate("SelectEcotourism", "other activity", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFinished.setText(QtGui.QApplication.translate("SelectEcotourism", "Exit Ecotourism Step", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectEcotourism", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 

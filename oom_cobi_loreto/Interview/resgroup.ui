@@ -101,11 +101,19 @@
    <item>
     <widget class="QGroupBox" name="groupBox_2" >
      <property name="title" >
-      <string>Main Species Harvested (comma-separated):</string>
+      <string>Main species harvested (comma-separated):</string>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_9" >
       <item>
-       <widget class="QTextEdit" name="editMainSpecies" />
+       <widget class="QTextEdit" name="editMainSpecies" >
+        <property name="html" >
+         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">some species&lt;/p>&lt;/body>&lt;/html></string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -113,7 +121,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox" >
      <property name="title" >
-      <string>Gear Types Used:</string>
+      <string>Type of gear used:</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_7" >
       <item>
@@ -138,12 +146,18 @@
             <property name="text" >
              <string>Hook and Line</string>
             </property>
+            <property name="checked" >
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="gear_gillnet" >
             <property name="text" >
              <string>Gillnet</string>
+            </property>
+            <property name="checked" >
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -156,12 +170,18 @@
             <property name="text" >
              <string>Traps</string>
             </property>
+            <property name="checked" >
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="gear_trawling" >
             <property name="text" >
              <string>Trawling</string>
+            </property>
+            <property name="checked" >
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -174,12 +194,18 @@
             <property name="text" >
              <string>Purse Seine</string>
             </property>
+            <property name="checked" >
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="gear_hooka" >
             <property name="text" >
              <string>Hooka (compressor)</string>
+            </property>
+            <property name="checked" >
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -234,6 +260,9 @@
                 <height>16777215</height>
                </size>
               </property>
+              <property name="text" >
+               <string>og1</string>
+              </property>
              </widget>
             </item>
            </layout>
@@ -254,6 +283,9 @@
                 <width>100</width>
                 <height>16777215</height>
                </size>
+              </property>
+              <property name="text" >
+               <string>og2</string>
               </property>
              </widget>
             </item>
@@ -280,6 +312,9 @@
                 <height>16777215</height>
                </size>
               </property>
+              <property name="text" >
+               <string>og3</string>
+              </property>
              </widget>
             </item>
            </layout>
@@ -300,6 +335,9 @@
                 <width>100</width>
                 <height>16777215</height>
                </size>
+              </property>
+              <property name="text" >
+               <string>og4</string>
               </property>
              </widget>
             </item>

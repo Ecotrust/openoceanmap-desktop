@@ -37,7 +37,7 @@
          </font>
         </property>
         <property name="text" >
-         <string/>
+         <string>Sector : Resource Group</string>
         </property>
        </widget>
       </item>
@@ -132,7 +132,7 @@
       <item>
        <widget class="QPushButton" name="pbnShapeDiscard" >
         <property name="text" >
-         <string>Discard Last Shape...</string>
+         <string>Discard Last Shape</string>
         </property>
        </widget>
       </item>
