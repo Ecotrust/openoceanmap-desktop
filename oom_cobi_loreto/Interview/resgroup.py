@@ -48,12 +48,13 @@ from drawresgroup import DrawResGroupGui
 import sys
 
 class ResGroupGui(QDialog, Ui_ResGroup):
-    def __init__(self, parent, flags, fishery_sector, res_group):
+    def __init__(self, parent, flags, fishery_sector, res_group, res_group_inc):
         QDialog.__init__(self, parent.mainwindow, flags)
         self.setupUi(self)
         self.parent = parent
         self.fishery_sector = fishery_sector
         self.res_group = res_group
+        self.res_group_inc = res_group_inc
         self.retranslate()
         
         self.fishery_sector_label.setText(unicode(self.fishery_sector))
@@ -62,7 +63,10 @@ class ResGroupGui(QDialog, Ui_ResGroup):
     
     def on_pbnStartShapes_released(self):               
         self.parent.shapeType = self.res_group
+        self.parent.add_attrib(self.f_shape_type_str, self.res_group)
+        self.parent.add_attrib(self.f_shape_inc_str, self.res_group_inc)
         main_species = self.editMainSpecies.document().toPlainText()
+        self.parent.add_attrib(self.f_main_species_str, main_species)
         
         #Build permit id string
         gear_types = []        
@@ -88,7 +92,7 @@ class ResGroupGui(QDialog, Ui_ResGroup):
             gear_types.append(str(self.gear_other_4.text()))
                                                             
         gear_type_str = ','.join(gear_types)        
-        self.parent.capturedPolygonsGear.append(gear_type_str)
+        self.parent.add_attrib(self.f_gear_type_str, gear_type_str)
 
         self.hide()
         mc = self.parent.canvas      
@@ -118,6 +122,10 @@ class ResGroupGui(QDialog, Ui_ResGroup):
         wnd.show()
 
     def retranslate(self):
+        self.f_main_species_str = QA.translate("ResGroupGui", "main_sp", "Main species field name", QA.UnicodeUTF8)
+        self.f_shape_type_str = QA.translate("ResGroupGui", "resgrp", "Attribute for resource group", QA.UnicodeUTF8)
+        self.f_shape_inc_str = QA.translate("ResGroupGui", "resgrp_v", "Attribute for resource group income", QA.UnicodeUTF8)
+        self.f_gear_type_str = QA.translate("ResGroupGui", "gear", "Attribute for gear type", QA.UnicodeUTF8)
         self.gear_error_str = QA.translate("ResGroupGui", "Gear Type Error", "Displayed when user forgot to select a gear type", QA.UnicodeUTF8)
         self.select_gear_str = QA.translate("ResGroupGui", "Please select a gear type", "Displayed when user forgot to select a gear type", QA.UnicodeUTF8)
         self.exit_part_str = QA.translate("ResGroupGui", 'Exit ', "Partial text used to build a larger message, for example 'Exit Sport Fishery Step'", QA.UnicodeUTF8)

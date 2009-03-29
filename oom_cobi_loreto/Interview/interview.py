@@ -6,6 +6,7 @@
 # Copyright (C) 2008  Ecotrust
 # Copyright (C) 2008  Aaron Racicot
 # Copyright (C) 2008  Dane Springmeyer
+# Copyright (C) 2008  Dane Springmeyer
 # Copyright (C) 2008  Tim Welch
 # 
 #---------------------------------------------------------------------
@@ -55,7 +56,6 @@ class Interview(object):
 
     self.currentStep = None
     self.shapeType = None
-    self.gear_inc = None
     self.res_groups = None
     self.commFishStarted= False    
     self.sportFishStarted = False
@@ -72,9 +72,6 @@ class Interview(object):
     self.capturedText = ''
     self.capturedTextType = ''
     self.capturedPolygons = []
-    self.capturedPolygonsSpecies = []
-    self.capturedPolygonsType = []
-    self.capturedPolygonsGear = []
     self.capturedPolygonsPennies = []
     self.capturedPolygonsRub = []
     
@@ -104,7 +101,6 @@ class Interview(object):
         self.parent.interviewSaveTool = None        
         self.currentStep = None
         self.shapeType = None
-        self.gear_inc = None
         self.res_groups = None
         self.commFishIncome = None
         self.commFishStarted= False
@@ -147,7 +143,6 @@ class Interview(object):
       #Reset some stuff
       self.pennies_left = 100;
       self.shapeType = None
-      self.gear_inc = None
       for capPolyRub in self.capturedPolygonsRub:
           capPolyRub.reset()
 
@@ -159,7 +154,7 @@ class Interview(object):
 
           #Append user group name and income percent, overwrite if already exists          
           self.add_attrib(self.f_user_group_str,self.comm_fish_str)
-          self.add_attrib(self.f_percent_income_str, self.commFishIncome)
+          self.add_attrib(self.f_user_group_income_str, self.commFishIncome)
           
           #Get resource group information first time, then loop through resource groups
           #the second time
@@ -176,7 +171,7 @@ class Interview(object):
 
           #Append user group name and income percent
           self.add_attrib(self.f_user_group_str,self.comm_sport_fish_str)
-          self.add_attrib(self.f_percent_income_str, self.sportFishIncome)
+          self.add_attrib(self.f_user_group_income_str, self.sportFishIncome)
 
           if not self.res_groups:      
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -191,7 +186,7 @@ class Interview(object):
 
           #Append user group name and income percent, overwrite if already exists          
           self.add_attrib(self.f_user_group_str,self.priv_fish_str)
-          self.add_attrib(self.f_percent_income_str, self.privateFishIncome)
+          self.add_attrib(self.f_user_group_income_str, self.privateFishIncome)
 
           if not self.res_groups:         
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
@@ -205,7 +200,7 @@ class Interview(object):
           self.currentStep = self.eco_str
           #Append user group name and income percent
           self.add_attrib(self.f_user_group_str,self.eco_str)
-          self.add_attrib(self.f_percent_income_str, self.ecotourismIncome)
+          self.add_attrib(self.f_user_group_income_str, self.ecotourismIncome)
           
           from ecotourism import EcotourismGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -218,7 +213,7 @@ class Interview(object):
 
           #Append user group name and income percent, overwrite if already exists          
           self.add_attrib(self.f_user_group_str,self.consci_str)
-          self.add_attrib(self.f_percent_income_str, self.consScienceIncome)
+          self.add_attrib(self.f_user_group_income_str, self.consScienceIncome)
           
           from consscience import ConsScienceGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -231,7 +226,7 @@ class Interview(object):
 
           #Append user group name and income percent, overwrite if already exists          
           self.add_attrib(self.f_user_group_str,self.other_str)
-          self.add_attrib(self.f_percent_income_str, self.otherIncome)
+          self.add_attrib(self.f_user_group_income_str, self.otherIncome)
           
           textType = self.income_str #the type should be gathered
           # skip right to drawing...
@@ -253,11 +248,8 @@ class Interview(object):
       if len(self.res_groups) > 0:
           (res_group,value) = self.res_groups.pop()
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-          wnd = ResGroupGui(self,flags, self.currentStep, res_group)
-          wnd.show()                        
-            
-  def save_gear_inc(self):
-      self.capturedPolygonsGear.append(self.gear_inc)            
+          wnd = ResGroupGui(self,flags, self.currentStep, res_group, value)
+          wnd.show()                                 
 
   # End interview dialog
   def saveText(self, textGui):
@@ -365,10 +357,7 @@ class Interview(object):
             for index,value in enumerate(self.interviewInfo2):
               fields[index] = QgsField(value[0], QVariant.String)
 
-            fields[index+1] = QgsField(self.f_gear_inc_str, QVariant.String)
-            fields[index+2] = QgsField(self.f_pennies_str, QVariant.Int)
-            fields[index+3] = QgsField(self.f_income_str, QVariant.String)
-            fields[index+4] = QgsField(self.f_species_str, QVariant.String)
+            fields[index+1] = QgsField(self.f_pennies_str, QVariant.Int)
 
             # create an instance of vector file writer,
             # it will create the shapefile. Arguments:
@@ -390,12 +379,7 @@ class Interview(object):
                 for index,value in enumerate(self.interviewInfo2):
                   fet.addAttribute(index, QVariant(value[1]))
 
-                if self.capturedPolygonsGear[capPolyInd]:
-                  fet.addAttribute(index+1, QVariant(self.capturedPolygonsGear[capPolyInd]))
-                fet.addAttribute(index+2, QVariant(self.capturedPolygonsPennies[capPolyInd]))
-                fet.addAttribute(index+3, QVariant(self.capturedPolygonsType[capPolyInd]))
-                if self.capturedPolygonsSpecies:
-                    fet.addAttribute(index+4, QVariant(self.capturedPolygonsSpecies[capPolyInd]))                                                  
+                fet.addAttribute(index+1, QVariant(self.capturedPolygonsPennies[capPolyInd]))                                       
                 writer.addFeature(fet)                
                 
             del writer
@@ -434,9 +418,6 @@ class Interview(object):
             for capPolyRub in self.capturedPolygonsRub:
               capPolyRub.reset()
             self.capturedPolygons = []
-            self.capturedPolygonsType = []
-            self.capturedPolygonsGear = []
-            self.capturedPolygonsSpecies = []
             self.capturedPolygonsPennies = []
             self.capturedPolygonsRub = []
 
@@ -494,10 +475,7 @@ class Interview(object):
       self.cancel_str = QA.translate("Interview","Canceling interview", None, QA.UnicodeUTF8)
       self.leaving_step_str = QA.translate("Interview","Leaving this step", None, QA.UnicodeUTF8)
       
-      self.f_income_str = QA.translate("Interview","gear_type", "fisherman income field attribute", QA.UnicodeUTF8)
-      self.f_percent_income_str = QA.translate("Interview","grp_income", "Percent income value", QA.UnicodeUTF8)
+      self.f_user_group_income_str = QA.translate("Interview","ug_inc", "Percent income value", QA.UnicodeUTF8)
       self.f_pennies_str = QA.translate("Interview","pennies", "fishing ground penny value attribute", QA.UnicodeUTF8)
-      self.f_species_str = QA.translate("Interview","species", "fish species name attribute", QA.UnicodeUTF8)
-      self.f_gear_inc_str = QA.translate("Interview", "gear_incom", "Attribute for income from gear type", QA.UnicodeUTF8)
       
-      self.f_user_group_str = QA.translate("Interview", "user_grp", "User group for current shape", QA.UnicodeUTF8)
+      self.f_user_group_str = QA.translate("Interview", "ug", "User group for current shape", QA.UnicodeUTF8)

@@ -56,15 +56,16 @@ are turned on except for the bathymetry layer.  The layers include:</p>
 <tr><td>i_f_name</td><td>Interviewer first name</td></tr>
 <tr><td>i_l_name</td><td>Interviewer last name</td></tr>
 <tr><td>years</td><td>Years working here</td></tr>
-<tr><td>user_grp</td><td>Current user group</td></tr>
-<tr><td>grp_income</td><td>Percent of income/interest/stake in current user group</td></tr>
-<tr><td>Pennies</td><td>Number of pennies placed on this shape out of 100</td></tr>
+<tr><td>ug</td><td>Current user group</td></tr>
+<tr><td>ug_inc</td><td>Percent of income/interest/stake in current user group</td></tr>
+<tr><td>pennies</td><td>Number of pennies placed on this shape out of 100</td></tr>
 </table>
 
 <h4>Fishery Attributes</h4>
 <p>Interviews for any of the three fishing user groups will produce shapefile records with these attributes.
 <table border='1'>
 <tr><th>Attribute Name</th><th>Description</th></th></tr>
+<tr><td>emp_type</td><td>Employee Type</td></tr>
 <tr><td>v_len</td><td>Vessel length</td></tr>
 <tr><td>v_motor</td><td>Vessel motor (horsepower)</td></tr>
 <tr><td>haul_cap</td><td>Vessel haul capacity (kilograms)</td></tr>
@@ -73,9 +74,10 @@ are turned on except for the bathymetry layer.  The layers include:</p>
 <tr><td>landp_2</td><td>Launch port 2</td></tr>
 <tr><td>landp_3</td><td>Launch port 3</td></tr>
 <tr><td>landp_4</td><td>Launch port 4</td></tr>
-<tr><td>gear_type</td><td>Fishing gear type used in this shape</td></tr>
-<tr><td>gear_income</td><td>Percentage of income associated with this gear type</td></tr>
-<tr><td>species</td><td>Species caught within this shape or fishing ground.  Represented as a numeric value.  1 - Sharks and Skates, 2 - Coastal Reef Fish, 3 - Deep Reef Fish, 4 - Migratory Fish, 5 - Benthic Fish, 6 - Shrimp, 7 - Other</td></tr>
+<tr><td>resgrp</td><td>Resource group</td></tr>
+<tr><td>resgrp_i</td><td>Percentage of income associated with resource group</td></tr>
+<tr><td>gear</td><td>Fishing gear types used in this shape</td></tr>
+<tr><td>main_sp</td><td>Main species caught within this shape or fishing ground.</td></tr>
 </table>
 
 <h4>Ecotourism Attributes</h4>
