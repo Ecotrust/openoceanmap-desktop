@@ -63,13 +63,13 @@ class OtherGui(QDialog, Ui_Other):
         self.parent.capturedTextType = self.textType
         self.parent.otherIncome = None
         self.parent.saveText(self)
-        self.parent.nextStep(self, "Finishing Other income interview")
+        self.parent.nextStep(self, self.finish_str)
         
     def on_pbnCancel_clicked(self):
         self.close()
-        # stop interview process
-        #self.parent.nextStep(self, "Finishing Other income interview")
-        #self.parent.resetInterview(self.cancel_str)
+        self.parent.otherIncome = None
+        self.parent.nextStep(self, self.cancel_str)
 
     def retranslate(self):
+        self.finish_str = QA.translate("OtherGui", "Finishing Other income interview", "Status message for finishing 'other' portion of interview", QA.UnicodeUTF8)
         self.cancel_str = QA.translate("OtherGui", "Canceling other interview", "Status message shown when user cancels out of the 'other' portion of the interview", QA.UnicodeUTF8)

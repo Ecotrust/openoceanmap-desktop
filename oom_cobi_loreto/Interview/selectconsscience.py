@@ -54,14 +54,22 @@ class SelectConsScienceGui(QDialog, Ui_SelectConsScience):
         self.parent = parent
         self.retranslate()
 
+    #Controls whether other field activity lineEdit is enabled
+    def on_comboFocus_activated(self):
+        focus = self.comboFocus.currentText()
+        if focus == 'Other':
+            self.other_line.setEnabled(True)
+        else:
+            self.other_line.setEnabled(False)        
+        
     def on_pbnStartShapes_released(self):
-        #Get fishery value
-        shape_type = self.comboBox.currentText()
-        if not shape_type:
+        focus = self.comboFocus.currentText()
+        if not focus:
             QMessageBox.warning(self, self.consci_error_str, self.focus_str)
             return 
         else:
-            self.parent.shapeType = shape_type
+            self.parent.shapeType = focus
+            self.parent.add_attrib(self.f_focus_str, focus)
             
         self.close()
         mc = self.parent.canvas      
@@ -76,7 +84,6 @@ class SelectConsScienceGui(QDialog, Ui_SelectConsScience):
         self.parent.consScienceIncome = None
         self.parent.nextStep(self, self.finish_cons_str)
 
-
     def nextPolygon(self):
         from drawconsscience import DrawConsScienceGui
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -84,6 +91,7 @@ class SelectConsScienceGui(QDialog, Ui_SelectConsScience):
         wnd.show()
         
     def retranslate(self):
+        self.f_focus_str = QA.translate("SelectConsScienceGui", "focus", "Area of Focus for conservation/scientist", QA.UnicodeUTF8)
         self.consci_error_str = QA.translate("SelectConsScienceGui", "Cons/Science Error", "Error when user fails to select type of conservationist/scientist", QA.UnicodeUTF8)        
         self.focus_str = QA.translate("SelectConsScienceGui", "Please select a focus area", "", QA.UnicodeUTF8)
         self.finish_cons_str = QA.translate("SelectConsScienceGui", "Finishing Cons/Sci interview", "", QA.UnicodeUTF8)

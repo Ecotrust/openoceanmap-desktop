@@ -211,7 +211,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Draw Shapes by Areas of Knowledge</string>
+         <string>Select Focus</string>
         </property>
        </widget>
       </item>

@@ -58,7 +58,7 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
 
     def on_pbnSelectConsScience_released(self):
 
-        self.parent.add_attrib(self.f_focus_str, self.comboBox.currentText())
+        self.parent.add_attrib(self.f_spc_type_str, self.comboBox.currentText())
         self.parent.add_attrib(self.f_add_info_str, self.add_info_line.text())
 
         if not self.comboBox.currentText():
@@ -79,6 +79,6 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
     def retranslate(self):
         self.spec_error_str = QA.translate("ConsScienceGui", 'Specialist Error', "Error message when specialist type not selected", QA.UnicodeUTF8)
         self.choose_specialist_str = QA.translate("ConsScienceGui", "Please choose a specialist position", "Error message when specialist type not selected", QA.UnicodeUTF8)
-        self.f_focus_str = QA.translate("ConsScienceGui", "focus", "conservationist/scientist area of focus", QA.UnicodeUTF8)
+        self.f_spc_type_str = QA.translate("ConsScienceGui", "spc_type", "conservationist/scientist area of specialization", QA.UnicodeUTF8)
         self.f_add_info_str = QA.translate("ConsScienceGui", "add_info", "additional info about con/science focus (kelp, mangrove, etc)", QA.UnicodeUTF8)
         self.cancel_conscience_str = QA.translate("ConsScienceGui", "Canceled conservationist/scientist interview", "", QA.UnicodeUTF8)        

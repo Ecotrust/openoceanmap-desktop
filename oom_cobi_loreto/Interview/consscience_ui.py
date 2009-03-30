@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'consscience.ui'
 #
-# Created: Sun Mar 29 05:07:48 2009
+# Created: Mon Mar 30 06:29:16 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -112,5 +112,5 @@ class Ui_ConsScience(object):
         self.comboBox.setItemText(5, QtGui.QApplication.translate("ConsScience", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.add_info_text.setText(QtGui.QApplication.translate("ConsScience", "Additional info:", None, QtGui.QApplication.UnicodeUTF8))
         self.add_info_line.setText(QtGui.QApplication.translate("ConsScience", "add info yo", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnSelectConsScience.setText(QtGui.QApplication.translate("ConsScience", "Draw Shapes by Areas of Knowledge", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnSelectConsScience.setText(QtGui.QApplication.translate("ConsScience", "Select Focus", None, QtGui.QApplication.UnicodeUTF8))
 

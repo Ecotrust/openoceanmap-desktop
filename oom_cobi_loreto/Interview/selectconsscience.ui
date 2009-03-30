@@ -18,14 +18,33 @@
     <widget class="QWidget" native="1" name="widget" >
      <layout class="QHBoxLayout" >
       <item>
+       <spacer name="horizontalSpacer" >
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QLabel" name="fishery_text" >
+        <property name="maximumSize" >
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text" >
          <string>Select focus:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBox" >
+       <widget class="QComboBox" name="comboFocus" >
         <property name="maximumSize" >
          <size>
           <width>450</width>
@@ -85,24 +104,8 @@
         </item>
        </widget>
       </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QWidget" native="1" name="other_wrap" >
-     <property name="enabled" >
-      <bool>true</bool>
-     </property>
-     <layout class="QHBoxLayout" name="_2" >
       <item>
-       <widget class="QLabel" name="fishery_text_2" >
-        <property name="text" >
-         <string> Other focus:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer" >
+       <spacer name="horizontalSpacer_2" >
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
         </property>
@@ -113,6 +116,35 @@
          </size>
         </property>
        </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="other_wrap" >
+     <property name="enabled" >
+      <bool>true</bool>
+     </property>
+     <layout class="QHBoxLayout" name="_2" >
+      <item>
+       <spacer name="horizontalSpacer_3" >
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="fishery_text_2" >
+        <property name="text" >
+         <string> Other focus:</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QLineEdit" name="other_line" >
@@ -140,6 +172,19 @@
          <string>other focus</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4" >
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </widget>

@@ -86,7 +86,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
         if self.private_fish_line:
             if not strIsInt(self.private_fish_line.text()):
-                QMessageBox.warning(self, self.income_error_str, self.income_value_st)
+                QMessageBox.warning(self, self.income_error_str, self.income_value_str)
                 return
             else:
                 if not self.private_fish_line.text() == '0':
@@ -94,7 +94,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
         if self.ecotourism_line:
             if not strIsInt(self.ecotourism_line.text()):
-                QMessageBox.warning(self, self.income_error_str, self.income_value_st)
+                QMessageBox.warning(self, self.income_error_str, self.income_value_str)
                 return
             else:
                 if not self.ecotourism_line.text() == '0':
@@ -102,7 +102,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
         if self.cons_science_line:
             if not strIsInt(self.cons_science_line.text()):
-                QMessageBox.warning(self, self.income_error_str, self.income_value_st)
+                QMessageBox.warning(self, self.income_error_str, self.income_value_str)
                 return
             else:
                 if not self.cons_science_line.text() == '0':
@@ -110,7 +110,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
         if self.other_line:
             if not strIsInt(self.other_line.text()):
-                QMessageBox.warning(self, self.income_error_str, self.income_value_st)
+                QMessageBox.warning(self, self.income_error_str, self.income_value_str)
                 return
             else:
                 if not self.other_line.text() == '0':

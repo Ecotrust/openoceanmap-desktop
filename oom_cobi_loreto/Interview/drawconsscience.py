@@ -80,9 +80,6 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
                 self.parent.capturedPolygonsPennies.append(num_pennies)
 
-            self.parent.capturedPolygonsType.append(self.parent.shapeType)
-            self.parent.save_gear_inc()
-
         self.close()
 
         #Check if this shape type should be done (no pennies left)
@@ -125,10 +122,7 @@ class DrawConsScienceGui(QDialog, Ui_DrawConsScience):
                 QMessageBox.warning(self, self.pennies_error_str, self.more_penny_str)
                 return
             else:
-                self.parent.capturedPolygonsPennies.append(num_pennies)
-                        
-            self.parent.capturedPolygonsType.append(self.parent.shapeType)
-            self.parent.save_gear_inc()            
+                self.parent.capturedPolygonsPennies.append(num_pennies)        
         
         self.parent.saveShapes(self)
 

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ecotourism.ui'
 #
-# Created: Sun Mar 29 17:20:49 2009
+# Created: Mon Mar 30 05:45:33 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -197,8 +197,8 @@ class Ui_Ecotourism(object):
         self.horizontalLayout.addItem(spacerItem1)
         self.workers_line = QtGui.QLineEdit(self.home_port_4)
         self.workers_line.setEnabled(True)
-        self.workers_line.setMinimumSize(QtCore.QSize(40, 20))
-        self.workers_line.setMaximumSize(QtCore.QSize(20, 16777215))
+        self.workers_line.setMinimumSize(QtCore.QSize(40, 25))
+        self.workers_line.setMaximumSize(QtCore.QSize(30, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.workers_line.setFont(font)

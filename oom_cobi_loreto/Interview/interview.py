@@ -438,7 +438,7 @@ class Interview(object):
               #Pull out
               return
 
-            penny_label_index = len(self.interviewInfo2) + 1
+            penny_label_index = len(self.interviewInfo2)
             layer.label().setLabelField(QgsLabel.Text, penny_label_index)
             layer.setLabelOn(True)
 
