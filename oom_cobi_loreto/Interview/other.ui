@@ -58,7 +58,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Finish</string>
+         <string>Exit Other Step</string>
         </property>
        </widget>
       </item>
