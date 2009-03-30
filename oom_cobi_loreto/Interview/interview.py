@@ -80,6 +80,39 @@ class Interview(object):
     # Interview info to write in shapefile
     self.interviewInfo = []
     self.interviewInfo2 = []
+
+    self.fishery_attribs = [
+      'emp_type',
+      'v_len',
+      'v_motor',                  
+      'haul_cap',
+      'v_homep',
+      'landp_1',
+      'landp_2',
+      'landp_3',
+      'landp_4',
+      'resgrp',
+      'resgrp_v',
+      'gear',
+      'main_sp'
+    ]
+    
+    self.ecotourism_attribs = [
+        'emp_type',
+        'v_len',
+        'v_motor',
+        'v_cap',
+        'v_homep',
+        'workers',
+        'act_type',
+        'spe_type'
+    ]
+    
+    self.consci_attribs = [
+        'focus',
+        'add_info',
+        'spc_type'
+    ]
     
     # Reset previous polygons
     flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
@@ -129,6 +162,17 @@ class Interview(object):
       self.interviewInfo2.append([b_name,b_value])                  
         
   '''
+  Remove items with the list of keys passed.  Useful for clearing user group specific attribs
+  after you finish with a user group
+  '''
+  def remove_attribs(self, b_names):
+    for b_name in b_names:
+        for i in range(len(self.interviewInfo2)):
+            [a_name, a_value] = self.interviewInfo2[i]
+            if a_name == b_name:
+                self.interviewInfo2.pop(i)         
+        
+  '''
   Manages progress through the interview.  A state machine figures out what
   should be handled next.  Other dialogs are expected to set the appropriate
   state when steps wrap up before calling this function.
@@ -161,10 +205,9 @@ class Interview(object):
           if not self.res_groups:          
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
-          else:
-              if len(self.res_groups) > 0:
-                  self.startNextResGroup()
-          
+          elif len(self.res_groups) > 0:
+              self.startNextResGroup() 
+                  
       elif self.sportFishIncome:
           self.parent.statusbar.showMessage(self.start_comm_sport_fish_str)
           self.currentStep = self.comm_sport_fish_str
@@ -176,9 +219,8 @@ class Interview(object):
           if not self.res_groups:      
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
-          else:
-              if len(self.res_groups) > 0:
-                  self.startNextResGroup()          
+          elif len(self.res_groups) > 0:
+              self.startNextResGroup()
     
       elif self.privateFishIncome:
           self.parent.statusbar.showMessage(self.start_priv_fish_str)
@@ -191,9 +233,8 @@ class Interview(object):
           if not self.res_groups:         
               wnd = FisheryGui(self,flags,self.currentStep,previousGui)
               wnd.show()
-          else:
-            if len(self.res_groups) > 0:
-                  self.startNextResGroup()
+          elif len(self.res_groups) > 0:
+              self.startNextResGroup()
     
       elif self.ecotourismIncome:
           self.parent.statusbar.showMessage(self.start_eco_str)
@@ -432,13 +473,27 @@ class Interview(object):
                     #Clear the current sector so we can move on to the next
                     if self.currentStep == self.comm_fish_str:
                         self.commFishIncome = None
+                        #Remove all fishery attribs leave rest
+                        import pdb
+                        pdb.set_trace()
+                        self.remove_attribs(self.fishery_attribs)
                         self.nextStep(drawGui)
                     elif self.currentStep == self.comm_sport_fish_str:
                         self.sportFishIncome = None
+                        #Remove all fishery attribs, leave rest
+                        self.remove_attribs(self.fishery_attribs)
                         self.nextStep(drawGui)
                     elif self.currentStep == self.priv_fish_str:
                         self.privateFishIncome = None
-                        self.nextStep(drawGui)                    
+                        #Remove all fishery attribs, leave rest
+                        self.remove_attribs(self.fishery_attribs)
+                        self.nextStep(drawGui)                   
+                    elif self.currentStep == self.eco_str:
+                        #Remove all ecotourism.ecotourism_attribs)
+                        self.remove_attribs(self.ecotourism_attribs)
+                    elif self.currentStep == self.consci_str:
+                        #Remove all consci attribs, leave rest
+                        self.remove_attribs(self.consci_attribs)
             else:
                 drawGui.previousGui.show()
 

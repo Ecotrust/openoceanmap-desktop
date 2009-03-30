@@ -1388,7 +1388,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>9</string>
+                  <string>64</string>
                  </property>
                 </widget>
                </item>
@@ -1488,7 +1488,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>Test 1</string>
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1543,7 +1543,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>13</string>
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1626,7 +1626,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>Test 2</string>
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1681,7 +1681,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>19</string>
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1764,7 +1764,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>Test 3</string>
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1819,7 +1819,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>11</string>
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1902,7 +1902,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>Test 4</string>
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1957,7 +1957,7 @@
                   </font>
                  </property>
                  <property name="text" >
-                  <string>12</string>
+                  <string>0</string>
                  </property>
                 </widget>
                </item>

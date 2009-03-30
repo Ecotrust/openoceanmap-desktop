@@ -28,6 +28,11 @@
        <widget class="QComboBox" name="comboActivity" >
         <item>
          <property name="text" >
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
           <string>Diving</string>
          </property>
         </item>

@@ -657,7 +657,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>5</string>
+              <string>0</string>
              </property>
             </widget>
            </item>
@@ -719,7 +719,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>15</string>
+              <string>0</string>
              </property>
             </widget>
            </item>
@@ -781,7 +781,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>25</string>
+              <string>0</string>
              </property>
             </widget>
            </item>
@@ -843,7 +843,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>35</string>
+              <string>90</string>
              </property>
             </widget>
            </item>

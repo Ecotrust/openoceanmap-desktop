@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'fishery.ui'
 #
-# Created: Sun Mar 29 05:07:44 2009
+# Created: Sun Mar 29 17:09:13 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -791,26 +791,19 @@ class Ui_Fishery(object):
         self.label_17.setText(QtGui.QApplication.translate("Fishery", "Octopus", None, QtGui.QApplication.UnicodeUTF8))
         self.target_octopus.setText(QtGui.QApplication.translate("Fishery", "8", None, QtGui.QApplication.UnicodeUTF8))
         self.label_20.setText(QtGui.QApplication.translate("Fishery", "Bait", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_bait.setText(QtGui.QApplication.translate("Fishery", "9", None, QtGui.QApplication.UnicodeUTF8))
+        self.target_bait.setText(QtGui.QApplication.translate("Fishery", "64", None, QtGui.QApplication.UnicodeUTF8))
         self.label_21.setText(QtGui.QApplication.translate("Fishery", "Other Resource Group #1:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_23.setText(QtGui.QApplication.translate("Fishery", "Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_other_1_name.setText(QtGui.QApplication.translate("Fishery", "Test 1", None, QtGui.QApplication.UnicodeUTF8))
         self.label_22.setText(QtGui.QApplication.translate("Fishery", "% interest:", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_other_1_interest.setText(QtGui.QApplication.translate("Fishery", "13", None, QtGui.QApplication.UnicodeUTF8))
         self.label_24.setText(QtGui.QApplication.translate("Fishery", "Other Resource Group #2:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_25.setText(QtGui.QApplication.translate("Fishery", "Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_other_2_name.setText(QtGui.QApplication.translate("Fishery", "Test 2", None, QtGui.QApplication.UnicodeUTF8))
         self.label_26.setText(QtGui.QApplication.translate("Fishery", "% interest:", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_other_2_interest.setText(QtGui.QApplication.translate("Fishery", "19", None, QtGui.QApplication.UnicodeUTF8))
         self.label_27.setText(QtGui.QApplication.translate("Fishery", "Other Resource Group #3:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_28.setText(QtGui.QApplication.translate("Fishery", "Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_other_3_name.setText(QtGui.QApplication.translate("Fishery", "Test 3", None, QtGui.QApplication.UnicodeUTF8))
         self.label_29.setText(QtGui.QApplication.translate("Fishery", "% interest:", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_other_3_interest.setText(QtGui.QApplication.translate("Fishery", "11", None, QtGui.QApplication.UnicodeUTF8))
         self.label_30.setText(QtGui.QApplication.translate("Fishery", "Other Resource Group #4:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_31.setText(QtGui.QApplication.translate("Fishery", "Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_other_4_name.setText(QtGui.QApplication.translate("Fishery", "Test 4", None, QtGui.QApplication.UnicodeUTF8))
         self.label_32.setText(QtGui.QApplication.translate("Fishery", "% interest:", None, QtGui.QApplication.UnicodeUTF8))
-        self.target_other_4_interest.setText(QtGui.QApplication.translate("Fishery", "12", None, QtGui.QApplication.UnicodeUTF8))
+        self.target_other_4_interest.setText(QtGui.QApplication.translate("Fishery", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartGroups.setText(QtGui.QApplication.translate("Fishery", "Next", None, QtGui.QApplication.UnicodeUTF8))
 

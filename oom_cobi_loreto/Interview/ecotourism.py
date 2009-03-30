@@ -54,7 +54,7 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         
         self.retranslate()
 
-    def on_pbnSelectEcotourism_released(self):          
+    def on_pbnSelectActivity_released(self):          
     	self.parent.add_attrib(self.f_v_len_str, self.vessel_length_line.text())
     	self.parent.add_attrib(self.f_v_motor_str, self.vessel_motor_line.text())
     	self.parent.add_attrib(self.f_v_cap_str, self.haul_capacity_line.text())
@@ -73,11 +73,10 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         wnd = SelectEcotourismGui(self.parent,flags)
         wnd.show()
 
-
-    def on_pbnCancel_clicked(self):
+    def on_pbnExitEcoStep_released(self):
         self.close()
-        # stop interview process
-        self.parent.resetInterview(self.cancel_ecotourism_str)
+        self.parent.ecotourismIncome = None
+        self.parent.nextStep(self, self.cancel_ecotourism_str)
 
     def retranslate(self):       
         self.f_emp_type_str = QA.translate("EcotourismGui", "emp_type", "Employee type DB field name", QA.UnicodeUTF8)
@@ -88,4 +87,4 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         self.f_trabajos_str = QA.translate("EcotourismGui", "workers", "Number that work for company DB field name", QA.UnicodeUTF8)
         self.emp_error_str = QA.translate("EcotourismGui", "Employee Error", "Error given when user fails to enter an employee type", QA.UnicodeUTF8)
         self.choose_activity_str = QA.translate("EcotourismGui", "Please Choose an Ecotourism Activity", "Error given when user fails to enter an employee type", QA.UnicodeUTF8)
-        self.cancel_ecotourism_str = QA.translate("EcotourismGui", "Cancel ecotourism interview", "", QA.UnicodeUTF8)
+        self.cancel_ecotourism_str = QA.translate("EcotourismGui", "Canceling ecotourism interview", "", QA.UnicodeUTF8)

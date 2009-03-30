@@ -80,10 +80,6 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
             else:
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
                 self.parent.capturedPolygonsPennies.append(num_pennies)
-
-            self.parent.capturedPolygonsType.append(self.parent.shapeType)
-            self.parent.save_gear_inc()
-
         self.close()
 
         #Check if this shape type should be done (no pennies left)
@@ -127,10 +123,6 @@ class DrawEcotourismGui(QDialog, Ui_DrawEcotourism):
                 return
             else:
                 self.parent.capturedPolygonsPennies.append(num_pennies)
-                        
-            self.parent.capturedPolygonsType.append(self.parent.shapeType)
-            self.parent.save_gear_inc()
-
         self.parent.saveShapes(self)
 
 

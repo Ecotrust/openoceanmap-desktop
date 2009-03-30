@@ -56,8 +56,6 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
 
     #Controls whether other field activity lineEdit is enabled
     def on_comboActivity_activated(self):
-        import pdb
-        pdb.set_trace()
         activity_type = self.comboActivity.currentText()
         if activity_type == 'Other':
             self.other_line.setEnabled(True)
@@ -65,19 +63,18 @@ class SelectEcotourismGui(QDialog, Ui_SelectEcotourism):
             self.other_line.setEnabled(False)
 
     def on_pbnStartShapes_released(self):       
-        shape_type = self.comboActivity.currentText()
-        if not shape_type:
+        activity_type = self.comboActivity.currentText()
+        if not activity_type:
             QMessageBox.warning(self, self.tourism_error_str, self.select_tourism_str)
             return 
-
-        if shape_type == 'Other':
-            shape_type = self.other_line.text()
-            if not shape_type:
+        elif activity_type == 'Other':
+            activity_type = self.other_line.text()
+            if not activity_type:
                 QMessageBox.warning(self, self.other_error_str, self.no_other_error_str)
                 return
-
-        self.parent.add_attrib(self.f_emp_type_str, activity_type)
-        self.parent.shapeType = shape_type            
+        self.parent.shapeType = activity_type                   
+        self.parent.add_attrib(self.f_act_type_str, activity_type)         
+        
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
