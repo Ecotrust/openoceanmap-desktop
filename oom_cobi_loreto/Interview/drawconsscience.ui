@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>641</width>
+    <width>489</width>
     <height>142</height>
    </rect>
   </property>
@@ -43,7 +43,7 @@
          </font>
         </property>
         <property name="text" >
-         <string>Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)</string>
+         <string>Coastal reef ecosystem - fish and invertebrates</string>
         </property>
         <property name="alignment" >
          <set>Qt::AlignCenter</set>
@@ -52,6 +52,19 @@
       </item>
       <item row="1" column="0" >
        <layout class="QHBoxLayout" >
+        <item>
+         <spacer name="horizontalSpacer" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item>
          <widget class="QLabel" name="penny_label" >
           <property name="text" >
@@ -79,13 +92,13 @@
          <widget class="QLabel" name="pl_label" >
           <property name="minimumSize" >
            <size>
-            <width>200</width>
+            <width>150</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>250</width>
+            <width>150</width>
             <height>16777215</height>
            </size>
           </property>

@@ -27,7 +27,7 @@
 #---------------------------------------------------------------------
 
 
-all: interviewstart_ui.py resgroup_ui.py fishery_ui.py selectecotourism_ui.py ecotourism_ui.py selectconsscience_ui.py consscience_ui.py  drawresgroup_ui.py drawecotourism_ui.py drawconsscience_ui.py other_ui.py
+all: interviewstart_ui.py resgroup_ui.py fishery_ui.py ecotourism_ui.py consscience_ui.py  drawresgroup_ui.py drawecotourism_ui.py drawconsscience_ui.py other_ui.py
 
 clean:
 	rm -f interviewstart_ui.py nextpolygon_ui.py resgroup_ui.py fishery_ui.py ecotourism_ui.py consscience_ui.py drawresgroup_ui.py drawecotourism_ui.py drawconsscience_ui.py interview.pyc other_ui.py
@@ -54,15 +54,9 @@ fishery_ui.py: fishery.ui
 
 ecotourism_ui.py: ecotourism.ui
 	pyuic4 -o ecotourism_ui.py ecotourism.ui
-
-selectecotourism_ui.py: selectecotourism.ui
-	pyuic4 -o selectecotourism_ui.py selectecotourism.ui
 	
 consscience_ui.py: consscience.ui
 	pyuic4 -o consscience_ui.py consscience.ui
-
-selectconsscience_ui.py: selectconsscience.ui
-	pyuic4 -o selectconsscience_ui.py selectconsscience.ui
 
 other_ui.py: other.ui
 	pyuic4 -o other_ui.py other.ui	

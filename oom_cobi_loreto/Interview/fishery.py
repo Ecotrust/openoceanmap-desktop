@@ -106,12 +106,12 @@ class FisheryGui(QDialog, Ui_Fishery):
         for (group, value) in self.res_groups:
             if not strIsInt(value):
                 QMessageBox.warning(self, "Input Error", "One of your fishery percentages is not a number")
-                return 
+                return -1
         
         total = sum([int(b) for (a,b) in self.res_groups])
         if total != 100:
             QMessageBox.warning(self, "Percent Error", "Your percentages must add up to 100, currently: "+str(total))
-            return     
+            return -1
         
         #Store res group info in Interview object for parent to handle looping
         #through res groups.  ALso other dialogs with the same parent can
