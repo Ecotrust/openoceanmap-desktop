@@ -53,34 +53,25 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         self.retranslate()
 
     def on_pbnSelectActivity_released(self):          
-        err_code = self.fetchAttribs()
+        err_code = self.saveAttribs()
         if err_code <= 0:
             return
                     
         err_code = self.fetchActivities()
-        #self.parent.shapeType = activity_type                   
-        #self.parent.add_attrib(self.f_act_type_str, activity_type)         
-
+        
         if err_code >= 0:
             self.startNextActivity()
-            #self.close()            
-            #self.parent.nextStep()
-         
-#        self.close()
-#        from selectecotourism import SelectEcotourismGui
-#        flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-#        wnd = SelectEcotourismGui(self.parent,flags)
-#        wnd.show()
 
     '''
     Pulls the next activity and 
     '''
     def startNextActivity(self):        
-        if len(self.activities) > 0:
-            (activity,value) = self.activities.pop()
+        if len(self.parent.activities) > 0:
+            (activity,value) = self.parent.activities.pop()
             self.parent.shapeType = activity            
-
             self.hide()        
+            QMessageBox.warning(self, self.next_activity_str, self.draw_next_activity_str+activity)            
+            
             mc = self.parent.canvas      
             self.p = PolygonTool(mc,self.parent)
             QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
@@ -101,7 +92,7 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
     '''
     Fetch general ecotourism information from dialog
     '''
-    def fetchAttribs(self):
+    def saveAttribs(self):
         self.parent.add_attrib(self.f_v_len_str, self.vessel_length_line.text())
         self.parent.add_attrib(self.f_v_motor_str, self.vessel_motor_line.text())
         self.parent.add_attrib(self.f_v_cap_str, self.haul_capacity_line.text())
@@ -119,32 +110,36 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
     add up to 100%.  These will be looped through
     '''
     def fetchActivities(self):        
-        self.activities = []
+        activities = []
         if self.activity_diving.text() != '0':
-            self.activities.append(('Diving',self.activity_diving.text()))
+            activities.append(('Diving',self.activity_diving.text()))
         if self.activity_snorkeling.text() != '0':
-            self.activities.append(('Snorkeling',self.activity_snorkeling.text()))
+            activities.append(('Snorkeling',self.activity_snorkeling.text()))
         if self.activity_kayaking.text() != '0':
-            self.activities.append(('Kayaking',self.activity_kayaking.text()))
+            activities.append(('Kayaking',self.activity_kayaking.text()))
         if self.activity_watching.text() != '0':
-            self.activities.append(('Marine Fauna Watching',self.activity_watching.text()))                                    
+            activities.append(('Marine Fauna Watching',self.activity_watching.text()))                                    
 
         if self.activity_other_1_name.text() != '':            
             group_tuple = (str(self.activity_other_1_name.text()), self.activity_other_1_interest.text())
-            self.activities.append(group_tuple)
+            activities.append(group_tuple)
         if self.activity_other_2_name.text() != '':            
             group_tuple = (str(self.activity_other_2_name.text()), self.activity_other_2_interest.text())
-            self.activities.append(group_tuple)                                             
+            activities.append(group_tuple)                                             
 
-        for (group, value) in self.activities:
+        for (group, value) in activities:
             if not strIsInt(value):
                 QMessageBox.warning(self, "Input Error", "One of your activity percentages is not a number")
                 return -1 
         
-        total = sum([int(b) for (a,b) in self.activities])
+        total = sum([int(b) for (a,b) in activities])
         if total != 100:
             QMessageBox.warning(self, "Percent Error", "Your percentages must add up to 100, currently: "+str(total))
-            return -1        
+            return -1
+        
+        #Maintain the activities at the Interview level since DrawEcotourism needs
+        #to keep track of the number left too
+        self.parent.activities = activities
         return 1
 
     def retranslate(self):       
@@ -157,7 +152,10 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         self.emp_error_str = QA.translate("EcotourismGui", "Employee Error", "Error given when user fails to enter an employee type", QA.UnicodeUTF8)
         self.choose_activity_str = QA.translate("EcotourismGui", "Please Choose an Ecotourism Activity", "Error given when user fails to enter an employee type", QA.UnicodeUTF8)
         self.cancel_ecotourism_str = QA.translate("EcotourismGui", "Canceling ecotourism interview", "", QA.UnicodeUTF8)
+        self.next_activity_str = QA.translate("EcotourismGui", "Next Activity", "", QA.UnicodeUTF8)
+        self.draw_next_activity_str = QA.translate("EcotourismGui", "Please begin drawing for your next ecotourism activity: ", "", QA.UnicodeUTF8)
 
+        
         self.f_act_type_str = QA.translate("EcotourismGui", "act_type", "Type of ecotourism activity", QA.UnicodeUTF8)
         self.tourism_error_str = QA.translate("SelectEcotourismGui", "Ecotourism Error", "Error when user didn't select an ecotourism type ", QA.UnicodeUTF8)        
         self.other_error_str = QA.translate("EcotourismGui", "Ecotourism Error", "Error message given when user doesn't enter an other activity type", QA.UnicodeUTF8)

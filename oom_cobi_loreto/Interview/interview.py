@@ -44,6 +44,7 @@ from interviewstart import InterviewStartGui
 from interviewstart_ui import Ui_InterviewStart
 from resgroup import ResGroupGui
 from fishery import FisheryGui
+from ecotourism import EcotourismGui
 # General system includes
 import sys, os
 
@@ -74,6 +75,9 @@ class Interview(object):
     self.capturedPolygons = []
     self.capturedPolygonsPennies = []
     self.capturedPolygonsRub = []
+    
+    #Ecotourism window
+    self.eco_wnd = None
     
     self.pennies_left = 100
 
@@ -168,6 +172,9 @@ class Interview(object):
   def remove_attribs(self, b_names):
     for b_name in b_names:
         for i in range(len(self.interviewInfo2)):
+            #Length will shorten as we pop so short circuit as needed
+            if i >= len(self.interviewInfo2):
+                continue
             [a_name, a_value] = self.interviewInfo2[i]
             if a_name == b_name:
                 self.interviewInfo2.pop(i)         
@@ -242,11 +249,13 @@ class Interview(object):
           #Append user group name and income percent
           self.add_attrib(self.f_user_group_str,self.eco_str)
           self.add_attrib(self.f_user_group_income_str, self.ecotourismIncome)
-          
-          from ecotourism import EcotourismGui
-          flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-          wnd = EcotourismGui(self,flags,previousGui)
-          wnd.show()
+
+          if not self.eco_wnd:         
+              flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+              self.eco_wnd = EcotourismGui(self,flags,previousGui)
+              self.eco_wnd.show()
+          else:
+              self.eco_wnd.startNextActivity()
           
       elif self.consScienceIncome:
           self.parent.statusbar.showMessage(self.start_consci_str)
@@ -465,38 +474,54 @@ class Interview(object):
             #Reset penny count
             self.pennies_left = 100
 
-            #If fisheries, go to next res group or if done with them all, go to next sector
-            if self.currentStep == self.comm_fish_str or self.currentStep == self.comm_sport_fish_str or self.currentStep == self.priv_fish_str:
+            #Decides whether to clear state and go to the 
+            #next step or continue in the inner loop
+            if self.currentStep == self.comm_fish_str:
                 if len(self.res_groups) > 0:
                     self.startNextResGroup()
-                else:
-                    #Clear the current sector so we can move on to the next
-                    if self.currentStep == self.comm_fish_str:
-                        self.commFishIncome = None
-                        #Remove all fishery attribs leave rest
-                        import pdb
-                        pdb.set_trace()
-                        self.remove_attribs(self.fishery_attribs)
-                        self.nextStep(drawGui)
-                    elif self.currentStep == self.comm_sport_fish_str:
-                        self.sportFishIncome = None
-                        #Remove all fishery attribs, leave rest
-                        self.remove_attribs(self.fishery_attribs)
-                        self.nextStep(drawGui)
-                    elif self.currentStep == self.priv_fish_str:
-                        self.privateFishIncome = None
-                        #Remove all fishery attribs, leave rest
-                        self.remove_attribs(self.fishery_attribs)
-                        self.nextStep(drawGui)                   
-                    elif self.currentStep == self.eco_str:
-                        #Remove all ecotourism.ecotourism_attribs)
-                        self.remove_attribs(self.ecotourism_attribs)
-                    elif self.currentStep == self.consci_str:
-                        #Remove all consci attribs, leave rest
-                        self.remove_attribs(self.consci_attribs)
-            else:
-                drawGui.previousGui.show()
-
+                    return
+                self.commFishIncome = None
+                #Remove all fishery attribs leave rest
+                self.remove_attribs(self.fishery_attribs)
+                self.nextStep(drawGui)
+                
+            elif self.currentStep == self.comm_sport_fish_str:
+                if len(self.res_groups) > 0:
+                    self.startNextResGroup()
+                    return
+                self.sportFishIncome = None
+                #Remove all fishery attribs, leave rest
+                self.remove_attribs(self.fishery_attribs)
+                self.nextStep(drawGui)
+                
+            elif self.currentStep == self.priv_fish_str:
+                if len(self.res_groups) > 0:
+                    self.startNextResGroup()
+                    return
+                self.privateFishIncome = None
+                #Remove all fishery attribs, leave rest
+                self.remove_attribs(self.fishery_attribs)
+                self.nextStep(drawGui)            
+                
+            elif self.currentStep == self.eco_str:            
+                if len(self.activities) > 0:
+                    self.eco_wnd.startNextActivity()
+                    return
+                self.ecotourismIncome = None    
+                #Remove all ecotourism attribs
+                self.remove_attribs(self.ecotourism_attribs)
+                self.nextStep(drawGui)
+                
+            elif self.currentStep == self.consci_str:
+                #Remove all consci attribs, leave rest
+                if len(self.activities) > 0:
+                    self.eco_wnd.startNextFocus()
+                    return
+                self.consScienceIncome = None    
+                #Remove all ecotourism attribs
+                self.remove_attribs(self.consci_attribs)
+                self.nextStep(drawGui)                
+                        
   def retranslate(self):
       self.first_name_str = QA.translate("InterviewStartGui", "firstname", "Interviewee first name attribute", QA.UnicodeUTF8)
       self.last_name_str = QA.translate("InterviewStartGui", "lastname", "Interviewee last name attribute", QA.UnicodeUTF8)      
