@@ -83,7 +83,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>Tim</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -146,7 +146,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>Welch</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -209,7 +209,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>27</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -272,7 +272,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>Warrenton</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -448,10 +448,10 @@
               </font>
              </property>
              <property name="text" >
-              <string>1-2-04</string>
+              <string/>
              </property>
              <property name="cursorPosition" >
-              <number>6</number>
+              <number>0</number>
              </property>
             </widget>
            </item>
@@ -514,7 +514,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>Joe</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -577,7 +577,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>Bob</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -843,7 +843,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>90</string>
+              <string>0</string>
              </property>
             </widget>
            </item>
@@ -905,7 +905,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>3</string>
+              <string>0</string>
              </property>
             </widget>
            </item>
@@ -967,7 +967,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>7</string>
+              <string>0</string>
              </property>
             </widget>
            </item>

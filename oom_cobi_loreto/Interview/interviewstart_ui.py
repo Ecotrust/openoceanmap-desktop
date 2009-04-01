@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interviewstart.ui'
 #
-# Created: Sun Mar 29 17:10:14 2009
+# Created: Wed Apr 01 00:06:52 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -187,7 +187,7 @@ class Ui_InterviewStart(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.date_line.setFont(font)
-        self.date_line.setCursorPosition(6)
+        self.date_line.setCursorPosition(0)
         self.date_line.setObjectName("date_line")
         self.hboxlayout6.addWidget(self.date_line)
         self.vboxlayout2.addWidget(self.interviewee_first_name_2)
@@ -452,24 +452,17 @@ class Ui_InterviewStart(object):
         InterviewStart.setWindowTitle(QtGui.QApplication.translate("InterviewStart", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewee.setTitle(QtGui.QApplication.translate("InterviewStart", "Interviewee", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewee_first_name_text.setText(QtGui.QApplication.translate("InterviewStart", "First Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewee_first_name_line.setText(QtGui.QApplication.translate("InterviewStart", "Tim", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewee_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Last Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewee_last_name_line.setText(QtGui.QApplication.translate("InterviewStart", "Welch", None, QtGui.QApplication.UnicodeUTF8))
         self.age_text.setText(QtGui.QApplication.translate("InterviewStart", "Age:", None, QtGui.QApplication.UnicodeUTF8))
-        self.age_line.setText(QtGui.QApplication.translate("InterviewStart", "27", None, QtGui.QApplication.UnicodeUTF8))
         self.city_text.setText(QtGui.QApplication.translate("InterviewStart", "City of residence:", None, QtGui.QApplication.UnicodeUTF8))
-        self.city_line.setText(QtGui.QApplication.translate("InterviewStart", "Warrenton", None, QtGui.QApplication.UnicodeUTF8))
         self.gender_text.setText(QtGui.QApplication.translate("InterviewStart", "Gender:", None, QtGui.QApplication.UnicodeUTF8))
         self.gender_comboBox.setItemText(0, QtGui.QApplication.translate("InterviewStart", "Male", None, QtGui.QApplication.UnicodeUTF8))
         self.gender_comboBox.setItemText(1, QtGui.QApplication.translate("InterviewStart", "Female", None, QtGui.QApplication.UnicodeUTF8))
         self.years_text.setText(QtGui.QApplication.translate("InterviewStart", "Years working or visiting the area:", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewee_2.setTitle(QtGui.QApplication.translate("InterviewStart", "Interviewer", None, QtGui.QApplication.UnicodeUTF8))
         self.date_text.setText(QtGui.QApplication.translate("InterviewStart", "Interview Date (mm/dd/yyyy):", None, QtGui.QApplication.UnicodeUTF8))
-        self.date_line.setText(QtGui.QApplication.translate("InterviewStart", "1-2-04", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewer_first_name_text.setText(QtGui.QApplication.translate("InterviewStart", "First Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer_first_name_line.setText(QtGui.QApplication.translate("InterviewStart", "Joe", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewer_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Last Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer_last_name_line.setText(QtGui.QApplication.translate("InterviewStart", "Bob", None, QtGui.QApplication.UnicodeUTF8))
         self.user_group_info.setTitle(QtGui.QApplication.translate("InterviewStart", "What percentage of income/interest/stake do you have in the following?", None, QtGui.QApplication.UnicodeUTF8))
         self.comm_fish_text.setText(QtGui.QApplication.translate("InterviewStart", "Commercial Fishing:", None, QtGui.QApplication.UnicodeUTF8))
         self.comm_fish_line.setText(QtGui.QApplication.translate("InterviewStart", "0", None, QtGui.QApplication.UnicodeUTF8))
@@ -478,11 +471,11 @@ class Ui_InterviewStart(object):
         self.private_fish_text.setText(QtGui.QApplication.translate("InterviewStart", "Private Sport Fishing:", None, QtGui.QApplication.UnicodeUTF8))
         self.private_fish_line.setText(QtGui.QApplication.translate("InterviewStart", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.ecotourism_text.setText(QtGui.QApplication.translate("InterviewStart", "Ecotourism:", None, QtGui.QApplication.UnicodeUTF8))
-        self.ecotourism_line.setText(QtGui.QApplication.translate("InterviewStart", "90", None, QtGui.QApplication.UnicodeUTF8))
+        self.ecotourism_line.setText(QtGui.QApplication.translate("InterviewStart", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.cons_science_text.setText(QtGui.QApplication.translate("InterviewStart", "Conservation/Scientific Research:", None, QtGui.QApplication.UnicodeUTF8))
-        self.cons_science_line.setText(QtGui.QApplication.translate("InterviewStart", "3", None, QtGui.QApplication.UnicodeUTF8))
+        self.cons_science_line.setText(QtGui.QApplication.translate("InterviewStart", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.other_text.setText(QtGui.QApplication.translate("InterviewStart", "Other Income:", None, QtGui.QApplication.UnicodeUTF8))
-        self.other_line.setText(QtGui.QApplication.translate("InterviewStart", "7", None, QtGui.QApplication.UnicodeUTF8))
+        self.other_line.setText(QtGui.QApplication.translate("InterviewStart", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("InterviewStart", "* These must add up to 100, enter 0 if not applicable", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnCancel.setText(QtGui.QApplication.translate("InterviewStart", "Quit", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnNextWindow.setText(QtGui.QApplication.translate("InterviewStart", "Next", None, QtGui.QApplication.UnicodeUTF8))

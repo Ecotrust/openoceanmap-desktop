@@ -55,20 +55,19 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
     def on_pbnSelectActivity_released(self):          
         err_code = self.saveAttribs()
         if err_code <= 0:
-            return
-                    
-        err_code = self.fetchActivities()
-        
+            return                    
+        err_code = self.fetchActivities()        
         if err_code >= 0:
             self.startNextActivity()
 
     '''
-    Pulls the next activity and 
+    Pulls the next activity and allows user to draw shapes for it
     '''
     def startNextActivity(self):        
         if len(self.parent.activities) > 0:
             (activity,value) = self.parent.activities.pop()
-            self.parent.shapeType = activity            
+            self.parent.shapeType = activity
+            self.parent.add_attrib(self.f_act_type_str, activity)            
             self.hide()        
             QMessageBox.warning(self, self.next_activity_str, self.draw_next_activity_str+activity)            
             
@@ -153,7 +152,7 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         self.choose_activity_str = QA.translate("EcotourismGui", "Please Choose an Ecotourism Activity", "Error given when user fails to enter an employee type", QA.UnicodeUTF8)
         self.cancel_ecotourism_str = QA.translate("EcotourismGui", "Canceling ecotourism interview", "", QA.UnicodeUTF8)
         self.next_activity_str = QA.translate("EcotourismGui", "Next Activity", "", QA.UnicodeUTF8)
-        self.draw_next_activity_str = QA.translate("EcotourismGui", "Please begin drawing for your next ecotourism activity: ", "", QA.UnicodeUTF8)
+        self.draw_next_activity_str = QA.translate("EcotourismGui", "Please begin drawing shapes for the following ecotourism activity: ", "", QA.UnicodeUTF8)
 
         
         self.f_act_type_str = QA.translate("EcotourismGui", "act_type", "Type of ecotourism activity", QA.UnicodeUTF8)

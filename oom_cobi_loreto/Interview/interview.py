@@ -45,6 +45,8 @@ from interviewstart_ui import Ui_InterviewStart
 from resgroup import ResGroupGui
 from fishery import FisheryGui
 from ecotourism import EcotourismGui
+from consscience import ConsScienceGui
+from other import OtherGui
 # General system includes
 import sys, os
 
@@ -78,6 +80,7 @@ class Interview(object):
     
     #Ecotourism window
     self.eco_wnd = None
+    self.consci_wnd = None
     
     self.pennies_left = 100
 
@@ -264,11 +267,13 @@ class Interview(object):
           #Append user group name and income percent, overwrite if already exists          
           self.add_attrib(self.f_user_group_str,self.consci_str)
           self.add_attrib(self.f_user_group_income_str, self.consScienceIncome)
-          
-          from consscience import ConsScienceGui
-          flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-          wnd = ConsScienceGui(self,flags,previousGui)
-          wnd.show()
+
+          if not self.consci_wnd:         
+              flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
+              self.consci_wnd = ConsScienceGui(self,flags,previousGui)
+              self.consci_wnd.show()
+          else:
+              self.consci_wnd.startNextActivity()
           
       elif self.otherIncome:
           self.parent.statusbar.showMessage(self.start_other_str)
@@ -280,7 +285,6 @@ class Interview(object):
           
           textType = self.income_str #the type should be gathered
           # skip right to drawing...
-          from other import OtherGui
           flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
           wnd = OtherGui(self,flags,self.currentStep,previousGui)
           wnd.show()
@@ -514,8 +518,8 @@ class Interview(object):
                 
             elif self.currentStep == self.consci_str:
                 #Remove all consci attribs, leave rest
-                if len(self.activities) > 0:
-                    self.eco_wnd.startNextFocus()
+                if len(self.foci) > 0:
+                    self.consci_wnd.startNextFocus()
                     return
                 self.consScienceIncome = None    
                 #Remove all ecotourism attribs
