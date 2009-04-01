@@ -68,8 +68,8 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.p = PolygonTool(mc,self.parent)
         QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
         self.saveTool = mc.mapTool()
+        self.parent.parent.interviewSaveTool = None
         mc.setMapTool(self.p)
-        
         
     def on_pbnFisheryFinished_released(self):
         if self.parent.currentFishery == None:

@@ -102,12 +102,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
     
-    rasterList = [["Data/t180071b2.tif",0,50000000],   
-                  ["Data/t185001b_tiled.tif",0,200000], # these are just the scale vals from the prev set -- we aren't using them here
-                  ["Data/t185201b_tiled.tif",0,200000],
-                  ["Data/t185801b_tiled.tif",0,200000],
-                  ["Data/t186001b2_tiled.tif",0,200000]   
-                  ]    
+    rasterList = [["Data/t180071b.tif",0,50000000],   
+                  ["Data/t185001b_tiled.tif",0,400000], # these are just the scale vals from the prev set -- we aren't using them here
+                  ["Data/t185201b_tiled.tif",0,400000],
+                  ["Data/t185801b_tiled.tif",0,400000],
+                  ["Data/t186001b_tiled.tif",0,400000]   
+                  ]   
     
     self.rasterBaseLayer = OOMLayer(self)
     self.openSeaRasterBaseLayer = OOMLayer(self)

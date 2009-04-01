@@ -41,7 +41,7 @@ class InnoScript:
                  dist_dir,
                  windows_exe_files = [],
                  lib_files = [],
-                 version = "1.0"):
+                 version = "1.2"):
         self.lib_dir = lib_dir
         self.dist_dir = dist_dir
         if not self.dist_dir[-1] in "\\/":
@@ -61,7 +61,7 @@ class InnoScript:
         print >> ofi, "; WARNING: This script has been created by py2exe. Changes to this script"
         print >> ofi, "; will be overwritten the next time py2exe is run!"
         print >> ofi, r"[Setup]"
-        print >> ofi, r"AppName=%s" % self.name
+        print >> ofi, r"AppName=%s %s" % (self.name, self.version)
         print >> ofi, r"AppVerName=%s %s" % (self.name, self.version)
         print >> ofi, r"DefaultDirName={pf}\%s" % self.name
         print >> ofi, r"DefaultGroupName=%s" % self.name
