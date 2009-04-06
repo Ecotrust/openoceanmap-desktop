@@ -1,119 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="lo">
+<defaultcodec></defaultcodec>
 <context>
     <name>ConsScience</name>
     <message>
-        <location filename="consscience_ui.py" line="122"/>
+        <location filename="consscience_ui.py" line="375"/>
         <source>OpenOceanMap - Interview</source>
         <translation>MapaOcéanoAbierto - Entrevista</translation>
     </message>
     <message>
         <location filename="consscience_ui.py" line="123"/>
         <source>Conservationist / Scientist Info</source>
-        <translation>Informacion conservacionista/cientifico</translation>
+        <translation type="obsolete">Informacion conservacionista/cientifico</translation>
     </message>
     <message>
-        <location filename="consscience_ui.py" line="124"/>
+        <location filename="consscience_ui.py" line="377"/>
         <source>Type of Specialist:</source>
         <translation>Tipo de especialista:</translation>
     </message>
     <message>
-        <location filename="consscience_ui.py" line="126"/>
+        <location filename="consscience_ui.py" line="379"/>
         <source>Non-Governmental Organization</source>
         <translation>NGO</translation>
     </message>
     <message>
-        <location filename="consscience_ui.py" line="130"/>
+        <location filename="consscience_ui.py" line="383"/>
         <source>Other</source>
         <translation>Otro</translation>
     </message>
     <message>
         <location filename="consscience_ui.py" line="132"/>
         <source>Draw Shapes by Areas of Knowledge</source>
-        <translation>Dibujar figuras para cada área de conocimiento</translation>
+        <translation type="obsolete">Dibujar figuras para cada área de conocimiento</translation>
     </message>
     <message>
-        <location filename="consscience_ui.py" line="125"/>
+        <location filename="consscience_ui.py" line="378"/>
         <source>Academic</source>
         <translation>Academico</translation>
     </message>
     <message>
-        <location filename="consscience_ui.py" line="127"/>
+        <location filename="consscience_ui.py" line="380"/>
         <source>Government (Municipal)</source>
         <translation>Gobierno (Municipal)</translation>
     </message>
     <message>
-        <location filename="consscience_ui.py" line="128"/>
+        <location filename="consscience_ui.py" line="381"/>
         <source>Government (State)</source>
         <translation>Gobierno (Estatal)</translation>
     </message>
     <message>
-        <location filename="consscience_ui.py" line="129"/>
+        <location filename="consscience_ui.py" line="382"/>
         <source>Government (Federal)</source>
         <translation>Gobierno (Federal)</translation>
     </message>
     <message>
-        <location filename="consscience_ui.py" line="131"/>
+        <location filename="consscience_ui.py" line="384"/>
         <source>Additional info:</source>
         <translation>Información adicional:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="376"/>
+        <source>Conservationist / Scientist Information</source>
+        <translation>Conservacionista / Cientifico Información</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="385"/>
+        <source>Areas of Focus:</source>
+        <translation>Esferas de interés:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="386"/>
+        <source>What percent interest do you have in each activity? (Must add up to 100)</source>
+        <translation>Qué porcentaje de tu ingreso/interés/participación tienes en cada actividad? (deben sumar el 100)</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="387"/>
+        <source>Coastal reef ecosystem - fish and invertebrates:</source>
+        <translation>Ecosistema de arrecife costero - Peces e invertebrados:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="398"/>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="389"/>
+        <source>Deep sea reef ecosystem - fish and invertebrates:</source>
+        <translation>Ecosistema de arrecifes profundos - Peces e invertebrados:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="391"/>
+        <source>Soft bottom - sand, mud, etc:</source>
+        <translation>Fondos suaves (arena, lodo, etcétera):</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="393"/>
+        <source>Small pelagics - sardines, anchovy, etc:</source>
+        <translation>Pelágicos menores (sardinas, anchovetas, etcétera):</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="395"/>
+        <source>Migratory fish - tuna, swordfish, sailfish:</source>
+        <translation>Peces migratorios (atún, picudos, jurel):</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="397"/>
+        <source>Sea turtles:</source>
+        <translation>Tortugas marinas:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="399"/>
+        <source>Other focus #1:</source>
+        <translation>otros enfoque #1:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="403"/>
+        <source>Name:</source>
+        <translation>Nombre:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="404"/>
+        <source>% interest:</source>
+        <translation>% interés:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="402"/>
+        <source>Other focus #2:</source>
+        <translation>Otros enfoque #2:</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="405"/>
+        <source>Exit ConScience Step</source>
+        <translation>Salir paso Cons/Cien</translation>
+    </message>
+    <message>
+        <location filename="consscience_ui.py" line="406"/>
+        <source>Start Drawing Shapes</source>
+        <translation>Empezar a dibujar figuras</translation>
     </message>
 </context>
 <context>
     <name>ConsScienceGui</name>
     <message>
-        <location filename="consscience.py" line="80"/>
+        <location filename="consscience.py" line="170"/>
         <source>Specialist Error</source>
         <comment>Error message when specialist type not selected</comment>
         <translation>Error al seleccionar especialista</translation>
     </message>
     <message>
-        <location filename="consscience.py" line="81"/>
+        <location filename="consscience.py" line="171"/>
         <source>Please choose a specialist position</source>
         <comment>Error message when specialist type not selected</comment>
         <translation>Por favor seleccione un tipo de especialista</translation>
     </message>
     <message>
-        <location filename="consscience.py" line="82"/>
-        <source>focus</source>
-        <comment>conservationist/scientist area of focus</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="consscience.py" line="83"/>
+        <location filename="consscience.py" line="173"/>
         <source>add_info</source>
         <comment>additional info about con/science focus (kelp, mangrove, etc)</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="consscience.py" line="84"/>
+        <location filename="consscience.py" line="174"/>
         <source>Canceled conservationist/scientist interview</source>
         <translation>Cancelar entrevista conservacionista/cientifico</translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="172"/>
+        <source>spc_type</source>
+        <comment>conservationist/scientist area of specialization</comment>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>DrawConsScience</name>
     <message>
-        <location filename="drawconsscience_ui.py" line="89"/>
+        <location filename="drawconsscience_ui.py" line="75"/>
         <source>OpenOceanMap - Next Polygon</source>
         <translation>MapaOcéanoAbierto - Siguiente Polígono</translation>
     </message>
     <message>
-        <location filename="drawconsscience_ui.py" line="91"/>
+        <location filename="drawconsscience_ui.py" line="77"/>
         <source>Weighting (pennies):</source>
         <translation>Valorar (pesos):</translation>
     </message>
     <message>
-        <location filename="drawconsscience_ui.py" line="92"/>
+        <location filename="drawconsscience_ui.py" line="78"/>
         <source>Finished With Shapes</source>
         <translation>Terminar con figuras</translation>
     </message>
     <message>
         <location filename="drawconsscience_ui.py" line="93"/>
         <source>Discard Last Shape...</source>
-        <translation>Descartar última figura...</translation>
+        <translation type="obsolete">Descartar última figura...</translation>
     </message>
     <message>
-        <location filename="drawconsscience_ui.py" line="94"/>
+        <location filename="drawconsscience_ui.py" line="80"/>
         <source>Draw More Shapes...</source>
         <translation>Dibujar más figuras...</translation>
     </message>
@@ -125,48 +206,58 @@
     <message>
         <location filename="drawconsscience_ui.py" line="90"/>
         <source>Coastal reef ecosystem (all finfish and invertebrates assoc. with coastal reef)</source>
-        <translation>Ecosistema de arrecife costero (Peces e invertebrados asociados al arrecife costero)</translation>
+        <translation type="obsolete">Ecosistema de arrecife costero (Peces e invertebrados asociados al arrecife costero)</translation>
+    </message>
+    <message>
+        <location filename="drawconsscience_ui.py" line="76"/>
+        <source>Coastal reef ecosystem - fish and invertebrates</source>
+        <translation>Ecosistema de arrecife costero - Peces e invertebrados</translation>
+    </message>
+    <message>
+        <location filename="drawconsscience_ui.py" line="79"/>
+        <source>Discard Last Shape</source>
+        <translation>Descartart última figuras</translation>
     </message>
 </context>
 <context>
     <name>DrawConsScienceGui</name>
     <message>
-        <location filename="drawconsscience.py" line="142"/>
+        <location filename="drawconsscience.py" line="136"/>
         <source>Pennies Error</source>
         <translation>Error en pesos</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="143"/>
+        <location filename="drawconsscience.py" line="137"/>
         <source>Missing penny value</source>
         <translation>Falta valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="144"/>
+        <location filename="drawconsscience.py" line="138"/>
         <source>Penny value must be a number (no decimals)</source>
         <translation>El valor de pesos debe ser un número (no decimales)</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="145"/>
+        <location filename="drawconsscience.py" line="139"/>
         <source>Please add a penny value</source>
         <translation>Por favor añada un valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="146"/>
+        <location filename="drawconsscience.py" line="140"/>
         <source>You don&apos;t have that many pennies left</source>
         <translation>No le quedan tantos pesos de sobra</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="147"/>
+        <location filename="drawconsscience.py" line="141"/>
         <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
         <translation>Aún tendría pesos de sobra.  Por favor añada un valor de pesos mayor o dibuje figuras adicionales</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="148"/>
+        <location filename="drawconsscience.py" line="142"/>
         <source>You are out of pennies.  This shape drawing session is now done.</source>
         <translation>Se le terminaron los pesos.  Ésta sesión de dibujar figuras ha terminado.</translation>
     </message>
     <message>
-        <location filename="drawconsscience.py" line="149"/>
+        <location filename="drawconsscience.py" line="143"/>
         <source> left</source>
         <comment>Partial text used as part of a larger message about number of pennies left, for example &apos;20 left&apos;</comment>
         <translation> restantes</translation>
@@ -175,77 +266,87 @@
 <context>
     <name>DrawEcotourism</name>
     <message>
-        <location filename="drawecotourism_ui.py" line="89"/>
+        <location filename="drawecotourism_ui.py" line="73"/>
         <source>OpenOceanMap - Next Polygon</source>
         <translation>MapaOcéanoAbierto - Siguiente Polígono</translation>
     </message>
     <message>
-        <location filename="drawecotourism_ui.py" line="91"/>
+        <location filename="drawecotourism_ui.py" line="75"/>
         <source>Weighting (pennies):</source>
         <translation>Valorar (pesos):</translation>
     </message>
     <message>
-        <location filename="drawecotourism_ui.py" line="92"/>
+        <location filename="drawecotourism_ui.py" line="76"/>
         <source>Finished With Shapes</source>
         <translation>Terminar con figuras</translation>
     </message>
     <message>
         <location filename="drawecotourism_ui.py" line="93"/>
         <source>Discard Last Shape...</source>
-        <translation>Descartar última figura...</translation>
+        <translation type="obsolete">Descartar última figura...</translation>
     </message>
     <message>
-        <location filename="drawecotourism_ui.py" line="94"/>
+        <location filename="drawecotourism_ui.py" line="78"/>
         <source>Draw More Shapes...</source>
         <translation>Dibujar más figuras...</translation>
     </message>
     <message>
         <location filename="drawecotourism_ui.py" line="90"/>
         <source>Type of Tourism</source>
-        <translation>Tipo de Turismo</translation>
+        <translation type="obsolete">Tipo de Turismo</translation>
+    </message>
+    <message>
+        <location filename="drawecotourism_ui.py" line="74"/>
+        <source>Type of ecotourism</source>
+        <translation>Tipo de ecoturismo</translation>
+    </message>
+    <message>
+        <location filename="drawecotourism_ui.py" line="77"/>
+        <source>Discard Last Shape</source>
+        <translation>Descartart última figuras</translation>
     </message>
 </context>
 <context>
     <name>DrawEcotourismGui</name>
     <message>
-        <location filename="drawecotourism.py" line="143"/>
+        <location filename="drawecotourism.py" line="135"/>
         <source>Pennies Error</source>
         <comment>Error message given when user doesn&apos;t enter a pennies value</comment>
         <translation>Error en pesos</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="144"/>
+        <location filename="drawecotourism.py" line="136"/>
         <source>Missing penny value</source>
         <comment>Error message given when user doesn&apos;t enter a pennies value</comment>
         <translation>Falta valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="145"/>
+        <location filename="drawecotourism.py" line="137"/>
         <source>Penny value must be a number (no decimals)</source>
         <translation>El valor de pesos debe ser un número (no decimales)</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="146"/>
+        <location filename="drawecotourism.py" line="138"/>
         <source>Please enter a penny value</source>
         <translation>Por favor añada un valor de pesos</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="147"/>
+        <location filename="drawecotourism.py" line="139"/>
         <source>You don&apos;t have that many pennies left</source>
         <translation>No le quedan tantos pesos de sobra</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="148"/>
+        <location filename="drawecotourism.py" line="140"/>
         <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
         <translation>Aún tendría pesos de sobra.  Por favor añada un valor de pesos mayor o dibuje figuras adicionales</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="149"/>
+        <location filename="drawecotourism.py" line="141"/>
         <source>You are out of pennies.  This shape drawing session is now done.</source>
-        <translation>Se le terminaron los pesos. Ésta sesión de dibujar figuras ha terminado</translation>
+        <translation>Se le terminaron los pesos. Ésta sesión de dibujar figuras ha terminado.</translation>
     </message>
     <message>
-        <location filename="drawecotourism.py" line="150"/>
+        <location filename="drawecotourism.py" line="142"/>
         <source> left</source>
         <comment>Partial string used to tell you how many pennies you have remaining, for example &apos;20 left&apos;</comment>
         <translation>restantes</translation>
@@ -256,57 +357,57 @@
     <message>
         <location filename="drawgear_ui.py" line="145"/>
         <source>OpenOceanMap - Next Polygon</source>
-        <translation>MapaOcéanoAbierto - Siguiente Polígono</translation>
+        <translation type="obsolete">MapaOcéanoAbierto - Siguiente Polígono</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="146"/>
         <source>Weighting (pennies):</source>
-        <translation>Valorar (pesos):</translation>
+        <translation type="obsolete">Valorar (pesos):</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="155"/>
         <source>Finished With Shapes</source>
-        <translation>Terminar con figuras</translation>
+        <translation type="obsolete">Terminar con figuras</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="156"/>
         <source>Discard Last Shape...</source>
-        <translation>Descartar última figura...</translation>
+        <translation type="obsolete">Descartar última figura...</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="157"/>
         <source>Draw More Shapes...</source>
-        <translation>Dibujar más figuras...</translation>
+        <translation type="obsolete">Dibujar más figuras...</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="149"/>
         <source>Coastal reef fish</source>
-        <translation>Peces de arrecife costero</translation>
+        <translation type="obsolete">Peces de arrecife costero</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="150"/>
         <source>Deep reef fish</source>
-        <translation>Peces de arrecife profundo</translation>
+        <translation type="obsolete">Peces de arrecife profundo</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="151"/>
         <source>Migratory fish</source>
-        <translation>Peces migratorios</translation>
+        <translation type="obsolete">Peces migratorios</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="148"/>
         <source>Benthic fish</source>
-        <translation>Peces bentónicos</translation>
+        <translation type="obsolete">Peces bentónicos</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="153"/>
         <source>Shrimp</source>
-        <translation>Camarón</translation>
+        <translation type="obsolete">Camarón</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="154"/>
         <source>Other</source>
-        <translation>Otros</translation>
+        <translation type="obsolete">Otros</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="131"/>
@@ -316,12 +417,12 @@
     <message>
         <location filename="drawgear_ui.py" line="152"/>
         <source>Sharks and Skates</source>
-        <translation>Tiburones y rayas</translation>
+        <translation type="obsolete">Tiburones y rayas</translation>
     </message>
     <message>
         <location filename="drawgear_ui.py" line="147"/>
         <source>Check which types of species are caught in this area:</source>
-        <translation>Marca que tipo de especies son capturadas en esta área:</translation>
+        <translation type="obsolete">Marca que tipo de especies son capturadas en esta área:</translation>
     </message>
 </context>
 <context>
@@ -329,188 +430,390 @@
     <message>
         <location filename="drawgear.py" line="182"/>
         <source>Sharks and Skates</source>
-        <translation>Tiburones y rayas</translation>
+        <translation type="obsolete">Tiburones y rayas</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="183"/>
         <source>Coastal reef fish</source>
-        <translation>Peces de arrecife costero</translation>
+        <translation type="obsolete">Peces de arrecife costero</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="184"/>
         <source>Deep reef fish</source>
-        <translation>Peces de arrecife profundo</translation>
+        <translation type="obsolete">Peces de arrecife profundo</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="185"/>
         <source>Migratory fish</source>
-        <translation>Peces migratorios</translation>
+        <translation type="obsolete">Peces migratorios</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="186"/>
         <source>Benthic fish</source>
-        <translation>Peces bentónicos</translation>
+        <translation type="obsolete">Peces bentónicos</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="187"/>
         <source>Shrimp</source>
-        <translation>Camarón</translation>
+        <translation type="obsolete">Camarón</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="175"/>
         <source>Pennies Error</source>
-        <translation>Error en pesos</translation>
+        <translation type="obsolete">Error en pesos</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="176"/>
         <source>Missing penny value</source>
-        <translation>Falta valor de pesos</translation>
+        <translation type="obsolete">Falta valor de pesos</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="177"/>
         <source>Penny value must be a number (no decimals)</source>
-        <translation>El valor de pesos debe ser un número (no decimales)</translation>
+        <translation type="obsolete">El valor de pesos debe ser un número (no decimales)</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="178"/>
         <source>Please add a penny value</source>
-        <translation>Por favor añada un valor de pesos</translation>
+        <translation type="obsolete">Por favor añada un valor de pesos</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="179"/>
         <source>You don&apos;t have that many pennies left</source>
-        <translation>No le quedan tantos pesos de sobra</translation>
+        <translation type="obsolete">No le quedan tantos pesos de sobra</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="180"/>
         <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
-        <translation>Aún tendría pesos de sobra. Por favor añada un valor de pesos mayor o dibuje figuras adicionales</translation>
+        <translation type="obsolete">Aún tendría pesos de sobra. Por favor añada un valor de pesos mayor o dibuje figuras adicionales</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="181"/>
         <source>You are out of pennies.  This shape drawing session is now done.</source>
-        <translation>Se le terminaron los pesos.  Ésta sesión de dibujar figuras ha terminado.</translation>
+        <translation type="obsolete">Se le terminaron los pesos.  Ésta sesión de dibujar figuras ha terminado.</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="188"/>
         <source>Other</source>
-        <translation>Otro</translation>
+        <translation type="obsolete">Otro</translation>
     </message>
     <message>
         <location filename="drawgear.py" line="189"/>
         <source> left</source>
         <comment>Partial string used to tell you how many pennies you have remaining, for example &apos;20 left&apos;</comment>
-        <translation> restantes</translation>
+        <translation type="obsolete"> restantes</translation>
+    </message>
+</context>
+<context>
+    <name>DrawResGroup</name>
+    <message>
+        <location filename="drawresgroup_ui.py" line="74"/>
+        <source>OpenOceanMap - Next Polygon</source>
+        <translation>MapaOcéanoAbierto - Siguiente Polígono</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup_ui.py" line="75"/>
+        <source>Sector : Resource Group</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="drawresgroup_ui.py" line="76"/>
+        <source>Weighting (pennies):</source>
+        <translation>Valorar (pesos):</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup_ui.py" line="77"/>
+        <source>Finished With Shapes</source>
+        <translation>Terminar con figuras</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup_ui.py" line="78"/>
+        <source>Discard Last Shape</source>
+        <translation>Descartart última figuras</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup_ui.py" line="79"/>
+        <source>Draw More Shapes...</source>
+        <translation>Dibujar más figuras...</translation>
+    </message>
+</context>
+<context>
+    <name>DrawResGroupGui</name>
+    <message>
+        <location filename="drawresgroup.py" line="148"/>
+        <source>Pennies Error</source>
+        <translation>Error en pesos</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="149"/>
+        <source>Missing penny value</source>
+        <translation>Falta valor de pesos</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="150"/>
+        <source>Penny value must be a number (no decimals)</source>
+        <translation>El valor de pesos debe ser un número (no decimales)</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="151"/>
+        <source>Please add a penny value</source>
+        <translation>Por favor añada un valor de pesos</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="152"/>
+        <source>You don&apos;t have that many pennies left</source>
+        <translation>No le quedan tantos pesos de sobra</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="153"/>
+        <source>You would still have pennies left.  Please enter a larger penny value or draw additional shapes</source>
+        <translation>Usted todavía tiene más pesos. Volver a probar</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="154"/>
+        <source>You are out of pennies.  This shape drawing session is now done.</source>
+        <translation>Usted no tiene más de pesos.</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="155"/>
+        <source>Sharks and Skates</source>
+        <translation>Tiburones y rayas</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="156"/>
+        <source>Coastal reef fish</source>
+        <translation>Peces de arrecife costero</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="157"/>
+        <source>Deep reef fish</source>
+        <translation>Peces de arrecife profundo</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="158"/>
+        <source>Migratory fish</source>
+        <translation>Peces migratorios</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="159"/>
+        <source>Benthic fish</source>
+        <translation>Peces bentónicos</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="160"/>
+        <source>Shrimp</source>
+        <translation>Camarón</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="161"/>
+        <source>Other</source>
+        <translation>Otro</translation>
+    </message>
+    <message>
+        <location filename="drawresgroup.py" line="162"/>
+        <source> left</source>
+        <comment>Partial string used to tell you how many pennies you have remaining, for example &apos;20 left&apos;</comment>
+        <translation>sin</translation>
     </message>
 </context>
 <context>
     <name>Ecotourism</name>
     <message>
-        <location filename="ecotourism_ui.py" line="255"/>
+        <location filename="ecotourism_ui.py" line="444"/>
         <source>OpenOceanMap - Interview</source>
         <translation>Inicio MapaOcéanoAbierto - Entrevista</translation>
     </message>
     <message>
         <location filename="ecotourism_ui.py" line="256"/>
         <source>Ecotourism Info</source>
-        <translation>Información ecoturismo</translation>
+        <translation type="obsolete">Información ecoturismo</translation>
     </message>
     <message>
         <location filename="ecotourism_ui.py" line="260"/>
         <source>Owner</source>
-        <translation>Dueño de embarcación</translation>
+        <translation type="obsolete">Dueño de embarcación</translation>
     </message>
     <message>
-        <location filename="ecotourism_ui.py" line="258"/>
+        <location filename="ecotourism_ui.py" line="447"/>
         <source>Captain of Boat</source>
         <translation>Capitán de embarcación</translation>
     </message>
     <message>
-        <location filename="ecotourism_ui.py" line="261"/>
+        <location filename="ecotourism_ui.py" line="450"/>
         <source>Other</source>
         <translation>Otro</translation>
     </message>
     <message>
-        <location filename="ecotourism_ui.py" line="262"/>
+        <location filename="ecotourism_ui.py" line="451"/>
         <source>Vessel length (meters) :</source>
         <translation>Longitud de la embarcación (metros) :</translation>
     </message>
     <message>
         <location filename="ecotourism_ui.py" line="263"/>
         <source>Vessel motor (horsepower):</source>
-        <translation>Tipo de motor de la embarcación (caballos, hp):</translation>
+        <translation type="obsolete">Tipo de motor de la embarcación (caballos, hp):</translation>
     </message>
     <message>
         <location filename="ecotourism_ui.py" line="264"/>
         <source>Haul Capacity (kilograms):</source>
-        <translation>Capacidad de la embarcación (kg):</translation>
+        <translation type="obsolete">Capacidad de la embarcación (kg):</translation>
     </message>
     <message>
-        <location filename="ecotourism_ui.py" line="265"/>
+        <location filename="ecotourism_ui.py" line="454"/>
         <source>Home Port:</source>
         <translation>Puerto de origen:</translation>
     </message>
     <message>
         <location filename="ecotourism_ui.py" line="266"/>
         <source>How many work for the company?</source>
-        <translation>¿Cuántas personas trabajan para la compañía?</translation>
+        <translation type="obsolete">¿Cuántas personas trabajan para la compañía?</translation>
     </message>
     <message>
-        <location filename="ecotourism_ui.py" line="257"/>
+        <location filename="ecotourism_ui.py" line="446"/>
         <source>Type of Employee:</source>
         <translation>Tipo de empleado:</translation>
     </message>
     <message>
         <location filename="ecotourism_ui.py" line="267"/>
         <source>Draw Shapes by Ecotourism Type</source>
-        <translation>Dibujar figuras para cada tipo de ecoturismo</translation>
+        <translation type="obsolete">Dibujar figuras para cada tipo de ecoturismo</translation>
     </message>
     <message>
-        <location filename="ecotourism_ui.py" line="259"/>
+        <location filename="ecotourism_ui.py" line="448"/>
         <source>Guide</source>
         <translation>Guía</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="445"/>
+        <source>Ecotourism Information</source>
+        <translation>Ecoturismo información</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="449"/>
+        <source>Boat Owner</source>
+        <translation>Dueño de embarcación</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="452"/>
+        <source>Vessel motor (hp):</source>
+        <translation>Motor de la embarcación (hp):</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="453"/>
+        <source>Haul Capacity (kg):</source>
+        <translation>Capacidad de la embarcación (kg):</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="455"/>
+        <source>How many people  work for the company?</source>
+        <translation>¿Cuántas personas trabajan para la empresa?</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="456"/>
+        <source>Ecotourism Activities</source>
+        <translation>Ecoturismo Actividades</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="457"/>
+        <source>What percent interest do you have in each activity? (Must add up to 100)</source>
+        <translation>Qué porcentaje de tu ingreso/interés/participación tienes en cada actividad? (deben sumar el 100)</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="458"/>
+        <source>Diving:</source>
+        <translation>Buceo:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="465"/>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="460"/>
+        <source>Snorkeling:</source>
+        <translation>Snorkeleo:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="462"/>
+        <source>Kayaking:</source>
+        <translation>Kayakeo:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="464"/>
+        <source>Marine Fauna Watching:</source>
+        <translation>Observación de megafauna marina:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="466"/>
+        <source>Other activity #1:</source>
+        <translation>Otro Actividad #1:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="470"/>
+        <source>Name:</source>
+        <translation>Nombre:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="471"/>
+        <source>% interest:</source>
+        <translation>% interés:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="469"/>
+        <source>Other activity #2:</source>
+        <translation>Otro actividad #2:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="472"/>
+        <source>Exit Ecotourism Step</source>
+        <translation>Salir paso ecoturismo</translation>
+    </message>
+    <message>
+        <location filename="ecotourism_ui.py" line="473"/>
+        <source>Start Drawing Shapes</source>
+        <translation>Empezar a dibujar figuras</translation>
     </message>
 </context>
 <context>
     <name>EcotourismGui</name>
     <message>
-        <location filename="ecotourism.py" line="82"/>
+        <location filename="fishery.py" line="150"/>
         <source>emp_type</source>
         <comment>Employee type DB field name</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="ecotourism.py" line="83"/>
+        <location filename="ecotourism.py" line="147"/>
         <source>v_len</source>
         <comment>Vessel length DB field name</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="ecotourism.py" line="84"/>
+        <location filename="ecotourism.py" line="148"/>
         <source>v_motor</source>
         <comment>Vessel motor (horsepower) DB field name</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="ecotourism.py" line="85"/>
+        <location filename="ecotourism.py" line="149"/>
         <source>v_cap</source>
         <comment>Vessel capacity (kilograms) DB field name</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="ecotourism.py" line="86"/>
+        <location filename="ecotourism.py" line="150"/>
         <source>v_homep</source>
         <comment>Vessel homeport DB field name</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="ecotourism.py" line="88"/>
+        <location filename="ecotourism.py" line="152"/>
         <source>Employee Error</source>
         <comment>Error given when user fails to enter an employee type</comment>
         <translation>Error en tipo de empleado</translation>
     </message>
     <message>
-        <location filename="ecotourism.py" line="89"/>
+        <location filename="ecotourism.py" line="153"/>
         <source>Please Choose an Ecotourism Activity</source>
         <comment>Error given when user fails to enter an employee type</comment>
         <translation>Por favor seleccione una actividad de ecoturismo</translation>
@@ -518,19 +821,84 @@
     <message>
         <location filename="ecotourism.py" line="90"/>
         <source>Cancel ecotourism interview</source>
-        <translation>Cancelar entrevista ecoturismo</translation>
+        <translation type="obsolete">Cancelar entrevista ecoturismo</translation>
     </message>
     <message>
-        <location filename="ecotourism.py" line="87"/>
+        <location filename="ecotourism.py" line="151"/>
         <source>workers</source>
         <comment>Number that work for company DB field name</comment>
-        <translation type="unfinished"></translation>
+        <translation>empleados</translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="175"/>
+        <source>Next Focus</source>
+        <translation>Siguiente Enfoque</translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="176"/>
+        <source>Please begin drawing shapes for the following focus area: </source>
+        <translation>Por favor, empezar a dibujar figuras el área de enfoque siguientes:</translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="179"/>
+        <source>focus_v</source>
+        <comment>Type of ecotourism activity</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="154"/>
+        <source>Canceling ecotourism interview</source>
+        <translation>Cancelación la entrevista de ecoturismo</translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="155"/>
+        <source>Next Activity</source>
+        <translation>Siguiente Actividad</translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="156"/>
+        <source>Please begin drawing shapes for the following ecotourism activity: </source>
+        <translation>Por favor, empezar a dibujar figuras el área de ecoturismo siguientes:</translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="159"/>
+        <source>act_type</source>
+        <comment>Type of ecotourism activity</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="160"/>
+        <source>act_v</source>
+        <comment>Type of ecotourism activity</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="162"/>
+        <source>Ecotourism Error</source>
+        <comment>Error message given when user doesn&apos;t enter an other activity type</comment>
+        <translation>Error en ecoturismo</translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="163"/>
+        <source>You selected &apos;Other&apos; activity, you must enter the name of that activity</source>
+        <comment>Top title of error window when you dont enter a name for the other activity</comment>
+        <translation>Introduzca un nombre para la otra actividad</translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="164"/>
+        <source>Please select an ecotourism type</source>
+        <translation>Por favor seleccione un tipo de ecoturismo</translation>
+    </message>
+    <message>
+        <location filename="ecotourism.py" line="165"/>
+        <source>Finished with ecotourism interview</source>
+        <translation>Terminando entrevista ecoturismo</translation>
     </message>
 </context>
 <context>
     <name>Fishery</name>
     <message>
-        <location filename="fishery_ui.py" line="357"/>
+        <location filename="fishery_ui.py" line="752"/>
         <source>OpenOceanMap - Interview</source>
         <translation>InicioMapaOcéanoAbierto - Entrevista</translation>
     </message>
@@ -542,150 +910,290 @@
     <message>
         <location filename="fishery_ui.py" line="362"/>
         <source>Vessel motor (horsepower):</source>
-        <translation>Tipo de motor de la embarcación (caballos, hp):</translation>
+        <translation type="obsolete">Tipo de motor de la embarcación (caballos, hp):</translation>
     </message>
     <message>
         <location filename="fishery_ui.py" line="363"/>
         <source>Haul Capacity (kilograms):</source>
-        <translation>Capacidad de la embarcación (kg):</translation>
+        <translation type="obsolete">Capacidad de la embarcación (kg):</translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="364"/>
+        <location filename="fishery_ui.py" line="764"/>
         <source>Home Port:</source>
         <translation>Puerto de origen:</translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="365"/>
+        <location filename="fishery_ui.py" line="765"/>
         <source>Landing Port 1:</source>
         <translation>Puerto de desembarque 1:</translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="366"/>
+        <location filename="fishery_ui.py" line="766"/>
         <source>Landing Port 2:</source>
         <translation>Puerto de desembarque 2:</translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="367"/>
+        <location filename="fishery_ui.py" line="767"/>
         <source>Landing Port 3:</source>
         <translation>Puerto de desembarque 3:</translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="368"/>
+        <location filename="fishery_ui.py" line="768"/>
         <source>Landing Port 4:</source>
         <translation>Puerto de desembarque 4:</translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="358"/>
+        <location filename="fishery_ui.py" line="753"/>
         <source>Fishery Sector</source>
         <translation>Sector Pesquero</translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="359"/>
+        <location filename="fishery_ui.py" line="754"/>
         <source>Dynamic Fishery Sector Name</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="360"/>
+        <location filename="fishery_ui.py" line="755"/>
         <source>Fisher Information</source>
         <translation>Información del pescador</translation>
     </message>
     <message>
         <location filename="fishery_ui.py" line="369"/>
         <source>Draw Shapes by Gear Type</source>
-        <translation>Dibujar figuras para cada tipo de equipo</translation>
+        <translation type="obsolete">Dibujar figuras para cada tipo de equipo</translation>
     </message>
     <message>
-        <location filename="fishery_ui.py" line="361"/>
+        <location filename="fishery_ui.py" line="761"/>
         <source>Vessel length (meters):</source>
         <translation>Longitud de la embarcación (metros) :</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="756"/>
+        <source>Type of Employee:</source>
+        <translation>Tipo de empleado:</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="757"/>
+        <source>Captain of Boat</source>
+        <translation>Capitán de embarcación</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="758"/>
+        <source>Guide</source>
+        <translation>Guía</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="759"/>
+        <source>Boat owner</source>
+        <translation>Dueño de embarcación</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="760"/>
+        <source>Other</source>
+        <translation>Otro</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="762"/>
+        <source>Vessel motor (hp):</source>
+        <translation>Motor de la embarcación (hp):</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="763"/>
+        <source>Haul Capacity (kg):</source>
+        <translation>Capacidad de la embarcación (kg):</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="769"/>
+        <source>Targeted Resource Groups:</source>
+        <translation>Grupos de recursos orientados</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="770"/>
+        <source>What percent interest do you have in each resource group? (Must add up to 100)</source>
+        <translation>Qué porcentaje de tu ingreso/interés/participación tienes en cada grupos de recurso? (deben sumar el 100)</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="771"/>
+        <source>Coastal Reef Fish:</source>
+        <translation>Escama cerca de los arrecifes costeros:</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="801"/>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="773"/>
+        <source>Deep Reef Fish:</source>
+        <translation>Escama en los bajos</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="775"/>
+        <source>Migratory Fish</source>
+        <translation>Peces migratorios (jurel, atún, etc)</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="777"/>
+        <source>Sea Cucumber</source>
+        <translation>Pepino de mar</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="779"/>
+        <source>Chocolate Clam</source>
+        <translation>Almeja chocolata</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="781"/>
+        <source>Squid</source>
+        <translation>Calamar</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="783"/>
+        <source>Sharks and Skates</source>
+        <translation>Tiburones y rayas</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="785"/>
+        <source>Octopus</source>
+        <translation>Pulpo</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="787"/>
+        <source>Bait</source>
+        <translation>Carnada viva</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="789"/>
+        <source>Other Resource Group #1:</source>
+        <translation>Otro grupo de recurso #1:</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="799"/>
+        <source>Name:</source>
+        <translation>Nombre:</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="800"/>
+        <source>% interest:</source>
+        <translation>% interés:</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="792"/>
+        <source>Other Resource Group #2:</source>
+        <translation>Otro grupo de recurso #2:</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="795"/>
+        <source>Other Resource Group #3:</source>
+        <translation>Otro grupo de recurso #3:</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="798"/>
+        <source>Other Resource Group #4:</source>
+        <translation>Otro grupo de recurso #4:</translation>
+    </message>
+    <message>
+        <location filename="fishery_ui.py" line="802"/>
+        <source>Next</source>
+        <translation>Siguiente</translation>
     </message>
 </context>
 <context>
     <name>FisheryGui</name>
     <message>
-        <location filename="fishery.py" line="110"/>
+        <location filename="fishery.py" line="145"/>
         <source>Commercial Fishery</source>
         <translation>Pesca Comercial</translation>
     </message>
     <message>
         <location filename="fishery.py" line="111"/>
         <source>Sport Fishery</source>
-        <translation>Pesca Deportiva</translation>
+        <translation type="obsolete">Pesca Deportiva</translation>
     </message>
     <message>
         <location filename="fishery.py" line="112"/>
         <source>Private Fishery</source>
-        <translation>Pesca Privada</translation>
+        <translation type="obsolete">Pesca Privada</translation>
     </message>
     <message>
-        <location filename="fishery.py" line="113"/>
+        <location filename="fishery.py" line="148"/>
         <source>Going back to first interview step...</source>
         <comment>landing port 4</comment>
         <translation>Regresando al primer paso de la entrevista...</translation>
     </message>
     <message>
-        <location filename="fishery.py" line="115"/>
+        <location filename="fishery.py" line="151"/>
         <source>v_len</source>
         <comment>vessel length attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="116"/>
+        <location filename="fishery.py" line="152"/>
         <source>v_motor</source>
         <comment>vessel motor horsepower attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="117"/>
+        <location filename="fishery.py" line="153"/>
         <source>haul_cap</source>
         <comment>vessel haul capacity in kilograms attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="118"/>
+        <location filename="fishery.py" line="154"/>
         <source>v_homep</source>
         <comment>vessel homeport attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="119"/>
+        <location filename="fishery.py" line="155"/>
         <source>landp_1</source>
         <comment>landing port 1 attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="120"/>
+        <location filename="fishery.py" line="156"/>
         <source>landp_2</source>
         <comment>landing port 2 attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="121"/>
+        <location filename="fishery.py" line="157"/>
         <source>landp_3</source>
         <comment>landing port 3 attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="fishery.py" line="122"/>
+        <location filename="fishery.py" line="158"/>
         <source>landp_4</source>
         <comment>landing port 4 attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="146"/>
+        <source>Commercial Sport Fishery</source>
+        <translation>Pesca Deportiva Comercial</translation>
+    </message>
+    <message>
+        <location filename="fishery.py" line="147"/>
+        <source>Private Sport Fishery</source>
+        <translation>Pesca Deportiva Privada</translation>
     </message>
 </context>
 <context>
     <name>Interview</name>
     <message>
-        <location filename="interview.py" line="451"/>
+        <location filename="interview.py" line="551"/>
         <source>Save Text as</source>
         <translation>Guardar Texto</translation>
     </message>
     <message>
-        <location filename="interview.py" line="452"/>
+        <location filename="interview.py" line="552"/>
         <source>Overwriting existing text file is not supported: </source>
         <translation>No sobreescribir el apoyo:</translation>
     </message>
     <message>
-        <location filename="interview.py" line="454"/>
+        <location filename="interview.py" line="554"/>
         <source>Save Shapes as</source>
         <translation>Guardar las formas como</translation>
     </message>
@@ -695,345 +1203,352 @@
         <translation type="obsolete">No sobreescribir el shapefile:</translation>
     </message>
     <message>
-        <location filename="interview.py" line="434"/>
+        <location filename="interview.py" line="534"/>
         <source>Starting commercial fishery interview</source>
         <translation>Empezando entrevista de pesca comercial</translation>
     </message>
     <message>
-        <location filename="interview.py" line="435"/>
+        <location filename="interview.py" line="535"/>
         <source>Commercial Fishery</source>
         <translation>Pesca Comercial</translation>
     </message>
     <message>
-        <location filename="interview.py" line="436"/>
+        <location filename="interview.py" line="536"/>
         <source>Starting commercial sport fishery interview</source>
         <translation>Empezando entrevista de pesca deportiva</translation>
     </message>
     <message>
         <location filename="interview.py" line="437"/>
         <source>Sport Fishery</source>
-        <translation>Pesca Deportiva</translation>
+        <translation type="obsolete">Pesca Deportiva</translation>
     </message>
     <message>
-        <location filename="interview.py" line="438"/>
+        <location filename="interview.py" line="538"/>
         <source>Starting private sport fishery interview</source>
         <translation>Empezando entrevista de pesca deportiva privado</translation>
     </message>
     <message>
         <location filename="interview.py" line="439"/>
         <source>Private Fishery</source>
-        <translation>Pesca Privada</translation>
+        <translation type="obsolete">Pesca Privada</translation>
     </message>
     <message>
-        <location filename="interview.py" line="440"/>
+        <location filename="interview.py" line="540"/>
         <source>Starting ecotourism interview</source>
         <translation>Inicio entrevista ecoturismo</translation>
     </message>
     <message>
-        <location filename="interview.py" line="441"/>
+        <location filename="interview.py" line="541"/>
         <source>Ecotourism</source>
         <translation>Ecoturismo</translation>
     </message>
     <message>
-        <location filename="interview.py" line="442"/>
+        <location filename="interview.py" line="542"/>
         <source>Starting conservation/scientist interview</source>
         <translation>Inicio entrevista conservación/científico </translation>
     </message>
     <message>
-        <location filename="interview.py" line="443"/>
+        <location filename="interview.py" line="543"/>
         <source>Conservationist Scientist</source>
         <translation>Conservacionista Cientifico</translation>
     </message>
     <message>
-        <location filename="interview.py" line="444"/>
+        <location filename="interview.py" line="544"/>
         <source>Starting other interview</source>
         <translation>Inicio otra entrevista</translation>
     </message>
     <message>
-        <location filename="interview.py" line="445"/>
+        <location filename="interview.py" line="545"/>
         <source>Other</source>
         <translation>Otra</translation>
     </message>
     <message>
-        <location filename="interview.py" line="446"/>
+        <location filename="interview.py" line="546"/>
         <source>Income</source>
         <translation>Ingresos</translation>
     </message>
     <message>
-        <location filename="interview.py" line="447"/>
+        <location filename="interview.py" line="547"/>
         <source>Success</source>
         <translation>Éxito</translation>
     </message>
     <message>
-        <location filename="interview.py" line="448"/>
+        <location filename="interview.py" line="548"/>
         <source>Interview Completed</source>
         <translation>Entrevista terminada</translation>
     </message>
     <message>
-        <location filename="interview.py" line="449"/>
+        <location filename="interview.py" line="549"/>
         <source>Interview Finished</source>
         <translation>Entrevista terminada</translation>
     </message>
     <message>
-        <location filename="interview.py" line="450"/>
+        <location filename="interview.py" line="550"/>
         <source>No info, returning to previous choices</source>
         <translation>No se dispone de información, volviendo a las anteriores elecciones</translation>
     </message>
     <message>
-        <location filename="interview.py" line="455"/>
+        <location filename="interview.py" line="555"/>
         <source>Writing text file</source>
         <translation>Escribiendo archivo de texto</translation>
     </message>
     <message>
-        <location filename="interview.py" line="456"/>
+        <location filename="interview.py" line="556"/>
         <source>Writing shapefile</source>
         <translation>Escribiendo shapefile</translation>
     </message>
     <message>
-        <location filename="interview.py" line="457"/>
+        <location filename="interview.py" line="557"/>
         <source>No shapes drawn</source>
         <translation>No se dibujaron figuras</translation>
     </message>
     <message>
-        <location filename="interview.py" line="458"/>
+        <location filename="interview.py" line="558"/>
         <source>Wrote shapefile</source>
         <translation>Escribió shapefile</translation>
     </message>
     <message>
-        <location filename="interview.py" line="459"/>
+        <location filename="interview.py" line="559"/>
         <source>Error reading file, did it save correctly?  If not, do you have write permission in the save directory you chose?</source>
         <translation>Error al leer archivo. ¿Se guardó correctamente? Si no, ¿tiene permiso de escribir en el directorio de guardar que escogió?</translation>
     </message>
     <message>
-        <location filename="interview.py" line="460"/>
+        <location filename="interview.py" line="560"/>
         <source>Canceling interview</source>
         <translation>Cancelando entrevista</translation>
     </message>
     <message>
-        <location filename="interview.py" line="461"/>
+        <location filename="interview.py" line="561"/>
         <source>Leaving this step</source>
         <translation>Saliendo de este paso</translation>
     </message>
     <message>
-        <location filename="interview.py" line="465"/>
+        <location filename="interview.py" line="564"/>
         <source>pennies</source>
         <comment>fishing ground penny value attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation>pesos</translation>
     </message>
     <message>
-        <location filename="interview.py" line="466"/>
-        <source>species</source>
-        <comment>fish species name attribute</comment>
-        <translation type="unfinished"></translation>
+        <location filename="interview.py" line="537"/>
+        <source>Commercial Sport Fishery</source>
+        <translation>Pesca Deportiva Comercial</translation>
     </message>
     <message>
-        <location filename="interview.py" line="463"/>
-        <source>gear_type</source>
-        <comment>fisherman income field attribute</comment>
-        <translation type="unfinished"></translation>
+        <location filename="interview.py" line="539"/>
+        <source>Private Sport Fishery</source>
+        <translation>Pesca Deportiva Privada</translation>
     </message>
     <message>
-        <location filename="interview.py" line="464"/>
-        <source>grp_income</source>
+        <location filename="interview.py" line="563"/>
+        <source>ug_inc</source>
         <comment>Percent income value</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="interview.py" line="467"/>
-        <source>gear_incom</source>
-        <comment>Attribute for income from gear type</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="interview.py" line="469"/>
-        <source>user_grp</source>
+        <location filename="interview.py" line="566"/>
+        <source>ug</source>
         <comment>User group for current shape</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>InterviewStart</name>
     <message>
-        <location filename="interviewstart_ui.py" line="568"/>
+        <location filename="interviewstart_ui.py" line="477"/>
         <source>OpenOceanMap - Interview</source>
         <translation>MapaOcéanoAbierto - Entrevista</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="569"/>
+        <location filename="interviewstart_ui.py" line="478"/>
         <source>Interviewee</source>
         <translation>Entrevistado</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="575"/>
+        <location filename="interviewstart_ui.py" line="484"/>
         <source>Male</source>
         <translation>Masculino</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="576"/>
+        <location filename="interviewstart_ui.py" line="485"/>
         <source>Female</source>
         <translation>Femenino</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="578"/>
+        <location filename="interviewstart_ui.py" line="488"/>
         <source>Interviewer</source>
         <translation>Entrevistador</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="580"/>
+        <location filename="interviewstart_ui.py" line="490"/>
         <source>First Name:</source>
         <translation>Nombre:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="581"/>
+        <location filename="interviewstart_ui.py" line="491"/>
         <source>Last Name:</source>
         <translation>Apellido:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="572"/>
+        <location filename="interviewstart_ui.py" line="481"/>
         <source>Age:</source>
         <translation>Edad:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="574"/>
+        <location filename="interviewstart_ui.py" line="483"/>
         <source>Gender:</source>
         <translation>Género:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="573"/>
+        <location filename="interviewstart_ui.py" line="482"/>
         <source>City of residence:</source>
         <translation>Ciudad de residencia:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="579"/>
+        <location filename="interviewstart_ui.py" line="489"/>
         <source>Interview Date (mm/dd/yyyy):</source>
         <translation>Fecha entrevista (mes/día/año):</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="583"/>
+        <location filename="interviewstart_ui.py" line="493"/>
         <source>Commercial Fishing:</source>
         <translation>Pesca Comercial:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="594"/>
+        <location filename="interviewstart_ui.py" line="504"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="585"/>
+        <location filename="interviewstart_ui.py" line="495"/>
         <source>Commercial Sport Fishing:</source>
         <translation>Pesca Deportiva Comercial:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="587"/>
+        <location filename="interviewstart_ui.py" line="497"/>
         <source>Private Sport Fishing:</source>
         <translation>Pesca Deportiva Privada:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="589"/>
+        <location filename="interviewstart_ui.py" line="499"/>
         <source>Ecotourism:</source>
         <translation>Ecoturismo:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="591"/>
+        <location filename="interviewstart_ui.py" line="501"/>
         <source>Conservation/Scientific Research:</source>
         <translation>Investigación científica/conservación:</translation>
     </message>
     <message>
         <location filename="interviewstart_ui.py" line="577"/>
         <source>Years working here:</source>
-        <translation>Años trabajando en la zona:</translation>
+        <translation type="obsolete">Años trabajando en la zona:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="593"/>
+        <location filename="interviewstart_ui.py" line="503"/>
         <source>Other Income:</source>
         <translation>Otros ingresos:</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="596"/>
+        <location filename="interviewstart_ui.py" line="506"/>
         <source>Quit</source>
         <translation>Abandonar</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="597"/>
+        <location filename="interviewstart_ui.py" line="507"/>
         <source>Next</source>
         <translation>Siguiente</translation>
     </message>
     <message>
         <location filename="interviewstart_ui.py" line="582"/>
         <source>What percentage of income/interest/stake do you have from the following?</source>
-        <translation>Qué porcentaje de tu ingreso/interés/participación tienes en lo siguiente?</translation>
+        <translation type="obsolete">Qué porcentaje de tu ingreso/interés/participación tienes en lo siguiente?</translation>
     </message>
     <message>
-        <location filename="interviewstart_ui.py" line="595"/>
+        <location filename="interviewstart_ui.py" line="505"/>
         <source>* These must add up to 100, enter 0 if not applicable</source>
         <translation>* Estos deben sumar a 100, si no entonces 0</translation>
+    </message>
+    <message>
+        <location filename="interviewstart_ui.py" line="486"/>
+        <source>Years working or visiting the area:</source>
+        <translation>Años trabajando en la zona:</translation>
+    </message>
+    <message>
+        <location filename="interviewstart_ui.py" line="487"/>
+        <source>Company/Organization/Group:</source>
+        <translation>Compañía/Organización/Groupo:</translation>
+    </message>
+    <message>
+        <location filename="interviewstart_ui.py" line="492"/>
+        <source>What percentage of income/interest/stake do you have in the following?</source>
+        <translation>¿Qué porcentaje de tu ingreso/interés/participación tienes en lo siguiente?</translation>
     </message>
 </context>
 <context>
     <name>InterviewStartGui</name>
     <message>
-        <location filename="interviewstart.py" line="135"/>
+        <location filename="interviewstart.py" line="136"/>
         <source>f_name</source>
         <comment>Interviewee first name attribute</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="interviewstart.py" line="136"/>
-        <source>l_name</source>
-        <comment>Interviewee last name attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="137"/>
-        <source>age</source>
-        <comment>Age attribute</comment>
-        <translation type="unfinished"></translation>
+        <source>l_name</source>
+        <comment>Interviewee last name attribute</comment>
+        <translation></translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="138"/>
-        <source>gender</source>
-        <comment>Gender attribute</comment>
-        <translation type="unfinished"></translation>
+        <source>age</source>
+        <comment>Age attribute</comment>
+        <translation></translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="139"/>
-        <source>city</source>
-        <comment>City attribute</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="interviewstart.py" line="140"/>
-        <source>date</source>
-        <comment>Date of interview attribute</comment>
-        <translation type="unfinished"></translation>
+        <source>gender</source>
+        <comment>Gender attribute</comment>
+        <translation></translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="141"/>
-        <source>i_f_name</source>
-        <comment>Interviewer first name attribute</comment>
-        <translation type="unfinished"></translation>
+        <source>city</source>
+        <comment>City attribute</comment>
+        <translation></translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="142"/>
-        <source>i_l_name</source>
-        <comment>Interview last name attribute</comment>
-        <translation type="unfinished"></translation>
+        <source>date</source>
+        <comment>Date of interview attribute</comment>
+        <translation></translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="143"/>
-        <source>years</source>
-        <comment>Number of years fishing attribute</comment>
-        <translation type="unfinished"></translation>
+        <source>i_f_name</source>
+        <comment>Interviewer first name attribute</comment>
+        <translation></translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="144"/>
+        <source>i_l_name</source>
+        <comment>Interview last name attribute</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="145"/>
+        <source>years</source>
+        <comment>Number of years fishing attribute</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="146"/>
         <source>Income Error</source>
         <translation>Error en ingresos</translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="145"/>
         <source>Income value must be a number (no decimals)</source>
-        <translation>El valor de ingreso debe ser un número (no decimales)</translation>
+        <translation type="obsolete">El valor de ingreso debe ser un número (no decimales)</translation>
     </message>
     <message>
         <location filename="interviewstart.py" line="161"/>
@@ -1042,132 +1557,143 @@
         <translation type="obsolete">Todos los valores de ingreso tienen un total de</translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="147"/>
+        <location filename="interviewstart.py" line="149"/>
         <source>. Please change them.</source>
         <comment>Second part of text telling the user their incomes don&apos;t add up to 100 so they need to change the values such that they do add up to 100</comment>
         <translation>. Por favor cambie.</translation>
     </message>
     <message>
-        <location filename="interview.py" line="431"/>
+        <location filename="interview.py" line="531"/>
         <source>firstname</source>
         <comment>Interviewee first name attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="interview.py" line="432"/>
+        <location filename="interview.py" line="532"/>
         <source>lastname</source>
         <comment>Interviewee last name attribute</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="interviewstart.py" line="146"/>
+        <location filename="interviewstart.py" line="148"/>
         <source>All Values currently total </source>
         <comment>First part of text that tells the user the total for all income percentages they entered</comment>
         <translation>Actualmente, todos los valores totales </translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="140"/>
+        <source>orgnz</source>
+        <comment>Organization attribute</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="interviewstart.py" line="147"/>
+        <source>Income value must be a number (no decimals or blanks)</source>
+        <translation>Valor debe ser un número (no decimales o espacios)</translation>
     </message>
 </context>
 <context>
     <name>LanguageDialog</name>
     <message>
-        <location filename="language_dialog_ui.py" line="39"/>
+        <location filename="language_dialog_ui.py" line="34"/>
         <source>Language</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="language_dialog_ui.py" line="40"/>
+        <location filename="language_dialog_ui.py" line="35"/>
         <source>Select a Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar un idioma:</translation>
     </message>
     <message>
-        <location filename="language_dialog_ui.py" line="41"/>
+        <location filename="language_dialog_ui.py" line="36"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Inglés</translation>
     </message>
     <message>
-        <location filename="language_dialog_ui.py" line="42"/>
+        <location filename="language_dialog_ui.py" line="37"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Español</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow_ui.py" line="145"/>
+        <location filename="mainwindow_ui.py" line="140"/>
         <source>OpenOceanMap</source>
         <translation>MapaOcéanoAbierto</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="149"/>
+        <location filename="mainwindow_ui.py" line="143"/>
         <source>Map</source>
         <translation>Mapa</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="153"/>
+        <location filename="mainwindow_ui.py" line="147"/>
         <source>Add Raster Layer</source>
         <translation>Añadir capa de ráster</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="160"/>
+        <location filename="mainwindow_ui.py" line="154"/>
         <source>Add Vector Layer</source>
         <translation>Añadir capa de vector</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="148"/>
+        <location filename="mainwindow_ui.py" line="142"/>
         <source>Interview</source>
         <translation>Entrevista</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="150"/>
+        <location filename="mainwindow_ui.py" line="144"/>
         <source>Utilities</source>
         <translation>Herramientas</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="151"/>
+        <location filename="mainwindow_ui.py" line="145"/>
         <source>Zoom Out</source>
         <translation>Alejarse</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="152"/>
+        <location filename="mainwindow_ui.py" line="146"/>
         <source>Pan</source>
         <translation>Desplezar mapa</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="154"/>
+        <location filename="mainwindow_ui.py" line="148"/>
         <source>Start Interview</source>
         <translation>Empezar entrevista</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="157"/>
+        <location filename="mainwindow_ui.py" line="151"/>
         <source>Region Tool</source>
         <translation>Herramienta región</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="159"/>
+        <location filename="mainwindow_ui.py" line="153"/>
         <source>Zoom In</source>
         <translation>Acercarse</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="161"/>
+        <location filename="mainwindow_ui.py" line="155"/>
         <source>Python Console</source>
         <translation>Consola Python</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="146"/>
+        <location filename="mainwindow_ui.py" line="141"/>
         <source>Legend</source>
         <translation>Leyenda</translation>
     </message>
     <message>
         <location filename="mainwindow_ui.py" line="147"/>
         <source>Debug</source>
-        <translation>Depurar</translation>
+        <translation type="obsolete">Depurar</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="158"/>
+        <location filename="mainwindow_ui.py" line="152"/>
         <source>Polygon Tool</source>
         <translation>Herramienta polígono</translation>
     </message>
     <message>
-        <location filename="mainwindow_ui.py" line="156"/>
+        <location filename="mainwindow_ui.py" line="150"/>
         <source>Inicio Entrevista</source>
         <translation>Inicio entrevista</translation>
     </message>
@@ -1262,30 +1788,35 @@
         <translation type="obsolete">Inicio</translation>
     </message>
     <message>
-        <location filename="other_ui.py" line="65"/>
+        <location filename="other_ui.py" line="53"/>
         <source>OpenOceanMap - Define Other Income</source>
         <translation>MapaOcéanoAbierto - Se define otro ingreso</translation>
     </message>
     <message>
-        <location filename="other_ui.py" line="66"/>
+        <location filename="other_ui.py" line="54"/>
         <source>Describe Other Income:</source>
         <translation>Describa otros ingresos:</translation>
     </message>
     <message>
-        <location filename="other_ui.py" line="68"/>
+        <location filename="other_ui.py" line="56"/>
         <source>Save  to file</source>
         <translation>Guardar en el archivo</translation>
     </message>
     <message>
         <location filename="other_ui.py" line="67"/>
         <source>Finish</source>
-        <translation>Terminar</translation>
+        <translation type="obsolete">Terminar</translation>
+    </message>
+    <message>
+        <location filename="other_ui.py" line="55"/>
+        <source>Exit Other Step</source>
+        <translation>Salir otra medida</translation>
     </message>
 </context>
 <context>
     <name>Other Income Saved</name>
     <message>
-        <location filename="interview.py" line="453"/>
+        <location filename="interview.py" line="553"/>
         <source>Other income info successfully saved to: </source>
         <translation>Información de otros ingresos guardada exitosamente en:</translation>
     </message>
@@ -1297,6 +1828,12 @@
         <source>Canceling other interview</source>
         <comment>Status message shown when user cancels out of the &apos;other&apos; portion of the interview</comment>
         <translation>Cancelando otra entrevista</translation>
+    </message>
+    <message>
+        <location filename="other.py" line="74"/>
+        <source>Finishing Other income interview</source>
+        <comment>Status message for finishing &apos;other&apos; portion of interview</comment>
+        <translation>acabado otros ingresos entrevista</translation>
     </message>
 </context>
 <context>
@@ -1315,6 +1852,197 @@
         <location filename="pythoninterp_ui.py" line="38"/>
         <source>Close</source>
         <translation>Cerrar</translation>
+    </message>
+</context>
+<context>
+    <name>ResGroup</name>
+    <message>
+        <location filename="resgroup_ui.py" line="187"/>
+        <source>OpenOceanMap - Resource Group Information</source>
+        <translation>MapaOcéanoAbierto - Grupo de recurso informacion</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="188"/>
+        <source>Current Fishery Sector: </source>
+        <translation>Actual del Sector Pesquero:</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="189"/>
+        <source>Fishery Sector Here</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="190"/>
+        <source>Current Resource Group:</source>
+        <translation>Actual Grupos de Recursos:</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="191"/>
+        <source>Resource Group Here</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="192"/>
+        <source>Main species harvested (comma-separated):</source>
+        <translation>Principales especies (separados por comas):</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="197"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="198"/>
+        <source>Type of gear used:</source>
+        <translation>Tipo de arte utilizado:</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="199"/>
+        <source>Hook and Line</source>
+        <translation>Linea y anzuelo</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="200"/>
+        <source>Gillnet</source>
+        <translation>Redes</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="201"/>
+        <source>Traps</source>
+        <translation>Trampas</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="202"/>
+        <source>Trawling</source>
+        <translation>Red de arrastre</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="203"/>
+        <source>Purse Seine</source>
+        <translation>Red de encierro</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="204"/>
+        <source>Hooka (compressor)</source>
+        <translation>Hooka (compresor)</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="205"/>
+        <source>Other Gear #1:</source>
+        <translation>Otro artes #1:</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="206"/>
+        <source>Other Gear #2:</source>
+        <translation>Otro artes #2:</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="207"/>
+        <source>Other Gear #3:</source>
+        <translation>Otro artes #3:</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="208"/>
+        <source>Other Gear #4:</source>
+        <translation>Otro artes #4:</translation>
+    </message>
+    <message>
+        <location filename="resgroup_ui.py" line="209"/>
+        <source>Start Drawing Shapes</source>
+        <translation>Empezar a dibujar figuras</translation>
+    </message>
+</context>
+<context>
+    <name>ResGroupGui</name>
+    <message>
+        <location filename="resgroup.py" line="125"/>
+        <source>main_sp</source>
+        <comment>Main species field name</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="126"/>
+        <source>resgrp</source>
+        <comment>Attribute for resource group</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="127"/>
+        <source>resgrp_v</source>
+        <comment>Attribute for resource group income</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="128"/>
+        <source>gear</source>
+        <comment>Attribute for gear type</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="129"/>
+        <source>Gear Type Error</source>
+        <comment>Displayed when user forgot to select a gear type</comment>
+        <translation>Error en el tipo de equipo</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="130"/>
+        <source>Please select a gear type</source>
+        <comment>Displayed when user forgot to select a gear type</comment>
+        <translation>Por favor seleccione un tipo de equipo</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="131"/>
+        <source>Exit </source>
+        <comment>Partial text used to build a larger message, for example &apos;Exit Sport Fishery Step&apos;</comment>
+        <translation>Salir </translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="132"/>
+        <source> Step</source>
+        <comment>Partial text used to build a larger message, for example &apos;Exit Sport Fishery Step&apos;</comment>
+        <translation> Paso</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="133"/>
+        <source>Percent Error</source>
+        <comment>Displayed when there is an error with the percentage given for gear type</comment>
+        <translation>Error en el porcentaje</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="134"/>
+        <source>Missing percentage for gear type</source>
+        <translation>Falta porcentaje para tipo de equipo</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="135"/>
+        <source>Finished with</source>
+        <comment>Partial text used to build a larger message, for example &apos;finished with sport fishery interview step&apos;</comment>
+        <translation>Terminado con</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="136"/>
+        <source> interview step</source>
+        <comment>Partial text used to build a larger message, for example &apos;finished with sport fishery interview step&apos;</comment>
+        <translation> paso de entrevista</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="137"/>
+        <source>Commercial Fishery</source>
+        <translation>Pesca Comercial</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="138"/>
+        <source>Commercial Sport Fishery</source>
+        <translation>Pesca Deportiva Comercial</translation>
+    </message>
+    <message>
+        <location filename="resgroup.py" line="139"/>
+        <source>Private Sport Fishery</source>
+        <translation>Pesca Deportiva Privada</translation>
     </message>
 </context>
 <context>
@@ -1347,86 +2075,97 @@
     <message>
         <location filename="selectconsscience_ui.py" line="65"/>
         <source>Sea turtles</source>
-        <translation>Tortugas marinas</translation>
+        <translation type="obsolete">Tortugas marinas</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="66"/>
         <source>Sea lions</source>
-        <translation>Lobos marinos</translation>
+        <translation type="obsolete">Lobos marinos</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="67"/>
         <source>Dolphins or whales</source>
-        <translation>Delfines o ballenas</translation>
+        <translation type="obsolete">Delfines o ballenas</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="70"/>
         <source>Start Drawing Shapes</source>
-        <translation>Empezar a dibujar figuras</translation>
+        <translation type="obsolete">Empezar a dibujar figuras</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="58"/>
         <source>OpenOceanMap - Select Conservation / Science</source>
-        <translation>MapaOcéanoAbierto - Seleccionar conservación/científico</translation>
+        <translation type="obsolete">MapaOcéanoAbierto - Seleccionar conservación/científico</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="59"/>
         <source>Select focus:</source>
-        <translation>Seleccionar enfoque:</translation>
+        <translation type="obsolete">Seleccionar enfoque:</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="69"/>
         <source>Exit Cons / Scientist Step</source>
-        <translation>Salir paso conservacionista/cientifico</translation>
+        <translation type="obsolete">Salir paso conservacionista/cientifico</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="68"/>
         <source>Other</source>
-        <translation>Otro</translation>
+        <translation type="obsolete">Otro</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="60"/>
         <source>Coastal reef ecosystem - finfish and invertebrates</source>
-        <translation>Ecosistema de arrecife costero - peces y invertebrados</translation>
+        <translation type="obsolete">Ecosistema de arrecife costero - peces y invertebrados</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="61"/>
         <source>Deep Sea reefs and seamounts - finfish and invertebrates</source>
-        <translation>Ecosistema de arrecifes profundos y los bajos oceanicos - Peces y invertebrados</translation>
+        <translation type="obsolete">Ecosistema de arrecifes profundos y los bajos oceanicos - Peces y invertebrados</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="62"/>
         <source>Soft bottom - sand-mud-etc</source>
-        <translation>Fondos suaves - arena-lodo-etcetera</translation>
+        <translation type="obsolete">Fondos suaves - arena-lodo-etcetera</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="63"/>
         <source>Small pelagics - sardines-anchovy-etc</source>
-        <translation>Pelagicos menores - sardinas-anchovetas-etcetera</translation>
+        <translation type="obsolete">Pelagicos menores - sardinas-anchovetas-etcetera</translation>
     </message>
     <message>
         <location filename="selectconsscience_ui.py" line="64"/>
         <source>Migratory fish - tuna-swordfish-sailfish-yellowtail-etc</source>
-        <translation>Peces migratorios - Atun-picudos-jurel</translation>
+        <translation type="obsolete">Peces migratorios - Atun-picudos-jurel</translation>
     </message>
 </context>
 <context>
     <name>SelectConsScienceGui</name>
     <message>
-        <location filename="selectconsscience.py" line="86"/>
+        <location filename="old_select.py" line="95"/>
         <source>Cons/Science Error</source>
         <comment>Error when user fails to select type of conservationist/scientist</comment>
         <translation>Error en conservacionista/cientifico</translation>
     </message>
     <message>
-        <location filename="selectconsscience.py" line="87"/>
+        <location filename="old_select.py" line="96"/>
         <source>Please select a focus area</source>
         <translation>Por favor seleccione un área de enfoque</translation>
     </message>
     <message>
-        <location filename="selectconsscience.py" line="88"/>
+        <location filename="old_select.py" line="97"/>
         <source>Finishing Cons/Sci interview</source>
         <translation>Terminando entrevista conservacionista/cientifico</translation>
+    </message>
+    <message>
+        <location filename="old_select.py" line="94"/>
+        <source>focus</source>
+        <comment>Area of Focus for conservation/scientist</comment>
+        <translation>enfoque</translation>
+    </message>
+    <message>
+        <location filename="consscience.py" line="181"/>
+        <source>Please select a specialist area</source>
+        <translation>Seleccione un especialista área</translation>
     </message>
 </context>
 <context>
@@ -1434,53 +2173,53 @@
     <message>
         <location filename="selectecotourism_ui.py" line="56"/>
         <source>Select tourism activity type:</source>
-        <translation>Seleccionar tipo de actividad turística:</translation>
+        <translation type="obsolete">Seleccionar tipo de actividad turística:</translation>
     </message>
     <message>
         <location filename="selectecotourism_ui.py" line="57"/>
         <source>Diving</source>
-        <translation>Buceo</translation>
+        <translation type="obsolete">Buceo</translation>
     </message>
     <message>
         <location filename="selectecotourism_ui.py" line="58"/>
         <source>Snorkling</source>
-        <translation>Snorkelear</translation>
+        <translation type="obsolete">Snorkelear</translation>
     </message>
     <message>
         <location filename="selectecotourism_ui.py" line="59"/>
         <source>Kayaking</source>
-        <translation>Kayakeo</translation>
+        <translation type="obsolete">Kayakeo</translation>
     </message>
     <message>
         <location filename="selectecotourism_ui.py" line="60"/>
         <source>Whale Watching</source>
-        <translation>Observacion de megafauna marina</translation>
+        <translation type="obsolete">Observacion de megafauna marina</translation>
     </message>
     <message>
         <location filename="selectecotourism_ui.py" line="61"/>
         <source>Other</source>
-        <translation>Otro</translation>
+        <translation type="obsolete">Otro</translation>
     </message>
     <message>
         <location filename="selectecotourism_ui.py" line="63"/>
         <source>Start Drawing Shapes</source>
-        <translation>Empezar a dibujar figuras</translation>
+        <translation type="obsolete">Empezar a dibujar figuras</translation>
     </message>
     <message>
         <location filename="selectecotourism_ui.py" line="55"/>
         <source>OpenOceanMap - Select Ecotourism</source>
-        <translation>MapaOcéanoAbierto - Salir ecoturismo</translation>
+        <translation type="obsolete">MapaOcéanoAbierto - Salir ecoturismo</translation>
     </message>
     <message>
         <location filename="selectecotourism_ui.py" line="62"/>
         <source>Exit Ecotourism Step</source>
-        <translation>Salir paso ecoturismo</translation>
+        <translation type="obsolete">Salir paso ecoturismo</translation>
     </message>
 </context>
 <context>
     <name>SelectEcotourismGui</name>
     <message>
-        <location filename="selectecotourism.py" line="86"/>
+        <location filename="ecotourism.py" line="161"/>
         <source>Ecotourism Error</source>
         <comment>Error when user didn&apos;t select an ecotourism type </comment>
         <translation>Error en ecoturismo</translation>
@@ -1488,12 +2227,12 @@
     <message>
         <location filename="selectecotourism.py" line="87"/>
         <source>Please select an ecotourism type</source>
-        <translation>Por favor seleccione un tipo de ecoturismo</translation>
+        <translation type="obsolete">Por favor seleccione un tipo de ecoturismo</translation>
     </message>
     <message>
         <location filename="selectecotourism.py" line="88"/>
         <source>Finished with ecotourism interview</source>
-        <translation>Terminando entrevista ecoturismo</translation>
+        <translation type="obsolete">Terminando entrevista ecoturismo</translation>
     </message>
 </context>
 <context>
@@ -1501,68 +2240,68 @@
     <message>
         <location filename="selectgear_ui.py" line="104"/>
         <source>OpenOceanMap - Select Gear</source>
-        <translation>MapaOcéanoAbierto - Seleccionar equipo</translation>
+        <translation type="obsolete">MapaOcéanoAbierto - Seleccionar equipo</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="105"/>
         <source>Fishery Sector</source>
-        <translation>Sector pesquero</translation>
+        <translation type="obsolete">Sector pesquero</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="106"/>
         <source>Select Gear Type:</source>
-        <translation>Seleccionar tipo de equipo:</translation>
+        <translation type="obsolete">Seleccionar tipo de equipo:</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="107"/>
         <source>Hook and Line</source>
-        <translation>Linea y anzuelo</translation>
+        <translation type="obsolete">Linea y anzuelo</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="108"/>
         <source>Gillnets</source>
-        <translation>Redes</translation>
+        <translation type="obsolete">Redes</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="109"/>
         <source>Hooka (compressor)</source>
-        <translation>Hooka (compresor)</translation>
+        <translation type="obsolete">Hooka (compresor)</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="110"/>
         <source>Traps</source>
-        <translation>Trampas</translation>
+        <translation type="obsolete">Trampas</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="111"/>
         <source>Trawling</source>
-        <translation>Red de arrastre</translation>
+        <translation type="obsolete">Red de arrastre</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="112"/>
         <source>Purse Seine</source>
-        <translation>Red de encierro</translation>
+        <translation type="obsolete">Red de encierro</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="113"/>
         <source>Other</source>
-        <translation>Otro</translation>
+        <translation type="obsolete">Otro</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="117"/>
         <source>Start Drawing Shapes</source>
-        <translation>Empezar a dibujar figuras</translation>
+        <translation type="obsolete">Empezar a dibujar figuras</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="116"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="obsolete">0</translation>
     </message>
     <message>
         <location filename="selectgear_ui.py" line="115"/>
         <source>For what % of income/interest/stake (for 
  current fishery sector) do you use this gear type?</source>
-        <translation>¿Qué porcentaje de su ingreso proviene 
+        <translation type="obsolete">¿Qué porcentaje de su ingreso proviene 
 de este tipo de equipo?</translation>
     </message>
 </context>
@@ -1572,63 +2311,63 @@ de este tipo de equipo?</translation>
         <location filename="selectgear.py" line="104"/>
         <source>Gear Type Error</source>
         <comment>Displayed when user forgot to select a gear type</comment>
-        <translation>Error en el tipo de equipo</translation>
+        <translation type="obsolete">Error en el tipo de equipo</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="105"/>
         <source>Please select a gear type</source>
         <comment>Displayed when user forgot to select a gear type</comment>
-        <translation>Por favor seleccione un tipo de equipo</translation>
+        <translation type="obsolete">Por favor seleccione un tipo de equipo</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="106"/>
         <source>Exit </source>
         <comment>Partial text used to build a larger message, for example &apos;Exit Sport Fishery Step&apos;</comment>
-        <translation>Salir </translation>
+        <translation type="obsolete">Salir </translation>
     </message>
     <message>
         <location filename="selectgear.py" line="107"/>
         <source> Step</source>
         <comment>Partial text used to build a larger message, for example &apos;Exit Sport Fishery Step&apos;</comment>
-        <translation> Paso</translation>
+        <translation type="obsolete"> Paso</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="108"/>
         <source>Percent Error</source>
         <comment>Displayed when there is an error with the percentage given for gear type</comment>
-        <translation>Error en el porcentaje</translation>
+        <translation type="obsolete">Error en el porcentaje</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="109"/>
         <source>Missing percentage for gear type</source>
-        <translation>Falta porcentaje para tipo de equipo</translation>
+        <translation type="obsolete">Falta porcentaje para tipo de equipo</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="110"/>
         <source>Finished with</source>
         <comment>Partial text used to build a larger message, for example &apos;finished with sport fishery interview step&apos;</comment>
-        <translation>Terminado con</translation>
+        <translation type="obsolete">Terminado con</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="111"/>
         <source> interview step</source>
         <comment>Partial text used to build a larger message, for example &apos;finished with sport fishery interview step&apos;</comment>
-        <translation> paso de entrevista</translation>
+        <translation type="obsolete"> paso de entrevista</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="112"/>
         <source>Commercial Fishery</source>
-        <translation>Pesca Comercial</translation>
+        <translation type="obsolete">Pesca Comercial</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="113"/>
         <source>Sport Fishery</source>
-        <translation>Pesca Deportiva</translation>
+        <translation type="obsolete">Pesca Deportiva</translation>
     </message>
     <message>
         <location filename="selectgear.py" line="114"/>
         <source>Private Fishery</source>
-        <translation>Pesca Privada</translation>
+        <translation type="obsolete">Pesca Privada</translation>
     </message>
 </context>
 </TS>
