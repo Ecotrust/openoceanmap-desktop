@@ -67,7 +67,8 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
         if len(self.parent.activities) > 0:
             (activity,value) = self.parent.activities.pop()
             self.parent.shapeType = activity
-            self.parent.add_attrib(self.f_act_type_str, activity)            
+            self.parent.add_attrib(self.f_act_type_str, activity)
+            self.parent.add_attrib(self.f_act_inc_str, value)
             self.hide()        
             QMessageBox.warning(self, self.next_activity_str, self.draw_next_activity_str+activity)            
             
@@ -156,6 +157,7 @@ class EcotourismGui(QDialog, Ui_Ecotourism):
 
         
         self.f_act_type_str = QA.translate("EcotourismGui", "act_type", "Type of ecotourism activity", QA.UnicodeUTF8)
+        self.f_act_inc_str = QA.translate("EcotourismGui", "act_v", "Type of ecotourism activity", QA.UnicodeUTF8)
         self.tourism_error_str = QA.translate("SelectEcotourismGui", "Ecotourism Error", "Error when user didn't select an ecotourism type ", QA.UnicodeUTF8)        
         self.other_error_str = QA.translate("EcotourismGui", "Ecotourism Error", "Error message given when user doesn't enter an other activity type", QA.UnicodeUTF8)
         self.no_other_error_str = QA.translate("EcotourismGui", "You selected 'Other' activity, you must enter the name of that activity", "Top title of error window when you dont enter a name for the other activity", QA.UnicodeUTF8)        

@@ -143,8 +143,8 @@ class FisheryGui(QDialog, Ui_Fishery):
 
     def retranslate(self):
         self.comm_fish_str = QA.translate("FisheryGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
-        self.comm_sport_fish_str = QA.translate("FisheryGui", 'Sport Fishery', "", QA.UnicodeUTF8)
-        self.priv_fish_str = QA.translate("FisheryGui", 'Private Fishery', "", QA.UnicodeUTF8)
+        self.comm_sport_fish_str = QA.translate("FisheryGui", 'Commercial Sport Fishery', "", QA.UnicodeUTF8)
+        self.priv_fish_str = QA.translate("FisheryGui", 'Private Sport Fishery', "", QA.UnicodeUTF8)
         self.back_to_interview_str = QA.translate("FisheryGui", "Going back to first interview step...", "landing port 4", QA.UnicodeUTF8)
 
         self.f_emp_type_str = QA.translate("EcotourismGui", "emp_type", "Employee type DB field name", QA.UnicodeUTF8)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>621</width>
-    <height>446</height>
+    <width>619</width>
+    <height>428</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -201,7 +201,7 @@
                 <enum>Qt::PreventContextMenu</enum>
                </property>
                <property name="text" >
-                <string>79</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -282,7 +282,7 @@
                 </font>
                </property>
                <property name="text" >
-                <string>179</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -363,7 +363,7 @@
                 </font>
                </property>
                <property name="text" >
-                <string>4000</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -444,7 +444,7 @@
                 </font>
                </property>
                <property name="text" >
-                <string>hp1</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -464,7 +464,7 @@
                <property name="minimumSize" >
                 <size>
                  <width>150</width>
-                 <height>0</height>
+                 <height>40</height>
                 </size>
                </property>
                <property name="maximumSize" >
@@ -480,6 +480,9 @@
                </property>
                <property name="text" >
                 <string>How many people  work for the company?</string>
+               </property>
+               <property name="wordWrap" >
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -519,7 +522,7 @@
                 </font>
                </property>
                <property name="text" >
-                <string>3</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -772,7 +775,7 @@
                   </property>
                   <property name="maximumSize" >
                    <size>
-                    <width>80</width>
+                    <width>200</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -782,7 +785,7 @@
                    </font>
                   </property>
                   <property name="text" >
-                   <string>Marine Fauna Watching</string>
+                   <string>Marine Fauna Watching:</string>
                   </property>
                  </widget>
                 </item>

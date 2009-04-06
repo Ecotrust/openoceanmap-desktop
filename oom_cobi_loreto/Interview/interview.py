@@ -112,11 +112,12 @@ class Interview(object):
         'v_homep',
         'workers',
         'act_type',
-        'spe_type'
+        'act_v',
     ]
     
     self.consci_attribs = [
         'focus',
+        'focus_v',
         'add_info',
         'spc_type'
     ]
@@ -533,9 +534,9 @@ class Interview(object):
       self.start_comm_fish_str = QA.translate("Interview", 'Starting commercial fishery interview', "", QA.UnicodeUTF8)      
       self.comm_fish_str = QA.translate("Interview", 'Commercial Fishery', "", QA.UnicodeUTF8)
       self.start_comm_sport_fish_str = QA.translate("Interview", 'Starting commercial sport fishery interview', "", QA.UnicodeUTF8)
-      self.comm_sport_fish_str = QA.translate("Interview", 'Sport Fishery', "", QA.UnicodeUTF8)
+      self.comm_sport_fish_str = QA.translate("Interview", 'Commercial Sport Fishery', "", QA.UnicodeUTF8)
       self.start_priv_fish_str = QA.translate("Interview", 'Starting private sport fishery interview', "", QA.UnicodeUTF8)          
-      self.priv_fish_str = QA.translate("Interview", 'Private Fishery', "", QA.UnicodeUTF8)
+      self.priv_fish_str = QA.translate("Interview", 'Private Sport Fishery', "", QA.UnicodeUTF8)
       self.start_eco_str = QA.translate("Interview", "Starting ecotourism interview", "", QA.UnicodeUTF8)
       self.eco_str = QA.translate("Interview", 'Ecotourism', "", QA.UnicodeUTF8)
       self.start_consci_str = QA.translate("Interview", "Starting conservation/scientist interview", "", QA.UnicodeUTF8)

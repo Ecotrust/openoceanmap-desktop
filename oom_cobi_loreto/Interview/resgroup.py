@@ -135,5 +135,5 @@ class ResGroupGui(QDialog, Ui_ResGroup):
         self.finish_str = QA.translate("ResGroupGui", 'Finished with', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
         self.interview_step_str = QA.translate("ResGroupGui", ' interview step', "Partial text used to build a larger message, for example 'finished with sport fishery interview step'", QA.UnicodeUTF8)
         self.comm_fish_str = QA.translate("ResGroupGui", 'Commercial Fishery', "", QA.UnicodeUTF8)
-        self.sport_fish_str = QA.translate("ResGroupGui", 'Sport Fishery', "", QA.UnicodeUTF8)
-        self.priv_fish_str = QA.translate("ResGroupGui", 'Private Fishery', "", QA.UnicodeUTF8)                
+        self.sport_fish_str = QA.translate("ResGroupGui", 'Commercial Sport Fishery', "", QA.UnicodeUTF8)
+        self.priv_fish_str = QA.translate("ResGroupGui", 'Private Sport Fishery', "", QA.UnicodeUTF8)                

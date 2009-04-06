@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawconsscience.ui'
 #
-# Created: Mon Mar 30 16:28:07 2009
+# Created: Sat Apr 04 22:57:30 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_DrawConsScience(object):
     def setupUi(self, DrawConsScience):
         DrawConsScience.setObjectName("DrawConsScience")
-        DrawConsScience.resize(489, 142)
+        DrawConsScience.resize(572, 142)
         self.gridlayout = QtGui.QGridLayout(DrawConsScience)
         self.gridlayout.setMargin(9)
         self.gridlayout.setSpacing(6)
@@ -25,7 +25,7 @@ class Ui_DrawConsScience(object):
         self.type_label.setMinimumSize(QtCore.QSize(50, 0))
         self.type_label.setMaximumSize(QtCore.QSize(600, 16777215))
         font = QtGui.QFont()
-        font.setPointSize(13)
+        font.setPointSize(12)
         self.type_label.setFont(font)
         self.type_label.setAlignment(QtCore.Qt.AlignCenter)
         self.type_label.setObjectName("type_label")

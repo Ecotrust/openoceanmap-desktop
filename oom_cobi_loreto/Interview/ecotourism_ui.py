@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ecotourism.ui'
 #
-# Created: Tue Mar 31 15:43:27 2009
+# Created: Sat Apr 04 22:21:33 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_Ecotourism(object):
     def setupUi(self, Ecotourism):
         Ecotourism.setObjectName("Ecotourism")
-        Ecotourism.resize(621, 446)
+        Ecotourism.resize(619, 428)
         self.verticalLayout_6 = QtGui.QVBoxLayout(Ecotourism)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.horizontalLayout_7 = QtGui.QHBoxLayout()
@@ -182,11 +182,12 @@ class Ui_Ecotourism(object):
         self.horizontalLayout = QtGui.QHBoxLayout(self.home_port_4)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.workers_text = QtGui.QLabel(self.home_port_4)
-        self.workers_text.setMinimumSize(QtCore.QSize(150, 0))
+        self.workers_text.setMinimumSize(QtCore.QSize(150, 40))
         self.workers_text.setMaximumSize(QtCore.QSize(350, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.workers_text.setFont(font)
+        self.workers_text.setWordWrap(True)
         self.workers_text.setObjectName("workers_text")
         self.horizontalLayout.addWidget(self.workers_text)
         spacerItem5 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
@@ -292,7 +293,7 @@ class Ui_Ecotourism(object):
         self._17.setObjectName("_17")
         self.label_15 = QtGui.QLabel(self.groupBox)
         self.label_15.setMinimumSize(QtCore.QSize(140, 0))
-        self.label_15.setMaximumSize(QtCore.QSize(80, 16777215))
+        self.label_15.setMaximumSize(QtCore.QSize(200, 16777215))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_15.setFont(font)
@@ -448,15 +449,10 @@ class Ui_Ecotourism(object):
         self.comboEmpType.setItemText(3, QtGui.QApplication.translate("Ecotourism", "Boat Owner", None, QtGui.QApplication.UnicodeUTF8))
         self.comboEmpType.setItemText(4, QtGui.QApplication.translate("Ecotourism", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_length_text.setText(QtGui.QApplication.translate("Ecotourism", "Vessel length (meters) :", None, QtGui.QApplication.UnicodeUTF8))
-        self.vessel_length_line.setText(QtGui.QApplication.translate("Ecotourism", "79", None, QtGui.QApplication.UnicodeUTF8))
         self.vessel_motor_text.setText(QtGui.QApplication.translate("Ecotourism", "Vessel motor (hp):", None, QtGui.QApplication.UnicodeUTF8))
-        self.vessel_motor_line.setText(QtGui.QApplication.translate("Ecotourism", "179", None, QtGui.QApplication.UnicodeUTF8))
         self.haul_capacity_text.setText(QtGui.QApplication.translate("Ecotourism", "Haul Capacity (kg):", None, QtGui.QApplication.UnicodeUTF8))
-        self.haul_capacity_line.setText(QtGui.QApplication.translate("Ecotourism", "4000", None, QtGui.QApplication.UnicodeUTF8))
         self.home_port_text.setText(QtGui.QApplication.translate("Ecotourism", "Home Port:", None, QtGui.QApplication.UnicodeUTF8))
-        self.home_port_line.setText(QtGui.QApplication.translate("Ecotourism", "hp1", None, QtGui.QApplication.UnicodeUTF8))
         self.workers_text.setText(QtGui.QApplication.translate("Ecotourism", "How many people  work for the company?", None, QtGui.QApplication.UnicodeUTF8))
-        self.workers_line.setText(QtGui.QApplication.translate("Ecotourism", "3", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox.setTitle(QtGui.QApplication.translate("Ecotourism", "Ecotourism Activities", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("Ecotourism", "What percent interest do you have in each activity? (Must add up to 100)", None, QtGui.QApplication.UnicodeUTF8))
         self.label_12.setText(QtGui.QApplication.translate("Ecotourism", "Diving:", None, QtGui.QApplication.UnicodeUTF8))
@@ -465,7 +461,7 @@ class Ui_Ecotourism(object):
         self.activity_snorkeling.setText(QtGui.QApplication.translate("Ecotourism", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.label_14.setText(QtGui.QApplication.translate("Ecotourism", "Kayaking:", None, QtGui.QApplication.UnicodeUTF8))
         self.activity_kayaking.setText(QtGui.QApplication.translate("Ecotourism", "0", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_15.setText(QtGui.QApplication.translate("Ecotourism", "Marine Fauna Watching", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_15.setText(QtGui.QApplication.translate("Ecotourism", "Marine Fauna Watching:", None, QtGui.QApplication.UnicodeUTF8))
         self.activity_watching.setText(QtGui.QApplication.translate("Ecotourism", "0", None, QtGui.QApplication.UnicodeUTF8))
         self.label_21.setText(QtGui.QApplication.translate("Ecotourism", "Other activity #1:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_23.setText(QtGui.QApplication.translate("Ecotourism", "Name:", None, QtGui.QApplication.UnicodeUTF8))

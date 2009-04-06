@@ -84,7 +84,8 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
     def startNextFocus(self):        
         if len(self.parent.foci) > 0:
             (focus,value) = self.parent.foci.pop()
-            self.parent.add_attrib(self.f_focus_str, focus) 
+            self.parent.add_attrib(self.f_focus_str, focus)
+            self.parent.add_attrib(self.f_focus_inc_str, value)
             
             info_str = ''
             if self.foci_mapping.has_key(focus):
@@ -118,7 +119,7 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
     def saveAttribs(self):
         self.parent.add_attrib(self.f_add_info_str, self.add_info_line.text())
         if not self.comboSpecialist.currentText():
-            QMessageBox.warning(self, self.consci_error_str, self.focus_str)
+            QMessageBox.warning(self, self.consci_error_str, self.spc_error_str)
             return -1
         else:
             self.parent.add_attrib(self.f_spc_type_str, self.comboSpecialist.currentText())
@@ -175,6 +176,7 @@ class ConsScienceGui(QDialog, Ui_ConsScience):
         self.draw_next_focus_str = QA.translate("EcotourismGui", "Please begin drawing shapes for the following focus area: ", "", QA.UnicodeUTF8)
         
         self.f_focus_str = QA.translate("SelectConsScienceGui", "focus", "Area of Focus for conservation/scientist", QA.UnicodeUTF8)
+        self.f_focus_inc_str = QA.translate("EcotourismGui", "focus_v", "Type of ecotourism activity", QA.UnicodeUTF8)
         self.consci_error_str = QA.translate("SelectConsScienceGui", "Cons/Science Error", "Error when user fails to select type of conservationist/scientist", QA.UnicodeUTF8)        
-        self.focus_str = QA.translate("SelectConsScienceGui", "Please select a focus area", "", QA.UnicodeUTF8)
+        self.spc_error_str = QA.translate("SelectConsScienceGui", "Please select a specialist area", "", QA.UnicodeUTF8)
         self.finish_cons_str = QA.translate("SelectConsScienceGui", "Finishing Cons/Sci interview", "", QA.UnicodeUTF8)        

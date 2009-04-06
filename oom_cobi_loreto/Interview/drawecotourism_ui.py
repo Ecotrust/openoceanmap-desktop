@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'drawecotourism.ui'
 #
-# Created: Mon Mar 30 13:25:10 2009
+# Created: Sat Apr 04 22:57:29 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_DrawEcotourism(object):
     def setupUi(self, DrawEcotourism):
         DrawEcotourism.setObjectName("DrawEcotourism")
-        DrawEcotourism.resize(433, 148)
+        DrawEcotourism.resize(581, 148)
         self.gridlayout = QtGui.QGridLayout(DrawEcotourism)
         self.gridlayout.setMargin(9)
         self.gridlayout.setSpacing(6)
@@ -22,10 +22,10 @@ class Ui_DrawEcotourism(object):
         self.vboxlayout = QtGui.QVBoxLayout(self.widget_2)
         self.vboxlayout.setObjectName("vboxlayout")
         self.type_label = QtGui.QLabel(self.widget_2)
-        self.type_label.setMinimumSize(QtCore.QSize(50, 0))
-        self.type_label.setMaximumSize(QtCore.QSize(500, 16777215))
+        self.type_label.setMinimumSize(QtCore.QSize(5, 0))
+        self.type_label.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
-        font.setPointSize(13)
+        font.setPointSize(12)
         self.type_label.setFont(font)
         self.type_label.setAlignment(QtCore.Qt.AlignCenter)
         self.type_label.setObjectName("type_label")

@@ -59,7 +59,8 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 	self.parent.first_name = self.interviewee_first_name_line.text().toLower()
 	self.parent.add_attrib(self.f_last_name_str, self.interviewee_last_name_line.text())
 	self.parent.last_name = self.interviewee_last_name_line.text().toLower()
-	
+	self.parent.add_attrib(self.f_organization_str, self.organization_line.text())
+    
 	self.parent.add_attrib(self.f_age_str, self.age_line.text())
 	self.parent.add_attrib(self.f_gender_str, self.gender_comboBox.currentText())
 	self.parent.add_attrib(self.f_city_str, self.city_line.text())
@@ -136,6 +137,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.f_last_name_str = QA.translate("InterviewStartGui", "l_name", "Interviewee last name attribute", QA.UnicodeUTF8)       
         self.f_age_str = QA.translate("InterviewStartGui", "age", "Age attribute", QA.UnicodeUTF8)
         self.f_gender_str = QA.translate("InterviewStartGui", "gender", "Gender attribute", QA.UnicodeUTF8)
+        self.f_organization_str = QA.translate("InterviewStartGui", "orgnz", "Organization attribute", QA.UnicodeUTF8)
         self.f_city_str = QA.translate("InterviewStartGui", "city", "City attribute", QA.UnicodeUTF8)
         self.f_date_str = QA.translate("InterviewStartGui", "date", "Date of interview attribute", QA.UnicodeUTF8)
         self.f_int_first_name_str = QA.translate("InterviewStartGui", "i_f_name", "Interviewer first name attribute", QA.UnicodeUTF8)
