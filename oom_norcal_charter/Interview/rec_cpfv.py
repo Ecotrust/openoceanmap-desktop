@@ -86,7 +86,7 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
 
         interviewInfo2.append(["cp_num_own", self.cpfv_num_own_line.text()])
         interviewInfo2.append(["cp_yr_own", self.cpfv_yr_own_line.text()])
-        interviewInfo2.append(["annl_rev",self.cpfv_revenue_line.text()])
+        #interviewInfo2.append(["annl_rev",self.cpfv_revenue_line.text()])
         interviewInfo2.append(["oper_cost",self.cpfv_operating_cost_line.text()])
         interviewInfo2.append(["labor_cost",self.cpfv_labor_cost_line.text()])
         interviewInfo2.append(["fuel_cost",self.cpfv_fuel_cost_line.text()])
@@ -94,6 +94,7 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         interviewInfo2.append(["pcnt_inc", self.cpfv_percent_income_line.text()])
         interviewInfo2.append(["cp_type", self.cpfv_type_combo.currentText()])
         interviewInfo2.append(["v_doc_num", self.cpfv_lic_line.text()])
+        interviewInfo2.append(["v_fed_num", self.cpfv_fed_doc_line.text()])
         interviewInfo2.append(["v_name",self.cpfv_name_line.text()])
         interviewInfo2.append(["v_length",self.cpfv_len_line.text()])
         interviewInfo2.append(["homeport",self.cpfv_home_port_line.text()])
