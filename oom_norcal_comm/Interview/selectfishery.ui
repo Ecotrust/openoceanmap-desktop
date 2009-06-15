@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>460</width>
-    <height>168</height>
+    <width>477</width>
+    <height>401</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Select Fishery</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_5" >
+  <layout class="QVBoxLayout" name="verticalLayout" >
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3" >
      <item>
@@ -151,12 +151,12 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5" >
+    <layout class="QHBoxLayout" name="horizontalLayout_11" >
      <item>
-      <widget class="QWidget" native="1" name="widget_3" >
-       <layout class="QHBoxLayout" name="horizontalLayout_4" >
+      <widget class="QWidget" native="1" name="widget_4" >
+       <layout class="QHBoxLayout" name="horizontalLayout_12" >
         <item>
-         <widget class="QLabel" name="label" >
+         <widget class="QLabel" name="label_7" >
           <property name="minimumSize" >
            <size>
             <width>160</width>
@@ -170,12 +170,12 @@
            </size>
           </property>
           <property name="text" >
-           <string>Percent income from this fishery:</string>
+           <string>Years experience in fishery:</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="fish_perc_income" >
+         <widget class="QLineEdit" name="fishery_yrs_exp" >
           <property name="minimumSize" >
            <size>
             <width>40</width>
@@ -204,7 +204,312 @@
          </spacer>
         </item>
        </layout>
-       <zorder>fish_perc_income</zorder>
+       <zorder>label_7</zorder>
+       <zorder>fishery_yrs_exp</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_19" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_8" >
+       <layout class="QHBoxLayout" name="horizontalLayout_20" >
+        <item>
+         <widget class="QLabel" name="label_11" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Fishing effort:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fishery_effort" >
+          <property name="minimumSize" >
+           <size>
+            <width>250</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>label_11</zorder>
+       <zorder>fishery_effort</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_17" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_7" >
+       <layout class="QHBoxLayout" name="horizontalLayout_18" >
+        <item>
+         <widget class="QLabel" name="label_10" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Traps/Hooks:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fishery_traps_hooks" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>label_10</zorder>
+       <zorder>fishery_traps_hooks</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_15" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_6" >
+       <layout class="QHBoxLayout" name="horizontalLayout_16" >
+        <item>
+         <widget class="QLabel" name="label_9" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Percent income from this fishery:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fishery_perc_income" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>label_9</zorder>
+       <zorder>fishery_perc_income</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_13" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_5" >
+       <layout class="QHBoxLayout" name="horizontalLayout_14" >
+        <item>
+         <widget class="QLabel" name="label_8" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Average price:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fishery_avg_price" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>label_8</zorder>
+       <zorder>fishery_avg_price</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_3" >
+       <layout class="QHBoxLayout" name="horizontalLayout_4" >
+        <item>
+         <widget class="QLabel" name="label" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Historic average price:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fishery_hist_avg_price" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>fishery_hist_avg_price</zorder>
        <zorder>label</zorder>
        <zorder>horizontalSpacer_3</zorder>
       </widget>

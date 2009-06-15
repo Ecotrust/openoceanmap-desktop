@@ -101,12 +101,24 @@ class Interview(QObject):
           self.penniesIndex = index+2
           self.originalShapeIndex = index+3 # used to link shapes across shapefiles if clipping to shapefiles is used
           self.habitatIndex = index+4
-          self.fisheryIncIndex = index+5
+          self.fisheryExpIndex = index+5
+          self.fisheryEffIndex = index+6
+          self.fisheryHookIndex = index+7
+          self.fisheryIncIndex = index+8
+          self.fisheryAvgPriceIndex = index+9
+          self.fisheryHistPriceIndex = index+10
+          
+          
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int) 
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
+          fields[self.fisheryExpIndex] = QgsField("fyrs_exp", QVariant.Int)
+          fields[self.fisheryEffIndex] = QgsField("finc_efort", QVariant.String)
+          fields[self.fisheryHookIndex] = QgsField("fnum_hooks", QVariant.Int)
           fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
+          fields[self.fisheryAvgPriceIndex] = QgsField("favg_pr", QVariant.Int)
+          fields[self.fisheryHistPriceIndex] = QgsField("fhist_pr", QVariant.Int)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -139,7 +151,13 @@ class Interview(QObject):
               fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               fet.addAttribute(self.originalShapeIndex, QVariant(-1))
               fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
+              fet.addAttribute(self.fisheryExpIndex, QVariant(self.capturedPolygonsFisheryExp[capPolyInd]))
+              fet.addAttribute(self.fisheryEffIndex, QVariant(self.capturedPolygonsFisheryEffort[capPolyInd]))
+              fet.addAttribute(self.fisheryHookIndex, QVariant(self.capturedPolygonsFisheryHooks[capPolyInd]))
               fet.addAttribute(self.fisheryIncIndex, QVariant(self.capturedPolygonsFisheryIncome[capPolyInd]))
+              fet.addAttribute(self.fisheryAvgPriceIndex, QVariant(self.capturedPolygonsFisheryAvgPrice[capPolyInd]))
+              fet.addAttribute(self.fisheryHistPriceIndex, QVariant(self.capturedPolygonsFisheryHistPrice[capPolyInd]))
+              
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -184,7 +202,12 @@ class Interview(QObject):
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
+      self.capturedPolygonsFisheryExp = []
+      self.capturedPolygonsFisheryEffort = []
+      self.capturedPolygonsFisheryHooks = []
       self.capturedPolygonsFisheryIncome = []
+      self.capturedPolygonsFisheryAvgPrice = []
+      self.capturedPolygonsFisheryHistPrice = []
       
       #Reset penny count
       self.pennies_left = 100
@@ -317,7 +340,12 @@ class Interview(QObject):
       
   def resetInterview(self):
       self.currentFishery = None
+      self.currentFisheryExp = 0
+      self.currentFisheryEffort = ''
+      self.currentFisheryHooks = 0
       self.currentFisheryIncome = 0
+      self.currentFisheryAvgPrice = 0
+      self.currentFisheryHistPrice = 0
         
       # A place to store polygons we capture
       self.capturedPolygons = []
@@ -325,7 +353,12 @@ class Interview(QObject):
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
+      self.capturedPolygonsFisheryExp = []
+      self.capturedPolygonsFisheryEffort = []
+      self.capturedPolygonsFisheryHooks = []
       self.capturedPolygonsFisheryIncome = []
+      self.capturedPolygonsFisheryAvgPrice = []
+      self.capturedPolygonsFisheryHistPrice = []
     
       self.pennies_left = 100
       self.phase_index = 0

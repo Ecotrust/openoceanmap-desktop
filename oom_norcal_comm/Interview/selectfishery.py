@@ -61,7 +61,13 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         else:
             self.parent.currentFishery = cur_fishery    
             
-        self.parent.currentFisheryIncome = self.fish_perc_income.text()
+        self.parent.currentFisheryExp = self.fishery_yrs_exp.text()
+        self.parent.currentFisheryEffort = self.fishery_effort.text()
+        self.parent.currentFisheryHooks = self.fishery_traps_hooks.text()
+        self.parent.currentFisheryIncome = self.fishery_perc_income.text()
+        self.parent.currentFisheryAvgPrice = self.fishery_avg_price.text()
+        self.parent.currentFisheryHistPrice = self.fishery_hist_avg_price.text()
+        
     
         self.close()
         mc = self.parent.canvas      
@@ -116,7 +122,12 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+            self.parent.capturedPolygonsFisheryExp.append(self.parent.currentFisheryExp)
+            self.parent.capturedPolygonsFisheryEffort.append(self.parent.currentFisheryEffort)
+            self.parent.capturedPolygonsFisheryHooks.append(self.parent.currentFisheryHooks)
             self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
+            self.parent.capturedPolygonsFisheryAvgPrice.append(self.parent.currentFisheryAvgPrice)
+            self.parent.capturedPolygonsFisheryHistPrice.append(self.parent.currentFisheryHistPrice)
             
         self.close()
 
@@ -160,6 +171,12 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
         self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
         self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
+        self.parent.capturedPolygonsFisheryExp.append(self.parent.currentFisheryExp)
+        self.parent.capturedPolygonsFisheryEffort.append(self.parent.currentFisheryEffort)
+        self.parent.capturedPolygonsFisheryHooks.append(self.parent.currentFisheryHooks)
+        self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
+        self.parent.capturedPolygonsFisheryAvgPrice.append(self.parent.currentFisheryAvgPrice)
+        self.parent.capturedPolygonsFisheryHistPrice.append(self.parent.currentFisheryHistPrice)
             
         self.close()
         self.parent.end_fishery()
