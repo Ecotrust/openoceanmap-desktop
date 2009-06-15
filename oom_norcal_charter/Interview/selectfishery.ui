@@ -1,0 +1,199 @@
+<ui version="4.0" >
+ <author>Aaron Racicot</author>
+ <class>SelectFishery</class>
+ <widget class="QDialog" name="SelectFishery" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>166</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Start Fishery</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QWidget" native="1" name="widget" >
+       <layout class="QHBoxLayout" >
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <property name="leftMargin" >
+         <number>9</number>
+        </property>
+        <property name="topMargin" >
+         <number>9</number>
+        </property>
+        <property name="rightMargin" >
+         <number>9</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="fishery_text" >
+          <property name="minimumSize" >
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Current Fishery :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fishery_line" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_3" >
+       <layout class="QHBoxLayout" >
+        <item>
+         <widget class="QLabel" name="label" >
+          <property name="minimumSize" >
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Percentage of trips (annually) you said were associated with this fishery:</string>
+          </property>
+          <property name="wordWrap" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="perc_trip_fish_line" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_2" >
+       <layout class="QHBoxLayout" >
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <property name="leftMargin" >
+         <number>9</number>
+        </property>
+        <property name="topMargin" >
+         <number>9</number>
+        </property>
+        <property name="rightMargin" >
+         <number>9</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>9</number>
+        </property>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbnStartShapes" >
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text" >
+           <string>Start Drawing Shapes</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
