@@ -99,12 +99,12 @@ class Interview(QObject):
 
           self.fisheryIndex = index+1
           self.penniesIndex = index+2
-          self.originalShapeIndex = index+3
+          self.originalShapeIndex = index+3 # used to link shapes across shapefiles if clipping to shapefiles is used
           self.habitatIndex = index+4
           self.fisheryIncIndex = index+5
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
-          fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
+          fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int) 
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
           fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
           
@@ -189,8 +189,11 @@ class Interview(QObject):
       #Reset penny count
       self.pennies_left = 100
 
-      # create a shapefile clipped to the study region and reassign pennies
-      self.create_clipped_layer( str(f), new_layer )
+      # EITHER create a shapefile clipped to the study region and reassign pennies # NO LONGER USED
+      #self.create_clipped_layer( str(f), new_layer )
+      
+      # OR just proceed directly to the next fishery
+      self.next_fishery()
 
       
   def next_fishery(self): 
@@ -201,6 +204,7 @@ class Interview(QObject):
       wnd.show()
         
         
+  # no longer used, but preserved for posterity  -- if you want to clip a layer against a shapefile, here's how:
   def create_clipped_layer(self, working_filename, working_layer):
       # load the study region shapefile to clip against
       study_region_layer = QgsVectorLayer("Data/Soorc_sr.shp", "study region", "ogr")
