@@ -37,6 +37,7 @@ from qgis.gui import *
 from interviewstart import *
 from selectfishery import *
 from nextclippedpolygon import *
+from rec_all import *
 #from Tools.polygontool import *
 #from nextpolygon import *
 # UI specific includes
@@ -51,7 +52,7 @@ class Interview(QObject):
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
-    self.phase = ["start","shapes","finished"]
+    self.phase = ["start","main_questions","shapes","finished"]
     
     self.resetInterview()
     
@@ -62,7 +63,13 @@ class Interview(QObject):
 
   def nextStep(self):
       self.phase_index = self.phase_index + 1
-      if self.phase[ self.phase_index ] == "shapes":
+      if self.phase[ self.phase_index ] == "main_questions":
+          new_status = "Answering main questions"
+          self.parent.statusbar.showMessage(new_status)
+          wnd = RecAllGui(self)
+          wnd.show()
+      
+      elif self.phase[ self.phase_index ] == "shapes":
           new_status = "Drawing fisheries"
           self.parent.statusbar.showMessage(new_status)
           self.next_fishery()
@@ -97,11 +104,13 @@ class Interview(QObject):
           for index,value in enumerate(self.interviewInfo2):
             fields[index] = QgsField(value[0], QVariant.String)
 
-          self.fisheryIndex = index+1
-          self.penniesIndex = index+2
-          self.originalShapeIndex = index+3 # used to link shapes across shapefiles if clipping to shapefiles is used
-          self.habitatIndex = index+4
-          fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
+          self.fishingTypeIndex = index+1
+          self.fisheryIndex = index+2
+          self.penniesIndex = index+3
+          self.originalShapeIndex = index+4 # used to link shapes across shapefiles if clipping to shapefiles is used
+          self.habitatIndex = index+5
+          fields[self.fishingTypeIndex] = QgsField("group", QVariant.String)
+          fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
@@ -133,6 +142,7 @@ class Interview(QObject):
               for index,value in enumerate(self.interviewInfo2):
                 fet.addAttribute(index, QVariant(value[1]))
                 
+              fet.addAttribute(self.fishingTypeIndex, QVariant(self.capturedPolygonsFishingType[capPolyInd]))
               fet.addAttribute(self.fisheryIndex, QVariant(self.capturedPolygonsFishery[capPolyInd]))
               fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               fet.addAttribute(self.originalShapeIndex, QVariant(-1))
@@ -178,6 +188,7 @@ class Interview(QObject):
         capPolyRub.reset()
       self.capturedPolygons = []
       self.capturedPolygonsFishery = []
+      self.capturedPolygonsFishingType = []
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
@@ -227,7 +238,8 @@ class Interview(QObject):
       fields = {}
       for index,value in enumerate(self.interviewInfo2):
         fields[index] = QgsField(value[0], QVariant.String) 
-      fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
+      fields[self.fishingTypeIndex] = QgsField("group", QVariant.String)
+      fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)
       fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
       fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
       fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
@@ -315,6 +327,7 @@ class Interview(QObject):
       # A place to store polygons we capture
       self.capturedPolygons = []
       self.capturedPolygonsFishery = []
+      self.capturedPolygonsFishingType = []
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []

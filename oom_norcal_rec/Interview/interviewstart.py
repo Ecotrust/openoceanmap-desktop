@@ -61,25 +61,6 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
         interviewInfo2.append(["mood", self.mood_line.text()])
         
-        interviewInfo2.append(["user_group", "sportboat"])
-
-        interviewInfo2.append(["bt_type", self.type_boat_line.text()])
-        interviewInfo2.append(["boat_lic", self.boat_license_line.text()])
-        interviewInfo2.append(["yrs_op", self.yrs_operating_line.text()])
-        interviewInfo2.append(["yrs_own", self.yrs_owning_line.text()])
-        interviewInfo2.append(["v_len", self.vessel_length_line.text()])
-        interviewInfo2.append(["stor_loc", self.storage_loc_line.text()])
-        interviewInfo2.append(["v_homep", self.home_port_line.text()])
-        
-        interviewInfo2.append(["landp_1", self.landing_port_line.text()])                       
-        interviewInfo2.append(["landp_2", self.landing_port_line_2.text()])
-        interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
-        interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
-        
-        interviewInfo2.append(["yrs_fish", self.years_fishing_line.text()])
-        interviewInfo2.append(["num_pers", self.avg_people_line.text()])
-        interviewInfo2.append(["days_fish", self.avg_days_per_year_line.text()])
-
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
 

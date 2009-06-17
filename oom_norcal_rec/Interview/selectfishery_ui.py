@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Mon Mar 09 15:04:47 2009
+# Created: Wed Jun 17 11:49:55 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,9 +12,32 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectFishery(object):
     def setupUi(self, SelectFishery):
         SelectFishery.setObjectName("SelectFishery")
-        SelectFishery.resize(459, 121)
-        self.verticalLayout_5 = QtGui.QVBoxLayout(SelectFishery)
-        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        SelectFishery.resize(459, 158)
+        self.verticalLayout = QtGui.QVBoxLayout(SelectFishery)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout_4 = QtGui.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.widget_3 = QtGui.QWidget(SelectFishery)
+        self.widget_3.setObjectName("widget_3")
+        self._2 = QtGui.QHBoxLayout(self.widget_3)
+        self._2.setSpacing(6)
+        self._2.setContentsMargins(9, 9, 9, 0)
+        self._2.setObjectName("_2")
+        self.fishing_type_text = QtGui.QLabel(self.widget_3)
+        self.fishing_type_text.setMinimumSize(QtCore.QSize(160, 0))
+        self.fishing_type_text.setMaximumSize(QtCore.QSize(160, 16777215))
+        self.fishing_type_text.setObjectName("fishing_type_text")
+        self._2.addWidget(self.fishing_type_text)
+        self.fishing_type_comboBox = QtGui.QComboBox(self.widget_3)
+        self.fishing_type_comboBox.setObjectName("fishing_type_comboBox")
+        self.fishing_type_comboBox.addItem(QtCore.QString())
+        self.fishing_type_comboBox.addItem(QtCore.QString())
+        self.fishing_type_comboBox.addItem(QtCore.QString())
+        self._2.addWidget(self.fishing_type_comboBox)
+        self.horizontalLayout_4.addWidget(self.widget_3)
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem)
+        self.verticalLayout.addLayout(self.horizontalLayout_4)
         self.horizontalLayout_3 = QtGui.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.widget = QtGui.QWidget(SelectFishery)
@@ -37,9 +60,9 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.addItem(QtCore.QString())
         self.hboxlayout.addWidget(self.fishery_comboBox)
         self.horizontalLayout_3.addWidget(self.widget)
-        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem)
-        self.verticalLayout_5.addLayout(self.horizontalLayout_3)
+        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem1)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.widget_2 = QtGui.QWidget(SelectFishery)
@@ -48,8 +71,8 @@ class Ui_SelectFishery(object):
         self.hboxlayout1.setSpacing(6)
         self.hboxlayout1.setMargin(9)
         self.hboxlayout1.setObjectName("hboxlayout1")
-        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.hboxlayout1.addItem(spacerItem1)
+        spacerItem2 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem2)
         self.pbnFisheryFinished = QtGui.QPushButton(self.widget_2)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -63,13 +86,17 @@ class Ui_SelectFishery(object):
         self.pbnStartShapes.setObjectName("pbnStartShapes")
         self.hboxlayout1.addWidget(self.pbnStartShapes)
         self.horizontalLayout_2.addWidget(self.widget_2)
-        self.verticalLayout_5.addLayout(self.horizontalLayout_2)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
 
         self.retranslateUi(SelectFishery)
         QtCore.QMetaObject.connectSlotsByName(SelectFishery)
 
     def retranslateUi(self, SelectFishery):
         SelectFishery.setWindowTitle(QtGui.QApplication.translate("SelectFishery", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishing_type_text.setText(QtGui.QApplication.translate("SelectFishery", "Select Fishing Type :", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishing_type_comboBox.setItemText(0, QtGui.QApplication.translate("SelectFishery", "Private Vessel", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishing_type_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Kayak", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishing_type_comboBox.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Dive", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "Select Fishery :", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(0, QtGui.QApplication.translate("SelectFishery", "Dungeness Crab", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Groundfish / Bottom Fishing", None, QtGui.QApplication.UnicodeUTF8))

@@ -59,7 +59,14 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
             QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
             return 
         else:
-            self.parent.currentFishery = cur_fishery    
+            self.parent.currentFishery = cur_fishery
+
+        cur_fishing_type = self.fishing_type_comboBox.currentText()
+        if not cur_fishing_type:
+            QMessageBox.warning(self, "Fishing Type Error", "Please select a fishing type")
+            return 
+        else:
+            self.parent.currentFishingType = cur_fishing_type
             
         self.close()
         mc = self.parent.canvas      
@@ -115,6 +122,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+            self.parent.capturedPolygonsFishingType.append(self.parent.currentFishingType)
             
         self.close()
 
@@ -157,6 +165,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                     
         self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
         self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+        self.parent.capturedPolygonsFishingType.append(self.parent.currentFishingType)
             
         self.close()
         self.parent.end_fishery()
