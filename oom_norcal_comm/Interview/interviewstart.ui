@@ -370,9 +370,6 @@
                 </widget>
                </item>
               </layout>
-              <zorder>date_text</zorder>
-              <zorder>date_line</zorder>
-              <zorder>vessel_info</zorder>
              </widget>
             </item>
             <item>
@@ -1575,6 +1572,33 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>interviewee_first_name_line</tabstop>
+  <tabstop>interviewee_last_name_line</tabstop>
+  <tabstop>age_line</tabstop>
+  <tabstop>gender_comboBox</tabstop>
+  <tabstop>city_line</tabstop>
+  <tabstop>date_line</tabstop>
+  <tabstop>interviewer1_first_name_line</tabstop>
+  <tabstop>interviewer1_last_name_line</tabstop>
+  <tabstop>mood_line</tabstop>
+  <tabstop>years_line</tabstop>
+  <tabstop>perc_income_line</tabstop>
+  <tabstop>fisherman_license_id_line</tabstop>
+  <tabstop>federal_vessel_id_line</tabstop>
+  <tabstop>state_vessel_id_line</tabstop>
+  <tabstop>vessel_name_line</tabstop>
+  <tabstop>vessel_length_line</tabstop>
+  <tabstop>vessel_motor_line</tabstop>
+  <tabstop>haul_capacity_line</tabstop>
+  <tabstop>home_port_line</tabstop>
+  <tabstop>landing_port_line</tabstop>
+  <tabstop>landing_port_line_2</tabstop>
+  <tabstop>landing_port_line_3</tabstop>
+  <tabstop>landing_port_line_4</tabstop>
+  <tabstop>pbnSelectFishery</tabstop>
+  <tabstop>pbnCancel</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -2769,12 +2769,13 @@
  <tabstops>
   <tabstop>cpfv_num_own_line</tabstop>
   <tabstop>cpfv_yr_own_line</tabstop>
-  <tabstop>cpfv_operating_cost_line</tabstop>
   <tabstop>cpfv_labor_cost_line</tabstop>
   <tabstop>cpfv_fuel_cost_line</tabstop>
+  <tabstop>cpfv_operating_cost_line</tabstop>
   <tabstop>cpfv_percent_income_line</tabstop>
   <tabstop>cpfv_type_combo</tabstop>
   <tabstop>cpfv_lic_line</tabstop>
+  <tabstop>cpfv_fed_doc_line</tabstop>
   <tabstop>cpfv_name_line</tabstop>
   <tabstop>cpfv_len_line</tabstop>
   <tabstop>cpfv_home_port_line</tabstop>

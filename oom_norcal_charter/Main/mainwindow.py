@@ -102,11 +102,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
     
-    rasterList = [["Data/t180071b.tif",0,50000000],   
-                  ["Data/t185001b_tiled.tif",0,400000], # these are just the scale vals from the prev set -- we aren't using them here
-                  ["Data/t185201b_tiled.tif",0,400000],
-                  ["Data/t185801b_tiled.tif",0,400000],
-                  ["Data/t186001b_tiled.tif",0,400000]   
+    rasterList = [["Data/CHART_NOAA_200K_North.tif",0,50000000],   
                   ]    
     
     self.rasterBaseLayer = OOMLayer(self)
@@ -125,7 +121,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
-      if i == 3: # Cafe Blanco 2 Yaquino Head
+      if i == 0: 
         self.extent_raster = layer        
 
       if self.srs == None:
@@ -149,16 +145,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.layers.insert(0,cl)
       self.canvas.setLayerSet(self.layers)
       
-      if i == 0:
-        self.openSeaRasterBaseLayer.addLayerItem(layer,cl)
-      else:
-        self.rasterBaseLayer.addLayerItem(layer,cl)
+      #if i == 0:
+      #  self.openSeaRasterBaseLayer.addLayerItem(layer,cl)
+      #else:
+      self.rasterBaseLayer.addLayerItem(layer,cl)
       
     #Add base raster items to legend
     self.legend.addRasterLegendItem("Coastal Nautical Charts",
                                     self.rasterBaseLayer.getCls())
-    self.legend.addRasterLegendItem("Open Sea Nautical Charts",
-                                    self.openSeaRasterBaseLayer.getCls())
+    #self.legend.addRasterLegendItem("Open Sea Nautical Charts",
+    #                                self.openSeaRasterBaseLayer.getCls())
     
 
     # now add the study region as a vector layer
