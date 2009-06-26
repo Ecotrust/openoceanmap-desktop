@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>477</width>
-    <height>401</height>
+    <width>478</width>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -248,7 +248,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Fishing effort:</string>
+           <string>Months of fishing effort:</string>
           </property>
          </widget>
         </item>
@@ -290,6 +290,67 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_21" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_9" >
+       <layout class="QHBoxLayout" name="horizontalLayout_22" >
+        <item>
+         <widget class="QLabel" name="label_12" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Days  per week in these months</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fishery_effort_days" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>label_12</zorder>
+       <zorder>fishery_effort_days</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_17" >
      <item>
       <widget class="QWidget" native="1" name="widget_7" >
@@ -309,7 +370,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Traps/Hooks:</string>
+           <string>Num traps/hooks used per trip:</string>
           </property>
          </widget>
         </item>

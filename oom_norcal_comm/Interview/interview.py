@@ -103,10 +103,11 @@ class Interview(QObject):
           self.habitatIndex = index+4
           self.fisheryExpIndex = index+5
           self.fisheryEffIndex = index+6
-          self.fisheryHookIndex = index+7
-          self.fisheryIncIndex = index+8
-          self.fisheryAvgPriceIndex = index+9
-          self.fisheryHistPriceIndex = index+10
+          self.fisheryEffDaysIndex = index+7
+          self.fisheryHookIndex = index+8
+          self.fisheryIncIndex = index+9
+          self.fisheryAvgPriceIndex = index+10
+          self.fisheryHistPriceIndex = index+11
           
           
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
@@ -115,6 +116,7 @@ class Interview(QObject):
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
           fields[self.fisheryExpIndex] = QgsField("fyrs_exp", QVariant.Int)
           fields[self.fisheryEffIndex] = QgsField("finc_efort", QVariant.String)
+          fields[self.fisheryEffDaysIndex] = QgsField("finc_efday", QVariant.Int)
           fields[self.fisheryHookIndex] = QgsField("fnum_hooks", QVariant.Int)
           fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
           fields[self.fisheryAvgPriceIndex] = QgsField("favg_pr", QVariant.Int)
@@ -153,6 +155,7 @@ class Interview(QObject):
               fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
               fet.addAttribute(self.fisheryExpIndex, QVariant(self.capturedPolygonsFisheryExp[capPolyInd]))
               fet.addAttribute(self.fisheryEffIndex, QVariant(self.capturedPolygonsFisheryEffort[capPolyInd]))
+              fet.addAttribute(self.fisheryEffDaysIndex, QVariant(self.capturedPolygonsFisheryEffortDays[capPolyInd]))
               fet.addAttribute(self.fisheryHookIndex, QVariant(self.capturedPolygonsFisheryHooks[capPolyInd]))
               fet.addAttribute(self.fisheryIncIndex, QVariant(self.capturedPolygonsFisheryIncome[capPolyInd]))
               fet.addAttribute(self.fisheryAvgPriceIndex, QVariant(self.capturedPolygonsFisheryAvgPrice[capPolyInd]))
@@ -204,6 +207,7 @@ class Interview(QObject):
       self.capturedPolygonsHabitat = []
       self.capturedPolygonsFisheryExp = []
       self.capturedPolygonsFisheryEffort = []
+      self.capturedPolygonsFisheryEffortDays = []
       self.capturedPolygonsFisheryHooks = []
       self.capturedPolygonsFisheryIncome = []
       self.capturedPolygonsFisheryAvgPrice = []
@@ -342,6 +346,7 @@ class Interview(QObject):
       self.currentFishery = None
       self.currentFisheryExp = 0
       self.currentFisheryEffort = ''
+      self.currentFisheryEffortDays = 0
       self.currentFisheryHooks = 0
       self.currentFisheryIncome = 0
       self.currentFisheryAvgPrice = 0
@@ -355,6 +360,7 @@ class Interview(QObject):
       self.capturedPolygonsHabitat = []
       self.capturedPolygonsFisheryExp = []
       self.capturedPolygonsFisheryEffort = []
+      self.capturedPolygonsFisheryEffortDays = []
       self.capturedPolygonsFisheryHooks = []
       self.capturedPolygonsFisheryIncome = []
       self.capturedPolygonsFisheryAvgPrice = []

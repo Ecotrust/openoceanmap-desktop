@@ -102,7 +102,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
     
-    rasterList = [["Data/CHART_NOAA_200K_North.tif",0,50000000],    
+    rasterList = [["Data/t180071b.tif",0,50000000],
+                  ["Data/CHART_NOAA_200K_North.tif",0,50000000],    
                   ]    
     
     self.rasterBaseLayer = OOMLayer(self)
@@ -121,7 +122,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
-      if i == 0:
+      if i == 1:
         self.extent_raster = layer        
 
       if self.srs == None:
@@ -145,20 +146,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.layers.insert(0,cl)
       self.canvas.setLayerSet(self.layers)
       
-      #if i == 0:
-      #  self.openSeaRasterBaseLayer.addLayerItem(layer,cl)
-      #else:
-      self.rasterBaseLayer.addLayerItem(layer,cl)
+      if i == 0:
+        self.openSeaRasterBaseLayer.addLayerItem(layer,cl)
+        cl.setVisible(False) # off by default
+      else:
+        self.rasterBaseLayer.addLayerItem(layer,cl)
       
     #Add base raster items to legend
     self.legend.addRasterLegendItem("Coastal Nautical Charts",
                                     self.rasterBaseLayer.getCls())
-    #self.legend.addRasterLegendItem("Open Sea Nautical Charts",
-    #                                self.openSeaRasterBaseLayer.getCls())
+    self.legend.addRasterLegendItem("Open Sea Nautical Charts",
+                                    self.openSeaRasterBaseLayer.getCls())
     
 
     # now add the study region as a vector layer
-    vectorList = [["Data/Soorc_sr.shp"]] #,60000,1200000]]
+    vectorList = [] #["Data/Soorc_sr.shp"]] #,60000,1200000]]
     for vectorSet in vectorList:
       vector = vectorSet[0]
       #minScale = vectorSet[1]
@@ -190,7 +192,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.canvas.setLayerSet(self.layers)
       
       #Add item to legend
-      self.legend.addVectorLegendItem("Study Region", [cl])
+      #self.legend.addVectorLegendItem("Study Region", [cl])
       
     self.canvas.setExtent(self.extent_raster.extent())    
 

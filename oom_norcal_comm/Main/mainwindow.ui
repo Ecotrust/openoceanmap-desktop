@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap SOORC Comm.</string>
+   <string>OpenOceanMap MLPA NC Comm.</string>
   </property>
   <property name="windowIcon" >
    <iconset resource="resources.qrc" >

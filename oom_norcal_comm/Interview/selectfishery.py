@@ -63,6 +63,7 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
             
         self.parent.currentFisheryExp = self.fishery_yrs_exp.text()
         self.parent.currentFisheryEffort = self.fishery_effort.text()
+        self.parent.currentFisheryEffortDays = self.fishery_effort_days.text()
         self.parent.currentFisheryHooks = self.fishery_traps_hooks.text()
         self.parent.currentFisheryIncome = self.fishery_perc_income.text()
         self.parent.currentFisheryAvgPrice = self.fishery_avg_price.text()
@@ -124,6 +125,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
             self.parent.capturedPolygonsFisheryExp.append(self.parent.currentFisheryExp)
             self.parent.capturedPolygonsFisheryEffort.append(self.parent.currentFisheryEffort)
+            self.parent.capturedPolygonsFisheryEffortDays.append(self.parent.currentFisheryEffortDays)
             self.parent.capturedPolygonsFisheryHooks.append(self.parent.currentFisheryHooks)
             self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
             self.parent.capturedPolygonsFisheryAvgPrice.append(self.parent.currentFisheryAvgPrice)
@@ -173,6 +175,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
         self.parent.capturedPolygonsFisheryExp.append(self.parent.currentFisheryExp)
         self.parent.capturedPolygonsFisheryEffort.append(self.parent.currentFisheryEffort)
+        self.parent.capturedPolygonsFisheryEffortDays.append(self.parent.currentFisheryEffortDays)
         self.parent.capturedPolygonsFisheryHooks.append(self.parent.currentFisheryHooks)
         self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
         self.parent.capturedPolygonsFisheryAvgPrice.append(self.parent.currentFisheryAvgPrice)
