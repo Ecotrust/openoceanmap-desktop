@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interviewstart.ui'
 #
-# Created: Mon Jun 15 13:59:43 2009
+# Created: Fri Jun 26 10:57:32 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -618,6 +618,30 @@ class Ui_InterviewStart(object):
 
         self.retranslateUi(InterviewStart)
         QtCore.QMetaObject.connectSlotsByName(InterviewStart)
+        InterviewStart.setTabOrder(self.interviewee_first_name_line, self.interviewee_last_name_line)
+        InterviewStart.setTabOrder(self.interviewee_last_name_line, self.age_line)
+        InterviewStart.setTabOrder(self.age_line, self.gender_comboBox)
+        InterviewStart.setTabOrder(self.gender_comboBox, self.city_line)
+        InterviewStart.setTabOrder(self.city_line, self.date_line)
+        InterviewStart.setTabOrder(self.date_line, self.interviewer1_first_name_line)
+        InterviewStart.setTabOrder(self.interviewer1_first_name_line, self.interviewer1_last_name_line)
+        InterviewStart.setTabOrder(self.interviewer1_last_name_line, self.mood_line)
+        InterviewStart.setTabOrder(self.mood_line, self.years_line)
+        InterviewStart.setTabOrder(self.years_line, self.perc_income_line)
+        InterviewStart.setTabOrder(self.perc_income_line, self.fisherman_license_id_line)
+        InterviewStart.setTabOrder(self.fisherman_license_id_line, self.federal_vessel_id_line)
+        InterviewStart.setTabOrder(self.federal_vessel_id_line, self.state_vessel_id_line)
+        InterviewStart.setTabOrder(self.state_vessel_id_line, self.vessel_name_line)
+        InterviewStart.setTabOrder(self.vessel_name_line, self.vessel_length_line)
+        InterviewStart.setTabOrder(self.vessel_length_line, self.vessel_motor_line)
+        InterviewStart.setTabOrder(self.vessel_motor_line, self.haul_capacity_line)
+        InterviewStart.setTabOrder(self.haul_capacity_line, self.home_port_line)
+        InterviewStart.setTabOrder(self.home_port_line, self.landing_port_line)
+        InterviewStart.setTabOrder(self.landing_port_line, self.landing_port_line_2)
+        InterviewStart.setTabOrder(self.landing_port_line_2, self.landing_port_line_3)
+        InterviewStart.setTabOrder(self.landing_port_line_3, self.landing_port_line_4)
+        InterviewStart.setTabOrder(self.landing_port_line_4, self.pbnSelectFishery)
+        InterviewStart.setTabOrder(self.pbnSelectFishery, self.pbnCancel)
 
     def retranslateUi(self, InterviewStart):
         InterviewStart.setWindowTitle(QtGui.QApplication.translate("InterviewStart", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))

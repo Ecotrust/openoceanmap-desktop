@@ -55,9 +55,26 @@
         </item>
         <item>
          <widget class="QComboBox" name="fishery_comboBox" >
+          <property name="minimumSize" >
+           <size>
+            <width>250</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <item>
            <property name="text" >
             <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Deeper nearshore fishery - longline</string>
            </property>
           </item>
           <item>
@@ -67,42 +84,37 @@
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - trawl</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Groundfish - hook &amp; line</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
             <string>Hagfish - trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Halibut - longline</string>
+            <string>Herring - gillnet</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Lingcod - hook &amp; line</string>
+            <string>Lingcod -longline</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Prawn - trap</string>
+            <string>Nearshore fishery - longline</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish (Blackcod) - longline</string>
+            <string>Nearshore fishery - trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish (Blackcod) - trap</string>
+            <string>Sablefish - longline</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sablefish - trap</string>
            </property>
           </item>
           <item>
@@ -112,17 +124,22 @@
           </item>
           <item>
            <property name="text" >
-            <string>Shrimp - trawl</string>
+            <string>Shrimp - trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Tuna - jig</string>
+            <string>Smelt - dip net or brail</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Tuna - pole</string>
+            <string>Surfperch - longline</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Urchin - diving</string>
            </property>
           </item>
           <item>
