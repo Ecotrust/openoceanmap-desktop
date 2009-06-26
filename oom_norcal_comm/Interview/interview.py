@@ -116,11 +116,11 @@ class Interview(QObject):
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
           fields[self.fisheryExpIndex] = QgsField("fyrs_exp", QVariant.Int)
           fields[self.fisheryEffIndex] = QgsField("finc_efort", QVariant.String)
-          fields[self.fisheryEffDaysIndex] = QgsField("finc_efday", QVariant.Int)
+          fields[self.fisheryEffDaysIndex] = QgsField("finc_efday", QVariant.Double)
           fields[self.fisheryHookIndex] = QgsField("fnum_hooks", QVariant.Int)
           fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
-          fields[self.fisheryAvgPriceIndex] = QgsField("favg_pr", QVariant.Int)
-          fields[self.fisheryHistPriceIndex] = QgsField("fhist_pr", QVariant.Int)
+          fields[self.fisheryAvgPriceIndex] = QgsField("favg_pr", QVariant.Double)
+          fields[self.fisheryHistPriceIndex] = QgsField("fhist_pr", QVariant.Double)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),

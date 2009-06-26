@@ -41,7 +41,7 @@ class InnoScript:
                  dist_dir,
                  windows_exe_files = [],
                  lib_files = [],
-                 version = "1.2"):
+                 version = "1.0"):
         self.lib_dir = lib_dir
         self.dist_dir = dist_dir
         if not self.dist_dir[-1] in "\\/":
@@ -67,15 +67,15 @@ class InnoScript:
         print >> ofi, r"DefaultGroupName=%s" % self.name
         print >> ofi, r"VersionInfoVersion=%s" % self.version
         print >> ofi, r"VersionInfoCompany=Ecotrust"
-        print >> ofi, r"VersionInfoDescription=OpenOceanMap SOORC Sport Boat"
+        print >> ofi, r"VersionInfoDescription=OpenOceanMap MLPA NC Rec"
         print >> ofi, r"VersionInfoCopyright=Ecotrust"
         print >> ofi, r"AppCopyright=Ecotrust"
-        print >> ofi, r"InfoAfterFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_sport\README.TXT"
-        print >> ofi, r"LicenseFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_sport\LICENSE.TXT"
+        print >> ofi, r"InfoAfterFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_rec\README.TXT"
+        print >> ofi, r"LicenseFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_rec\LICENSE.TXT"
         print >> ofi, r"WizardImageBackColor=clBlack"
-        print >> ofi, r"WizardImageFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_sport\Images\OCEAN_VERT_INNO.bmp"
-        print >> ofi, r"WizardSmallImageFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_sport\Images\OCEAN_SMALL_INNO.bmp"
-        print >> ofi, r"SetupIconFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_sport\Images\OCEAN_SMALL_INNO.ico"
+        print >> ofi, r"WizardImageFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_rec\Images\OCEAN_VERT_INNO.bmp"
+        print >> ofi, r"WizardSmallImageFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_rec\Images\OCEAN_SMALL_INNO.bmp"
+        print >> ofi, r"SetupIconFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_rec\Images\OCEAN_SMALL_INNO.ico"
         print >> ofi
 
         print >> ofi, r"[Files]"
@@ -139,7 +139,7 @@ class build_installer(py2exe):
         dist_dir = self.dist_dir
         
         # create the Installer, using the files py2exe has created.
-        script = InnoScript("OpenOceanMap SOORC Sport Boat",
+        script = InnoScript("OpenOceanMap MLPA NC Rec",
                             lib_dir,
                             dist_dir,
                             self.windows_exe_files,
