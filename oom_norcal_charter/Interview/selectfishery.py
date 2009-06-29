@@ -46,18 +46,27 @@ from Util.common_functions import *
 import sys
 
 class SelectFisheryGui(QDialog, Ui_SelectFishery):
-    def __init__(self, parent, fishery, trip_value):
+    def __init__(self, parent):
         QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent
-        self.fishery = fishery
-        self.trip_value = trip_value
+        
 
-        self.fishery_line.setText(self.fishery)
-        self.perc_trip_fish_line.setText(self.trip_value)
-        self.parent.currentFishery = self.fishery
-
-    def on_pbnStartShapes_released(self):        
+    def on_pbnStartShapes_released(self):    
+        #Get fishery value
+        cur_fishery = self.fishery_comboBox.currentText()
+        if not cur_fishery:
+            QMessageBox.warning(self, "Fishery Error", "Please select a fishery")
+            return 
+        else:
+            self.parent.currentFishery = cur_fishery    
+            
+        self.parent.currentFisheryPct = self.fishery_pct_trips.text()
+        self.parent.currentFisheryTripLen = self.fishery_tlen.currentText()
+        self.parent.currentFisheryAnglerCost = self.fishery_angcost.text()
+        self.parent.currentFisheryDays = self.fishery_days.text()
+        self.parent.currentFisheryPassengers = self.fishery_pass.text()
+        
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
@@ -65,7 +74,19 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.saveTool = mc.mapTool()
         self.parent.parent.interviewSaveTool = None
         mc.setMapTool(self.p)
+        
+    def on_pbnFisheryFinished_released(self):
+        if self.parent.currentFishery == None:
+            QMessageBox.warning(self, "Fishery Error", "You must draw shapes for at least one fishery")
+            return 
+            
+        self.parent.pennies_left = 100;            
+        self.close()        
+        
+        self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
+        self.parent.nextStep()
 
+        
     def nextPolygon(self):        
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = NextPolygonGui(self.parent,flags,self.parent.pennies_left)
@@ -141,7 +162,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                     
         self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
         self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
-        
+            
         self.close()
         self.parent.end_fishery()
        

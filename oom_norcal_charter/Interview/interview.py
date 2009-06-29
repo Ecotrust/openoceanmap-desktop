@@ -63,7 +63,7 @@ class Interview(QObject):
   def nextStep(self):
       self.phase_index = self.phase_index + 1
       if self.phase[ self.phase_index ] == "cpfv":
-          new_status = "Starting Charter Boat interview"
+          new_status = "Starting CPFV interview"
           self.parent.statusbar.showMessage(new_status)
           from rec_cpfv import RecCpfvGui
           wnd = RecCpfvGui(self)
@@ -108,10 +108,21 @@ class Interview(QObject):
           self.penniesIndex = index+2
           self.originalShapeIndex = index+3 # used to link shapes across shapefiles if clipping to shapefiles is used
           self.habitatIndex = index+4
+          self.fisheryPct = index+5
+          self.fisheryTripLen = index+6
+          self.fisheryAnglerCost = index+7
+          self.fisheryDays = index+8
+          self.fisheryPassengers = index+9
+          
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
+          fields[self.fisheryPct] = QgsField("fshy_pct", QVariant.String)
+          fields[self.fisheryTripLen] = QgsField("fshy_tlen", QVariant.String)
+          fields[self.fisheryAnglerCost] = QgsField("fshy_acost", QVariant.String)
+          fields[self.fisheryDays] = QgsField("fshy_days", QVariant.String)
+          fields[self.fisheryPassengers] = QgsField("fshy_pass", QVariant.String)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -144,6 +155,13 @@ class Interview(QObject):
               fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
               fet.addAttribute(self.originalShapeIndex, QVariant(-1))
               fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
+              
+              fet.addAttribute(self.fisheryPct, QVariant(self.currentFisheryPct))
+              fet.addAttribute(self.fisheryTripLen, QVariant(self.currentFisheryTripLen))
+              fet.addAttribute(self.fisheryAnglerCost, QVariant(self.currentFisheryAnglerCost))
+              fet.addAttribute(self.fisheryDays, QVariant(self.currentFisheryDays))
+              fet.addAttribute(self.fisheryPassengers, QVariant(self.currentFisheryPassengers))
+              
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -189,6 +207,12 @@ class Interview(QObject):
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
       
+      self.currentFisheryPct = None
+      self.currentFisheryTripLen = None
+      self.currentFisheryAnglerCost = None
+      self.currentFisheryDays = None
+      self.currentFisheryPassengers = None
+      
       #Reset penny count
       self.pennies_left = 100
 
@@ -203,12 +227,8 @@ class Interview(QObject):
       # turn any  newly-added layers off to avoid clutter
       self.parent.legend.setLayerCheckboxes(QgsMapLayer.VECTOR,Qt.Unchecked)
       
-      if len(self.fisheries) > 0:
-        (fishery,value) = self.fisheries.pop()
-        wnd = SelectFisheryGui(self, fishery, value)
-        wnd.show()
-      else:
-        self.nextStep()
+      wnd = SelectFisheryGui(self)
+      wnd.show()
         
   
   # no longer used, but preserved for posterity  -- if you want to clip a layer against a shapefile, here's how:
@@ -330,6 +350,12 @@ class Interview(QObject):
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
+      
+      self.currentFisheryPct = None
+      self.currentFisheryTripLen = None
+      self.currentFisheryAnglerCost = None
+      self.currentFisheryDays = None
+      self.currentFisheryPassengers = None
     
       self.pennies_left = 100
       self.phase_index = 0
