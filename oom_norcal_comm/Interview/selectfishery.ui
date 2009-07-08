@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>478</width>
+    <width>560</width>
     <height>453</height>
    </rect>
   </property>
@@ -38,13 +38,13 @@
          <widget class="QLabel" name="fishery_text" >
           <property name="minimumSize" >
            <size>
-            <width>160</width>
+            <width>90</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>160</width>
+            <width>90</width>
             <height>16777215</height>
            </size>
           </property>
@@ -57,13 +57,13 @@
          <widget class="QComboBox" name="fishery_comboBox" >
           <property name="minimumSize" >
            <size>
-            <width>250</width>
+            <width>400</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>250</width>
+            <width>400</width>
             <height>16777215</height>
            </size>
           </property>
@@ -74,7 +74,32 @@
           </item>
           <item>
            <property name="text" >
-            <string>Deeper nearshore fishery - longline</string>
+            <string>Deeper nearshore fishery - hook and line (pre RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Deeper nearshore fishery - hook and line (post RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Deeper nearshore fishery - hook and line (cumulative)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Deeper nearshore fishery - longline (pre RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Deeper nearshore fishery - longline (post RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Deeper nearshore fishery - longline (cumulative)</string>
            </property>
           </item>
           <item>
@@ -99,12 +124,47 @@
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore fishery - longline</string>
+            <string>Nearshore fishery - hook and line (pre RCA)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore fishery - trap</string>
+            <string>Nearshore fishery - hook and line (post RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore fishery - hook and line (cumulative)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore fishery - longline (pre RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore fishery - longline (post RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore fishery - longline (cumulative)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore fishery - trap (pre RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore fishery - trap (post RCA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Nearshore fishery - trap (cumulative)</string>
            </property>
           </item>
           <item>
@@ -149,21 +209,21 @@
           </item>
          </widget>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_2" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_2" >
-       <property name="orientation" >
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0" >
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
      </item>
     </layout>
    </item>
