@@ -74,7 +74,7 @@ class RecAllGui(QDialog, Ui_RecAll):
         interviewInfo2.append(["d_acc_mod", self.dive_access_mode.text()])
         interviewInfo2.append(["d_pct_isl", self.dive_percent_island.text()])
         interviewInfo2.append(["d_pct_shr", self.dive_percent_shore.text()])
-        interviewInfo2.append(["d_method", self.dive_primary_method.text()])
+        interviewInfo2.append(["d_method", self.dive_primary_method.currentText()])
         
         interviewInfo2.append(["k_port1", self.kyk_launch_port_1.text()])
         interviewInfo2.append(["k_port2", self.kyk_launch_port_2.text()])

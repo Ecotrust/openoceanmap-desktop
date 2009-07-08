@@ -57,6 +57,11 @@
          <widget class="QComboBox" name="fishing_type_comboBox" >
           <item>
            <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
             <string>Private Vessel</string>
            </property>
           </item>
@@ -131,6 +136,43 @@
         </item>
         <item>
          <widget class="QComboBox" name="fishery_comboBox" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <item>
+           <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Abalone</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Albacore Tuna</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Anchovy/Herring (bait fish)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>California Halibut</string>
+           </property>
+          </item>
           <item>
            <property name="text" >
             <string>Dungeness Crab</string>
@@ -138,12 +180,22 @@
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish / Bottom Fishing</string>
+            <string>Humboldt Squid</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Halibut</string>
+            <string>Pacific Halibut</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Rock Scallops</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Rockfish/Bottom fish</string>
            </property>
           </item>
           <item>
@@ -153,7 +205,27 @@
           </item>
           <item>
            <property name="text" >
-            <string>Tuna</string>
+            <string>Sanddabs</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sharks/Rays</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Urchin</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Other Flatfish (soles, turbots)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Other</string>
            </property>
           </item>
          </widget>

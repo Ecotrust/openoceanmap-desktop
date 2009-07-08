@@ -1051,7 +1051,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="" >
+  <widget class="QWidget" name="layoutWidget" >
    <property name="geometry" >
     <rect>
      <x>420</x>
@@ -1386,31 +1386,53 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="dive_primary_method" >
-            <property name="enabled" >
-             <bool>true</bool>
-            </property>
+           <widget class="QComboBox" name="dive_primary_method" >
             <property name="minimumSize" >
              <size>
-              <width>200</width>
+              <width>170</width>
               <height>0</height>
              </size>
             </property>
             <property name="maximumSize" >
              <size>
-              <width>200</width>
+              <width>170</width>
               <height>16777215</height>
              </size>
             </property>
-            <property name="font" >
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string/>
-            </property>
+            <item>
+             <property name="text" >
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Free dive</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>SCUBA</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Other</string>
+             </property>
+            </item>
            </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -1855,15 +1877,11 @@
        </item>
       </layout>
       <zorder>ves_license_4</zorder>
-      <zorder>home_port_13</zorder>
-      <zorder>home_port_14</zorder>
       <zorder>home_port_15</zorder>
       <zorder>home_port_17</zorder>
       <zorder>home_port_16</zorder>
       <zorder>home_port_14</zorder>
       <zorder>home_port_10</zorder>
-      <zorder>verticalSpacer_2</zorder>
-      <zorder>DiveFishing</zorder>
      </widget>
     </item>
    </layout>
@@ -1888,7 +1906,6 @@
   <tabstop>dive_access_mode</tabstop>
   <tabstop>dive_percent_island</tabstop>
   <tabstop>dive_percent_shore</tabstop>
-  <tabstop>dive_primary_method</tabstop>
   <tabstop>kyk_launch_port_1</tabstop>
   <tabstop>kyk_launch_port_2</tabstop>
   <tabstop>kyk_launch_port_3</tabstop>
