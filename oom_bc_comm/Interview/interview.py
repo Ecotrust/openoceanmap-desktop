@@ -5,6 +5,7 @@
 # 
 # Copyright (C) 2007  Ecotrust
 # Copyright (C) 2007  Aaron Racicot
+# Copyright (C) 2007  Grant Gilron, Ecotrust Canada
 # 
 #---------------------------------------------------------------------
 # 
@@ -71,7 +72,6 @@ class Interview(QObject):
           new_status = "Interview complete"
           self.parent.statusbar.showMessage(new_status)
           self.end_interview()
-      
 
   # End interview dialog for current fishery, then start a new one
   def end_fishery(self):
@@ -91,9 +91,6 @@ class Interview(QObject):
           write_string = QString(f)
           # define fields for feature attributes
           fields = {}
-          #keySort = self.interviewInfo2.keys()
-          #keySort.sort()
-          #i = 0
           for index,value in enumerate(self.interviewInfo2):
             fields[index] = QgsField(value[0], QVariant.String)
 
@@ -109,7 +106,6 @@ class Interview(QObject):
           self.fisheryAvgPriceIndex = index+10
           self.fisheryHistPriceIndex = index+11
           
-          
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int) 
@@ -121,10 +117,6 @@ class Interview(QObject):
           fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.String)
           fields[self.fisheryAvgPriceIndex] = QgsField("favg_pr", QVariant.String)
           fields[self.fisheryHistPriceIndex] = QgsField("fhist_pr", QVariant.String)
-          
-          #fields = { 0 : QgsField("interviewer_name", QVariant.String),
-          #           1 : QgsField("participant_name", QVariant.String),
-          #           2 : QgsField("pennies", QVariant.Int) }
           
           # create an instance of vector file writer,
           # it will create the shapefile. Arguments:
@@ -143,9 +135,6 @@ class Interview(QObject):
           for capPolyInd, capPoly in enumerate(self.capturedPolygons):
               fet = QgsFeature()
               ret_val = fet.setGeometry(QgsGeometry.fromWkt(capPoly))
-              #keySort = self.interviewInfo2.keys()
-              #keySort.sort()
-              #i = 0
               for index,value in enumerate(self.interviewInfo2):
                 fet.addAttribute(index, QVariant(value[1]))
                 
@@ -181,9 +170,6 @@ class Interview(QObject):
           # track user-added layers for later clipping
           new_layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
 
-          #layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
-          #layer.setLabelOn(True)
-          
           # Set the transparency for the layer
           layer.setTransparency(190)
           
@@ -222,14 +208,12 @@ class Interview(QObject):
       # OR just proceed directly to the next fishery
       self.next_fishery()
 
-      
   def next_fishery(self): 
       # turn any  newly-added layers off to avoid clutter
       self.parent.legend.setLayerCheckboxes(QgsMapLayer.VECTOR,Qt.Unchecked)
         
       wnd = SelectFisheryGui(self)
       wnd.show()
-        
         
   # no longer used, but preserved for posterity  -- if you want to clip a layer against a shapefile, here's how:
   def create_clipped_layer(self, working_filename, working_layer):
@@ -263,7 +247,6 @@ class Interview(QObject):
       fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int)
       fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
       fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
-      
       
       # set up new shapefile name (append "_c") to prev filename
       ext_index = working_filename.find( ".shp" )
@@ -302,15 +285,6 @@ class Interview(QObject):
       info = QFileInfo(QString(clip_filename))
       clip_layer = QgsVectorLayer( clip_filename, info.completeBaseName(), "ogr" )
         
-      #prov = clip_layer.getDataProvider()
-      #allattr = prov.allAttributesList()
-      #prov.select(allattr)
-      #feat2 = QgsFeature()
-      #print "just after save"
-      #while prov.getNextFeature(feat2):
-      #    print str(feat2.featureId())+": "+feat2.attributeMap()[45].toString()
-        
-                   
       clip_layer.setTransparency(190)
       
       QgsMapLayerRegistry.instance().addMapLayer(clip_layer)
@@ -336,11 +310,9 @@ class Interview(QObject):
         QMessageBox.warning(None, "No shapes remaining", "None of the shapes in the "+fishery+" fishery were in the study region.")
         self.next_fishery()
           
-        
   def end_interview(self):
       QMessageBox.warning(self.mainwindow, "Completed", "Interview Completed")
       self.resetInterview()
-      
       
   def resetInterview(self):
       self.currentFishery = None
