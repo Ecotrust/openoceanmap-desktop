@@ -6,6 +6,7 @@
 # Copyright (C) 2007  Ecotrust
 # Copyright (C) 2007  Aaron Racicot
 # Copyright (C) 2008  Tim Welch
+# Copyright (C) 2009  Grant Gilron, Ecotrust Canada
 # 
 #---------------------------------------------------------------------
 # 
@@ -55,6 +56,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["age", self.age_line.text()])
         interviewInfo2.append(["gender", self.gender_comboBox.currentText()])
         interviewInfo2.append(["city", self.city_line.text()])
+        interviewInfo2.append(["data_sharing", self.data_sharing_comboBox.currentText()])
 
         interviewInfo2.append(["date", self.date_line.text()])        
         interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
@@ -65,31 +67,23 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
         interviewInfo2.append(["years", self.years_line.text()])
         interviewInfo2.append(["perc_incom", self.perc_income_line.text()])
-        interviewInfo2.append(["fsh_lic_id", self.fisherman_license_id_line.text()])
-        interviewInfo2.append(["fed_vsl_id", self.federal_vessel_id_line.text()])
-        interviewInfo2.append(["sta_vsl_id", self.state_vessel_id_line.text()])
         interviewInfo2.append(["v_name", self.vessel_name_line.text()])
         interviewInfo2.append(["v_len", self.vessel_length_line.text()])
         interviewInfo2.append(["v_motor", self.vessel_motor_line.text()])
-        interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
+        interviewInfo2.append(["hole_cap", self.hole_capacity_line.text()])
         interviewInfo2.append(["v_homep", self.home_port_line.text()])
         
         interviewInfo2.append(["landp_1", self.landing_port_line.text()])                       
         interviewInfo2.append(["landp_2", self.landing_port_line_2.text()])
         interviewInfo2.append(["landp_3", self.landing_port_line_3.text()])
         interviewInfo2.append(["landp_4", self.landing_port_line_4.text()])
+        interviewInfo2.append(["landp_5", self.landing_port_line_5.text()])
 
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
 
         self.parent.nextStep()
         
-        #mc = self.parent.canvas      
-        #self.p = PolygonTool(mc,self.parent)
-        #QObject.connect(self.p.o, SIGNAL("finished()"), self.nextPolygon)
-        #self.saveTool = mc.mapTool()
-        #mc.setMapTool(self.p)
-            
     def on_pbnCancel_released(self):
         cancel_choice = QMessageBox.question(self, "Really quit this interview?", "Are you sure you want to cancel and lose any entered data for this interview?", QMessageBox.Yes, QMessageBox.No)
         
@@ -97,11 +91,4 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
             self.close()
             self.parent.resetInterview()
             self.parent.parent.interviewInProgress = False
-
-    #def nextPolygon(self):
-    #    flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
-    #    wnd = NextPolygonGui(self.parent,flags)
-    #    wnd.show()
-
-
 
