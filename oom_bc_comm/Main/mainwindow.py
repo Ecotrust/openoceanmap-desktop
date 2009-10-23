@@ -5,6 +5,7 @@
 # 
 # Copyright (C) 2007  Ecotrust
 # Copyright (C) 2007  Aaron Racicot
+# Copyright (C) 2009  Grant Gilron, Ecotrust Canada
 # 
 #---------------------------------------------------------------------
 # 
@@ -69,14 +70,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # We need to initialize the window sizes
     self.splitter.setSizes([175,800])
 
-    # A place to store polygons we capture
-    #self.capturedPolygons = []
-    #self.capturedPolygonsPennies = []
-    #self.capturedPolygonsRub = []
-    #
-    # Interview info to write in shapefile
-    #self.interviewInfo = []
-
     self.layers = []
 
     # Legend for displaying layers
@@ -90,7 +83,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     self.mapscale = MapScale(self)
 
-    #Uncomment to run the pre-load of data
+    # pre-load data
     self.loadBaseDataLayers()
 
     time.sleep(2)
@@ -102,8 +95,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.canvas.setMapUnits(QGis.units(0))
     self.canvas.updateScale()
     
-    rasterList = [["Data/t180071b.tif",0,50000000],
-                  ["Data/CHART_NOAA_200K_North.tif",0,50000000],    
+    # compile list of tif files to use in the app
+    # Note: the first one is the Open Sea Nautical Chart,
+    # subsequent ones get added as Coastal Nautical Charts
+    rasterList = [["Data/3000011.tif",0,50000000],
+                  ["Data/north_coast_queen_charlotte.tif",0,50000000],    
+                  ["Data/vancouver_island.tif",0,50000000],    
                   ]    
     
     self.rasterBaseLayer = OOMLayer(self)
@@ -158,7 +155,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.legend.addRasterLegendItem("Open Sea Nautical Charts",
                                     self.openSeaRasterBaseLayer.getCls())
     
-
     # now add the study region as a vector layer
     vectorList = [] #["Data/Soorc_sr.shp"]] #,60000,1200000]]
     for vectorSet in vectorList:

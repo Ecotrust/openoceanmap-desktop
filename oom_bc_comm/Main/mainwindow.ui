@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>OpenOceanMap MLPA NC Comm.</string>
+   <string>OpenOceanMap BC Commercial</string>
   </property>
   <property name="windowIcon" >
    <iconset resource="resources.qrc" >
@@ -53,8 +53,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>366</width>
-          <height>586</height>
+          <width>355</width>
+          <height>588</height>
          </rect>
         </property>
         <attribute name="label" >
@@ -84,8 +84,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>98</width>
-          <height>28</height>
+          <width>96</width>
+          <height>26</height>
          </rect>
         </property>
         <attribute name="label" >
@@ -117,7 +117,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>21</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuInterview" >
