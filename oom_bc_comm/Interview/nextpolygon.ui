@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>493</width>
-    <height>166</height>
+    <width>500</width>
+    <height>169</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -16,6 +16,12 @@
   <layout class="QHBoxLayout" >
    <item>
     <widget class="QGroupBox" name="groupBox" >
+     <property name="font" >
+      <font>
+       <family>Tahoma</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <property name="title" >
       <string/>
      </property>
@@ -27,6 +33,12 @@
         <width>461</width>
         <height>141</height>
        </rect>
+      </property>
+      <property name="font" >
+       <font>
+        <family>Tahoma</family>
+        <pointsize>8</pointsize>
+       </font>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout" >
        <item>
@@ -47,7 +59,8 @@
            </property>
            <property name="font" >
             <font>
-             <pointsize>10</pointsize>
+             <family>Tahoma</family>
+             <pointsize>8</pointsize>
             </font>
            </property>
            <property name="text" >
@@ -74,7 +87,8 @@
            </property>
            <property name="font" >
             <font>
-             <pointsize>10</pointsize>
+             <family>Tahoma</family>
+             <pointsize>8</pointsize>
             </font>
            </property>
            <property name="text" >
@@ -96,6 +110,12 @@
              <height>16777215</height>
             </size>
            </property>
+           <property name="font" >
+            <font>
+             <family>Tahoma</family>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
            <property name="text" >
             <string/>
            </property>
@@ -103,6 +123,12 @@
          </item>
          <item>
           <spacer name="horizontalSpacer" >
+           <property name="font" >
+            <font>
+             <family>Tahoma</family>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
            <property name="orientation" >
             <enum>Qt::Horizontal</enum>
            </property>
@@ -137,7 +163,8 @@
            </property>
            <property name="font" >
             <font>
-             <pointsize>10</pointsize>
+             <family>Tahoma</family>
+             <pointsize>8</pointsize>
             </font>
            </property>
            <property name="text" >
@@ -161,7 +188,8 @@
            </property>
            <property name="font" >
             <font>
-             <pointsize>10</pointsize>
+             <family>Tahoma</family>
+             <pointsize>8</pointsize>
             </font>
            </property>
            <item>
@@ -188,6 +216,12 @@
          </item>
          <item>
           <spacer name="horizontalSpacer_2" >
+           <property name="font" >
+            <font>
+             <family>Tahoma</family>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
            <property name="orientation" >
             <enum>Qt::Horizontal</enum>
            </property>
@@ -203,6 +237,12 @@
        </item>
        <item>
         <widget class="QWidget" native="1" name="widget" >
+         <property name="font" >
+          <font>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
          <layout class="QHBoxLayout" >
           <property name="margin" >
            <number>0</number>
@@ -211,7 +251,8 @@
            <widget class="QPushButton" name="pbnShapeFinished" >
             <property name="font" >
              <font>
-              <pointsize>10</pointsize>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <property name="text" >
@@ -223,7 +264,8 @@
            <widget class="QPushButton" name="pbnShapeDiscard" >
             <property name="font" >
              <font>
-              <pointsize>10</pointsize>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <property name="text" >
@@ -235,7 +277,8 @@
            <widget class="QPushButton" name="pbnMoreShapes" >
             <property name="font" >
              <font>
-              <pointsize>10</pointsize>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <property name="text" >

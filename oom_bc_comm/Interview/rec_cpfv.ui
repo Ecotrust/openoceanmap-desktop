@@ -8,8 +8,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>961</width>
-    <height>665</height>
+    <width>853</width>
+    <height>566</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -24,7 +24,8 @@
         <widget class="QGroupBox" name="vessel_info_2" >
          <property name="font" >
           <font>
-           <pointsize>11</pointsize>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
           </font>
          </property>
          <property name="title" >
@@ -35,7 +36,8 @@
            <widget class="QWidget" native="1" name="ves_license_4" >
             <property name="font" >
              <font>
-              <pointsize>10</pointsize>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <layout class="QHBoxLayout" >
@@ -61,7 +63,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -74,6 +77,12 @@
              </item>
              <item>
               <spacer>
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <property name="orientation" >
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -104,7 +113,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -119,7 +129,8 @@
            <widget class="QWidget" native="1" name="ves_license_5" >
             <property name="font" >
              <font>
-              <pointsize>10</pointsize>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <layout class="QHBoxLayout" >
@@ -145,7 +156,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -158,6 +170,12 @@
              </item>
              <item>
               <spacer>
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <property name="orientation" >
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -188,7 +206,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -201,6 +220,12 @@
           </item>
           <item>
            <widget class="QWidget" native="1" name="widget_2" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
             <layout class="QHBoxLayout" name="horizontalLayout_2" >
              <property name="spacing" >
               <number>4</number>
@@ -210,15 +235,22 @@
              </property>
              <item>
               <widget class="QLabel" name="label_2" >
+               <property name="minimumSize" >
+                <size>
+                 <width>100</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="maximumSize" >
                 <size>
-                 <width>150</width>
+                 <width>100</width>
                  <height>16777215</height>
                 </size>
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -231,6 +263,12 @@
              </item>
              <item>
               <spacer name="horizontalSpacer" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <property name="orientation" >
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -258,7 +296,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <item>
@@ -300,7 +339,8 @@
            <widget class="QWidget" native="1" name="home_port_23" >
             <property name="font" >
              <font>
-              <pointsize>10</pointsize>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <layout class="QHBoxLayout" >
@@ -326,7 +366,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -339,6 +380,12 @@
              </item>
              <item>
               <spacer>
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <property name="orientation" >
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -369,7 +416,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -384,7 +432,8 @@
            <widget class="QWidget" native="1" name="home_port_24" >
             <property name="font" >
              <font>
-              <pointsize>10</pointsize>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <layout class="QHBoxLayout" >
@@ -410,7 +459,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -423,6 +473,12 @@
              </item>
              <item>
               <spacer>
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <property name="orientation" >
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -453,7 +509,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -468,7 +525,8 @@
            <widget class="QWidget" native="1" name="home_port_25" >
             <property name="font" >
              <font>
-              <pointsize>10</pointsize>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <layout class="QHBoxLayout" >
@@ -494,7 +552,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -507,6 +566,12 @@
              </item>
              <item>
               <spacer>
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <property name="orientation" >
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -537,7 +602,8 @@
                </property>
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
@@ -550,6 +616,12 @@
           </item>
           <item>
            <spacer name="verticalSpacer_2" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
             <property name="orientation" >
              <enum>Qt::Vertical</enum>
             </property>
@@ -570,7 +642,8 @@
       <widget class="QGroupBox" name="vessel_info" >
        <property name="font" >
         <font>
-         <pointsize>11</pointsize>
+         <family>Tahoma</family>
+         <pointsize>8</pointsize>
         </font>
        </property>
        <property name="title" >
@@ -579,6 +652,12 @@
        <layout class="QVBoxLayout" >
         <item>
          <widget class="QWidget" native="1" name="widget_3" >
+          <property name="font" >
+           <font>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
           <layout class="QHBoxLayout" name="horizontalLayout_3" >
            <property name="spacing" >
             <number>4</number>
@@ -590,7 +669,8 @@
             <widget class="QLabel" name="label_3" >
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -600,6 +680,12 @@
            </item>
            <item>
             <spacer name="horizontalSpacer_2" >
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -621,7 +707,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
             </widget>
@@ -633,7 +720,8 @@
          <widget class="QWidget" native="1" name="home_port_13" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -647,19 +735,20 @@
             <widget class="QLabel" name="type_of_charter_text_5" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>100</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>100</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -672,6 +761,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -685,6 +780,12 @@
            </item>
            <item>
             <widget class="QComboBox" name="cpfv_type_combo" >
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <item>
               <property name="text" >
                <string/>
@@ -714,7 +815,8 @@
          <widget class="QWidget" native="1" name="ves_license_3" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -740,7 +842,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -753,6 +856,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -783,7 +892,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -798,7 +908,8 @@
          <widget class="QWidget" native="1" name="vessel_length_5" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -812,19 +923,20 @@
             <widget class="QLabel" name="vessel_length_text_3" >
              <property name="minimumSize" >
               <size>
-               <width>100</width>
+               <width>80</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>100</width>
+               <width>80</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -837,6 +949,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -867,7 +985,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -882,7 +1001,8 @@
          <widget class="QWidget" native="1" name="vessel_length_4" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -896,23 +1016,24 @@
             <widget class="QLabel" name="vessel_length_text_2" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>80</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>80</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
-              <string>Vessel Length :</string>
+              <string>Vessel Length:</string>
              </property>
              <property name="wordWrap" >
               <bool>true</bool>
@@ -921,6 +1042,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -951,7 +1078,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -966,7 +1094,8 @@
          <widget class="QWidget" native="1" name="home_port_12" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -980,19 +1109,20 @@
             <widget class="QLabel" name="home_port_text_2" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>120</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>120</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1005,6 +1135,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -1035,7 +1171,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1048,6 +1185,12 @@
         </item>
         <item>
          <widget class="QWidget" native="1" name="widget" >
+          <property name="font" >
+           <font>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
           <layout class="QHBoxLayout" name="horizontalLayout" >
            <property name="spacing" >
             <number>4</number>
@@ -1065,7 +1208,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1075,6 +1219,12 @@
            </item>
            <item>
             <spacer name="spacer" >
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -1096,7 +1246,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
             </widget>
@@ -1108,7 +1259,8 @@
          <widget class="QWidget" native="1" name="home_port_11" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -1134,7 +1286,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1147,6 +1300,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -1177,7 +1336,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1198,7 +1358,8 @@
           </property>
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -1212,23 +1373,24 @@
             <widget class="QLabel" name="landing_port_text_6" >
              <property name="minimumSize" >
               <size>
-               <width>200</width>
+               <width>220</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>200</width>
+               <width>220</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
-              <string>Average # of days charter boat fishing per year:</string>
+              <string>Average number of days charter boat fishing per year:</string>
              </property>
              <property name="wordWrap" >
               <bool>true</bool>
@@ -1237,6 +1399,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -1267,7 +1435,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1282,7 +1451,8 @@
          <widget class="QWidget" native="1" name="home_port_15" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -1296,19 +1466,20 @@
             <widget class="QLabel" name="landing_port_text_7" >
              <property name="minimumSize" >
               <size>
-               <width>200</width>
+               <width>220</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>200</width>
+               <width>220</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1321,6 +1492,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -1351,7 +1528,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1366,7 +1544,8 @@
          <widget class="QWidget" native="1" name="home_port_18" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -1380,19 +1559,20 @@
             <widget class="QLabel" name="landing_port_text_12" >
              <property name="minimumSize" >
               <size>
-               <width>200</width>
+               <width>220</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>200</width>
+               <width>220</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1405,6 +1585,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -1435,7 +1621,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1450,7 +1637,8 @@
          <widget class="QWidget" native="1" name="home_port_16" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -1464,19 +1652,20 @@
             <widget class="QLabel" name="landing_port_text_8" >
              <property name="minimumSize" >
               <size>
-               <width>200</width>
+               <width>220</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>200</width>
+               <width>220</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1489,6 +1678,12 @@
            </item>
            <item>
             <spacer>
+             <property name="font" >
+              <font>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
              </property>
@@ -1519,7 +1714,8 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <family>Tahoma</family>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1530,19 +1726,6 @@
           </layout>
          </widget>
         </item>
-        <item>
-         <spacer name="verticalSpacer" >
-          <property name="orientation" >
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0" >
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
        </layout>
       </widget>
      </item>
@@ -1552,7 +1735,8 @@
         <widget class="QGroupBox" name="groupBox_3" >
          <property name="font" >
           <font>
-           <pointsize>11</pointsize>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
           </font>
          </property>
          <property name="title" >
@@ -1561,6 +1745,12 @@
          <layout class="QVBoxLayout" name="verticalLayout_6" >
           <item>
            <widget class="QWidget" native="1" name="widget_20" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_5" >
              <property name="spacing" >
               <number>4</number>
@@ -1581,16 +1771,23 @@
               <widget class="QLabel" name="label_20" >
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
-                <string>Dungeness Crab</string>
+                <string>DUNGENESS CRAB</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_21" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_16" >
                 <property name="spacing" >
                  <number>4</number>
@@ -1611,7 +1808,8 @@
                  <widget class="QLabel" name="label_21" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -1621,6 +1819,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1634,6 +1838,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_target_dcrab" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -1642,7 +1852,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -1652,6 +1863,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_22" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_17" >
                 <property name="spacing" >
                  <number>4</number>
@@ -1672,7 +1889,8 @@
                  <widget class="QLabel" name="label_22" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -1682,6 +1900,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1695,6 +1919,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_trip_len_dcrab" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -1703,7 +1933,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -1713,6 +1944,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_23" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_18" >
                 <property name="spacing" >
                  <number>4</number>
@@ -1733,7 +1970,8 @@
                  <widget class="QLabel" name="label_23" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -1743,6 +1981,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1756,6 +2000,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_angler_cost_dcrab" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -1764,7 +2014,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -1777,6 +2028,12 @@
           </item>
           <item>
            <widget class="QWidget" native="1" name="widget_16" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_4" >
              <property name="spacing" >
               <number>4</number>
@@ -1797,16 +2054,23 @@
               <widget class="QLabel" name="label_16" >
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
-                <string>Groundfish / Bottom Fishing</string>
+                <string>GROUNDFISH / BOTTOM FISHING</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_17" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_13" >
                 <property name="spacing" >
                  <number>4</number>
@@ -1827,7 +2091,8 @@
                  <widget class="QLabel" name="label_17" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -1837,6 +2102,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1850,6 +2121,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_target_groundfish" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -1858,7 +2135,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -1868,6 +2146,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_18" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_14" >
                 <property name="spacing" >
                  <number>4</number>
@@ -1888,7 +2172,8 @@
                  <widget class="QLabel" name="label_18" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -1898,6 +2183,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1911,6 +2202,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_trip_len_groundfish" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -1919,7 +2216,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -1929,6 +2227,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_19" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_15" >
                 <property name="spacing" >
                  <number>4</number>
@@ -1949,7 +2253,8 @@
                  <widget class="QLabel" name="label_19" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -1959,6 +2264,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1972,6 +2283,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_angler_cost_groundfish" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -1980,7 +2297,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -1993,6 +2311,12 @@
           </item>
           <item>
            <widget class="QWidget" native="1" name="widget_12" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_3" >
              <property name="spacing" >
               <number>4</number>
@@ -2013,16 +2337,23 @@
               <widget class="QLabel" name="label_12" >
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
-                <string>Halibut</string>
+                <string>HALIBUT</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_13" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_10" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2043,7 +2374,8 @@
                  <widget class="QLabel" name="label_13" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2053,6 +2385,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2066,6 +2404,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_target_halibut" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2074,7 +2418,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2084,6 +2429,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_14" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_11" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2104,7 +2455,8 @@
                  <widget class="QLabel" name="label_14" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2114,6 +2466,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2127,6 +2485,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_trip_len_halibut" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2135,7 +2499,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2145,6 +2510,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_15" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_12" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2165,7 +2536,8 @@
                  <widget class="QLabel" name="label_15" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2175,6 +2547,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2188,6 +2566,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_angler_cost_halibut" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2196,7 +2580,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2209,6 +2594,12 @@
           </item>
           <item>
            <widget class="QWidget" native="1" name="widget_6" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_2" >
              <property name="spacing" >
               <number>4</number>
@@ -2229,16 +2620,23 @@
               <widget class="QLabel" name="label_8" >
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
-                <string>Salmon</string>
+                <string>SALMON</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_8" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_7" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2259,7 +2657,8 @@
                  <widget class="QLabel" name="label_9" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2269,6 +2668,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2282,6 +2687,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_target_salmon" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2290,7 +2701,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2300,6 +2712,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_10" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_8" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2320,7 +2738,8 @@
                  <widget class="QLabel" name="label_10" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2330,6 +2749,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2343,6 +2768,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_trip_len_salmon" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2351,7 +2782,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2361,6 +2793,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_11" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_9" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2381,7 +2819,8 @@
                  <widget class="QLabel" name="label_11" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2391,6 +2830,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2404,6 +2849,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_angler_cost_salmon" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2412,7 +2863,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2425,6 +2877,12 @@
           </item>
           <item>
            <widget class="QWidget" native="1" name="widget_4" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout" >
              <property name="spacing" >
               <number>4</number>
@@ -2445,16 +2903,23 @@
               <widget class="QLabel" name="label_4" >
                <property name="font" >
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
                 </font>
                </property>
                <property name="text" >
-                <string>Tuna</string>
+                <string>TUNA</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_5" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_4" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2475,7 +2940,8 @@
                  <widget class="QLabel" name="label_5" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2485,6 +2951,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2498,6 +2970,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_target_tuna" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2506,7 +2984,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2516,6 +2995,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_7" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_5" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2536,7 +3021,8 @@
                  <widget class="QLabel" name="label_6" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2546,6 +3032,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2559,6 +3051,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_trip_len_tuna" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2567,7 +3065,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2577,6 +3076,12 @@
              </item>
              <item>
               <widget class="QWidget" native="1" name="widget_9" >
+               <property name="font" >
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_6" >
                 <property name="spacing" >
                  <number>4</number>
@@ -2597,7 +3102,8 @@
                  <widget class="QLabel" name="label_7" >
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                   <property name="text" >
@@ -2607,6 +3113,12 @@
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_3" >
+                  <property name="font" >
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="orientation" >
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2620,6 +3132,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="cpfv_angler_cost_tuna" >
+                  <property name="minimumSize" >
+                   <size>
+                    <width>50</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize" >
                    <size>
                     <width>50</width>
@@ -2628,7 +3146,8 @@
                   </property>
                   <property name="font" >
                    <font>
-                    <pointsize>10</pointsize>
+                    <family>Tahoma</family>
+                    <pointsize>8</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -2648,6 +3167,12 @@
    </item>
    <item>
     <widget class="QWidget" native="1" name="button_box" >
+     <property name="font" >
+      <font>
+       <family>Tahoma</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <layout class="QHBoxLayout" >
       <property name="spacing" >
        <number>2</number>
@@ -2657,6 +3182,12 @@
       </property>
       <item>
        <spacer>
+        <property name="font" >
+         <font>
+          <family>Tahoma</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
         </property>
@@ -2669,26 +3200,28 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pbnCancel" >
-        <property name="font" >
-         <font>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="text" >
-         <string>Cancel</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="pbnFinished" >
         <property name="font" >
          <font>
-          <pointsize>10</pointsize>
+          <family>Tahoma</family>
+          <pointsize>8</pointsize>
          </font>
         </property>
         <property name="text" >
          <string>Continue</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnCancel" >
+        <property name="font" >
+         <font>
+          <family>Tahoma</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Cancel</string>
         </property>
        </widget>
       </item>
@@ -2698,7 +3231,6 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>pbnFinished</tabstop>
   <tabstop>pbnCancel</tabstop>
   <tabstop>cpfv_num_own_line</tabstop>
   <tabstop>cpfv_yr_own_line</tabstop>

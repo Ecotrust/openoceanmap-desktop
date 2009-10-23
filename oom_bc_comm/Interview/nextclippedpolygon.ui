@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>173</height>
+    <height>155</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -21,6 +21,12 @@
     <layout class="QHBoxLayout" >
      <item>
       <widget class="QWidget" native="1" name="widget" >
+       <property name="font" >
+        <font>
+         <family>Tahoma</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
        <layout class="QHBoxLayout" >
         <property name="spacing" >
          <number>6</number>
@@ -51,6 +57,12 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
           <property name="text" >
            <string>Current Fishery :</string>
           </property>
@@ -58,6 +70,12 @@
         </item>
         <item>
          <spacer>
+          <property name="font" >
+           <font>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
           <property name="orientation" >
            <enum>Qt::Horizontal</enum>
           </property>
@@ -76,6 +94,12 @@
             <width>200</width>
             <height>0</height>
            </size>
+          </property>
+          <property name="font" >
+           <font>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
+           </font>
           </property>
          </widget>
         </item>
@@ -99,7 +123,8 @@
        </property>
        <property name="font" >
         <font>
-         <pointsize>10</pointsize>
+         <family>Tahoma</family>
+         <pointsize>8</pointsize>
         </font>
        </property>
        <property name="text" >
@@ -109,6 +134,12 @@
      </item>
      <item>
       <spacer>
+       <property name="font" >
+        <font>
+         <family>Tahoma</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
        <property name="orientation" >
         <enum>Qt::Horizontal</enum>
        </property>
@@ -136,7 +167,8 @@
        </property>
        <property name="font" >
         <font>
-         <pointsize>10</pointsize>
+         <family>Tahoma</family>
+         <pointsize>8</pointsize>
         </font>
        </property>
        <property name="text" >
@@ -163,7 +195,8 @@
        </property>
        <property name="font" >
         <font>
-         <pointsize>10</pointsize>
+         <family>Tahoma</family>
+         <pointsize>8</pointsize>
         </font>
        </property>
        <property name="text" >
@@ -185,6 +218,12 @@
          <height>16777215</height>
         </size>
        </property>
+       <property name="font" >
+        <font>
+         <family>Tahoma</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
        <property name="text" >
         <string/>
        </property>
@@ -196,6 +235,12 @@
     <layout class="QHBoxLayout" >
      <item>
       <widget class="QWidget" native="1" name="widget_2" >
+       <property name="font" >
+        <font>
+         <family>Tahoma</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
        <layout class="QHBoxLayout" >
         <property name="spacing" >
          <number>6</number>
@@ -205,6 +250,12 @@
         </property>
         <item>
          <spacer>
+          <property name="font" >
+           <font>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
           <property name="orientation" >
            <enum>Qt::Horizontal</enum>
           </property>
@@ -220,7 +271,8 @@
          <widget class="QPushButton" name="pbnNextShape" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <family>Tahoma</family>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text" >

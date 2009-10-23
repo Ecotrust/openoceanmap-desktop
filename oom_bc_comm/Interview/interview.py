@@ -5,7 +5,7 @@
 # 
 # Copyright (C) 2007  Ecotrust
 # Copyright (C) 2007  Aaron Racicot
-# Copyright (C) 2007  Grant Gilron, Ecotrust Canada
+# Copyright (C) 2009  Grant Gilron, Ecotrust Canada
 # 
 #---------------------------------------------------------------------
 # 
@@ -104,7 +104,8 @@ class Interview(QObject):
           self.fisheryHookIndex = index+8
           self.fisheryIncIndex = index+9
           self.fisheryAvgPriceIndex = index+10
-          self.fisheryHistPriceIndex = index+11
+          self.fisheryAvgPoundsPerTripIndex = index+11
+          self.fisheryHistPriceIndex = index+12
           
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
@@ -116,6 +117,7 @@ class Interview(QObject):
           fields[self.fisheryHookIndex] = QgsField("fnum_hooks", QVariant.String)
           fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.String)
           fields[self.fisheryAvgPriceIndex] = QgsField("favg_pr", QVariant.String)
+          fields[self.fisheryAvgPoundsPerTripIndex] = QgsField("favg_pp_tr", QVariant.String)
           fields[self.fisheryHistPriceIndex] = QgsField("fhist_pr", QVariant.String)
           
           # create an instance of vector file writer,
@@ -148,6 +150,7 @@ class Interview(QObject):
               fet.addAttribute(self.fisheryHookIndex, QVariant(self.capturedPolygonsFisheryHooks[capPolyInd]))
               fet.addAttribute(self.fisheryIncIndex, QVariant(self.capturedPolygonsFisheryIncome[capPolyInd]))
               fet.addAttribute(self.fisheryAvgPriceIndex, QVariant(self.capturedPolygonsFisheryAvgPrice[capPolyInd]))
+              fet.addAttribute(self.fisheryAvgPoundsPerTripIndex, QVariant(self.capturedPolygonsFisheryAvgPoundsPerTrip[capPolyInd]))
               fet.addAttribute(self.fisheryHistPriceIndex, QVariant(self.capturedPolygonsFisheryHistPrice[capPolyInd]))
               
               writer.addFeature(fet)
@@ -197,15 +200,13 @@ class Interview(QObject):
       self.capturedPolygonsFisheryHooks = []
       self.capturedPolygonsFisheryIncome = []
       self.capturedPolygonsFisheryAvgPrice = []
+      self.capturedPolygonsFisheryAvgPoundsPerTrip = []
       self.capturedPolygonsFisheryHistPrice = []
       
       #Reset penny count
       self.pennies_left = 100
 
-      # EITHER create a shapefile clipped to the study region and reassign pennies # NO LONGER USED
-      #self.create_clipped_layer( str(f), new_layer )
-      
-      # OR just proceed directly to the next fishery
+      # proceed to the next fishery
       self.next_fishery()
 
   def next_fishery(self): 
@@ -322,6 +323,7 @@ class Interview(QObject):
       self.currentFisheryHooks = 0
       self.currentFisheryIncome = 0
       self.currentFisheryAvgPrice = 0
+      self.currentFisheryAvgPoundsPerTrip = 0
       self.currentFisheryHistPrice = 0
         
       # A place to store polygons we capture
@@ -336,6 +338,7 @@ class Interview(QObject):
       self.capturedPolygonsFisheryHooks = []
       self.capturedPolygonsFisheryIncome = []
       self.capturedPolygonsFisheryAvgPrice = []
+      self.capturedPolygonsFisheryAvgPoundsPerTrip = []
       self.capturedPolygonsFisheryHistPrice = []
     
       self.pennies_left = 100

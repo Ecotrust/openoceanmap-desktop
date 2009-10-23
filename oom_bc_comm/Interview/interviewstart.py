@@ -56,7 +56,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["age", self.age_line.text()])
         interviewInfo2.append(["gender", self.gender_comboBox.currentText()])
         interviewInfo2.append(["city", self.city_line.text()])
-        interviewInfo2.append(["data_sharing", self.data_sharing_comboBox.currentText()])
+        interviewInfo2.append(["data_share", self.data_sharing_comboBox.currentText()])
 
         interviewInfo2.append(["date", self.date_line.text()])        
         interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])

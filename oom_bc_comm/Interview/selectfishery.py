@@ -5,6 +5,7 @@
 # 
 # Copyright (C) 2007  Ecotrust
 # Copyright (C) 2007  Aaron Racicot
+# Copyright (C) 2009  Grant Gilron, Ecotrust Canada
 # 
 #---------------------------------------------------------------------
 # 
@@ -26,16 +27,17 @@
 # 
 #---------------------------------------------------------------------
 
-
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
+
 # Custom Tools
 from Tools.polygontool import *
-#from nextpolygon import *
+
 # UI specific includes
 from selectfishery_ui import Ui_SelectFishery
 from nextpolygon_ui import Ui_NextPolygon
@@ -51,7 +53,6 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.setupUi(self)
         self.parent = parent
         
-
     def on_pbnStartShapes_released(self):    
         #Get fishery value
         cur_fishery = self.fishery_comboBox.currentText()
@@ -61,15 +62,15 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         else:
             self.parent.currentFishery = cur_fishery    
             
+        self.parent.currentFisheryIncome = self.fishery_perc_income.text()
         self.parent.currentFisheryExp = self.fishery_yrs_exp.text()
         self.parent.currentFisheryEffort = self.fishery_effort.text()
         self.parent.currentFisheryEffortDays = self.fishery_effort_days.text()
         self.parent.currentFisheryHooks = self.fishery_traps_hooks.text()
-        self.parent.currentFisheryIncome = self.fishery_perc_income.text()
         self.parent.currentFisheryAvgPrice = self.fishery_avg_price.text()
+        self.parent.currentFisheryAvgPoundsPerTrip = self.fishery_avg_pounds_per_trip.text()
         self.parent.currentFisheryHistPrice = self.fishery_hist_avg_price.text()
         
-    
         self.close()
         mc = self.parent.canvas      
         self.p = PolygonTool(mc,self.parent)
@@ -88,13 +89,11 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         
         self.parent.canvas.setMapTool(self.parent.parent.toolZoomIn)
         self.parent.nextStep()
-
         
     def nextPolygon(self):        
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 
         wnd = NextPolygonGui(self.parent,flags,self.parent.pennies_left)
         wnd.show()
-
 
 class NextPolygonGui(QDialog, Ui_NextPolygon):
     def __init__(self, parent, fl, pennies_left):
@@ -123,12 +122,13 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+            self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
             self.parent.capturedPolygonsFisheryExp.append(self.parent.currentFisheryExp)
             self.parent.capturedPolygonsFisheryEffort.append(self.parent.currentFisheryEffort)
             self.parent.capturedPolygonsFisheryEffortDays.append(self.parent.currentFisheryEffortDays)
             self.parent.capturedPolygonsFisheryHooks.append(self.parent.currentFisheryHooks)
-            self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
             self.parent.capturedPolygonsFisheryAvgPrice.append(self.parent.currentFisheryAvgPrice)
+            self.parent.capturedPolygonsFisheryAvgPoundsPerTrip.append(self.parent.currentFisheryAvgPoundsPerTrip)
             self.parent.capturedPolygonsFisheryHistPrice.append(self.parent.currentFisheryHistPrice)
             
         self.close()
@@ -179,6 +179,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         self.parent.capturedPolygonsFisheryHooks.append(self.parent.currentFisheryHooks)
         self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
         self.parent.capturedPolygonsFisheryAvgPrice.append(self.parent.currentFisheryAvgPrice)
+        self.parent.capturedPolygonsFisheryAvgPoundsPerTrip.append(self.parent.currentFisheryAvgPoundsPerTrip)
         self.parent.capturedPolygonsFisheryHistPrice.append(self.parent.currentFisheryHistPrice)
             
         self.close()
@@ -186,7 +187,6 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
        
         # turn off the draw tool
         self.parent.canvas.setMapTool(self.parent.parent.toolPan)
-        
 
     def nextPolygon(self):
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 

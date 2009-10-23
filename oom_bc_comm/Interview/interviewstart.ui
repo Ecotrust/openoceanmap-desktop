@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>774</width>
-    <height>606</height>
+    <width>778</width>
+    <height>494</height>
    </rect>
+  </property>
+  <property name="font" >
+   <font>
+    <family>Tahoma</family>
+   </font>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Interview</string>
@@ -24,18 +29,20 @@
           <widget class="QGroupBox" name="interviewee" >
            <property name="font" >
             <font>
-             <pointsize>10</pointsize>
+             <pointsize>8</pointsize>
             </font>
            </property>
            <property name="title" >
             <string>Interviewee</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2" >
-            <property name="spacing" >
-             <number>0</number>
-            </property>
             <item>
              <widget class="QWidget" native="1" name="interviewee_first_name" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" >
                <property name="spacing" >
                 <number>4</number>
@@ -56,6 +63,11 @@
                    <width>100</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <property name="text" >
                   <string>First Name:</string>
@@ -79,6 +91,11 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
@@ -89,6 +106,11 @@
             </item>
             <item>
              <widget class="QWidget" native="1" name="interviewee_last_name" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" >
                <property name="spacing" >
                 <number>4</number>
@@ -109,6 +131,11 @@
                    <width>100</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <property name="text" >
                   <string>Last Name:</string>
@@ -132,6 +159,11 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
@@ -142,6 +174,11 @@
             </item>
             <item>
              <widget class="QWidget" native="1" name="age" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" >
                <property name="spacing" >
                 <number>4</number>
@@ -162,6 +199,11 @@
                    <width>100</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <property name="text" >
                   <string>Age:</string>
@@ -185,6 +227,11 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
@@ -195,6 +242,11 @@
             </item>
             <item>
              <widget class="QWidget" native="1" name="gender" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" >
                <property name="spacing" >
                 <number>4</number>
@@ -216,6 +268,11 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string>Gender:</string>
                  </property>
@@ -228,6 +285,11 @@
                    <width>200</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <item>
                   <property name="text" >
@@ -251,6 +313,11 @@
             </item>
             <item>
              <widget class="QWidget" native="1" name="age_2" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" name="_2" >
                <property name="spacing" >
                 <number>4</number>
@@ -271,6 +338,11 @@
                    <width>100</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <property name="text" >
                   <string>City of residence:</string>
@@ -294,9 +366,89 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="data_sharing" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_7" >
+               <item>
+                <widget class="QLabel" name="data_sharing_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Data Sharing:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="data_sharing_comboBox" >
+                 <property name="maximumSize" >
+                  <size>
+                   <width>320</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <item>
+                  <property name="text" >
+                   <string/>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text" >
+                   <string>Private (not available in public form, private usage only)</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text" >
+                   <string>Amalgamated (only shown publically when combined with other fishers data)</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text" >
+                   <string>Complete (can be shown publically as a stand alone dataset)</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text" >
+                   <string>Limited (none of the above, individual data sharing agreement)</string>
+                  </property>
+                 </item>
                 </widget>
                </item>
               </layout>
@@ -309,7 +461,7 @@
           <widget class="QGroupBox" name="interviewee_2" >
            <property name="font" >
             <font>
-             <pointsize>10</pointsize>
+             <pointsize>8</pointsize>
             </font>
            </property>
            <property name="title" >
@@ -321,6 +473,11 @@
             </property>
             <item>
              <widget class="QWidget" native="1" name="interviewee_first_name_2" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" name="_3" >
                <property name="spacing" >
                 <number>4</number>
@@ -341,6 +498,11 @@
                    <width>180</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <property name="text" >
                   <string>Interview Date (mm/dd/yyyy):</string>
@@ -364,6 +526,11 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
@@ -374,6 +541,11 @@
             </item>
             <item>
              <widget class="QWidget" native="1" name="interviewee_first_name_3" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" name="_8" >
                <property name="spacing" >
                 <number>4</number>
@@ -394,6 +566,11 @@
                    <width>180</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <property name="text" >
                   <string>First Name:</string>
@@ -417,6 +594,11 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
@@ -427,6 +609,11 @@
             </item>
             <item>
              <widget class="QWidget" native="1" name="interviewee_first_name_4" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" name="_9" >
                <property name="spacing" >
                 <number>4</number>
@@ -447,6 +634,11 @@
                    <width>180</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <property name="text" >
                   <string>Last Name:</string>
@@ -470,6 +662,11 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
@@ -480,6 +677,11 @@
             </item>
             <item>
              <widget class="QWidget" native="1" name="interviewee_first_name_5" >
+              <property name="font" >
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <layout class="QHBoxLayout" name="_10" >
                <property name="spacing" >
                 <number>4</number>
@@ -500,6 +702,11 @@
                    <width>180</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
                  </property>
                  <property name="text" >
                   <string>Interviewer Mood:</string>
@@ -523,6 +730,11 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
@@ -538,6 +750,11 @@
        </item>
        <item>
         <spacer name="verticalSpacer" >
+         <property name="font" >
+          <font>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
          <property name="orientation" >
           <enum>Qt::Vertical</enum>
          </property>
@@ -555,7 +772,7 @@
       <widget class="QGroupBox" name="vessel_info" >
        <property name="font" >
         <font>
-         <pointsize>10</pointsize>
+         <pointsize>8</pointsize>
         </font>
        </property>
        <property name="title" >
@@ -563,622 +780,10 @@
        </property>
        <layout class="QVBoxLayout" name="verticalLayout" >
         <item>
-         <widget class="QWidget" native="1" name="home_port_5" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" name="_11" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="years_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Years experience:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="years_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="home_port_2" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" name="_4" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="perc_income_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>% income from fishing:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="perc_income_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="home_port_3" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" name="_5" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="fisherman_license_id_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Fisherman License ID:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="fisherman_license_id_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="ves_license" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="federal_vessel_id_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Federal Vessel ID:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="federal_vessel_id_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="ves_license_2" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" name="_13" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="state_vessel_id_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Dept F&amp;G Boat Number:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="state_vessel_id_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="vessel_length_4" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" name="_6" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="vessel_length_text_2" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Vessel name :</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="vessel_name_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="vessel_length" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="vessel_length_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Vessel length :</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="vessel_length_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="vessel_length_2" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" name="_14" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="vessel_motor_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Vessel motor (HP):</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="vessel_motor_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" native="1" name="vessel_length_3" >
-          <property name="font" >
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <layout class="QHBoxLayout" name="_15" >
-           <property name="spacing" >
-            <number>4</number>
-           </property>
-           <property name="margin" >
-            <number>4</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="haul_capacity_text" >
-             <property name="minimumSize" >
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string>Haul Capacity (lb):</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="haul_capacity_line" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font" >
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
          <widget class="QWidget" native="1" name="home_port" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" >
@@ -1204,7 +809,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1231,7 +836,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1243,10 +848,418 @@
          </widget>
         </item>
         <item>
-         <widget class="QWidget" native="1" name="home_port_4" >
+         <widget class="QWidget" native="1" name="years_experience" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" name="_11" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="margin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="years_text" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>Years experience:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="years_line" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" native="1" name="perc_income" >
+          <property name="font" >
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" name="_4" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="margin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="perc_income_text" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>% income from fishing:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="perc_income_line" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" native="1" name="vessel_name" >
+          <property name="font" >
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" name="_6" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="margin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="vessel_name_text" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>Fish Vessel name:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="vessel_name_line" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" native="1" name="vessel_length" >
+          <property name="font" >
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="margin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="vessel_length_text" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>Length of Vessel (ft):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="vessel_length_line" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" native="1" name="vessel_motor" >
+          <property name="font" >
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" name="_14" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="margin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="vessel_motor_text" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>Vessel motor (HP):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="vessel_motor_line" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" native="1" name="vessel_hole_capacity" >
+          <property name="font" >
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" name="_15" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="margin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="hole_capacity_text" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>Hole Capacity (lb):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="hole_capacity_line" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" native="1" name="landing_port" >
+          <property name="font" >
+           <font>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" name="_7" >
@@ -1272,7 +1285,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1299,7 +1312,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1311,10 +1324,10 @@
          </widget>
         </item>
         <item>
-         <widget class="QWidget" native="1" name="home_port_7" >
+         <widget class="QWidget" native="1" name="landing_port_2" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" name="_16" >
@@ -1340,7 +1353,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1367,7 +1380,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1381,10 +1394,10 @@
          </widget>
         </item>
         <item>
-         <widget class="QWidget" native="1" name="home_port_8" >
+         <widget class="QWidget" native="1" name="landing_port_3" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" name="_17" >
@@ -1410,7 +1423,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1437,7 +1450,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1449,10 +1462,10 @@
          </widget>
         </item>
         <item>
-         <widget class="QWidget" native="1" name="home_port_9" >
+         <widget class="QWidget" native="1" name="landing_port_4" >
           <property name="font" >
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <layout class="QHBoxLayout" name="_18" >
@@ -1478,7 +1491,7 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1505,7 +1518,75 @@
              </property>
              <property name="font" >
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" native="1" name="landing_port_5" >
+          <property name="font" >
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <layout class="QHBoxLayout" name="_13" >
+           <property name="spacing" >
+            <number>4</number>
+           </property>
+           <property name="margin" >
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="landing_port_text_5" >
+             <property name="minimumSize" >
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text" >
+              <string>Landing Port 5:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="landing_port_line_5" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize" >
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font" >
+              <font>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="text" >
@@ -1523,6 +1604,11 @@
    </item>
    <item>
     <widget class="QWidget" native="1" name="button_box" >
+     <property name="font" >
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <layout class="QHBoxLayout" name="_19" >
       <property name="spacing" >
        <number>2</number>
@@ -1532,6 +1618,11 @@
       </property>
       <item>
        <spacer>
+        <property name="font" >
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
         </property>
@@ -1544,26 +1635,26 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pbnCancel" >
-        <property name="font" >
-         <font>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="text" >
-         <string>Cancel</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="pbnSelectFishery" >
         <property name="font" >
          <font>
-          <pointsize>10</pointsize>
+          <pointsize>8</pointsize>
          </font>
         </property>
         <property name="text" >
          <string>Select Fishery</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnCancel" >
+        <property name="font" >
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Cancel</string>
         </property>
        </widget>
       </item>
@@ -1578,24 +1669,23 @@
   <tabstop>age_line</tabstop>
   <tabstop>gender_comboBox</tabstop>
   <tabstop>city_line</tabstop>
+  <tabstop>data_sharing_comboBox</tabstop>
   <tabstop>date_line</tabstop>
   <tabstop>interviewer1_first_name_line</tabstop>
   <tabstop>interviewer1_last_name_line</tabstop>
   <tabstop>mood_line</tabstop>
+  <tabstop>home_port_line</tabstop>
   <tabstop>years_line</tabstop>
   <tabstop>perc_income_line</tabstop>
-  <tabstop>fisherman_license_id_line</tabstop>
-  <tabstop>federal_vessel_id_line</tabstop>
-  <tabstop>state_vessel_id_line</tabstop>
   <tabstop>vessel_name_line</tabstop>
   <tabstop>vessel_length_line</tabstop>
   <tabstop>vessel_motor_line</tabstop>
-  <tabstop>haul_capacity_line</tabstop>
-  <tabstop>home_port_line</tabstop>
+  <tabstop>hole_capacity_line</tabstop>
   <tabstop>landing_port_line</tabstop>
   <tabstop>landing_port_line_2</tabstop>
   <tabstop>landing_port_line_3</tabstop>
   <tabstop>landing_port_line_4</tabstop>
+  <tabstop>landing_port_line_5</tabstop>
   <tabstop>pbnSelectFishery</tabstop>
   <tabstop>pbnCancel</tabstop>
  </tabstops>

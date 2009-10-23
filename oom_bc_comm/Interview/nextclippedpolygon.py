@@ -69,7 +69,6 @@ class NextClippedPolygonGui(QDialog, Ui_NextClippedPolygon):
         
         self.next_clipped_polygon()
         
-
     def on_pbnNextShape_released(self):    
         # save the pennies for current shape
         num_pennies = self.line_1.text()
