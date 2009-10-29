@@ -100,8 +100,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # subsequent ones get added as Coastal Nautical Charts
     rasterList = [["Data/3000011.tif",0,50000000],
                   ["Data/north_coast_queen_charlotte.tif",0,50000000],    
-                  ["Data/vancouver_island.tif",0,50000000],    
-                  ]    
+                  ["Data/vancouver_island.tif",0,50000000],]    
     
     self.rasterBaseLayer = OOMLayer(self)
     self.openSeaRasterBaseLayer = OOMLayer(self)
