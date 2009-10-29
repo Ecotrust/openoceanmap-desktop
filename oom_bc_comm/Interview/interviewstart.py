@@ -55,6 +55,15 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["lname", self.interviewee_last_name_line.text()])
         interviewInfo2.append(["age", self.age_line.text()])
         interviewInfo2.append(["gender", self.gender_comboBox.currentText()])
+        
+        # HOW IS THIS DONE!???
+        #interviewInfo2.append(["gender", self.gender_groupBox.currentText()])
+        #if self.radioButtonMale.isChecked:
+        #    interviewInfo2.append(["gender", "Male"])
+        #
+        #if self.radioButtonFemale.isChecked:
+        #    interviewInfo2.append(["gender", "Female"])
+
         interviewInfo2.append(["city", self.city_line.text()])
         interviewInfo2.append(["data_share", self.data_sharing_comboBox.currentText()])
 
