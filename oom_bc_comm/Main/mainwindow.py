@@ -44,8 +44,7 @@ from mainwindow_ui import Ui_MainWindow
 # General system includes
 import sys,string,time
 
-  
-# Main window used for houseing the canvas, toolbars, and dialogs
+# Main window used for housing the canvas, tool bars, and dialogs
 class MainWindow(QMainWindow, Ui_MainWindow):
 
   def __init__(self,splash):
@@ -67,6 +66,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # lay our widgets out in the main window
     self.layout = QVBoxLayout(self.frameMap)
     self.layout.addWidget(self.canvas)
+
     # We need to initialize the window sizes
     self.splitter.setSizes([175,800])
 
@@ -86,7 +86,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     # pre-load data
     self.loadBaseDataLayers()
 
+    # give them some time to enjoy the splash screen
     time.sleep(2)
+    
     self.splash.hide()
 
   def loadBaseDataLayers(self):
@@ -106,6 +108,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     self.openSeaRasterBaseLayer = OOMLayer(self)
     
     self.extent_raster = None
+
     for i in range(len(rasterList)):
       rasterSet = rasterList[i]
       
@@ -118,7 +121,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
-      if i == 1:
+      # set the initial extent on the entire BC Coast
+      if i == 0:
         self.extent_raster = layer        
 
       if self.srs == None:
@@ -144,36 +148,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       
       if i == 0:
         self.openSeaRasterBaseLayer.addLayerItem(layer,cl)
-        cl.setVisible(False) # off by default
+        cl.setVisible(True) # on by default
       else:
         self.rasterBaseLayer.addLayerItem(layer,cl)
-      
-    #Add base raster items to legend
-    self.legend.addRasterLegendItem("Coastal Nautical Charts",
+            
+    # Add base raster items to legend
+    self.legend.addRasterLegendItem("BC Coast Chart 1:525,000",
                                     self.rasterBaseLayer.getCls())
-    self.legend.addRasterLegendItem("Open Sea Nautical Charts",
+    self.legend.addRasterLegendItem("BC Coast Chart 1:1,250,000",
                                     self.openSeaRasterBaseLayer.getCls())
     
     # now add the study region as a vector layer
-    vectorList = [] #["Data/Soorc_sr.shp"]] #,60000,1200000]]
+    vectorList = []
     for vectorSet in vectorList:
       vector = vectorSet[0]
-      #minScale = vectorSet[1]
-      #maxScale = vectorSet[2]
       
       info = QFileInfo(QString(vector))
+      
       # create layer
       layer = QgsVectorLayer(info.filePath(), info.completeBaseName(), "ogr")
+      
       if not layer.isValid():
         capture_string = QString("ERROR reading file")
-        #self.canvas.parentWin.outputWin.append(capture_string)
         self.statusbar.showMessage(capture_string)
         return
-      
-      # Set the scales
-      #layer.setScaleBasedVisibility(True)
-      #layer.setMinScale(minScale)
-      #layer.setMaxScale(maxScale)
       
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
@@ -185,9 +183,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.layers.insert(0,cl)
       cl.setVisible(False) # off by default
       self.canvas.setLayerSet(self.layers)
-      
-      #Add item to legend
-      #self.legend.addVectorLegendItem("Study Region", [cl])
       
     self.canvas.setExtent(self.extent_raster.extent())    
 
