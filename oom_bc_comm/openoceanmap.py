@@ -49,7 +49,6 @@ def main(argv):
   
   # create Qt application
   app = QApplication(argv,True)
-  #app = QgsApplication(argv,True)
   
   # Set the app style
   app.setStyle(QString("plastique"))
@@ -62,8 +61,6 @@ def main(argv):
   # initialize qgis libraries
   QgsApplication.setPrefixPath(qgis_prefix, True)
   QgsApplication.initQgis()
-  #app.setPrefixPath(qgis_prefix, True)
-  #app.initQgis()
 
   # create main window
   wnd = MainWindow(mySplash)
@@ -77,10 +74,8 @@ def main(argv):
   
   # We got an exit signal so time to clean up
   QgsApplication.exitQgis()
-  #app.exitQgis()
   
   sys.exit(retval)
-
 
 if __name__ == "__main__":
   main(sys.argv)
