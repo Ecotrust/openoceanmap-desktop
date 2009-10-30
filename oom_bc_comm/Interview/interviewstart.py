@@ -48,6 +48,9 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.setupUi(self)
         self.parent = parent
 
+        # Set the date to now
+        self.dateEdit.setDateTime(QDateTime.currentDateTime())
+
     def on_pbnSelectFishery_released(self):
         interviewInfo2 = self.parent.interviewInfo2
         
@@ -67,7 +70,8 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["city", self.city_line.text()])
         interviewInfo2.append(["data_share", self.data_sharing_comboBox.currentText()])
 
-        interviewInfo2.append(["date", self.date_line.text()])        
+        #interviewInfo2.append(["date", self.date_line.text()])        
+        interviewInfo2.append(["date", self.dateEdit.text()])        
         interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
         interviewInfo2.append(["mood", self.mood_line.text()])
