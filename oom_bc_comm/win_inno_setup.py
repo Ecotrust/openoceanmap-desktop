@@ -15,10 +15,7 @@
 # directory and include them in the executable.
 
 from distutils.core import setup
-#import matplotlib
 import py2exe
-#import sys
-#import glob
 import os
 
 #Build tree of files given a dir (for appending to py2exe data_files)
@@ -27,7 +24,6 @@ def tree(src):
     list = [(root, map(lambda f: os.path.join(root, f), files)) for (root, dirs, files) in os.walk(os.path.normpath(src))]
     new_list = []
     for (root, files) in list:
-	#print "%s , %s" % (root,files)
         if len(files) > 0 and root.count('.svn') == 0:
             new_list.append((root, files))
     return new_list 
@@ -41,7 +37,7 @@ class InnoScript:
                  dist_dir,
                  windows_exe_files = [],
                  lib_files = [],
-                 version = "1.1"):
+                 version = "1.0"):
         self.lib_dir = lib_dir
         self.dist_dir = dist_dir
         if not self.dist_dir[-1] in "\\/":
@@ -66,16 +62,16 @@ class InnoScript:
         print >> ofi, r"DefaultDirName={pf}\%s" % self.name
         print >> ofi, r"DefaultGroupName=%s" % self.name
         print >> ofi, r"VersionInfoVersion=%s" % self.version
-        print >> ofi, r"VersionInfoCompany=Ecotrust"
-        print >> ofi, r"VersionInfoDescription=OpenOceanMap MLPA NC Commercial"
-        print >> ofi, r"VersionInfoCopyright=Ecotrust"
-        print >> ofi, r"AppCopyright=Ecotrust"
-        print >> ofi, r"InfoAfterFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_comm\README.TXT"
-        print >> ofi, r"LicenseFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_comm\LICENSE.TXT"
+        print >> ofi, r"VersionInfoCompany=Ecotrust Canada"
+        print >> ofi, r"VersionInfoDescription=OpenOceanMap BC Commercial"
+        print >> ofi, r"VersionInfoCopyright=Ecotrust Canada"
+        print >> ofi, r"AppCopyright=Ecotrust Canada"
+        print >> ofi, r"InfoAfterFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\README.TXT"
+        print >> ofi, r"LicenseFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\LICENSE.TXT"
         print >> ofi, r"WizardImageBackColor=clBlack"
-        print >> ofi, r"WizardImageFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_comm\Images\OCEAN_VERT_INNO.bmp"
-        print >> ofi, r"WizardSmallImageFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_comm\Images\OCEAN_SMALL_INNO.bmp"
-        print >> ofi, r"SetupIconFile=U:\dev\openocean\branches\openoceanmap\oom_norcal_comm\Images\OCEAN_SMALL_INNO.ico"
+        print >> ofi, r"WizardImageFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\Images\OCEAN_VERT_INNO.bmp"
+        print >> ofi, r"WizardSmallImageFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\Images\OCEAN_SMALL_INNO.bmp"
+        print >> ofi, r"SetupIconFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\Images\OCEAN_SMALL_INNO.ico"
         print >> ofi
 
         print >> ofi, r"[Files]"
@@ -139,7 +135,7 @@ class build_installer(py2exe):
         dist_dir = self.dist_dir
         
         # create the Installer, using the files py2exe has created.
-        script = InnoScript("OpenOceanMap MLPA NC Commercial",
+        script = InnoScript("OpenOceanMap BC Commercial",
                             lib_dir,
                             dist_dir,
                             self.windows_exe_files,
@@ -160,7 +156,13 @@ options = {
         "optimize": 2,
         "includes": ['sip'],
         "excludes": ['backend_gtkagg', 'backend_wxagg'],
-        "dll_excludes": ['libgdk_pixbuf-2.0-0.dll', 'libgobject-2.0-0.dll', 'libgdk-win32-2.0-0.dll'],
+        "dll_excludes": ['libgdk_pixbuf-2.0-0.dll', 
+                         'libgobject-2.0-0.dll', 
+                         'libgdk-win32-2.0-0.dll', 
+                         'msvcr90.dll', 
+                         'msvcr80.dll', 
+                         'phonon4.dll', 
+                         'QtDBus4.dll'],
         "packages": ["qgis", "PyQt4"],
         "dist_dir": "dist",
     }
