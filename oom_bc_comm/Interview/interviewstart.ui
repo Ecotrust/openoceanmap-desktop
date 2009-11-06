@@ -513,7 +513,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QDateEdit" name="dateEdit" >
+                <widget class="QDateEdit" name="InterviewDate" >
                  <property name="locale" >
                   <locale country="Canada" language="English" />
                  </property>
@@ -1676,7 +1676,7 @@
   <tabstop>gender_comboBox</tabstop>
   <tabstop>city_line</tabstop>
   <tabstop>data_sharing_comboBox</tabstop>
-  <tabstop>dateEdit</tabstop>
+  <tabstop>InterviewDate</tabstop>
   <tabstop>interviewer1_first_name_line</tabstop>
   <tabstop>interviewer1_last_name_line</tabstop>
   <tabstop>mood_line</tabstop>

@@ -49,7 +49,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.parent = parent
 
         # Set the date to now
-        self.dateEdit.setDateTime(QDateTime.currentDateTime())
+        self.InterviewDate.setDateTime(QDateTime.currentDateTime())
 
     def on_pbnSelectFishery_released(self):
         interviewInfo2 = self.parent.interviewInfo2
@@ -60,6 +60,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["gender", self.gender_comboBox.currentText()])
         
         # HOW IS THIS DONE!???
+        # i.e. how can we make the gender combo box radiobuttons instead??
         #interviewInfo2.append(["gender", self.gender_groupBox.currentText()])
         #if self.radioButtonMale.isChecked:
         #    interviewInfo2.append(["gender", "Male"])
@@ -70,8 +71,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["city", self.city_line.text()])
         interviewInfo2.append(["data_share", self.data_sharing_comboBox.currentText()])
 
-        #interviewInfo2.append(["date", self.date_line.text()])        
-        interviewInfo2.append(["date", self.dateEdit.text()])        
+        interviewInfo2.append(["date", self.InterviewDate.text()])        
         interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
         interviewInfo2.append(["mood", self.mood_line.text()])

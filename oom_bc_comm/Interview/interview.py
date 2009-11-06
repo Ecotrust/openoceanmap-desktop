@@ -27,19 +27,19 @@
 # 
 #---------------------------------------------------------------------
 
-
 # PyQt4 includes for python bindings to QT
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+
 # QGIS bindings for mapping functions
 from qgis.core import *
 from qgis.gui import *
+
 # Custom Tools
 from interviewstart import *
 from selectfishery import *
 from nextclippedpolygon import *
-#from Tools.polygontool import *
-#from nextpolygon import *
+
 # UI specific includes
 from interviewstart_ui import Ui_InterviewStart
 # General system includes
@@ -103,9 +103,13 @@ class Interview(QObject):
           self.fisheryEffDaysIndex = index+7
           self.fisheryHookIndex = index+8
           self.fisheryIncIndex = index+9
-          self.fisheryAvgPriceIndex = index+10
+          self.fisheryAvgPricePerPoundIndex = index+10
           self.fisheryAvgPoundsPerTripIndex = index+11
           self.fisheryHistPriceIndex = index+12
+          self.fisheryStartYearIndex = index+13
+          self.fisheryEndYearIndex = index+14
+          self.fisheryVesselNameIndex = index+15
+          self.fisheryVesselLengthIndex = index+16
           
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
@@ -116,9 +120,13 @@ class Interview(QObject):
           fields[self.fisheryEffDaysIndex] = QgsField("finc_efday", QVariant.String)
           fields[self.fisheryHookIndex] = QgsField("fnum_hooks", QVariant.String)
           fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.String)
-          fields[self.fisheryAvgPriceIndex] = QgsField("favg_pr", QVariant.String)
+          fields[self.fisheryAvgPricePerPoundIndex] = QgsField("favg_pr_pp", QVariant.String)
           fields[self.fisheryAvgPoundsPerTripIndex] = QgsField("favg_pp_tr", QVariant.String)
           fields[self.fisheryHistPriceIndex] = QgsField("fhist_pr", QVariant.String)
+          fields[self.fisheryStartYearIndex] = QgsField("fstart_yr", QVariant.String)
+          fields[self.fisheryEndYearIndex] = QgsField("fend_yr", QVariant.String)
+          fields[self.fisheryVesselNameIndex] = QgsField("fvssl_name", QVariant.String)
+          fields[self.fisheryVesselLengthIndex] = QgsField("fvsl_lngth", QVariant.String)
           
           # create an instance of vector file writer,
           # it will create the shapefile. Arguments:
@@ -149,9 +157,13 @@ class Interview(QObject):
               fet.addAttribute(self.fisheryEffDaysIndex, QVariant(self.capturedPolygonsFisheryEffortDays[capPolyInd]))
               fet.addAttribute(self.fisheryHookIndex, QVariant(self.capturedPolygonsFisheryHooks[capPolyInd]))
               fet.addAttribute(self.fisheryIncIndex, QVariant(self.capturedPolygonsFisheryIncome[capPolyInd]))
-              fet.addAttribute(self.fisheryAvgPriceIndex, QVariant(self.capturedPolygonsFisheryAvgPrice[capPolyInd]))
+              fet.addAttribute(self.fisheryAvgPricePerPoundIndex, QVariant(self.capturedPolygonsFisheryAvgPricePerPound[capPolyInd]))
               fet.addAttribute(self.fisheryAvgPoundsPerTripIndex, QVariant(self.capturedPolygonsFisheryAvgPoundsPerTrip[capPolyInd]))
               fet.addAttribute(self.fisheryHistPriceIndex, QVariant(self.capturedPolygonsFisheryHistPrice[capPolyInd]))
+              fet.addAttribute(self.fisheryStartYearIndex, QVariant(self.capturedPolygonsFisheryStartYear[capPolyInd]))
+              fet.addAttribute(self.fisheryEndYearIndex, QVariant(self.capturedPolygonsFisheryEndYear[capPolyInd]))
+              fet.addAttribute(self.fisheryVesselNameIndex, QVariant(self.capturedPolygonsFisheryVesselName[capPolyInd]))
+              fet.addAttribute(self.fisheryVesselLengthIndex, QVariant(self.capturedPolygonsFisheryVesselLength[capPolyInd]))
               
               writer.addFeature(fet)
           del writer
@@ -199,9 +211,13 @@ class Interview(QObject):
       self.capturedPolygonsFisheryEffortDays = []
       self.capturedPolygonsFisheryHooks = []
       self.capturedPolygonsFisheryIncome = []
-      self.capturedPolygonsFisheryAvgPrice = []
+      self.capturedPolygonsFisheryAvgPricePerPound = []
       self.capturedPolygonsFisheryAvgPoundsPerTrip = []
       self.capturedPolygonsFisheryHistPrice = []
+      self.capturedPolygonsFisheryStartYear = []
+      self.capturedPolygonsFisheryEndYear = []
+      self.capturedPolygonsFisheryVesselName = []
+      self.capturedPolygonsFisheryVesselLength = []
       
       #Reset penny count
       self.pennies_left = 100
@@ -264,6 +280,7 @@ class Interview(QObject):
           print "Error when creating clip_temp shapefile: ", writer.hasError()
 
       feat = QgsFeature()
+
       while provider.getNextFeature(feat):
           clipped_feat = QgsFeature()
           clipped_feat.setAttributeMap( feat.attributeMap() )
@@ -284,6 +301,7 @@ class Interview(QObject):
         
       # display the clipped layer
       info = QFileInfo(QString(clip_filename))
+
       clip_layer = QgsVectorLayer( clip_filename, info.completeBaseName(), "ogr" )
         
       clip_layer.setTransparency(190)
@@ -322,9 +340,13 @@ class Interview(QObject):
       self.currentFisheryEffortDays = 0
       self.currentFisheryHooks = 0
       self.currentFisheryIncome = 0
-      self.currentFisheryAvgPrice = 0
+      self.currentFisheryAvgPricePerPound = 0
       self.currentFisheryAvgPoundsPerTrip = 0
       self.currentFisheryHistPrice = 0
+      self.currentFisheryStartYear = 0
+      self.currentFisheryEndYear = 0
+      self.currentFisheryVesselName = 0
+      self.currentFisheryVesselLength = 0
         
       # A place to store polygons we capture
       self.capturedPolygons = []
@@ -337,9 +359,13 @@ class Interview(QObject):
       self.capturedPolygonsFisheryEffortDays = []
       self.capturedPolygonsFisheryHooks = []
       self.capturedPolygonsFisheryIncome = []
-      self.capturedPolygonsFisheryAvgPrice = []
+      self.capturedPolygonsFisheryAvgPricePerPound = []
       self.capturedPolygonsFisheryAvgPoundsPerTrip = []
       self.capturedPolygonsFisheryHistPrice = []
+      self.capturedPolygonsFisheryStartYear = []
+      self.capturedPolygonsFisheryEndYear = []
+      self.capturedPolygonsFisheryVesselName = []
+      self.capturedPolygonsFisheryVesselLength = []
     
       self.pennies_left = 100
       self.phase_index = 0

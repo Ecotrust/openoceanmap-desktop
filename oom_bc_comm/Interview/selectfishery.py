@@ -52,6 +52,14 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent
+
+        # init year values to current year
+        self.fishery_start_year.setText(QString(str(QDate.currentDate().year())))
+        self.fishery_end_year.setText(QString(str(QDate.currentDate().year())))
+        
+        # use values from what was entered in the interviewstart dialog
+        self.fishery_vessel_name.setText(QString(str(self.parent.interviewInfo2[13][1])))
+        self.fishery_vessel_length.setText(QString(str(self.parent.interviewInfo2[14][1])))
         
     def on_pbnStartShapes_released(self):    
         #Get fishery value
@@ -62,12 +70,16 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         else:
             self.parent.currentFishery = cur_fishery    
             
+        self.parent.currentFisheryVesselName = self.fishery_vessel_name.text()
+        self.parent.currentFisheryVesselLength = self.fishery_vessel_length.text()
         self.parent.currentFisheryIncome = self.fishery_perc_income.text()
+        self.parent.currentFisheryStartYear = self.fishery_start_year.text()
+        self.parent.currentFisheryEndYear = self.fishery_end_year.text()
         self.parent.currentFisheryExp = self.fishery_yrs_exp.text()
-        self.parent.currentFisheryEffort = self.fishery_effort.text()
+        self.parent.currentFisheryEffort = self.fishery_effort_month_per_year.text()
         self.parent.currentFisheryEffortDays = self.fishery_effort_days.text()
         self.parent.currentFisheryHooks = self.fishery_traps_hooks.text()
-        self.parent.currentFisheryAvgPrice = self.fishery_avg_price.text()
+        self.parent.currentFisheryAvgPricePerPound = self.fishery_avg_price_per_pound.text()
         self.parent.currentFisheryAvgPoundsPerTrip = self.fishery_avg_pounds_per_trip.text()
         self.parent.currentFisheryHistPrice = self.fishery_hist_avg_price.text()
         
@@ -122,12 +134,16 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+            self.parent.capturedPolygonsFisheryVesselName.append(self.parent.currentFisheryVesselName)
+            self.parent.capturedPolygonsFisheryVesselLength.append(self.parent.currentFisheryVesselLength)
             self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
+            self.parent.capturedPolygonsFisheryStartYear.append(self.parent.currentFisheryStartYear)
+            self.parent.capturedPolygonsFisheryEndYear.append(self.parent.currentFisheryEndYear)
             self.parent.capturedPolygonsFisheryExp.append(self.parent.currentFisheryExp)
             self.parent.capturedPolygonsFisheryEffort.append(self.parent.currentFisheryEffort)
             self.parent.capturedPolygonsFisheryEffortDays.append(self.parent.currentFisheryEffortDays)
             self.parent.capturedPolygonsFisheryHooks.append(self.parent.currentFisheryHooks)
-            self.parent.capturedPolygonsFisheryAvgPrice.append(self.parent.currentFisheryAvgPrice)
+            self.parent.capturedPolygonsFisheryAvgPricePerPound.append(self.parent.currentFisheryAvgPricePerPound)
             self.parent.capturedPolygonsFisheryAvgPoundsPerTrip.append(self.parent.currentFisheryAvgPoundsPerTrip)
             self.parent.capturedPolygonsFisheryHistPrice.append(self.parent.currentFisheryHistPrice)
             
@@ -172,13 +188,17 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                     
         self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
         self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
+        self.parent.capturedPolygonsFisheryVesselName.append(self.parent.currentFisheryVesselName)
+        self.parent.capturedPolygonsFisheryVesselLength.append(self.parent.currentFisheryVesselLength)
         self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
+        self.parent.capturedPolygonsFisheryStartYear.append(self.parent.currentFisheryStartYear)
+        self.parent.capturedPolygonsFisheryEndYear.append(self.parent.currentFisheryEndYear)
         self.parent.capturedPolygonsFisheryExp.append(self.parent.currentFisheryExp)
         self.parent.capturedPolygonsFisheryEffort.append(self.parent.currentFisheryEffort)
         self.parent.capturedPolygonsFisheryEffortDays.append(self.parent.currentFisheryEffortDays)
         self.parent.capturedPolygonsFisheryHooks.append(self.parent.currentFisheryHooks)
         self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
-        self.parent.capturedPolygonsFisheryAvgPrice.append(self.parent.currentFisheryAvgPrice)
+        self.parent.capturedPolygonsFisheryAvgPricePerPound.append(self.parent.currentFisheryAvgPricePerPound)
         self.parent.capturedPolygonsFisheryAvgPoundsPerTrip.append(self.parent.currentFisheryAvgPoundsPerTrip)
         self.parent.capturedPolygonsFisheryHistPrice.append(self.parent.currentFisheryHistPrice)
             

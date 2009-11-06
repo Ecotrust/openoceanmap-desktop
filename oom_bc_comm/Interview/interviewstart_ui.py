@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interviewstart.ui'
 #
-# Created: Thu Oct 29 14:09:57 2009
+# Created: Wed Nov 04 15:08:12 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -223,13 +223,13 @@ class Ui_InterviewStart(object):
         self.date_text.setFont(font)
         self.date_text.setObjectName("date_text")
         self._3.addWidget(self.date_text)
-        self.dateEdit = QtGui.QDateEdit(self.interviewee_first_name_2)
-        self.dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 1), QtCore.QTime(0, 0, 0)))
-        self.dateEdit.setTime(QtCore.QTime(0, 0, 0))
-        self.dateEdit.setCalendarPopup(True)
-        self.dateEdit.setCurrentSectionIndex(0)
-        self.dateEdit.setObjectName("dateEdit")
-        self._3.addWidget(self.dateEdit)
+        self.InterviewDate = QtGui.QDateEdit(self.interviewee_first_name_2)
+        self.InterviewDate.setDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 1), QtCore.QTime(0, 0, 0)))
+        self.InterviewDate.setTime(QtCore.QTime(0, 0, 0))
+        self.InterviewDate.setCalendarPopup(True)
+        self.InterviewDate.setCurrentSectionIndex(0)
+        self.InterviewDate.setObjectName("InterviewDate")
+        self._3.addWidget(self.InterviewDate)
         self.verticalLayout_5.addWidget(self.interviewee_first_name_2)
         self.interviewee_first_name_3 = QtGui.QWidget(self.interviewee_2)
         font = QtGui.QFont()
@@ -683,8 +683,8 @@ class Ui_InterviewStart(object):
         InterviewStart.setTabOrder(self.age_line, self.gender_comboBox)
         InterviewStart.setTabOrder(self.gender_comboBox, self.city_line)
         InterviewStart.setTabOrder(self.city_line, self.data_sharing_comboBox)
-        InterviewStart.setTabOrder(self.data_sharing_comboBox, self.dateEdit)
-        InterviewStart.setTabOrder(self.dateEdit, self.interviewer1_first_name_line)
+        InterviewStart.setTabOrder(self.data_sharing_comboBox, self.InterviewDate)
+        InterviewStart.setTabOrder(self.InterviewDate, self.interviewer1_first_name_line)
         InterviewStart.setTabOrder(self.interviewer1_first_name_line, self.interviewer1_last_name_line)
         InterviewStart.setTabOrder(self.interviewer1_last_name_line, self.mood_line)
         InterviewStart.setTabOrder(self.mood_line, self.home_port_line)
