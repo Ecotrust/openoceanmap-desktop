@@ -104,7 +104,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                   ["Data/north_coast_queen_charlotte.tif",0,50000000],    
                   ["Data/vancouver_island.tif",0,50000000],]    
     
-    self.rasterBaseLayer = OOMLayer(self)
+    self.rasterBaseLayerNorth = OOMLayer(self)
+    self.rasterBaseLayerSouth = OOMLayer(self)
     self.openSeaRasterBaseLayer = OOMLayer(self)
     
     self.extent_raster = None
@@ -148,15 +149,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       
       if i == 0:
         self.openSeaRasterBaseLayer.addLayerItem(layer,cl)
-        cl.setVisible(True) # on by default
-      else:
-        self.rasterBaseLayer.addLayerItem(layer,cl)
+      elif i == 1:
+        self.rasterBaseLayerNorth.addLayerItem(layer,cl)
+      else: # i == 2
+        self.rasterBaseLayerSouth.addLayerItem(layer,cl)
             
     # Add base raster items to legend
-    self.legend.addRasterLegendItem("BC Coast Chart 1:525,000",
-                                    self.rasterBaseLayer.getCls())
-    self.legend.addRasterLegendItem("BC Coast Chart 1:1,250,000",
-                                    self.openSeaRasterBaseLayer.getCls())
+    self.legend.addRasterLegendItem("South Coast 1:525,000", self.rasterBaseLayerSouth.getCls())
+    self.legend.addRasterLegendItem("North Coast 1:525,000", self.rasterBaseLayerNorth.getCls())
+    self.legend.addRasterLegendItem("Coast Chart 1:1,250,000", self.openSeaRasterBaseLayer.getCls())
     
     # now add the study region as a vector layer
     vectorList = []
