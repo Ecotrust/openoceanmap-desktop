@@ -1,0 +1,609 @@
+<ui version="4.0" >
+ <author>Aaron Racicot</author>
+ <class>InterviewStart</class>
+ <widget class="QDialog" name="InterviewStart" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>484</width>
+    <height>487</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Interview</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <layout class="QVBoxLayout" >
+       <item>
+        <layout class="QVBoxLayout" >
+         <item>
+          <widget class="QGroupBox" name="interviewee" >
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="title" >
+            <string>Interviewee</string>
+           </property>
+           <layout class="QVBoxLayout" >
+            <property name="spacing" >
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QWidget" native="1" name="interviewee_first_name" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="interviewee_first_name_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>First Name:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="interviewee_first_name_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="interviewee_last_name" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="interviewee_last_name_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>Last Name:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="interviewee_last_name_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="age" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="age_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>Age:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="age_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="gender" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="gender_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>Gender:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="gender_comboBox" >
+                 <property name="maximumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <item>
+                  <property name="text" >
+                   <string/>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text" >
+                   <string>Male</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text" >
+                   <string>Female</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="age_2" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="city_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>City of residence:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="city_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="interviewee_2" >
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="title" >
+            <string>Interviewer</string>
+           </property>
+           <layout class="QVBoxLayout" >
+            <property name="spacing" >
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QWidget" native="1" name="interviewee_first_name_2" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="date_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>180</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>180</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>Interview Date (mm/dd/yyyy):</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="date_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="interviewee_first_name_3" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="interviewer1_first_name_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>180</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>180</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>First Name:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="interviewer1_first_name_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="interviewee_first_name_4" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="interviewer1_last_name_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>180</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>180</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>Last Name:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="interviewer1_last_name_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" native="1" name="interviewee_first_name_5" >
+              <layout class="QHBoxLayout" >
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <property name="margin" >
+                <number>4</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="mood_text" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>180</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>180</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>Interviewer Mood:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="mood_line" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QWidget" native="1" name="button_box" >
+     <layout class="QHBoxLayout" >
+      <property name="spacing" >
+       <number>2</number>
+      </property>
+      <property name="margin" >
+       <number>2</number>
+      </property>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnCancel" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbnSelectFishery" >
+        <property name="font" >
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Select Fishery</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
