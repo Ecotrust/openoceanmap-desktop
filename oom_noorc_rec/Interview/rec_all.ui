@@ -73,8 +73,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>400</width>
-     <height>571</height>
+     <width>396</width>
+     <height>594</height>
     </rect>
    </property>
    <property name="font" >
@@ -83,7 +83,7 @@
     </font>
    </property>
    <property name="title" >
-    <string>Private Vessel Fishing Information</string>
+    <string>Sport Boat Fishing Information</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout" >
     <item>
@@ -93,13 +93,7 @@
         <pointsize>10</pointsize>
        </font>
       </property>
-      <layout class="QHBoxLayout" name="_4" >
-       <property name="spacing" >
-        <number>4</number>
-       </property>
-       <property name="margin" >
-        <number>4</number>
-       </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" >
        <item>
         <widget class="QLabel" name="perc_income_text" >
          <property name="minimumSize" >
@@ -120,18 +114,15 @@
           </font>
          </property>
          <property name="text" >
-          <string>Type of boat:</string>
+          <string>Type of sport boat:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="type_boat_line" >
-         <property name="enabled" >
-          <bool>true</bool>
-         </property>
+        <widget class="QComboBox" name="type_boat_line" >
          <property name="minimumSize" >
           <size>
-           <width>100</width>
+           <width>200</width>
            <height>0</height>
           </size>
          </property>
@@ -141,14 +132,31 @@
            <height>16777215</height>
           </size>
          </property>
-         <property name="font" >
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text" >
-          <string/>
-         </property>
+         <item>
+          <property name="text" >
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text" >
+           <string>Aluminum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text" >
+           <string>Fiberglass</string>
+          </property>
+         </item>
+         <item>
+          <property name="text" >
+           <string>Inflatable</string>
+          </property>
+         </item>
+         <item>
+          <property name="text" >
+           <string>Other</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
@@ -188,7 +196,7 @@
           </font>
          </property>
          <property name="text" >
-          <string>Dept F&amp;G boat number:</string>
+          <string>Fish &amp; Game boat number:</string>
          </property>
         </widget>
        </item>
@@ -1056,7 +1064,7 @@
     <rect>
      <x>420</x>
      <y>10</y>
-     <width>384</width>
+     <width>386</width>
      <height>545</height>
     </rect>
    </property>
@@ -1888,7 +1896,6 @@
   </widget>
  </widget>
  <tabstops>
-  <tabstop>type_boat_line</tabstop>
   <tabstop>boat_license_line</tabstop>
   <tabstop>yrs_operating_line</tabstop>
   <tabstop>yrs_owning_line</tabstop>

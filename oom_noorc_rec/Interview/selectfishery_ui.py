@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Wed Jul 08 13:33:46 2009
+# Created: Sat Nov 07 13:19:42 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -110,7 +110,7 @@ class Ui_SelectFishery(object):
     def retranslateUi(self, SelectFishery):
         SelectFishery.setWindowTitle(QtGui.QApplication.translate("SelectFishery", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
         self.fishing_type_text.setText(QtGui.QApplication.translate("SelectFishery", "Select Fishing Type :", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishing_type_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Private Vessel", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishing_type_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Sport Boat", None, QtGui.QApplication.UnicodeUTF8))
         self.fishing_type_comboBox.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Kayak", None, QtGui.QApplication.UnicodeUTF8))
         self.fishing_type_comboBox.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Dive", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "Select Fishery :", None, QtGui.QApplication.UnicodeUTF8))

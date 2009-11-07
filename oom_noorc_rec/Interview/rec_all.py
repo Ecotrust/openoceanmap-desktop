@@ -54,7 +54,7 @@ class RecAllGui(QDialog, Ui_RecAll):
         
         interviewInfo2.append(["user_group", "recreational"])
 
-        interviewInfo2.append(["v_type", self.type_boat_line.text()])
+        interviewInfo2.append(["v_type", self.type_boat_line.currentText()])
         interviewInfo2.append(["v_lic", self.boat_license_line.text()])
         interviewInfo2.append(["v_yr_op", self.yrs_operating_line.text()])
         interviewInfo2.append(["v_yr_own", self.yrs_owning_line.text()])
