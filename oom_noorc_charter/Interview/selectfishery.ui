@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>478</width>
-    <height>409</height>
+    <height>264</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -74,47 +74,17 @@
           </item>
           <item>
            <property name="text" >
-            <string>Abalone (dive only)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Anchovy/Herring (Bait Fish)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>California Halibut</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
             <string>Dungeness Crab</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Humboldt Squid</string>
+            <string>Groundfish/Bottom Fishing</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Pacific Halibut</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Rockfish (pre-RCA)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Rockfish (post-RCA)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Rockfish (cumulative)</string>
+            <string>Halibut</string>
            </property>
           </item>
           <item>
@@ -124,17 +94,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Sharks/Rays</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Other Flatfish (Sanddads, Soles, Turbots)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Other</string>
+            <string>Tuna</string>
            </property>
           </item>
          </widget>
@@ -345,128 +305,6 @@
        </layout>
        <zorder>label_12</zorder>
        <zorder>fishery_angcost</zorder>
-       <zorder>horizontalSpacer_3</zorder>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_13" >
-     <item>
-      <widget class="QWidget" native="1" name="widget_5" >
-       <layout class="QHBoxLayout" name="horizontalLayout_14" >
-        <item>
-         <widget class="QLabel" name="label_8" >
-          <property name="minimumSize" >
-           <size>
-            <width>160</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>160</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text" >
-           <string>Avg # days per year:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="fishery_days" >
-          <property name="minimumSize" >
-           <size>
-            <width>40</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>40</width>
-            <height>16777215</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3" >
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-       <zorder>label_8</zorder>
-       <zorder>fishery_days</zorder>
-       <zorder>horizontalSpacer_3</zorder>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5" >
-     <item>
-      <widget class="QWidget" native="1" name="widget_3" >
-       <layout class="QHBoxLayout" name="horizontalLayout_4" >
-        <item>
-         <widget class="QLabel" name="label" >
-          <property name="minimumSize" >
-           <size>
-            <width>160</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>160</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text" >
-           <string>Avg # passengers:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="fishery_pass" >
-          <property name="minimumSize" >
-           <size>
-            <width>40</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>40</width>
-            <height>16777215</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3" >
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-       <zorder>fishery_pass</zorder>
-       <zorder>label</zorder>
        <zorder>horizontalSpacer_3</zorder>
       </widget>
      </item>

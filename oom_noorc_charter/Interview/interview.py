@@ -111,8 +111,8 @@ class Interview(QObject):
           self.fisheryPct = index+5
           self.fisheryTripLen = index+6
           self.fisheryAnglerCost = index+7
-          self.fisheryDays = index+8
-          self.fisheryPassengers = index+9
+          #self.fisheryDays = index+8
+          #self.fisheryPassengers = index+9
           
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
@@ -121,8 +121,8 @@ class Interview(QObject):
           fields[self.fisheryPct] = QgsField("fshy_pct", QVariant.String)
           fields[self.fisheryTripLen] = QgsField("fshy_tlen", QVariant.String)
           fields[self.fisheryAnglerCost] = QgsField("fshy_acost", QVariant.String)
-          fields[self.fisheryDays] = QgsField("fshy_days", QVariant.String)
-          fields[self.fisheryPassengers] = QgsField("fshy_pass", QVariant.String)
+          #fields[self.fisheryDays] = QgsField("fshy_days", QVariant.String)
+          #fields[self.fisheryPassengers] = QgsField("fshy_pass", QVariant.String)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -159,8 +159,8 @@ class Interview(QObject):
               fet.addAttribute(self.fisheryPct, QVariant(self.currentFisheryPct))
               fet.addAttribute(self.fisheryTripLen, QVariant(self.currentFisheryTripLen))
               fet.addAttribute(self.fisheryAnglerCost, QVariant(self.currentFisheryAnglerCost))
-              fet.addAttribute(self.fisheryDays, QVariant(self.currentFisheryDays))
-              fet.addAttribute(self.fisheryPassengers, QVariant(self.currentFisheryPassengers))
+              #fet.addAttribute(self.fisheryDays, QVariant(self.currentFisheryDays))
+              #fet.addAttribute(self.fisheryPassengers, QVariant(self.currentFisheryPassengers))
               
               writer.addFeature(fet)
           del writer
@@ -210,8 +210,8 @@ class Interview(QObject):
       self.currentFisheryPct = None
       self.currentFisheryTripLen = None
       self.currentFisheryAnglerCost = None
-      self.currentFisheryDays = None
-      self.currentFisheryPassengers = None
+      #self.currentFisheryDays = None
+      #self.currentFisheryPassengers = None
       
       #Reset penny count
       self.pennies_left = 100
@@ -354,8 +354,8 @@ class Interview(QObject):
       self.currentFisheryPct = None
       self.currentFisheryTripLen = None
       self.currentFisheryAnglerCost = None
-      self.currentFisheryDays = None
-      self.currentFisheryPassengers = None
+      #self.currentFisheryDays = None
+      #self.currentFisheryPassengers = None
     
       self.pennies_left = 100
       self.phase_index = 0

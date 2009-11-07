@@ -64,8 +64,8 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.parent.currentFisheryPct = self.fishery_pct_trips.text()
         self.parent.currentFisheryTripLen = self.fishery_tlen.currentText()
         self.parent.currentFisheryAnglerCost = self.fishery_angcost.text()
-        self.parent.currentFisheryDays = self.fishery_days.text()
-        self.parent.currentFisheryPassengers = self.fishery_pass.text()
+        #self.parent.currentFisheryDays = self.fishery_days.text()
+        #self.parent.currentFisheryPassengers = self.fishery_pass.text()
         
         self.close()
         mc = self.parent.canvas      
