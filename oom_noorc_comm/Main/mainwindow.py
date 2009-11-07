@@ -125,7 +125,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # create layer
       layer = QgsRasterLayer(info.filePath(), info.completeBaseName())
 
-      if i == 3: # Cafe Blanco 2 Yaquino Head
+      if i == 2: 
         self.extent_raster = layer        
 
       if self.srs == None:
@@ -162,7 +162,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
 
     # now add the study region as a vector layer
-    vectorList = [["Data/Soorc_sr.shp"]] #,60000,1200000]]
+    vectorList = [] #[["Data/Soorc_sr.shp"]] #,60000,1200000]]
     for vectorSet in vectorList:
       vector = vectorSet[0]
       #minScale = vectorSet[1]
