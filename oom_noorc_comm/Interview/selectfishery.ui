@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>460</width>
-    <height>168</height>
+    <height>361</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>OpenOceanMap - Select Fishery</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_5" >
+  <layout class="QVBoxLayout" name="verticalLayout" >
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3" >
      <item>
@@ -38,13 +38,13 @@
          <widget class="QLabel" name="fishery_text" >
           <property name="minimumSize" >
            <size>
-            <width>160</width>
+            <width>100</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>160</width>
+            <width>100</width>
             <height>16777215</height>
            </size>
           </property>
@@ -54,7 +54,32 @@
          </widget>
         </item>
         <item>
+         <spacer name="horizontalSpacer_2" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QComboBox" name="fishery_comboBox" >
+          <property name="minimumSize" >
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <item>
            <property name="text" >
             <string/>
@@ -62,67 +87,132 @@
           </item>
           <item>
            <property name="text" >
-            <string>Dungeness Crab - trap</string>
+            <string>Albacore Tuna - Troll (Jig)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - trawl</string>
+            <string>Dungeness Crab - Trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - hook &amp; line</string>
+            <string>Flatfish – Hook and Line</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Hagfish - trap</string>
+            <string>Groundfish - Midwater Trawl Pre RCA</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Halibut - longline</string>
+            <string>Groundfish - Midwater Trawl Post RCA</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Lingcod - hook &amp; line</string>
+            <string>Groundfish - Bottom Trawl Pre RCA</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Prawn - trap</string>
+            <string>Groundfish - Bottom Trawl Post RCA</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish (Blackcod) - longline</string>
+            <string>Groundfish - Longline Pre RCA (LE)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Sablefish (Blackcod) - trap</string>
+            <string>Groundfish - Longline Post RCA (LE)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Salmon - troll</string>
+            <string>Groundfish - Hook and Line Pre RCA (LE)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Shrimp - trawl</string>
+            <string>Groundfish - Hook and Line Post RCA (LE)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Tuna - jig</string>
+            <string>Groundfish - Trap Pre RCA (LE)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Tuna - pole</string>
+            <string>Groundfish - Trap Post RCA (LE)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Longline Pre RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Longline Post RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Hook and Line Pre RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Hook and Line Post RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Trap Pre RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Trap Post RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Hagfish – Trap</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Halibut – Longline</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Pink Shrimp – Trawl</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Salmon – Troll</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sardine - Net (Seine)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Shrimp/Prawn – Trap</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Urchin - Dive</string>
            </property>
           </item>
           <item>
@@ -134,19 +224,6 @@
         </item>
        </layout>
       </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_2" >
-       <property name="orientation" >
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0" >
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
      </item>
     </layout>
    </item>
@@ -175,6 +252,19 @@
          </widget>
         </item>
         <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QLineEdit" name="fish_perc_income" >
           <property name="minimumSize" >
            <size>
@@ -187,6 +277,38 @@
             <width>40</width>
             <height>16777215</height>
            </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+       <zorder>fish_perc_income</zorder>
+       <zorder>label</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_4" >
+       <layout class="QHBoxLayout" name="horizontalLayout_8" >
+        <item>
+         <widget class="QLabel" name="label_3" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Years participating in this fishery:</string>
           </property>
          </widget>
         </item>
@@ -203,10 +325,197 @@
           </property>
          </spacer>
         </item>
+        <item>
+         <widget class="QLineEdit" name="fish_yrs_partic" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
        </layout>
-       <zorder>fish_perc_income</zorder>
-       <zorder>label</zorder>
-       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_13" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_7" >
+       <layout class="QHBoxLayout" name="horizontalLayout_14" >
+        <item>
+         <widget class="QLabel" name="label_6" >
+          <property name="minimumSize" >
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string># traps owned/hooks used per day/avg net tows per day:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_num_gear" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_9" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_5" >
+       <layout class="QHBoxLayout" name="horizontalLayout_10" >
+        <item>
+         <widget class="QLabel" name="label_4" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Months of fishing effort:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_months" >
+          <property name="minimumSize" >
+           <size>
+            <width>220</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_11" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_6" >
+       <layout class="QHBoxLayout" name="horizontalLayout_12" >
+        <item>
+         <widget class="QLabel" name="label_5" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Avg # days fishing per year</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_avg_days" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </item>
     </layout>

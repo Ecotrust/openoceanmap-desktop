@@ -102,11 +102,20 @@ class Interview(QObject):
           self.originalShapeIndex = index+3 # used to link shapes across shapefiles if clipping to shapefiles is used
           self.habitatIndex = index+4
           self.fisheryIncIndex = index+5
+          self.fisheryYrsParticIndex = index+6
+          self.fisheryNumGearIndex = index+7
+          self.fisheryMonths = index+8
+          self.fisheryAvgNumDays = index+9
+		  
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
           fields[self.originalShapeIndex] = QgsField("orig_shp", QVariant.Int) 
           fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
           fields[self.fisheryIncIndex] = QgsField("finc_pct", QVariant.Int)
+          fields[self.fisheryYrsParticIndex] = QgsField("fshy_yrs", QVariant.String)
+          fields[self.fisheryNumGearIndex] = QgsField("num_gear", QVariant.String)
+          fields[self.fisheryMonths] = QgsField("fshy_mos", QVariant.String)
+          fields[self.fisheryAvgNumDays] = QgsField("fshy_dys", QVariant.String)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -140,6 +149,10 @@ class Interview(QObject):
               fet.addAttribute(self.originalShapeIndex, QVariant(-1))
               fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
               fet.addAttribute(self.fisheryIncIndex, QVariant(self.capturedPolygonsFisheryIncome[capPolyInd]))
+              fet.addAttribute(self.fisheryYrsParticIndex, QVariant(self.currentFisheryYearsPartic))
+              fet.addAttribute(self.fisheryNumGearIndex, QVariant(self.currentFisheryNumGear))
+              fet.addAttribute(self.fisheryMonths, QVariant(self.currentFisheryMonths))
+              fet.addAttribute(self.fisheryAvgNumDays, QVariant(self.currentFisheryAvgDaysPerYear))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -185,6 +198,10 @@ class Interview(QObject):
       self.capturedPolygonsRub = []
       self.capturedPolygonsHabitat = []
       self.capturedPolygonsFisheryIncome = []
+      self.currentFisheryYearsPartic = 0
+      self.currentFisheryNumGear = 0
+      self.currentFisheryMonths = 0
+      self.currentFisheryAvgDaysPerYear = 0
       
       #Reset penny count
       self.pennies_left = 100
@@ -318,6 +335,10 @@ class Interview(QObject):
   def resetInterview(self):
       self.currentFishery = None
       self.currentFisheryIncome = 0
+      self.currentFisheryYearsPartic = 0
+      self.currentFisheryNumGear = 0
+      self.currentFisheryMonths = 0
+      self.currentFisheryAvgDaysPerYear = 0
         
       # A place to store polygons we capture
       self.capturedPolygons = []

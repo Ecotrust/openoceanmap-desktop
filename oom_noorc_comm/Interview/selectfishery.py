@@ -62,6 +62,10 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
             self.parent.currentFishery = cur_fishery    
             
         self.parent.currentFisheryIncome = self.fish_perc_income.text()
+        self.parent.currentFisheryYearsPartic = self.fish_yrs_partic.text()
+        self.parent.currentFisheryNumGear = self.fish_num_gear.text()
+        self.parent.currentFisheryMonths = self.fish_months.text()
+        self.parent.currentFisheryAvgDaysPerYear = self.fish_avg_days.text()
     
         self.close()
         mc = self.parent.canvas      

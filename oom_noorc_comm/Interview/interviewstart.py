@@ -65,7 +65,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
 
         interviewInfo2.append(["years", self.years_line.text()])
         interviewInfo2.append(["perc_incom", self.perc_income_line.text()])
-        interviewInfo2.append(["fsh_lic_id", self.fisherman_license_id_line.text()])
+        #interviewInfo2.append(["fsh_lic_id", self.fisherman_license_id_line.text()])
         interviewInfo2.append(["fed_vsl_id", self.federal_vessel_id_line.text()])
         interviewInfo2.append(["sta_vsl_id", self.state_vessel_id_line.text()])
         interviewInfo2.append(["v_len", self.vessel_length_line.text()])
