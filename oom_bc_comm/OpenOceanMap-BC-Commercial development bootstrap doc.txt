@@ -1,0 +1,133 @@
+-------------------------
+INSTALL REQUIRED SOFTWARE
+-------------------------
+- install QGIS 0.10 (http://pearl.ecotrust.org/~twelch/QGIS-0.10.0-Setup.exe)
+
+- add Program Files\Quantum GIS\python to PYTHONPATH env variable
+
+- install PyQt-Py2.5-gpl-4.4.3-1 (http://www.riverbankcomputing.co.uk/software/pyqt/download)
+
+- backup Quantum GIS/resources/srs.db, copy openoceanmap/data/srs.db to Quantum GIS/resources
+
+- update system path to include:
+C:\Python25;C:\Python25\Lib\site-packages\PyQt4;C:\Program Files\Quantum GIS
+
+- update python path to include:
+C:\Python25;C:\Python25\Lib\site-packages\PyQt4;C:\Program Files\Quantum GIS;C:\Program Files\Quantum GIS\python
+
+- install msys from http://sourceforge.net/projects/mingw/files/ (which enables the use of some unix commands on windows)
+
+- update system path with C:\msys\1.0\bin (so that commands like rm are in the path)
+
+- download source code for OpenOceanMap BC Commercial from here (using an SVN client such as TortoiseSVN):
+http://trac.infodrizzle.org/openocean/index.cgi/browser/branches/openoceanmap/oom_bc_comm
+
+- copy nautical base layers to the \data directory from the following directory (for BC):
+\\ecotrustgis\Sector\consulting\Tbuck\OpenOceanMap-BC-Commercial\Base-Data
+
+----------------------------------------
+RUNNING QT DESIGNER (to make UI changes)
+----------------------------------------
+- Create a batch file that removes Program Files\Quantum GIS from path before running (and put it in c:\windows-scripts\):
+	--designer.bat--
+	set PATH=C:\Python25\Lib\site-packages\PyQt4;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;
+	C:\Python25\Lib\site-packages\PyQt4\designer.exe
+
+------------------------------------------------
+COMPILING QT INTERFACE (after making UI changes)
+------------------------------------------------
+- Install MinGW (for compiling the UI) program (MinGW make should be included, also do not install in "c:\Program Files" because of the space):
+http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/
+
+- Update the system path to include C:\MinGW\bin (or where ever you installed it)
+
+- Create a batch file called pyuic4.bat to have only Python2.5\Lib\site-packages\PyQT4 in path and pythonpath env vars:
+	@echo off
+	set PATH=C:\dev;C:\Python25\Lib\site-packages\PyQt4
+	set PYTHONPATH=C:\Python25\Lib\site-packages
+	@echo on
+	@"C:\Python25\python.exe" "C:\Python25\Lib\site-packages\PyQt4\uic\pyuic.py" %1 %2 %3 %4 %5 %6 %7 %8 %9
+
+- Add this file's parent dir to your system path so that it is found before the pyuic4.exe installed with QT, so when you run the pyuic4 command it finds your batch file in your path
+
+- Run mingw32-make from the base/root dir to compile the interface if you've made any changes using QT Designer (this will look for the makefiles that contain all the files to create UI)
+
+- Download and install GnuWin32's make from http://gnuwin32.sourceforge.net/packages/make.htm
+
+POSSIBLE ERRORS:
+Q: getting "ordinal 284 could not be located..."? 
+A: Rearrange your path env var to find newer SSLEAY32.dll first (exists in many places... Geodjango/bin has old one, subversion bin has newer)
+
+Q: White polygon appearing behind drawn shape (transparency issue) after re-making MainWindow.ui?
+A: PyQt 4.4+ is doing something wacky. I reverted to the previous version and tweaked the mainwindow_ui.py manually. Blech. Worth debugging if have time.
+
+Q: Runtime error in MSVC runtime library running Designer?
+A: Create a bat that removes Program Files\Quantum GIS from path before running
+	--designer.bat--
+	set PATH=C:\Python25\Lib\site-packages\PyQt4;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;
+	C:\Python25\Lib\site-packages\PyQt4\designer.exe
+   Run this batch file directly instead of designer.exe
+
+Q: error running pyuic4.bat?  'Wrong version' or similar
+A: edit that bat to have only Python2.5\Lib\site-packages\PyQT4 in path and pythonpath env vars
+	--pyuic4.bat--
+	@echo off
+	set PATH=C:\dev;C:\Python25\Lib\site-packages\PyQt4
+	set PYTHONPATH=C:\Python25\Lib\site-packages
+	@echo on
+	@"C:\Python25\python.exe" "C:\Python25\Lib\site-packages\PyQt4\uic\pyuic.py" %1 %2 %3 %4 %5 %6 %7 %8 %9
+    Put this file somewhere so that it is found in your path before pyuic4.exe
+
+--------------------------------
+RUNNING THE APP FROM SOURCE CODE
+--------------------------------
+- to run the uncompiled app:
+python openoceanmap.py
+
+----------------------------------------------
+USING Py2exe AND InnoSetup TO CREATE setup.exe
+----------------------------------------------
+- Install py2exe-0.6.9.win32-py2.5.exe (from http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/) and isetup-5.2.3.exe
+
+- edit openoceanmap.py: 
+qgis_prefix="."
+
+- edit win_inno_setup.py:
++ in InnoScript::__init__
+	increment version number in input params if you want
+
++ in InnoScript::create
+	various director definitions for README.TXT, LICENSE.TXT, icon, bitmaps
+	VersionInfoDescription
+
++ in build_installer::run
+	first param to InnoScript instantiation is tool name string
+
+- copy the contents of Program Files\Quantum GIS\resources and \plugins folders to your openoceanmap dev root (where openoceanmap.py is)
+
+- add c:\PythonXX\DLLs to the system path so that tk84.dll is available for the next step
+
+- add msvcr90.dll, msvcr80.dll, phonon4.dll, QtDBus4.dll to the excludes dll section in the win_inno_setup.py setup section
+
+- run python win_inno_setup.py py2exe
+
+- once py2exe has finished with no obvious errors, copy the the following 12 files (from "C:\Program Files\Quantum GIS") into dist\lib, allowing overwrites (this ensures you end up with the correct Qt DLL's, since Py2exe can grab them from the wrong place)
+
+1. libgdal-1.dll                7. QtCore4.dll
+2. libgrass_dbmibase.6.3.0.dll  8. QtGui4.dll
+3. libgrass_dgl.6.3.0.dll       9. QtNetwork4.dll
+4. libgrass_rtree.6.3.0.dll     10. QtSql4.dll
+5. libproj.dll                  11. QtSvg4.dll
+6. Qt3Support4.dll              12. QtXml4.dll
+
+- I've zipped these up and placed them in the following file:
+\\ecotrustgis\Sector\consulting\Tbuck\OpenOceanMap-BC-Commercial\dlls_required_for_OOM_build.rar
+
+- test the compiled applciation by clearing your PATH, then running openoceanmap.exe in the command window (NOT by clicking on the exe in File Explorer)
+SET PATH=C:\WINDOWS
+
+- If the app runs correctly, press play in the InnoSetup window, this will create the setup.exe install in the dist/Output directory
+
+POSSIBLE ERRORS:
+Q: InnoSetup fails right at the end on a "file already in use" sort of error?
+A: copy the dist folder to your local HD, run the iss file from there instead; still have problems? copy  README.TXT, LICENSE.TXT, and Images dir to local HD and change the ISS file to refer to these local versions, then run it again
