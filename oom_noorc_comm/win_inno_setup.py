@@ -70,12 +70,12 @@ class InnoScript:
         print >> ofi, r"VersionInfoDescription=OpenOceanMap NOORC Commercial"
         print >> ofi, r"VersionInfoCopyright=Ecotrust"
         print >> ofi, r"AppCopyright=Ecotrust"
-        print >> ofi, r"InfoAfterFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_comm\README.TXT"
-        print >> ofi, r"LicenseFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_comm\LICENSE.TXT"
+        print >> ofi, r"InfoAfterFile=C:\code\projects\oom\oregon coast\noorc_comm\README.TXT"
+        print >> ofi, r"LicenseFile=C:\code\projects\oom\oregon coast\noorc_comm\LICENSE.TXT"
         print >> ofi, r"WizardImageBackColor=clBlack"
-        print >> ofi, r"WizardImageFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_comm\Images\OCEAN_VERT_INNO.bmp"
-        print >> ofi, r"WizardSmallImageFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_comm\Images\OCEAN_SMALL_INNO.bmp"
-        print >> ofi, r"SetupIconFile=U:\dev\openocean\branches\openoceanmap\oom_soorc_comm\Images\OCEAN_SMALL_INNO.ico"
+        print >> ofi, r"WizardImageFile=C:\code\projects\oom\oregon coast\noorc_comm\Images\OCEAN_VERT_INNO.bmp"
+        print >> ofi, r"WizardSmallImageFile=C:\code\projects\oom\oregon coast\noorc_comm\Images\OCEAN_SMALL_INNO.bmp"
+        print >> ofi, r"SetupIconFile=C:\code\projects\oom\oregon coast\noorc_comm\Images\OCEAN_SMALL_INNO.ico"
         print >> ofi
 
         print >> ofi, r"[Files]"

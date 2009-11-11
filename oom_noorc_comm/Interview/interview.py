@@ -106,6 +106,8 @@ class Interview(QObject):
           self.fisheryNumGearIndex = index+7
           self.fisheryMonths = index+8
           self.fisheryAvgNumDays = index+9
+          self.fisheryFedVesIndex = index+10
+          self.fisheryStateVesIndex = index+11
 		  
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
@@ -116,6 +118,8 @@ class Interview(QObject):
           fields[self.fisheryNumGearIndex] = QgsField("num_gear", QVariant.String)
           fields[self.fisheryMonths] = QgsField("fshy_mos", QVariant.String)
           fields[self.fisheryAvgNumDays] = QgsField("fshy_dys", QVariant.String)
+          fields[self.fisheryFedVesIndex] = QgsField("fed_vsl_id", QVariant.String)
+          fields[self.fisheryStateVesIndex] = QgsField("sta_vsl_id", QVariant.String)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
           #           1 : QgsField("participant_name", QVariant.String),
@@ -153,6 +157,8 @@ class Interview(QObject):
               fet.addAttribute(self.fisheryNumGearIndex, QVariant(self.currentFisheryNumGear))
               fet.addAttribute(self.fisheryMonths, QVariant(self.currentFisheryMonths))
               fet.addAttribute(self.fisheryAvgNumDays, QVariant(self.currentFisheryAvgDaysPerYear))
+              fet.addAttribute(self.fisheryFedVesIndex, QVariant(self.currentFisheryFedVesId))
+              fet.addAttribute(self.fisheryStateVesIndex, QVariant(self.currentFisheryStateVesId))
               writer.addFeature(fet)
           del writer
           capture_string = QString("Wrote Shapefile..." + write_string)
@@ -202,7 +208,7 @@ class Interview(QObject):
       self.currentFisheryNumGear = 0
       self.currentFisheryMonths = 0
       self.currentFisheryAvgDaysPerYear = 0
-      
+
       #Reset penny count
       self.pennies_left = 100
 
@@ -339,6 +345,8 @@ class Interview(QObject):
       self.currentFisheryNumGear = 0
       self.currentFisheryMonths = 0
       self.currentFisheryAvgDaysPerYear = 0
+      self.currentFisheryFedVesId = ""
+      self.currentFisheryStateVesId = ""
         
       # A place to store polygons we capture
       self.capturedPolygons = []

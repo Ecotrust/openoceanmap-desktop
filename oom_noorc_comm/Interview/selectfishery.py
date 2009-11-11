@@ -50,6 +50,8 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent
+        self.federal_vessel_id_line.setText( self.parent.currentFisheryFedVesId )
+        self.state_vessel_id_line.setText( self.parent.currentFisheryStateVesId )
         
 
     def on_pbnStartShapes_released(self):    
@@ -66,6 +68,8 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.parent.currentFisheryNumGear = self.fish_num_gear.text()
         self.parent.currentFisheryMonths = self.fish_months.text()
         self.parent.currentFisheryAvgDaysPerYear = self.fish_avg_days.text()
+        self.parent.currentFisheryFedVesId = self.federal_vessel_id_line.text()
+        self.parent.currentFisheryStateVesId = self.state_vessel_id_line.text()
     
         self.close()
         mc = self.parent.canvas      

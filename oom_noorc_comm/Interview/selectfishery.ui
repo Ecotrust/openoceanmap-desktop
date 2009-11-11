@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>460</width>
-    <height>361</height>
+    <width>474</width>
+    <height>426</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -521,6 +521,122 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_15" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_8" >
+       <layout class="QHBoxLayout" name="horizontalLayout_16" >
+        <item>
+         <widget class="QLabel" name="label_7" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Federal Vessel ID</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="federal_vessel_id_line" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_17" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_9" >
+       <layout class="QHBoxLayout" name="horizontalLayout_18" >
+        <item>
+         <widget class="QLabel" name="label_8" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>State Vessel ID</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="state_vessel_id_line" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2" >
      <item>
       <widget class="QWidget" native="1" name="widget_2" >
@@ -578,6 +694,18 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>fishery_comboBox</tabstop>
+  <tabstop>fish_perc_income</tabstop>
+  <tabstop>fish_yrs_partic</tabstop>
+  <tabstop>fish_num_gear</tabstop>
+  <tabstop>fish_months</tabstop>
+  <tabstop>fish_avg_days</tabstop>
+  <tabstop>federal_vessel_id_line</tabstop>
+  <tabstop>state_vessel_id_line</tabstop>
+  <tabstop>pbnStartShapes</tabstop>
+  <tabstop>pbnFisheryFinished</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

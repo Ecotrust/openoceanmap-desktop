@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Sat Nov 07 09:58:49 2009
+# Created: Tue Nov 10 17:00:13 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectFishery(object):
     def setupUi(self, SelectFishery):
         SelectFishery.setObjectName("SelectFishery")
-        SelectFishery.resize(460, 361)
+        SelectFishery.resize(474, 426)
         self.verticalLayout = QtGui.QVBoxLayout(SelectFishery)
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_3 = QtGui.QHBoxLayout()
@@ -166,6 +166,46 @@ class Ui_SelectFishery(object):
         self.horizontalLayout_12.addWidget(self.fish_avg_days)
         self.horizontalLayout_11.addWidget(self.widget_6)
         self.verticalLayout.addLayout(self.horizontalLayout_11)
+        self.horizontalLayout_15 = QtGui.QHBoxLayout()
+        self.horizontalLayout_15.setObjectName("horizontalLayout_15")
+        self.widget_8 = QtGui.QWidget(SelectFishery)
+        self.widget_8.setObjectName("widget_8")
+        self.horizontalLayout_16 = QtGui.QHBoxLayout(self.widget_8)
+        self.horizontalLayout_16.setObjectName("horizontalLayout_16")
+        self.label_7 = QtGui.QLabel(self.widget_8)
+        self.label_7.setMinimumSize(QtCore.QSize(160, 0))
+        self.label_7.setMaximumSize(QtCore.QSize(160, 16777215))
+        self.label_7.setObjectName("label_7")
+        self.horizontalLayout_16.addWidget(self.label_7)
+        spacerItem6 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_16.addItem(spacerItem6)
+        self.federal_vessel_id_line = QtGui.QLineEdit(self.widget_8)
+        self.federal_vessel_id_line.setMinimumSize(QtCore.QSize(200, 0))
+        self.federal_vessel_id_line.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.federal_vessel_id_line.setObjectName("federal_vessel_id_line")
+        self.horizontalLayout_16.addWidget(self.federal_vessel_id_line)
+        self.horizontalLayout_15.addWidget(self.widget_8)
+        self.verticalLayout.addLayout(self.horizontalLayout_15)
+        self.horizontalLayout_17 = QtGui.QHBoxLayout()
+        self.horizontalLayout_17.setObjectName("horizontalLayout_17")
+        self.widget_9 = QtGui.QWidget(SelectFishery)
+        self.widget_9.setObjectName("widget_9")
+        self.horizontalLayout_18 = QtGui.QHBoxLayout(self.widget_9)
+        self.horizontalLayout_18.setObjectName("horizontalLayout_18")
+        self.label_8 = QtGui.QLabel(self.widget_9)
+        self.label_8.setMinimumSize(QtCore.QSize(160, 0))
+        self.label_8.setMaximumSize(QtCore.QSize(160, 16777215))
+        self.label_8.setObjectName("label_8")
+        self.horizontalLayout_18.addWidget(self.label_8)
+        spacerItem7 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem7)
+        self.state_vessel_id_line = QtGui.QLineEdit(self.widget_9)
+        self.state_vessel_id_line.setMinimumSize(QtCore.QSize(200, 0))
+        self.state_vessel_id_line.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.state_vessel_id_line.setObjectName("state_vessel_id_line")
+        self.horizontalLayout_18.addWidget(self.state_vessel_id_line)
+        self.horizontalLayout_17.addWidget(self.widget_9)
+        self.verticalLayout.addLayout(self.horizontalLayout_17)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.widget_2 = QtGui.QWidget(SelectFishery)
@@ -174,8 +214,8 @@ class Ui_SelectFishery(object):
         self.hboxlayout1.setSpacing(6)
         self.hboxlayout1.setMargin(9)
         self.hboxlayout1.setObjectName("hboxlayout1")
-        spacerItem6 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.hboxlayout1.addItem(spacerItem6)
+        spacerItem8 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem8)
         self.pbnFisheryFinished = QtGui.QPushButton(self.widget_2)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -193,6 +233,15 @@ class Ui_SelectFishery(object):
 
         self.retranslateUi(SelectFishery)
         QtCore.QMetaObject.connectSlotsByName(SelectFishery)
+        SelectFishery.setTabOrder(self.fishery_comboBox, self.fish_perc_income)
+        SelectFishery.setTabOrder(self.fish_perc_income, self.fish_yrs_partic)
+        SelectFishery.setTabOrder(self.fish_yrs_partic, self.fish_num_gear)
+        SelectFishery.setTabOrder(self.fish_num_gear, self.fish_months)
+        SelectFishery.setTabOrder(self.fish_months, self.fish_avg_days)
+        SelectFishery.setTabOrder(self.fish_avg_days, self.federal_vessel_id_line)
+        SelectFishery.setTabOrder(self.federal_vessel_id_line, self.state_vessel_id_line)
+        SelectFishery.setTabOrder(self.state_vessel_id_line, self.pbnStartShapes)
+        SelectFishery.setTabOrder(self.pbnStartShapes, self.pbnFisheryFinished)
 
     def retranslateUi(self, SelectFishery):
         SelectFishery.setWindowTitle(QtGui.QApplication.translate("SelectFishery", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
@@ -229,6 +278,8 @@ class Ui_SelectFishery(object):
         self.label_6.setText(QtGui.QApplication.translate("SelectFishery", "# traps owned/hooks used per day/avg net tows per day:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_4.setText(QtGui.QApplication.translate("SelectFishery", "Months of fishing effort:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_5.setText(QtGui.QApplication.translate("SelectFishery", "Avg # days fishing per year", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_7.setText(QtGui.QApplication.translate("SelectFishery", "Federal Vessel ID", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_8.setText(QtGui.QApplication.translate("SelectFishery", "State Vessel ID", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFisheryFinished.setText(QtGui.QApplication.translate("SelectFishery", "Finished With Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectFishery", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 
