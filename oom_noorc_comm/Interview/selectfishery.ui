@@ -97,11 +97,6 @@
           </item>
           <item>
            <property name="text" >
-            <string>Flatfish – Hook and Line</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
             <string>Groundfish - Midwater Trawl Pre RCA</string>
            </property>
           </item>
@@ -203,11 +198,6 @@
           <item>
            <property name="text" >
             <string>Sardine - Net (Seine)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Shrimp/Prawn – Trap</string>
            </property>
           </item>
           <item>
