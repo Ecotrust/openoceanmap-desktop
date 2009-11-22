@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Sat Nov 07 13:04:40 2009
+# Created: Sun Nov 22 12:55:36 2009
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -139,11 +139,11 @@ class Ui_SelectFishery(object):
     def retranslateUi(self, SelectFishery):
         SelectFishery.setWindowTitle(QtGui.QApplication.translate("SelectFishery", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "Select Fishery :", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Dungeness Crab", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Groundfish/Bottom Fishing", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Halibut", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(4, QtGui.QApplication.translate("SelectFishery", "Salmon", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(5, QtGui.QApplication.translate("SelectFishery", "Tuna", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Albacore Tuna", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Dungeness Crab", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Pacific Halibut", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(4, QtGui.QApplication.translate("SelectFishery", "Rockfish", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(5, QtGui.QApplication.translate("SelectFishery", "Salmon", None, QtGui.QApplication.UnicodeUTF8))
         self.label_7.setText(QtGui.QApplication.translate("SelectFishery", "% of annual trips:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_11.setText(QtGui.QApplication.translate("SelectFishery", "Trip length:", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_tlen.setItemText(1, QtGui.QApplication.translate("SelectFishery", "1/2 day", None, QtGui.QApplication.UnicodeUTF8))

@@ -74,27 +74,27 @@
           </item>
           <item>
            <property name="text" >
+            <string>Albacore Tuna</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
             <string>Dungeness Crab</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish/Bottom Fishing</string>
+            <string>Pacific Halibut</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Halibut</string>
+            <string>Rockfish</string>
            </property>
           </item>
           <item>
            <property name="text" >
             <string>Salmon</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Tuna</string>
            </property>
           </item>
          </widget>
