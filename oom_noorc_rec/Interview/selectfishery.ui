@@ -155,22 +155,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Abalone</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
             <string>Albacore Tuna</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Anchovy/Herring (bait fish)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>California Halibut</string>
            </property>
           </item>
           <item>
@@ -180,7 +165,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Humboldt Squid</string>
+            <string>Flatfish - Hook and Line</string>
            </property>
           </item>
           <item>
@@ -190,12 +175,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Rock Scallops</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Rockfish/Bottom fish</string>
+            <string>Rockfish</string>
            </property>
           </item>
           <item>
@@ -205,22 +185,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Sanddabs</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Sharks/Rays</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Urchin</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Other Flatfish (soles, turbots)</string>
+            <string>Shrimp/Prawn - Trap</string>
            </property>
           </item>
           <item>
