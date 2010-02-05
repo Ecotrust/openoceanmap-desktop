@@ -51,7 +51,7 @@ class Interview(QObject):
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
-    self.phase = ["start","shapes","finished"]
+    self.phase = ["start","general","shapes","finished"]
     
     self.resetInterview()
     
@@ -62,7 +62,14 @@ class Interview(QObject):
 
   def nextStep(self):
       self.phase_index = self.phase_index + 1
-      if self.phase[ self.phase_index ] == "shapes":
+      if self.phase[ self.phase_index ] == "general":
+          new_status = "General questions"
+          self.parent.statusbar.showMessage(new_status)
+          from rec_cpfv import RecCpfvGui
+          wnd = RecCpfvGui(self)
+          wnd.show()
+          
+      elif self.phase[ self.phase_index ] == "shapes":
           new_status = "Drawing fisheries"
           self.parent.statusbar.showMessage(new_status)
           self.next_fishery()

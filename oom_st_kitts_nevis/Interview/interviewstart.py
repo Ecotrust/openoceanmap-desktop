@@ -52,17 +52,19 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         
         interviewInfo2.append(["fname", self.interviewee_first_name_line.text()])
         interviewInfo2.append(["lname", self.interviewee_last_name_line.text()])
+        interviewInfo2.append(["mailaddr", self.address_line.text()])
+        interviewInfo2.append(["phone", self.phone_line.text()])
+        interviewInfo2.append(["email", self.email_line.text()])
         interviewInfo2.append(["age", self.age_line.text()])
         interviewInfo2.append(["gender", self.gender_comboBox.currentText()])
-        interviewInfo2.append(["city", self.city_line.text()])
-
-        interviewInfo2.append(["date", self.date_line.text()])        
+        
+        interviewInfo2.append(["date", self.date_line.text()])   
+        interviewInfo2.append(["location", self.location_line.text()])         
         interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
         interviewInfo2.append(["mood", self.mood_line.text()])
+        interviewInfo2.append(["data_meth", self.dataMethod_comboBox.currentText()])
         
-        interviewInfo2.append(["user_group", "commercial"])
-
         interviewInfo2.append(["years", self.years_line.text()])
         interviewInfo2.append(["perc_incom", self.perc_income_line.text()])
         #interviewInfo2.append(["fsh_lic_id", self.fisherman_license_id_line.text()])
