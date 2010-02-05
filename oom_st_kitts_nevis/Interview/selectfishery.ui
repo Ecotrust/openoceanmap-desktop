@@ -1,0 +1,701 @@
+<ui version="4.0" >
+ <author>Aaron Racicot</author>
+ <class>SelectFishery</class>
+ <widget class="QDialog" name="SelectFishery" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>474</width>
+    <height>426</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>OpenOceanMap - Select Fishery</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" >
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3" >
+     <item>
+      <widget class="QWidget" native="1" name="widget" >
+       <layout class="QHBoxLayout" >
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <property name="leftMargin" >
+         <number>9</number>
+        </property>
+        <property name="topMargin" >
+         <number>9</number>
+        </property>
+        <property name="rightMargin" >
+         <number>9</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="fishery_text" >
+          <property name="minimumSize" >
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Select Fishery :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QComboBox" name="fishery_comboBox" >
+          <property name="minimumSize" >
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <item>
+           <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Albacore Tuna - Troll (Jig)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Dungeness Crab - Trap</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Midwater Trawl Pre RCA</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Midwater Trawl Post RCA</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Bottom Trawl Pre RCA</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Bottom Trawl Post RCA</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Longline Pre RCA (LE)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Longline Post RCA (LE)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Hook and Line Pre RCA (LE)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Hook and Line Post RCA (LE)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Trap Pre RCA (LE)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Trap Post RCA (LE)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Longline Pre RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Longline Post RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Hook and Line Pre RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Hook and Line Post RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Trap Pre RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Groundfish - Trap Post RCA (OA)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Hagfish – Trap</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Halibut – Longline</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Pink Shrimp – Trawl</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Salmon – Troll</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sardine - Net (Seine)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Urchin - Dive</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Other</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_3" >
+       <layout class="QHBoxLayout" name="horizontalLayout_4" >
+        <item>
+         <widget class="QLabel" name="label" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Percent income from this fishery:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_perc_income" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+       <zorder>fish_perc_income</zorder>
+       <zorder>label</zorder>
+       <zorder>horizontalSpacer_3</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_4" >
+       <layout class="QHBoxLayout" name="horizontalLayout_8" >
+        <item>
+         <widget class="QLabel" name="label_3" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Years participating in this fishery:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_yrs_partic" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_13" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_7" >
+       <layout class="QHBoxLayout" name="horizontalLayout_14" >
+        <item>
+         <widget class="QLabel" name="label_6" >
+          <property name="minimumSize" >
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string># traps owned/hooks used per day/avg net tows per day:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_num_gear" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_9" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_5" >
+       <layout class="QHBoxLayout" name="horizontalLayout_10" >
+        <item>
+         <widget class="QLabel" name="label_4" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Months of fishing effort:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_months" >
+          <property name="minimumSize" >
+           <size>
+            <width>220</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_11" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_6" >
+       <layout class="QHBoxLayout" name="horizontalLayout_12" >
+        <item>
+         <widget class="QLabel" name="label_5" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Avg # days fishing per year</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_avg_days" >
+          <property name="minimumSize" >
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_15" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_8" >
+       <layout class="QHBoxLayout" name="horizontalLayout_16" >
+        <item>
+         <widget class="QLabel" name="label_7" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Federal Vessel ID</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="federal_vessel_id_line" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_17" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_9" >
+       <layout class="QHBoxLayout" name="horizontalLayout_18" >
+        <item>
+         <widget class="QLabel" name="label_8" >
+          <property name="minimumSize" >
+           <size>
+            <width>160</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>State Vessel ID</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="state_vessel_id_line" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_2" >
+       <layout class="QHBoxLayout" >
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <property name="margin" >
+         <number>9</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbnFisheryFinished" >
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text" >
+           <string>Finished With Interview</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbnStartShapes" >
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text" >
+           <string>Start Drawing Shapes</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+       <zorder>pbnFisheryFinished</zorder>
+       <zorder>pbnStartShapes</zorder>
+       <zorder>horizontalSpacer</zorder>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>fishery_comboBox</tabstop>
+  <tabstop>fish_perc_income</tabstop>
+  <tabstop>fish_yrs_partic</tabstop>
+  <tabstop>fish_num_gear</tabstop>
+  <tabstop>fish_months</tabstop>
+  <tabstop>fish_avg_days</tabstop>
+  <tabstop>federal_vessel_id_line</tabstop>
+  <tabstop>state_vessel_id_line</tabstop>
+  <tabstop>pbnStartShapes</tabstop>
+  <tabstop>pbnFisheryFinished</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
