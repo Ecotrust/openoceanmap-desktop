@@ -61,7 +61,9 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         self.fish_pct_13.setText('0')
         self.fish_pct_14.setText('0')
         self.fish_pct_15.setText('0')
-        
+        self.fish_pct_16.setText('0')
+        self.fish_pct_17.setText('0')
+        self.fish_pct_18.setText('0')        
 
     def on_pbnFinished_released(self):
         
@@ -97,7 +99,13 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
             cpfv_fisheries.append(('Fish14',self.fish_pct_14.text()))
         if self.fish_pct_15.text() != '0':
             cpfv_fisheries.append(('Fish15',self.fish_pct_15.text()))
-        
+        if self.fish_pct_16.text() != '0':
+            cpfv_fisheries.append(('Fish16',self.fish_pct_16.text()))
+        if self.fish_pct_17.text() != '0':
+            cpfv_fisheries.append(('Fish17',self.fish_pct_17.text()))
+        if self.fish_pct_18.text() != '0':
+            cpfv_fisheries.append(('Fish18',self.fish_pct_18.text()))
+            
         total_values = 0
         for (fishery,value) in cpfv_fisheries:
             if not strIsInt(value):
@@ -130,7 +138,10 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         interviewInfo2.append(["f13_pct",self.fish_pct_13.text()])
         interviewInfo2.append(["f14_pct",self.fish_pct_14.text()])
         interviewInfo2.append(["f15_pct",self.fish_pct_15.text()])
-
+        interviewInfo2.append(["f16_pct",self.fish_pct_16.text()])
+        interviewInfo2.append(["f17_pct",self.fish_pct_17.text()])
+        interviewInfo2.append(["f18_pct",self.fish_pct_18.text()])
+        
         #total = sum([int(b) for (a,b) in cpfv_fisheries])
         #print "Total: "+str(total)
 
