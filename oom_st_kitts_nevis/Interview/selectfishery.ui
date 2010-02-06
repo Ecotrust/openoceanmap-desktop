@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>474</width>
+    <width>682</width>
     <height>426</height>
    </rect>
   </property>
@@ -70,13 +70,13 @@
          <widget class="QComboBox" name="fishery_comboBox" >
           <property name="minimumSize" >
            <size>
-            <width>300</width>
+            <width>450</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>300</width>
+            <width>450</width>
             <height>16777215</height>
            </size>
           </property>
@@ -87,193 +87,97 @@
           </item>
           <item>
            <property name="text" >
-            <string>Albacore Tuna - Troll (Jig)</string>
+            <string>Coastal Pelagics or Net Fishery (Coastal Pealgics - Beach Seine)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Dungeness Crab - Trap</string>
+            <string>Tuna &amp; Bonito with Handline (Coastal Pelagics - Troll/Handline)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Midwater Trawl Pre RCA</string>
+            <string>Large Offshore Pelagics (Ocean Pelagics - Troll/Handline)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Midwater Trawl Post RCA</string>
+            <string>Nearshore Trap/Pot (Coastal Demersals - Trap)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Bottom Trawl Pre RCA</string>
+            <string>Nearshore Handline/Banking (Coastal Demersals - Pole/Handline)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Bottom Trawl Post RCA</string>
+            <string>Nearshore Spear (Coastal Demersals - Spear Gun)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Longline Pre RCA (LE)</string>
+            <string>Nearshore Gillnets (Coastal Demersals - Gillnets)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Longline Post RCA (LE)</string>
+            <string>Deep Slope/Bank Trap/Pot Fishery (Demersal Shelf/Deep Slope - Trap)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Hook and Line Pre RCA (LE)</string>
+            <string>Deep Slope/Bank Handline/Banking Fishery (Demersal Shelf/Deep Slope - Pole/Handline)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Hook and Line Post RCA (LE)</string>
+            <string>Lobster - Trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Trap Pre RCA (LE)</string>
+            <string>Lobster - Dive (SCUBA)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Trap Post RCA (LE)</string>
+            <string>Lobster - Dive (Free)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Longline Pre RCA (OA)</string>
+            <string>Conch - Dive (SCUBA)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Longline Post RCA (OA)</string>
+            <string>Conch - Dive (Free)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Hook and Line Pre RCA (OA)</string>
+            <string>Shark - Hook and Line</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Hook and Line Post RCA (OA)</string>
+            <string>Shark - Gillnets</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Trap Pre RCA (OA)</string>
+            <string>Diamondback Squid - Light Stick (Hook and Line)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Groundfish - Trap Post RCA (OA)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Hagfish – Trap</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Halibut – Longline</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Pink Shrimp – Trawl</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Salmon – Troll</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Sardine - Net (Seine)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Urchin - Dive</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Other</string>
+            <string>Turtle - Turtle Net</string>
            </property>
           </item>
          </widget>
         </item>
        </layout>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5" >
-     <item>
-      <widget class="QWidget" native="1" name="widget_3" >
-       <layout class="QHBoxLayout" name="horizontalLayout_4" >
-        <item>
-         <widget class="QLabel" name="label" >
-          <property name="minimumSize" >
-           <size>
-            <width>160</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>160</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text" >
-           <string>Percent income from this fishery:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3" >
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="fish_perc_income" >
-          <property name="minimumSize" >
-           <size>
-            <width>40</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>40</width>
-            <height>16777215</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-       <zorder>fish_perc_income</zorder>
-       <zorder>label</zorder>
-       <zorder>horizontalSpacer_3</zorder>
       </widget>
      </item>
     </layout>
@@ -298,7 +202,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Years participating in this fishery:</string>
+           <string>Years experience in this fishery:</string>
           </property>
          </widget>
         </item>
@@ -319,19 +223,80 @@
          <widget class="QLineEdit" name="fish_yrs_partic" >
           <property name="minimumSize" >
            <size>
-            <width>40</width>
+            <width>100</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>40</width>
+            <width>100</width>
             <height>16777215</height>
            </size>
           </property>
          </widget>
         </item>
        </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_3" >
+       <layout class="QHBoxLayout" name="horizontalLayout_4" >
+        <item>
+         <widget class="QLabel" name="label" >
+          <property name="minimumSize" >
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Fishing seasonality:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fish_seasonality" >
+          <property name="minimumSize" >
+           <size>
+            <width>450</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>450</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+       <zorder>fish_seasonality</zorder>
+       <zorder>label</zorder>
+       <zorder>horizontalSpacer_3</zorder>
       </widget>
      </item>
     </layout>
@@ -356,7 +321,7 @@
            </size>
           </property>
           <property name="text" >
-           <string># traps owned/hooks used per day/avg net tows per day:</string>
+           <string>Average gear usage per trip:</string>
           </property>
          </widget>
         </item>
@@ -377,13 +342,13 @@
          <widget class="QLineEdit" name="fish_num_gear" >
           <property name="minimumSize" >
            <size>
-            <width>40</width>
+            <width>100</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>40</width>
+            <width>100</width>
             <height>16777215</height>
            </size>
           </property>
@@ -414,7 +379,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Months of fishing effort:</string>
+           <string>Gear deployment length:</string>
           </property>
          </widget>
         </item>
@@ -432,74 +397,16 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLineEdit" name="fish_months" >
+         <widget class="QLineEdit" name="fish_gear_length" >
           <property name="minimumSize" >
            <size>
-            <width>220</width>
+            <width>100</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>200</width>
-            <height>16777215</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_11" >
-     <item>
-      <widget class="QWidget" native="1" name="widget_6" >
-       <layout class="QHBoxLayout" name="horizontalLayout_12" >
-        <item>
-         <widget class="QLabel" name="label_5" >
-          <property name="minimumSize" >
-           <size>
-            <width>160</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>160</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text" >
-           <string>Avg # days fishing per year</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3" >
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="fish_avg_days" >
-          <property name="minimumSize" >
-           <size>
-            <width>40</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>40</width>
+            <width>100</width>
             <height>16777215</height>
            </size>
           </property>
@@ -530,7 +437,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Federal Vessel ID</string>
+           <string>Average price per pound:</string>
           </property>
          </widget>
         </item>
@@ -548,16 +455,16 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLineEdit" name="federal_vessel_id_line" >
+         <widget class="QLineEdit" name="fish_price" >
           <property name="minimumSize" >
            <size>
-            <width>200</width>
+            <width>100</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>200</width>
+            <width>100</width>
             <height>16777215</height>
            </size>
           </property>
@@ -588,7 +495,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>State Vessel ID</string>
+           <string>Fishery-specific landing port:</string>
           </property>
          </widget>
         </item>
@@ -606,16 +513,16 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLineEdit" name="state_vessel_id_line" >
+         <widget class="QLineEdit" name="fish_port" >
           <property name="minimumSize" >
            <size>
-            <width>200</width>
+            <width>450</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>200</width>
+            <width>450</width>
             <height>16777215</height>
            </size>
           </property>
@@ -683,16 +590,17 @@
     </layout>
    </item>
   </layout>
+  <zorder>widget_4</zorder>
+  <zorder></zorder>
  </widget>
  <tabstops>
   <tabstop>fishery_comboBox</tabstop>
-  <tabstop>fish_perc_income</tabstop>
   <tabstop>fish_yrs_partic</tabstop>
+  <tabstop>fish_seasonality</tabstop>
   <tabstop>fish_num_gear</tabstop>
-  <tabstop>fish_months</tabstop>
-  <tabstop>fish_avg_days</tabstop>
-  <tabstop>federal_vessel_id_line</tabstop>
-  <tabstop>state_vessel_id_line</tabstop>
+  <tabstop>fish_gear_length</tabstop>
+  <tabstop>fish_price</tabstop>
+  <tabstop>fish_port</tabstop>
   <tabstop>pbnStartShapes</tabstop>
   <tabstop>pbnFisheryFinished</tabstop>
  </tabstops>

@@ -50,8 +50,6 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent
-        self.federal_vessel_id_line.setText( self.parent.currentFisheryFedVesId )
-        self.state_vessel_id_line.setText( self.parent.currentFisheryStateVesId )
         
 
     def on_pbnStartShapes_released(self):    
@@ -63,13 +61,13 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         else:
             self.parent.currentFishery = cur_fishery    
             
-        self.parent.currentFisheryIncome = self.fish_perc_income.text()
         self.parent.currentFisheryYearsPartic = self.fish_yrs_partic.text()
         self.parent.currentFisheryNumGear = self.fish_num_gear.text()
-        self.parent.currentFisheryMonths = self.fish_months.text()
-        self.parent.currentFisheryAvgDaysPerYear = self.fish_avg_days.text()
-        self.parent.currentFisheryFedVesId = self.federal_vessel_id_line.text()
-        self.parent.currentFisheryStateVesId = self.state_vessel_id_line.text()
+        self.parent.currentFisheryGearLength = self.fish_gear_length.text()
+        self.parent.currentFisherySeasonality = self.fish_seasonality.text()
+        self.parent.currentFisheryPrice = self.fish_price.text()
+        self.parent.currentFisheryPort = self.fish_port.text()
+
     
         self.close()
         mc = self.parent.canvas      
@@ -124,7 +122,6 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                         
             self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
-            self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
             
         self.close()
 
@@ -167,7 +164,6 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                     
         self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
         self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
-        self.parent.capturedPolygonsFisheryIncome.append(self.parent.currentFisheryIncome)
             
         self.close()
         self.parent.end_fishery()
