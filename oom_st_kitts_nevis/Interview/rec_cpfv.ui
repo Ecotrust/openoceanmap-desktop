@@ -13,7 +13,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>Form</string>
+   <string>OpenOceanMap - Fishery Participation</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3" >
    <item>

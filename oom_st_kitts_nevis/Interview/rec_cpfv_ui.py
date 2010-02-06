@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rec_cpfv.ui'
 #
-# Created: Fri Feb 05 15:49:59 2010
+# Created: Fri Feb 05 17:58:56 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -610,7 +610,7 @@ class Ui_RecCpfv(object):
         RecCpfv.setTabOrder(self.pbnFinished, self.pbnCancel)
 
     def retranslateUi(self, RecCpfv):
-        RecCpfv.setWindowTitle(QtGui.QApplication.translate("RecCpfv", "Form", None, QtGui.QApplication.UnicodeUTF8))
+        RecCpfv.setWindowTitle(QtGui.QApplication.translate("RecCpfv", "OpenOceanMap - Fishery Participation", None, QtGui.QApplication.UnicodeUTF8))
         self.label_42.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
         self.label_43.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
         self.label_44.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))

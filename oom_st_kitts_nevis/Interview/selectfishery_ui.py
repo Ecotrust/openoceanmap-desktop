@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Fri Feb 05 17:03:11 2010
+# Created: Fri Feb 05 17:58:56 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -240,6 +240,6 @@ class Ui_SelectFishery(object):
         self.label_4.setText(QtGui.QApplication.translate("SelectFishery", "Gear deployment length:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_7.setText(QtGui.QApplication.translate("SelectFishery", "Average price per pound:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_8.setText(QtGui.QApplication.translate("SelectFishery", "Fishery-specific landing port:", None, QtGui.QApplication.UnicodeUTF8))
-        self.pbnFisheryFinished.setText(QtGui.QApplication.translate("SelectFishery", "Finished With Interview", None, QtGui.QApplication.UnicodeUTF8))
+        self.pbnFisheryFinished.setText(QtGui.QApplication.translate("SelectFishery", "Finished With Fisheries", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnStartShapes.setText(QtGui.QApplication.translate("SelectFishery", "Start Drawing Shapes", None, QtGui.QApplication.UnicodeUTF8))
 
