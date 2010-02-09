@@ -24,7 +24,7 @@
       </font>
      </property>
      <property name="title" >
-      <string/>
+      <string>Enter the % of income derived from each fishery listed</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2" >
       <item>
@@ -71,7 +71,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Coastal Pelagics or Net Fishery</string>
               </property>
              </widget>
             </item>
@@ -153,7 +153,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Tuna &amp; Bonito with Handline</string>
               </property>
              </widget>
             </item>
@@ -235,7 +235,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Large Offshore Pelagics</string>
               </property>
              </widget>
             </item>
@@ -317,7 +317,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Nearshore Trap/Pot</string>
               </property>
              </widget>
             </item>
@@ -399,7 +399,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Nearshore Handline/Banking</string>
               </property>
              </widget>
             </item>
@@ -481,7 +481,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Nearshore Spear</string>
               </property>
              </widget>
             </item>
@@ -563,7 +563,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Nearshore Gillnets</string>
               </property>
              </widget>
             </item>
@@ -645,7 +645,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Deep Slope/Bank Trap/Pot Fishery</string>
               </property>
              </widget>
             </item>
@@ -727,7 +727,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Deep Slope/Bank Handline/Banking Fishery</string>
               </property>
              </widget>
             </item>
@@ -836,7 +836,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Lobster - Trap</string>
               </property>
              </widget>
             </item>
@@ -918,7 +918,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Lobster - Dive (SCUBA)</string>
               </property>
              </widget>
             </item>
@@ -1000,7 +1000,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Lobster - Dive (Free)</string>
               </property>
              </widget>
             </item>
@@ -1082,7 +1082,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Conch - Dive (SCUBA)</string>
               </property>
              </widget>
             </item>
@@ -1164,7 +1164,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Conch - Dive (Free)</string>
               </property>
              </widget>
             </item>
@@ -1246,7 +1246,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Shark - Hook and Line</string>
               </property>
              </widget>
             </item>
@@ -1328,7 +1328,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Shark - Gillnets</string>
               </property>
              </widget>
             </item>
@@ -1410,7 +1410,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Diamondback Squid - Light Stick</string>
               </property>
              </widget>
             </item>
@@ -1492,7 +1492,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Fishery % of income</string>
+               <string>Turtle - Turtle Net</string>
               </property>
              </widget>
             </item>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rec_cpfv.ui'
 #
-# Created: Fri Feb 05 17:58:56 2010
+# Created: Tue Feb 09 10:30:57 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -611,24 +611,25 @@ class Ui_RecCpfv(object):
 
     def retranslateUi(self, RecCpfv):
         RecCpfv.setWindowTitle(QtGui.QApplication.translate("RecCpfv", "OpenOceanMap - Fishery Participation", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_42.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_43.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_44.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_28.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_30.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_31.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_32.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_33.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_34.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_45.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_46.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_47.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_48.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_49.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_50.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_51.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_52.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_53.setText(QtGui.QApplication.translate("RecCpfv", "Fishery % of income", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox_4.setTitle(QtGui.QApplication.translate("RecCpfv", "Enter the % of income derived from each fishery listed", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_42.setText(QtGui.QApplication.translate("RecCpfv", "Coastal Pelagics or Net Fishery", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_43.setText(QtGui.QApplication.translate("RecCpfv", "Tuna & Bonito with Handline", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_44.setText(QtGui.QApplication.translate("RecCpfv", "Large Offshore Pelagics", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_28.setText(QtGui.QApplication.translate("RecCpfv", "Nearshore Trap/Pot", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_30.setText(QtGui.QApplication.translate("RecCpfv", "Nearshore Handline/Banking", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_31.setText(QtGui.QApplication.translate("RecCpfv", "Nearshore Spear", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_32.setText(QtGui.QApplication.translate("RecCpfv", "Nearshore Gillnets", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_33.setText(QtGui.QApplication.translate("RecCpfv", "Deep Slope/Bank Trap/Pot Fishery", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_34.setText(QtGui.QApplication.translate("RecCpfv", "Deep Slope/Bank Handline/Banking Fishery", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_45.setText(QtGui.QApplication.translate("RecCpfv", "Lobster - Trap", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_46.setText(QtGui.QApplication.translate("RecCpfv", "Lobster - Dive (SCUBA)", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_47.setText(QtGui.QApplication.translate("RecCpfv", "Lobster - Dive (Free)", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_48.setText(QtGui.QApplication.translate("RecCpfv", "Conch - Dive (SCUBA)", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_49.setText(QtGui.QApplication.translate("RecCpfv", "Conch - Dive (Free)", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_50.setText(QtGui.QApplication.translate("RecCpfv", "Shark - Hook and Line", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_51.setText(QtGui.QApplication.translate("RecCpfv", "Shark - Gillnets", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_52.setText(QtGui.QApplication.translate("RecCpfv", "Diamondback Squid - Light Stick", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_53.setText(QtGui.QApplication.translate("RecCpfv", "Turtle - Turtle Net", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnCancel.setText(QtGui.QApplication.translate("RecCpfv", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnFinished.setText(QtGui.QApplication.translate("RecCpfv", "Continue", None, QtGui.QApplication.UnicodeUTF8))
 
