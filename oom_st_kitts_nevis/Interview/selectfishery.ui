@@ -249,19 +249,100 @@
          <widget class="QLabel" name="label" >
           <property name="minimumSize" >
            <size>
-            <width>100</width>
+            <width>80</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>100</width>
+            <width>80</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Fishing seasonality:</string>
+           <string>Season start:</string>
           </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="fishery_season_start" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <item>
+           <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>January</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>February</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>March</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>April</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>May</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>June</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>July</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>August</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>September</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>October</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>November</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>December</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item>
@@ -278,25 +359,106 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLineEdit" name="fish_seasonality" >
+         <widget class="QLabel" name="label_2" >
           <property name="minimumSize" >
            <size>
-            <width>450</width>
+            <width>80</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>450</width>
+            <width>80</width>
             <height>16777215</height>
            </size>
           </property>
+          <property name="text" >
+           <string>Season end:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="fishery_season_end" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <item>
+           <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>January</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>February</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>March</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>April</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>May</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>June</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>July</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>August</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>September</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>October</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>November</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>December</string>
+           </property>
+          </item>
          </widget>
         </item>
        </layout>
-       <zorder>fish_seasonality</zorder>
-       <zorder>label</zorder>
-       <zorder>horizontalSpacer_3</zorder>
       </widget>
      </item>
     </layout>
@@ -426,18 +588,18 @@
          <widget class="QLabel" name="label_7" >
           <property name="minimumSize" >
            <size>
-            <width>160</width>
+            <width>250</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>160</width>
+            <width>250</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Average price per pound:</string>
+           <string>Average price per pound (lobster and conch only):</string>
           </property>
          </widget>
         </item>
@@ -479,7 +641,7 @@
     <layout class="QHBoxLayout" name="horizontalLayout_17" >
      <item>
       <widget class="QWidget" native="1" name="widget_9" >
-       <layout class="QHBoxLayout" name="horizontalLayout_18" >
+       <layout class="QHBoxLayout" name="horizontalLayout" >
         <item>
          <widget class="QLabel" name="label_8" >
           <property name="minimumSize" >
@@ -495,7 +657,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Fishery-specific landing port:</string>
+           <string>Fishery-specific landing site:</string>
           </property>
          </widget>
         </item>
@@ -513,19 +675,89 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLineEdit" name="fish_port" >
+         <widget class="QComboBox" name="fish_port" >
           <property name="minimumSize" >
            <size>
-            <width>450</width>
+            <width>250</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>450</width>
+            <width>250</width>
             <height>16777215</height>
            </size>
           </property>
+          <item>
+           <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Basseterre E</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Basseterre W</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Old Road</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Sandy Point</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Conaree</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Dieppe Bay</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Charlestown</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Jessups</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Cotton Ground</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Jones Bay</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>New Castle</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Long Haul</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Indian Castle</string>
+           </property>
+          </item>
          </widget>
         </item>
        </layout>
@@ -590,13 +822,13 @@
     </layout>
    </item>
   </layout>
-  <zorder>widget_4</zorder>
   <zorder></zorder>
  </widget>
  <tabstops>
   <tabstop>fishery_comboBox</tabstop>
   <tabstop>fish_yrs_partic</tabstop>
-  <tabstop>fish_seasonality</tabstop>
+  <tabstop>fishery_season_start</tabstop>
+  <tabstop>fishery_season_end</tabstop>
   <tabstop>fish_num_gear</tabstop>
   <tabstop>fish_gear_length</tabstop>
   <tabstop>fish_price</tabstop>

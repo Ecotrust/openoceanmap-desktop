@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>AdditionalQuestions</class>
- <widget class="QWidget" name="AdditionalQuestions" >
+ <class>AdditionalQuestions2</class>
+ <widget class="QWidget" name="AdditionalQuestions2" >
   <property name="windowModality" >
    <enum>Qt::WindowModal</enum>
   </property>
@@ -8,8 +8,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>419</width>
-    <height>322</height>
+    <width>432</width>
+    <height>293</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -17,7 +17,7 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3" >
    <item>
-    <widget class="QGroupBox" name="groupBox_4" >
+    <widget class="QGroupBox" name="groupBox_5" >
      <property name="font" >
       <font>
        <pointsize>11</pointsize>
@@ -26,10 +26,10 @@
      <property name="title" >
       <string/>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2" >
+     <layout class="QVBoxLayout" name="verticalLayout" >
       <item>
-       <widget class="QWidget" native="1" name="widget_57" >
-        <layout class="QVBoxLayout" name="verticalLayout_28" >
+       <widget class="QWidget" native="1" name="widget_63" >
+        <layout class="QVBoxLayout" name="verticalLayout_31" >
          <property name="spacing" >
           <number>4</number>
          </property>
@@ -46,8 +46,8 @@
           <number>2</number>
          </property>
          <item>
-          <widget class="QWidget" native="1" name="widget_58" >
-           <layout class="QHBoxLayout" name="horizontalLayout_37" >
+          <widget class="QWidget" native="1" name="widget_64" >
+           <layout class="QHBoxLayout" name="horizontalLayout_40" >
             <property name="spacing" >
              <number>4</number>
             </property>
@@ -64,14 +64,14 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLabel" name="label_42" >
+             <widget class="QLabel" name="label_45" >
               <property name="font" >
                <font>
                 <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text" >
-               <string>% of total household income from fishing:</string>
+               <string>% catch to individual or household (personal):</string>
               </property>
              </widget>
             </item>
@@ -89,7 +89,7 @@
              </spacer>
             </item>
             <item>
-             <widget class="QLineEdit" name="pct_house_inc" >
+             <widget class="QLineEdit" name="catch_personal" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -110,8 +110,8 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" native="1" name="widget_59" >
-        <layout class="QVBoxLayout" name="verticalLayout_29" >
+       <widget class="QWidget" native="1" name="widget_65" >
+        <layout class="QVBoxLayout" name="verticalLayout_32" >
          <property name="spacing" >
           <number>4</number>
          </property>
@@ -128,8 +128,8 @@
           <number>2</number>
          </property>
          <item>
-          <widget class="QWidget" native="1" name="widget_60" >
-           <layout class="QHBoxLayout" name="horizontalLayout_38" >
+          <widget class="QWidget" native="1" name="widget_66" >
+           <layout class="QHBoxLayout" name="horizontalLayout_41" >
             <property name="spacing" >
              <number>4</number>
             </property>
@@ -146,14 +146,14 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLabel" name="label_43" >
+             <widget class="QLabel" name="label_46" >
               <property name="font" >
                <font>
                 <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text" >
-               <string>Number of household members (dependents):</string>
+               <string>% catch to housewives/customers:</string>
               </property>
              </widget>
             </item>
@@ -171,7 +171,7 @@
              </spacer>
             </item>
             <item>
-             <widget class="QLineEdit" name="num_dependents" >
+             <widget class="QLineEdit" name="catch_customers" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -192,8 +192,8 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" native="1" name="widget_61" >
-        <layout class="QVBoxLayout" name="verticalLayout_30" >
+       <widget class="QWidget" native="1" name="widget_67" >
+        <layout class="QVBoxLayout" name="verticalLayout_33" >
          <property name="spacing" >
           <number>4</number>
          </property>
@@ -210,8 +210,8 @@
           <number>2</number>
          </property>
          <item>
-          <widget class="QWidget" native="1" name="widget_62" >
-           <layout class="QHBoxLayout" name="horizontalLayout_39" >
+          <widget class="QWidget" native="1" name="widget_68" >
+           <layout class="QHBoxLayout" name="horizontalLayout_42" >
             <property name="spacing" >
              <number>4</number>
             </property>
@@ -228,14 +228,14 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLabel" name="label_44" >
+             <widget class="QLabel" name="label_47" >
               <property name="font" >
                <font>
                 <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text" >
-               <string>Number of crew (not including self):</string>
+               <string>% catch to hotels/restaurants:</string>
               </property>
              </widget>
             </item>
@@ -253,7 +253,7 @@
              </spacer>
             </item>
             <item>
-             <widget class="QLineEdit" name="num_crew" >
+             <widget class="QLineEdit" name="catch_hotel" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -274,8 +274,8 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" native="1" name="widget_24" >
-        <layout class="QVBoxLayout" name="verticalLayout_14" >
+       <widget class="QWidget" native="1" name="widget_25" >
+        <layout class="QVBoxLayout" name="verticalLayout_34" >
          <property name="spacing" >
           <number>4</number>
          </property>
@@ -292,8 +292,8 @@
           <number>2</number>
          </property>
          <item>
-          <widget class="QWidget" native="1" name="widget_26" >
-           <layout class="QHBoxLayout" name="horizontalLayout_23" >
+          <widget class="QWidget" native="1" name="widget_27" >
+           <layout class="QHBoxLayout" name="horizontalLayout_43" >
             <property name="spacing" >
              <number>4</number>
             </property>
@@ -310,14 +310,14 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLabel" name="label_28" >
+             <widget class="QLabel" name="label_48" >
               <property name="font" >
                <font>
                 <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text" >
-               <string>% of shares to each crew member:</string>
+               <string>% catch to fish agency facility (processor):</string>
               </property>
              </widget>
             </item>
@@ -335,7 +335,7 @@
              </spacer>
             </item>
             <item>
-             <widget class="QLineEdit" name="crew_shares" >
+             <widget class="QLineEdit" name="catch_agency" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -356,8 +356,8 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" native="1" name="widget_32" >
-        <layout class="QVBoxLayout" name="verticalLayout_16" >
+       <widget class="QWidget" native="1" name="widget_33" >
+        <layout class="QVBoxLayout" name="verticalLayout_35" >
          <property name="spacing" >
           <number>4</number>
          </property>
@@ -374,8 +374,8 @@
           <number>2</number>
          </property>
          <item>
-          <widget class="QWidget" native="1" name="widget_34" >
-           <layout class="QHBoxLayout" name="horizontalLayout_25" >
+          <widget class="QWidget" native="1" name="widget_69" >
+           <layout class="QHBoxLayout" name="horizontalLayout_44" >
             <property name="spacing" >
              <number>4</number>
             </property>
@@ -392,14 +392,14 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLabel" name="label_30" >
+             <widget class="QLabel" name="label_49" >
               <property name="font" >
                <font>
                 <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text" >
-               <string>% of shares to boat (include trip costs):</string>
+               <string>% catch to other (including direct export):</string>
               </property>
              </widget>
             </item>
@@ -417,7 +417,7 @@
              </spacer>
             </item>
             <item>
-             <widget class="QLineEdit" name="boat_shares" >
+             <widget class="QLineEdit" name="catch_other" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -438,8 +438,8 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" native="1" name="widget_35" >
-        <layout class="QVBoxLayout" name="verticalLayout_17" >
+       <widget class="QWidget" native="1" name="widget_70" >
+        <layout class="QVBoxLayout" name="verticalLayout_36" >
          <property name="spacing" >
           <number>4</number>
          </property>
@@ -456,8 +456,8 @@
           <number>2</number>
          </property>
          <item>
-          <widget class="QWidget" native="1" name="widget_36" >
-           <layout class="QHBoxLayout" name="horizontalLayout_26" >
+          <widget class="QWidget" native="1" name="widget_71" >
+           <layout class="QHBoxLayout" name="horizontalLayout_45" >
             <property name="spacing" >
              <number>4</number>
             </property>
@@ -474,14 +474,14 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLabel" name="label_31" >
+             <widget class="QLabel" name="label_50" >
               <property name="font" >
                <font>
                 <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text" >
-               <string>% of shares to captain:</string>
+               <string>Define "other" above:</string>
               </property>
              </widget>
             </item>
@@ -499,10 +499,16 @@
              </spacer>
             </item>
             <item>
-             <widget class="QLineEdit" name="captain_shares" >
+             <widget class="QLineEdit" name="catch_other_type" >
+              <property name="minimumSize" >
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="maximumSize" >
                <size>
-                <width>50</width>
+                <width>200</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -520,89 +526,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" native="1" name="widget_37" >
-        <layout class="QVBoxLayout" name="verticalLayout_18" >
-         <property name="spacing" >
-          <number>4</number>
-         </property>
-         <property name="leftMargin" >
-          <number>4</number>
-         </property>
-         <property name="topMargin" >
-          <number>2</number>
-         </property>
-         <property name="rightMargin" >
-          <number>4</number>
-         </property>
-         <property name="bottomMargin" >
-          <number>2</number>
-         </property>
-         <item>
-          <widget class="QWidget" native="1" name="widget_38" >
-           <layout class="QHBoxLayout" name="horizontalLayout_27" >
-            <property name="spacing" >
-             <number>4</number>
-            </property>
-            <property name="leftMargin" >
-             <number>4</number>
-            </property>
-            <property name="topMargin" >
-             <number>0</number>
-            </property>
-            <property name="rightMargin" >
-             <number>4</number>
-            </property>
-            <property name="bottomMargin" >
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_32" >
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>% of shares to boat owner (if not captain):</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_3" >
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0" >
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="owner_shares" >
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_2" >
+       <spacer name="verticalSpacer" >
         <property name="orientation" >
          <enum>Qt::Vertical</enum>
         </property>
@@ -615,59 +539,80 @@
        </spacer>
       </item>
       <item>
-       <widget class="QWidget" native="1" name="button_box" >
-        <layout class="QHBoxLayout" name="horizontalLayout" >
+       <widget class="QWidget" native="1" name="widget_84" >
+        <layout class="QVBoxLayout" name="verticalLayout_43" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>2</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>2</number>
+         </property>
          <item>
-          <spacer>
-           <property name="orientation" >
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0" >
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pbnCancel" >
-           <property name="font" >
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text" >
-            <string>Cancel</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer" >
-           <property name="orientation" >
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType" >
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0" >
-            <size>
-             <width>50</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pbnFinished" >
-           <property name="font" >
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text" >
-            <string>Continue</string>
-           </property>
+          <widget class="QWidget" native="1" name="button_box" >
+           <layout class="QHBoxLayout" name="horizontalLayout" >
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbnCancel" >
+              <property name="font" >
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text" >
+               <string>Cancel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType" >
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>50</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbnFinished" >
+              <property name="font" >
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text" >
+               <string>Continue</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
@@ -679,13 +624,12 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>pct_house_inc</tabstop>
-  <tabstop>num_dependents</tabstop>
-  <tabstop>num_crew</tabstop>
-  <tabstop>crew_shares</tabstop>
-  <tabstop>boat_shares</tabstop>
-  <tabstop>captain_shares</tabstop>
-  <tabstop>owner_shares</tabstop>
+  <tabstop>catch_personal</tabstop>
+  <tabstop>catch_customers</tabstop>
+  <tabstop>catch_hotel</tabstop>
+  <tabstop>catch_agency</tabstop>
+  <tabstop>catch_other</tabstop>
+  <tabstop>catch_other_type</tabstop>
   <tabstop>pbnFinished</tabstop>
   <tabstop>pbnCancel</tabstop>
  </tabstops>

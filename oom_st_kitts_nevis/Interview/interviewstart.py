@@ -62,6 +62,8 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["location", self.location_line.text()])         
         interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
+        interviewInfo2.append(["int2_fname", self.interviewer2_first_name_line.text()])
+        interviewInfo2.append(["int2_lname", self.interviewer2_last_name_line.text()])
         interviewInfo2.append(["mood", self.mood_line.text()])
         interviewInfo2.append(["data_meth", self.dataMethod_comboBox.currentText()])
         

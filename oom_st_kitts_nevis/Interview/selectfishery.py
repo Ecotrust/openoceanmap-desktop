@@ -64,9 +64,10 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.parent.currentFisheryYearsPartic = self.fish_yrs_partic.text()
         self.parent.currentFisheryNumGear = self.fish_num_gear.text()
         self.parent.currentFisheryGearLength = self.fish_gear_length.text()
-        self.parent.currentFisherySeasonality = self.fish_seasonality.text()
+        self.parent.currentFisherySeasonStart = self.fishery_season_start.currentText()
+        self.parent.currentFisherySeasonEnd = self.fishery_season_end.currentText()
         self.parent.currentFisheryPrice = self.fish_price.text()
-        self.parent.currentFisheryPort = self.fish_port.text()
+        self.parent.currentFisheryPort = self.fish_port.currentText()
 
     
         self.close()

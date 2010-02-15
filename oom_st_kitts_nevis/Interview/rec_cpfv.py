@@ -70,41 +70,41 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         # do our error checking before adding fields to the data store
         cpfv_fisheries = []
         if self.fish_pct_1.text() != '0':
-            cpfv_fisheries.append(('Fish1',self.fish_pct_1.text()))
+            cpfv_fisheries.append(('cpel_sein',self.fish_pct_1.text()))
         if self.fish_pct_2.text() != '0':
-            cpfv_fisheries.append(('Fish2',self.fish_pct_2.text()))
+            cpfv_fisheries.append(('cpel_trol',self.fish_pct_2.text()))
         if self.fish_pct_3.text() != '0':
-            cpfv_fisheries.append(('Fish3',self.fish_pct_3.text()))
+            cpfv_fisheries.append(('opel_trol',self.fish_pct_3.text()))
         if self.fish_pct_4.text() != '0':
-            cpfv_fisheries.append(('Fish4',self.fish_pct_4.text()))
+            cpfv_fisheries.append(('cdem_trap',self.fish_pct_4.text()))
         if self.fish_pct_5.text() != '0':
-            cpfv_fisheries.append(('Fish5',self.fish_pct_5.text()))
+            cpfv_fisheries.append(('cdem_pole',self.fish_pct_5.text()))
         if self.fish_pct_6.text() != '0':
-            cpfv_fisheries.append(('Fish6',self.fish_pct_6.text()))
+            cpfv_fisheries.append(('cdem_spr',self.fish_pct_6.text()))
         if self.fish_pct_7.text() != '0':
-            cpfv_fisheries.append(('Fish7',self.fish_pct_7.text()))
+            cpfv_fisheries.append(('cdem_gil',self.fish_pct_7.text()))
         if self.fish_pct_8.text() != '0':
-            cpfv_fisheries.append(('Fish8',self.fish_pct_8.text()))
+            cpfv_fisheries.append(('ddem_trap',self.fish_pct_8.text()))
         if self.fish_pct_9.text() != '0':
-            cpfv_fisheries.append(('Fish9',self.fish_pct_9.text()))
+            cpfv_fisheries.append(('ddem_pole',self.fish_pct_9.text()))
         if self.fish_pct_10.text() != '0':
-            cpfv_fisheries.append(('Fish10',self.fish_pct_10.text()))
+            cpfv_fisheries.append(('lob_trap',self.fish_pct_10.text()))
         if self.fish_pct_11.text() != '0':
-            cpfv_fisheries.append(('Fish11',self.fish_pct_11.text()))
+            cpfv_fisheries.append(('lob_scuba',self.fish_pct_11.text()))
         if self.fish_pct_12.text() != '0':
-            cpfv_fisheries.append(('Fish12',self.fish_pct_12.text()))
+            cpfv_fisheries.append(('lob_free',self.fish_pct_12.text()))
         if self.fish_pct_13.text() != '0':
-            cpfv_fisheries.append(('Fish13',self.fish_pct_13.text()))
+            cpfv_fisheries.append(('con_scuba',self.fish_pct_13.text()))
         if self.fish_pct_14.text() != '0':
-            cpfv_fisheries.append(('Fish14',self.fish_pct_14.text()))
+            cpfv_fisheries.append(('con_free',self.fish_pct_14.text()))
         if self.fish_pct_15.text() != '0':
-            cpfv_fisheries.append(('Fish15',self.fish_pct_15.text()))
+            cpfv_fisheries.append(('shk_hook',self.fish_pct_15.text()))
         if self.fish_pct_16.text() != '0':
-            cpfv_fisheries.append(('Fish16',self.fish_pct_16.text()))
+            cpfv_fisheries.append(('shk_gil',self.fish_pct_16.text()))
         if self.fish_pct_17.text() != '0':
-            cpfv_fisheries.append(('Fish17',self.fish_pct_17.text()))
+            cpfv_fisheries.append(('dsqd_hook',self.fish_pct_17.text()))
         if self.fish_pct_18.text() != '0':
-            cpfv_fisheries.append(('Fish18',self.fish_pct_18.text()))
+            cpfv_fisheries.append(('trtl_net',self.fish_pct_18.text()))
             
         total_values = 0
         for (fishery,value) in cpfv_fisheries:
@@ -123,24 +123,24 @@ class RecCpfvGui(QDialog, Ui_RecCpfv):
         
         interviewInfo2 = self.parent.interviewInfo2
          
-        interviewInfo2.append(["f1_pct",self.fish_pct_1.text()])
-        interviewInfo2.append(["f2_pct",self.fish_pct_2.text()])
-        interviewInfo2.append(["f3_pct",self.fish_pct_3.text()])
-        interviewInfo2.append(["f4_pct",self.fish_pct_4.text()])
-        interviewInfo2.append(["f5_pct",self.fish_pct_5.text()])
-        interviewInfo2.append(["f6_pct",self.fish_pct_6.text()])
-        interviewInfo2.append(["f7_pct",self.fish_pct_7.text()])
-        interviewInfo2.append(["f8_pct",self.fish_pct_8.text()])
-        interviewInfo2.append(["f9_pct",self.fish_pct_9.text()])
-        interviewInfo2.append(["f10_pct",self.fish_pct_10.text()])
-        interviewInfo2.append(["f11_pct",self.fish_pct_11.text()])
-        interviewInfo2.append(["f12_pct",self.fish_pct_12.text()])
-        interviewInfo2.append(["f13_pct",self.fish_pct_13.text()])
-        interviewInfo2.append(["f14_pct",self.fish_pct_14.text()])
-        interviewInfo2.append(["f15_pct",self.fish_pct_15.text()])
-        interviewInfo2.append(["f16_pct",self.fish_pct_16.text()])
-        interviewInfo2.append(["f17_pct",self.fish_pct_17.text()])
-        interviewInfo2.append(["f18_pct",self.fish_pct_18.text()])
+        interviewInfo2.append(["cpel_sein",self.fish_pct_1.text()])
+        interviewInfo2.append(["cpel_trol",self.fish_pct_2.text()])
+        interviewInfo2.append(["opel_trol",self.fish_pct_3.text()])
+        interviewInfo2.append(["cdem_trap",self.fish_pct_4.text()])
+        interviewInfo2.append(["cdem_pole",self.fish_pct_5.text()])
+        interviewInfo2.append(["cdem_spr",self.fish_pct_6.text()])
+        interviewInfo2.append(["cdem_gil",self.fish_pct_7.text()])
+        interviewInfo2.append(["ddem_trap",self.fish_pct_8.text()])
+        interviewInfo2.append(["ddem_pole",self.fish_pct_9.text()])
+        interviewInfo2.append(["lob_trap",self.fish_pct_10.text()])
+        interviewInfo2.append(["lob_scuba",self.fish_pct_11.text()])
+        interviewInfo2.append(["lob_free",self.fish_pct_12.text()])
+        interviewInfo2.append(["con_scuba",self.fish_pct_13.text()])
+        interviewInfo2.append(["con_free",self.fish_pct_14.text()])
+        interviewInfo2.append(["shk_hook",self.fish_pct_15.text()])
+        interviewInfo2.append(["shk_gil",self.fish_pct_16.text()])
+        interviewInfo2.append(["dsqd_hook",self.fish_pct_17.text()])
+        interviewInfo2.append(["trtl_net",self.fish_pct_18.text()])
         
         #total = sum([int(b) for (a,b) in cpfv_fisheries])
         #print "Total: "+str(total)

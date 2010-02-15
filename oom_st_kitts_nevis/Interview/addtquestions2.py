@@ -36,59 +36,60 @@ from qgis.gui import *
 from Tools.polygontool import *
 from selectfishery import *
 # UI specific includes
-from addtquestions_ui import Ui_AdditionalQuestions
+from addtquestions2_ui import Ui_AdditionalQuestions2
 from Util.common_functions import *
 # General system includes
 import sys, copy
 
-class AddtQuestionsGui(QDialog, Ui_AdditionalQuestions):
+class AddtQuestions2Gui(QDialog, Ui_AdditionalQuestions2):
     def __init__(self, parent):
         QDialog.__init__(self, parent.mainwindow)
         self.setupUi(self)
         self.parent = parent   
-        self.crew_shares.setText('0')
-        self.boat_shares.setText('0')
-        self.captain_shares.setText('0')
-        self.owner_shares.setText('0')
+        self.catch_personal.setText('0')
+        self.catch_customers.setText('0')
+        self.catch_hotel.setText('0')
+        self.catch_agency.setText('0')
+        self.catch_other.setText('0')
 
     def on_pbnFinished_released(self):
         
         # do our error checking before adding fields to the data store
-        shares = []
-        if self.crew_shares.text() != '0':
-            shares.append(('Crew',self.crew_shares.text()))
-        if self.boat_shares.text() != '0':
-            shares.append(('Boat',self.boat_shares.text()))
-        if self.captain_shares.text() != '0':
-            shares.append(('Captain',self.captain_shares.text()))
-        if self.owner_shares.text() != '0':
-            shares.append(('Owner',self.owner_shares.text()))
+            
+        catch_alloc = []
+        if self.catch_personal.text() != '0':
+            catch_alloc.append(('Crew',self.catch_personal.text()))
+        if self.catch_customers.text() != '0':
+            catch_alloc.append(('Boat',self.catch_customers.text()))
+        if self.catch_hotel.text() != '0':
+            catch_alloc.append(('Captain',self.catch_hotel.text()))
+        if self.catch_agency.text() != '0':
+            catch_alloc.append(('Owner',self.catch_agency.text()))
+        if self.catch_other.text() != '0':
+            catch_alloc.append(('Owner',self.catch_other.text()))
             
         total_values = 0
-        for (share_type,value) in shares:
+        for (catch_type,value) in catch_alloc:
             if not strIsInt(value):
-                QMessageBox.warning(self, "Input Error", "One of your share percentages is not a number")
+                QMessageBox.warning(self, "Input Error", "One of your catch percentages is not a number")
                 return 
             total_values = total_values + int(value)
                 
         if total_values != 100:
-            QMessageBox.warning(self, "Input Error", "Share percentages must add up to 100 (current sum: "+str(total_values)+")")
+            QMessageBox.warning(self, "Input Error", "Catch percentages must add up to 100 (current sum: "+str(total_values)+")")
             return 
-            
                 
         # error checks complete, go ahead and add fields to data store
 
         
         interviewInfo2 = self.parent.interviewInfo2
          
-        interviewInfo2.append(["pct_h_inc",self.pct_house_inc.text()])
-        interviewInfo2.append(["num_depnd",self.num_dependents.text()])
-        interviewInfo2.append(["num_crew",self.num_crew.text()])
-        interviewInfo2.append(["crew_shar",self.crew_shares.text()])
-        interviewInfo2.append(["boat_shar",self.boat_shares.text()])
-        interviewInfo2.append(["capt_shar",self.captain_shares.text()])
-        interviewInfo2.append(["own_shar",self.owner_shares.text()])
-
+        interviewInfo2.append(["c_persnl",self.catch_personal.text()])
+        interviewInfo2.append(["c_custmr",self.catch_customers.text()])
+        interviewInfo2.append(["c_hotel",self.catch_hotel.text()])
+        interviewInfo2.append(["c_agency",self.catch_agency.text()])
+        interviewInfo2.append(["c_other",self.catch_other.text()])
+        interviewInfo2.append(["c_oth_tp",self.catch_other_type.text()])
         
         #total = sum([int(b) for (a,b) in cpfv_fisheries])
         #print "Total: "+str(total)
