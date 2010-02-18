@@ -317,7 +317,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>% of shares to each crew member:</string>
+               <string>% of shares to crew (total):</string>
               </property>
              </widget>
             </item>

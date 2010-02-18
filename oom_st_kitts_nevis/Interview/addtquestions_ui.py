@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'addtquestions.ui'
 #
-# Created: Mon Feb 15 09:56:48 2010
+# Created: Mon Feb 15 11:59:30 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -267,7 +267,7 @@ class Ui_AdditionalQuestions(object):
         self.label_42.setText(QtGui.QApplication.translate("AdditionalQuestions", "% of total household income from fishing:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_43.setText(QtGui.QApplication.translate("AdditionalQuestions", "Number of household members (dependents):", None, QtGui.QApplication.UnicodeUTF8))
         self.label_44.setText(QtGui.QApplication.translate("AdditionalQuestions", "Number of crew (not including self):", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_28.setText(QtGui.QApplication.translate("AdditionalQuestions", "% of shares to each crew member:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_28.setText(QtGui.QApplication.translate("AdditionalQuestions", "% of shares to crew (total):", None, QtGui.QApplication.UnicodeUTF8))
         self.label_30.setText(QtGui.QApplication.translate("AdditionalQuestions", "% of shares to boat (include trip costs):", None, QtGui.QApplication.UnicodeUTF8))
         self.label_31.setText(QtGui.QApplication.translate("AdditionalQuestions", "% of shares to captain:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_32.setText(QtGui.QApplication.translate("AdditionalQuestions", "% of shares to boat owner (if not captain):", None, QtGui.QApplication.UnicodeUTF8))
