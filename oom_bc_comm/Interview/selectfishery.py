@@ -5,7 +5,7 @@
 # 
 # Copyright (C) 2007  Ecotrust
 # Copyright (C) 2007  Aaron Racicot
-# Copyright (C) 2009  Grant Gilron, Ecotrust Canada
+# Copyright (C) 2010  Grant Gilron, Ecotrust Canada
 # 
 #---------------------------------------------------------------------
 # 
@@ -69,6 +69,27 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
             return 
         else:
             self.parent.currentFishery = cur_fishery    
+
+        ########################################
+        ### START REQUIRED FIELDS VALIDATION ###
+        ########################################
+        vessel_name = self.fishery_vessel_name.text()
+        if not vessel_name:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter Vessel Name.")
+            return
+
+        start_year = self.fishery_start_year.text()
+        if not start_year:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter the Start Year.")
+            return
+
+        end_year = self.fishery_end_year.text()
+        if not end_year:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter the End Year.")
+            return
+        ######################################
+        ### END REQUIRED FIELDS VALIDATION ###
+        ######################################
             
         self.parent.currentFisheryVesselName = self.fishery_vessel_name.text()
         self.parent.currentFisheryVesselLength = self.fishery_vessel_length.text()

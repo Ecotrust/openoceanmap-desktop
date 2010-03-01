@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>622</width>
+    <width>672</width>
     <height>379</height>
    </rect>
   </property>
@@ -14,755 +14,6 @@
    <string>OpenOceanMap - Select Fishery</string>
   </property>
   <layout class="QGridLayout" name="gridLayout" >
-   <item row="0" column="0" >
-    <layout class="QVBoxLayout" name="verticalLayout" >
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3" >
-       <item>
-        <widget class="QWidget" native="1" name="widget" >
-         <property name="font" >
-          <font>
-           <family>Tahoma</family>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-         <layout class="QHBoxLayout" >
-          <property name="spacing" >
-           <number>6</number>
-          </property>
-          <property name="leftMargin" >
-           <number>9</number>
-          </property>
-          <property name="topMargin" >
-           <number>9</number>
-          </property>
-          <property name="rightMargin" >
-           <number>9</number>
-          </property>
-          <property name="bottomMargin" >
-           <number>0</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="fishery_text" >
-            <property name="minimumSize" >
-             <size>
-              <width>90</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>90</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string>Select Fishery:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_2" >
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0" >
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QComboBox" name="fishery_comboBox" >
-            <property name="minimumSize" >
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>200</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <item>
-             <property name="text" >
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Clam</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Cod</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Crab</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Eulachon</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Dogfish</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Green Urchin</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Groundfish H&amp;L</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Groundfish Trawl</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Halibut</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Herring Gillnet</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Herring Seine</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Octopus</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Prawn</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Red Urchin</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Rockfish</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Sablefish</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Salmon Gillnet</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Salmon Seine</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Salmon Troll</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Sardine</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Scallop</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Seaweed</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Shrimp Trap</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Shrimp Trawl</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Tuna</string>
-             </property>
-            </item>
-            <item>
-             <property name="text" >
-              <string>Other</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_25" >
-       <item>
-        <widget class="QWidget" native="1" name="widget_13" >
-         <property name="font" >
-          <font>
-           <family>Tahoma</family>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_26" >
-          <item>
-           <widget class="QLabel" name="label_14" >
-            <property name="minimumSize" >
-             <size>
-              <width>90</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>90</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string>Fish Vessel name:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_3" >
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0" >
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="fishery_vessel_name" >
-            <property name="minimumSize" >
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>200</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-           </widget>
-          </item>
-         </layout>
-         <zorder>label_14</zorder>
-         <zorder>fishery_vessel_name</zorder>
-         <zorder>horizontalSpacer_3</zorder>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_27" >
-       <item>
-        <widget class="QWidget" native="1" name="widget_14" >
-         <property name="font" >
-          <font>
-           <family>Tahoma</family>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_28" >
-          <item>
-           <widget class="QLabel" name="label_15" >
-            <property name="minimumSize" >
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>200</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string>Length of Vessel (ft):</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_3" >
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0" >
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="fishery_vessel_length" >
-            <property name="minimumSize" >
-             <size>
-              <width>40</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>40</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-           </widget>
-          </item>
-         </layout>
-         <zorder>label_15</zorder>
-         <zorder>fishery_vessel_length</zorder>
-         <zorder>horizontalSpacer_3</zorder>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_15" >
-       <item>
-        <widget class="QWidget" native="1" name="widget_6" >
-         <property name="font" >
-          <font>
-           <family>Tahoma</family>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_16" >
-          <item>
-           <widget class="QLabel" name="label_9" >
-            <property name="minimumSize" >
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>200</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string>Percent income:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_3" >
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0" >
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="fishery_perc_income" >
-            <property name="minimumSize" >
-             <size>
-              <width>40</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>40</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-           </widget>
-          </item>
-         </layout>
-         <zorder>label_9</zorder>
-         <zorder>horizontalSpacer_3</zorder>
-         <zorder>fishery_perc_income</zorder>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_9" >
-       <item>
-        <widget class="QWidget" native="1" name="widget_12" >
-         <property name="font" >
-          <font>
-           <family>Tahoma</family>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_10" >
-          <item>
-           <widget class="QLabel" name="label_5" >
-            <property name="minimumSize" >
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>200</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string>Fishery Start Year:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_3" >
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0" >
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="fishery_start_year" >
-            <property name="minimumSize" >
-             <size>
-              <width>40</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>40</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string/>
-            </property>
-           </widget>
-          </item>
-         </layout>
-         <zorder>label_5</zorder>
-         <zorder>fishery_start_year</zorder>
-         <zorder>horizontalSpacer_3</zorder>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_7" >
-       <item>
-        <widget class="QWidget" native="1" name="widget_11" >
-         <property name="font" >
-          <font>
-           <family>Tahoma</family>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_8" >
-          <item>
-           <widget class="QLabel" name="label_4" >
-            <property name="minimumSize" >
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>200</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string>Fishery End Year:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_3" >
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0" >
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="fishery_end_year" >
-            <property name="minimumSize" >
-             <size>
-              <width>40</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>40</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-           </widget>
-          </item>
-         </layout>
-         <zorder>label_4</zorder>
-         <zorder>fishery_end_year</zorder>
-         <zorder>horizontalSpacer_3</zorder>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_11" >
-       <item>
-        <widget class="QWidget" native="1" name="widget_4" >
-         <property name="font" >
-          <font>
-           <family>Tahoma</family>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_12" >
-          <item>
-           <widget class="QLabel" name="label_7" >
-            <property name="minimumSize" >
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>200</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="text" >
-             <string>Years experience in fishery:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_3" >
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0" >
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="fishery_yrs_exp" >
-            <property name="minimumSize" >
-             <size>
-              <width>40</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize" >
-             <size>
-              <width>40</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font" >
-             <font>
-              <family>Tahoma</family>
-              <pointsize>8</pointsize>
-             </font>
-            </property>
-           </widget>
-          </item>
-         </layout>
-         <zorder>label_7</zorder>
-         <zorder>horizontalSpacer_3</zorder>
-         <zorder>fishery_yrs_exp</zorder>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </item>
    <item row="0" column="1" >
     <layout class="QVBoxLayout" name="verticalLayout_2" >
      <item>
@@ -966,6 +217,9 @@
               <pointsize>8</pointsize>
              </font>
             </property>
+            <property name="toolTip" >
+             <string>Specify # &amp; type</string>
+            </property>
             <property name="text" >
              <string>Num traps/hooks/tows/sets used per trip:</string>
             </property>
@@ -1010,12 +264,16 @@
               <pointsize>8</pointsize>
              </font>
             </property>
+            <property name="toolTip" >
+             <string>Specify # &amp; type</string>
+            </property>
            </widget>
           </item>
          </layout>
          <zorder>label_10</zorder>
          <zorder>horizontalSpacer_3</zorder>
          <zorder>fishery_traps_hooks</zorder>
+         <zorder></zorder>
         </widget>
        </item>
       </layout>
@@ -1222,7 +480,7 @@
              </font>
             </property>
             <property name="text" >
-             <string>Historic average price:</string>
+             <string>Historic price:</string>
             </property>
            </widget>
           </item>
@@ -1347,21 +605,923 @@
      </item>
     </layout>
    </item>
+   <item row="0" column="0" >
+    <layout class="QVBoxLayout" name="verticalLayout" >
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3" >
+       <item>
+        <widget class="QWidget" native="1" name="widget" >
+         <property name="font" >
+          <font>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <layout class="QHBoxLayout" >
+          <property name="spacing" >
+           <number>6</number>
+          </property>
+          <property name="leftMargin" >
+           <number>9</number>
+          </property>
+          <property name="topMargin" >
+           <number>9</number>
+          </property>
+          <property name="rightMargin" >
+           <number>9</number>
+          </property>
+          <property name="bottomMargin" >
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="fishery_text" >
+            <property name="minimumSize" >
+             <size>
+              <width>90</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>90</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Select Fishery *:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="fishery_comboBox" >
+            <property name="minimumSize" >
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="palette" >
+             <palette>
+              <active>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>249</red>
+                  <green>255</green>
+                  <blue>178</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </active>
+              <inactive>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>249</red>
+                  <green>255</green>
+                  <blue>178</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </inactive>
+              <disabled>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>212</red>
+                  <green>208</green>
+                  <blue>200</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </disabled>
+             </palette>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="toolTip" >
+             <string>Required Field</string>
+            </property>
+            <item>
+             <property name="text" >
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Clam</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Cod</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Crab</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Eulachon</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Dogfish</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Green Urchin</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Groundfish H&amp;L</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Groundfish Trawl</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Halibut</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Herring Gillnet</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Herring Seine</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Octopus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Prawn</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Protected Areas</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Red Urchin</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Rockfish</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Sablefish</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Salmon Gillnet</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Salmon Seine</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Salmon Troll</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Sardine</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Scallop</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Seaweed</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Shrimp Trap</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Shrimp Trawl</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Tuna</string>
+             </property>
+            </item>
+            <item>
+             <property name="text" >
+              <string>Other</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_25" >
+       <item>
+        <widget class="QWidget" native="1" name="widget_13" >
+         <property name="font" >
+          <font>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_26" >
+          <item>
+           <widget class="QLabel" name="label_14" >
+            <property name="minimumSize" >
+             <size>
+              <width>240</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>240</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Fish Vessel name (for crew interview add 'crew') *:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fishery_vessel_name" >
+            <property name="minimumSize" >
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="palette" >
+             <palette>
+              <active>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>249</red>
+                  <green>255</green>
+                  <blue>178</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </active>
+              <inactive>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>249</red>
+                  <green>255</green>
+                  <blue>178</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </inactive>
+              <disabled>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>212</red>
+                  <green>208</green>
+                  <blue>200</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </disabled>
+             </palette>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9" >
+       <item>
+        <widget class="QWidget" native="1" name="widget_12" >
+         <property name="font" >
+          <font>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_10" >
+          <item>
+           <widget class="QLabel" name="label_5" >
+            <property name="minimumSize" >
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Fishery Start Year *:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fishery_start_year" >
+            <property name="minimumSize" >
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="palette" >
+             <palette>
+              <active>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>249</red>
+                  <green>255</green>
+                  <blue>178</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </active>
+              <inactive>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>249</red>
+                  <green>255</green>
+                  <blue>178</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </inactive>
+              <disabled>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>212</red>
+                  <green>208</green>
+                  <blue>200</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </disabled>
+             </palette>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="toolTip" >
+             <string>Required Field</string>
+            </property>
+            <property name="text" >
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+         <zorder>label_5</zorder>
+         <zorder>fishery_start_year</zorder>
+         <zorder>horizontalSpacer_3</zorder>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7" >
+       <item>
+        <widget class="QWidget" native="1" name="widget_11" >
+         <property name="font" >
+          <font>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8" >
+          <item>
+           <widget class="QLabel" name="label_4" >
+            <property name="minimumSize" >
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Fishery End Year *:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fishery_end_year" >
+            <property name="minimumSize" >
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="palette" >
+             <palette>
+              <active>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>249</red>
+                  <green>255</green>
+                  <blue>178</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </active>
+              <inactive>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>249</red>
+                  <green>255</green>
+                  <blue>178</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </inactive>
+              <disabled>
+               <colorrole role="Base" >
+                <brush brushstyle="SolidPattern" >
+                 <color alpha="255" >
+                  <red>212</red>
+                  <green>208</green>
+                  <blue>200</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </disabled>
+             </palette>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="toolTip" >
+             <string>Required Field</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+         <zorder>label_4</zorder>
+         <zorder>fishery_end_year</zorder>
+         <zorder>horizontalSpacer_3</zorder>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_27" >
+       <item>
+        <widget class="QWidget" native="1" name="widget_14" >
+         <property name="font" >
+          <font>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_28" >
+          <item>
+           <widget class="QLabel" name="label_15" >
+            <property name="minimumSize" >
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Length of Vessel (ft):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fishery_vessel_length" >
+            <property name="minimumSize" >
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+         </layout>
+         <zorder>label_15</zorder>
+         <zorder>fishery_vessel_length</zorder>
+         <zorder>horizontalSpacer_3</zorder>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_15" >
+       <item>
+        <widget class="QWidget" native="1" name="widget_6" >
+         <property name="font" >
+          <font>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_16" >
+          <item>
+           <widget class="QLabel" name="label_9" >
+            <property name="minimumSize" >
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Percent of income for this fishery:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fishery_perc_income" >
+            <property name="minimumSize" >
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+         </layout>
+         <zorder>label_9</zorder>
+         <zorder>horizontalSpacer_3</zorder>
+         <zorder>fishery_perc_income</zorder>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11" >
+       <item>
+        <widget class="QWidget" native="1" name="widget_4" >
+         <property name="font" >
+          <font>
+           <family>Tahoma</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_12" >
+          <item>
+           <widget class="QLabel" name="label_7" >
+            <property name="minimumSize" >
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Years experience in this fishery:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3" >
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fishery_yrs_exp" >
+            <property name="minimumSize" >
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <family>Tahoma</family>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+         </layout>
+         <zorder>label_7</zorder>
+         <zorder>horizontalSpacer_3</zorder>
+         <zorder>fishery_yrs_exp</zorder>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
   </layout>
  </widget>
  <tabstops>
   <tabstop>fishery_comboBox</tabstop>
   <tabstop>fishery_vessel_name</tabstop>
-  <tabstop>fishery_vessel_length</tabstop>
-  <tabstop>fishery_perc_income</tabstop>
   <tabstop>fishery_start_year</tabstop>
   <tabstop>fishery_end_year</tabstop>
+  <tabstop>fishery_vessel_length</tabstop>
+  <tabstop>fishery_perc_income</tabstop>
   <tabstop>fishery_yrs_exp</tabstop>
   <tabstop>fishery_effort_month_per_year</tabstop>
   <tabstop>fishery_effort_days</tabstop>
   <tabstop>fishery_traps_hooks</tabstop>
-  <tabstop>fishery_avg_price_per_pound</tabstop>
   <tabstop>fishery_avg_pounds_per_trip</tabstop>
+  <tabstop>fishery_avg_price_per_pound</tabstop>
   <tabstop>fishery_hist_avg_price</tabstop>
   <tabstop>pbnStartShapes</tabstop>
   <tabstop>pbnFisheryFinished</tabstop>

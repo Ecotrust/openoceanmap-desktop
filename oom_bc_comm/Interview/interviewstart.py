@@ -6,7 +6,7 @@
 # Copyright (C) 2007  Ecotrust
 # Copyright (C) 2007  Aaron Racicot
 # Copyright (C) 2008  Tim Welch
-# Copyright (C) 2009  Grant Gilron, Ecotrust Canada
+# Copyright (C) 2010  Grant Gilron, Ecotrust Canada
 # 
 #---------------------------------------------------------------------
 # 
@@ -52,6 +52,58 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         self.InterviewDate.setDateTime(QDateTime.currentDateTime())
 
     def on_pbnSelectFishery_released(self):
+
+        ########################################
+        ### START REQUIRED FIELDS VALIDATION ###
+        ########################################
+        first_name = self.interviewee_first_name_line.text()
+        if not first_name:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter First Name.")
+            return
+
+        last_name = self.interviewee_last_name_line.text()
+        if not last_name:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter Last name.")
+            return
+
+        comm_of_res = self.city_line.text()
+        if not comm_of_res:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter Community of Residence.")
+            return
+
+        data_sharing = self.data_sharing_comboBox.currentText()
+        if not data_sharing:
+            QMessageBox.warning(self, "Missing Required Field", "Please select a Data Sharing agreement.")
+            return
+
+        home_port = self.home_port_line.text()
+        if not home_port:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter the Home Port.")
+            return
+
+        yrs_exp = self.years_line.text()
+        if not yrs_exp:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter Years of Experience.")
+            return
+
+        interviewer_first_name = self.interviewee_first_name_line.text()
+        if not interviewer_first_name:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter Interviewer First Name.")
+            return
+        
+        interviewer_last_name = self.interviewee_last_name_line.text()
+        if not interviewer_last_name:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter Interviewer Last Name.")
+            return
+
+        interview_date = self.InterviewDate.text()
+        if not interview_date:
+            QMessageBox.warning(self, "Missing Required Field", "Please enter Interview Date.")
+            return
+        ######################################
+        ### END REQUIRED FIELDS VALIDATION ###
+        ######################################
+                    
         interviewInfo2 = self.parent.interviewInfo2
         
         interviewInfo2.append(["fname", self.interviewee_first_name_line.text()])
