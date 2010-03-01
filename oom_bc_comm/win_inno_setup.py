@@ -63,15 +63,15 @@ class InnoScript:
         print >> ofi, r"DefaultGroupName=%s" % self.name
         print >> ofi, r"VersionInfoVersion=%s" % self.version
         print >> ofi, r"VersionInfoCompany=Ecotrust Canada"
-        print >> ofi, r"VersionInfoDescription=OpenOceanMap BC Commercial"
+        print >> ofi, r"VersionInfoDescription=OpenOceanMap BC Commercial 1.1"
         print >> ofi, r"VersionInfoCopyright=Ecotrust Canada"
         print >> ofi, r"AppCopyright=Ecotrust Canada"
-        print >> ofi, r"InfoAfterFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\README.TXT"
-        print >> ofi, r"LicenseFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\LICENSE.TXT"
+        print >> ofi, r"InfoAfterFile=D:\oom\README.TXT"
+        print >> ofi, r"LicenseFile=D:\oom\LICENSE.TXT"
         print >> ofi, r"WizardImageBackColor=clBlack"
-        print >> ofi, r"WizardImageFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\Images\OCEAN_VERT_INNO.bmp"
-        print >> ofi, r"WizardSmallImageFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\Images\OCEAN_SMALL_INNO.bmp"
-        print >> ofi, r"SetupIconFile=D:\openocean-dev\openocean\branches\openoceanmap\oom_bc_comm\Images\OCEAN_SMALL_INNO.ico"
+        print >> ofi, r"WizardImageFile=D:\oom\Images\OCEAN_VERT_INNO.bmp"
+        print >> ofi, r"WizardSmallImageFile=D:\oom\Images\OCEAN_SMALL_INNO.bmp"
+        print >> ofi, r"SetupIconFile=D:\oom\Images\OCEAN_SMALL_INNO.ico"
         print >> ofi
 
         print >> ofi, r"[Files]"
