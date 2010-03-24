@@ -129,6 +129,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
       if self.srs == None:
         self.srs = layer.srs()
+        #self.transform = QgsCoordinateTransform()
+        #self.transform.setSourceSRS( self.srs )
+        #dest_srs = QgsSpatialRefSys()
+        #dest_srs.createFromSrid(4326)
+        #self.transform.setDestSRS( dest_srs )
       
       # Set the scales
       layer.setScaleBasedVisibility(True)
@@ -162,10 +167,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
 
     # now add the study region as a vector layer
-    vectorList = [["Data/Ports_Marinas.shp", "Ports and Marinas", False],
-                  ["Data/Landing_Sites.shp", "Landing Sites", True],
-                  ["Data/Achoring_sites.shp", "Anchoring Sites", False],
-                  ["Data/SKN_soec_hotel_all.shp", "Hotels", False],
+    vectorList = [["Data/Ports_Marinas.shp", "Ports and Marinas", False, Qt.red],
+                  ["Data/Landing_Sites.shp", "Landing Sites", True, Qt.yellow],
+                  ["Data/Achoring_sites.shp", "Anchoring Sites", False, Qt.magenta],
+                  ["Data/SKN_soec_hotel_all.shp", "Hotels", False, Qt.green],
                   ] #,60000,1200000]]
     for vectorSet in vectorList:
       vector = vectorSet[0]
@@ -198,7 +203,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # create a 'halo' effect around each label so it
         # can still be read on dark backgrounds
         labelAttributes.setBufferEnabled(True)
-        labelAttributes.setBufferColor(Qt.yellow)
+        labelAttributes.setBufferColor(Qt.white)
         labelAttributes.setBufferSize(1, QgsLabelAttributes.PointUnits)
 
         #
@@ -230,7 +235,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
       
-      layer.setTransparency(50)
+      layer.setTransparency(200)
+      layer.renderer().symbols()[0].setFillColor( vectorSet[3] )
       
       # set the map canvas layer set
       cl = QgsMapCanvasLayer(layer)
@@ -239,7 +245,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
       self.canvas.setLayerSet(self.layers)
       
       #Add item to legend
-      self.legend.addVectorLegendItem(vectorSet[1], [cl])
+      self.legend.addVectorLegendItem(vectorSet[1], [cl], vectorSet[3])
       
     self.canvas.setExtent(self.extent_raster.extent())    
 

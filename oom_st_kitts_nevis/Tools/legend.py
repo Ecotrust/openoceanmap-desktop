@@ -151,12 +151,12 @@ class Legend(object):
 
     
   # Add Item To Legend
-  def addVectorLegendItem(self, name, cls):
+  def addVectorLegendItem(self, name, cls, color):
     item_new = LegendCheckBox(self, name, cls, True)
     QObject.connect(item_new, SIGNAL("stateChanged(int)"),
                  item_new.updateLayerStatus)    
     pm = QPixmap(20,20)
-    pm.fill(cls[0].layer().renderer().symbols()[0].fillColor())
+    pm.fill(color)
     icon = QIcon(pm)
     item_new.setIcon(icon)
     self.groupBoxLayout.addWidget(item_new)
