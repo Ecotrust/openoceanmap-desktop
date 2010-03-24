@@ -51,7 +51,7 @@ class Interview(QObject):
     self.canvas = parent.canvas
     self.mainwindow = parent.parent
     
-    self.phase = ["start","general","addtquestions","addtquestions2","shapes","finished"]
+    self.phase = ["start","general","addtquestions","shapes","finished"]
     
     self.resetInterview()
     
@@ -74,13 +74,6 @@ class Interview(QObject):
           self.parent.statusbar.showMessage(new_status)
           from addtquestions import AddtQuestionsGui
           wnd = AddtQuestionsGui(self)
-          wnd.show()
-          
-      elif self.phase[ self.phase_index ] == "addtquestions2":
-          new_status = "Additional questions"
-          self.parent.statusbar.showMessage(new_status)
-          from addtquestions2 import AddtQuestions2Gui
-          wnd = AddtQuestions2Gui(self)
           wnd.show()
           
       elif self.phase[ self.phase_index ] == "shapes":
@@ -127,8 +120,7 @@ class Interview(QObject):
           self.fisheryGearLengthIndex = index+6
           self.fisherySeasonStartIndex = index+7
           self.fisherySeasonEndIndex = index+8
-          self.fisheryPriceIndex = index+9
-          self.fisheryPortIndex = index+10
+          self.fisheryPortIndex = index+9
           
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
@@ -139,7 +131,6 @@ class Interview(QObject):
           fields[self.fisheryGearLengthIndex] = QgsField("fshy_glen", QVariant.String)
           fields[self.fisherySeasonStartIndex] = QgsField("f_seasn_s", QVariant.String)
           fields[self.fisherySeasonEndIndex] = QgsField("f_seasn_e", QVariant.String)
-          fields[self.fisheryPriceIndex] = QgsField("fshy_pric", QVariant.String)
           fields[self.fisheryPortIndex] = QgsField("fshy_port", QVariant.String)
           
           #fields = { 0 : QgsField("interviewer_name", QVariant.String),
@@ -178,7 +169,6 @@ class Interview(QObject):
               fet.addAttribute(self.fisheryGearLengthIndex, QVariant(self.currentFisheryGearLength))
               fet.addAttribute(self.fisherySeasonStartIndex, QVariant(self.currentFisherySeasonStart))
               fet.addAttribute(self.fisherySeasonEndIndex, QVariant(self.currentFisherySeasonEnd))
-              fet.addAttribute(self.fisheryPriceIndex, QVariant(self.currentFisheryPrice))
               fet.addAttribute(self.fisheryPortIndex, QVariant(self.currentFisheryPort))
               
               writer.addFeature(fet)

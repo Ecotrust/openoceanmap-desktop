@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interviewstart.ui'
 #
-# Created: Mon Feb 15 10:41:12 2010
+# Created: Wed Mar 24 15:46:20 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -704,8 +704,8 @@ class Ui_InterviewStart(object):
     def retranslateUi(self, InterviewStart):
         InterviewStart.setWindowTitle(QtGui.QApplication.translate("InterviewStart", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewee.setTitle(QtGui.QApplication.translate("InterviewStart", "Interviewee", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewee_first_name_text.setText(QtGui.QApplication.translate("InterviewStart", "First Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewee_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Last Name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewee_first_name_text.setText(QtGui.QApplication.translate("InterviewStart", "First name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewee_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Last name:", None, QtGui.QApplication.UnicodeUTF8))
         self.city_text_3.setText(QtGui.QApplication.translate("InterviewStart", "Mailing address:", None, QtGui.QApplication.UnicodeUTF8))
         self.city_text_2.setText(QtGui.QApplication.translate("InterviewStart", "Phone:", None, QtGui.QApplication.UnicodeUTF8))
         self.city_text.setText(QtGui.QApplication.translate("InterviewStart", "Email:", None, QtGui.QApplication.UnicodeUTF8))
@@ -714,13 +714,13 @@ class Ui_InterviewStart(object):
         self.gender_comboBox.setItemText(2, QtGui.QApplication.translate("InterviewStart", "Female", None, QtGui.QApplication.UnicodeUTF8))
         self.age_text.setText(QtGui.QApplication.translate("InterviewStart", "Age:", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewee_2.setTitle(QtGui.QApplication.translate("InterviewStart", "Interviewer", None, QtGui.QApplication.UnicodeUTF8))
-        self.date_text.setText(QtGui.QApplication.translate("InterviewStart", "Interview Date (mm/dd/yyyy):", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer1_first_name_text_2.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer First Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer1_first_name_text_3.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer Last Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer1_first_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer 2 First Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer1_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer 2 Last Name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.mood_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer Mood:", None, QtGui.QApplication.UnicodeUTF8))
-        self.mood_text_3.setText(QtGui.QApplication.translate("InterviewStart", "Interview Location:", None, QtGui.QApplication.UnicodeUTF8))
+        self.date_text.setText(QtGui.QApplication.translate("InterviewStart", "Interview date (mm/dd/yyyy):", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewer1_first_name_text_2.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer first name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewer1_first_name_text_3.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer last name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewer1_first_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer 2 first name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewer1_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer 2 last name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.mood_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer mood:", None, QtGui.QApplication.UnicodeUTF8))
+        self.mood_text_3.setText(QtGui.QApplication.translate("InterviewStart", "Interview location:", None, QtGui.QApplication.UnicodeUTF8))
         self.mood_text_2.setText(QtGui.QApplication.translate("InterviewStart", "Data collection method:", None, QtGui.QApplication.UnicodeUTF8))
         self.dataMethod_comboBox.setItemText(1, QtGui.QApplication.translate("InterviewStart", "electronic", None, QtGui.QApplication.UnicodeUTF8))
         self.dataMethod_comboBox.setItemText(2, QtGui.QApplication.translate("InterviewStart", "hard copy", None, QtGui.QApplication.UnicodeUTF8))

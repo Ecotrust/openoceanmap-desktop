@@ -162,11 +162,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
 
     # now add the study region as a vector layer
-    vectorList = [["Data/Ports_Marinas.shp", "Ports and Marinas"],
-                  ["Data/Landing_Sites.shp", "Landing Sites"],
-                  ["Data/Achoring_sites.shp", "Anchoring Sites"],
-                  ["Data/Anchoring_site_threats.shp", "Anchoring Site Threats"],
-                  ["Data/Hotels.shp", "Hotels"],
+    vectorList = [["Data/Ports_Marinas.shp", "Ports and Marinas", False],
+                  ["Data/Landing_Sites.shp", "Landing Sites", True],
+                  ["Data/Achoring_sites.shp", "Anchoring Sites", False],
+                  ["Data/SKN_soec_hotel_all.shp", "Hotels", False],
                   ] #,60000,1200000]]
     for vectorSet in vectorList:
       vector = vectorSet[0]
@@ -181,6 +180,47 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         #self.canvas.parentWin.outputWin.append(capture_string)
         self.statusbar.showMessage(capture_string)
         return
+        
+      # set up labelling for the layer
+      if vectorSet[2]:
+
+        # get the label instance associated with the layer
+        label = layer.label()
+        # and the label attributes associated with the label
+        labelAttributes = label.layerAttributes()
+
+        # use the Name field (specified by index 1) as the label field
+        label.setLabelField(QgsLabel.Text,  1)
+    
+        # set the colour of the label text
+        labelAttributes.setColor(Qt.black)
+
+        # create a 'halo' effect around each label so it
+        # can still be read on dark backgrounds
+        labelAttributes.setBufferEnabled(True)
+        labelAttributes.setBufferColor(Qt.yellow)
+        labelAttributes.setBufferSize(1, QgsLabelAttributes.PointUnits)
+
+        #
+        # Here are a bunch of other things you can set based on values on a database field
+        # the second parameter in each case would be the field name from which the
+        # attribute can be retrieved.
+        #
+        #label.setLabelField(QgsLabel.Family, "fontFamily")
+        #label.setLabelField(QgsLabel.Bold, "fontIsBold")
+        #label.setLabelField(QgsLabel.Italic, "fontIsItalic")
+        #label.setLabelField(QgsLabel.Underline, "fontIsUnderlined")
+        #label.setLabelField(QgsLabel.Size, "fontSize" )
+        #label.setLabelField(QgsLabel.BufferSize,"fontBufferSize" )
+        #label.setLabelField(QgsLabel.XCoordinate, "labelX" )
+        #label.setLabelField(QgsLabel.YCoordinate, "labelY")
+        #label.setLabelField(QgsLabel.XOffset, "labelXOffset")
+        #label.setLabelField(QgsLabel.YOffset, "labelYOffset")
+        #label.setLabelField(QgsLabel.Alignment, "labelAlignment" )
+        #label.setLabelField(QgsLabel.Angle, "labelAngle")
+
+        # lastly we enable labelling!
+        layer.setLabelOn(True)
       
       # Set the scales
       #layer.setScaleBasedVisibility(True)

@@ -55,7 +55,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>First Name:</string>
+                  <string>First name:</string>
                  </property>
                 </widget>
                </item>
@@ -108,7 +108,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Last Name:</string>
+                  <string>Last name:</string>
                  </property>
                 </widget>
                </item>
@@ -443,7 +443,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interview Date (mm/dd/yyyy):</string>
+                  <string>Interview date (mm/dd/yyyy):</string>
                  </property>
                 </widget>
                </item>
@@ -496,7 +496,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer First Name:</string>
+                  <string>Interviewer first name:</string>
                  </property>
                 </widget>
                </item>
@@ -549,7 +549,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer Last Name:</string>
+                  <string>Interviewer last name:</string>
                  </property>
                 </widget>
                </item>
@@ -602,7 +602,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer 2 First Name:</string>
+                  <string>Interviewer 2 first name:</string>
                  </property>
                 </widget>
                </item>
@@ -655,7 +655,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer 2 Last Name:</string>
+                  <string>Interviewer 2 last name:</string>
                  </property>
                 </widget>
                </item>
@@ -708,7 +708,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer Mood:</string>
+                  <string>Interviewer mood:</string>
                  </property>
                 </widget>
                </item>
@@ -761,7 +761,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interview Location:</string>
+                  <string>Interview location:</string>
                  </property>
                 </widget>
                </item>

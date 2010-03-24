@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Mon Feb 15 10:51:07 2010
+# Created: Wed Mar 24 15:46:21 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_SelectFishery(object):
     def setupUi(self, SelectFishery):
         SelectFishery.setObjectName("SelectFishery")
-        SelectFishery.resize(682, 426)
+        SelectFishery.resize(682, 365)
         self.verticalLayout = QtGui.QVBoxLayout(SelectFishery)
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_3 = QtGui.QHBoxLayout()
@@ -36,6 +36,7 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.setObjectName("fishery_comboBox")
         self.fishery_comboBox.addItem(QtCore.QString())
         self.fishery_comboBox.setItemText(0, "")
+        self.fishery_comboBox.addItem(QtCore.QString())
         self.fishery_comboBox.addItem(QtCore.QString())
         self.fishery_comboBox.addItem(QtCore.QString())
         self.fishery_comboBox.addItem(QtCore.QString())
@@ -175,26 +176,6 @@ class Ui_SelectFishery(object):
         self.horizontalLayout_10.addWidget(self.fish_gear_length)
         self.horizontalLayout_9.addWidget(self.widget_5)
         self.verticalLayout.addLayout(self.horizontalLayout_9)
-        self.horizontalLayout_15 = QtGui.QHBoxLayout()
-        self.horizontalLayout_15.setObjectName("horizontalLayout_15")
-        self.widget_8 = QtGui.QWidget(SelectFishery)
-        self.widget_8.setObjectName("widget_8")
-        self.horizontalLayout_16 = QtGui.QHBoxLayout(self.widget_8)
-        self.horizontalLayout_16.setObjectName("horizontalLayout_16")
-        self.label_7 = QtGui.QLabel(self.widget_8)
-        self.label_7.setMinimumSize(QtCore.QSize(250, 0))
-        self.label_7.setMaximumSize(QtCore.QSize(250, 16777215))
-        self.label_7.setObjectName("label_7")
-        self.horizontalLayout_16.addWidget(self.label_7)
-        spacerItem5 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.horizontalLayout_16.addItem(spacerItem5)
-        self.fish_price = QtGui.QLineEdit(self.widget_8)
-        self.fish_price.setMinimumSize(QtCore.QSize(100, 0))
-        self.fish_price.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.fish_price.setObjectName("fish_price")
-        self.horizontalLayout_16.addWidget(self.fish_price)
-        self.horizontalLayout_15.addWidget(self.widget_8)
-        self.verticalLayout.addLayout(self.horizontalLayout_15)
         self.horizontalLayout_17 = QtGui.QHBoxLayout()
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.widget_9 = QtGui.QWidget(SelectFishery)
@@ -206,8 +187,8 @@ class Ui_SelectFishery(object):
         self.label_8.setMaximumSize(QtCore.QSize(160, 16777215))
         self.label_8.setObjectName("label_8")
         self.horizontalLayout.addWidget(self.label_8)
-        spacerItem6 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem6)
+        spacerItem5 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem5)
         self.fish_port = QtGui.QComboBox(self.widget_9)
         self.fish_port.setMinimumSize(QtCore.QSize(250, 0))
         self.fish_port.setMaximumSize(QtCore.QSize(250, 16777215))
@@ -238,8 +219,8 @@ class Ui_SelectFishery(object):
         self.hboxlayout1.setSpacing(6)
         self.hboxlayout1.setMargin(9)
         self.hboxlayout1.setObjectName("hboxlayout1")
-        spacerItem7 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.hboxlayout1.addItem(spacerItem7)
+        spacerItem6 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.hboxlayout1.addItem(spacerItem6)
         self.pbnFisheryFinished = QtGui.QPushButton(self.widget_2)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -262,8 +243,7 @@ class Ui_SelectFishery(object):
         SelectFishery.setTabOrder(self.fishery_season_start, self.fishery_season_end)
         SelectFishery.setTabOrder(self.fishery_season_end, self.fish_num_gear)
         SelectFishery.setTabOrder(self.fish_num_gear, self.fish_gear_length)
-        SelectFishery.setTabOrder(self.fish_gear_length, self.fish_price)
-        SelectFishery.setTabOrder(self.fish_price, self.fish_port)
+        SelectFishery.setTabOrder(self.fish_gear_length, self.fish_port)
         SelectFishery.setTabOrder(self.fish_port, self.pbnStartShapes)
         SelectFishery.setTabOrder(self.pbnStartShapes, self.pbnFisheryFinished)
 
@@ -288,6 +268,7 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.setItemText(16, QtGui.QApplication.translate("SelectFishery", "Shark - Gillnets", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(17, QtGui.QApplication.translate("SelectFishery", "Diamondback Squid - Light Stick (Hook and Line)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(18, QtGui.QApplication.translate("SelectFishery", "Turtle - Turtle Net", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(19, QtGui.QApplication.translate("SelectFishery", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.label_3.setText(QtGui.QApplication.translate("SelectFishery", "Years experience in this fishery:", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("SelectFishery", "Season start:", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_start.setItemText(1, QtGui.QApplication.translate("SelectFishery", "January", None, QtGui.QApplication.UnicodeUTF8))
@@ -317,7 +298,6 @@ class Ui_SelectFishery(object):
         self.fishery_season_end.setItemText(12, QtGui.QApplication.translate("SelectFishery", "December", None, QtGui.QApplication.UnicodeUTF8))
         self.label_6.setText(QtGui.QApplication.translate("SelectFishery", "Average gear usage per trip:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_4.setText(QtGui.QApplication.translate("SelectFishery", "Gear deployment length:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_7.setText(QtGui.QApplication.translate("SelectFishery", "Average price per pound (lobster and conch only):", None, QtGui.QApplication.UnicodeUTF8))
         self.label_8.setText(QtGui.QApplication.translate("SelectFishery", "Fishery-specific landing site:", None, QtGui.QApplication.UnicodeUTF8))
         self.fish_port.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Basseterre E", None, QtGui.QApplication.UnicodeUTF8))
         self.fish_port.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Basseterre W", None, QtGui.QApplication.UnicodeUTF8))

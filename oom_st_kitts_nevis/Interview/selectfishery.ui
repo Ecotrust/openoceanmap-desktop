@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>682</width>
-    <height>426</height>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -173,6 +173,11 @@
           <item>
            <property name="text" >
             <string>Turtle - Turtle Net</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Other</string>
            </property>
           </item>
          </widget>
@@ -580,64 +585,6 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_15" >
-     <item>
-      <widget class="QWidget" native="1" name="widget_8" >
-       <layout class="QHBoxLayout" name="horizontalLayout_16" >
-        <item>
-         <widget class="QLabel" name="label_7" >
-          <property name="minimumSize" >
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>250</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text" >
-           <string>Average price per pound (lobster and conch only):</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3" >
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="fish_price" >
-          <property name="minimumSize" >
-           <size>
-            <width>100</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize" >
-           <size>
-            <width>100</width>
-            <height>16777215</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_17" >
      <item>
       <widget class="QWidget" native="1" name="widget_9" >
@@ -831,7 +778,6 @@
   <tabstop>fishery_season_end</tabstop>
   <tabstop>fish_num_gear</tabstop>
   <tabstop>fish_gear_length</tabstop>
-  <tabstop>fish_price</tabstop>
   <tabstop>fish_port</tabstop>
   <tabstop>pbnStartShapes</tabstop>
   <tabstop>pbnFisheryFinished</tabstop>

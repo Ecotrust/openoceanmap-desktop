@@ -8,8 +8,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>419</width>
-    <height>322</height>
+    <width>520</width>
+    <height>327</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -153,7 +153,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Number of household members (dependents):</string>
+               <string>How many people are in your household, including yourself:</string>
               </property>
              </widget>
             </item>
