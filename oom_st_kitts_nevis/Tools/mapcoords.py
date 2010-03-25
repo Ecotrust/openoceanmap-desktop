@@ -53,9 +53,21 @@ class MapCoords(object):
 
   # Signal handeler for updating coord display
   def updateCoordsDisplay(self, p):
-    capture_string = QString(str(p.x()) + " , " +
-                             str(p.y()))
+    mercator_p = self.parent.transform.transform(p)
+    x = mercator_p.x()
+    y = mercator_p.y()
+    if x < 0:
+      lon_dir = "W"
+    else:
+      lon_dir = "E"
+    if y < 0:
+      lat_dir = "S"
+    else:
+      lat_dir = "N"
+    capture_string = QString(str(abs(mercator_p.y())) + lat_dir + " , " +
+                             str(abs(mercator_p.x())) + lon_dir)
     #self.statusbar.showMessage(capture_string)
+    
     self.latlon.setText(capture_string)
 
 

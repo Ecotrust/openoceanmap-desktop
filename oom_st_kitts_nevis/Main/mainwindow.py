@@ -129,11 +129,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
       if self.srs == None:
         self.srs = layer.srs()
-        #self.transform = QgsCoordinateTransform()
-        #self.transform.setSourceSRS( self.srs )
-        #dest_srs = QgsSpatialRefSys()
-        #dest_srs.createFromSrid(4326)
-        #self.transform.setDestSRS( dest_srs )
+        self.transform = QgsCoordinateTransform()
+        self.transform.setSourceSRS( self.srs )
+        dest_srs = QgsSpatialRefSys()
+        dest_srs.createFromSrid(4326)
+        self.transform.setDestSRS( dest_srs )
       
       # Set the scales
       layer.setScaleBasedVisibility(True)
