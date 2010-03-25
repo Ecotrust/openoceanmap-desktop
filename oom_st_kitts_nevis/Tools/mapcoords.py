@@ -64,8 +64,8 @@ class MapCoords(object):
       lat_dir = "S"
     else:
       lat_dir = "N"
-    capture_string = QString(str(abs(mercator_p.y())) + lat_dir + " , " +
-                             str(abs(mercator_p.x())) + lon_dir)
+    capture_string = QString('%#f' % abs(mercator_p.y()) + lat_dir + " , " +
+                             '%#f' % abs(mercator_p.x()) + lon_dir)
     #self.statusbar.showMessage(capture_string)
     
     self.latlon.setText(capture_string)
