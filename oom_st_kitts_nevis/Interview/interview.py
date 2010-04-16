@@ -205,7 +205,7 @@ class Interview(QObject):
           self.canvas.setLayerSet(self.mainwindow.layers)
           
           #Add item to legend
-          self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
+          self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl], cl.layer().renderer().symbols()[0].fillColor())
           
       # Reset the rubberbands and then clear out the fishery related objects
       for capPolyRub in self.capturedPolygonsRub:
@@ -328,7 +328,7 @@ class Interview(QObject):
       clip_layer.renderer().setSelectionColor(QColor(0,255,100))
           
       #Add item to legend
-      self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl])
+      self.mainwindow.legend.addVectorLegendItem(info.completeBaseName(), [cl], cl.layer().renderer().symbols()[0].fillColor())
         
       # reassign pennies to the shapes in this layer
       fishery = feat.attributeMap()[index+1].toString()

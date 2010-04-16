@@ -220,7 +220,7 @@ class MapTools(object):
     self.canvas.setLayerSet(self.layers)
 
     #Add item to legend
-    self.legend.addVectorLegendItem(info.completeBaseName(), [cl])
+    self.legend.addVectorLegendItem(info.completeBaseName(), [cl], cl.layer().renderer().symbols()[0].fillColor())
 
   # Signal handeler for add layer button
   def addRasterLayer(self):
