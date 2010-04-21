@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Wed Apr 21 15:30:31 2010
+# Created: Wed Apr 21 15:56:24 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -330,8 +330,8 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.setItemText(16, QtGui.QApplication.translate("SelectFishery", "Shark - Gillnets", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(17, QtGui.QApplication.translate("SelectFishery", "Diamondback Squid - Light Stick", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(18, QtGui.QApplication.translate("SelectFishery", "Turtle - Turtle Net", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(19, QtGui.QApplication.translate("SelectFishery", "Bait - Net", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(20, QtGui.QApplication.translate("SelectFishery", "Bait - Cast Net", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(19, QtGui.QApplication.translate("SelectFishery", "Bait - (Ballyhoo-Net)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(20, QtGui.QApplication.translate("SelectFishery", "Bait - (Anchovy/Sardines - Cast Net)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(21, QtGui.QApplication.translate("SelectFishery", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.label_3.setText(QtGui.QApplication.translate("SelectFishery", "Years experience in this fishery:", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("SelectFishery", "Season start:", None, QtGui.QApplication.UnicodeUTF8))
