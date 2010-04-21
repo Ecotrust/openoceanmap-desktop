@@ -113,10 +113,10 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         if not self.discardLast:
             num_pennies = self.line_1.text()
             if not num_pennies or num_pennies == '0' or not strIsInt(num_pennies):
-                QMessageBox.warning(self, "Pennies Error", "Missing or invalid penny value")
+                QMessageBox.warning(self, "Dollar Error", "Missing or invalid dollar value.")
                 return
             elif int(num_pennies) > self.pennies_left:
-                QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+                QMessageBox.warning(self, "Dollar Error", "You don't have that many dollars left.")
                 return            
             else:
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
@@ -129,7 +129,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
 
         #Check if this fishery should be done (no pennies left)
         if self.parent.pennies_left == 0:
-            QMessageBox.warning(self, "Pennies Error", "You are out of pennies.  This fishery is now done.")
+            QMessageBox.warning(self, "Dollar Error", "You are out of dollars.  This fishery is now done.")
             self.parent.end_fishery()
         else:
             mc = self.parent.canvas      
@@ -153,13 +153,13 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         num_pennies = self.line_1.text()
 
         if not num_pennies or num_pennies == '0' or not strIsInt(num_pennies):
-            QMessageBox.warning(self, "Pennies Error", "Missing or invalid penny value")
+            QMessageBox.warning(self, "Dollar Error", "Missing or invalid dollar value.")
             return
         elif int(num_pennies) > self.parent.pennies_left:
-            QMessageBox.warning(self, "Pennies Error", "You don't have that many pennies left")
+            QMessageBox.warning(self, "Dollar Error", "You don't have that many dollars left.")
             return
         elif int(num_pennies) < self.parent.pennies_left:
-            QMessageBox.warning(self, "Pennies Error", "You would still have pennies left.  Please enter a larger penny value or draw additional shapes")
+            QMessageBox.warning(self, "Dollar Error", "You would still have dollars left.  Please enter a larger dollar value or draw additional shapes.")
             return
         else:
             self.parent.capturedPolygonsPennies.append(num_pennies)

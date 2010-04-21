@@ -26,7 +26,7 @@
      <property name="title" >
       <string/>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2" >
+     <layout class="QVBoxLayout" name="verticalLayout" >
       <item>
        <widget class="QWidget" native="1" name="widget_57" >
         <layout class="QVBoxLayout" name="verticalLayout_28" >
@@ -153,7 +153,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>How many people are in your household, including yourself:</string>
+               <string>How many people live in your household, including yourself:</string>
               </property>
              </widget>
             </item>
@@ -235,7 +235,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Number of crew (not including self):</string>
+               <string>Average number of crew per trip (not including self):</string>
               </property>
              </widget>
             </item>
@@ -254,6 +254,274 @@
             </item>
             <item>
              <widget class="QLineEdit" name="num_crew" >
+              <property name="maximumSize" >
+               <size>
+                <width>50</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font" >
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="widget_63" >
+        <layout class="QVBoxLayout" name="verticalLayout_31" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>2</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QWidget" native="1" name="widget_64" >
+           <layout class="QHBoxLayout" name="horizontalLayout_2" >
+            <property name="spacing" >
+             <number>4</number>
+            </property>
+            <property name="leftMargin" >
+             <number>4</number>
+            </property>
+            <property name="topMargin" >
+             <number>0</number>
+            </property>
+            <property name="rightMargin" >
+             <number>4</number>
+            </property>
+            <property name="bottomMargin" >
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_45" >
+              <property name="font" >
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text" >
+               <string>How is crew paid:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QComboBox" name="how_crew_paid" >
+              <property name="minimumSize" >
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <item>
+               <property name="text" >
+                <string/>
+               </property>
+              </item>
+              <item>
+               <property name="text" >
+                <string>Salary</string>
+               </property>
+              </item>
+              <item>
+               <property name="text" >
+                <string>Share of revenue</string>
+               </property>
+              </item>
+              <item>
+               <property name="text" >
+                <string>Share of catch</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="widget_32" >
+        <layout class="QVBoxLayout" name="verticalLayout_16" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>2</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QWidget" native="1" name="widget_34" >
+           <layout class="QHBoxLayout" name="horizontalLayout_25" >
+            <property name="spacing" >
+             <number>4</number>
+            </property>
+            <property name="leftMargin" >
+             <number>4</number>
+            </property>
+            <property name="topMargin" >
+             <number>0</number>
+            </property>
+            <property name="rightMargin" >
+             <number>4</number>
+            </property>
+            <property name="bottomMargin" >
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_30" >
+              <property name="font" >
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text" >
+               <string>After expenses (like gas) have been paid, what percentage does</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="widget_35" >
+        <layout class="QVBoxLayout" name="verticalLayout_17" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>2</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QWidget" native="1" name="widget_36" >
+           <layout class="QHBoxLayout" name="horizontalLayout_26" >
+            <property name="spacing" >
+             <number>4</number>
+            </property>
+            <property name="leftMargin" >
+             <number>4</number>
+            </property>
+            <property name="topMargin" >
+             <number>0</number>
+            </property>
+            <property name="rightMargin" >
+             <number>4</number>
+            </property>
+            <property name="bottomMargin" >
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_2" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType" >
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_31" >
+              <property name="font" >
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text" >
+               <string>the captain get:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="captain_shares" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -310,6 +578,22 @@
              <number>0</number>
             </property>
             <item>
+             <spacer name="horizontalSpacer_4" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType" >
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QLabel" name="label_28" >
               <property name="font" >
                <font>
@@ -317,7 +601,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>% of shares to crew (total):</string>
+               <string>the crew get:</string>
               </property>
              </widget>
             </item>
@@ -336,252 +620,6 @@
             </item>
             <item>
              <widget class="QLineEdit" name="crew_shares" >
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QWidget" native="1" name="widget_32" >
-        <layout class="QVBoxLayout" name="verticalLayout_16" >
-         <property name="spacing" >
-          <number>4</number>
-         </property>
-         <property name="leftMargin" >
-          <number>4</number>
-         </property>
-         <property name="topMargin" >
-          <number>2</number>
-         </property>
-         <property name="rightMargin" >
-          <number>4</number>
-         </property>
-         <property name="bottomMargin" >
-          <number>2</number>
-         </property>
-         <item>
-          <widget class="QWidget" native="1" name="widget_34" >
-           <layout class="QHBoxLayout" name="horizontalLayout_25" >
-            <property name="spacing" >
-             <number>4</number>
-            </property>
-            <property name="leftMargin" >
-             <number>4</number>
-            </property>
-            <property name="topMargin" >
-             <number>0</number>
-            </property>
-            <property name="rightMargin" >
-             <number>4</number>
-            </property>
-            <property name="bottomMargin" >
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_30" >
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>% of shares to boat (include trip costs):</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_3" >
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0" >
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="boat_shares" >
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QWidget" native="1" name="widget_35" >
-        <layout class="QVBoxLayout" name="verticalLayout_17" >
-         <property name="spacing" >
-          <number>4</number>
-         </property>
-         <property name="leftMargin" >
-          <number>4</number>
-         </property>
-         <property name="topMargin" >
-          <number>2</number>
-         </property>
-         <property name="rightMargin" >
-          <number>4</number>
-         </property>
-         <property name="bottomMargin" >
-          <number>2</number>
-         </property>
-         <item>
-          <widget class="QWidget" native="1" name="widget_36" >
-           <layout class="QHBoxLayout" name="horizontalLayout_26" >
-            <property name="spacing" >
-             <number>4</number>
-            </property>
-            <property name="leftMargin" >
-             <number>4</number>
-            </property>
-            <property name="topMargin" >
-             <number>0</number>
-            </property>
-            <property name="rightMargin" >
-             <number>4</number>
-            </property>
-            <property name="bottomMargin" >
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_31" >
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>% of shares to captain:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_3" >
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0" >
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="captain_shares" >
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QWidget" native="1" name="widget_37" >
-        <layout class="QVBoxLayout" name="verticalLayout_18" >
-         <property name="spacing" >
-          <number>4</number>
-         </property>
-         <property name="leftMargin" >
-          <number>4</number>
-         </property>
-         <property name="topMargin" >
-          <number>2</number>
-         </property>
-         <property name="rightMargin" >
-          <number>4</number>
-         </property>
-         <property name="bottomMargin" >
-          <number>2</number>
-         </property>
-         <item>
-          <widget class="QWidget" native="1" name="widget_38" >
-           <layout class="QHBoxLayout" name="horizontalLayout_27" >
-            <property name="spacing" >
-             <number>4</number>
-            </property>
-            <property name="leftMargin" >
-             <number>4</number>
-            </property>
-            <property name="topMargin" >
-             <number>0</number>
-            </property>
-            <property name="rightMargin" >
-             <number>4</number>
-            </property>
-            <property name="bottomMargin" >
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_32" >
-              <property name="font" >
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="text" >
-               <string>% of shares to boat owner (if not captain):</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_3" >
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0" >
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="owner_shares" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -682,10 +720,9 @@
   <tabstop>pct_house_inc</tabstop>
   <tabstop>num_dependents</tabstop>
   <tabstop>num_crew</tabstop>
-  <tabstop>crew_shares</tabstop>
-  <tabstop>boat_shares</tabstop>
+  <tabstop>how_crew_paid</tabstop>
   <tabstop>captain_shares</tabstop>
-  <tabstop>owner_shares</tabstop>
+  <tabstop>crew_shares</tabstop>
   <tabstop>pbnFinished</tabstop>
   <tabstop>pbnCancel</tabstop>
  </tabstops>

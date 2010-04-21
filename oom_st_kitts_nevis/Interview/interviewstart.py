@@ -50,14 +50,6 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
     def on_pbnSelectFishery_released(self):
         interviewInfo2 = self.parent.interviewInfo2
         
-        interviewInfo2.append(["fname", self.interviewee_first_name_line.text()])
-        interviewInfo2.append(["lname", self.interviewee_last_name_line.text()])
-        interviewInfo2.append(["mailaddr", self.address_line.text()])
-        interviewInfo2.append(["phone", self.phone_line.text()])
-        interviewInfo2.append(["email", self.email_line.text()])
-        interviewInfo2.append(["age", self.age_line.text()])
-        interviewInfo2.append(["gender", self.gender_comboBox.currentText()])
-        
         interviewInfo2.append(["date", self.date_line.text()])   
         interviewInfo2.append(["location", self.location_line.text()])         
         interviewInfo2.append(["int1_fname", self.interviewer1_first_name_line.text()])
@@ -68,17 +60,7 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["data_meth", self.dataMethod_comboBox.currentText()])
         
         interviewInfo2.append(["fish_reg", self.fish_regis_line.text()])
-        interviewInfo2.append(["vsl_reg", self.vessel_regis_line.text()])
-        interviewInfo2.append(["vsl_name", self.vessel_name_line.text()])
-        interviewInfo2.append(["vsl_len", self.vessel_length_line.text()])
-        interviewInfo2.append(["vsl_eng", self.vessel_engine_line.text()])
-        interviewInfo2.append(["haul_cap", self.haul_capacity_line.text()])
-        interviewInfo2.append(["vsl_mpg", self.vessel_mpg_line.text()])
-        interviewInfo2.append(["port_reg", self.port_regis_line.text()])
-        interviewInfo2.append(["port_op", self.port_op_line.text()])
-        interviewInfo2.append(["vsl_relat", self.relation_vessel_line.text()])
         interviewInfo2.append(["yrs_exp", self.yrs_fishing_line.text()])
-        interviewInfo2.append(["fish_time", self.fishTime_comboBox.currentText()])
 
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 

@@ -24,7 +24,7 @@
       </font>
      </property>
      <property name="title" >
-      <string>Enter % of income derived from each fishery last year</string>
+      <string>Enter % of income derived from current fisheries</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2" >
       <item>
@@ -402,13 +402,25 @@
             </property>
             <item>
              <widget class="QLabel" name="label_30" >
+              <property name="minimumSize" >
+               <size>
+                <width>250</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>250</width>
+                <height>16777215</height>
+               </size>
+              </property>
               <property name="font" >
                <font>
                 <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text" >
-               <string>Nearshore Handline/Banking           (Coastal Demersals - Pole/Handline)</string>
+               <string>Nearshore Handline/Banking           (Coastal Demersals - Rod &amp; Reel/Handline)</string>
               </property>
               <property name="wordWrap" >
                <bool>true</bool>
@@ -736,13 +748,25 @@
             </property>
             <item>
              <widget class="QLabel" name="label_34" >
+              <property name="minimumSize" >
+               <size>
+                <width>270</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>270</width>
+                <height>16777215</height>
+               </size>
+              </property>
               <property name="font" >
                <font>
                 <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text" >
-               <string>Deep Slope/Bank Handline/Banking (Demersal Shelf/Deep Slope - Pole/Handline)</string>
+               <string>Deep Slope/Bank Handline/Banking (Demersal Shelf/Deep Slope - Rod &amp; Reel/Handline)</string>
               </property>
               <property name="wordWrap" >
                <bool>true</bool>
@@ -1264,7 +1288,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Shark - Hook and Line</string>
+               <string>Shark</string>
               </property>
              </widget>
             </item>
@@ -1428,10 +1452,10 @@
                </font>
               </property>
               <property name="text" >
-               <string>Diamondback Squid - Light Stick (Hook and Line)</string>
+               <string>Diamondback Squid - Light Stick </string>
               </property>
               <property name="wordWrap" >
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
              </widget>
             </item>

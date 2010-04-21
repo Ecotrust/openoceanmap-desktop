@@ -47,9 +47,7 @@ class AddtQuestionsGui(QDialog, Ui_AdditionalQuestions):
         self.setupUi(self)
         self.parent = parent   
         self.crew_shares.setText('0')
-        self.boat_shares.setText('0')
         self.captain_shares.setText('0')
-        self.owner_shares.setText('0')
 
     def on_pbnFinished_released(self):
         
@@ -57,12 +55,8 @@ class AddtQuestionsGui(QDialog, Ui_AdditionalQuestions):
         shares = []
         if self.crew_shares.text() != '0':
             shares.append(('Crew',self.crew_shares.text()))
-        if self.boat_shares.text() != '0':
-            shares.append(('Boat',self.boat_shares.text()))
         if self.captain_shares.text() != '0':
             shares.append(('Captain',self.captain_shares.text()))
-        if self.owner_shares.text() != '0':
-            shares.append(('Owner',self.owner_shares.text()))
             
         total_values = 0
         for (share_type,value) in shares:
@@ -85,9 +79,8 @@ class AddtQuestionsGui(QDialog, Ui_AdditionalQuestions):
         interviewInfo2.append(["num_depnd",self.num_dependents.text()])
         interviewInfo2.append(["num_crew",self.num_crew.text()])
         interviewInfo2.append(["crew_shar",self.crew_shares.text()])
-        interviewInfo2.append(["boat_shar",self.boat_shares.text()])
+        interviewInfo2.append(["crew_paid",self.how_crew_paid.currentText()])
         interviewInfo2.append(["capt_shar",self.captain_shares.text()])
-        interviewInfo2.append(["own_shar",self.owner_shares.text()])
 
         
         #total = sum([int(b) for (a,b) in cpfv_fisheries])

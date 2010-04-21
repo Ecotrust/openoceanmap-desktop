@@ -107,7 +107,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Handline/Banking (Coastal Demersals - Pole/Handline)</string>
+            <string>Nearshore Handline/Banking (Coastal Demersals - Rod &amp; Reel/Handline)</string>
            </property>
           </item>
           <item>
@@ -127,7 +127,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Deep Slope/Bank Handline/Banking Fishery (Demersal Shelf/Deep Slope - Pole/Handline)</string>
+            <string>Deep Slope/Bank Handline/Banking Fishery (Demersal Shelf/Deep Slope - Rod &amp; Reel/Handline)</string>
            </property>
           </item>
           <item>
@@ -157,7 +157,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Shark - Hook and Line</string>
+            <string>Shark</string>
            </property>
           </item>
           <item>
@@ -167,12 +167,22 @@
           </item>
           <item>
            <property name="text" >
-            <string>Diamondback Squid - Light Stick (Hook and Line)</string>
+            <string>Diamondback Squid - Light Stick</string>
            </property>
           </item>
           <item>
            <property name="text" >
             <string>Turtle - Turtle Net</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Bait - Net</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Bait - Cast Net</string>
            </property>
           </item>
           <item>
@@ -700,18 +710,18 @@
          <widget class="QLabel" name="label_6" >
           <property name="minimumSize" >
            <size>
-            <width>300</width>
+            <width>350</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>300</width>
+            <width>350</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Average number of traps fished per week (trap fisheries only):</string>
+           <string>Trap fisheries only - Average number of traps fished per week:</string>
           </property>
          </widget>
         </item>
@@ -769,7 +779,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Trap soak time (trap fisheries only):</string>
+           <string>Trap fisheries only - Trap soak time:</string>
           </property>
          </widget>
         </item>
