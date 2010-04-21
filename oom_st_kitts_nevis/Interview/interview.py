@@ -197,8 +197,24 @@ class Interview(QObject):
           # track user-added layers for later clipping
           new_layer = QgsVectorLayer(QString(f), info.completeBaseName(), "ogr")
 
-          #layer.label().setLabelField(QgsLabel.Text, self.penniesIndex)
-          #layer.setLabelOn(True)
+          # get the label instance associated with the layer
+          label = layer.label()
+          # and the label attributes associated with the label
+          labelAttributes = label.layerAttributes()
+
+          # use the Name field (specified by index 1) as the label field
+          label.setLabelField(QgsLabel.Text,  self.penniesIndex)
+    
+          # set the colour of the label text
+          labelAttributes.setColor(Qt.black)
+
+          # create a 'halo' effect around each label so it
+          # can still be read on dark backgrounds
+          labelAttributes.setBufferEnabled(True)
+          labelAttributes.setBufferColor(Qt.white)
+          labelAttributes.setBufferSize(1, QgsLabelAttributes.PointUnits)
+          
+          layer.setLabelOn(True)
           
           # Set the transparency for the layer
           layer.setTransparency(190)
@@ -224,11 +240,8 @@ class Interview(QObject):
 
       #Reset penny count
       self.pennies_left = 100
-
-      # EITHER create a shapefile clipped to the study region and reassign pennies # NO LONGER USED
-      #self.create_clipped_layer( str(f), new_layer )
       
-      # OR just proceed directly to the next fishery
+      # just proceed directly to the next fishery
       self.next_fishery()
 
       
