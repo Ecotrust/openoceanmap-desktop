@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>493</width>
-    <height>166</height>
+    <width>491</width>
+    <height>162</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -51,7 +51,7 @@
             </font>
            </property>
            <property name="text" >
-            <string>Pennies:</string>
+            <string>Dollars:</string>
            </property>
           </widget>
          </item>
@@ -103,91 +103,6 @@
          </item>
          <item>
           <spacer name="horizontalSpacer" >
-           <property name="orientation" >
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0" >
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout" >
-         <property name="bottomMargin" >
-          <number>0</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="habitat_combo_label" >
-           <property name="minimumSize" >
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize" >
-            <size>
-             <width>100</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="font" >
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text" >
-            <string>Habitat Type:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="habitat_combo" >
-           <property name="minimumSize" >
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize" >
-            <size>
-             <width>100</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="font" >
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <item>
-            <property name="text" >
-             <string>Unknown</string>
-            </property>
-           </item>
-           <item>
-            <property name="text" >
-             <string>Hard Bottom</string>
-            </property>
-           </item>
-           <item>
-            <property name="text" >
-             <string>Soft Sandy</string>
-            </property>
-           </item>
-           <item>
-            <property name="text" >
-             <string>Mixed</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_2" >
            <property name="orientation" >
             <enum>Qt::Horizontal</enum>
            </property>

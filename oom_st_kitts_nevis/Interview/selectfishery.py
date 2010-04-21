@@ -66,6 +66,8 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
         self.parent.currentFisheryGearLength = self.fish_gear_length.text()
         self.parent.currentFisherySeasonStart = self.fishery_season_start.currentText()
         self.parent.currentFisherySeasonEnd = self.fishery_season_end.currentText()
+        self.parent.currentFisherySeasonStart2 = self.fishery_season_start_2.currentText()
+        self.parent.currentFisherySeasonEnd2 = self.fishery_season_end_2.currentText()
         self.parent.currentFisheryPort = self.fish_port.currentText()
 
     
@@ -120,7 +122,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
                 self.parent.pennies_left = self.pennies_left - int(num_pennies)
                 self.parent.capturedPolygonsPennies.append(num_pennies)
                         
-            self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
+            #self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
             self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
             
         self.close()
@@ -162,7 +164,7 @@ class NextPolygonGui(QDialog, Ui_NextPolygon):
         else:
             self.parent.capturedPolygonsPennies.append(num_pennies)
                     
-        self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
+        #self.parent.capturedPolygonsHabitat.append(self.habitat_combo.currentText())
         self.parent.capturedPolygonsFishery.append(self.parent.currentFishery)
             
         self.close()

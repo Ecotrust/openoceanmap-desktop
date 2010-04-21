@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>682</width>
-    <height>365</height>
+    <width>691</width>
+    <height>411</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -469,6 +469,229 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6" >
+     <item>
+      <widget class="QWidget" native="1" name="widget_6" >
+       <layout class="QHBoxLayout" name="horizontalLayout_11" >
+        <item>
+         <widget class="QLabel" name="label_5" >
+          <property name="minimumSize" >
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Season start:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="fishery_season_start_2" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <item>
+           <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>January</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>February</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>March</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>April</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>May</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>June</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>July</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>August</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>September</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>October</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>November</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>December</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_7" >
+          <property name="minimumSize" >
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string>Season end:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="fishery_season_end_2" >
+          <property name="minimumSize" >
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <item>
+           <property name="text" >
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>January</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>February</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>March</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>April</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>May</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>June</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>July</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>August</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>September</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>October</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>November</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>December</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_13" >
      <item>
       <widget class="QWidget" native="1" name="widget_7" >
@@ -488,7 +711,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Average gear usage per trip:</string>
+           <string>Average number of traps fished per week (trap fisheries only):</string>
           </property>
          </widget>
         </item>
@@ -535,18 +758,18 @@
          <widget class="QLabel" name="label_4" >
           <property name="minimumSize" >
            <size>
-            <width>160</width>
+            <width>300</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>160</width>
+            <width>300</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Gear deployment length:</string>
+           <string>Trap soak time (trap fisheries only):</string>
           </property>
          </widget>
         </item>
@@ -769,18 +992,19 @@
     </layout>
    </item>
   </layout>
-  <zorder></zorder>
  </widget>
  <tabstops>
   <tabstop>fishery_comboBox</tabstop>
   <tabstop>fish_yrs_partic</tabstop>
   <tabstop>fishery_season_start</tabstop>
   <tabstop>fishery_season_end</tabstop>
+  <tabstop>fishery_season_start_2</tabstop>
+  <tabstop>fishery_season_end_2</tabstop>
   <tabstop>fish_num_gear</tabstop>
   <tabstop>fish_gear_length</tabstop>
   <tabstop>fish_port</tabstop>
-  <tabstop>pbnStartShapes</tabstop>
   <tabstop>pbnFisheryFinished</tabstop>
+  <tabstop>pbnStartShapes</tabstop>
  </tabstops>
  <resources/>
  <connections/>

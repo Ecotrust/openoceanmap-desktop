@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'nextpolygon.ui'
 #
-# Created: Thu Mar 12 14:36:46 2009
+# Created: Wed Apr 21 11:52:14 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt4 import QtCore, QtGui
 class Ui_NextPolygon(object):
     def setupUi(self, NextPolygon):
         NextPolygon.setObjectName("NextPolygon")
-        NextPolygon.resize(493, 166)
+        NextPolygon.resize(491, 162)
         self.hboxlayout = QtGui.QHBoxLayout(NextPolygon)
         self.hboxlayout.setObjectName("hboxlayout")
         self.groupBox = QtGui.QGroupBox(NextPolygon)
@@ -49,32 +49,6 @@ class Ui_NextPolygon(object):
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.hboxlayout1.addItem(spacerItem)
         self.verticalLayout.addLayout(self.hboxlayout1)
-        self.horizontalLayout = QtGui.QHBoxLayout()
-        self.horizontalLayout.setContentsMargins(-1, -1, -1, 0)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.habitat_combo_label = QtGui.QLabel(self.layoutWidget)
-        self.habitat_combo_label.setMinimumSize(QtCore.QSize(100, 0))
-        self.habitat_combo_label.setMaximumSize(QtCore.QSize(100, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.habitat_combo_label.setFont(font)
-        self.habitat_combo_label.setObjectName("habitat_combo_label")
-        self.horizontalLayout.addWidget(self.habitat_combo_label)
-        self.habitat_combo = QtGui.QComboBox(self.layoutWidget)
-        self.habitat_combo.setMinimumSize(QtCore.QSize(100, 0))
-        self.habitat_combo.setMaximumSize(QtCore.QSize(100, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.habitat_combo.setFont(font)
-        self.habitat_combo.setObjectName("habitat_combo")
-        self.habitat_combo.addItem(QtCore.QString())
-        self.habitat_combo.addItem(QtCore.QString())
-        self.habitat_combo.addItem(QtCore.QString())
-        self.habitat_combo.addItem(QtCore.QString())
-        self.horizontalLayout.addWidget(self.habitat_combo)
-        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem1)
-        self.verticalLayout.addLayout(self.horizontalLayout)
         self.widget = QtGui.QWidget(self.layoutWidget)
         self.widget.setObjectName("widget")
         self.hboxlayout2 = QtGui.QHBoxLayout(self.widget)
@@ -106,12 +80,7 @@ class Ui_NextPolygon(object):
 
     def retranslateUi(self, NextPolygon):
         NextPolygon.setWindowTitle(QtGui.QApplication.translate("NextPolygon", "OpenOceanMap - Next Polygon", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_1.setText(QtGui.QApplication.translate("NextPolygon", "Pennies:", None, QtGui.QApplication.UnicodeUTF8))
-        self.habitat_combo_label.setText(QtGui.QApplication.translate("NextPolygon", "Habitat Type:", None, QtGui.QApplication.UnicodeUTF8))
-        self.habitat_combo.setItemText(0, QtGui.QApplication.translate("NextPolygon", "Unknown", None, QtGui.QApplication.UnicodeUTF8))
-        self.habitat_combo.setItemText(1, QtGui.QApplication.translate("NextPolygon", "Hard Bottom", None, QtGui.QApplication.UnicodeUTF8))
-        self.habitat_combo.setItemText(2, QtGui.QApplication.translate("NextPolygon", "Soft Sandy", None, QtGui.QApplication.UnicodeUTF8))
-        self.habitat_combo.setItemText(3, QtGui.QApplication.translate("NextPolygon", "Mixed", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_1.setText(QtGui.QApplication.translate("NextPolygon", "Dollars:", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeFinished.setText(QtGui.QApplication.translate("NextPolygon", "Finished With Fishery", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnShapeDiscard.setText(QtGui.QApplication.translate("NextPolygon", "Discard Last Shape", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnMoreShapes.setText(QtGui.QApplication.translate("NextPolygon", "More Shapes This Fishery", None, QtGui.QApplication.UnicodeUTF8))
