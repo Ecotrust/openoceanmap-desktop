@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interviewstart.ui'
 #
-# Created: Wed Apr 21 15:30:31 2010
+# Created: Thu Apr 22 12:08:47 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -196,8 +196,8 @@ class Ui_InterviewStart(object):
         self._22.setMargin(4)
         self._22.setObjectName("_22")
         self.years_text_6 = QtGui.QLabel(self.home_port_13)
-        self.years_text_6.setMinimumSize(QtCore.QSize(150, 0))
-        self.years_text_6.setMaximumSize(QtCore.QSize(150, 16777215))
+        self.years_text_6.setMinimumSize(QtCore.QSize(170, 0))
+        self.years_text_6.setMaximumSize(QtCore.QSize(170, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.years_text_6.setFont(font)
@@ -205,8 +205,8 @@ class Ui_InterviewStart(object):
         self._22.addWidget(self.years_text_6)
         self.fish_regis_line = QtGui.QLineEdit(self.home_port_13)
         self.fish_regis_line.setEnabled(True)
-        self.fish_regis_line.setMinimumSize(QtCore.QSize(100, 0))
-        self.fish_regis_line.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.fish_regis_line.setMinimumSize(QtCore.QSize(180, 0))
+        self.fish_regis_line.setMaximumSize(QtCore.QSize(180, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.fish_regis_line.setFont(font)
@@ -223,8 +223,8 @@ class Ui_InterviewStart(object):
         self._17.setMargin(4)
         self._17.setObjectName("_17")
         self.landing_port_text_3 = QtGui.QLabel(self.home_port_8)
-        self.landing_port_text_3.setMinimumSize(QtCore.QSize(150, 0))
-        self.landing_port_text_3.setMaximumSize(QtCore.QSize(150, 16777215))
+        self.landing_port_text_3.setMinimumSize(QtCore.QSize(170, 0))
+        self.landing_port_text_3.setMaximumSize(QtCore.QSize(170, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.landing_port_text_3.setFont(font)
@@ -232,8 +232,8 @@ class Ui_InterviewStart(object):
         self._17.addWidget(self.landing_port_text_3)
         self.yrs_fishing_line = QtGui.QLineEdit(self.home_port_8)
         self.yrs_fishing_line.setEnabled(True)
-        self.yrs_fishing_line.setMinimumSize(QtCore.QSize(200, 0))
-        self.yrs_fishing_line.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.yrs_fishing_line.setMinimumSize(QtCore.QSize(180, 0))
+        self.yrs_fishing_line.setMaximumSize(QtCore.QSize(180, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.yrs_fishing_line.setFont(font)
@@ -285,18 +285,18 @@ class Ui_InterviewStart(object):
     def retranslateUi(self, InterviewStart):
         InterviewStart.setWindowTitle(QtGui.QApplication.translate("InterviewStart", "OpenOceanMap - Interview", None, QtGui.QApplication.UnicodeUTF8))
         self.interviewee_2.setTitle(QtGui.QApplication.translate("InterviewStart", "Interviewer", None, QtGui.QApplication.UnicodeUTF8))
-        self.date_text.setText(QtGui.QApplication.translate("InterviewStart", "Interview date (dd/mm/yyyy):", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer1_first_name_text_2.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer first name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer1_first_name_text_3.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer last name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer1_first_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer 2 first name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.interviewer1_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer 2 last name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.mood_text.setText(QtGui.QApplication.translate("InterviewStart", "Interviewer mood:", None, QtGui.QApplication.UnicodeUTF8))
-        self.mood_text_3.setText(QtGui.QApplication.translate("InterviewStart", "Interview location:", None, QtGui.QApplication.UnicodeUTF8))
-        self.mood_text_2.setText(QtGui.QApplication.translate("InterviewStart", "Data collection method:", None, QtGui.QApplication.UnicodeUTF8))
+        self.date_text.setText(QtGui.QApplication.translate("InterviewStart", "1. Interview date (dd/mm/yyyy):", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewer1_first_name_text_2.setText(QtGui.QApplication.translate("InterviewStart", "2. Interviewer first name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewer1_first_name_text_3.setText(QtGui.QApplication.translate("InterviewStart", "3. Interviewer last name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewer1_first_name_text.setText(QtGui.QApplication.translate("InterviewStart", "4. Interviewer 2 first name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.interviewer1_last_name_text.setText(QtGui.QApplication.translate("InterviewStart", "5. Interviewer 2 last name:", None, QtGui.QApplication.UnicodeUTF8))
+        self.mood_text.setText(QtGui.QApplication.translate("InterviewStart", "6. Interviewer mood:", None, QtGui.QApplication.UnicodeUTF8))
+        self.mood_text_3.setText(QtGui.QApplication.translate("InterviewStart", "7. Interview location:", None, QtGui.QApplication.UnicodeUTF8))
+        self.mood_text_2.setText(QtGui.QApplication.translate("InterviewStart", "8. Data collection method:", None, QtGui.QApplication.UnicodeUTF8))
         self.dataMethod_comboBox.setItemText(1, QtGui.QApplication.translate("InterviewStart", "electronic", None, QtGui.QApplication.UnicodeUTF8))
         self.dataMethod_comboBox.setItemText(2, QtGui.QApplication.translate("InterviewStart", "hard copy", None, QtGui.QApplication.UnicodeUTF8))
-        self.years_text_6.setText(QtGui.QApplication.translate("InterviewStart", "Fisher registration #:", None, QtGui.QApplication.UnicodeUTF8))
-        self.landing_port_text_3.setText(QtGui.QApplication.translate("InterviewStart", "Years fishing experience:", None, QtGui.QApplication.UnicodeUTF8))
+        self.years_text_6.setText(QtGui.QApplication.translate("InterviewStart", "9. Fisher registration #:", None, QtGui.QApplication.UnicodeUTF8))
+        self.landing_port_text_3.setText(QtGui.QApplication.translate("InterviewStart", "10. Years fishing experience:", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnCancel.setText(QtGui.QApplication.translate("InterviewStart", "Cancel", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnSelectFishery.setText(QtGui.QApplication.translate("InterviewStart", "Continue", None, QtGui.QApplication.UnicodeUTF8))
 

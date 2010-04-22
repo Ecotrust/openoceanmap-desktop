@@ -71,7 +71,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>% of total household income from fishing:</string>
+               <string>12. % of total household income from fishing:</string>
               </property>
              </widget>
             </item>
@@ -153,7 +153,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>How many people live in your household, including yourself:</string>
+               <string>13. How many people live in your household, including yourself:</string>
               </property>
              </widget>
             </item>
@@ -235,7 +235,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Average number of crew per trip (not including self):</string>
+               <string>14. Average number of crew per trip (not including self):</string>
               </property>
              </widget>
             </item>
@@ -317,7 +317,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>How is crew paid:</string>
+               <string>15. How is crew paid:</string>
               </property>
              </widget>
             </item>
@@ -420,7 +420,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>After expenses (like gas) have been paid, what percentage does</string>
+               <string>16. After expenses (like gas) have been paid, what percentage does</string>
               </property>
              </widget>
             </item>

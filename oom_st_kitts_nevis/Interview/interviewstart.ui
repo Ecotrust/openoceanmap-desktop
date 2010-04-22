@@ -55,7 +55,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interview date (dd/mm/yyyy):</string>
+                  <string>1. Interview date (dd/mm/yyyy):</string>
                  </property>
                 </widget>
                </item>
@@ -108,7 +108,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer first name:</string>
+                  <string>2. Interviewer first name:</string>
                  </property>
                 </widget>
                </item>
@@ -161,7 +161,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer last name:</string>
+                  <string>3. Interviewer last name:</string>
                  </property>
                 </widget>
                </item>
@@ -214,7 +214,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer 2 first name:</string>
+                  <string>4. Interviewer 2 first name:</string>
                  </property>
                 </widget>
                </item>
@@ -267,7 +267,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer 2 last name:</string>
+                  <string>5. Interviewer 2 last name:</string>
                  </property>
                 </widget>
                </item>
@@ -320,7 +320,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interviewer mood:</string>
+                  <string>6. Interviewer mood:</string>
                  </property>
                 </widget>
                </item>
@@ -373,7 +373,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Interview location:</string>
+                  <string>7. Interview location:</string>
                  </property>
                 </widget>
                </item>
@@ -426,7 +426,7 @@
                   </size>
                  </property>
                  <property name="text" >
-                  <string>Data collection method:</string>
+                  <string>8. Data collection method:</string>
                  </property>
                 </widget>
                </item>
@@ -507,13 +507,13 @@
             <widget class="QLabel" name="years_text_6" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>170</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>170</width>
                <height>16777215</height>
               </size>
              </property>
@@ -523,7 +523,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>Fisher registration #:</string>
+              <string>9. Fisher registration #:</string>
              </property>
             </widget>
            </item>
@@ -534,13 +534,13 @@
              </property>
              <property name="minimumSize" >
               <size>
-               <width>100</width>
+               <width>180</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>200</width>
+               <width>180</width>
                <height>16777215</height>
               </size>
              </property>
@@ -575,13 +575,13 @@
             <widget class="QLabel" name="landing_port_text_3" >
              <property name="minimumSize" >
               <size>
-               <width>150</width>
+               <width>170</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>150</width>
+               <width>170</width>
                <height>16777215</height>
               </size>
              </property>
@@ -591,7 +591,7 @@
               </font>
              </property>
              <property name="text" >
-              <string>Years fishing experience:</string>
+              <string>10. Years fishing experience:</string>
              </property>
             </widget>
            </item>
@@ -602,13 +602,13 @@
              </property>
              <property name="minimumSize" >
               <size>
-               <width>200</width>
+               <width>180</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize" >
               <size>
-               <width>200</width>
+               <width>180</width>
                <height>16777215</height>
               </size>
              </property>

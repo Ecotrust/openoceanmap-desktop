@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Wed Apr 21 15:56:24 2010
+# Created: Thu Apr 22 12:08:47 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -87,8 +87,8 @@ class Ui_SelectFishery(object):
         self.horizontalLayout_4 = QtGui.QHBoxLayout(self.widget_3)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label = QtGui.QLabel(self.widget_3)
-        self.label.setMinimumSize(QtCore.QSize(80, 0))
-        self.label.setMaximumSize(QtCore.QSize(80, 16777215))
+        self.label.setMinimumSize(QtCore.QSize(100, 0))
+        self.label.setMaximumSize(QtCore.QSize(100, 16777215))
         self.label.setObjectName("label")
         self.horizontalLayout_4.addWidget(self.label)
         self.fishery_season_start = QtGui.QComboBox(self.widget_3)
@@ -145,8 +145,8 @@ class Ui_SelectFishery(object):
         self.horizontalLayout_11 = QtGui.QHBoxLayout(self.widget_6)
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
         self.label_5 = QtGui.QLabel(self.widget_6)
-        self.label_5.setMinimumSize(QtCore.QSize(80, 0))
-        self.label_5.setMaximumSize(QtCore.QSize(80, 16777215))
+        self.label_5.setMinimumSize(QtCore.QSize(100, 0))
+        self.label_5.setMaximumSize(QtCore.QSize(100, 16777215))
         self.label_5.setObjectName("label_5")
         self.horizontalLayout_11.addWidget(self.label_5)
         self.fishery_season_start_2 = QtGui.QComboBox(self.widget_6)
@@ -311,7 +311,7 @@ class Ui_SelectFishery(object):
 
     def retranslateUi(self, SelectFishery):
         SelectFishery.setWindowTitle(QtGui.QApplication.translate("SelectFishery", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "Select Fishery :", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "17. Select Fishery :", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Coastal Pelagics or Net Fishery (Coastal Pealgics - Beach Seine)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Tuna & Bonito with Handline (Coastal Pelagics - Troll/Handline)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Large Offshore Pelagics (Ocean Pelagics - Troll/Handline)", None, QtGui.QApplication.UnicodeUTF8))
@@ -326,15 +326,15 @@ class Ui_SelectFishery(object):
         self.fishery_comboBox.setItemText(12, QtGui.QApplication.translate("SelectFishery", "Lobster - Dive (Free)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(13, QtGui.QApplication.translate("SelectFishery", "Conch - Dive (SCUBA)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(14, QtGui.QApplication.translate("SelectFishery", "Conch - Dive (Free)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(15, QtGui.QApplication.translate("SelectFishery", "Shark", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(15, QtGui.QApplication.translate("SelectFishery", "Shark - Hook & Line", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(16, QtGui.QApplication.translate("SelectFishery", "Shark - Gillnets", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(17, QtGui.QApplication.translate("SelectFishery", "Diamondback Squid - Light Stick", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(18, QtGui.QApplication.translate("SelectFishery", "Turtle - Turtle Net", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(19, QtGui.QApplication.translate("SelectFishery", "Bait - (Ballyhoo-Net)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(20, QtGui.QApplication.translate("SelectFishery", "Bait - (Anchovy/Sardines - Cast Net)", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(21, QtGui.QApplication.translate("SelectFishery", "Other", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_3.setText(QtGui.QApplication.translate("SelectFishery", "Years experience in this fishery:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("SelectFishery", "Season start:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("SelectFishery", "18. Years experience in this fishery:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("SelectFishery", "19. Season start:", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_start.setItemText(1, QtGui.QApplication.translate("SelectFishery", "January", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_start.setItemText(2, QtGui.QApplication.translate("SelectFishery", "February", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_start.setItemText(3, QtGui.QApplication.translate("SelectFishery", "March", None, QtGui.QApplication.UnicodeUTF8))
@@ -360,7 +360,7 @@ class Ui_SelectFishery(object):
         self.fishery_season_end.setItemText(10, QtGui.QApplication.translate("SelectFishery", "October", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_end.setItemText(11, QtGui.QApplication.translate("SelectFishery", "November", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_end.setItemText(12, QtGui.QApplication.translate("SelectFishery", "December", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_5.setText(QtGui.QApplication.translate("SelectFishery", "Season start:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_5.setText(QtGui.QApplication.translate("SelectFishery", "20. Season start:", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_start_2.setItemText(1, QtGui.QApplication.translate("SelectFishery", "January", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_start_2.setItemText(2, QtGui.QApplication.translate("SelectFishery", "February", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_start_2.setItemText(3, QtGui.QApplication.translate("SelectFishery", "March", None, QtGui.QApplication.UnicodeUTF8))
@@ -386,9 +386,9 @@ class Ui_SelectFishery(object):
         self.fishery_season_end_2.setItemText(10, QtGui.QApplication.translate("SelectFishery", "October", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_end_2.setItemText(11, QtGui.QApplication.translate("SelectFishery", "November", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_end_2.setItemText(12, QtGui.QApplication.translate("SelectFishery", "December", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_6.setText(QtGui.QApplication.translate("SelectFishery", "Trap fisheries only - Average number of traps fished per week:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_4.setText(QtGui.QApplication.translate("SelectFishery", "Trap fisheries only - Trap soak time:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_8.setText(QtGui.QApplication.translate("SelectFishery", "Fishery-specific landing site:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_6.setText(QtGui.QApplication.translate("SelectFishery", "21. Trap fisheries only - Average number of traps fished per week:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate("SelectFishery", "22. Trap fisheries only - Trap soak time:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_8.setText(QtGui.QApplication.translate("SelectFishery", "23. Fishery-specific landing site:", None, QtGui.QApplication.UnicodeUTF8))
         self.fish_port.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Basseterre E", None, QtGui.QApplication.UnicodeUTF8))
         self.fish_port.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Basseterre W", None, QtGui.QApplication.UnicodeUTF8))
         self.fish_port.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Old Road", None, QtGui.QApplication.UnicodeUTF8))

@@ -24,7 +24,7 @@
       </font>
      </property>
      <property name="title" >
-      <string>Enter % of income derived from current fisheries</string>
+      <string>11. Enter % of income derived from current fisheries</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2" >
       <item>
@@ -1288,7 +1288,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Shark</string>
+               <string>Shark - Hook &amp; Line</string>
               </property>
              </widget>
             </item>

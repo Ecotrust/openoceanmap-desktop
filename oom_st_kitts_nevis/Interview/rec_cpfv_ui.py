@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rec_cpfv.ui'
 #
-# Created: Thu Apr 22 10:10:55 2010
+# Created: Thu Apr 22 12:08:47 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -680,7 +680,7 @@ class Ui_RecCpfv(object):
 
     def retranslateUi(self, RecCpfv):
         RecCpfv.setWindowTitle(QtGui.QApplication.translate("RecCpfv", "OpenOceanMap - Fishery Participation", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox_4.setTitle(QtGui.QApplication.translate("RecCpfv", "Enter % of income derived from current fisheries", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox_4.setTitle(QtGui.QApplication.translate("RecCpfv", "11. Enter % of income derived from current fisheries", None, QtGui.QApplication.UnicodeUTF8))
         self.label_42.setText(QtGui.QApplication.translate("RecCpfv", "Coastal Pelagics or Net Fishery     (Coastal Pelagics - Beach Seine)", None, QtGui.QApplication.UnicodeUTF8))
         self.label_43.setText(QtGui.QApplication.translate("RecCpfv", "Tuna & Bonito with Handline           (Coastal Pelagics - Troll/Handline)", None, QtGui.QApplication.UnicodeUTF8))
         self.label_44.setText(QtGui.QApplication.translate("RecCpfv", "Large Offshore Pelagics                    (Ocean Pelagics - Troll/Handline)", None, QtGui.QApplication.UnicodeUTF8))
@@ -695,7 +695,7 @@ class Ui_RecCpfv(object):
         self.label_47.setText(QtGui.QApplication.translate("RecCpfv", "Lobster - Dive (Free)", None, QtGui.QApplication.UnicodeUTF8))
         self.label_48.setText(QtGui.QApplication.translate("RecCpfv", "Conch - Dive (SCUBA)", None, QtGui.QApplication.UnicodeUTF8))
         self.label_49.setText(QtGui.QApplication.translate("RecCpfv", "Conch - Dive (Free)", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_50.setText(QtGui.QApplication.translate("RecCpfv", "Shark", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_50.setText(QtGui.QApplication.translate("RecCpfv", "Shark - Hook & Line", None, QtGui.QApplication.UnicodeUTF8))
         self.label_51.setText(QtGui.QApplication.translate("RecCpfv", "Shark - Gillnets", None, QtGui.QApplication.UnicodeUTF8))
         self.label_52.setText(QtGui.QApplication.translate("RecCpfv", "Diamondback Squid - Light Stick ", None, QtGui.QApplication.UnicodeUTF8))
         self.label_53.setText(QtGui.QApplication.translate("RecCpfv", "Turtle - Turtle Net", None, QtGui.QApplication.UnicodeUTF8))

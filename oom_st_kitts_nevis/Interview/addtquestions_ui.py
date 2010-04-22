@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'addtquestions.ui'
 #
-# Created: Wed Apr 21 15:40:24 2010
+# Created: Thu Apr 22 12:08:48 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -263,14 +263,14 @@ class Ui_AdditionalQuestions(object):
 
     def retranslateUi(self, AdditionalQuestions):
         AdditionalQuestions.setWindowTitle(QtGui.QApplication.translate("AdditionalQuestions", "OpenOceanMap - Additional Questions", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_42.setText(QtGui.QApplication.translate("AdditionalQuestions", "% of total household income from fishing:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_43.setText(QtGui.QApplication.translate("AdditionalQuestions", "How many people live in your household, including yourself:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_44.setText(QtGui.QApplication.translate("AdditionalQuestions", "Average number of crew per trip (not including self):", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_45.setText(QtGui.QApplication.translate("AdditionalQuestions", "How is crew paid:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_42.setText(QtGui.QApplication.translate("AdditionalQuestions", "12. % of total household income from fishing:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_43.setText(QtGui.QApplication.translate("AdditionalQuestions", "13. How many people live in your household, including yourself:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_44.setText(QtGui.QApplication.translate("AdditionalQuestions", "14. Average number of crew per trip (not including self):", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_45.setText(QtGui.QApplication.translate("AdditionalQuestions", "15. How is crew paid:", None, QtGui.QApplication.UnicodeUTF8))
         self.how_crew_paid.setItemText(1, QtGui.QApplication.translate("AdditionalQuestions", "Salary", None, QtGui.QApplication.UnicodeUTF8))
         self.how_crew_paid.setItemText(2, QtGui.QApplication.translate("AdditionalQuestions", "Share of revenue", None, QtGui.QApplication.UnicodeUTF8))
         self.how_crew_paid.setItemText(3, QtGui.QApplication.translate("AdditionalQuestions", "Share of catch", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_30.setText(QtGui.QApplication.translate("AdditionalQuestions", "After expenses (like gas) have been paid, what percentage does", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_30.setText(QtGui.QApplication.translate("AdditionalQuestions", "16. After expenses (like gas) have been paid, what percentage does", None, QtGui.QApplication.UnicodeUTF8))
         self.label_31.setText(QtGui.QApplication.translate("AdditionalQuestions", "the captain get:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_28.setText(QtGui.QApplication.translate("AdditionalQuestions", "the crew get:", None, QtGui.QApplication.UnicodeUTF8))
         self.pbnCancel.setText(QtGui.QApplication.translate("AdditionalQuestions", "Cancel", None, QtGui.QApplication.UnicodeUTF8))

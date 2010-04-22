@@ -49,7 +49,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Select Fishery :</string>
+           <string>17. Select Fishery :</string>
           </property>
          </widget>
         </item>
@@ -157,7 +157,7 @@
           </item>
           <item>
            <property name="text" >
-            <string>Shark</string>
+            <string>Shark - Hook &amp; Line</string>
            </property>
           </item>
           <item>
@@ -217,7 +217,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Years experience in this fishery:</string>
+           <string>18. Years experience in this fishery:</string>
           </property>
          </widget>
         </item>
@@ -264,18 +264,18 @@
          <widget class="QLabel" name="label" >
           <property name="minimumSize" >
            <size>
-            <width>80</width>
+            <width>100</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>80</width>
+            <width>100</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Season start:</string>
+           <string>19. Season start:</string>
           </property>
          </widget>
         </item>
@@ -487,18 +487,18 @@
          <widget class="QLabel" name="label_5" >
           <property name="minimumSize" >
            <size>
-            <width>80</width>
+            <width>100</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>80</width>
+            <width>100</width>
             <height>16777215</height>
            </size>
           </property>
           <property name="text" >
-           <string>Season start:</string>
+           <string>20. Season start:</string>
           </property>
          </widget>
         </item>
@@ -721,7 +721,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Trap fisheries only - Average number of traps fished per week:</string>
+           <string>21. Trap fisheries only - Average number of traps fished per week:</string>
           </property>
          </widget>
         </item>
@@ -779,7 +779,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Trap fisheries only - Trap soak time:</string>
+           <string>22. Trap fisheries only - Trap soak time:</string>
           </property>
          </widget>
         </item>
@@ -837,7 +837,7 @@
            </size>
           </property>
           <property name="text" >
-           <string>Fishery-specific landing site:</string>
+           <string>23. Fishery-specific landing site:</string>
           </property>
          </widget>
         </item>
