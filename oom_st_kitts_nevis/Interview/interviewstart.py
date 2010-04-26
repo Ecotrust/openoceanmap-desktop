@@ -56,11 +56,10 @@ class InterviewStartGui(QDialog, Ui_InterviewStart):
         interviewInfo2.append(["int1_lname", self.interviewer1_last_name_line.text()])
         interviewInfo2.append(["int2_fname", self.interviewer2_first_name_line.text()])
         interviewInfo2.append(["int2_lname", self.interviewer2_last_name_line.text()])
-        interviewInfo2.append(["mood", self.mood_line.text()])
         interviewInfo2.append(["data_meth", self.dataMethod_comboBox.currentText()])
         
         interviewInfo2.append(["fish_reg", self.fish_regis_line.text()])
-        interviewInfo2.append(["yrs_exp", self.yrs_fishing_line.text()])
+        
 
         self.close()
         flags = Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint 

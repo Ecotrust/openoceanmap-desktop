@@ -9,7 +9,7 @@
     <x>0</x>
     <y>0</y>
     <width>520</width>
-    <height>327</height>
+    <height>367</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -71,7 +71,89 @@
                </font>
               </property>
               <property name="text" >
-               <string>12. % of total household income from fishing:</string>
+               <string>10. Years fishing experience:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="yrs_fishing_line" >
+              <property name="maximumSize" >
+               <size>
+                <width>50</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font" >
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" native="1" name="widget_65" >
+        <layout class="QVBoxLayout" name="verticalLayout_32" >
+         <property name="spacing" >
+          <number>4</number>
+         </property>
+         <property name="leftMargin" >
+          <number>4</number>
+         </property>
+         <property name="topMargin" >
+          <number>2</number>
+         </property>
+         <property name="rightMargin" >
+          <number>4</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QWidget" native="1" name="widget_66" >
+           <layout class="QHBoxLayout" name="horizontalLayout_40" >
+            <property name="spacing" >
+             <number>4</number>
+            </property>
+            <property name="leftMargin" >
+             <number>4</number>
+            </property>
+            <property name="topMargin" >
+             <number>0</number>
+            </property>
+            <property name="rightMargin" >
+             <number>4</number>
+            </property>
+            <property name="bottomMargin" >
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_46" >
+              <property name="font" >
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text" >
+               <string>11. % of total household income from fishing:</string>
               </property>
              </widget>
             </item>
@@ -153,7 +235,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>13. How many people live in your household, including yourself:</string>
+               <string>12. How many people live in your household, including yourself:</string>
               </property>
              </widget>
             </item>
@@ -235,7 +317,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>14. Average number of crew per trip (not including self):</string>
+               <string>13. Average number of crew per trip (not including self):</string>
               </property>
              </widget>
             </item>
@@ -317,7 +399,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>15. How is crew paid:</string>
+               <string>14. How is crew paid:</string>
               </property>
              </widget>
             </item>
@@ -420,7 +502,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>16. After expenses (like gas) have been paid, what percentage does</string>
+               <string>15. After expenses (like gas) have been paid, what percentage does</string>
               </property>
              </widget>
             </item>
@@ -601,7 +683,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>the crew get:</string>
+               <string>the crewmembers get:</string>
               </property>
              </widget>
             </item>
@@ -717,6 +799,7 @@
   </layout>
  </widget>
  <tabstops>
+  <tabstop>yrs_fishing_line</tabstop>
   <tabstop>pct_house_inc</tabstop>
   <tabstop>num_dependents</tabstop>
   <tabstop>num_crew</tabstop>

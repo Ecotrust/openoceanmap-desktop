@@ -113,20 +113,20 @@ class Interview(QObject):
 
           self.fisheryIndex = index+1
           self.penniesIndex = index+2
-          #self.habitatIndex = index+3
+          self.habitatIndex = index+3
           
-          self.fisheryYrsParticIndex = index+3
-          self.fisheryNumGearIndex = index+4
-          self.fisheryGearLengthIndex = index+5
-          self.fisherySeasonStartIndex = index+6
-          self.fisherySeasonEndIndex = index+7
-          self.fisherySeasonStartIndex2 = index+8
-          self.fisherySeasonEndIndex2 = index+9
-          self.fisheryPortIndex = index+10
+          self.fisheryYrsParticIndex = index+4
+          self.fisheryNumGearIndex = index+5
+          self.fisheryGearLengthIndex = index+6
+          self.fisherySeasonStartIndex = index+7
+          self.fisherySeasonEndIndex = index+8
+          self.fisherySeasonStartIndex2 = index+9
+          self.fisherySeasonEndIndex2 = index+10
+          self.fisheryPortIndex = index+11
           
           fields[self.fisheryIndex] = QgsField("fishery", QVariant.String)          
           fields[self.penniesIndex] = QgsField("pennies", QVariant.Int)
-          #fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
+          fields[self.habitatIndex] = QgsField("habitat", QVariant.String)
           
           fields[self.fisheryYrsParticIndex] = QgsField("fshy_yrs", QVariant.String)
           fields[self.fisheryNumGearIndex] = QgsField("fshy_gear", QVariant.String)
@@ -166,7 +166,7 @@ class Interview(QObject):
                 
               fet.addAttribute(self.fisheryIndex, QVariant(self.capturedPolygonsFishery[capPolyInd]))
               fet.addAttribute(self.penniesIndex, QVariant(self.capturedPolygonsPennies[capPolyInd]))
-              #fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
+              fet.addAttribute(self.habitatIndex, QVariant(self.capturedPolygonsHabitat[capPolyInd]))
               
               fet.addAttribute(self.fisheryYrsParticIndex, QVariant(self.currentFisheryYearsPartic))
               fet.addAttribute(self.fisheryNumGearIndex, QVariant(self.currentFisheryNumGear))
@@ -236,7 +236,7 @@ class Interview(QObject):
       self.capturedPolygonsFishery = []
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
-      #self.capturedPolygonsHabitat = []
+      self.capturedPolygonsHabitat = []
 
       #Reset penny count
       self.pennies_left = 100
@@ -266,7 +266,7 @@ class Interview(QObject):
       self.capturedPolygonsFishery = []
       self.capturedPolygonsPennies = []
       self.capturedPolygonsRub = []
-      #self.capturedPolygonsHabitat = []
+      self.capturedPolygonsHabitat = []
     
       self.pennies_left = 100
       self.phase_index = 0

@@ -65,8 +65,8 @@ class AddtQuestionsGui(QDialog, Ui_AdditionalQuestions):
                 return 
             total_values = total_values + int(value)
                 
-        if total_values != 100:
-            QMessageBox.warning(self, "Input Error", "Share percentages must add up to 100 (current sum: "+str(total_values)+")")
+        if total_values > 100 or total_values < 0:
+            QMessageBox.warning(self, "Input Error", "Share percentages must sum to a value between 0 and 100 (current sum: "+str(total_values)+")")
             return 
             
                 
@@ -75,6 +75,7 @@ class AddtQuestionsGui(QDialog, Ui_AdditionalQuestions):
         
         interviewInfo2 = self.parent.interviewInfo2
          
+        interviewInfo2.append(["yrs_exp", self.yrs_fishing_line.text()]) 
         interviewInfo2.append(["pct_h_inc",self.pct_house_inc.text()])
         interviewInfo2.append(["num_depnd",self.num_dependents.text()])
         interviewInfo2.append(["num_crew",self.num_crew.text()])

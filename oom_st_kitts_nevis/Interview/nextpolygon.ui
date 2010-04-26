@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>491</width>
-    <height>162</height>
+    <width>493</width>
+    <height>166</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -51,7 +51,7 @@
             </font>
            </property>
            <property name="text" >
-            <string>24. Dollars:</string>
+            <string>22. Dollars:</string>
            </property>
           </widget>
          </item>
@@ -117,6 +117,111 @@
         </layout>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="horizontalLayout" >
+         <property name="bottomMargin" >
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="habitat_combo_label" >
+           <property name="minimumSize" >
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text" >
+            <string>23. Habitat Type:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="habitat_combo" >
+           <property name="minimumSize" >
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font" >
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <item>
+            <property name="text" >
+             <string/>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Coral Bottom</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Hard Bottom</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Seagrass</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Rubble Bottom</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Sandy Bottom</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Muddy Bottom</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>Unknown</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2" >
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0" >
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
         <widget class="QWidget" native="1" name="widget" >
          <layout class="QHBoxLayout" >
           <property name="margin" >
@@ -167,6 +272,13 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>line_1</tabstop>
+  <tabstop>habitat_combo</tabstop>
+  <tabstop>pbnMoreShapes</tabstop>
+  <tabstop>pbnShapeDiscard</tabstop>
+  <tabstop>pbnShapeFinished</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

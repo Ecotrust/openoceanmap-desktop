@@ -38,18 +38,23 @@
          <widget class="QLabel" name="fishery_text" >
           <property name="minimumSize" >
            <size>
-            <width>100</width>
+            <width>110</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>100</width>
+            <width>110</width>
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
-           <string>17. Select Fishery :</string>
+           <string>16. Select Fishery:</string>
           </property>
          </widget>
         </item>
@@ -206,18 +211,23 @@
          <widget class="QLabel" name="label_3" >
           <property name="minimumSize" >
            <size>
-            <width>200</width>
+            <width>210</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>200</width>
+            <width>210</width>
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
-           <string>18. Years experience in this fishery:</string>
+           <string>17. Years experience in this fishery:</string>
           </property>
          </widget>
         </item>
@@ -274,8 +284,13 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
-           <string>19. Season start:</string>
+           <string>18. Season start:</string>
           </property>
          </widget>
         </item>
@@ -387,6 +402,11 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
            <string>Season end:</string>
           </property>
@@ -497,8 +517,13 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
-           <string>20. Season start:</string>
+           <string>     Season start:</string>
           </property>
          </widget>
         </item>
@@ -610,6 +635,11 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
            <string>Season end:</string>
           </property>
@@ -710,18 +740,23 @@
          <widget class="QLabel" name="label_6" >
           <property name="minimumSize" >
            <size>
-            <width>350</width>
+            <width>390</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>350</width>
+            <width>390</width>
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
-           <string>21. Trap fisheries only - Average number of traps fished per week:</string>
+           <string>19. Trap fisheries only - Average number of traps fished per week:</string>
           </property>
          </widget>
         </item>
@@ -778,8 +813,13 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
-           <string>22. Trap fisheries only - Trap soak time:</string>
+           <string>20. Trap fisheries only - Average trap soak time:</string>
           </property>
          </widget>
         </item>
@@ -826,18 +866,23 @@
          <widget class="QLabel" name="label_8" >
           <property name="minimumSize" >
            <size>
-            <width>160</width>
+            <width>200</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize" >
            <size>
-            <width>160</width>
+            <width>200</width>
             <height>16777215</height>
            </size>
           </property>
+          <property name="font" >
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text" >
-           <string>23. Fishery-specific landing site:</string>
+           <string>21. Fishery-specific landing site:</string>
           </property>
          </widget>
         </item>
@@ -1013,8 +1058,8 @@
   <tabstop>fish_num_gear</tabstop>
   <tabstop>fish_gear_length</tabstop>
   <tabstop>fish_port</tabstop>
-  <tabstop>pbnFisheryFinished</tabstop>
   <tabstop>pbnStartShapes</tabstop>
+  <tabstop>pbnFisheryFinished</tabstop>
  </tabstops>
  <resources/>
  <connections/>
