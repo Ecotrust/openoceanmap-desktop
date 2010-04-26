@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rec_cpfv.ui'
 #
-# Created: Thu Apr 22 12:08:47 2010
+# Created: Mon Apr 26 14:29:16 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -680,7 +680,7 @@ class Ui_RecCpfv(object):
 
     def retranslateUi(self, RecCpfv):
         RecCpfv.setWindowTitle(QtGui.QApplication.translate("RecCpfv", "OpenOceanMap - Fishery Participation", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox_4.setTitle(QtGui.QApplication.translate("RecCpfv", "11. Enter % of income derived from current fisheries", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox_4.setTitle(QtGui.QApplication.translate("RecCpfv", "9. Enter % of income derived from current fisheries", None, QtGui.QApplication.UnicodeUTF8))
         self.label_42.setText(QtGui.QApplication.translate("RecCpfv", "Coastal Pelagics or Net Fishery     (Coastal Pelagics - Beach Seine)", None, QtGui.QApplication.UnicodeUTF8))
         self.label_43.setText(QtGui.QApplication.translate("RecCpfv", "Tuna & Bonito with Handline           (Coastal Pelagics - Troll/Handline)", None, QtGui.QApplication.UnicodeUTF8))
         self.label_44.setText(QtGui.QApplication.translate("RecCpfv", "Large Offshore Pelagics                    (Ocean Pelagics - Troll/Handline)", None, QtGui.QApplication.UnicodeUTF8))
