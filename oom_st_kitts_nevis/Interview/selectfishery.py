@@ -84,6 +84,10 @@ class SelectFisheryGui(QDialog, Ui_SelectFishery):
             QMessageBox.warning(self, "Fishery Error", "You must draw shapes for at least one fishery")
             return 
             
+        end_choice = QMessageBox.question(self, "Finished with interview?", "Are you ready to complete this interview?", QMessageBox.Yes, QMessageBox.No)
+        if end_choice == QMessageBox.No:
+            return
+            
         self.parent.pennies_left = 100;            
         self.close()        
         

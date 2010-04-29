@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Mon Apr 26 11:40:57 2010
+# Created: Thu Apr 29 11:08:00 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -338,27 +338,27 @@ class Ui_SelectFishery(object):
 
     def retranslateUi(self, SelectFishery):
         SelectFishery.setWindowTitle(QtGui.QApplication.translate("SelectFishery", "OpenOceanMap - Select Fishery", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "16. Select Fishery:", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Coastal Pelagics or Net Fishery (Coastal Pealgics - Beach Seine)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Tuna & Bonito with Handline (Coastal Pelagics - Troll/Handline)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Large Offshore Pelagics (Ocean Pelagics - Troll/Handline)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(4, QtGui.QApplication.translate("SelectFishery", "Nearshore Trap/Pot (Coastal Demersals - Trap)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(5, QtGui.QApplication.translate("SelectFishery", "Nearshore Handline/Banking (Coastal Demersals - Rod & Reel/Handline)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(6, QtGui.QApplication.translate("SelectFishery", "Nearshore Spear (Coastal Demersals - Spear Gun)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(7, QtGui.QApplication.translate("SelectFishery", "Nearshore Gillnets (Coastal Demersals - Gillnets)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(8, QtGui.QApplication.translate("SelectFishery", "Deep Slope/Bank Trap/Pot Fishery (Demersal Shelf/Deep Slope - Trap)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(9, QtGui.QApplication.translate("SelectFishery", "Deep Slope/Bank Handline/Banking Fishery (Demersal Shelf/Deep Slope - Rod & Reel/Handline)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(10, QtGui.QApplication.translate("SelectFishery", "Lobster - Trap", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(11, QtGui.QApplication.translate("SelectFishery", "Lobster - Dive (SCUBA)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(12, QtGui.QApplication.translate("SelectFishery", "Lobster - Dive (Free)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(13, QtGui.QApplication.translate("SelectFishery", "Conch - Dive (SCUBA)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(14, QtGui.QApplication.translate("SelectFishery", "Conch - Dive (Free)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(15, QtGui.QApplication.translate("SelectFishery", "Shark - Hook & Line", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(16, QtGui.QApplication.translate("SelectFishery", "Shark - Gillnets", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(17, QtGui.QApplication.translate("SelectFishery", "Diamondback Squid - Light Stick", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(18, QtGui.QApplication.translate("SelectFishery", "Turtle - Turtle Net", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(19, QtGui.QApplication.translate("SelectFishery", "Bait - (Ballyhoo-Net)", None, QtGui.QApplication.UnicodeUTF8))
-        self.fishery_comboBox.setItemText(20, QtGui.QApplication.translate("SelectFishery", "Bait - (Anchovy/Sardines - Cast Net)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_text.setText(QtGui.QApplication.translate("SelectFishery", "16. Select fishery:", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Coastal pelagics or net fishery (Coastal pelagics - beach seine)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(2, QtGui.QApplication.translate("SelectFishery", "Tuna & bonito with handline (Coastal pelagics - troll/handline)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(3, QtGui.QApplication.translate("SelectFishery", "Large offshore pelagics (Ocean pelagics - troll/handline)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(4, QtGui.QApplication.translate("SelectFishery", "Nearshore trap/pot (Coastal demersals - trap)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(5, QtGui.QApplication.translate("SelectFishery", "Nearshore handline/banking (Coastal demersals - rod and reel/handline)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(6, QtGui.QApplication.translate("SelectFishery", "Nearshore spear (Coastal demersals - spear gun)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(7, QtGui.QApplication.translate("SelectFishery", "Nearshore gillnet (Coastal demersals - gillnet)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(8, QtGui.QApplication.translate("SelectFishery", "Deep slope/bank trap/pot fishery (Demersal shelf/deep slope - trap)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(9, QtGui.QApplication.translate("SelectFishery", "Deep slope/bank handline/banking fishery (Demersal shelf/deep slope - rod and reel/handline)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(10, QtGui.QApplication.translate("SelectFishery", "Lobster - trap", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(11, QtGui.QApplication.translate("SelectFishery", "Lobster - dive (SCUBA)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(12, QtGui.QApplication.translate("SelectFishery", "Lobster - dive (free)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(13, QtGui.QApplication.translate("SelectFishery", "Conch - dive (SCUBA)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(14, QtGui.QApplication.translate("SelectFishery", "Conch - dive (free)", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(15, QtGui.QApplication.translate("SelectFishery", "Shark - hook and line", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(16, QtGui.QApplication.translate("SelectFishery", "Shark - gillnet", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(17, QtGui.QApplication.translate("SelectFishery", "Diamondback squid - light stick/hook and line", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(18, QtGui.QApplication.translate("SelectFishery", "Turtle - turtle net", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(19, QtGui.QApplication.translate("SelectFishery", "Bait - Ballyhoo - net", None, QtGui.QApplication.UnicodeUTF8))
+        self.fishery_comboBox.setItemText(20, QtGui.QApplication.translate("SelectFishery", "Bait - Anchovy/sardine - cast net", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_comboBox.setItemText(21, QtGui.QApplication.translate("SelectFishery", "Other", None, QtGui.QApplication.UnicodeUTF8))
         self.label_3.setText(QtGui.QApplication.translate("SelectFishery", "17. Years experience in this fishery:", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("SelectFishery", "18. Season start:", None, QtGui.QApplication.UnicodeUTF8))

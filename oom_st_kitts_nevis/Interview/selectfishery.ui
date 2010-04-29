@@ -54,7 +54,7 @@
            </font>
           </property>
           <property name="text" >
-           <string>16. Select Fishery:</string>
+           <string>16. Select fishery:</string>
           </property>
          </widget>
         </item>
@@ -92,102 +92,102 @@
           </item>
           <item>
            <property name="text" >
-            <string>Coastal Pelagics or Net Fishery (Coastal Pealgics - Beach Seine)</string>
+            <string>Coastal pelagics or net fishery (Coastal pelagics - beach seine)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Tuna &amp; Bonito with Handline (Coastal Pelagics - Troll/Handline)</string>
+            <string>Tuna &amp; bonito with handline (Coastal pelagics - troll/handline)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Large Offshore Pelagics (Ocean Pelagics - Troll/Handline)</string>
+            <string>Large offshore pelagics (Ocean pelagics - troll/handline)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Trap/Pot (Coastal Demersals - Trap)</string>
+            <string>Nearshore trap/pot (Coastal demersals - trap)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Handline/Banking (Coastal Demersals - Rod &amp; Reel/Handline)</string>
+            <string>Nearshore handline/banking (Coastal demersals - rod and reel/handline)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Spear (Coastal Demersals - Spear Gun)</string>
+            <string>Nearshore spear (Coastal demersals - spear gun)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Nearshore Gillnets (Coastal Demersals - Gillnets)</string>
+            <string>Nearshore gillnet (Coastal demersals - gillnet)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Deep Slope/Bank Trap/Pot Fishery (Demersal Shelf/Deep Slope - Trap)</string>
+            <string>Deep slope/bank trap/pot fishery (Demersal shelf/deep slope - trap)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Deep Slope/Bank Handline/Banking Fishery (Demersal Shelf/Deep Slope - Rod &amp; Reel/Handline)</string>
+            <string>Deep slope/bank handline/banking fishery (Demersal shelf/deep slope - rod and reel/handline)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Lobster - Trap</string>
+            <string>Lobster - trap</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Lobster - Dive (SCUBA)</string>
+            <string>Lobster - dive (SCUBA)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Lobster - Dive (Free)</string>
+            <string>Lobster - dive (free)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Conch - Dive (SCUBA)</string>
+            <string>Conch - dive (SCUBA)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Conch - Dive (Free)</string>
+            <string>Conch - dive (free)</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Shark - Hook &amp; Line</string>
+            <string>Shark - hook and line</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Shark - Gillnets</string>
+            <string>Shark - gillnet</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Diamondback Squid - Light Stick</string>
+            <string>Diamondback squid - light stick/hook and line</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Turtle - Turtle Net</string>
+            <string>Turtle - turtle net</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Bait - (Ballyhoo-Net)</string>
+            <string>Bait - Ballyhoo - net</string>
            </property>
           </item>
           <item>
            <property name="text" >
-            <string>Bait - (Anchovy/Sardines - Cast Net)</string>
+            <string>Bait - Anchovy/sardine - cast net</string>
            </property>
           </item>
           <item>

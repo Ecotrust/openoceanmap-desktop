@@ -317,7 +317,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>13. Average number of crew per trip (not including self):</string>
+               <string>13. Average number of crew per trip (not including yourself):</string>
               </property>
              </widget>
             </item>
@@ -399,7 +399,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>14. How is crew paid:</string>
+               <string>14. How are crewmembers paid:</string>
               </property>
              </widget>
             </item>

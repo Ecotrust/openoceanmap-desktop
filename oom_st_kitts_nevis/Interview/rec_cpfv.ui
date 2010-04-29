@@ -8,8 +8,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>752</width>
-    <height>453</height>
+    <width>822</width>
+    <height>479</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -71,7 +71,8 @@
                </font>
               </property>
               <property name="text" >
-               <string>Coastal Pelagics or Net Fishery     (Coastal Pelagics - Beach Seine)</string>
+               <string>Coastal pelagics or net fishery
+(Coastal pelagics - beach seine)</string>
               </property>
               <property name="wordWrap" >
                <bool>true</bool>
@@ -156,7 +157,8 @@
                </font>
               </property>
               <property name="text" >
-               <string>Tuna &amp; Bonito with Handline           (Coastal Pelagics - Troll/Handline)</string>
+               <string>Tuna &amp; bonito with handline
+(Coastal pelagics - troll/handline)</string>
               </property>
               <property name="wordWrap" >
                <bool>true</bool>
@@ -241,7 +243,8 @@
                </font>
               </property>
               <property name="text" >
-               <string>Large Offshore Pelagics                    (Ocean Pelagics - Troll/Handline)</string>
+               <string>Large offshore pelagics
+(Ocean pelagics - troll/handline)</string>
               </property>
               <property name="wordWrap" >
                <bool>true</bool>
@@ -326,7 +329,8 @@
                </font>
               </property>
               <property name="text" >
-               <string>Nearshore Trap/Pot (Coastal Demersals - Trap)</string>
+               <string>Nearshore trap/pot
+(Coastal demersals - trap)</string>
               </property>
              </widget>
             </item>
@@ -404,13 +408,13 @@
              <widget class="QLabel" name="label_30" >
               <property name="minimumSize" >
                <size>
-                <width>250</width>
+                <width>270</width>
                 <height>0</height>
                </size>
               </property>
               <property name="maximumSize" >
                <size>
-                <width>250</width>
+                <width>270</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -420,7 +424,8 @@
                </font>
               </property>
               <property name="text" >
-               <string>Nearshore Handline/Banking           (Coastal Demersals - Rod &amp; Reel/Handline)</string>
+               <string>Nearshore handline/banking
+(Coastal demersals - rod and reel/handline)</string>
               </property>
               <property name="wordWrap" >
                <bool>true</bool>
@@ -505,7 +510,8 @@
                </font>
               </property>
               <property name="text" >
-               <string>Nearshore Spear (Coastal Demersals - Spear Gun)</string>
+               <string>Nearshore spear
+(Coastal demersals - spear gun)</string>
               </property>
              </widget>
             </item>
@@ -587,7 +593,8 @@
                </font>
               </property>
               <property name="text" >
-               <string>Nearshore Gillnets (Coastal Demersals - Gillnets)</string>
+               <string>Nearshore gillnet
+(Coastal demersals - gillnet)</string>
               </property>
              </widget>
             </item>
@@ -669,7 +676,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Deep Slope/Bank Trap/Pot Fishery (Demersal Shelf/Deep Slope - Trap)</string>
+               <string>Deep slope/bank trap/pot fishery (Demersal shelf/deep slope - trap)</string>
               </property>
               <property name="wordWrap" >
                <bool>true</bool>
@@ -766,7 +773,8 @@
                </font>
               </property>
               <property name="text" >
-               <string>Deep Slope/Bank Handline/Banking (Demersal Shelf/Deep Slope - Rod &amp; Reel/Handline)</string>
+               <string>Deep slope/bank handline/banking fishery
+(Demersal shelf/deep slope - rod and reel/handline)</string>
               </property>
               <property name="wordWrap" >
                <bool>true</bool>
@@ -878,7 +886,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Lobster - Trap</string>
+               <string>Lobster - trap</string>
               </property>
              </widget>
             </item>
@@ -960,7 +968,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Lobster - Dive (SCUBA)</string>
+               <string>Lobster - dive (SCUBA)</string>
               </property>
              </widget>
             </item>
@@ -1042,7 +1050,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Lobster - Dive (Free)</string>
+               <string>Lobster - dive (free)</string>
               </property>
              </widget>
             </item>
@@ -1124,7 +1132,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Conch - Dive (SCUBA)</string>
+               <string>Conch - dive (SCUBA)</string>
               </property>
              </widget>
             </item>
@@ -1206,7 +1214,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Conch - Dive (Free)</string>
+               <string>Conch - dive (free)</string>
               </property>
              </widget>
             </item>
@@ -1288,7 +1296,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Shark - Hook &amp; Line</string>
+               <string>Shark - hook and line</string>
               </property>
              </widget>
             </item>
@@ -1370,7 +1378,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Shark - Gillnets</string>
+               <string>Shark - gillnet</string>
               </property>
              </widget>
             </item>
@@ -1452,7 +1460,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Diamondback Squid - Light Stick </string>
+               <string>Diamondback squid - light stick/hook and line </string>
               </property>
               <property name="wordWrap" >
                <bool>false</bool>
@@ -1537,7 +1545,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Turtle - Turtle Net</string>
+               <string>Turtle - turtle net</string>
               </property>
              </widget>
             </item>
@@ -1619,7 +1627,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Bait (Ballyhoo - Net)</string>
+               <string>Bait - Ballyhoo - net</string>
               </property>
              </widget>
             </item>
@@ -1701,7 +1709,7 @@
                </font>
               </property>
               <property name="text" >
-               <string>Bait (Anchovy/Sardines - Cast Net)</string>
+               <string>Bait - Anchovy/sardine - cast net</string>
               </property>
              </widget>
             </item>
