@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'selectfishery.ui'
 #
-# Created: Thu Apr 29 11:08:00 2010
+# Created: Fri May 07 10:18:19 2010
 #      by: PyQt4 UI code generator 4.4.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -413,7 +413,7 @@ class Ui_SelectFishery(object):
         self.fishery_season_end_2.setItemText(10, QtGui.QApplication.translate("SelectFishery", "October", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_end_2.setItemText(11, QtGui.QApplication.translate("SelectFishery", "November", None, QtGui.QApplication.UnicodeUTF8))
         self.fishery_season_end_2.setItemText(12, QtGui.QApplication.translate("SelectFishery", "December", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_6.setText(QtGui.QApplication.translate("SelectFishery", "19. Trap fisheries only - Average number of traps fished per week:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_6.setText(QtGui.QApplication.translate("SelectFishery", "19. Trap fisheries only - How many traps do you fish with?:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_4.setText(QtGui.QApplication.translate("SelectFishery", "20. Trap fisheries only - Average trap soak time:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_8.setText(QtGui.QApplication.translate("SelectFishery", "21. Fishery-specific landing site:", None, QtGui.QApplication.UnicodeUTF8))
         self.fish_port.setItemText(1, QtGui.QApplication.translate("SelectFishery", "Basseterre E", None, QtGui.QApplication.UnicodeUTF8))

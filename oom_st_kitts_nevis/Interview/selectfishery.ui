@@ -756,7 +756,7 @@
            </font>
           </property>
           <property name="text" >
-           <string>19. Trap fisheries only - Average number of traps fished per week:</string>
+           <string>19. Trap fisheries only - How many traps do you fish with?:</string>
           </property>
          </widget>
         </item>

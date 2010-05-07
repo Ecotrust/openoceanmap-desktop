@@ -48,6 +48,17 @@ class AddtQuestionsGui(QDialog, Ui_AdditionalQuestions):
         self.parent = parent   
         self.crew_shares.setText('0')
         self.captain_shares.setText('0')
+        
+    def on_num_crew_editingFinished(self):
+        value = self.num_crew.text()
+        if not strIsInt(value):
+           QMessageBox.warning(self, "Input Error", "Number of crew must be a number.")
+           return 
+        int_val = int(value)
+        capt_shares = 100 / (int_val + 1)
+        crew_shares = 100 - capt_shares
+        self.captain_shares.setText(str(capt_shares))
+        self.crew_shares.setText(str(crew_shares))
 
     def on_pbnFinished_released(self):
         
