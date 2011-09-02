@@ -191,12 +191,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
       layer_on = Qt.Checked
       if vector == "Data"+os.sep+"GulfofCali_Shoreline.shp":
-        layer.renderer().symbols()[0].setColor(QColor('Green'))
-        layer_on = Qt.Unchecked        
+        layer.renderer().symbols()[0].setColor(QColor('Green'))       
       elif vector == "Data"+os.sep+"GulfofCali_ctour100.shp":
         layer.renderer().symbols()[0].setPointSize(8)
         layer.renderer().symbols()[0].setLineWidth(1)
         layer.renderer().symbols()[0].setColor(QColor(8,83,137))
+        layer.setLabelOn(True)
+        layer.label().setLabelField(0,2)
+        layer.label().layerAttributes().setSize(8,1)
+        layer.label().layerAttributes().setBufferEnabled(True)
+        layer.label().layerAttributes().setBufferColor(QColor(250,250,250))
         layer_on = Qt.Unchecked
       elif vector == "Data"+os.sep+"Idatil.shp":
         layer.renderer().symbols()[0].setColor(QColor('Brown'))
@@ -209,10 +213,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         layer.label().layerAttributes().setSize(8,1)
         layer.label().layerAttributes().setBufferEnabled(True)
         layer.label().layerAttributes().setBufferColor(QColor(250,250,250))
-        layer_on = Qt.Unchecked
       elif vector == "Data"+os.sep+"Ispn.shp":
         layer.renderer().symbols()[0].setColor(QColor('Red'))
-        layer_on = Qt.Unchecked
       elif vector == "Data"+os.sep+"PlaceNames_sample.shp":
         layer.renderer().symbols()[0].setPointSize(9)
         layer.renderer().symbols()[0].setFillColor(QColor(255,170,0))
@@ -223,7 +225,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         layer.label().layerAttributes().setOffset(4,2,1)
         layer.label().layerAttributes().setBufferEnabled(True)
         layer.label().layerAttributes().setBufferColor(QColor(250,250,250))
-        layer_on = Qt.Unchecked
       # add layer to the registry
       QgsMapLayerRegistry.instance().addMapLayer(layer)
       
